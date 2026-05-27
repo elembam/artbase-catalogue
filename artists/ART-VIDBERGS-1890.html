@@ -131,6 +131,31 @@
     margin-top: 2px;
   }
 
+  .header-portrait {
+    width: 120px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .header-portrait img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    object-position: top center;
+    border: 1px solid var(--rule);
+    display: block;
+  }
+  .portrait-credit {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.55rem;
+    color: var(--ink-faded);
+    text-align: center;
+    line-height: 1.3;
+  }
+  .portrait-credit a { color: var(--ink-faded); text-decoration: underline; }
+
   .header-right {
     text-align: right;
     flex-shrink: 0;
@@ -300,6 +325,7 @@
 
   <!-- Header -->
   <header class="header">
+    
     <div class="header-left">
       <div class="institution-tag">ArtBase · Artist Profile</div>
       <h1 class="artist-name">Sigismunds Vidbergs</h1>
