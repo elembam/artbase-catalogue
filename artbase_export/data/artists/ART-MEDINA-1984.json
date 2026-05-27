@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:02:47.777791Z",
+  "exported": "2026-05-27T16:10:51.863509Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Alise Mediņa",
@@ -55,9 +55,9 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "Q99482736",
+      "uri": "https://www.wikidata.org/wiki/Q99482736",
+      "status": "candidate_verify",
       "verified_date": null,
       "notes": null
     },

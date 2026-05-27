@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:02:47.765975Z",
+  "exported": "2026-05-27T16:10:51.854155Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Juris Ģērmanis",
@@ -55,9 +55,9 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "Q99484537",
+      "uri": "https://www.wikidata.org/wiki/Q99484537",
+      "status": "candidate_verify",
       "verified_date": null,
       "notes": null
     },

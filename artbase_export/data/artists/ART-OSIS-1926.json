@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:02:47.761736Z",
+  "exported": "2026-05-27T16:10:51.851296Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Jānis Osis",
@@ -55,23 +55,23 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "Q51632826",
+      "uri": "https://www.wikidata.org/wiki/Q51632826",
+      "status": "candidate_verify",
       "verified_date": null,
       "notes": null
     },
     "viaf": {
-      "id": null,
+      "id": "102639400",
       "uri": null,
-      "status": "search_needed",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
     "ulan": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "500160618",
+      "uri": "http://vocab.getty.edu/ulan/500160618",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
@@ -126,10 +126,7 @@
     "review_status": "draft",
     "catalogued_by": null,
     "notes": null,
-    "tasks": [
-      "Search VIAF",
-      "Search Getty ULAN"
-    ],
+    "tasks": [],
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1"

@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:02:47.776029Z",
+  "exported": "2026-05-27T16:10:51.862778Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Liena Baklāne",
@@ -55,9 +55,9 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "Q99478466",
+      "uri": "https://www.wikidata.org/wiki/Q99478466",
+      "status": "candidate_verify",
       "verified_date": null,
       "notes": null
     },
