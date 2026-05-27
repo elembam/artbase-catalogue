@@ -1,54 +1,51 @@
 {
-  "artbase_id": "ART-LEONARDO-1452",
-  "airtable_id": "recRd24t71tGZ14a1",
+  "artbase_id": "UNKNOWN",
+  "airtable_id": "reckCakEsVqu92Cwc",
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T14:28:40.940027Z",
+  "exported": "2026-05-27T14:28:40.940241Z",
   "visibility": "private",
   "identity": {
-    "preferred_name": "Leonardo da Vinci",
+    "preferred_name": "Herberts Silins",
     "preferred_name_language": null,
-    "full_name": "Leonardo da Vinci",
+    "full_name": "Herberts Silins",
     "name_variants": [],
-    "sort_name": "Vinci, Leonardo da"
+    "sort_name": "Silins, Herberts"
   },
   "life": {
     "birth_date": {
-      "value": "1452",
+      "value": "1926",
       "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1519",
+      "value": "2001",
       "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Vinci, Tuscany, Italy",
+      "display": "Aizupes pagasts, Latvia",
       "tgn_uri": null,
       "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Amboise, France",
+      "display": "Riga, Latvia",
       "tgn_uri": null,
       "wikidata_qid": null,
       "source_ids": []
     }
   },
   "descriptors": {
-    "nationality": "Italian",
+    "nationality": "Latvian",
     "citizenship": [],
     "occupations": [
-      "painter",
-      "sculptor",
-      "architect",
-      "scientist"
+      "painter"
     ],
     "occupations_aat": [],
     "media": [],
@@ -58,23 +55,23 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": "Q762",
-      "uri": "https://www.wikidata.org/wiki/Q762",
+      "id": "Q23054868",
+      "uri": null,
       "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
     "viaf": {
-      "id": "24604287",
+      "id": "15148752166141201333",
       "uri": null,
       "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
     "ulan": {
-      "id": "500010879",
-      "uri": "http://vocab.getty.edu/ulan/500010879",
-      "status": "confirmed",
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
       "verified_date": null,
       "notes": null
     },
@@ -122,48 +119,16 @@
     },
     "artbase_id": null
   },
-  "sources": [
-    {
-      "source_id": "SRC-INLINE-001",
-      "source_type": "URL reference",
-      "title": null,
-      "publisher": null,
-      "url": "https://www.wikidata.org/wiki/Q762",
-      "publication_date": null,
-      "access_date": null,
-      "use_notes": null,
-      "license": null
-    },
-    {
-      "source_id": "SRC-INLINE-002",
-      "source_type": "URL reference",
-      "title": null,
-      "publisher": null,
-      "url": "http://vocab.getty.edu/ulan/500010879",
-      "publication_date": null,
-      "access_date": null,
-      "use_notes": null,
-      "license": null
-    }
-  ],
-  "source_refs": [
-    {
-      "source_id": "SRC-INLINE-001",
-      "role": null,
-      "accessed": null
-    },
-    {
-      "source_id": "SRC-INLINE-002",
-      "role": null,
-      "accessed": null
-    }
-  ],
+  "sources": [],
+  "source_refs": [],
   "conflicts": [],
   "cataloguing": {
     "review_status": "draft",
     "catalogued_by": null,
-    "notes": "Italian Renaissance polymath. Demo record.",
-    "tasks": [],
+    "notes": "Pilot record. Birth date conflict: Wikipedia 28 Aug vs Galerija Jekabs 25 Aug.",
+    "tasks": [
+      "Search Getty ULAN"
+    ],
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1"
