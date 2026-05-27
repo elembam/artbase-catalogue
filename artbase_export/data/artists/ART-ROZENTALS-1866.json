@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1866",
-      "precision": "year",
+      "value": "1866-03-06",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1916",
-      "precision": "year",
+      "value": "1916-12-13",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Saldus",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q744247",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Helsinki",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1757",
       "source_ids": []
     }
   },
@@ -129,5 +129,60 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "image": {
+    "commons_filename": "Rozentals Pasportrets.jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Rozentals_Pasportrets.jpg",
+    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rozentals_Pasportrets.jpg?width=400"
+  },
+  "description_en": "Latvian painter (1866-1916)",
+  "description_lv": "latviešu glezontājs",
+  "education": [
+    {
+      "label": "Imperial Academy of Arts",
+      "wikidata_id": "Q628254",
+      "source": "wikidata_auto"
+    }
+  ],
+  "movement": [
+    {
+      "label": "Impressionism",
+      "wikidata_id": "Q40415",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Symbolism",
+      "wikidata_id": "Q164800",
+      "source": "wikidata_auto"
+    }
+  ],
+  "genre": [
+    {
+      "label": "portrait",
+      "wikidata_id": "Q134307",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2438856141,
+    "manual_overrides": [],
+    "ulan_last_enriched": "2026-05-27T18:20:44Z"
+  },
+  "enrichment": {
+    "ulan": {
+      "nationalities": [
+        "Latvian (culture or style)"
+      ],
+      "alternate_names": [
+        "Janis Rozentals",
+        "Janis Rozentāls",
+        "Rosenthal, Janis",
+        "Rozental', Jan Michajlovič",
+        "Rozental', Janis Mikelevič",
+        "Rozental, Janis Michajlovič",
+        "Rozentals, Janis"
+      ]
+    }
+  }
 }

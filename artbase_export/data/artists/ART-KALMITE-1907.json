@@ -29,15 +29,15 @@
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Kauguri Parish",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q3801100",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Minnesota",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1527",
       "source_ids": []
     }
   },
@@ -131,5 +131,23 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "image": {
+    "commons_filename": "Janis Kalmite, Paris, 1968.jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Janis_Kalmite,_Paris,_1968.jpg",
+    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Janis_Kalmite%2C_Paris%2C_1968.jpg?width=400"
+  },
+  "description_en": "Latvian artist",
+  "movement": [
+    {
+      "label": "modernism",
+      "wikidata_id": "Q878985",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2376981914,
+    "manual_overrides": []
+  }
 }

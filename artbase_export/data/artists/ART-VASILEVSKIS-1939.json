@@ -15,23 +15,23 @@
   },
   "life": {
     "birth_date": {
-      "value": "1939",
-      "precision": "year",
+      "value": "1939-05-27",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1990",
-      "precision": "year",
+      "value": "1990-10-23",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Rēzekne",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q180379",
       "source_ids": []
     },
     "death_place": {
@@ -131,5 +131,11 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian painter (1939-1990)",
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2448916033,
+    "manual_overrides": []
+  }
 }

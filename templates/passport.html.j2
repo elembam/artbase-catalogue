@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Artwork Passport — {{ artwork.object_id.title }} by {{ artist.identity.preferred_name }}. Standards-compliant international cultural object record.">
+<title>Artwork Passport — {{ artwork.object_id.title }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f6f1e6;
+    --paper-deep: #ebe3d1;
+    --ink: #1c1814;
+    --ink-soft: #4a4338;
+    --ink-faded: #80766a;
+    --seal: #6e1818;
+    --seal-light: #94342f;
+    --gold: #8a6f2e;
+    --rule: #c7bca5;
+    --grid: rgba(110, 24, 24, 0.04);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 15px;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+
+  .passport {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow:
+      0 1px 0 rgba(28, 24, 20, 0.04),
+      0 20px 40px -20px rgba(28, 24, 20, 0.15),
+      0 60px 100px -60px rgba(28, 24, 20, 0.1);
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ─── HEADER ─── */
+  .header {
+    padding: 28px 48px 24px;
+    border-bottom: 2px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    left: 48px; right: 48px; bottom: -7px;
+    border-bottom: 1px solid var(--ink);
+  }
+  .header-mark { flex: 1; }
+  .header-mark .issuer {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--seal);
+    margin-bottom: 6px;
+  }
+  .header-mark .title {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-variation-settings: 'opsz' 144, 'SOFT' 50;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .header-mark .subtitle {
+    margin-top: 4px;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+  }
+  .header-mark .colophon {
+    margin-top: 14px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+    max-width: 480px;
+  }
+  .seal {
+    width: 96px; height: 96px;
+    border-radius: 50%;
+    border: 1.5px solid var(--seal);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; color: var(--seal);
+    position: relative; flex-shrink: 0;
+    background: radial-gradient(circle at center, var(--paper) 60%, rgba(110, 24, 24, 0.06));
+  }
+  .seal::before {
+    content: '';
+    position: absolute; inset: 5px;
+    border-radius: 50%;
+    border: 0.5px solid var(--seal);
+  }
+  .seal .seal-text {
+    font-family: 'Fraunces', serif;
+    font-style: italic; font-weight: 500;
+    font-size: 9px; letter-spacing: 0.15em;
+    text-transform: uppercase; line-height: 1.1;
+  }
+  .seal .seal-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; font-weight: 500;
+    margin-top: 3px; letter-spacing: 0.05em;
+  }
+  .seal .seal-year {
+    font-family: 'Fraunces', serif;
+    font-style: italic; font-size: 11px;
+    margin-top: 4px; font-weight: 500;
+  }
+
+  /* ─── META BAR ─── */
+  .meta-bar {
+    padding: 14px 48px;
+    background: var(--paper-deep);
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 24px; border-bottom: 1px solid var(--rule);
+  }
+  .meta-bar dt {
+    font-size: 9px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--ink-faded);
+    font-weight: 500; margin-bottom: 4px;
+  }
+  .meta-bar dd {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--ink); font-weight: 500;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    padding: 40px 48px 32px;
+    display: grid; grid-template-columns: 280px 1fr;
+    gap: 40px; border-bottom: 1px solid var(--rule);
+  }
+  .hero-image { position: relative; }
+  .hero-image img {
+    width: 100%; height: auto; display: block;
+    box-shadow:
+      0 1px 0 var(--rule),
+      0 12px 30px -8px rgba(28, 24, 20, 0.3),
+      0 30px 60px -30px rgba(28, 24, 20, 0.2);
+  }
+  .hero-image .no-image {
+    width: 100%; aspect-ratio: 3/4;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-style: italic; color: var(--ink-faded); font-size: 13px;
+  }
+  .hero-image .corner {
+    position: absolute; width: 16px; height: 16px;
+    border: 1px solid var(--seal);
+  }
+  .hero-image .corner.tl { top: -8px; left: -8px; border-right: none; border-bottom: none; }
+  .hero-image .corner.tr { top: -8px; right: -8px; border-left: none; border-bottom: none; }
+  .hero-image .corner.bl { bottom: -8px; left: -8px; border-right: none; border-top: none; }
+  .hero-image .corner.br { bottom: -8px; right: -8px; border-left: none; border-top: none; }
+
+  .tombstone .label {
+    font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--ink-faded);
+    font-weight: 500; margin-bottom: 8px;
+  }
+  .tombstone .work-title {
+    font-family: 'Fraunces', serif;
+    font-style: italic; font-weight: 400;
+    font-variation-settings: 'opsz' 144;
+    font-size: 44px; line-height: 1;
+    letter-spacing: -0.015em; color: var(--ink); margin-bottom: 6px;
+  }
+  .tombstone .work-alt-titles {
+    font-family: 'Fraunces', serif;
+    font-style: italic; font-size: 16px;
+    color: var(--ink-faded); margin-bottom: 20px;
+  }
+  .tombstone .work-artist {
+    font-family: 'Fraunces', serif;
+    font-weight: 500; font-size: 19px;
+    color: var(--ink); margin-bottom: 2px;
+  }
+  .tombstone .work-artist-dates {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 12px; color: var(--ink-soft);
+    letter-spacing: 0.04em; margin-bottom: 18px;
+  }
+  .tombstone-grid {
+    display: grid; grid-template-columns: 100px 1fr;
+    row-gap: 7px; column-gap: 16px;
+    padding-top: 18px; border-top: 1px solid var(--rule);
+  }
+  .tombstone-grid dt {
+    font-size: 10px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--ink-faded);
+    font-weight: 500; padding-top: 1px;
+  }
+  .tombstone-grid dd { font-size: 14px; color: var(--ink); }
+
+  /* ─── SECTIONS ─── */
+  .section {
+    padding: 32px 48px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section:last-of-type { border-bottom: none; }
+  .section-header {
+    display: flex; align-items: baseline;
+    gap: 16px; margin-bottom: 24px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--ink);
+  }
+  .section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--seal); letter-spacing: 0.1em;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 500; font-style: italic;
+    font-size: 20px; color: var(--ink);
+    letter-spacing: -0.005em; flex: 1;
+  }
+  .section-rubric {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 10px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--ink-faded);
+  }
+
+  /* ─── OBJECT ID ─── */
+  .object-id {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 0; border: 1px solid var(--rule);
+  }
+  .object-id-field {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .object-id-field:nth-child(2n) { border-right: none; }
+  .object-id-field:nth-last-child(-n+2) { border-bottom: none; }
+  .object-id-field.wide {
+    grid-column: 1 / -1; border-right: none;
+  }
+  .object-id-field .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; color: var(--seal); letter-spacing: 0.08em;
+  }
+  .object-id-field .label {
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--ink-faded); font-weight: 500;
+  }
+  .object-id-field .value {
+    font-family: 'Fraunces', serif;
+    font-size: 16px; color: var(--ink); line-height: 1.35;
+  }
+  .object-id-field .value .aat-link {
+    margin-top: 6px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  .object-id-field .value .aat-link a {
+    color: var(--ink-faded);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(0,0,0,0.2);
+  }
+  .object-id-field .value .aat-link a:hover {
+    color: var(--seal);
+    border-bottom-color: var(--seal);
+  }
+  .object-id-field.missing .value { color: var(--ink-faded); font-style: italic; }
+
+  /* ─── AUTHORITIES ─── */
+  .authorities {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+  }
+  .authority {
+    border: 1px solid var(--rule);
+    padding: 16px 18px;
+    text-decoration: none; color: var(--ink);
+    display: block; background: rgba(255,255,255,0.3);
+    transition: all 0.2s ease; position: relative;
+  }
+  .authority::before {
+    content: ''; position: absolute; inset: -1px;
+    border: 1px solid var(--seal); opacity: 0;
+    transition: opacity 0.2s ease; pointer-events: none;
+  }
+  .authority:hover { background: rgba(255,255,255,0.6); }
+  .authority:hover::before { opacity: 1; }
+  .authority .auth-system {
+    font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--seal);
+    font-weight: 600; margin-bottom: 6px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .authority .auth-system::after {
+    content: '↗'; margin-left: auto;
+    font-size: 13px; color: var(--ink-faded);
+  }
+  .authority .auth-id {
+    font-family: 'Fraunces', serif;
+    font-size: 19px; font-weight: 500; margin-bottom: 2px;
+  }
+  .authority .auth-label {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 12px; color: var(--ink-soft); margin-bottom: 6px;
+  }
+  .authority .auth-uri {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; color: var(--ink-faded);
+    word-break: break-all; line-height: 1.35;
+  }
+  .authority.no-link { cursor: default; }
+  .authority.no-link::before { display: none; }
+  .authority.no-link .auth-system::after { content: ''; }
+
+  /* ─── PROVENANCE ─── */
+  .provenance { position: relative; padding-left: 24px; }
+  .provenance::before {
+    content: ''; position: absolute;
+    left: 4px; top: 8px; bottom: 8px;
+    width: 1px; background: var(--rule);
+  }
+  .prov-event { position: relative; padding-bottom: 22px; }
+  .prov-event:last-child { padding-bottom: 0; }
+  .prov-event::before {
+    content: ''; position: absolute;
+    left: -24px; top: 6px;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--paper); border: 1.5px solid var(--seal);
+  }
+  .prov-event.gap::before {
+    border-style: dashed; border-color: var(--ink-faded);
+  }
+  .prov-event .prov-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--seal);
+    font-weight: 500; letter-spacing: 0.04em; margin-bottom: 2px;
+  }
+  .prov-event .prov-owner {
+    font-family: 'Fraunces', serif;
+    font-weight: 500; font-size: 16px; color: var(--ink); margin-bottom: 2px;
+  }
+  .prov-event .prov-detail {
+    font-size: 13px; color: var(--ink-soft); line-height: 1.4;
+  }
+  .prov-event .prov-source {
+    margin-top: 3px; font-size: 11px;
+    color: var(--ink-faded); font-style: italic;
+  }
+  .prov-empty {
+    font-family: 'Fraunces', serif;
+    font-style: italic; color: var(--ink-faded); font-size: 14px;
+  }
+
+  /* ─── ICONOGRAPHY ─── */
+  .iconography { display: flex; flex-direction: column; gap: 12px; }
+  .icon-code {
+    display: grid; grid-template-columns: 110px 1fr auto;
+    gap: 16px; align-items: baseline;
+    padding: 10px 14px;
+    border-left: 2px solid var(--seal);
+    background: rgba(255,255,255,0.3);
+  }
+  .icon-code .code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; color: var(--seal); font-weight: 500;
+  }
+  .icon-code .desc { font-family: 'Fraunces', serif; font-size: 15px; color: var(--ink); }
+  .icon-code .lookup {
+    font-size: 10px; color: var(--ink-faded);
+    letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none;
+  }
+  .icon-code .lookup:hover { color: var(--seal); }
+  .iconography-empty {
+    font-family: 'Fraunces', serif;
+    font-style: italic; color: var(--ink-faded); font-size: 14px;
+  }
+
+  /* ─── FOOTER ─── */
+  .footer {
+    padding: 24px 48px 32px;
+    background: var(--paper-deep);
+    border-top: 2px solid var(--ink);
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 24px; align-items: end;
+  }
+  .footer-block .label {
+    font-size: 9px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--ink-faded);
+    font-weight: 500; margin-bottom: 4px;
+  }
+  .footer-block .value { font-family: 'Public Sans', sans-serif; font-size: 12px; color: var(--ink); }
+  .footer-block .value strong { font-weight: 600; }
+  .footer-meta { text-align: right; }
+  .footer-meta .pid {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--ink-soft); margin-top: 8px;
+  }
+  .footer-block .value a {
+    color: var(--seal); text-decoration: none;
+    border-bottom: 1px solid var(--seal-light);
+    transition: all 0.15s ease;
+  }
+  .footer-block .value a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 720px) {
+    body { padding: 16px 8px; font-size: 14px; }
+    .header, .meta-bar, .hero, .section, .footer { padding-left: 24px; padding-right: 24px; }
+    .hero { grid-template-columns: 1fr; gap: 24px; }
+    .meta-bar { grid-template-columns: repeat(2, 1fr); }
+    .object-id { grid-template-columns: 1fr; }
+    .object-id-field { border-right: none !important; }
+    .authorities { grid-template-columns: 1fr; }
+    .footer { grid-template-columns: 1fr; }
+    .footer-meta { text-align: left; }
+    .tombstone .work-title { font-size: 32px; }
+    .header-mark .title { font-size: 26px; }
+    .seal { width: 80px; height: 80px; }
+    .icon-code { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    body::before { display: none; }
+    .passport { box-shadow: none; border: none; max-width: none; }
+    .authority { break-inside: avoid; }
+    .prov-event { break-inside: avoid; }
+  }
+  .topnav {
+    max-width: 880px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--ink-faded);
+    position: relative;
+    z-index: 2;
+  }
+  .topnav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--seal);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.15s;
+  }
+  .topnav a:hover { opacity: 0.75; }
+  .topnav-sep { color: var(--rule); }
+  @media print { .topnav { display: none; } }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    ArtBase Catalogue
+  </a>
+  <span class="topnav-sep">/</span>
+  <span>{{ artwork.artbase_id }}</span>
+</nav>
+
+<article class="passport">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-mark">
+      <div class="issuer">International Cultural Object Record</div>
+      <h1 class="title">Artwork Passport</h1>
+      <div class="subtitle">Compliant with Object ID · CDWA · LIDO 1.1</div>
+      <p class="colophon">
+        A standards-based identity document for a work of art, linking authoritative
+        references in international vocabularies and registries. Issued for cultural
+        heritage protection, insurance, scholarly research, and museum exchange.
+      </p>
+    </div>
+    <div class="seal" aria-label="Issuing seal">
+      <div class="seal-text">Issued<br>under<br>Object ID</div>
+      <div class="seal-id">{{ artwork.artbase_id }}</div>
+      <div class="seal-year">{{ issued_year_roman }}</div>
+    </div>
+  </header>
+
+  <!-- META BAR -->
+  <dl class="meta-bar">
+    <div><dt>Passport ID</dt><dd>{{ artwork.artbase_id }}</dd></div>
+    <div><dt>Issued</dt><dd>{{ issued_date }}</dd></div>
+    <div><dt>Version</dt><dd>{{ artwork.version }}.0</dd></div>
+    <div><dt>Visibility</dt><dd>{{ artwork.visibility | title_visibility }}</dd></div>
+  </dl>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-image">
+      <span class="corner tl"></span>
+      <span class="corner tr"></span>
+      <span class="corner bl"></span>
+      <span class="corner br"></span>
+      {% if image_src %}
+      <img src="{{ image_src }}" alt="{{ artwork.object_id.title }}, {{ artist.identity.preferred_name }}">
+      {% else %}
+      <div class="no-image">No image available</div>
+      {% endif %}
+    </div>
+    <div class="tombstone">
+      <div class="label">Identification</div>
+      <h2 class="work-title">{{ artwork.object_id.title or "(untitled)" }}</h2>
+      {% if artist %}
+      <p class="work-artist">{{ artist.identity.preferred_name }}</p>
+      <p class="work-artist-dates">{{ artist.descriptors.nationality or "" }}{% if artist.descriptors.nationality %}, {% endif %}{{ artist.life.birth_date.value or "?" }} — {{ artist.life.death_date.value or "present" }}</p>
+      {% endif %}
+      <dl class="tombstone-grid">
+        {% if artwork.object_id.date_display %}
+        <dt>Date</dt><dd>{{ artwork.object_id.date_display }}</dd>
+        {% endif %}
+        {% if artwork.object_id.materials %}
+        <dt>Medium</dt><dd>{{ artwork.object_id.materials }}</dd>
+        {% endif %}
+        {% if artwork.object_id.dimensions_display %}
+        <dt>Dimensions</dt><dd>{{ artwork.object_id.dimensions_display }}</dd>
+        {% endif %}
+        {% if artwork.location.collection %}
+        <dt>Repository</dt><dd>{{ artwork.location.collection }}{% if artwork.location.location_notes %}, {{ artwork.location.location_notes }}{% endif %}</dd>
+        {% endif %}
+        {% if artwork.location.inventory_number %}
+        <dt>Inventory</dt><dd>{{ artwork.location.inventory_number }}</dd>
+        {% endif %}
+      </dl>
+    </div>
+  </section>
+
+  <!-- OBJECT ID -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 01</span>
+      <h3 class="section-title">Object ID Record</h3>
+      <span class="section-rubric">Nine Categories · ICOM Standard</span>
+    </div>
+    <div class="object-id">
+      <div class="object-id-field{% if not artwork.object_id.object_type %} missing{% endif %}">
+        <div class="num">i</div>
+        <div class="label">Type of Object</div>
+        <div class="value">
+          {{ artwork.object_id.object_type | capitalize if artwork.object_id.object_type else "Not recorded" }}
+          {% if artwork.get('aat_terms', {}).get('type') %}
+          <div class="aat-link">
+            <a href="{{ artwork.aat_terms.type.aat_uri }}" target="_blank" rel="noopener">{{ artwork.aat_terms.type.label }}</a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="object-id-field{% if not artwork.object_id.materials %} missing{% endif %}">
+        <div class="num">ii</div>
+        <div class="label">Materials &amp; Techniques</div>
+        <div class="value">
+          {{ artwork.object_id.materials or "Not recorded" }}
+          {% if artwork.get('aat_terms', {}).get('materials') %}
+          <div class="aat-link">
+            {% for mat in artwork.aat_terms.materials %}
+            <a href="{{ mat.aat_uri }}" target="_blank" rel="noopener">{{ mat.label }}</a>{% if not loop.last %} · {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="object-id-field{% if not artwork.object_id.dimensions_display %} missing{% endif %}">
+        <div class="num">iii</div>
+        <div class="label">Measurements</div>
+        <div class="value">{{ artwork.object_id.dimensions_display or "Not recorded" }}</div>
+      </div>
+      <div class="object-id-field{% if artwork.object_id.inscriptions is none %} missing{% endif %}">
+        <div class="num">iv</div>
+        <div class="label">Inscriptions &amp; Markings</div>
+        <div class="value">{{ artwork.object_id.inscriptions if artwork.object_id.inscriptions is not none else "Not recorded" }}</div>
+      </div>
+      <div class="object-id-field wide{% if artwork.object_id.distinguishing is none %} missing{% endif %}">
+        <div class="num">v</div>
+        <div class="label">Distinguishing Features</div>
+        <div class="value">{{ artwork.object_id.distinguishing if artwork.object_id.distinguishing is not none else "Not recorded" }}</div>
+      </div>
+      <div class="object-id-field{% if not artwork.object_id.title %} missing{% endif %}">
+        <div class="num">vi</div>
+        <div class="label">Title</div>
+        <div class="value">{{ artwork.object_id.title or "Not recorded" }}</div>
+      </div>
+      <div class="object-id-field{% if not artwork.object_id.subject %} missing{% endif %}">
+        <div class="num">vii</div>
+        <div class="label">Subject</div>
+        <div class="value">
+          {{ artwork.object_id.subject or "Not recorded" }}
+          {% if artwork.get('aat_terms', {}).get('genre') %}
+          <div class="aat-link">
+            <a href="{{ artwork.aat_terms.genre.aat_uri }}" target="_blank" rel="noopener">{{ artwork.aat_terms.genre.label }}</a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="object-id-field{% if not artwork.object_id.date_display %} missing{% endif %}">
+        <div class="num">viii</div>
+        <div class="label">Date or Period</div>
+        <div class="value">{{ artwork.object_id.date_display or "Not recorded" }}</div>
+      </div>
+      <div class="object-id-field{% if not artwork.object_id.maker_id %} missing{% endif %}">
+        <div class="num">ix</div>
+        <div class="label">Maker</div>
+        <div class="value">
+          {% if artist %}
+          {{ artist.identity.preferred_name }} ({{ artist.life.birth_date.value or "?" }} — {{ artist.life.death_date.value or "present" }})
+          {% elif artwork.object_id.maker_id %}
+          {{ artwork.object_id.maker_id }}
+          {% else %}
+          Not recorded
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHORITIES -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 02</span>
+      <h3 class="section-title">International Authorities</h3>
+      <span class="section-rubric">Cross-Reference Endorsements</span>
+    </div>
+    <div class="authorities">
+
+      {% if artist and artist.authority_links.ulan.id %}
+      <a class="authority" href="http://vocab.getty.edu/ulan/{{ artist.authority_links.ulan.id }}" target="_blank" rel="noopener">
+        <div class="auth-system">Getty ULAN · Artist</div>
+        <div class="auth-id">{{ artist.authority_links.ulan.id }}</div>
+        <div class="auth-label">{{ artist.identity.preferred_name }}</div>
+        <div class="auth-uri">http://vocab.getty.edu/ulan/{{ artist.authority_links.ulan.id }}</div>
+      </a>
+      {% endif %}
+
+      {% if artwork.object_id.object_type_aat %}
+      <a class="authority" href="{{ artwork.object_id.object_type_aat.uri }}" target="_blank" rel="noopener">
+        <div class="auth-system">Getty AAT · Object Type</div>
+        <div class="auth-id">{{ artwork.object_id.object_type_aat.uri | aat_id }}</div>
+        <div class="auth-label">{{ artwork.object_id.object_type_aat.label }}</div>
+        <div class="auth-uri">{{ artwork.object_id.object_type_aat.uri }}</div>
+      </a>
+      {% endif %}
+
+      {% if artwork.authority_links.wikidata.id %}
+      <a class="authority" href="https://www.wikidata.org/wiki/{{ artwork.authority_links.wikidata.id }}" target="_blank" rel="noopener">
+        <div class="auth-system">Wikidata · Work</div>
+        <div class="auth-id">{{ artwork.authority_links.wikidata.id }}</div>
+        <div class="auth-label">{{ artwork.object_id.title }}</div>
+        <div class="auth-uri">wikidata.org/wiki/{{ artwork.authority_links.wikidata.id }}</div>
+      </a>
+      {% endif %}
+
+      {% if artist and artist.authority_links.wikidata.id %}
+      <a class="authority" href="https://www.wikidata.org/wiki/{{ artist.authority_links.wikidata.id }}" target="_blank" rel="noopener">
+        <div class="auth-system">Wikidata · Artist</div>
+        <div class="auth-id">{{ artist.authority_links.wikidata.id }}</div>
+        <div class="auth-label">{{ artist.identity.preferred_name }}</div>
+        <div class="auth-uri">wikidata.org/wiki/{{ artist.authority_links.wikidata.id }}</div>
+      </a>
+      {% endif %}
+
+      {% if artist and artist.authority_links.viaf.id %}
+      <a class="authority" href="https://viaf.org/viaf/{{ artist.authority_links.viaf.id }}/" target="_blank" rel="noopener">
+        <div class="auth-system">VIAF · Artist Authority</div>
+        <div class="auth-id">{{ artist.authority_links.viaf.id }}</div>
+        <div class="auth-label">{{ artist.identity.preferred_name }} (cross-library)</div>
+        <div class="auth-uri">viaf.org/viaf/{{ artist.authority_links.viaf.id }}</div>
+      </a>
+      {% endif %}
+
+      {% if artwork.location.inventory_number %}
+      <div class="authority no-link">
+        <div class="auth-system">Repository Record</div>
+        <div class="auth-id">{{ artwork.location.inventory_number }}</div>
+        <div class="auth-label">{{ artwork.location.collection or "Collection" }}</div>
+        <div class="auth-uri">{{ artwork.location.location_notes or "" }}</div>
+      </div>
+      {% endif %}
+
+    </div>
+  </section>
+
+  <!-- ICONOGRAPHY -->
+  {% if artwork.iconography.iconclass_codes %}
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 03</span>
+      <h3 class="section-title">Iconography</h3>
+      <span class="section-rubric">ICONCLASS — Subject Classification</span>
+    </div>
+    <div class="iconography">
+      {% if artwork.iconography.iconclass_labels %}
+        {% for label_obj in artwork.iconography.iconclass_labels %}
+        <div class="icon-code">
+          <span class="code">{{ label_obj.code }}</span>
+          <span class="desc">{{ label_obj.label }}</span>
+          <a href="{{ label_obj.uri }}" target="_blank" rel="noopener" class="lookup">View on ICONCLASS ↗</a>
+        </div>
+        {% endfor %}
+      {% else %}
+        {% for code in artwork.iconography.iconclass_codes %}
+        <div class="icon-code">
+          <span class="code">{{ code }}</span>
+          <span class="desc">—</span>
+          <a href="https://iconclass.org/{{ code }}" target="_blank" rel="noopener" class="lookup">View on ICONCLASS ↗</a>
+        </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- PROVENANCE -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 04</span>
+      <h3 class="section-title">Provenance</h3>
+      <span class="section-rubric">Documented Chain of Custody</span>
+    </div>
+    {% if artwork.provenance %}
+    <div class="provenance">
+      {% for event in artwork.provenance %}
+      <div class="prov-event{% if event.is_gap %} gap{% endif %}">
+        {% if event.date_display or event.date_from %}<div class="prov-date">{{ event.date_display or event.date_from }}</div>{% endif %}
+        {% if event.owner or event.actor %}<div class="prov-owner">{{ event.owner or event.actor }}</div>{% endif %}
+        {% if event.detail or event.notes %}<div class="prov-detail">{{ event.detail or event.notes }}</div>{% endif %}
+        {% if event.source %}<div class="prov-source">Source: {{ event.source }}</div>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="prov-empty">Provenance not yet documented for this record.</p>
+    {% endif %}
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-block">
+      <div class="label">Issued By</div>
+      <div class="value">
+        <strong>ArtBase Cataloguing Services</strong><br>
+        {{ artwork.cataloguing.catalogued_by or "ArtBase" }} · {{ artwork.cataloguing.review_status | title }}
+      </div>
+    </div>
+    <div class="footer-block footer-meta">
+      <div class="label">Authentication</div>
+      <div class="value">
+        Compliant with Object ID (ICOM), CDWA, and <a href="https://lido-schema.org/" target="_blank" rel="noopener">LIDO 1.1</a>.
+      </div>
+      <div class="pid">{{ artwork.artbase_id }} · v{{ artwork.version }} · {{ issued_date }}</div>
+    </div>
+  </footer>
+
+</article>
+</body>
+</html>

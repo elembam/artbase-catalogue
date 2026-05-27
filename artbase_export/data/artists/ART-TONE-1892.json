@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1892",
-      "precision": "year",
+      "value": "1892-03-28",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1958",
-      "precision": "year",
+      "value": "1958-07-30",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Annenieki Parish",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q2851477",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "London",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q84",
       "source_ids": []
     }
   },
@@ -129,5 +129,35 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian painter (1892-1958)",
+  "movement": [
+    {
+      "label": "French Realism",
+      "wikidata_id": "Q2642826",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2448916262,
+    "manual_overrides": [],
+    "ulan_last_enriched": "2026-05-27T18:20:44Z"
+  },
+  "enrichment": {
+    "ulan": {
+      "nationalities": [
+        "Latvian (culture or style)",
+        "Russian (culture or style)"
+      ],
+      "alternate_names": [
+        "Tone, Valdemars",
+        "Tone, Valdemārs",
+        "Tone, Voldemārs",
+        "Tone, Waldemars",
+        "Voldemars K. Tone",
+        "Voldemārs Tone"
+      ]
+    }
+  }
 }

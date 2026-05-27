@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1877",
-      "precision": "year",
+      "value": "1877-08-25",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1962",
-      "precision": "year",
+      "value": "1962-08-28",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Nereta",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q987161",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Körbecke",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1796601",
       "source_ids": []
     }
   },
@@ -129,5 +129,28 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "image": {
+    "commons_filename": "Jaunsudrabins0001.jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Jaunsudrabins0001.jpg",
+    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jaunsudrabins0001.jpg?width=400"
+  },
+  "description_en": "Latvian writer and painter (1877-1962)",
+  "description_lv": "latviešu rakstnieks un gleznotājs",
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2495284569,
+    "manual_overrides": [],
+    "ulan_last_enriched": "2026-05-27T18:20:44Z"
+  },
+  "enrichment": {
+    "ulan": {
+      "nationalities": [
+        "Latvian (culture or style)"
+      ],
+      "alternate_names": [
+        "Jānis Jaunsudrabinš"
+      ]
+    }
+  }
 }

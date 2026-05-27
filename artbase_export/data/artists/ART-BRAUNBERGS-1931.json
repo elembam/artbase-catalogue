@@ -15,23 +15,23 @@
   },
   "life": {
     "birth_date": {
-      "value": "1931",
-      "precision": "year",
+      "value": "1931-08-06",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "2018",
-      "precision": "year",
+      "value": "2018-06-05",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Tukums",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q636935",
       "source_ids": []
     },
     "death_place": {
@@ -131,5 +131,18 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian painter",
+  "education": [
+    {
+      "label": "Riga Stradiņš University",
+      "wikidata_id": "Q2007643",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2448916048,
+    "manual_overrides": []
+  }
 }

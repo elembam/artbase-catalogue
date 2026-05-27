@@ -15,8 +15,8 @@
   },
   "life": {
     "birth_date": {
-      "value": "1983",
-      "precision": "year",
+      "value": "1983-08-29",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
@@ -132,5 +132,12 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian painter",
+  "description_lv": "latviešu gleznotāja",
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2448916347,
+    "manual_overrides": []
+  }
 }

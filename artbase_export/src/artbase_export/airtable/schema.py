@@ -72,6 +72,13 @@ class ArtistFields:
     OFFICIAL_WEBSITE    = "Official Website"
     SOURCE_URLS         = "Source URLs"          # semicolon-separated
 
+    # ArtBase stable identifier (written back after first export)
+    ARTBASE_ID          = "ArtBase ID"
+
+    # Linked records (Airtable linked-record fields)
+    SOURCES             = "Source Documents"     # → Source_Documents table
+    AUTHORITY_LINKS     = "Authority Links"      # → Authority_Links table
+
     # Status and workflow
     LIVING_PERSON       = "Living Person?"       # Yes / No — GDPR flag
     NOTABILITY_STATUS   = "Notability Status"    # Established / Plausible / Insufficient
@@ -130,6 +137,14 @@ class ArtworkFields:
     LOCATION_DISPLAY    = "Current Location Display"
     REPOSITORY          = "Repository / Collection"
     RIGHTS_STATEMENT    = "Rights Statement"
+
+    # ArtBase stable identifier (written back after first export)
+    ARTBASE_ID          = "ArtBase ID"
+
+    # Linked records (Airtable linked-record fields)
+    ARTIST              = "Artist"               # → Artists_Makers table
+    SOURCES             = "Source Documents"     # → Source_Documents table
+    AUTHORITY_LINKS     = "Authority Links"      # → Authority_Links table
 
     # Visibility and status
     CONFIDENTIALITY     = "Confidentiality Level"  # Private / Client Portal / Public Site

@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1887",
-      "precision": "year",
+      "value": "1887-09-23",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1975",
-      "precision": "year",
+      "value": "1975-01-29",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Platone Parish",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q4364707",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     }
   },
@@ -131,5 +131,24 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "image": {
+    "commons_filename": "Gederts Eliass.gif",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Gederts_Eliass.gif",
+    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gederts_Eliass.gif?width=400"
+  },
+  "description_en": "Latvian painter (1887-1975)",
+  "description_lv": "latviešu gleznotājs",
+  "education": [
+    {
+      "label": "Royal Academy of Fine Arts of Brussels",
+      "wikidata_id": "Q2822455",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2492108659,
+    "manual_overrides": []
+  }
 }

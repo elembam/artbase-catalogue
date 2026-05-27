@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1894",
-      "precision": "year",
+      "value": "1894-10-06",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1966",
-      "precision": "year",
+      "value": "1966-10-13",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Gostynin",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q983735",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Rome",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q220",
       "source_ids": []
     }
   },
@@ -129,5 +129,37 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian artist and illustrator (1894-1966)",
+  "description_lv": "latviešu gleznotājs, zīmētājs, grafiķis, grāmatu grafiķis, scenogrāfs, vitrāžists, porcelāna apgleznotājs (1894-1966)",
+  "education": [
+    {
+      "label": "Jūlija Madernieka studija",
+      "wikidata_id": "Q13218703",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Imperial Academy of Arts",
+      "wikidata_id": "Q628254",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2422056755,
+    "manual_overrides": [],
+    "ulan_last_enriched": "2026-05-27T18:20:44Z"
+  },
+  "enrichment": {
+    "ulan": {
+      "nationalities": [
+        "Latvian (culture or style)"
+      ],
+      "alternate_names": [
+        "Nicolaas Strunke",
+        "Niklāvs Strunke",
+        "Strunke, Niklāvs"
+      ]
+    }
+  }
 }

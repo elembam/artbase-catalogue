@@ -1,0 +1,2 @@
+record_id,file,field_path,field_value_preview,reason,recommendation
+AP-2026-000001,artbase_export/data/artworks/AP-2026-000001.json,iconography.iconclass_codes,"[""48C5121"", ""48C51215"", ""25H15"", ""31D14""]",field not attributed to any known source,"verify source; if demo data, delete OR move to iconography_unverified"

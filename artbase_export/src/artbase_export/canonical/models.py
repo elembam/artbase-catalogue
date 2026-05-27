@@ -240,6 +240,7 @@ class ObjectIDFields(BaseModel):
     date_earliest:      Optional[int]           = None
     date_latest:        Optional[int]           = None
     maker_id:           Optional[str]           = None      # references ArtBase artist ID
+    maker_display_name: Optional[str]           = None      # display name for fallback lookup
     has_photograph:     bool                    = False
 
     def score(self) -> int:

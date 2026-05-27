@@ -22,22 +22,22 @@
       "notes": null
     },
     "death_date": {
-      "value": "1991",
-      "precision": "year",
+      "value": "1991-01-31",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     }
   },
@@ -129,5 +129,29 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian artist (1911-1991)",
+  "movement": [
+    {
+      "label": "abstract art",
+      "wikidata_id": "Q128115",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2442773788,
+    "manual_overrides": [],
+    "ulan_last_enriched": "2026-05-27T18:20:44Z"
+  },
+  "enrichment": {
+    "ulan": {
+      "nationalities": [
+        "Latvian (culture or style)"
+      ],
+      "alternate_names": [
+        "Kurts Fridrihsons"
+      ]
+    }
+  }
 }

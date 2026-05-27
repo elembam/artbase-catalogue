@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1906",
-      "precision": "year",
+      "value": "1906-09-02",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1984",
-      "precision": "year",
+      "value": "1984-06-23",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     }
   },
@@ -129,5 +129,23 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian painter (1906-1984)",
+  "description_lv": "latviešu gleznotājs",
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2494912282,
+    "manual_overrides": [],
+    "ulan_last_enriched": "2026-05-27T18:20:44Z"
+  },
+  "enrichment": {
+    "ulan": {
+      "nationalities": [
+        "Latvian (culture or style)"
+      ],
+      "alternate_names": [
+        "Jānis Pauļuks"
+      ]
+    }
+  }
 }

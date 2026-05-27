@@ -15,8 +15,8 @@
   },
   "life": {
     "birth_date": {
-      "value": "1946",
-      "precision": "year",
+      "value": "1946-01-07",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
@@ -29,9 +29,9 @@
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     },
     "death_place": {
@@ -132,5 +132,11 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian painter",
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2474803367,
+    "manual_overrides": []
+  }
 }

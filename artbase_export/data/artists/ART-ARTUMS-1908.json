@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1908",
-      "precision": "year",
+      "value": "1908-01-15",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1997",
-      "precision": "year",
+      "value": "1997-01-13",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Tukums",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q636935",
       "source_ids": []
     }
   },
@@ -129,5 +129,35 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "image": {
+    "commons_filename": "Ansis Artums 1933.g.jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Ansis_Artums_1933.g.jpg",
+    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ansis_Artums_1933.g.jpg?width=400"
+  },
+  "description_en": "Latvian painter (1908-1997)",
+  "education": [
+    {
+      "label": "Art Academy of Latvia",
+      "wikidata_id": "Q2607021",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2494184990,
+    "manual_overrides": [],
+    "ulan_last_enriched": "2026-05-27T18:20:44Z"
+  },
+  "enrichment": {
+    "ulan": {
+      "nationalities": [
+        "Latvian (culture or style)"
+      ],
+      "alternate_names": [
+        "Ansis Artums",
+        "Artum, Ansis Vil'evič"
+      ]
+    }
+  }
 }

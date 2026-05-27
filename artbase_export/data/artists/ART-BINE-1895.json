@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1895",
-      "precision": "year",
+      "value": "1895-04-11",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1955",
-      "precision": "year",
+      "value": "1955-10-24",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     }
   },
@@ -129,5 +129,30 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian artist and educationist (1895-1955)",
+  "description_lv": "latviešu gleznotājs, vitrāžists, pedagogs un mākslas kritiķis",
+  "education": [
+    {
+      "label": "Art Academy of Latvia",
+      "wikidata_id": "Q2607021",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2494111989,
+    "manual_overrides": [],
+    "ulan_last_enriched": "2026-05-27T18:20:44Z"
+  },
+  "enrichment": {
+    "ulan": {
+      "nationalities": [
+        "Latvian (culture or style)"
+      ],
+      "alternate_names": [
+        "Jēkabs Bīne"
+      ]
+    }
+  }
 }

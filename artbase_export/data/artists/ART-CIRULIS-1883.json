@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1883",
-      "precision": "year",
+      "value": "1883-02-25",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1942",
-      "precision": "year",
+      "value": "1942-09-15",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Majori",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q6738400",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     }
   },
@@ -129,5 +129,51 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "image": {
+    "commons_filename": "Ansis Cirulis.jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Ansis_Cirulis.jpg",
+    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ansis_Cirulis.jpg?width=400"
+  },
+  "description_en": "Latvian painter (1883-1942)",
+  "education": [
+    {
+      "label": "Saint Petersburg Stieglitz State Academy of Art and Design",
+      "wikidata_id": "Q2652597",
+      "source": "wikidata_auto"
+    }
+  ],
+  "genre": [
+    {
+      "label": "ceramic",
+      "wikidata_id": "Q45621",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "design",
+      "wikidata_id": "Q82604",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "graphics",
+      "wikidata_id": "Q1027879",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2448916003,
+    "manual_overrides": [],
+    "ulan_last_enriched": "2026-05-27T18:20:44Z"
+  },
+  "enrichment": {
+    "ulan": {
+      "nationalities": [
+        "Latvian (culture or style)"
+      ],
+      "alternate_names": [
+        "Ansis Cīrulis"
+      ]
+    }
+  }
 }

@@ -15,23 +15,23 @@
   },
   "life": {
     "birth_date": {
-      "value": "1899",
-      "precision": "year",
+      "value": "1899-12-21",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1976",
-      "precision": "year",
+      "value": "1976-09-21",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Saint Petersburg",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q656",
       "source_ids": []
     },
     "death_place": {
@@ -131,5 +131,11 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian artist",
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2494111447,
+    "manual_overrides": []
+  }
 }

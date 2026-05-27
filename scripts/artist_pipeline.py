@@ -20,8 +20,10 @@ Output:
 """
 
 import argparse
+import json
 import sys
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Optional
 import re
 
@@ -40,6 +42,15 @@ WIKIDATA_API = "https://www.wikidata.org/w/api.php"
 WIKIDATA_SPARQL = "https://query.wikidata.org/sparql"
 WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php"
 USER_AGENT = "ArtBaseCataloguer/0.1 (artbase.eu; contact@artbase.eu)"
+
+# Language-code → Wikipedia API base URL (checked in order when no enwiki sitelink)
+FALLBACK_WIKIS = [
+    ("lv", "https://lv.wikipedia.org/w/api.php"),
+    ("de", "https://de.wikipedia.org/w/api.php"),
+    ("fr", "https://fr.wikipedia.org/w/api.php"),
+    ("nl", "https://nl.wikipedia.org/w/api.php"),
+    ("sv", "https://sv.wikipedia.org/w/api.php"),
+]
 
 # Properties we audit and propose
 KEY_PROPERTIES = {
@@ -81,7 +92,8 @@ class WikidataEntry:
     description: Optional[str] = None
     statements: dict = field(default_factory=dict)  # P-number → list of values
     refs_per_statement: dict = field(default_factory=dict)  # P-number → ref count
-    wikipedia_title: Optional[str] = None
+    wikipedia_title: Optional[str] = None       # English title if present
+    sitelinks: dict = field(default_factory=dict)  # langcode → title
 
 
 @dataclass
@@ -158,6 +170,7 @@ def fetch_wikidata_entry(qid: str) -> WikidataEntry:
 
     # Find the English Wikipedia article if any
     sitelinks = data.get("sitelinks", {})
+    entry.sitelinks = {k.replace("wiki", ""): v["title"] for k, v in sitelinks.items()}
     if "enwiki" in sitelinks:
         entry.wikipedia_title = sitelinks["enwiki"]["title"]
 
@@ -166,7 +179,7 @@ def fetch_wikidata_entry(qid: str) -> WikidataEntry:
 
 # ---------- Wikipedia extraction ----------
 
-def fetch_wikipedia_article(title: str) -> Optional[str]:
+def fetch_wikipedia_article(title: str, api_url: str = WIKIPEDIA_API) -> Optional[str]:
     """Fetch the raw wikitext of a Wikipedia article."""
     params = {
         "action": "query",
@@ -176,7 +189,7 @@ def fetch_wikipedia_article(title: str) -> Optional[str]:
         "format": "json",
         "titles": title,
     }
-    r = requests.get(WIKIPEDIA_API, params=params,
+    r = requests.get(api_url, params=params,
                      headers={"User-Agent": USER_AGENT})
     r.raise_for_status()
     pages = r.json().get("query", {}).get("pages", {})
@@ -187,21 +200,81 @@ def fetch_wikipedia_article(title: str) -> Optional[str]:
     return None
 
 
+def best_wikipedia(entry: WikidataEntry) -> tuple[Optional[str], Optional[str], str]:
+    """
+    Return (lang_code, article_title, wikipedia_url) for the best available
+    Wikipedia article: English first, then FALLBACK_WIKIS in order.
+    Returns (None, None, "") if no article is found.
+    """
+    if entry.wikipedia_title:
+        url = f"https://en.wikipedia.org/wiki/{entry.wikipedia_title.replace(' ', '_')}"
+        return "en", entry.wikipedia_title, url
+
+    for lang, api_url in FALLBACK_WIKIS:
+        title = entry.sitelinks.get(lang)
+        if title:
+            url = f"https://{lang}.wikipedia.org/wiki/{title.replace(' ', '_')}"
+            return lang, title, url
+
+    return None, None, ""
+
+
 def parse_artist_infobox(wikitext: str) -> dict:
-    """Extract structured fields from a Wikipedia artist infobox."""
+    """Extract structured fields from a Wikipedia artist infobox.
+
+    Handles English (Infobox artist/person) and common non-English templates
+    such as Latvian 'Mākslinieka infokaste', German 'Infobox Künstler', etc.
+    Field names are normalised to English equivalents before returning.
+    """
+    # Latvian → English field-name map
+    LV_FIELD_MAP = {
+        "vārds":           "name",
+        "dzimšanas_datums": "birth_date",
+        "dzimšanas_vieta":  "birth_place",
+        "miršanas_datums":  "death_date",
+        "miršanas_vieta":   "death_place",
+        "tautība":          "nationality",
+        "kustība":          "movement",
+        "žanrs":            "genre",
+        "izglītība":        "education",
+        "biedrības":        "member of",
+    }
+    # German → English
+    DE_FIELD_MAP = {
+        "geburtsdatum":    "birth_date",
+        "geburtsort":      "birth_place",
+        "sterbedatum":     "death_date",
+        "sterbeort":       "death_place",
+        "nationalität":    "nationality",
+        "stilrichtung":    "movement",
+        "ausbildung":      "education",
+    }
+    # Template names that identify an artist/person infobox
+    INFOBOX_KEYWORDS = [
+        "infobox",            # English, German
+        "infokaste",          # Latvian
+        "persondata",
+        "artiste",            # French
+    ]
+
     parsed = mwparserfromhell.parse(wikitext)
     for template in parsed.filter_templates():
         name = template.name.strip().lower()
-        if "infobox" in name and ("artist" in name or "person" in name):
-            fields = {}
+        if any(k in name for k in INFOBOX_KEYWORDS):
+            raw = {}
             for param in template.params:
                 key = str(param.name).strip().lower()
-                # Strip wikitext markup from values, basic clean
                 value = str(param.value).strip()
                 value = re.sub(r"\[\[([^|\]]+\|)?([^\]]+)\]\]", r"\2", value)
                 value = re.sub(r"<[^>]+>", "", value)
                 value = re.sub(r"\{\{[^}]+\}\}", "", value)
-                fields[key] = value.strip()
+                raw[key] = value.strip()
+
+            # Normalise non-English keys
+            fields = {}
+            for k, v in raw.items():
+                mapped = LV_FIELD_MAP.get(k) or DE_FIELD_MAP.get(k) or k
+                fields[mapped] = v
             return fields
     return {}
 
@@ -301,7 +374,10 @@ def print_audit(entry: WikidataEntry):
     print(f"Label:       {entry.label}")
     print(f"Description: {entry.description}")
     if entry.wikipedia_title:
-        print(f"Wikipedia:   {entry.wikipedia_title}")
+        print(f"Wikipedia:   {entry.wikipedia_title} (en)")
+    wiki_langs = [k for k in entry.sitelinks if k != "en"]
+    if wiki_langs:
+        print(f"Other wikis: {', '.join(wiki_langs)}")
     print()
 
     print(f"{'-'*60}")
@@ -347,22 +423,122 @@ def write_quickstatements(qid: str, proposals: list[ProposedEdit],
     print(f"  https://quickstatements.toolforge.org/")
 
 
+# ---------- Canonical JSON loader ----------
+
+REPO_ROOT   = Path(__file__).resolve().parent.parent
+DATA_DIR    = REPO_ROOT / "artbase_export" / "data"
+ARTBASE_URL = "https://artbase.eu/artists"  # placeholder source URL
+
+
+def load_canonical_artist(artist_id: str) -> dict:
+    """Load data/artists/{artist_id}.json; raise SystemExit if not found."""
+    path = DATA_DIR / "artists" / f"{artist_id}.json"
+    if not path.exists():
+        # Try a case-insensitive glob
+        matches = list((DATA_DIR / "artists").glob(f"*{artist_id}*.json"))
+        if not matches:
+            sys.exit(f"✗ Canonical JSON not found for '{artist_id}'\n"
+                     f"  Looked in: {DATA_DIR / 'artists'}")
+        path = matches[0]
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def canonical_to_authority_proposals(
+    canonical: dict, entry: WikidataEntry
+) -> list[ProposedEdit]:
+    """
+    Compare authority_links in the canonical JSON against what Wikidata already
+    has and return proposed additions for any confirmed IDs that are missing.
+    """
+    links = canonical.get("authority_links", {})
+    name  = canonical.get("identity", {}).get("preferred_name", "")
+    source_url = (
+        f"{ARTBASE_URL}/{canonical.get('artbase_id', 'unknown')}"
+    )
+
+    # Mapping: canonical key → (Wikidata PID, human label)
+    AUTHORITY_MAP = {
+        "ulan":    ("P245", "Getty ULAN ID"),
+        "viaf":    ("P214", "VIAF ID"),
+        "isni":    ("P213", "ISNI"),
+        "rkd":     ("P650", "RKDartists ID"),
+        "lc_naco": ("P244", "Library of Congress authority ID"),
+        "gnd":     ("P227", "GND ID"),
+        "bnf":     ("P268", "Bibliothèque nationale de France ID"),
+    }
+
+    proposals = []
+    for key, (pid, label) in AUTHORITY_MAP.items():
+        rec = links.get(key, {})
+        authority_id = rec.get("id")
+        status       = rec.get("status", "")
+        if not authority_id:
+            continue
+        if status not in ("confirmed", "working"):
+            continue
+        if pid in entry.statements:
+            continue  # Already on Wikidata
+        proposals.append(ProposedEdit(
+            pid=pid,
+            value=authority_id,
+            value_type="string",
+            source_url=source_url,
+            rationale=f"ArtBase canonical record for {name} — status: {status}",
+        ))
+
+    return proposals
+
+
 # ---------- Main ----------
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("name", help="Artist name to look up")
+    parser.add_argument("name", nargs="?", help="Artist name to look up")
     parser.add_argument("--year", type=int, help="Optional birth year hint")
     parser.add_argument("--qid", help="Skip search, use this QID directly")
+    parser.add_argument(
+        "--from-canonical",
+        metavar="ARTIST_ID",
+        help=(
+            "Read data/artists/{ARTIST_ID}.json, use its Wikidata QID directly, "
+            "and treat confirmed authority IDs (ULAN, VIAF, etc.) as proposed edits. "
+            "Skips the Wikidata name-search step."
+        ),
+    )
     parser.add_argument("--no-quickstatements", action="store_true",
                         help="Skip generating QuickStatements file")
     args = parser.parse_args()
 
-    # Step 1: Find the Wikidata entry
-    if args.qid:
+    canonical: Optional[dict] = None
+
+    # ── Resolve QID ───────────────────────────────────────────────────────────
+    if args.from_canonical:
+        canonical = load_canonical_artist(args.from_canonical)
+        wd = canonical.get("authority_links", {}).get("wikidata", {})
+        qid = wd.get("id")
+        if not qid:
+            sys.exit(
+                f"✗ No Wikidata QID in canonical record '{args.from_canonical}'.\n"
+                f"  Run the pipeline without --from-canonical to search and assign one."
+            )
+        # Use preferred name for output files
+        preferred_name = canonical.get("identity", {}).get("preferred_name") or args.from_canonical
+        print(f"Reading canonical record: {args.from_canonical}")
+        print(f"  Artist:  {preferred_name}")
+        print(f"  QID:     {qid}  (status: {wd.get('status', '?')})")
+        # Report known authority IDs
+        auth_links = canonical.get("authority_links", {})
+        for key in ("ulan", "viaf", "isni", "rkd", "lc_naco", "gnd", "bnf"):
+            rec = auth_links.get(key, {})
+            if rec.get("id"):
+                print(f"  {key.upper():8} {rec['id']}  ({rec.get('status', '?')})")
+    elif args.qid:
         qid = args.qid
+        preferred_name = args.name or qid
         print(f"Using QID: {qid}")
-    else:
+    elif args.name:
+        preferred_name = args.name
         print(f"Searching Wikidata for: {args.name}")
         candidates = search_wikidata(args.name, hint_year=args.year)
         if not candidates:
@@ -373,42 +549,63 @@ def main():
         print(f"✓ Best match: {qid}")
         if len(candidates) > 1:
             print(f"  Other candidates: {', '.join(candidates[1:5])}")
+    else:
+        parser.print_help()
+        return 1
 
-    # Step 2: Fetch and audit
+    # ── Fetch and audit ───────────────────────────────────────────────────────
     entry = fetch_wikidata_entry(qid)
     print_audit(entry)
 
-    # Step 3: If there's a Wikipedia article, extract proposals
-    if entry.wikipedia_title and not args.no_quickstatements:
+    all_proposals: list[ProposedEdit] = []
+
+    # ── Authority ID proposals from canonical record ───────────────────────────
+    if canonical:
+        auth_proposals = canonical_to_authority_proposals(canonical, entry)
+        if auth_proposals:
+            print(f"{'-'*60}")
+            print(f"AUTHORITY IDs FROM CANONICAL RECORD ({len(auth_proposals)})")
+            print(f"{'-'*60}")
+            for p in auth_proposals:
+                print(f"  + {p.pid:6} ({KEY_PROPERTIES.get(p.pid, p.pid)}) = {p.value}")
+                print(f"    {p.rationale}")
+        all_proposals.extend(auth_proposals)
+
+    # ── Wikipedia proposals ───────────────────────────────────────────────────
+    lang, wiki_title, wp_url = best_wikipedia(entry)
+    if wiki_title and not args.no_quickstatements:
+        wiki_api = WIKIPEDIA_API if lang == "en" else \
+            dict(FALLBACK_WIKIS).get(lang, WIKIPEDIA_API)
         print(f"{'-'*60}")
-        print(f"FETCHING WIKIPEDIA: {entry.wikipedia_title}")
+        print(f"FETCHING WIKIPEDIA [{lang}]: {wiki_title}")
         print(f"{'-'*60}")
-        wikitext = fetch_wikipedia_article(entry.wikipedia_title)
+        wikitext = fetch_wikipedia_article(wiki_title, api_url=wiki_api)
         if wikitext:
             infobox = parse_artist_infobox(wikitext)
             print(f"  Found infobox with {len(infobox)} fields")
-            wp_url = f"https://en.wikipedia.org/wiki/{entry.wikipedia_title.replace(' ', '_')}"
-            proposals = map_infobox_to_proposals(infobox, entry, wp_url)
+            wiki_proposals = map_infobox_to_proposals(infobox, entry, wp_url)
 
-            if proposals:
+            if wiki_proposals:
                 print(f"\n{'-'*60}")
-                print(f"PROPOSED EDITS ({len(proposals)})")
+                print(f"PROPOSED EDITS FROM WIKIPEDIA ({len(wiki_proposals)})")
                 print(f"{'-'*60}")
-                for p in proposals:
+                for p in wiki_proposals:
                     print(f"  + {p.pid} ({KEY_PROPERTIES.get(p.pid, '?')}) = {p.value}")
                     print(f"    rationale: {p.rationale}")
-
-                # Write QuickStatements file
-                safe_name = re.sub(r"[^\w]", "_", args.name)
-                out_path = f"{safe_name}.qs.txt"
-                write_quickstatements(qid, proposals, out_path)
-            else:
-                print("  No new proposals (entry already covers infobox fields)")
+            all_proposals.extend(wiki_proposals)
         else:
             print("  Could not fetch Wikipedia article")
-    elif not entry.wikipedia_title:
-        print("  No English Wikipedia article exists for this entry.")
+    elif not wiki_title:
+        print("  No Wikipedia article found (checked: en, lv, de, fr, nl, sv).")
         print("  → Check other language Wikipedias manually for source data.")
+
+    # ── Write QuickStatements ─────────────────────────────────────────────────
+    if all_proposals and not args.no_quickstatements:
+        safe_name = re.sub(r"[^\w]", "_", preferred_name)
+        out_path = f"{safe_name}.qs.txt"
+        write_quickstatements(qid, all_proposals, out_path)
+    elif not all_proposals:
+        print("\n  No proposals generated — Wikidata entry appears complete.")
 
     return 0
 

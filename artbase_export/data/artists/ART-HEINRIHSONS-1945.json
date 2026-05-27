@@ -29,9 +29,9 @@
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Sabile",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q650475",
       "source_ids": []
     },
     "death_place": {
@@ -131,5 +131,12 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian artist of Estonian origin (born 1945)",
+  "description_lv": "Latviešu gleznotājs",
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2479145024,
+    "manual_overrides": []
+  }
 }

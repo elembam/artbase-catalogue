@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1452",
-      "precision": "year",
+      "value": "1452-04-15",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1519",
-      "precision": "year",
+      "value": "1519-05-02",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Vinci, Tuscany, Italy",
+      "display": "Anchiano",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q154184",
       "source_ids": []
     },
     "death_place": {
-      "display": "Amboise, France",
+      "display": "Clos Lucé",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1122731",
       "source_ids": []
     }
   },
@@ -166,5 +166,63 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "image": {
+    "commons_filename": "Francesco Melzi - Portrait of Leonardo.png",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Francesco_Melzi_-_Portrait_of_Leonardo.png",
+    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Francesco_Melzi_-_Portrait_of_Leonardo.png?width=400"
+  },
+  "description_en": "Italian Renaissance polymath (1452−1519)",
+  "description_lv": "itāļu renesanses polimāts (1452−1519)",
+  "movement": [
+    {
+      "label": "High Renaissance",
+      "wikidata_id": "Q1474884",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Renaissance",
+      "wikidata_id": "Q4692",
+      "source": "wikidata_auto"
+    }
+  ],
+  "genre": [
+    {
+      "label": "portrait",
+      "wikidata_id": "Q134307",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "religious painting",
+      "wikidata_id": "Q2414609",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "religious art",
+      "wikidata_id": "Q2864737",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2496704148,
+    "manual_overrides": [],
+    "ulan_last_enriched": "2026-05-27T18:20:44Z"
+  },
+  "enrichment": {
+    "ulan": {
+      "nationalities": [
+        "Florentine",
+        "Italian (culture or style)"
+      ],
+      "alternate_names": [
+        "Leonardo di Ser Piero da Vinci",
+        "Leonardo, da Vinci",
+        "Léonard de Vinci",
+        "Léonardo de Vinci",
+        "Vinci, Leonardo da",
+        "da Vinci, Leonardo"
+      ]
+    }
+  }
 }

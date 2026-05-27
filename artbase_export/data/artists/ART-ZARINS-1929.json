@@ -15,23 +15,23 @@
   },
   "life": {
     "birth_date": {
-      "value": "1929",
-      "precision": "year",
+      "value": "1929-06-18",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1997",
-      "precision": "year",
+      "value": "1997-04-13",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     },
     "death_place": {
@@ -131,5 +131,30 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Soviet artist (1929-1997)",
+  "education": [
+    {
+      "label": "Art Academy of Latvia",
+      "wikidata_id": "Q2607021",
+      "source": "wikidata_auto"
+    }
+  ],
+  "genre": [
+    {
+      "label": "still life",
+      "wikidata_id": "Q170571",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "portrait",
+      "wikidata_id": "Q134307",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2255412536,
+    "manual_overrides": []
+  }
 }

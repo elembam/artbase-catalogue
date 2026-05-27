@@ -1,0 +1,252 @@
+#!/usr/bin/env python3
+"""
+passport_generator.py — Generate a standalone HTML passport for an artwork.
+
+Reads canonical JSON from data/artworks/<ID>.json and data/artists/<artist_id>.json,
+renders the Jinja2 template at templates/passport.html.j2, and writes to
+passports/<ID>.html.
+
+Usage:
+    python3 scripts/passport_generator.py AP-2026-000001
+    python3 scripts/passport_generator.py AP-2026-000001 --data-dir /path/to/data
+    python3 scripts/passport_generator.py AP-2026-000001 --open
+
+Dependencies:
+    pip install jinja2
+"""
+
+from __future__ import annotations
+
+import argparse
+import base64
+import json
+import mimetypes
+import re
+import sys
+import webbrowser
+from datetime import date, datetime
+from pathlib import Path
+from typing import Any, Optional
+
+try:
+    from jinja2 import Environment, FileSystemLoader, StrictUndefined, Undefined
+except ImportError:
+    print("Install Jinja2 first:  pip install jinja2")
+    sys.exit(1)
+
+
+# ── Paths ──────────────────────────────────────────────────────────────────────
+
+SCRIPT_DIR  = Path(__file__).parent
+REPO_ROOT   = SCRIPT_DIR.parent
+TEMPLATE    = REPO_ROOT / "templates" / "passport.html.j2"
+DEFAULT_DATA = REPO_ROOT / "artbase_export" / "data"
+PASSPORTS_DIR = REPO_ROOT / "passports"
+
+
+# ── Roman numerals helper (for the seal year) ──────────────────────────────────
+
+def to_roman(n: int) -> str:
+    vals = [(1000,"M"),(900,"CM"),(500,"D"),(400,"CD"),(100,"C"),(90,"XC"),
+            (50,"L"),(40,"XL"),(10,"X"),(9,"IX"),(5,"V"),(4,"IV"),(1,"I")]
+    result = ""
+    for v, s in vals:
+        while n >= v:
+            result += s
+            n -= v
+    return result
+
+
+# ── Data loading ───────────────────────────────────────────────────────────────
+
+def load_json(path: Path) -> dict:
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def find_artist_json(artwork: dict, data_dir: Path) -> Optional[dict]:
+    # Try canonical maker_id first
+    maker_id = artwork.get("object_id", {}).get("maker_id")
+    if maker_id:
+        artist_path = data_dir / "artists" / f"{maker_id}.json"
+        if artist_path.exists():
+            return load_json(artist_path)
+
+    # Fall back: scan all artist files and match by preferred_name or artbase_id
+    display_name = artwork.get("object_id", {}).get("maker_display_name") or \
+                   artwork.get("object_id", {}).get("maker_id") or \
+                   artwork.get("artist_display_name")
+    artists_dir = data_dir / "artists"
+    if artists_dir.exists():
+        for artist_file in sorted(artists_dir.glob("*.json")):
+            if artist_file.stem == "UNKNOWN":
+                continue
+            try:
+                a = load_json(artist_file)
+                preferred = a.get("identity", {}).get("preferred_name", "")
+                artbase   = a.get("artbase_id", "")
+                if display_name and (
+                    preferred.lower() == display_name.lower() or
+                    artbase == display_name
+                ):
+                    return a
+            except Exception:
+                continue
+    return None
+
+
+# ── Image embedding ────────────────────────────────────────────────────────────
+
+def embed_image(file_path: str) -> Optional[str]:
+    """Load an image file and return a data URI, or None if not available."""
+    p = Path(file_path)
+    if not p.exists():
+        return None
+    mime, _ = mimetypes.guess_type(str(p))
+    if not mime or not mime.startswith("image/"):
+        return None
+    data = base64.b64encode(p.read_bytes()).decode("ascii")
+    return f"data:{mime};base64,{data}"
+
+
+def resolve_image(artwork: dict, data_dir: Path) -> Optional[str]:
+    """
+    Try to find an image for the artwork:
+    1. Check the canonical JSON for a photography media file path
+    2. Look for a conventional file in data/images/<artbase_id>.*
+    """
+    artbase_id = artwork.get("artbase_id", "")
+
+    # Check conventional image locations
+    for ext in (".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff"):
+        candidate = data_dir / "images" / f"{artbase_id}{ext}"
+        if candidate.exists():
+            src = embed_image(str(candidate))
+            if src:
+                return src
+
+    return None
+
+
+# ── Jinja2 filters ─────────────────────────────────────────────────────────────
+
+def filter_title_visibility(value: str) -> str:
+    mapping = {
+        "private":          "Private",
+        "unlisted":         "Unlisted",
+        "public-unindexed": "Public — Not Indexed",
+        "public":           "Public — Indexed",
+    }
+    return mapping.get(value, value.replace("-", " ").title())
+
+
+def filter_aat_id(uri: str) -> str:
+    """Extract numeric ID from a Getty URI like http://vocab.getty.edu/aat/300033618"""
+    m = re.search(r"/(\d+)$", uri)
+    return m.group(1) if m else uri
+
+
+def filter_title(value: str) -> str:
+    return value.replace("_", " ").title()
+
+
+# ── Template context builder ───────────────────────────────────────────────────
+
+def build_context(artwork: dict, artist: Optional[dict],
+                  image_src: Optional[str]) -> dict:
+    # Issued date from exported field or today
+    exported = artwork.get("exported") or datetime.utcnow().isoformat()
+    try:
+        issued_dt = datetime.fromisoformat(exported.rstrip("Z"))
+        issued_date = issued_dt.strftime("%Y-%m-%d")
+        issued_year_roman = to_roman(issued_dt.year)
+    except (ValueError, AttributeError):
+        issued_date = date.today().isoformat()
+        issued_year_roman = to_roman(date.today().year)
+
+    return {
+        "artwork":           artwork,
+        "artist":            artist,
+        "image_src":         image_src,
+        "issued_date":       issued_date,
+        "issued_year_roman": issued_year_roman,
+    }
+
+
+# ── Main ───────────────────────────────────────────────────────────────────────
+
+def main() -> int:
+    parser = argparse.ArgumentParser(
+        description="Generate an HTML artwork passport from canonical JSON."
+    )
+    parser.add_argument("passport_id", help="Artwork passport ID, e.g. AP-2026-000001")
+    parser.add_argument(
+        "--data-dir", default=None,
+        help=f"Path to data/ directory (default: {DEFAULT_DATA})"
+    )
+    parser.add_argument(
+        "--out-dir", default=None,
+        help=f"Output directory (default: {PASSPORTS_DIR})"
+    )
+    parser.add_argument(
+        "--open", action="store_true",
+        help="Open the generated passport in the default browser"
+    )
+    args = parser.parse_args()
+
+    data_dir    = Path(args.data_dir) if args.data_dir else DEFAULT_DATA
+    out_dir     = Path(args.out_dir)  if args.out_dir  else PASSPORTS_DIR
+    artwork_path = data_dir / "artworks" / f"{args.passport_id}.json"
+
+    if not artwork_path.exists():
+        print(f"✗ Artwork JSON not found: {artwork_path}", file=sys.stderr)
+        return 1
+
+    if not TEMPLATE.exists():
+        print(f"✗ Template not found: {TEMPLATE}", file=sys.stderr)
+        return 1
+
+    # Load data
+    artwork = load_json(artwork_path)
+    artist  = find_artist_json(artwork, data_dir)
+    image_src = resolve_image(artwork, data_dir)
+
+    if artist:
+        print(f"  Artist: {artist.get('artbase_id')} — {artist.get('identity', {}).get('preferred_name', '?')}")
+    else:
+        print(f"  Artist: (not found)")
+    if image_src:
+        print(f"  Image:  embedded ({len(image_src)//1024} KB)")
+    else:
+        print(f"  Image:  not available")
+
+    # Set up Jinja2
+    env = Environment(
+        loader=FileSystemLoader(str(TEMPLATE.parent)),
+        autoescape=True,
+        undefined=Undefined,   # silently skip missing vars
+    )
+    env.filters["title_visibility"] = filter_title_visibility
+    env.filters["aat_id"]           = filter_aat_id
+    env.filters["title"]            = filter_title
+
+    template = env.get_template(TEMPLATE.name)
+    context  = build_context(artwork, artist, image_src)
+    html     = template.render(**context)
+
+    # Write output
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / f"{args.passport_id}.html"
+    out_path.write_text(html, encoding="utf-8")
+
+    print(f"\n✓ Passport written: {out_path}")
+    print(f"  Size: {len(html)//1024} KB")
+
+    if args.open:
+        webbrowser.open(out_path.as_uri())
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

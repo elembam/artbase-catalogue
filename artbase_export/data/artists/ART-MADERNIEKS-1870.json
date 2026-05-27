@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1870",
-      "precision": "year",
+      "value": "1870-02-27",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1955",
-      "precision": "year",
+      "value": "1955-07-19",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Vecgulbene Parish",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q16355479",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     }
   },
@@ -129,5 +129,41 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian painter (1870-1955)",
+  "education": [
+    {
+      "label": "Saint Petersburg Stieglitz State Academy of Art and Design",
+      "wikidata_id": "Q2652597",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Beaux-Arts de Paris",
+      "wikidata_id": "Q273593",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Académie Colarossi",
+      "wikidata_id": "Q337454",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2493164369,
+    "manual_overrides": [],
+    "ulan_last_enriched": "2026-05-27T18:20:44Z"
+  },
+  "enrichment": {
+    "ulan": {
+      "nationalities": [
+        "Latvian (culture or style)"
+      ],
+      "alternate_names": [
+        "Julijs Maderniek",
+        "Jūlijs Madernieks",
+        "Maderniek, Julijs"
+      ]
+    }
+  }
 }

@@ -15,23 +15,23 @@
   },
   "life": {
     "birth_date": {
-      "value": "1882",
-      "precision": "year",
+      "value": "1882-08-30",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1969",
-      "precision": "year",
+      "value": "1969-05-18",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Snēpele Parish",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q7548952",
       "source_ids": []
     },
     "death_place": {
@@ -129,5 +129,29 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian painter",
+  "education": [
+    {
+      "label": "Art Academy of Latvia",
+      "wikidata_id": "Q2607021",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2448916229,
+    "manual_overrides": [],
+    "ulan_last_enriched": "2026-05-27T18:20:44Z"
+  },
+  "enrichment": {
+    "ulan": {
+      "nationalities": [
+        "Latvian (culture or style)"
+      ],
+      "alternate_names": [
+        "Indriķis Zeberiņš"
+      ]
+    }
+  }
 }

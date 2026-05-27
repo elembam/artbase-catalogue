@@ -66,7 +66,7 @@ class GitHandler:
 
         # Stage all changed paths (convert to strings relative to repo root)
         repo_root = Path(self._repo.working_dir)
-        relative  = [str(p.relative_to(repo_root)) for p in changed_paths]
+        relative  = [str(Path(p).resolve().relative_to(repo_root)) for p in changed_paths]
 
         self._repo.index.add(relative)
 

@@ -48,6 +48,7 @@ def transform_artwork(raw: dict[str, Any]) -> CanonicalArtwork:
         date_earliest       = _int(f, ArtworkFields.DATE_START),
         date_latest         = _int(f, ArtworkFields.DATE_END),
         maker_id            = _str(f, ArtworkFields.ARTIST_ID),
+        maker_display_name  = _str(f, ArtworkFields.ARTIST_DISPLAY),
     )
 
     # ── Iconography ──────────────────────────────────────────────────────────

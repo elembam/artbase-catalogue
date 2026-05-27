@@ -15,8 +15,8 @@
   },
   "life": {
     "birth_date": {
-      "value": "1962",
-      "precision": "year",
+      "value": "1962-09-24",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
@@ -131,5 +131,17 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "image": {
+    "commons_filename": "Zalans in Studio, Riga, December 2012.JPG",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Zalans_in_Studio,_Riga,_December_2012.JPG",
+    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zalans_in_Studio%2C_Riga%2C_December_2012.JPG?width=400"
+  },
+  "description_en": "Latvian painter",
+  "description_lv": "latviešu mākslinieks",
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2494228807,
+    "manual_overrides": []
+  }
 }

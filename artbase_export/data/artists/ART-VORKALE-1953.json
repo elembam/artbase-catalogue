@@ -29,9 +29,9 @@
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Kaliningrad",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1829",
       "source_ids": []
     },
     "death_place": {
@@ -131,5 +131,23 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "image": {
+    "commons_filename": "Irina Vorkale 2018..jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Irina_Vorkale_2018..jpg",
+    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Irina_Vorkale_2018..jpg?width=400"
+  },
+  "description_en": "Latvian painter",
+  "education": [
+    {
+      "label": "Art Academy of Latvia",
+      "wikidata_id": "Q2607021",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
+    "wikidata_revision_id": 2448916374,
+    "manual_overrides": []
+  }
 }
