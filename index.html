@@ -132,12 +132,30 @@
 
   .artist-header {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr auto;
     align-items: start;
     gap: 16px;
     border-bottom: 1px solid var(--rule);
     padding-bottom: 14px;
     margin-bottom: 24px;
+  }
+
+  .artist-portrait {
+    width: 60px;
+    height: 75px;
+    flex-shrink: 0;
+  }
+  .artist-portrait img {
+    width: 60px;
+    height: 75px;
+    object-fit: cover;
+    object-position: top center;
+    border: 1px solid var(--rule);
+    display: block;
+  }
+  .artist-portrait.placeholder {
+    background: var(--paper-deep);
+    border: 1px dashed var(--rule);
   }
 
   .artist-name {
@@ -369,7 +387,8 @@
   }
 
   @media (max-width: 600px) {
-    .artist-header { grid-template-columns: 1fr; }
+    .artist-header { grid-template-columns: auto 1fr; }
+    .artist-links { grid-column: 2; justify-self: end; }
     .artworks-grid { grid-template-columns: 1fr; }
     .site-stats { gap: 16px; }
   }
@@ -1036,6 +1055,9 @@
   <section class="artist-block" id="ART-AIDE-1913">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1098,6 +1120,9 @@
   <section class="artist-block" id="ART-AIZENS-1899">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1164,6 +1189,13 @@
   <section class="artist-block" id="ART-AKOPJANS-1969">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-AKOPJANS-1969.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Arturs_Akopjans.jpg?width=400" alt="Arturs Akopjans" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1226,6 +1258,9 @@
   <section class="artist-block" id="ART-AMELKOVICS-1969">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1292,6 +1327,9 @@
   <section class="artist-block" id="ART-ANDERSONS-1929">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1354,6 +1392,9 @@
   <section class="artist-block" id="ART-ANDRIJENKO-1926">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1399,6 +1440,9 @@
   <section class="artist-block" id="ART-ANMANIS-1943">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1465,6 +1509,9 @@
   <section class="artist-block" id="ART-ANNUSS-1893">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1533,6 +1580,9 @@
   <section class="artist-block" id="ART-ANTONOVS-1884">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1578,6 +1628,9 @@
   <section class="artist-block" id="ART-APINIS-1899">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1644,6 +1697,13 @@
   <section class="artist-block" id="ART-APSITIS-1880">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-APSITIS-1880.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Aleksandrs_Aps%C4%ABtis.jpg?width=400" alt="Aleksandrs Apsītis" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1712,6 +1772,13 @@
   <section class="artist-block" id="ART-ARTUMS-1908">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-ARTUMS-1908.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ansis_Artums_1933.g.jpg?width=400" alt="Ansis Artums" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1780,6 +1847,9 @@
   <section class="artist-block" id="ART-AUZA-1914">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1842,6 +1912,9 @@
   <section class="artist-block" id="ART-AVOTINA-1952">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1904,6 +1977,9 @@
   <section class="artist-block" id="ART-AVOTINA-1983">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -1960,6 +2036,9 @@
   <section class="artist-block" id="ART-AVRAMENKO-1981">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2005,6 +2084,9 @@
   <section class="artist-block" id="ART-BAIDA-1958">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2050,6 +2132,9 @@
   <section class="artist-block" id="ART-BAKLANE-1976">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2110,6 +2195,9 @@
   <section class="artist-block" id="ART-BAKLANS-1947">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2176,6 +2264,9 @@
   <section class="artist-block" id="ART-BALODE-1983">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2238,6 +2329,9 @@
   <section class="artist-block" id="ART-BALTGAILIS-1893">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2306,6 +2400,9 @@
   <section class="artist-block" id="ART-BALTMANE-1882">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2368,6 +2465,9 @@
   <section class="artist-block" id="ART-BAUMA-1930">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2413,6 +2513,9 @@
   <section class="artist-block" id="ART-BAUMANE-1922">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2475,6 +2578,9 @@
   <section class="artist-block" id="ART-BAUMANIS-1892">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2541,6 +2647,9 @@
   <section class="artist-block" id="ART-BAUSKENIEKS-1910">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2603,6 +2712,9 @@
   <section class="artist-block" id="ART-BELCOVA-1892">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2665,6 +2777,9 @@
   <section class="artist-block" id="ART-BIRNBAUMS-1863">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2710,6 +2825,9 @@
   <section class="artist-block" id="ART-BLUMBERGS-1943">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2778,6 +2896,9 @@
   <section class="artist-block" id="ART-BOGDANOVS-BELSKIS-1868">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2823,6 +2944,9 @@
   <section class="artist-block" id="ART-BOKMANIS-1929">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2868,6 +2992,9 @@
   <section class="artist-block" id="ART-BRASLINS-1962">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2928,6 +3055,9 @@
   <section class="artist-block" id="ART-BRAUNBERGS-1931">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -2990,6 +3120,9 @@
   <section class="artist-block" id="ART-BREIKSS-1911">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3052,6 +3185,9 @@
   <section class="artist-block" id="ART-BREKTE-1952">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3112,6 +3248,9 @@
   <section class="artist-block" id="ART-BREKTE-1920">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3174,6 +3313,13 @@
   <section class="artist-block" id="ART-BRENCENS-1885">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-BRENCENS-1885.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%D0%91%D0%A0%D0%95%D0%9D%D0%A6%D0%95%D0%9D%D0%A1_%D0%AD%D0%B4%D1%83%D0%B0%D1%80%D0%B42.jpg?width=400" alt="Eduards Brencēns" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3236,6 +3382,9 @@
   <section class="artist-block" id="ART-BRENCENS-1897">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3281,6 +3430,9 @@
   <section class="artist-block" id="ART-BROMULTS-1913">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3343,6 +3495,9 @@
   <section class="artist-block" id="ART-BUSS-1924">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3405,6 +3560,9 @@
   <section class="artist-block" id="ART-BERZINS-1930">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3473,6 +3631,9 @@
   <section class="artist-block" id="ART-BILENSTEINS-1869">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3518,6 +3679,9 @@
   <section class="artist-block" id="ART-BINE-1895">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3586,6 +3750,9 @@
   <section class="artist-block" id="ART-BIRITE-1909">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3631,6 +3798,9 @@
   <section class="artist-block" id="ART-CARUKA-1964">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3676,6 +3846,9 @@
   <section class="artist-block" id="ART-CAUNE-1961">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3721,6 +3894,9 @@
   <section class="artist-block" id="ART-CELMINA-1946">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3777,6 +3953,9 @@
   <section class="artist-block" id="ART-CELMINS-1927">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3843,6 +4022,9 @@
   <section class="artist-block" id="ART-CIELAVS-1890">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3905,6 +4087,13 @@
   <section class="artist-block" id="ART-CIRULIS-1883">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-CIRULIS-1883.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ansis_Cirulis.jpg?width=400" alt="Ansis Cīrulis" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -3973,6 +4162,9 @@
   <section class="artist-block" id="ART-CIRULIS-1925">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4039,6 +4231,9 @@
   <section class="artist-block" id="ART-DELLE-1944">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4101,6 +4296,9 @@
   <section class="artist-block" id="ART-DEMBO-1931">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4167,6 +4365,9 @@
   <section class="artist-block" id="ART-DIMITERE-1965">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4229,6 +4430,9 @@
   <section class="artist-block" id="ART-DIMITERS-1947">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4291,6 +4495,9 @@
   <section class="artist-block" id="ART-DINGELIS-1899">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4336,6 +4543,9 @@
   <section class="artist-block" id="ART-DOBRAJA-1940">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4398,6 +4608,9 @@
   <section class="artist-block" id="ART-DOBRAJS-1943">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4443,6 +4656,9 @@
   <section class="artist-block" id="ART-DONCOVS-1916">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4488,6 +4704,9 @@
   <section class="artist-block" id="ART-DRAGUNE-1945">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4550,6 +4769,9 @@
   <section class="artist-block" id="ART-DRUJA-1906">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4595,6 +4817,9 @@
   <section class="artist-block" id="ART-DRUKTEINS-1909">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4640,6 +4865,9 @@
   <section class="artist-block" id="ART-DUBURS-1899">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4685,6 +4913,9 @@
   <section class="artist-block" id="ART-DUSKINS-1928">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4730,6 +4961,9 @@
   <section class="artist-block" id="ART-DZENIS-1907">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4796,6 +5030,9 @@
   <section class="artist-block" id="ART-DUMINS-1907">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4841,6 +5078,9 @@
   <section class="artist-block" id="ART-EGLE-1905">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4909,6 +5149,9 @@
   <section class="artist-block" id="ART-EGLITE-1945">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -4971,6 +5214,9 @@
   <section class="artist-block" id="ART-EGLITIS-1981">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5016,6 +5262,13 @@
   <section class="artist-block" id="ART-ELIASS-1887">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-ELIASS-1887.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gederts_Eliass.gif?width=400" alt="Ģederts Eliass" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5078,6 +5331,9 @@
   <section class="artist-block" id="ART-ENDZELINA-1927">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5140,6 +5396,9 @@
   <section class="artist-block" id="ART-FEDERS-1838">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5185,6 +5444,9 @@
   <section class="artist-block" id="ART-FILKA-1891">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5247,6 +5509,9 @@
   <section class="artist-block" id="ART-FJODOROVA-1986">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5292,6 +5557,9 @@
   <section class="artist-block" id="ART-FJODOROVS-1924">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5358,6 +5626,9 @@
   <section class="artist-block" id="ART-FRIDRIHSONS-1911">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5426,6 +5697,9 @@
   <section class="artist-block" id="ART-GAILIS-1903">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5488,6 +5762,9 @@
   <section class="artist-block" id="ART-GEISTAUTE-1911">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5554,6 +5831,9 @@
   <section class="artist-block" id="ART-GLAUDANS-1915">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5616,6 +5896,9 @@
   <section class="artist-block" id="ART-GRASMANIS-1916">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5678,6 +5961,13 @@
   <section class="artist-block" id="ART-GROSVALDS-1891">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-GROSVALDS-1891.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/J.Grosvalds_autoportrait.jpg?width=400" alt="Jāzeps Grosvalds" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5746,6 +6036,9 @@
   <section class="artist-block" id="ART-GROTUSS-1884">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5791,6 +6084,9 @@
   <section class="artist-block" id="ART-GRUBE-1935">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5853,6 +6149,9 @@
   <section class="artist-block" id="ART-GULBE-1916">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5919,6 +6218,9 @@
   <section class="artist-block" id="ART-GUTMANS-1938">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -5964,6 +6266,9 @@
   <section class="artist-block" id="ART-HEHTS-1928">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6009,6 +6314,9 @@
   <section class="artist-block" id="ART-HEINRIHSONE-1948">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6071,6 +6379,9 @@
   <section class="artist-block" id="ART-HEINRIHSONS-1945">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6133,6 +6444,9 @@
   <section class="artist-block" id="ART-HELMUTS-1934">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6193,6 +6507,9 @@
   <section class="artist-block" id="ART-HUNS-1831">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6238,6 +6555,9 @@
   <section class="artist-block" id="ART-ILTNERE-1957">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6300,6 +6620,9 @@
   <section class="artist-block" id="ART-ILTNERS-1925">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6372,6 +6695,9 @@
   <section class="artist-block" id="ART-IRBE-1893">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6434,6 +6760,9 @@
   <section class="artist-block" id="ART-IVANICKIS-1908">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6500,6 +6829,9 @@
   <section class="artist-block" id="ART-JANSONE-1973">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6545,6 +6877,9 @@
   <section class="artist-block" id="ART-JANSONS-1946">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6590,6 +6925,9 @@
   <section class="artist-block" id="ART-JAUNARAJS-1907">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6650,6 +6988,13 @@
   <section class="artist-block" id="ART-JAUNSUDRABINS-1877">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-JAUNSUDRABINS-1877.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jaunsudrabins0001.jpg?width=400" alt="Jānis Jaunsudrabiņš" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6718,6 +7063,9 @@
   <section class="artist-block" id="ART-JAUNZEMS-1899">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6763,6 +7111,9 @@
   <section class="artist-block" id="ART-JUNKERS-1899">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6825,6 +7176,9 @@
   <section class="artist-block" id="ART-JUPATOVS-1911">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6891,6 +7245,9 @@
   <section class="artist-block" id="ART-JURJANS-1944">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -6957,6 +7314,9 @@
   <section class="artist-block" id="ART-JURKELIS-1910">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7023,6 +7383,9 @@
   <section class="artist-block" id="ART-JAKOBSONS-1985">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7085,6 +7448,9 @@
   <section class="artist-block" id="ART-JANKALNINS-1914">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7130,6 +7496,13 @@
   <section class="artist-block" id="ART-KALMITE-1907">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-KALMITE-1907.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Janis_Kalmite%2C_Paris%2C_1968.jpg?width=400" alt="Jānis Kalmīte" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7192,6 +7565,9 @@
   <section class="artist-block" id="ART-KALNINS-1904">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7260,6 +7636,9 @@
   <section class="artist-block" id="ART-KALNINS-1976">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7305,6 +7684,9 @@
   <section class="artist-block" id="ART-KALNMALIS-1939">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7365,6 +7747,9 @@
   <section class="artist-block" id="ART-KALNROZE-1894">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7433,6 +7818,9 @@
   <section class="artist-block" id="ART-KALVE-1882">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7495,6 +7883,9 @@
   <section class="artist-block" id="ART-KALVANS-1909">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7561,6 +7952,9 @@
   <section class="artist-block" id="ART-KARAGODINS-1922">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7606,6 +8000,9 @@
   <section class="artist-block" id="ART-KASPARSONS-1889">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7651,6 +8048,9 @@
   <section class="artist-block" id="ART-KAULACA-1971">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7696,6 +8096,9 @@
   <section class="artist-block" id="ART-KACEROVSKIS-1926">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7756,6 +8159,9 @@
   <section class="artist-block" id="ART-KIRKE-1953">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7818,6 +8224,9 @@
   <section class="artist-block" id="ART-KLEBAHS-1928">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7880,6 +8289,9 @@
   <section class="artist-block" id="ART-KOKLE-1924">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7942,6 +8354,9 @@
   <section class="artist-block" id="ART-KORTI-1922">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -7987,6 +8402,9 @@
   <section class="artist-block" id="ART-KOZINS-1922">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8053,6 +8471,9 @@
   <section class="artist-block" id="ART-KRASTINA-1957">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8109,6 +8530,9 @@
   <section class="artist-block" id="ART-KREICS-1909">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8175,6 +8599,9 @@
   <section class="artist-block" id="ART-KROLLIS-1932">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8237,6 +8664,9 @@
   <section class="artist-block" id="ART-KRONENBERGS-1887">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8299,6 +8729,9 @@
   <section class="artist-block" id="ART-KRESLINS-1962">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8344,6 +8777,9 @@
   <section class="artist-block" id="ART-KRUZE-1980">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8404,6 +8840,9 @@
   <section class="artist-block" id="ART-KUGA-1878">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8472,6 +8911,9 @@
   <section class="artist-block" id="ART-KUNDZINS-1886">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8534,6 +8976,9 @@
   <section class="artist-block" id="ART-KUPCIS-1928">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8579,6 +9024,9 @@
   <section class="artist-block" id="ART-KVITKA-1983">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8624,6 +9072,9 @@
   <section class="artist-block" id="ART-KLAVA-1933">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8690,6 +9141,9 @@
   <section class="artist-block" id="ART-KULAINIS-1901">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8756,6 +9210,9 @@
   <section class="artist-block" id="ART-LAICANE-1984">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8801,6 +9258,9 @@
   <section class="artist-block" id="ART-LAIZANE-1966">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8846,6 +9306,9 @@
   <section class="artist-block" id="ART-LAPINA-1954">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8906,6 +9369,9 @@
   <section class="artist-block" id="ART-LAUVA-1906">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8951,6 +9417,9 @@
   <section class="artist-block" id="ART-LAZE-1895">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -8996,6 +9465,9 @@
   <section class="artist-block" id="ART-LEJNIEKS-1911">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9041,6 +9513,9 @@
   <section class="artist-block" id="ART-LIBERTS-1895">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9109,6 +9584,9 @@
   <section class="artist-block" id="ART-LIELKRASTE-1911">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9154,6 +9632,9 @@
   <section class="artist-block" id="ART-LIELA-1957">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9214,6 +9695,9 @@
   <section class="artist-block" id="ART-LIEPINA-1967">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9276,6 +9760,9 @@
   <section class="artist-block" id="ART-LIEPINS-1894">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9338,6 +9825,9 @@
   <section class="artist-block" id="ART-LOGINA-1908">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9404,6 +9894,9 @@
   <section class="artist-block" id="ART-LUCIS-1959">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9464,6 +9957,9 @@
   <section class="artist-block" id="ART-LUSE-1975">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9509,6 +10005,9 @@
   <section class="artist-block" id="ART-MADERNIEKS-1870">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9577,6 +10076,9 @@
   <section class="artist-block" id="ART-MALDUPE-1947">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9639,6 +10141,9 @@
   <section class="artist-block" id="ART-MANGOLDS-1901">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9705,6 +10210,9 @@
   <section class="artist-block" id="ART-MASLAKOVS-1928">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9771,6 +10279,9 @@
   <section class="artist-block" id="ART-MATVEJEVS-1910">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9833,6 +10344,9 @@
   <section class="artist-block" id="ART-MEDINA-1984">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9893,6 +10407,9 @@
   <section class="artist-block" id="ART-MEDNIS-1910">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -9938,6 +10455,9 @@
   <section class="artist-block" id="ART-MEDNITIS-1903">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10004,6 +10524,9 @@
   <section class="artist-block" id="ART-MEDVEDEVA-1987">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10049,6 +10572,9 @@
   <section class="artist-block" id="ART-MEILERTE-1908">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10094,6 +10620,9 @@
   <section class="artist-block" id="ART-MELBARZDE-1970">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10154,6 +10683,9 @@
   <section class="artist-block" id="ART-MELBARZDIS-1902">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10220,6 +10752,9 @@
   <section class="artist-block" id="ART-MELDERE-1949">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10282,6 +10817,9 @@
   <section class="artist-block" id="ART-MELNARS-1908">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10344,6 +10882,9 @@
   <section class="artist-block" id="ART-MERCA-1951">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10410,6 +10951,9 @@
   <section class="artist-block" id="ART-METUZALS-1889">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10455,6 +10999,9 @@
   <section class="artist-block" id="ART-MELKIS-1908">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10500,6 +11047,9 @@
   <section class="artist-block" id="ART-MIESNIEKS-1887">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10545,6 +11095,9 @@
   <section class="artist-block" id="ART-MILTS-1906">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10611,6 +11164,9 @@
   <section class="artist-block" id="ART-MUIZNIEKS-1956">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10673,6 +11229,9 @@
   <section class="artist-block" id="ART-MUZIS-1944">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10733,6 +11292,9 @@
   <section class="artist-block" id="ART-MILGRAVIS-1923">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10778,6 +11340,9 @@
   <section class="artist-block" id="ART-MURNIEKS-1922">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10844,6 +11409,9 @@
   <section class="artist-block" id="ART-NALOGINS-1922">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10889,6 +11457,9 @@
   <section class="artist-block" id="ART-NAUMOVS-1955">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -10955,6 +11526,9 @@
   <section class="artist-block" id="ART-NEIKENA-1988">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11000,6 +11574,9 @@
   <section class="artist-block" id="ART-NEILIS-1906">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11062,6 +11639,9 @@
   <section class="artist-block" id="ART-NEMME-1901">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11128,6 +11708,9 @@
   <section class="artist-block" id="ART-OSIS-1926">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11200,6 +11783,9 @@
   <section class="artist-block" id="ART-OZOLS-1929">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11266,6 +11852,13 @@
   <section class="artist-block" id="ART-PADEGS-1911">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-PADEGS-1911.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/K._Padegs.jpg?width=400" alt="Kārlis Padegs" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11334,6 +11927,9 @@
   <section class="artist-block" id="ART-PAKALNE-1982">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11379,6 +11975,9 @@
   <section class="artist-block" id="ART-PANKOKS-1914">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11424,6 +12023,9 @@
   <section class="artist-block" id="ART-PAULINS-1948">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11469,6 +12071,9 @@
   <section class="artist-block" id="ART-PAULUKA-1925">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11531,6 +12136,9 @@
   <section class="artist-block" id="ART-PAULUKS-1906">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11599,6 +12207,9 @@
   <section class="artist-block" id="ART-PEILANE-1915">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11661,6 +12272,9 @@
   <section class="artist-block" id="ART-PETROVS-1874">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11706,6 +12320,9 @@
   <section class="artist-block" id="ART-PINNIS-1902">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11778,6 +12395,9 @@
   <section class="artist-block" id="ART-PLADERS-1897">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11823,6 +12443,9 @@
   <section class="artist-block" id="ART-PLITE-PLEITA-1888">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11889,6 +12512,9 @@
   <section class="artist-block" id="ART-POIKANS-1952">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -11949,6 +12575,9 @@
   <section class="artist-block" id="ART-POSTAZA-1941">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12009,6 +12638,9 @@
   <section class="artist-block" id="ART-POSTAZS-1976">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12075,6 +12707,9 @@
   <section class="artist-block" id="ART-POSTAZS-1940">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12135,6 +12770,9 @@
   <section class="artist-block" id="ART-PREISA-1976">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12195,6 +12833,9 @@
   <section class="artist-block" id="ART-PURMALE-1945">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12261,6 +12902,13 @@
   <section class="artist-block" id="ART-PURVITIS-1872">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-PURVITIS-1872.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Latvian_Art_Academy_1942.jpg?width=400" alt="Vilhelms Purvītis" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12329,6 +12977,9 @@
   <section class="artist-block" id="ART-PUTRAMS-1956">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12389,6 +13040,9 @@
   <section class="artist-block" id="ART-PIGOZNIS-1934">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12451,6 +13105,9 @@
   <section class="artist-block" id="ART-PUPOLS-1887">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12496,6 +13153,9 @@
   <section class="artist-block" id="ART-RADZINS-1957">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12541,6 +13201,9 @@
   <section class="artist-block" id="ART-RIEKSTINS-1928">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12586,6 +13249,9 @@
   <section class="artist-block" id="ART-RIKMANIS-1901">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12652,6 +13318,9 @@
   <section class="artist-block" id="ART-ROZENS-1864">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12697,6 +13366,13 @@
   <section class="artist-block" id="ART-ROZENTALS-1866">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-ROZENTALS-1866.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rozentals_Pasportrets.jpg?width=400" alt="Janis Rozentāls" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12765,6 +13441,9 @@
   <section class="artist-block" id="ART-ROZLAPA-1932">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12827,6 +13506,9 @@
   <section class="artist-block" id="ART-RUNGIS-1893">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12889,6 +13571,9 @@
   <section class="artist-block" id="ART-SALDAVS-1907">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12934,6 +13619,9 @@
   <section class="artist-block" id="ART-SEVERETNIKOVS-1962">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -12994,6 +13682,9 @@
   <section class="artist-block" id="ART-SIETINS-1962">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13056,6 +13747,9 @@
   <section class="artist-block" id="ART-HERBERTS-SILINS-1926">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13148,6 +13842,9 @@
   <section class="artist-block" id="ART-SILINS-1926">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13210,6 +13907,9 @@
   <section class="artist-block" id="ART-SILINS-1958">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13266,6 +13966,9 @@
   <section class="artist-block" id="ART-SIPANS-1913">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13332,6 +14035,9 @@
   <section class="artist-block" id="ART-SKRIDE-1906">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13400,6 +14106,13 @@
   <section class="artist-block" id="ART-SKULME-1925">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-SKULME-1925.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/MK_balva_2009_%284108603553%29.jpg?width=400" alt="Džemma Skulme" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13468,6 +14181,9 @@
   <section class="artist-block" id="ART-SKULME-1928">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13530,6 +14246,9 @@
   <section class="artist-block" id="ART-SKULME-1889">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13602,6 +14321,9 @@
   <section class="artist-block" id="ART-SKULME-1895">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13674,6 +14396,9 @@
   <section class="artist-block" id="ART-SKUCS-1908">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13740,6 +14465,9 @@
   <section class="artist-block" id="ART-SMILDZINA-1973">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13785,6 +14513,9 @@
   <section class="artist-block" id="ART-SPALVINS-1911">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13830,6 +14561,9 @@
   <section class="artist-block" id="ART-SPRINGIS-1907">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13875,6 +14609,9 @@
   <section class="artist-block" id="ART-STRAUJA-1907">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -13941,6 +14678,9 @@
   <section class="artist-block" id="ART-STRUNKE-1894">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14009,6 +14749,9 @@
   <section class="artist-block" id="ART-STRELE-1991">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14054,6 +14797,9 @@
   <section class="artist-block" id="ART-STUMBRIS-1942">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14120,6 +14866,9 @@
   <section class="artist-block" id="ART-SUBACS-1963">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14180,6 +14929,9 @@
   <section class="artist-block" id="ART-SUTA-1896">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14248,6 +15000,9 @@
   <section class="artist-block" id="ART-SVEMPS-1897">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14316,6 +15071,9 @@
   <section class="artist-block" id="ART-SUNINS-1907">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14378,6 +15136,9 @@
   <section class="artist-block" id="ART-SUNINS-1904">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14444,6 +15205,9 @@
   <section class="artist-block" id="ART-TILLBERGS-1880">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14489,6 +15253,9 @@
   <section class="artist-block" id="ART-TONE-1892">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14557,6 +15324,9 @@
   <section class="artist-block" id="ART-TOROPINS-1924">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14602,6 +15372,9 @@
   <section class="artist-block" id="ART-TOROPINS-1952">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14647,6 +15420,9 @@
   <section class="artist-block" id="ART-TIDEMANIS-1897">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14692,6 +15468,9 @@
   <section class="artist-block" id="ART-UBANS-1893">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14760,6 +15539,9 @@
   <section class="artist-block" id="ART-ULDRIKIS-1909">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14805,6 +15587,9 @@
   <section class="artist-block" id="ART-UZTICIS-1914">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14871,6 +15656,9 @@
   <section class="artist-block" id="ART-VALDMANIS-1938">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14916,6 +15704,9 @@
   <section class="artist-block" id="ART-VALTERS-1869">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -14961,6 +15752,9 @@
   <section class="artist-block" id="ART-VARSLAVANS-1899">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15027,6 +15821,9 @@
   <section class="artist-block" id="ART-VASILEVSKIS-1939">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15089,6 +15886,9 @@
   <section class="artist-block" id="ART-VECOZOLS-1933">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15151,6 +15951,9 @@
   <section class="artist-block" id="ART-VEGERE-1948">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15217,6 +16020,9 @@
   <section class="artist-block" id="ART-VEITNERS-1907">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15283,6 +16089,9 @@
   <section class="artist-block" id="ART-VELDRE-1927">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15328,6 +16137,9 @@
   <section class="artist-block" id="ART-VIDBERGS-1890">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15396,6 +16208,9 @@
   <section class="artist-block" id="ART-VIMBA-1904">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15458,6 +16273,13 @@
   <section class="artist-block" id="ART-LEONARDO-1452">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-LEONARDO-1452.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Francesco_Melzi_-_Portrait_of_Leonardo.png?width=400" alt="Leonardo da Vinci" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15556,6 +16378,9 @@
   <section class="artist-block" id="ART-VINOGRADOVS-1869">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15601,6 +16426,13 @@
   <section class="artist-block" id="ART-VINTERS-1919">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-VINTERS-1919.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vinters_Hilke_Gerber_2006.jpg?width=400" alt="Edgars Vinters" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15663,6 +16495,9 @@
   <section class="artist-block" id="ART-VISOTSKIS-1864">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15725,6 +16560,9 @@
   <section class="artist-block" id="ART-VILUMAINIS-1909">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15787,6 +16625,13 @@
   <section class="artist-block" id="ART-VORKALE-1953">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-VORKALE-1953.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Irina_Vorkale_2018..jpg?width=400" alt="Irina Vorkale" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15849,6 +16694,9 @@
   <section class="artist-block" id="ART-VUCANS-1905">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15894,6 +16742,9 @@
   <section class="artist-block" id="ART-VARDAUNIS-1910">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -15962,6 +16813,13 @@
   <section class="artist-block" id="ART-VIKA-1897">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-VIKA-1897.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hildas_V%C4%ABkas_pases_foto.jpg?width=400" alt="Hilda Vīka" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16030,6 +16888,9 @@
   <section class="artist-block" id="ART-VINDEDZIS-1911">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16096,6 +16957,9 @@
   <section class="artist-block" id="ART-VITOLS-1877">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16162,6 +17026,13 @@
   <section class="artist-block" id="ART-ZALANS-1962">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-ZALANS-1962.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Zalans_in_Studio%2C_Riga%2C_December_2012.JPG?width=400" alt="Ilgvars Zalāns" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16224,6 +17095,9 @@
   <section class="artist-block" id="ART-ZAMS-1907">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16269,6 +17143,9 @@
   <section class="artist-block" id="ART-ZARINA-1954">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16335,6 +17212,9 @@
   <section class="artist-block" id="ART-ZARINA-1961">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16397,6 +17277,9 @@
   <section class="artist-block" id="ART-ZARINS-1929">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16459,6 +17342,9 @@
   <section class="artist-block" id="ART-ZARINS-1962">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16521,6 +17407,9 @@
   <section class="artist-block" id="ART-ZAVICKIS-1911">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16566,6 +17455,9 @@
   <section class="artist-block" id="ART-ZEBERINS-1882">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16634,6 +17526,9 @@
   <section class="artist-block" id="ART-ZEMZARIS-1961">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16679,6 +17574,9 @@
   <section class="artist-block" id="ART-ZEMZARIS-1928">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16741,6 +17639,13 @@
   <section class="artist-block" id="ART-ZIRNITE-1959">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait">
+        <a href="artists/ART-ZIRNITE-1959.html">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nele_Zirnite_Ruler.jpg?width=400" alt="Nele Zirnīte" loading="lazy">
+        </a>
+      </div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16803,6 +17708,9 @@
   <section class="artist-block" id="ART-ZITMANIS-1980">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16848,6 +17756,9 @@
   <section class="artist-block" id="ART-ZINGITIS-1973">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16893,6 +17804,9 @@
   <section class="artist-block" id="ART-ZUPINS-1926">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -16959,6 +17873,9 @@
   <section class="artist-block" id="ART-ZVIEDRIS-1905">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17025,6 +17942,9 @@
   <section class="artist-block" id="ART-ZVIRBULIS-1944">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17085,6 +18005,9 @@
   <section class="artist-block" id="ART-ZALITIS-1976">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17130,6 +18053,9 @@
   <section class="artist-block" id="ART-ZARDINS-1890">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17192,6 +18118,9 @@
   <section class="artist-block" id="ART-ABOLINA-1910">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17237,6 +18166,9 @@
   <section class="artist-block" id="ART-ABOLS-1922">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17309,6 +18241,9 @@
   <section class="artist-block" id="ART-ARGALIS-1954">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17354,6 +18289,9 @@
   <section class="artist-block" id="ART-ARINS-1907">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17416,6 +18354,9 @@
   <section class="artist-block" id="ART-CIPANS-1908">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17461,6 +18402,9 @@
   <section class="artist-block" id="ART-GERMANE-1964">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17517,6 +18461,9 @@
   <section class="artist-block" id="ART-GERMANIS-1941">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17577,6 +18524,9 @@
   <section class="artist-block" id="ART-KEMERS-1902">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17622,6 +18572,9 @@
   <section class="artist-block" id="ART-SEGELMANS-1933">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17667,6 +18620,9 @@
   <section class="artist-block" id="ART-SPRENKS-1898">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17712,6 +18668,9 @@
   <section class="artist-block" id="ART-STEINERTE-1942">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17757,6 +18716,9 @@
   <section class="artist-block" id="ART-STRALS-1879">
 
     <div class="artist-header">
+      
+      <div class="artist-portrait placeholder"></div>
+      
       <div>
         
         <h2 class="artist-name">
@@ -17824,7 +18786,7 @@
   <!-- ── Footer ───────────────────────────────────────────────── -->
   <footer class="site-footer">
     <span class="footer-text">ArtBase · Scholarly Art Catalogue · Object ID compliant</span>
-    <span class="footer-generated">Generated 2026-05-27 17:51 UTC</span>
+    <span class="footer-generated">Generated 2026-05-27 18:16 UTC</span>
   </footer>
 
 </div>
