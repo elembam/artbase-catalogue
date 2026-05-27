@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Authority Records Matter — ArtBase Client Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f6f1e6;
+    --paper-deep: #ebe3d1;
+    --paper-tint: #fbf8f1;
+    --ink: #1c1814;
+    --ink-soft: #4a4338;
+    --ink-faded: #80766a;
+    --seal: #6e1818;
+    --gold: #8a6f2e;
+    --rule: #c7bca5;
+    --rule-soft: #e0d6bf;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-size: 13.5px;
+    line-height: 1.55;
+    padding: 32px 16px;
+    min-height: 100vh;
+  }
+
+  .brief {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow:
+      0 1px 0 rgba(28, 24, 20, 0.04),
+      0 16px 32px -16px rgba(28, 24, 20, 0.12);
+    padding: 44px 56px 36px;
+    position: relative;
+  }
+
+  /* ─── HEADER ─── */
+  .brief-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 28px;
+    align-items: end;
+    padding-bottom: 22px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 22px;
+    position: relative;
+  }
+
+  .brief-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -7px;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .brief-header .kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--seal);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .brief-header h1 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-variation-settings: 'opsz' 144;
+    font-size: 36px;
+    line-height: 1.05;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+  }
+
+  .brief-header .subtitle {
+    margin-top: 4px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+
+  .brief-header .issuer {
+    text-align: right;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    color: var(--ink-faded);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1.7;
+  }
+
+  .brief-header .issuer strong {
+    color: var(--seal);
+    font-weight: 600;
+  }
+
+  /* ─── LEAD ─── */
+  .lead {
+    font-family: 'Fraunces', serif;
+    font-size: 16.5px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 24px;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .lead .pull {
+    color: var(--seal);
+    font-weight: 500;
+  }
+
+  /* ─── SECTIONS ─── */
+  .reasons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 32px;
+    margin-bottom: 26px;
+  }
+
+  .reason {
+    padding-left: 16px;
+    border-left: 2px solid var(--seal);
+  }
+
+  .reason .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    color: var(--seal);
+    letter-spacing: 0.18em;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .reason h3 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 8px;
+    letter-spacing: -0.005em;
+  }
+
+  .reason p {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  /* ─── DELIVERABLES ─── */
+  .deliverables {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    padding: 20px 24px;
+    margin-bottom: 22px;
+  }
+
+  .deliverables .title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--seal);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 20px;
+  }
+
+  .deliverables-grid .item {
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    gap: 8px;
+    font-size: 12.5px;
+    line-height: 1.45;
+    align-items: baseline;
+  }
+
+  .deliverables-grid .item::before {
+    content: '✓';
+    color: var(--seal);
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .deliverables-grid .item strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .deliverables-grid .item span {
+    color: var(--ink-soft);
+  }
+
+  /* ─── CLOSING ─── */
+  .closing {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .closing .accent {
+    color: var(--seal);
+    font-weight: 500;
+  }
+
+  /* ─── FOOTER ─── */
+  .brief-footer {
+    margin-top: 22px;
+    padding-top: 14px;
+    border-top: 2px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--ink-faded);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .brief-footer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -7px;
+    border-top: 1px solid var(--ink);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 720px) {
+    body { padding: 12px 6px; font-size: 13px; }
+    .brief { padding: 28px 22px 24px; }
+    .brief-header { grid-template-columns: 1fr; gap: 14px; }
+    .brief-header .issuer { text-align: left; }
+    .brief-header h1 { font-size: 28px; }
+    .reasons { grid-template-columns: 1fr; gap: 18px; }
+    .deliverables-grid { grid-template-columns: 1fr; }
+    .brief-footer { flex-direction: column; gap: 6px; }
+  }
+
+  /* ─── PRINT ─── */
+  @media print {
+    body { background: white; padding: 0; }
+    .brief {
+      max-width: none;
+      border: none;
+      box-shadow: none;
+      padding: 14mm 14mm;
+    }
+    @page {
+      size: A4;
+      margin: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<article class="brief">
+
+  <!-- HEADER -->
+  <header class="brief-header">
+    <div>
+      <div class="kicker">Client Brief</div>
+      <h1>Why Authority Records Matter</h1>
+      <div class="subtitle">For collectors, foundations, and institutional collections</div>
+    </div>
+    <div class="issuer">
+      <strong>ArtBase</strong><br>
+      Cataloguing<br>
+      Services
+    </div>
+  </header>
+
+  <!-- LEAD -->
+  <p class="lead">
+    A catalogue without authority records is documented <span class="pull">for its owner</span>.
+    A catalogue with authority records is documented <span class="pull">for everyone</span> —
+    auditors, insurers, customs, scholars, future stewards. The difference compounds
+    over decades.
+  </p>
+
+  <!-- REASONS -->
+  <div class="reasons">
+
+    <div class="reason">
+      <div class="num">01 · Discoverability</div>
+      <h3>Your collection joins the international record</h3>
+      <p>
+        When the artists in your collection are entered in Wikidata, Getty ULAN, and equivalent authorities,
+        their works become findable in Google's Knowledge Graph, scholarly databases, AI-powered research tools,
+        and global museum aggregators. A painting on a wall is private property; a painting linked to authoritative
+        records is part of a discoverable cultural record.
+      </p>
+    </div>
+
+    <div class="reason">
+      <div class="num">02 · Value Protection</div>
+      <h3>Identification beyond dispute</h3>
+      <p>
+        Authority links create unambiguous, third-party-verifiable identification. Insurance claims process
+        more smoothly. Customs clearance is faster. Loan and exhibition negotiations open with documentation
+        the receiving institution already trusts. If a work is ever stolen, lost, or contested, the chain of
+        identification is robust because it does not rely on your own assertion alone.
+      </p>
+    </div>
+
+    <div class="reason">
+      <div class="num">03 · Scholarly Standing</div>
+      <h3>Your collection contributes to art history</h3>
+      <p>
+        For established artists, your catalogue's links into international scholarship enrich the global record.
+        For emerging or under-documented artists, your records may become the foundational documentation by
+        which they are later studied — when an artist eventually warrants a catalogue raisonné, the editor's
+        first request is to see the early professional records. Yours.
+      </p>
+    </div>
+
+    <div class="reason">
+      <div class="num">04 · Continuity</div>
+      <h3>Documentation that outlives transactions</h3>
+      <p>
+        Authority records persist for decades, independent of any single institution. When a collection moves —
+        through sale, donation, inheritance, or institutional transfer — properly linked records travel with it
+        and remain intelligible to the next steward. Internal documentation that does not link to external
+        authorities is harder to interpret a generation later, and harder to defend at audit.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- DELIVERABLES -->
+  <div class="deliverables">
+    <div class="title">What this work produces for your collection</div>
+    <div class="deliverables-grid">
+      <div class="item"><span><strong>Wikidata entries</strong> for every artist where notability is plausible</span></div>
+      <div class="item"><span><strong>Getty ULAN nominations</strong> for artists meeting scholarly criteria</span></div>
+      <div class="item"><span><strong>Authority cross-references</strong> on every artwork record</span></div>
+      <div class="item"><span><strong>Persistent identifiers</strong> linking your catalogue to global systems</span></div>
+      <div class="item"><span><strong>House records</strong> as authoritative documentation where no external entry exists</span></div>
+      <div class="item"><span><strong>Verifiable claims</strong> — every assertion sourced and citable</span></div>
+    </div>
+  </div>
+
+  <!-- CLOSING -->
+  <p class="closing">
+    The work itself is documentation; the documentation is the work's <span class="accent">durability</span>.
+  </p>
+
+  <!-- FOOTER -->
+  <footer class="brief-footer">
+    <span>ArtBase Cataloguing Services</span>
+    <span>Brief · v1.0</span>
+  </footer>
+
+</article>
+
+</body>
+</html>

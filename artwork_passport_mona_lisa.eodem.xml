@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  EODEM (Exhibition Object Data Exchange Model) record
+  Profile of LIDO 1.1 — published by the CIDOC LIDO Working Group
+  Schema: https://lido-schema.org/profiles/v1.1/lido-v1.1-profile-EODEM-v1.0.xsd
+
+  Record source : ArtBase Cataloguing Services (sample / demonstration)
+  Subject       : Mona Lisa, Leonardo da Vinci, c. 1503–1519
+  Companion to  : artwork_passport_mona_lisa.html
+
+  This file is well-formed XML demonstrating the structure of an EODEM/LIDO
+  record. For production deliverables, validate against the official EODEM XSD
+  and Schematron rules before transmission to a receiving institution.
+-->
+<lido:lidoWrap
+    xmlns:lido="http://lido-schema.org"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://lido-schema.org https://lido-schema.org/profiles/v1.1/lido-v1.1-profile-EODEM-v1.0.xsd">
+
+  <lido:lido>
+
+    <!-- ============================================================== -->
+    <!-- RECORD IDENTIFICATION                                          -->
+    <!-- ============================================================== -->
+
+    <lido:lidoRecID lido:type="local" lido:source="ArtBase">AP-2026-000001</lido:lidoRecID>
+
+    <lido:objectPublishedID lido:type="inventory number" lido:source="Musée du Louvre">INV. 779</lido:objectPublishedID>
+    <lido:objectPublishedID lido:type="URI" lido:source="Wikidata">https://www.wikidata.org/wiki/Q12418</lido:objectPublishedID>
+    <lido:objectPublishedID lido:type="URI" lido:source="Louvre Collections">https://collections.louvre.fr/en/ark:/53355/cl010066723</lido:objectPublishedID>
+
+    <lido:category>
+      <lido:conceptID lido:type="URI" lido:source="Getty AAT">http://vocab.getty.edu/aat/300133025</lido:conceptID>
+      <lido:term xml:lang="en">work of art</lido:term>
+    </lido:category>
+
+    <!-- ============================================================== -->
+    <!-- DESCRIPTIVE METADATA                                           -->
+    <!-- ============================================================== -->
+
+    <lido:descriptiveMetadata xml:lang="en">
+
+      <!-- Object classification -->
+      <lido:objectClassificationWrap>
+        <lido:objectWorkTypeWrap>
+          <lido:objectWorkType>
+            <lido:conceptID lido:type="URI" lido:source="Getty AAT">http://vocab.getty.edu/aat/300033618</lido:conceptID>
+            <lido:term xml:lang="en">paintings</lido:term>
+            <lido:term xml:lang="fr">peintures</lido:term>
+            <lido:term xml:lang="it">dipinti</lido:term>
+          </lido:objectWorkType>
+        </lido:objectWorkTypeWrap>
+        <lido:classificationWrap>
+          <lido:classification lido:type="genre">
+            <lido:conceptID lido:type="URI" lido:source="Getty AAT">http://vocab.getty.edu/aat/300015637</lido:conceptID>
+            <lido:term xml:lang="en">portraits</lido:term>
+          </lido:classification>
+        </lido:classificationWrap>
+      </lido:objectClassificationWrap>
+
+      <!-- Object identification -->
+      <lido:objectIdentificationWrap>
+
+        <!-- Titles -->
+        <lido:titleWrap>
+          <lido:titleSet lido:type="preferred">
+            <lido:appellationValue xml:lang="en" lido:pref="preferred">Mona Lisa</lido:appellationValue>
+            <lido:appellationValue xml:lang="fr">La Joconde</lido:appellationValue>
+            <lido:appellationValue xml:lang="it">La Gioconda</lido:appellationValue>
+          </lido:titleSet>
+          <lido:titleSet lido:type="alternate">
+            <lido:appellationValue xml:lang="en">Portrait of Lisa Gherardini, wife of Francesco del Giocondo</lido:appellationValue>
+          </lido:titleSet>
+        </lido:titleWrap>
+
+        <!-- Inscriptions -->
+        <lido:inscriptionsWrap>
+          <lido:inscriptions>
+            <lido:inscriptionDescription>
+              <lido:descriptiveNoteValue xml:lang="en">None visible to the unaided eye.</lido:descriptiveNoteValue>
+            </lido:inscriptionDescription>
+          </lido:inscriptions>
+        </lido:inscriptionsWrap>
+
+        <!-- Repository -->
+        <lido:repositoryWrap>
+          <lido:repositorySet lido:type="current">
+            <lido:repositoryName>
+              <lido:legalBodyName>
+                <lido:appellationValue>Musée du Louvre</lido:appellationValue>
+              </lido:legalBodyName>
+              <lido:legalBodyID lido:type="URI" lido:source="Wikidata">https://www.wikidata.org/wiki/Q19675</lido:legalBodyID>
+              <lido:legalBodyWeblink>https://www.louvre.fr</lido:legalBodyWeblink>
+            </lido:repositoryName>
+            <lido:workID lido:type="inventory number">INV. 779</lido:workID>
+            <lido:repositoryLocation>
+              <lido:placeID lido:type="URI" lido:source="Getty TGN">http://vocab.getty.edu/tgn/7008038</lido:placeID>
+              <lido:namePlaceSet>
+                <lido:appellationValue xml:lang="en">Paris</lido:appellationValue>
+                <lido:appellationValue xml:lang="fr">Paris</lido:appellationValue>
+              </lido:namePlaceSet>
+              <lido:partOfPlace>
+                <lido:namePlaceSet>
+                  <lido:appellationValue>Denon Wing, Room 711 (Salle des États)</lido:appellationValue>
+                </lido:namePlaceSet>
+              </lido:partOfPlace>
+            </lido:repositoryLocation>
+          </lido:repositorySet>
+        </lido:repositoryWrap>
+
+        <!-- Description -->
+        <lido:objectDescriptionWrap>
+          <lido:objectDescriptionSet>
+            <lido:descriptiveNoteValue xml:lang="en">
+              Half-length portrait of a seated woman with a mountainous landscape background.
+              The sitter is generally identified as Lisa Gherardini, wife of the Florentine
+              silk merchant Francesco del Giocondo. Painted on a thin board of poplar wood
+              using oil paint and the artist's characteristic sfumato technique.
+            </lido:descriptiveNoteValue>
+          </lido:objectDescriptionSet>
+        </lido:objectDescriptionWrap>
+
+        <!-- Measurements -->
+        <lido:objectMeasurementsWrap>
+          <lido:objectMeasurementsSet>
+            <lido:displayObjectMeasurements>77 × 53 cm</lido:displayObjectMeasurements>
+            <lido:objectMeasurements>
+              <lido:measurementsSet>
+                <lido:measurementType>height</lido:measurementType>
+                <lido:measurementUnit>cm</lido:measurementUnit>
+                <lido:measurementValue>77</lido:measurementValue>
+              </lido:measurementsSet>
+              <lido:measurementsSet>
+                <lido:measurementType>width</lido:measurementType>
+                <lido:measurementUnit>cm</lido:measurementUnit>
+                <lido:measurementValue>53</lido:measurementValue>
+              </lido:measurementsSet>
+            </lido:objectMeasurements>
+          </lido:objectMeasurementsSet>
+        </lido:objectMeasurementsWrap>
+
+      </lido:objectIdentificationWrap>
+
+      <!-- =============== EVENTS =============== -->
+      <lido:eventWrap>
+
+        <!-- Production event -->
+        <lido:eventSet>
+          <lido:event>
+            <lido:eventID lido:type="local">AP-2026-000001-evt-production</lido:eventID>
+            <lido:eventType>
+              <lido:conceptID lido:type="URI" lido:source="Getty AAT">http://vocab.getty.edu/aat/300054713</lido:conceptID>
+              <lido:term xml:lang="en">production</lido:term>
+            </lido:eventType>
+            <lido:eventActor>
+              <lido:displayActorInRole>Leonardo da Vinci (Italian, 1452–1519), painter</lido:displayActorInRole>
+              <lido:actorInRole>
+                <lido:actor>
+                  <lido:actorID lido:type="URI" lido:source="Getty ULAN">http://vocab.getty.edu/ulan/500010879</lido:actorID>
+                  <lido:actorID lido:type="URI" lido:source="Wikidata">https://www.wikidata.org/wiki/Q762</lido:actorID>
+                  <lido:actorID lido:type="URI" lido:source="VIAF">https://viaf.org/viaf/24604287</lido:actorID>
+                  <lido:nameActorSet>
+                    <lido:appellationValue lido:pref="preferred">Leonardo da Vinci</lido:appellationValue>
+                  </lido:nameActorSet>
+                  <lido:nationalityActor>
+                    <lido:term xml:lang="en">Italian</lido:term>
+                  </lido:nationalityActor>
+                  <lido:vitalDatesActor>
+                    <lido:earliestDate>1452-04-15</lido:earliestDate>
+                    <lido:latestDate>1519-05-02</lido:latestDate>
+                  </lido:vitalDatesActor>
+                </lido:actor>
+                <lido:roleActor>
+                  <lido:conceptID lido:type="URI" lido:source="Getty AAT">http://vocab.getty.edu/aat/300025136</lido:conceptID>
+                  <lido:term xml:lang="en">painter</lido:term>
+                </lido:roleActor>
+              </lido:actorInRole>
+            </lido:eventActor>
+            <lido:eventDate>
+              <lido:displayDate>c. 1503 — 1519</lido:displayDate>
+              <lido:date>
+                <lido:earliestDate>1503</lido:earliestDate>
+                <lido:latestDate>1519</lido:latestDate>
+              </lido:date>
+            </lido:eventDate>
+            <lido:eventPlace>
+              <lido:displayPlace>Florence, Italy (work begun); Amboise, France (work continued)</lido:displayPlace>
+              <lido:place>
+                <lido:placeID lido:type="URI" lido:source="Getty TGN">http://vocab.getty.edu/tgn/7011179</lido:placeID>
+                <lido:namePlaceSet>
+                  <lido:appellationValue xml:lang="en">Florence</lido:appellationValue>
+                  <lido:appellationValue xml:lang="it">Firenze</lido:appellationValue>
+                </lido:namePlaceSet>
+              </lido:place>
+            </lido:eventPlace>
+            <lido:eventMaterialsTech>
+              <lido:displayMaterialsTech>Oil on poplar panel</lido:displayMaterialsTech>
+              <lido:materialsTech>
+                <lido:termMaterialsTech lido:type="medium">
+                  <lido:conceptID lido:type="URI" lido:source="Getty AAT">http://vocab.getty.edu/aat/300015050</lido:conceptID>
+                  <lido:term xml:lang="en">oil paint</lido:term>
+                </lido:termMaterialsTech>
+                <lido:termMaterialsTech lido:type="support">
+                  <lido:conceptID lido:type="URI" lido:source="Getty AAT">http://vocab.getty.edu/aat/300012470</lido:conceptID>
+                  <lido:term xml:lang="en">poplar (wood)</lido:term>
+                </lido:termMaterialsTech>
+                <lido:termMaterialsTech lido:type="technique">
+                  <lido:conceptID lido:type="URI" lido:source="Getty AAT">http://vocab.getty.edu/aat/300054216</lido:conceptID>
+                  <lido:term xml:lang="en">painting</lido:term>
+                </lido:termMaterialsTech>
+              </lido:materialsTech>
+            </lido:eventMaterialsTech>
+          </lido:event>
+        </lido:eventSet>
+
+        <!-- Provenance event: Salaì inheritance -->
+        <lido:eventSet>
+          <lido:event>
+            <lido:eventType>
+              <lido:conceptID lido:type="URI" lido:source="Getty AAT">http://vocab.getty.edu/aat/300417642</lido:conceptID>
+              <lido:term xml:lang="en">change of ownership (inheritance)</lido:term>
+            </lido:eventType>
+            <lido:eventActor>
+              <lido:displayActorInRole>Salaì (Gian Giacomo Caprotti)</lido:displayActorInRole>
+              <lido:actorInRole>
+                <lido:actor>
+                  <lido:nameActorSet>
+                    <lido:appellationValue lido:pref="preferred">Salaì (Gian Giacomo Caprotti)</lido:appellationValue>
+                  </lido:nameActorSet>
+                </lido:actor>
+                <lido:roleActor>
+                  <lido:term xml:lang="en">inheritor</lido:term>
+                </lido:roleActor>
+              </lido:actorInRole>
+            </lido:eventActor>
+            <lido:eventDate>
+              <lido:displayDate>1519</lido:displayDate>
+              <lido:date>
+                <lido:earliestDate>1519</lido:earliestDate>
+                <lido:latestDate>1519</lido:latestDate>
+              </lido:date>
+            </lido:eventDate>
+          </lido:event>
+        </lido:eventSet>
+
+        <!-- Provenance event: French royal acquisition -->
+        <lido:eventSet>
+          <lido:event>
+            <lido:eventType>
+              <lido:conceptID lido:type="URI" lido:source="Getty AAT">http://vocab.getty.edu/aat/300055292</lido:conceptID>
+              <lido:term xml:lang="en">acquisition</lido:term>
+            </lido:eventType>
+            <lido:eventActor>
+              <lido:displayActorInRole>François I, King of France (1494–1547)</lido:displayActorInRole>
+              <lido:actorInRole>
+                <lido:actor>
+                  <lido:actorID lido:type="URI" lido:source="Wikidata">https://www.wikidata.org/wiki/Q129857</lido:actorID>
+                  <lido:nameActorSet>
+                    <lido:appellationValue lido:pref="preferred">François I, King of France</lido:appellationValue>
+                  </lido:nameActorSet>
+                </lido:actor>
+                <lido:roleActor>
+                  <lido:term xml:lang="en">acquirer</lido:term>
+                </lido:roleActor>
+              </lido:actorInRole>
+            </lido:eventActor>
+            <lido:eventDate>
+              <lido:displayDate>c. 1518 — 1530</lido:displayDate>
+              <lido:date>
+                <lido:earliestDate>1518</lido:earliestDate>
+                <lido:latestDate>1530</lido:latestDate>
+              </lido:date>
+            </lido:eventDate>
+            <lido:eventPlace>
+              <lido:displayPlace>Fontainebleau, France</lido:displayPlace>
+            </lido:eventPlace>
+          </lido:event>
+        </lido:eventSet>
+
+        <!-- Provenance event: Louvre accession -->
+        <lido:eventSet>
+          <lido:event>
+            <lido:eventType>
+              <lido:conceptID lido:type="URI" lido:source="Getty AAT">http://vocab.getty.edu/aat/300157782</lido:conceptID>
+              <lido:term xml:lang="en">accession</lido:term>
+            </lido:eventType>
+            <lido:eventActor>
+              <lido:displayActorInRole>Musée du Louvre</lido:displayActorInRole>
+              <lido:actorInRole>
+                <lido:actor>
+                  <lido:actorID lido:type="URI" lido:source="Wikidata">https://www.wikidata.org/wiki/Q19675</lido:actorID>
+                  <lido:nameActorSet>
+                    <lido:appellationValue lido:pref="preferred">Musée du Louvre</lido:appellationValue>
+                  </lido:nameActorSet>
+                </lido:actor>
+                <lido:roleActor>
+                  <lido:term xml:lang="en">accessioning institution</lido:term>
+                </lido:roleActor>
+              </lido:actorInRole>
+            </lido:eventActor>
+            <lido:eventDate>
+              <lido:displayDate>1797</lido:displayDate>
+              <lido:date>
+                <lido:earliestDate>1797</lido:earliestDate>
+                <lido:latestDate>1797</lido:latestDate>
+              </lido:date>
+            </lido:eventDate>
+            <lido:eventDescriptionSet>
+              <lido:descriptiveNoteValue xml:lang="en">Transferred to the Musée central des arts (now Musée du Louvre) following the French Revolution. On continuous public display since, with the exception of the period 1911–1914 (theft by Vincenzo Peruggia and subsequent recovery).</lido:descriptiveNoteValue>
+            </lido:eventDescriptionSet>
+          </lido:event>
+        </lido:eventSet>
+
+      </lido:eventWrap>
+
+      <!-- =============== OBJECT RELATIONS =============== -->
+      <lido:objectRelationWrap>
+
+        <lido:subjectWrap>
+          <lido:subjectSet>
+            <lido:displaySubject>Half-length portrait of a seated woman with a mountainous landscape background</lido:displaySubject>
+            <lido:subject>
+              <lido:subjectConcept>
+                <lido:conceptID lido:type="ICONCLASS">48C5121</lido:conceptID>
+                <lido:term xml:lang="en">portrait of a woman</lido:term>
+              </lido:subjectConcept>
+              <lido:subjectConcept>
+                <lido:conceptID lido:type="ICONCLASS">48C51215</lido:conceptID>
+                <lido:term xml:lang="en">portrait of a married woman, lady</lido:term>
+              </lido:subjectConcept>
+              <lido:subjectConcept>
+                <lido:conceptID lido:type="ICONCLASS">25H15</lido:conceptID>
+                <lido:term xml:lang="en">mountainous landscape</lido:term>
+              </lido:subjectConcept>
+              <lido:subjectConcept>
+                <lido:conceptID lido:type="ICONCLASS">31D14</lido:conceptID>
+                <lido:term xml:lang="en">adult woman, half-length</lido:term>
+              </lido:subjectConcept>
+            </lido:subject>
+          </lido:subjectSet>
+        </lido:subjectWrap>
+
+      </lido:objectRelationWrap>
+
+    </lido:descriptiveMetadata>
+
+    <!-- ============================================================== -->
+    <!-- ADMINISTRATIVE METADATA                                        -->
+    <!-- ============================================================== -->
+
+    <lido:administrativeMetadata xml:lang="en">
+
+      <!-- Rights to the work -->
+      <lido:rightsWorkWrap>
+        <lido:rightsWorkSet>
+          <lido:rightsType>
+            <lido:conceptID lido:type="URI">https://creativecommons.org/publicdomain/mark/1.0/</lido:conceptID>
+            <lido:term xml:lang="en">Public domain (work)</lido:term>
+          </lido:rightsType>
+          <lido:rightsHolder>
+            <lido:legalBodyName>
+              <lido:appellationValue>Musée du Louvre</lido:appellationValue>
+            </lido:legalBodyName>
+          </lido:rightsHolder>
+        </lido:rightsWorkSet>
+      </lido:rightsWorkWrap>
+
+      <!-- Record metadata -->
+      <lido:recordWrap>
+        <lido:recordID lido:type="local">AP-2026-000001</lido:recordID>
+        <lido:recordType>
+          <lido:conceptID lido:type="URI" lido:source="Getty AAT">http://vocab.getty.edu/aat/300404670</lido:conceptID>
+          <lido:term xml:lang="en">item record</lido:term>
+        </lido:recordType>
+        <lido:recordSource>
+          <lido:legalBodyName>
+            <lido:appellationValue>ArtBase Cataloguing Services</lido:appellationValue>
+          </lido:legalBodyName>
+          <lido:legalBodyWeblink>https://artbase.example</lido:legalBodyWeblink>
+        </lido:recordSource>
+        <lido:recordRights>
+          <lido:rightsType>
+            <lido:conceptID lido:type="URI">https://creativecommons.org/licenses/by/4.0/</lido:conceptID>
+            <lido:term xml:lang="en">Catalogue record under CC BY 4.0</lido:term>
+          </lido:rightsType>
+        </lido:recordRights>
+        <lido:recordInfoSet>
+          <lido:recordInfoLink>https://artbase.example/p/AP-2026-000001</lido:recordInfoLink>
+          <lido:recordMetadataDate>2026-05-25</lido:recordMetadataDate>
+        </lido:recordInfoSet>
+      </lido:recordWrap>
+
+      <!-- Resources / images -->
+      <lido:resourceWrap>
+        <lido:resourceSet>
+          <lido:resourceID lido:type="local">AP-2026-000001-img-001</lido:resourceID>
+          <lido:resourceRepresentation lido:type="image_master">
+            <lido:linkResource lido:formatResource="image/jpeg">https://upload.wikimedia.org/wikipedia/commons/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg</lido:linkResource>
+          </lido:resourceRepresentation>
+          <lido:resourceType>
+            <lido:term xml:lang="en">primary view (recto)</lido:term>
+          </lido:resourceType>
+          <lido:rightsResource>
+            <lido:rightsType>
+              <lido:term xml:lang="en">Public domain (work); image courtesy Wikimedia Commons / C2RMF</lido:term>
+            </lido:rightsType>
+          </lido:rightsResource>
+        </lido:resourceSet>
+      </lido:resourceWrap>
+
+    </lido:administrativeMetadata>
+
+  </lido:lido>
+
+</lido:lidoWrap>

@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "artbase-export"
+version = "0.1.0"
+description = "Export pipeline: Airtable → canonical JSON → Git"
+requires-python = ">=3.11"
+dependencies = [
+    "pyairtable>=2.3",          # Airtable API client
+    "pydantic>=2.6",            # data validation and models
+    "pydantic-settings>=2.2",   # settings from env / config file
+    "typer[all]>=0.12",         # CLI framework (includes rich)
+    "rich>=13",                 # pretty console output
+    "gitpython>=3.1",           # git operations
+    "python-dateutil>=2.9",     # date parsing (handles partial dates)
+    "pyyaml>=6",                # config file parsing
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-cov",
+    "ruff",
+    "mypy",
+]
+
+[project.scripts]
+artbase-export = "artbase_export.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = false
+ignore_missing_imports = true

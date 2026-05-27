@@ -1,0 +1,25 @@
+# Credentials — never commit these
+config.yaml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# VS Code
+.vscode/settings.json
+.vscode/launch.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# The canonical data directory IS committed — that's the point
+# data/ is intentionally NOT in .gitignore

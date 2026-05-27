@@ -1,0 +1,334 @@
+# ============================================================================
+# ArtBase Wikidata EntitySchema
+# ============================================================================
+#
+# Profile name : ArtBase Application Profile for Visual Artists and Artworks
+# Version      : 0.1
+# Date         : 2026-05-27
+# Maintainer   : ArtBase Cataloguing Services
+# License      : CC0 1.0 (this schema is in the public domain)
+# Source       : https://artbase.eu/spec/wikidata-profile
+# Companion doc: ARTBASE_WIKIDATA_PROFILE.md
+#
+# This schema defines the structural requirements for Wikidata entries
+# linked from ArtBase records. It validates two entity types:
+#
+#   - <#ArtBaseArtist>   — humans (or anonymous groups) who create artworks
+#   - <#ArtBaseArtwork>  — individual visual works held in collections
+#
+# The schema is aligned with the Wikidata WikiProjects "Visual arts" and
+# "Sum of all paintings" — where they have established conventions, we
+# follow them; where they are silent, ArtBase defines our usage.
+#
+# Validation:
+#   Use the Wikidata schema validator at
+#     https://www.wikidata.org/wiki/EntitySchema:E[NUMBER]
+#   or the standalone tool at https://tools.wmflabs.org/shex-simple/
+#
+# To publish:
+#   1. Submit a new EntitySchema page on Wikidata with this content
+#   2. Reference it from the ArtBase Wikidata Profile document
+#   3. Reference it from artist_pipeline.py validation logic
+#
+# ============================================================================
+
+
+# ----------------------------------------------------------------------------
+# Prefixes
+# ----------------------------------------------------------------------------
+
+PREFIX wd:    <http://www.wikidata.org/entity/>
+PREFIX wdt:   <http://www.wikidata.org/prop/direct/>
+PREFIX p:     <http://www.wikidata.org/prop/>
+PREFIX ps:    <http://www.wikidata.org/prop/statement/>
+PREFIX pq:    <http://www.wikidata.org/prop/qualifier/>
+PREFIX prov:  <http://www.w3.org/ns/prov#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+
+# ----------------------------------------------------------------------------
+# Entry point
+# ----------------------------------------------------------------------------
+# A conforming entity is either an artist or an artwork. The validator
+# dispatches to the appropriate sub-shape based on the entity's wdt:P31.
+
+start = @<#ArtBaseEntity>
+
+<#ArtBaseEntity> @<#ArtBaseArtist> OR @<#ArtBaseArtwork>
+
+
+# ============================================================================
+# ARTIST SHAPE
+# ============================================================================
+# Defines the structure required of any Wikidata item that ArtBase links
+# to as the creator of a catalogued artwork.
+#
+# The EXTRA keyword on wdt:P31 indicates that the entity may have
+# additional instance-of values beyond those we specify (typical for
+# multi-faceted biographical entries).
+# ----------------------------------------------------------------------------
+
+<#ArtBaseArtist> EXTRA wdt:P31 {
+
+  # ---- IDENTITY (REQUIRED) ----
+
+  wdt:P31  [ wd:Q5
+             wd:Q15632617 ] + ;
+    # instance of: human, or (rarely) fictional human
+
+  wdt:P21  IRI ;
+    # sex or gender — any documented value
+
+  # ---- ARTISTIC IDENTITY (REQUIRED) ----
+
+  wdt:P106 [ wd:Q1028181    # painter
+             wd:Q1281618    # sculptor
+             wd:Q33231      # photographer
+             wd:Q15296811   # printmaker
+             wd:Q1925963    # draughtsperson
+             wd:Q644687     # illustrator
+             wd:Q11569986   # mixed-media artist
+             wd:Q42973      # architect
+             wd:Q3391743    # visual artist
+             wd:Q1281618    # sculptor
+             wd:Q1607826    # engraver
+             wd:Q15296811   # printmaker
+           ] + ;
+    # occupation: at least one artistic profession from this set
+    # (additional non-artistic occupations are permitted)
+
+  # ---- CITIZENSHIP (REQUIRED) ----
+
+  wdt:P27  IRI + ;
+    # country of citizenship — at least one
+    # (use multiple values for artists whose citizenship changed)
+
+  # ---- LIFE DATES (REQUIRED for birth, conditional for death) ----
+
+  wdt:P569 xsd:dateTime ;
+    # date of birth — at least year-precision required
+    # (use Wikidata "unknown value" indicator if truly unknown)
+
+  wdt:P570 xsd:dateTime ? ;
+    # date of death — required only if the artist is deceased
+    # (absence = presumed living)
+
+  # ---- BIOGRAPHICAL (RECOMMENDED) ----
+
+  wdt:P19  IRI ? ;          # place of birth
+  wdt:P20  IRI ? ;          # place of death
+
+  # ---- PROFESSIONAL BIOGRAPHY (RECOMMENDED) ----
+
+  wdt:P69  IRI * ;          # educated at — institutions
+  wdt:P463 IRI * ;          # member of — unions, academies
+  wdt:P166 IRI * ;          # award received
+  wdt:P135 IRI * ;          # movement
+  wdt:P136 IRI * ;          # genre
+  wdt:P101 IRI * ;          # field of work
+  wdt:P937 IRI * ;          # work location
+
+  # ---- FAMILY (OPTIONAL — when relevant to documented provenance) ----
+
+  wdt:P22  IRI * ;          # father
+  wdt:P25  IRI * ;          # mother
+  wdt:P26  IRI * ;          # spouse
+  wdt:P40  IRI * ;          # child
+
+  # ---- NOTABLE WORK LINKS (RECOMMENDED) ----
+
+  wdt:P800 @<#ArtBaseArtwork> * ;
+    # notable work — if linked, the target must satisfy ArtBaseArtwork shape
+
+  # ---- REPRESENTATION (OPTIONAL) ----
+
+  wdt:P1875 IRI * ;         # represented by (gallery)
+
+  # ---- EXTERNAL AUTHORITY IDENTIFIERS (≥3 STRONGLY RECOMMENDED) ----
+
+  wdt:P245  . ? ;           # Getty ULAN ID
+  wdt:P214  . ? ;           # VIAF ID
+  wdt:P213  . ? ;           # ISNI
+  wdt:P650  . ? ;           # RKDartists ID
+  wdt:P244  . ? ;           # Library of Congress NACO
+  wdt:P227  . ? ;           # GND ID (German national library)
+  wdt:P268  . ? ;           # BnF ID (French national library)
+  wdt:P906  . ? ;           # SELIBR (Swedish national library, legacy)
+  wdt:P5587 . ? ;           # Libris-URI (Swedish national library, current)
+  wdt:P2843 . ? ;           # Benezit ID
+  wdt:P1006 . ? ;           # Nationale Thesaurus voor Auteursnamen ID
+  wdt:P1741 . ? ;           # GTAA ID
+
+  # ---- ART-MARKET IDENTIFIERS (OPTIONAL) ----
+
+  wdt:P3293 . ? ;           # Auctionata ID (legacy)
+  wdt:P3771 . ? ;           # askArt person ID
+  wdt:P3782 . ? ;           # Artnet artist ID
+  wdt:P3786 . ? ;           # MutualArt artist ID
+  wdt:P4564 . ? ;           # ArtBio.de ID
+  wdt:P6295 . ? ;           # Artsy artist ID
+
+  # ---- ARTBASE IDENTIFIER ----
+  # The following constraint applies once the ArtBase artist ID property
+  # is approved through the Wikidata property proposal process.
+  # Format: 'AR' followed by 8 base32 (Crockford) characters.
+  #
+  # wdt:P[ArtBase-Artist-ID] /^AR[A-HJ-NP-Z0-9]{8}$/ ? ;
+}
+
+
+# ============================================================================
+# ARTWORK SHAPE
+# ============================================================================
+# Defines the structure required of any Wikidata item that represents
+# an individual visual artwork referenced by an ArtBase passport.
+# ----------------------------------------------------------------------------
+
+<#ArtBaseArtwork> EXTRA wdt:P31 {
+
+  # ---- IDENTITY (REQUIRED) ----
+
+  wdt:P31  [ wd:Q3305213    # painting
+             wd:Q860861     # sculpture
+             wd:Q860792     # photograph
+             wd:Q11060274   # print
+             wd:Q93184      # drawing
+             wd:Q2742638    # graphic art
+             wd:Q170593     # fresco
+             wd:Q1278452    # tapestry
+             wd:Q15709879   # installation art
+             wd:Q838948     # work of art
+             wd:Q179700     # statue
+           ] + ;
+    # instance of: a visual artwork type
+
+  # ---- CREATOR (REQUIRED) ----
+
+  wdt:P170 @<#ArtBaseArtist> + ;
+    # creator — at least one, must conform to ArtBaseArtist shape
+    # (for anonymous works, use the appropriate Wikidata anonymous-author item)
+
+  # ---- CREATION DATE (REQUIRED) ----
+
+  wdt:P571 xsd:dateTime ;
+    # inception — at least year-precision
+    # (year ranges expressed via earliest/latest qualifiers)
+
+  # ---- MATERIALS (REQUIRED) ----
+
+  wdt:P186 IRI + ;
+    # material used — at least one
+    # (e.g., oil paint, canvas, marble, bronze)
+
+  # ---- LOCATION / OWNERSHIP (AT LEAST ONE OF P195/P276 REQUIRED) ----
+  # Note: ShEx cannot enforce "either P195 or P276 must be present" cleanly.
+  # Both are marked optional here; validation logic enforces the OR.
+
+  wdt:P195 IRI ? ;          # collection
+  wdt:P276 IRI ? ;          # location (more specific than collection)
+  wdt:P127 IRI ? ;          # owned by (when differs from collection)
+
+  # ---- INVENTORY (RECOMMENDED) ----
+
+  wdt:P217 . ? ;            # inventory number
+
+  # ---- DESCRIPTIVE (RECOMMENDED) ----
+
+  wdt:P180  IRI * ;         # depicts (subjects in the work)
+  wdt:P136  IRI * ;         # genre
+  wdt:P2079 IRI * ;         # fabrication method (e.g., painting, casting)
+  wdt:P1071 IRI * ;         # location of creation
+  wdt:P1684 LITERAL * ;     # inscription (verbatim text)
+  wdt:P973  . * ;           # described at URL (additional references)
+
+  # ---- DIMENSIONS (RECOMMENDED, in structured form) ----
+
+  wdt:P2048 . ? ;           # height
+  wdt:P2049 . ? ;           # width
+  wdt:P2610 . ? ;           # thickness / depth
+  wdt:P5524 . ? ;           # mass
+
+  # ---- COMMISSIONING / FUNDING (OPTIONAL) ----
+
+  wdt:P88   IRI * ;         # commissioned by
+
+  # ---- RIGHTS (RECOMMENDED) ----
+
+  wdt:P6216 IRI ? ;         # copyright status
+  wdt:P275  IRI ? ;         # copyright license
+
+  # ---- EXTERNAL CATALOGUE IDENTIFIERS (where applicable) ----
+
+  wdt:P347  . ? ;           # Joconde ID (French national catalogue)
+  wdt:P1212 . ? ;           # Atlas ID (Louvre)
+  wdt:P9092 . ? ;           # RKDimages ID (Netherlands)
+  wdt:P350  . ? ;           # RKDartworks (legacy)
+  wdt:P4709 . ? ;           # Benezit URL ID
+  wdt:P8189 . ? ;           # Smithsonian American Art Museum
+  wdt:P6243 . ? ;           # digital representation by ID
+
+  # ---- ARTBASE IDENTIFIER ----
+  # The following constraint applies once the ArtBase passport ID property
+  # is approved through the Wikidata property proposal process.
+  # Format: 'AB' followed by 8 base32 (Crockford) characters.
+  #
+  # wdt:P[ArtBase-Passport-ID] /^AB[A-HJ-NP-Z0-9]{8}$/ ? ;
+
+  # ---- IMAGE (OPTIONAL but valuable) ----
+
+  wdt:P18  IRI * ;          # image (Wikimedia Commons file)
+}
+
+
+# ============================================================================
+# NOTES ON USAGE
+# ============================================================================
+#
+# 1. Cardinality semantics
+#    No symbol = exactly one        (required, single-valued)
+#    ?         = zero or one        (optional, single-valued)
+#    *         = zero or more       (optional, multi-valued)
+#    +         = one or more        (required, multi-valued)
+#
+# 2. Value semantics
+#    [wd:Q1 wd:Q2]  = one of an enumerated set
+#    IRI            = any IRI value
+#    LITERAL        = any literal value
+#    xsd:dateTime   = a time value
+#    .              = any value (wildcard)
+#
+# 3. Shape references
+#    @<#OtherShape> = must conform to that other shape
+#
+# 4. EXTRA keyword
+#    EXTRA wdt:P31 on a shape means the entity may have additional values
+#    for the listed properties beyond those satisfying the constraints.
+#    This is essential for Wikidata where entities often have many
+#    instance-of values for different facets of their identity.
+#
+# 5. What this schema does NOT validate
+#    - Whether statements have references (ShEx works on the wdt: direct
+#      claims layer; reference structure lives at the p: / prov: layer)
+#    - "At least 3 of these external IDs" (complex disjunction;
+#      enforced by ArtBase compliance scoring instead)
+#    - Conditional requirements (e.g., date of death required iff
+#      person is documented as deceased) — enforced by pipeline logic
+#    - Cross-statement consistency (e.g., earliest date < latest date)
+#
+#    These business rules live in the artist_pipeline.py validator
+#    rather than in the schema itself.
+#
+# 6. Property ID verification
+#    All property IDs (Pxxx) are verified as of the version date.
+#    Some external-identifier properties may be renumbered, deprecated,
+#    or superseded between versions. The pipeline validator should
+#    cross-check these against Wikidata's current property list at
+#    publication time.
+#
+# 7. Updates
+#    Schema changes require a version bump and an entry in the changelog
+#    section of ARTBASE_WIKIDATA_PROFILE.md. Old versions remain
+#    accessible for back-validation of historical contributions.
+#
+# ============================================================================

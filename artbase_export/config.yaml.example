@@ -1,0 +1,38 @@
+# config.yaml — copy this to config.yaml and fill in real values.
+# config.yaml is gitignored; config.yaml.example is committed.
+
+airtable:
+  # Personal access token from airtable.com/account > API > Personal access tokens
+  # Scope required: data.records:read, schema.bases:read
+  token: "patXXXXXXXXXXXXXX.XXXXXX"
+
+  # The base ID from your Airtable base URL:
+  # https://airtable.com/appXXXXXXXXXXXXXX/...
+  base_id: "appXXXXXXXXXXXXXX"
+
+  # Table names — adjust to match your actual Airtable table names exactly
+  tables:
+    artists:       "Artists_Makers"
+    artworks:      "Artworks"
+    sources:       "Source_Documents"
+    authority_links: "Authority_Links"
+    engagements:   "Engagements"
+
+export:
+  # Where canonical JSON files are written (relative to this config file)
+  output_dir: "./data"
+
+  # Whether to commit changes to Git automatically after each run
+  auto_commit: true
+
+  # Committer identity for Git commits
+  git_author_name:  "ArtBase Export"
+  git_author_email: "export@artbase.eu"
+
+  # Export only records matching this review status (leave empty for all)
+  # Useful values: "Draft", "Review", "Published"
+  # Empty string = export all statuses
+  min_status: ""
+
+logging:
+  level: "INFO"   # DEBUG, INFO, WARNING, ERROR

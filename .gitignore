@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+.env
+pip-wheel-metadata/
+
+# Secrets — never commit
+config.yaml
+*.key
+*.pem
+*.p12
+*.pfx
+.env.*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+ehthumbs.db
+
+# VS Code
+.vscode/settings.json
+.vscode/launch.json
+*.code-workspace
+
+# Coverage and test artifacts
+.coverage
+.pytest_cache/
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Upstream CollectiveAccess submodules — tracked separately
+# upstream/
+# pawtucket/
+
+# Docker secrets
+docker-compose.override.yml
+.docker/
+
+# Generated exports (sample outputs checked in; large batch exports are not)
+exports/*/samples/large/
+exports/*/validated/large/
+
+# Editor backups
+*~
+*.swp
+*.swo
