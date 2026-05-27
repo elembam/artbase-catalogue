@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T15:51:09.274148Z",
+  "exported": "2026-05-27T16:02:47.781865Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Arvīds Egle",
@@ -55,23 +55,23 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "Q16351889",
+      "uri": "https://www.wikidata.org/wiki/Q16351889",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
     "viaf": {
-      "id": null,
+      "id": "58245749",
       "uri": null,
-      "status": "search_needed",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
     "ulan": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "500121456",
+      "uri": "http://vocab.getty.edu/ulan/500121456",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
@@ -126,10 +126,7 @@
     "review_status": "draft",
     "catalogued_by": null,
     "notes": null,
-    "tasks": [
-      "Search VIAF",
-      "Search Getty ULAN"
-    ],
+    "tasks": [],
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1"

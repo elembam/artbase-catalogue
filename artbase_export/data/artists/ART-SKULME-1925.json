@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T15:51:09.274665Z",
+  "exported": "2026-05-27T16:02:47.782276Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Džemma Skulme",
@@ -55,23 +55,23 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "Q4422700",
+      "uri": "https://www.wikidata.org/wiki/Q4422700",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
     "viaf": {
-      "id": null,
+      "id": "95744315",
       "uri": null,
-      "status": "search_needed",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
     "ulan": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "500010372",
+      "uri": "http://vocab.getty.edu/ulan/500010372",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
@@ -126,10 +126,7 @@
     "review_status": "draft",
     "catalogued_by": null,
     "notes": null,
-    "tasks": [
-      "Search VIAF",
-      "Search Getty ULAN"
-    ],
+    "tasks": [],
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1"

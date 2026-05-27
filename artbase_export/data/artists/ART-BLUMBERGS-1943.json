@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T15:51:09.239340Z",
+  "exported": "2026-05-27T16:02:47.760422Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Ilmārs Blumbergs",
@@ -55,23 +55,23 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "Q13611050",
+      "uri": "https://www.wikidata.org/wiki/Q13611050",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
     "viaf": {
-      "id": null,
+      "id": "5995994",
       "uri": null,
-      "status": "search_needed",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
     "ulan": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "500121450",
+      "uri": "http://vocab.getty.edu/ulan/500121450",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
@@ -126,10 +126,7 @@
     "review_status": "draft",
     "catalogued_by": null,
     "notes": null,
-    "tasks": [
-      "Search VIAF",
-      "Search Getty ULAN"
-    ],
+    "tasks": [],
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1"

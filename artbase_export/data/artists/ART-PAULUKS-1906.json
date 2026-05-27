@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T15:51:09.280674Z",
+  "exported": "2026-05-27T16:02:47.786100Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Jānis Pauļuks",
@@ -55,23 +55,23 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "Q4347220",
+      "uri": "https://www.wikidata.org/wiki/Q4347220",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
     "viaf": {
-      "id": null,
+      "id": "35309199",
       "uri": null,
-      "status": "search_needed",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
     "ulan": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "500121444",
+      "uri": "http://vocab.getty.edu/ulan/500121444",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
@@ -126,10 +126,7 @@
     "review_status": "draft",
     "catalogued_by": null,
     "notes": null,
-    "tasks": [
-      "Search VIAF",
-      "Search Getty ULAN"
-    ],
+    "tasks": [],
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1"

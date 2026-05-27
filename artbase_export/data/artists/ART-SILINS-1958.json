@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T15:51:09.241872Z",
+  "exported": "2026-05-27T16:02:47.764915Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Kārlis Siliņš",
@@ -55,9 +55,9 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "Q99478143",
+      "uri": "https://www.wikidata.org/wiki/Q99478143",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },

@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T15:51:09.278015Z",
+  "exported": "2026-05-27T16:02:47.784210Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Aleksandrs Junkers",
@@ -55,16 +55,16 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "Q16350873",
+      "uri": "https://www.wikidata.org/wiki/Q16350873",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
     "viaf": {
-      "id": null,
+      "id": "3506498",
       "uri": null,
-      "status": "search_needed",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
@@ -127,7 +127,6 @@
     "catalogued_by": null,
     "notes": null,
     "tasks": [
-      "Search VIAF",
       "Search Getty ULAN"
     ],
     "engagement_ids": []

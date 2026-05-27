@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T15:51:09.273086Z",
+  "exported": "2026-05-27T16:02:47.781128Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Inta Celmiņa",
@@ -55,9 +55,9 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
+      "id": "Q99480545",
+      "uri": "https://www.wikidata.org/wiki/Q99480545",
+      "status": "confirmed",
       "verified_date": null,
       "notes": null
     },
