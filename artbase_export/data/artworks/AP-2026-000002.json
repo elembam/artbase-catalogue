@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T15:04:26.150529Z",
+  "exported": "2026-05-27T15:09:25.619814Z",
   "visibility": "private",
   "object_id": {
     "object_type": "painting",
@@ -54,7 +54,7 @@
   "cataloguing": {
     "review_status": "draft",
     "catalogued_by": null,
-    "notes": "First real pilot artwork. Source: Galerija Jekabs catalogue.",
+    "notes": "First real pilot artwork. Source: Galerija Jēkabs catalogue. Creator: Herberts Siliņš — Wikidata Q23054868 (https://www.wikidata.org/wiki/Q23054868). No photograph available yet. No individual Wikidata entry exists for this painting.",
     "tasks": [],
     "engagement_ids": []
   },
