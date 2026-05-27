@@ -1,6 +1,10 @@
 # ArtBase
 
-**ArtBase** is a scholarly digital art catalogue platform for European corporate and museum collections. It combines a CollectiveAccess backend with a standalone export pipeline that produces standards-compliant metadata (Object ID, LIDO 1.1, EODEM, Dublin Core).
+**ArtBase** is a standards-compliant cataloguing service for European art collections — corporate, private, and institutional. It produces **Artwork Passports**: per-artwork documents recording identity, provenance, condition, and authority links at museum standards.
+
+The deliverable is human-readable (HTML), machine-readable (LIDO 1.1 / EODEM XML), and permanently identified. Long term, ArtBase becomes a public registry for art in private and corporate collections not yet on Europeana or in museum catalogues.
+
+The stack is intentionally simple: **Airtable** (working layer) → **Python CLI** (`artbase-export`) → **canonical JSON in Git** → **static HTML/XML passports**. No database server. No Docker. No PHP.
 
 ---
 
@@ -9,20 +13,15 @@
 ```
 artbase/
 ├── artbase_export/          Python pipeline: Airtable → canonical JSON → Git
-├── docs/                    Data model and standards-mapping documentation
-├── profile/                 CollectiveAccess installation profile (artbase.xml)
-├── exports/                 LIDO 1.1 and EODEM export mappings + validated samples
-│   ├── lido_1.1/
-│   └── eodem/
-├── theme/                   Pawtucket2 frontend theme (Kress-inspired)
-│   ├── views/               Smarty templates
-│   ├── css/
-│   ├── js/
-│   └── conf/
-├── scripts/                 Data migration, validation, deployment scripts
-│   └── sample_data/         Fictional or public-domain sample records only
-├── upstream/                git submodule — collectiveaccess/providence (not yet cloned)
-└── pawtucket/               git submodule — collectiveaccess/pawtucket2 (not yet cloned)
+│   ├── data/artists/        Canonical artist JSON (committed, version-controlled)
+│   ├── data/artworks/       Canonical artwork JSON
+│   └── src/artbase_export/  Python package: cli, transform, models, writers
+├── docs/                    Operations library and standards documentation
+├── scripts/                 Utility scripts (Wikidata lookup, image embedding)
+├── demo/                    Demo passports (Mona Lisa example set)
+├── wikidata/                ArtBase Wikidata EntitySchema
+├── passports/               Generated HTML/XML output (not committed)
+└── CLAUDE.md                Instructions for AI-assisted development
 ```
 
 ---
@@ -31,30 +30,27 @@ artbase/
 
 | Layer | Technology |
 |---|---|
-| Collections management | CollectiveAccess Providence (PHP 8.x, MySQL 8) |
-| Public interface | CollectiveAccess Pawtucket2 (PHP, Smarty) |
-| Export pipeline | Python 3.11+, Pydantic v2, Typer |
-| Working data layer | Airtable (via `artbase_export`) |
-| Dev environment | Docker Desktop + VS Code |
-| Standards | Object ID, LIDO 1.1, EODEM, Dublin Core, EDM |
+| Working data | Airtable (artbase_passport_airtable_starter_kit schema) |
+| Export pipeline | Python 3.11+, Pydantic v2, Typer, pyairtable |
+| Canonical store | JSON files committed to Git |
+| Published layer | Static HTML/XML passports on Cloudflare Pages / Netlify |
+| Standards | Object ID, CDWA, LIDO 1.1, EODEM, Dublin Core, EDM |
 | Vocabularies | Getty AAT, ULAN, TGN · ICONCLASS · Wikidata |
 
 ---
 
-## Quick start — Python export pipeline
-
-The export pipeline converts Airtable records into standards-ready canonical JSON files.
+## Quick start — export pipeline
 
 ```bash
 cd artbase_export
 pip install -e ".[dev]"
 
-# Copy and configure
+# Configure (first time)
 cp config.yaml.example config.yaml
-# edit config.yaml — add your Airtable token and base ID
+# edit config.yaml — add Airtable token and base_id
 
-# Dry run (no writes)
-artbase-export run --dry-run --verbose
+# Dry run (preview without writing)
+artbase-export run --dry-run
 
 # Full export
 artbase-export run
@@ -66,27 +62,7 @@ artbase-export status
 artbase-export validate
 ```
 
-See [`artbase_export/GETTING_STARTED.md`](artbase_export/GETTING_STARTED.md) for a step-by-step setup guide.
-
----
-
-## CollectiveAccess backend
-
-The CollectiveAccess backend requires Docker Desktop.
-
-```bash
-# Clone upstream repos (first time only)
-git clone https://github.com/collectiveaccess/providence.git upstream
-git clone https://github.com/collectiveaccess/pawtucket2.git pawtucket
-
-# Start containers
-docker compose up -d
-
-# Providence admin: http://localhost:8080
-# Pawtucket public: http://localhost:8081
-```
-
-See [`docs/deployment.md`](docs/deployment.md) for full setup instructions.
+See [`artbase_export/GETTING_STARTED.md`](artbase_export/GETTING_STARTED.md) for full setup instructions.
 
 ---
 
@@ -94,31 +70,32 @@ See [`docs/deployment.md`](docs/deployment.md) for full setup instructions.
 
 | File | Contents |
 |---|---|
-| `docs/data_model.md` | Entity types, field glossary, relationship types |
-| `docs/standards_mapping.md` | Field → Object ID / LIDO / EODEM / Dublin Core mapping |
-| `docs/deployment.md` | Docker setup and installation guide |
-| `ARTBASE_ARCHITECTURE.md` | Technical commitments: domain, URLs, identifiers |
-| `EXPORT_ARCHITECTURE.md` | Export pipeline architecture diagram |
-| `LIDO_PIPELINE_ARCHITECTURE.md` | LIDO/EODEM pipeline design |
+| `docs/data_model.md` | Entity types, field glossary, relationship types, quality scoring |
+| `docs/standards_mapping.md` | Field → Object ID / LIDO 1.1 / EODEM / Dublin Core mapping |
+| `docs/ARTBASE_ARCHITECTURE.md` | Technical commitments: domain, URLs, identifiers |
+| `docs/EXPORT_ARCHITECTURE.md` | Export pipeline architecture |
+| `docs/LIDO_PIPELINE_ARCHITECTURE.md` | LIDO/EODEM pipeline design |
+| `docs/HOUSE_STYLE_MANUAL.md` | Cataloguing house style |
 | `CLAUDE.md` | Instructions for AI-assisted development |
 
 ---
 
-## Design reference
+## Permanent identifiers
 
-The public-facing interface is modelled on the [Kress Collection Digital Archive](https://kress.nga.gov/), which is built on the same CollectiveAccess Pawtucket2 stack. Study it before changing any layout or navigation code.
+- Artists: `AR` + 8 Crockford base32 chars (e.g. `AR7F3KQ2X1`)
+- Artworks/Passports: `AB` + 8 Crockford base32 chars (e.g. `AB7F3KQ2X1`)
+- IDs are never reused or reassigned.
 
 ---
 
 ## Data and privacy
 
-- **No real client data in this repository.** Sample data in `scripts/sample_data/` is either fictional or drawn from public-domain museum collections.
-- Records default to `visibility: private`. Nothing reaches the public frontend without an explicit `is_public = 1` flag.
-- Provenance data may identify living people. Pre-1950 cutoff (configurable) applies for GDPR purposes.
-- Credentials (`config.yaml`, `.env` files) are in `.gitignore` and must never be committed.
+- **No real client data in this repository.** All sample data is fictional or public-domain.
+- Provenance data may identify living people. Pre-1950 default cutoff for GDPR purposes.
+- Credentials (`config.yaml`) are gitignored and must never be committed.
 
 ---
 
 ## Canonical domain
 
-`artbase.eu` — all passport URLs, API endpoints, and client deliverables use this domain.
+`artbase.eu` — all passport URLs, API endpoints, and OAI-PMH feed use this domain.

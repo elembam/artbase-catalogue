@@ -59,3 +59,7 @@ exports/*/validated/large/
 *~
 *.swp
 *.swo
+
+# Generated passports
+passports/*.html
+passports/*.xml
