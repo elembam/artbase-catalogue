@@ -1,0 +1,61 @@
+{
+  "artbase_id": "AP-2026-000002",
+  "airtable_id": "recCs7Qntvm5HFhFd",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-27T14:30:26.578941Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "painting",
+    "object_type_aat": null,
+    "materials": "Oil on canvas",
+    "materials_aat": [],
+    "dimensions_display": "81 x 81 cm",
+    "height_cm": 81.0,
+    "width_cm": 81.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Juras noskana (Sea Mood)",
+    "subject": "Seascape; open sea with atmospheric sky",
+    "date_display": "1979",
+    "date_earliest": 1979,
+    "date_latest": 1979,
+    "maker_id": null,
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Private collection",
+    "collection_qid": null,
+    "inventory_number": null,
+    "location_notes": "Private collection; exact location confidential"
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "First real pilot artwork. Source: Galerija Jekabs catalogue.",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

@@ -1,99 +1,79 @@
 {
-  "_schema": "artbase:artist:v1",
   "artbase_id": "ART-HERBERTS-SILINS-1926",
-  "airtable_id": "recXXXXXXXXXXXXXX",
+  "airtable_id": "reckCakEsVqu92Cwc",
   "artbase_canonical_id": null,
   "version": 1,
-  "created": "2026-05-27T12:00:00Z",
-  "exported": "2026-05-27T12:00:00Z",
+  "created": null,
+  "exported": "2026-05-27T14:30:25.883109Z",
   "visibility": "private",
-
   "identity": {
-    "preferred_name": "Herberts Siliņš",
-    "preferred_name_language": "lv",
-    "full_name": "Herberts Ernests Siliņš",
-    "name_variants": [
-      "Herberts Silins",
-      "Herberts Ernests Silins",
-      "H. Siliņš"
-    ],
-    "sort_name": "Siliņš, Herberts"
+    "preferred_name": "Herberts Silins",
+    "preferred_name_language": null,
+    "full_name": "Herberts Silins",
+    "name_variants": [],
+    "sort_name": "Silins, Herberts"
   },
-
   "life": {
     "birth_date": {
-      "value": "1926-08-28",
-      "precision": "day",
-      "status": "conflict",
-      "source_ids": ["SRC-SILINS-WIKI-LV"],
-      "notes": "Conflict: Latvian Wikipedia gives 28 August; Galerija Jēkabs gives 25 August. Requires confirmation from monograph (Neputns, 2012) or national library record."
+      "value": "1926",
+      "precision": "year",
+      "status": "working",
+      "source_ids": [],
+      "notes": null
     },
     "death_date": {
-      "value": "2001-03-04",
-      "precision": "day",
+      "value": "2001",
+      "precision": "year",
       "status": "working",
-      "source_ids": ["SRC-SILINS-WIKI-LV"],
+      "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Aizupes pagasts, Tukuma apriņķis, Latvia",
+      "display": "Aizupes pagasts, Latvia",
       "tgn_uri": null,
       "wikidata_qid": null,
-      "source_ids": ["SRC-SILINS-WIKI-LV"]
+      "source_ids": []
     },
     "death_place": {
-      "display": "Rīga, Latvia",
-      "tgn_uri": "http://vocab.getty.edu/tgn/7007407",
-      "wikidata_qid": "Q1773",
-      "source_ids": ["SRC-SILINS-WIKI-LV"]
+      "display": "Riga, Latvia",
+      "tgn_uri": null,
+      "wikidata_qid": null,
+      "source_ids": []
     }
   },
-
   "descriptors": {
     "nationality": "Latvian",
-    "citizenship": ["Latvia"],
-    "occupations": ["painter"],
-    "occupations_aat": [
-      {
-        "label": "painters (artists)",
-        "uri": "http://vocab.getty.edu/aat/300025136"
-      }
+    "citizenship": [],
+    "occupations": [
+      "painter"
     ],
-    "media": ["oil painting", "watercolor", "works on cardboard"],
-    "subjects": [
-      "seascapes",
-      "yachts",
-      "ports",
-      "landscapes",
-      "still lifes",
-      "flowers",
-      "Kurzeme towns"
-    ],
-    "movement_notes": "Post-Impressionist and abstract-expressionist influence; later abstraction",
+    "occupations_aat": [],
+    "media": [],
+    "subjects": [],
+    "movement_notes": null,
     "biography_summary": null
   },
-
   "authority_links": {
     "wikidata": {
       "id": "Q23054868",
-      "uri": "https://www.wikidata.org/wiki/Q23054868",
+      "uri": null,
       "status": "confirmed",
-      "verified_date": "2026-05-27",
+      "verified_date": null,
       "notes": null
     },
     "viaf": {
       "id": "15148752166141201333",
       "uri": null,
-      "status": "candidate_verify",
+      "status": "confirmed",
       "verified_date": null,
-      "notes": "From National Library of Latvia record via VIAF search — not yet confirmed by direct inspection of the VIAF page"
+      "notes": null
     },
     "ulan": {
       "id": null,
       "uri": null,
-      "status": "not_found",
-      "verified_date": "2026-05-27",
-      "notes": "Searched Getty ULAN — no record found"
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
     },
     "isni": {
       "id": null,
@@ -139,88 +119,17 @@
     },
     "artbase_id": null
   },
-
-  "sources": [
-    {
-      "source_id": "SRC-SILINS-WIKI-LV",
-      "source_type": "Wikipedia article",
-      "title": "Herberts Siliņš",
-      "publisher": "Latvian Wikipedia",
-      "url": "https://lv.wikipedia.org/wiki/Herberts_Siliņš",
-      "publication_date": null,
-      "access_date": "2026-05-27",
-      "use_notes": "Basic biographical facts; starting source only",
-      "license": "CC BY-SA"
-    },
-    {
-      "source_id": "SRC-SILINS-JEKABS",
-      "source_type": "Gallery artist bio",
-      "title": "SILIŅŠ Herberts",
-      "publisher": "Galerija Jēkabs",
-      "url": "https://galerijajeakabs.lv/artists/herberts-silins",
-      "publication_date": null,
-      "access_date": "2026-05-27",
-      "use_notes": "Biography, exhibitions, collections, works list — richer than Wikipedia but check birth date against monograph",
-      "license": null
-    },
-    {
-      "source_id": "SRC-SILINS-NEPUTNS-2012",
-      "source_type": "Monograph",
-      "title": "Herberts Ernests Siliņš",
-      "publisher": "Neputns",
-      "url": null,
-      "publication_date": "2012",
-      "access_date": null,
-      "use_notes": "ISBN 978-9984-807-90-4. Author: Gundega Cēbere. Primary scholarly source for authority work — consult for birth date resolution.",
-      "license": null
-    },
-    {
-      "source_id": "SRC-SILINS-INVALUABLE",
-      "source_type": "Auction aggregation",
-      "title": "Herberts Silins — sold auction prices",
-      "publisher": "Invaluable",
-      "url": "https://www.invaluable.com/artist/silins-herberts-xm18nf09ey/",
-      "publication_date": null,
-      "access_date": "2026-05-27",
-      "use_notes": "Market data and work examples; useful for provenance examples",
-      "license": null
-    }
-  ],
-
-  "source_refs": [
-    {"source_id": "SRC-SILINS-WIKI-LV",    "role": "biography",       "accessed": "2026-05-27"},
-    {"source_id": "SRC-SILINS-JEKABS",      "role": "career_and_works","accessed": "2026-05-27"},
-    {"source_id": "SRC-SILINS-NEPUTNS-2012","role": "authority",       "accessed": null},
-    {"source_id": "SRC-SILINS-INVALUABLE",  "role": "market_data",     "accessed": "2026-05-27"}
-  ],
-
-  "conflicts": [
-    {
-      "field": "life.birth_date",
-      "values": [
-        {"value": "1926-08-28", "source_id": "SRC-SILINS-WIKI-LV",  "label": "Latvian Wikipedia"},
-        {"value": "1926-08-25", "source_id": "SRC-SILINS-JEKABS",   "label": "Galerija Jēkabs"}
-      ],
-      "status": "unresolved",
-      "created": "2026-05-27",
-      "resolved_by": null,
-      "resolution": null
-    }
-  ],
-
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
   "cataloguing": {
     "review_status": "draft",
-    "catalogued_by": "ArtBase",
-    "notes": "Pilot record for the ArtBase Wikidata and passport workflow",
+    "catalogued_by": null,
+    "notes": "Pilot record. Birth date conflict: Wikipedia 28 Aug vs Galerija Jekabs 25 Aug.",
     "tasks": [
-      "Resolve birth date conflict — consult Neputns 2012 monograph",
-      "Verify VIAF candidate ID 15148752166141201333",
-      "Search ISNI and LoC NACO",
-      "Check RKD for record",
-      "Confirm or deny Wikidata 'Elite Prospects' ID conflation",
-      "Add biography summary once monograph is consulted",
-      "Assign ArtBase canonical ID (AR + 8 base32) once ID scheme is finalised"
+      "Search Getty ULAN"
     ],
     "engagement_ids": []
-  }
+  },
+  "_schema": "artbase:artist:v1"
 }
