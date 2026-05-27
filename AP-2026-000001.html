@@ -293,6 +293,21 @@
     font-family: 'Fraunces', serif;
     font-size: 16px; color: var(--ink); line-height: 1.35;
   }
+  .object-id-field .value .aat-link {
+    margin-top: 6px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  .object-id-field .value .aat-link a {
+    color: var(--ink-faded);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(0,0,0,0.2);
+  }
+  .object-id-field .value .aat-link a:hover {
+    color: var(--seal);
+    border-bottom-color: var(--seal);
+  }
   .object-id-field.missing .value { color: var(--ink-faded); font-style: italic; }
 
   /* ─── AUTHORITIES ─── */
@@ -538,7 +553,7 @@
       <h2 class="work-title">Mona Lisa</h2>
       
       <p class="work-artist">Leonardo da Vinci</p>
-      <p class="work-artist-dates">Italian, 1452 — 1519</p>
+      <p class="work-artist-dates">Italian, 1452-04-15 — 1519-05-02</p>
       
       <dl class="tombstone-grid">
         
@@ -571,12 +586,32 @@
       <div class="object-id-field">
         <div class="num">i</div>
         <div class="label">Type of Object</div>
-        <div class="value">Painting</div>
+        <div class="value">
+          Painting
+          
+          <div class="aat-link">
+            <a href="http://vocab.getty.edu/aat/300033618" target="_blank" rel="noopener">paintings (visual works)</a>
+          </div>
+          
+        </div>
       </div>
       <div class="object-id-field">
         <div class="num">ii</div>
         <div class="label">Materials &amp; Techniques</div>
-        <div class="value">Oil on poplar panel</div>
+        <div class="value">
+          Oil on poplar panel
+          
+          <div class="aat-link">
+            
+            <a href="http://vocab.getty.edu/aat/300033799" target="_blank" rel="noopener">oil painting (technique)</a> · 
+            
+            <a href="http://vocab.getty.edu/aat/300015050" target="_blank" rel="noopener">oil paint (paint)</a> · 
+            
+            <a href="http://vocab.getty.edu/aat/300012363" target="_blank" rel="noopener">poplar</a>
+            
+          </div>
+          
+        </div>
       </div>
       <div class="object-id-field">
         <div class="num">iii</div>
@@ -601,7 +636,10 @@
       <div class="object-id-field">
         <div class="num">vii</div>
         <div class="label">Subject</div>
-        <div class="value">Half-length portrait of a seated woman with a mountainous landscape background</div>
+        <div class="value">
+          Half-length portrait of a seated woman with a mountainous landscape background
+          
+        </div>
       </div>
       <div class="object-id-field">
         <div class="num">viii</div>
@@ -613,7 +651,7 @@
         <div class="label">Maker</div>
         <div class="value">
           
-          Leonardo da Vinci (1452 — 1519)
+          Leonardo da Vinci (1452-04-15 — 1519-05-02)
           
         </div>
       </div>
