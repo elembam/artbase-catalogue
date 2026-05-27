@@ -1,0 +1,69 @@
+{
+  "artbase_id": "AP-2026-000001",
+  "airtable_id": "rec3j64iDUATwS40m",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-27T14:07:50.726742Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "painting",
+    "object_type_aat": {
+      "label": "painting",
+      "uri": "http://vocab.getty.edu/aat/300033618"
+    },
+    "materials": "Oil on poplar panel",
+    "materials_aat": [],
+    "dimensions_display": "77 × 53 cm",
+    "height_cm": 77.0,
+    "width_cm": 53.0,
+    "depth_cm": null,
+    "inscriptions": "None visible to the unaided eye.",
+    "distinguishing": "Characteristic sfumato technique; no eyebrows or eyelashes visible; landscape in background appears asymmetric left-right.",
+    "title": "Mona Lisa",
+    "subject": "Half-length portrait of a seated woman with a mountainous landscape background",
+    "date_display": "c. 1503–1519",
+    "date_earliest": 1503,
+    "date_latest": 1519,
+    "maker_id": "ART-LEONARDO-1452",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [
+      "48C5121",
+      "48C51215",
+      "25H15",
+      "31D14"
+    ],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Musée du Louvre",
+    "collection_qid": null,
+    "inventory_number": "INV. 779",
+    "location_notes": "Denon Wing, Room 711 (Salle des États), Musée du Louvre, Paris"
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "ArtBase Demo",
+    "notes": "Demo record based on public-domain sources. For testing only.",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}
