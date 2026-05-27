@@ -1,0 +1,136 @@
+{
+  "artbase_id": "ART-JUPATOVS-1911",
+  "airtable_id": "recDZzimZ7ZR9yHv6",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-27T15:51:09.245381Z",
+  "visibility": "private",
+  "identity": {
+    "preferred_name": "Aleksejs Jupatovs",
+    "preferred_name_language": null,
+    "full_name": "Aleksejs Jupatovs",
+    "name_variants": [],
+    "sort_name": "Jupatovs, Aleksejs"
+  },
+  "life": {
+    "birth_date": {
+      "value": "1911",
+      "precision": "year",
+      "status": "working",
+      "source_ids": [],
+      "notes": null
+    },
+    "death_date": {
+      "value": "1975",
+      "precision": "year",
+      "status": "working",
+      "source_ids": [],
+      "notes": null
+    },
+    "birth_place": {
+      "display": null,
+      "tgn_uri": null,
+      "wikidata_qid": null,
+      "source_ids": []
+    },
+    "death_place": {
+      "display": null,
+      "tgn_uri": null,
+      "wikidata_qid": null,
+      "source_ids": []
+    }
+  },
+  "descriptors": {
+    "nationality": "Latvian",
+    "citizenship": [],
+    "occupations": [
+      "painter"
+    ],
+    "occupations_aat": [],
+    "media": [],
+    "subjects": [],
+    "movement_notes": null,
+    "biography_summary": null
+  },
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "viaf": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "ulan": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "isni": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "rkd": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "lc_naco": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "gnd": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "bnf": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "libris": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": null,
+    "tasks": [
+      "Search VIAF",
+      "Search Getty ULAN"
+    ],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artist:v1"
+}
