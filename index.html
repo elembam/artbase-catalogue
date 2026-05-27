@@ -17824,9 +17824,24 @@
   <!-- ── Footer ───────────────────────────────────────────────── -->
   <footer class="site-footer">
     <span class="footer-text">ArtBase · Scholarly Art Catalogue · Object ID compliant</span>
-    <span class="footer-generated">Generated 2026-05-27 16:41 UTC</span>
+    <span class="footer-generated">Generated 2026-05-27 16:42 UTC</span>
   </footer>
 
 </div>
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top"
+  style="position:fixed;bottom:32px;right:32px;z-index:100;
+         width:44px;height:44px;border-radius:50%;
+         background:var(--seal);color:#fff;border:none;cursor:pointer;
+         font-size:1.1rem;box-shadow:0 4px 12px rgba(28,24,20,0.25);
+         opacity:0;transition:opacity 0.2s;display:flex;align-items:center;justify-content:center;">
+  ↑
+</button>
+<script>
+  const btn = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    btn.style.opacity = window.scrollY > 400 ? '1' : '0';
+    btn.style.pointerEvents = window.scrollY > 400 ? 'auto' : 'none';
+  });
+</script>
 </body>
 </html>
