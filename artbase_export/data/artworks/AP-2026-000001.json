@@ -66,5 +66,28 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artwork:v1"
+  "_schema": "artbase:artwork:v1",
+  "aat_terms": {
+    "type": {
+      "label": "paintings (visual works)",
+      "aat_uri": "http://vocab.getty.edu/aat/300033618"
+    },
+    "materials": [
+      {
+        "role": "technique",
+        "label": "oil painting (technique)",
+        "aat_uri": "http://vocab.getty.edu/aat/300033799"
+      },
+      {
+        "role": "medium",
+        "label": "oil paint (paint)",
+        "aat_uri": "http://vocab.getty.edu/aat/300015050"
+      },
+      {
+        "role": "support",
+        "label": "poplar",
+        "aat_uri": "http://vocab.getty.edu/aat/300012363"
+      }
+    ]
+  }
 }

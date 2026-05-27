@@ -1,0 +1,86 @@
+{
+  "materials_techniques": {
+    "oil on canvas": {
+      "technique": {"label": "oil painting (technique)", "aat_id": "300033799"},
+      "support": {"label": "canvas", "aat_id": "300014078"},
+      "medium": {"label": "oil paint (paint)", "aat_id": "300015050"}
+    },
+    "oil on panel": {
+      "technique": {"label": "oil painting (technique)", "aat_id": "300033799"},
+      "support": {"label": "panel (wood by form)", "aat_id": "300014657"},
+      "medium": {"label": "oil paint (paint)", "aat_id": "300015050"}
+    },
+    "oil on poplar panel": {
+      "technique": {"label": "oil painting (technique)", "aat_id": "300033799"},
+      "support": {"label": "poplar", "aat_id": "300012363"},
+      "medium": {"label": "oil paint (paint)", "aat_id": "300015050"}
+    },
+    "tempera on panel": {
+      "technique": {"label": "tempera painting", "aat_id": "300178684"},
+      "support": {"label": "panel (wood by form)", "aat_id": "300014657"},
+      "medium": {"label": "tempera (paint)", "aat_id": "300015062"}
+    },
+    "watercolor on paper": {
+      "technique": {"label": "watercolor (technique)", "aat_id": "300078925"},
+      "support": {"label": "paper (fiber product)", "aat_id": "300014109"},
+      "medium": {"label": "watercolor (paint)", "aat_id": "300015045"}
+    },
+    "gouache on paper": {
+      "technique": {"label": "gouache (technique)", "aat_id": "300078926"},
+      "support": {"label": "paper (fiber product)", "aat_id": "300014109"},
+      "medium": {"label": "gouache (paint)", "aat_id": "300015009"}
+    },
+    "lithograph": {
+      "technique": {"label": "lithography", "aat_id": "300041379"}
+    },
+    "etching": {
+      "technique": {"label": "etching (printing process)", "aat_id": "300053225"}
+    },
+    "drypoint": {
+      "technique": {"label": "drypoint", "aat_id": "300053319"}
+    },
+    "charcoal on paper": {
+      "technique": {"label": "drawing (image-making)", "aat_id": "300054196"},
+      "support": {"label": "paper (fiber product)", "aat_id": "300014109"},
+      "medium": {"label": "charcoal (drawing material)", "aat_id": "300404149"}
+    },
+    "pastel on paper": {
+      "technique": {"label": "drawing (image-making)", "aat_id": "300054196"},
+      "support": {"label": "paper (fiber product)", "aat_id": "300014109"},
+      "medium": {"label": "pastel (chalk)", "aat_id": "300230371"}
+    },
+    "ink on paper": {
+      "technique": {"label": "drawing (image-making)", "aat_id": "300054196"},
+      "support": {"label": "paper (fiber product)", "aat_id": "300014109"},
+      "medium": {"label": "ink", "aat_id": "300015012"}
+    },
+    "acrylic on canvas": {
+      "technique": {"label": "painting (image-making)", "aat_id": "300054216"},
+      "support": {"label": "canvas", "aat_id": "300014078"},
+      "medium": {"label": "acrylic paint", "aat_id": "300015749"}
+    },
+    "bronze": {
+      "medium": {"label": "bronze (metal)", "aat_id": "300010957"}
+    }
+  },
+  "object_types": {
+    "painting": {"label": "paintings (visual works)", "aat_id": "300033618"},
+    "drawing": {"label": "drawings (visual works)", "aat_id": "300033973"},
+    "print": {"label": "prints (visual works)", "aat_id": "300041273"},
+    "sculpture": {"label": "sculpture (visual works)", "aat_id": "300047090"},
+    "photograph": {"label": "photographs", "aat_id": "300046300"},
+    "watercolor": {"label": "watercolors (paintings)", "aat_id": "300078925"},
+    "sketch": {"label": "sketches", "aat_id": "300015617"}
+  },
+  "genres": {
+    "landscape": {"label": "landscapes (representations)", "aat_id": "300015636"},
+    "portrait": {"label": "portraits", "aat_id": "300015637"},
+    "still life": {"label": "still lifes", "aat_id": "300015638"},
+    "seascape": {"label": "seascapes (representations)", "aat_id": "300132294"},
+    "genre scene": {"label": "genre paintings (paintings)", "aat_id": "300139140"},
+    "religious": {"label": "religious art", "aat_id": "300055981"},
+    "mythological": {"label": "mythologies (literary works)", "aat_id": "300055985"},
+    "abstract": {"label": "abstract art", "aat_id": "300056508"},
+    "interior": {"label": "interiors (representations)", "aat_id": "300015657"}
+  }
+}
