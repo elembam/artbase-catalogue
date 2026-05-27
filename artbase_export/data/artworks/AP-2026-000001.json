@@ -36,7 +36,28 @@
       "25H15",
       "31D14"
     ],
-    "iconclass_labels": [],
+    "iconclass_labels": [
+      {
+        "code": "48C5121",
+        "label": "portrait of man",
+        "uri": "https://iconclass.org/48C5121"
+      },
+      {
+        "code": "48C51215",
+        "label": "portrait of man looking at the observer",
+        "uri": "https://iconclass.org/48C51215"
+      },
+      {
+        "code": "25H15",
+        "label": "landscapes",
+        "uri": "https://iconclass.org/25H15"
+      },
+      {
+        "code": "31D14",
+        "label": "sitting figure",
+        "uri": "https://iconclass.org/31D14"
+      }
+    ],
     "depicts": []
   },
   "location": {
