@@ -178,11 +178,11 @@ Three concrete reasons:
 
 To enable this strategy:
 
-- [ ] Create the ArtBase Wikidata user account (use a stable, professional name — e.g., `User:ArtBase`)
+- [x] Create the Wikidata user account: `User:Arsaccordia` ✅
 - [ ] Set up the user page with project description, contribution principles, and contact
 - [ ] Establish the per-engagement contribution log file format
-- [ ] Add a public `/contributions` page on the ArtBase site (template ready; populated as engagements complete)
-- [ ] Submit a property proposal to Wikidata for `ArtBase ID` (the property that will let other Wikidata items link to us)
+- [ ] Add a public `/contributions` page on the project site (template ready; populated as engagements complete)
+- [ ] Submit a property proposal to Wikidata for an Arsaccordia/ArtBase ID (the property that will let other Wikidata items link to us)
 - [ ] Open dialogue with Getty Vocabularies Program (email Patricia Harpring's office, introduce the project, ask about institutional contributor status)
 
 None of these require building software or website infrastructure — they're administrative and relationship steps. They cost almost nothing and they unlock the credibility infrastructure that takes years to build otherwise.

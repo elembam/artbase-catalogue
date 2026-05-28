@@ -2,9 +2,9 @@
 
 **Version:** 1.0  
 **Last updated:** 2026-05-28  
-**Owner:** ArtBase cataloguing team
+**Owner:** Arsaccordia cataloguing team
 
-This is the operational checklist for contributing ArtBase data to Wikidata via QuickStatements. Every step is mandatory. Read this document fully before each contribution session.
+This is the operational checklist for contributing Arsaccordia data to Wikidata via QuickStatements. Every step is mandatory. Read this document fully before each contribution session.
 
 ---
 
@@ -13,11 +13,11 @@ This is the operational checklist for contributing ArtBase data to Wikidata via 
 **Account verification:**
 - [ ] Verify you're logged into the correct Wikidata account (**Arsaccordia**)
 - [ ] Check your user page: https://www.wikidata.org/wiki/User:Arsaccordia
-- [ ] Confirm user page accurately describes the ArtBase project
+- [ ] Confirm user page accurately describes the Arsaccordia project
 - [ ] Check for any talk page messages: https://www.wikidata.org/wiki/User_talk:Arsaccordia
 
 **Transparency:**
-- [ ] If first batch of the day, post a note on User talk:ArtBase mentioning what you're about to do
+- [ ] If first batch of the day, post a note on User talk:Arsaccordia mentioning what you're about to do
   - Example: "Contributing VIAF IDs for 15 Latvian artists from verified sources. Batch prepared 2026-05-28."
 - [ ] This aids community trust and makes it clear you're a human-operated account
 
@@ -194,14 +194,14 @@ This is the operational checklist for contributing ArtBase data to Wikidata via 
 
 For 48 hours after submission, check daily:
 
-- [ ] **User talk:ArtBase** — any messages from community?
+- [ ] **User talk:Arsaccordia** — any messages from community?
   - https://www.wikidata.org/wiki/User_talk:Arsaccordia
   
 - [ ] **Watchlist** — any reverts on items you edited?
   - https://www.wikidata.org/wiki/Special:Watchlist
   - Add contributed items to your watchlist
   
-- [ ] **WikiProject Latvia** talk page — any discussion mentioning ArtBase?
+- [ ] **WikiProject Latvia** talk page — any discussion mentioning Arsaccordia?
   - https://www.wikidata.org/wiki/Wikidata:WikiProject_Latvia
 
 **Response protocol:**
@@ -213,7 +213,7 @@ For 48 hours after submission, check daily:
   - Adjust methodology if needed
   
 - [ ] If 2-5 reverts in 24 hours:
-  - Post on User talk:ArtBase explaining your methodology
+  - Post on User talk:Arsaccordia explaining your methodology
   - Wait for community response
   - Adjust before next batch
   
@@ -258,7 +258,7 @@ For 48 hours after submission, check daily:
 **STOP all contributions immediately if ANY of these occur:**
 
 - [ ] A single batch has >5% failure rate
-- [ ] An admin or experienced editor (>1000 edits) posts on User talk:ArtBase
+- [ ] An admin or experienced editor (>1000 edits) posts on User talk:Arsaccordia
 - [ ] Reverts exceed 10 in any 24-hour window
 - [ ] Any block or temporary restriction is applied to the Arsaccordia account
 - [ ] A property you depend on (P7400, P214, etc.) is deprecated or restricted
@@ -267,7 +267,7 @@ For 48 hours after submission, check daily:
 
 **Escalation procedure:**
 1. STOP all batches
-2. Post on User talk:ArtBase acknowledging the issue
+2. Post on User talk:Arsaccordia acknowledging the issue
 3. Contact an admin or post on Wikidata:Project chat
 4. Do NOT resume until issue is resolved
 
@@ -295,7 +295,7 @@ For 48 hours after submission, check daily:
 
 ## 12. Contact information
 
-**ArtBase project:**
+**Arsaccordia project:**
 - GitHub: https://github.com/elembam/artbase-catalogue
 - Documentation: See repo `/docs` folder
 
@@ -316,7 +316,7 @@ For 48 hours after submission, check daily:
 **For your very first batch ever:**
 
 - [ ] Read this entire runbook
-- [ ] Verify ArtBase user page exists and is descriptive
+- [ ] Verify Arsaccordia user page exists and is descriptive
 - [ ] Generate batch with `--max 1 --property P214 --artist ART-AIDE-1913`
 - [ ] Review the single statement 10+ times
 - [ ] Manually verify source URL
@@ -334,4 +334,4 @@ For 48 hours after submission, check daily:
 - Created: 2026-05-28
 - Last review: 2026-05-28
 - Next review: After first 100 successful contributions
-- Owner: ArtBase team
+- Owner: Arsaccordia team

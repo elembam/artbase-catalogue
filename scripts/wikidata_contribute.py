@@ -2,7 +2,7 @@
 """
 wikidata_contribute.py
 
-Generate QuickStatements batches to contribute ArtBase data TO Wikidata.
+Generate QuickStatements batches to contribute Arsaccordia data TO Wikidata.
 NEVER auto-submits. Output is human-reviewed .qs files for manual submission.
 
 Phase 1: External identifiers only (LNDB, ULAN, VIAF, Commons category)
@@ -109,7 +109,7 @@ class ContributionBatch:
         # Write .qs file
         with open(qs_path, "w", encoding="utf-8") as f:
             # Header comments
-            f.write(f"#title ArtBase Latvian artist records: Phase {CURRENT_PHASE} contributions\n")
+            f.write(f"#title Arsaccordia Latvian artist records: Phase {CURRENT_PHASE} contributions\n")
             f.write(f"#summary Adding external identifiers from verified sources\n")
             f.write(f"#prepared_by Arsaccordia\n")
             f.write(f"#prepared_at {datetime.now(timezone.utc).isoformat()}\n")
@@ -147,7 +147,7 @@ class ContributionBatch:
                 
                 f.write(f"- **Adding** {item['property']} = {item['value']}\n")
                 f.write(f"- **Source:** {item['source_url']}\n")
-                f.write(f"- **ArtBase confidence:** {item['confidence']}\n")
+                f.write(f"- **Arsaccordia confidence:** {item['confidence']}\n")
                 f.write(f"- **Risk:** low — external identifier\n\n")
             
             if self.skipped:

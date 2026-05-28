@@ -1,12 +1,12 @@
 # Making Your First Wikidata Contribution
 
-**Quick start guide for contributing VIAF IDs to Wikidata using ArtBase data**
+**Quick start guide for contributing VIAF IDs to Wikidata using Arsaccordia data**
 
 ## Prerequisites
 
 1. **Wikidata account created** at https://www.wikidata.org/
    - Username: Arsaccordia (or similar)
-   - User page created describing the ArtBase project
+   - User page created describing the Arsaccordia project
    
 2. **QuickStatements access**
    - Go to https://quickstatements.toolforge.org/
@@ -18,7 +18,7 @@
 Generate a single VIAF contribution for testing:
 
 ```bash
-cd /Users/elemba/VSCode/ArtBank/ArtBase
+cd /Users/elemba/VSCode/ArtBank/Arsaccordia
 
 # Dry-run first to see what would be generated
 python3 scripts/wikidata_contribute.py \
