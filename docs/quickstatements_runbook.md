@@ -11,13 +11,13 @@ This is the operational checklist for contributing ArtBase data to Wikidata via 
 ## 0. Before any session
 
 **Account verification:**
-- [ ] Verify you're logged into the correct Wikidata account (**ArtBaseLV**)
-- [ ] Check your user page: https://www.wikidata.org/wiki/User:ArtBaseLV
+- [ ] Verify you're logged into the correct Wikidata account (**Arsaccordia**)
+- [ ] Check your user page: https://www.wikidata.org/wiki/User:Arsaccordia
 - [ ] Confirm user page accurately describes the ArtBase project
-- [ ] Check for any talk page messages: https://www.wikidata.org/wiki/User_talk:ArtBaseLV
+- [ ] Check for any talk page messages: https://www.wikidata.org/wiki/User_talk:Arsaccordia
 
 **Transparency:**
-- [ ] If first batch of the day, post a note on User talk:ArtBaseLV mentioning what you're about to do
+- [ ] If first batch of the day, post a note on User talk:ArtBase mentioning what you're about to do
   - Example: "Contributing VIAF IDs for 15 Latvian artists from verified sources. Batch prepared 2026-05-28."
 - [ ] This aids community trust and makes it clear you're a human-operated account
 
@@ -34,7 +34,7 @@ This is the operational checklist for contributing ArtBase data to Wikidata via 
 - [ ] Go to https://quickstatements.toolforge.org/
 - [ ] Click "Log in" (top right corner)
 - [ ] Authorize via OAuth — this links QuickStatements to your Wikidata identity
-- [ ] After redirect, confirm the username displayed top-right is **ArtBaseLV**
+- [ ] After redirect, confirm the username displayed top-right is **Arsaccordia**
 - [ ] **STOP** if logged in as a personal account — log out and retry
 
 **Security check:**
@@ -194,8 +194,8 @@ This is the operational checklist for contributing ArtBase data to Wikidata via 
 
 For 48 hours after submission, check daily:
 
-- [ ] **User talk:ArtBaseLV** — any messages from community?
-  - https://www.wikidata.org/wiki/User_talk:ArtBaseLV
+- [ ] **User talk:ArtBase** — any messages from community?
+  - https://www.wikidata.org/wiki/User_talk:Arsaccordia
   
 - [ ] **Watchlist** — any reverts on items you edited?
   - https://www.wikidata.org/wiki/Special:Watchlist
@@ -213,7 +213,7 @@ For 48 hours after submission, check daily:
   - Adjust methodology if needed
   
 - [ ] If 2-5 reverts in 24 hours:
-  - Post on User talk:ArtBaseLV explaining your methodology
+  - Post on User talk:ArtBase explaining your methodology
   - Wait for community response
   - Adjust before next batch
   
@@ -241,7 +241,7 @@ For 48 hours after submission, check daily:
   - Batch ID
   - Number of statements
   - Reason for rollback
-  - Your ArtBase account name
+  - Your Arsaccordia account name
 - [ ] Admins have tools for mass rollback
 - [ ] Wait for admin action (usually within 24 hours)
 
@@ -258,16 +258,16 @@ For 48 hours after submission, check daily:
 **STOP all contributions immediately if ANY of these occur:**
 
 - [ ] A single batch has >5% failure rate
-- [ ] An admin or experienced editor (>1000 edits) posts on User talk:ArtBaseLV
+- [ ] An admin or experienced editor (>1000 edits) posts on User talk:ArtBase
 - [ ] Reverts exceed 10 in any 24-hour window
-- [ ] Any block or temporary restriction is applied to the ArtBaseLV account
+- [ ] Any block or temporary restriction is applied to the Arsaccordia account
 - [ ] A property you depend on (P7400, P214, etc.) is deprecated or restricted
 - [ ] You receive an email from Wikidata or Wikimedia Foundation
 - [ ] QuickStatements returns "bot flag required" error
 
 **Escalation procedure:**
 1. STOP all batches
-2. Post on User talk:ArtBaseLV acknowledging the issue
+2. Post on User talk:ArtBase acknowledging the issue
 3. Contact an admin or post on Wikidata:Project chat
 4. Do NOT resume until issue is resolved
 
@@ -316,7 +316,7 @@ For 48 hours after submission, check daily:
 **For your very first batch ever:**
 
 - [ ] Read this entire runbook
-- [ ] Verify ArtBaseLV user page exists and is descriptive
+- [ ] Verify ArtBase user page exists and is descriptive
 - [ ] Generate batch with `--max 1 --property P214 --artist ART-AIDE-1913`
 - [ ] Review the single statement 10+ times
 - [ ] Manually verify source URL

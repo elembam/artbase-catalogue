@@ -5,7 +5,7 @@
 ## Prerequisites
 
 1. **Wikidata account created** at https://www.wikidata.org/
-   - Username: ArtBaseLV (or similar)
+   - Username: Arsaccordia (or similar)
    - User page created describing the ArtBase project
    
 2. **QuickStatements access**
@@ -79,7 +79,7 @@ Before submitting, manually verify the data:
 ## Step 4: Submit via QuickStatements
 
 1. Go to https://quickstatements.toolforge.org/
-2. Click "Log in" and authorize with ArtBaseLV account
+2. Click "Log in" and authorize with Arsaccordia account
 3. Click "New batch"
 4. Select "Import V1 commands" tab
 5. Open your `.qs` file in a text editor
@@ -145,7 +145,7 @@ git push
 **After your first successful contribution:**
 
 1. **Wait 24 hours**
-2. Check https://www.wikidata.org/wiki/User_talk:ArtBaseLV for any messages
+2. Check https://www.wikidata.org/wiki/User_talk:Arsaccordia for any messages
 3. Check if the edit was reverted (go back to the item page)
 4. **If clean:** scale up to --max 5
 5. Repeat the process

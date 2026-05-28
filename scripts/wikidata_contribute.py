@@ -111,7 +111,7 @@ class ContributionBatch:
             # Header comments
             f.write(f"#title ArtBase Latvian artist records: Phase {CURRENT_PHASE} contributions\n")
             f.write(f"#summary Adding external identifiers from verified sources\n")
-            f.write(f"#prepared_by ArtBaseLV\n")
+            f.write(f"#prepared_by Arsaccordia\n")
             f.write(f"#prepared_at {datetime.now(timezone.utc).isoformat()}\n")
             f.write(f"#phase {CURRENT_PHASE}\n")
             f.write(f"#review_doc {review_path.name}\n")
@@ -417,7 +417,7 @@ def main():
     print(f"   1. Open {qs_path} in text editor and visually verify")
     print(f"   2. Read {review_path} carefully")
     print(f"   3. Go to https://quickstatements.toolforge.org/")
-    print(f"   4. Log in as ArtBaseLV")
+    print(f"   4. Log in as Arsaccordia")
     print(f"   5. Import V1 commands → paste file contents")
     print(f"   6. Preview and run ONLY if everything looks correct")
     print(f"\n⚠️  NEVER skip the manual review step!")
