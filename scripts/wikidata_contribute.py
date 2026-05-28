@@ -285,18 +285,19 @@ def process_artist(artist: dict, args: argparse.Namespace, batch: ContributionBa
         batch.skip(artist_id, "No Wikidata QID")
         return 0
     
-    # Fetch current Wikidata state (unless we're in dry-run and want to skip)
-    if not args.dry_run:
-        if args.refresh_wikidata or not hasattr(process_artist, '_cache'):
+    # Fetch current Wikidata state only when --refresh-wikidata is explicitly requested.
+    # Default: skip live fetch (entity = {}), which means has_existing_claim returns False
+    # and all eligible values are proposed. QuickStatements itself rejects actual duplicates.
+    if args.refresh_wikidata and not args.dry_run:
+        if not hasattr(process_artist, '_cache'):
             process_artist._cache = {}
-        
         if wikidata_qid not in process_artist._cache:
             entity = fetch_wikidata_current_state(wikidata_qid)
             process_artist._cache[wikidata_qid] = entity
         else:
             entity = process_artist._cache[wikidata_qid]
     else:
-        entity = {}  # Skip fetch in dry-run
+        entity = {}  # No live fetch — QuickStatements will reject duplicates safely
     
     statements_added = 0
     
