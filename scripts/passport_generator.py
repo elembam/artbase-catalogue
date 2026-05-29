@@ -166,13 +166,17 @@ def build_context(artwork: dict, artist: Optional[dict],
         issued_date = date.today().isoformat()
         issued_year_roman = to_roman(date.today().year)
 
+    maker_id = artwork.get("object_id", {}).get("maker_id")
+    artist_profile_url = f"artists/{maker_id}.html" if maker_id else None
+
     return {
-        "artwork":           artwork,
-        "artist":            artist,
-        "image_src":         image_src,
-        "issued_date":       issued_date,
-        "issued_year_roman": issued_year_roman,
-        "jsonld":            build_jsonld(artwork, artist),
+        "artwork":            artwork,
+        "artist":             artist,
+        "artist_profile_url": artist_profile_url,
+        "image_src":          image_src,
+        "issued_date":        issued_date,
+        "issued_year_roman":  issued_year_roman,
+        "jsonld":             build_jsonld(artwork, artist),
     }
 
 
