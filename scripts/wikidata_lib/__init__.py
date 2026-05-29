@@ -1,1 +1,1 @@
-"""wikidata_lib — modular helpers for ArtBase Wikidata enrichment."""
+"""wikidata_lib — modular helpers for Ars Accordia Wikidata enrichment."""

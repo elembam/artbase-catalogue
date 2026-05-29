@@ -48,7 +48,7 @@ artbase_export/
 
 **Import the starter kit CSV files into Airtable:**
 
-1. Go to [airtable.com](https://airtable.com) and create a new base (name it "ArtBase" or similar).
+1. Go to [airtable.com](https://airtable.com) and create a new base (name it "Ars Accordia" or similar).
 2. In the base, create tables by importing the CSV files from `csv_tables/` **in this order**:
    - Collections.csv
    - Artists_Makers.csv
@@ -70,7 +70,7 @@ artbase_export/
 2. Click "Create new token"
 3. Name: `artbase-export`
 4. Scopes: select `data.records:read` and `schema.bases:read`
-5. Access: select your ArtBase base
+5. Access: select your Ars Accordia base
 6. Copy the token — you'll only see it once
 
 ---
@@ -130,7 +130,7 @@ You should see:
 ```
 Usage: artbase-export [OPTIONS] COMMAND [ARGS]...
 
-  ArtBase export pipeline — Airtable → canonical JSON
+  Ars Accordia export pipeline — Airtable → canonical JSON
 
 Commands:
   run       Export Airtable records to canonical JSON files

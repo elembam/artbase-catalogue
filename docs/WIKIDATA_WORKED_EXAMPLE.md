@@ -89,11 +89,11 @@ That's enough for one session.
 
 ## Step 3 — Sign in and prepare
 
-You need a Wikidata account. If you're operating on behalf of ArtBase, the account is **`ArtBase`** (or whatever name was chosen during architecture setup). Use this account, not a personal one, for all business contributions.
+You need a Wikidata account. If you're operating on behalf of Ars Accordia, the account is **`Ars Accordia`** (or whatever name was chosen during architecture setup). Use this account, not a personal one, for all business contributions.
 
 1. Go to <https://www.wikidata.org>
-2. Click **Log in** (top right). Enter ArtBase credentials.
-3. Confirm the account appears at top right — `ArtBase`.
+2. Click **Log in** (top right). Enter Ars Accordia credentials.
+3. Confirm the account appears at top right — `Ars Accordia`.
 4. Navigate back to Q23054868.
 5. Keep your audit notes open in another window.
 
@@ -209,7 +209,7 @@ Wikipedia articles aren't the strongest references (Wikidata prefers original so
 
 ## Step 8 — Search for external authority IDs
 
-A core ArtBase contribution is **linking Wikidata to other authority systems**. Each external ID is its own Wikidata property.
+A core Ars Accordia contribution is **linking Wikidata to other authority systems**. Each external ID is its own Wikidata property.
 
 For Herberts Siliņš, check whether the artist has records in:
 
@@ -228,9 +228,9 @@ The hidden value: once you add a Getty ULAN ID to Wikidata, the next person look
 
 ---
 
-## Step 9 — Add the ArtBase ID (when our property is approved)
+## Step 9 — Add the Ars Accordia ID (when our property is approved)
 
-In the architecture document we noted that ArtBase will eventually propose its own Wikidata property: `P-ArtBase-ID`. Once that property exists, every artist in our system that has a Wikidata entry should have the ArtBase ID added.
+In the architecture document we noted that Ars Accordia will eventually propose its own Wikidata property: `P-Ars Accordia-ID`. Once that property exists, every artist in our system that has a Wikidata entry should have the Ars Accordia ID added.
 
 Property proposals on Wikidata go through a community review process (1–4 weeks). Submit one early so the property is ready when we need it.
 
@@ -248,7 +248,7 @@ A typical log entry for this session:
 
 ```yaml
 session: 2026-05-27
-contributor: K. Andersson (ArtBase account)
+contributor: K. Andersson (Ars Accordia account)
 target: Q23054868 - Herberts Siliņš
 
 statements_added:
@@ -316,4 +316,4 @@ Two situations warrant pausing rather than editing:
 
 ---
 
-*This document is part of the ArtBase operations library. Reference it during onboarding and whenever a cataloguer encounters their first Wikidata improvement task.*
+*This document is part of the Ars Accordia operations library. Reference it during onboarding and whenever a cataloguer encounters their first Wikidata improvement task.*

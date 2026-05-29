@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-wikidata_enrich.py — Deep Wikidata enrichment for ArtBase artist records.
+wikidata_enrich.py — Deep Wikidata enrichment for Ars Accordia artist records.
 
 For each artist with a *confirmed* Wikidata QID:
   - Fetch Tier 1 fields: birth/death date+place, LNDB ID, image, descriptions
@@ -378,9 +378,9 @@ def write_report(report: dict) -> Path:
 # ── CLI ────────────────────────────────────────────────────────────────────────
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Wikidata deep enrichment for ArtBase artists")
+    parser = argparse.ArgumentParser(description="Wikidata deep enrichment for Ars Accordia artists")
     group  = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument("--artist", metavar="ID",    help="Enrich a single artist by ArtBase ID")
+    group.add_argument("--artist", metavar="ID",    help="Enrich a single artist by Ars Accordia ID")
     group.add_argument("--all",    action="store_true", help="Enrich all confirmed artists")
     parser.add_argument("--dry-run",       action="store_true", help="Show diffs, write nothing")
     parser.add_argument("--skip-airtable", action="store_true", help="Update JSON only, skip Airtable")

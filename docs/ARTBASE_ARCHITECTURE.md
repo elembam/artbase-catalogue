@@ -1,4 +1,4 @@
-# ArtBase — Architecture Decisions
+# Ars Accordia — Architecture Decisions
 
 *The technical commitments that need to be made now to preserve the platform option later.*
 
@@ -18,7 +18,7 @@ Every decision below has three parts: **the commitment**, **the reasoning**, and
 
 ### Commitment
 
-The canonical domain for ArtBase is **`artbase.eu`** — to be registered and held in perpetuity. All passport URLs, all internal documentation, all client deliverables reference this domain as the long-term home.
+The canonical domain for Ars Accordia is **`arsaccordia.com`** — to be registered and held in perpetuity. All passport URLs, all internal documentation, all client deliverables reference this domain as the long-term home.
 
 Supporting domains to also register and redirect to the canonical:
 
@@ -35,7 +35,7 @@ Supporting domains to also register and redirect to the canonical:
 
 ### Conditions for change
 
-- Only if `artbase.eu` becomes unavailable through events outside our control
+- Only if `arsaccordia.com` becomes unavailable through events outside our control
 - Migration would require a full URL rewrite plan with permanent redirects for at least 10 years
 
 ---
@@ -47,17 +47,17 @@ Supporting domains to also register and redirect to the canonical:
 Passport URLs follow this scheme, permanently:
 
 ```
-https://artbase.eu/p/{passport_id}
+https://arsaccordia.com/p/{passport_id}
 ```
 
 Supporting URL patterns:
 
 ```
-https://artbase.eu/a/{artist_id}        — artist record
-https://artbase.eu/c/{collection_id}    — collection page
-https://artbase.eu/about                 — institutional pages
-https://artbase.eu/api/p/{passport_id}  — machine-readable API
-https://artbase.eu/api/p/{passport_id}/eodem  — EODEM XML
+https://arsaccordia.com/a/{artist_id}        — artist record
+https://arsaccordia.com/c/{collection_id}    — collection page
+https://arsaccordia.com/about                 — institutional pages
+https://arsaccordia.com/api/p/{passport_id}  — machine-readable API
+https://arsaccordia.com/api/p/{passport_id}/eodem  — EODEM XML
 ```
 
 URLs are:
@@ -86,7 +86,7 @@ URLs are:
 
 Passport IDs are generated as **prefixed base32-encoded short hashes**:
 
-- Format: `AB` (ArtBase prefix) + 8 base32 characters (Crockford alphabet, no ambiguous characters)
+- Format: `AB` (Ars Accordia prefix) + 8 base32 characters (Crockford alphabet, no ambiguous characters)
 - Example: `AB7F3KQ2X1`
 - Generation: hash of the canonical record content at first publication, truncated to 8 chars, collision-checked
 - Each artwork has one passport ID, permanent for the artwork's lifetime in the system
@@ -133,10 +133,10 @@ Every passport record has a **version number**, incremented when meaningful cont
 URL examples:
 
 ```
-https://artbase.eu/p/AB7F3KQ2X1          — latest version
-https://artbase.eu/p/AB7F3KQ2X1?v=1      — first published version
-https://artbase.eu/p/AB7F3KQ2X1?v=2      — second version
-https://artbase.eu/p/AB7F3KQ2X1/history  — full version history
+https://arsaccordia.com/p/AB7F3KQ2X1          — latest version
+https://arsaccordia.com/p/AB7F3KQ2X1?v=1      — first published version
+https://arsaccordia.com/p/AB7F3KQ2X1?v=2      — second version
+https://arsaccordia.com/p/AB7F3KQ2X1/history  — full version history
 ```
 
 Each version records:
@@ -149,7 +149,7 @@ Each version records:
 ### Reasoning
 
 - Scholarly citations made today must resolve to the same content years later — that requires versioned URLs
-- A catalogue raisonné published in 2030 citing "ArtBase AB7F3KQ2X1 v3" must work in 2050
+- A catalogue raisonné published in 2030 citing "Ars Accordia AB7F3KQ2X1 v3" must work in 2050
 - Modern web habits assume single URLs; default-to-latest with optional version pinning gives both audiences what they need
 
 ### Conditions for change
@@ -176,7 +176,7 @@ Clients choose at engagement whether their records are **published** (subject to
 
 ### Reasoning
 
-- Open licensing is what turns ArtBase from "a private firm's archive" into "infrastructure others build on"
+- Open licensing is what turns Ars Accordia from "a private firm's archive" into "infrastructure others build on"
 - Wikidata, Europeana, scholarly databases can only consume from us if licensing permits
 - CC BY 4.0 requires attribution back to us — every reuse links back, which is brand-building
 - CC0 on structured metadata is standard for linked-data infrastructure (Wikidata uses CC0)
@@ -243,16 +243,16 @@ The flag is set per record by the client at engagement. It can be changed by the
 
 ## 8. Commitments that follow from the above
 
-By making these decisions, ArtBase implicitly commits to:
+By making these decisions, Ars Accordia implicitly commits to:
 
-- Operating the `artbase.eu` domain in perpetuity
+- Operating the `arsaccordia.com` domain in perpetuity
 - Maintaining 200-OK responses (or correctly issued redirects) on every published URL forever
 - Never reassigning an issued ID
 - Honouring published licences forever (they are irrevocable)
 - Maintaining version history of every published record forever
 - Notifying external harvesters before any breaking change to API or schema
 
-These are real obligations. They limit our freedom of action. They are also exactly what makes ArtBase trustworthy as long-term documentary infrastructure — the same obligations Wikidata, Getty, and ORCID make, and the reason scholars cite them.
+These are real obligations. They limit our freedom of action. They are also exactly what makes Ars Accordia trustworthy as long-term documentary infrastructure — the same obligations Wikidata, Getty, and ORCID make, and the reason scholars cite them.
 
 ---
 
@@ -260,7 +260,7 @@ These are real obligations. They limit our freedom of action. They are also exac
 
 Before any real client engagement, the following must be done:
 
-- [ ] Register `artbase.eu` (and supporting domains)
+- [ ] Register `arsaccordia.com` (and supporting domains)
 - [ ] Set up DNS with placeholder landing page
 - [ ] Generate canonical IDs for any existing demo records
 - [ ] Update mockup HTML files to use canonical URL pattern
@@ -286,4 +286,4 @@ These are deferred not because they're unimportant but because they cost real en
 
 ---
 
-*This document is the source of truth for ArtBase's foundational technical commitments. Changes require explicit version bumps and justification entered in a changelog section at the bottom (when one exists).*
+*This document is the source of truth for Ars Accordia's foundational technical commitments. Changes require explicit version bumps and justification entered in a changelog section at the bottom (when one exists).*

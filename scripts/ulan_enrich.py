@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ulan_enrich.py — Getty ULAN enrichment for ArtBase artist records.
+ulan_enrich.py — Getty ULAN enrichment for Ars Accordia artist records.
 
 For each artist with a confirmed ULAN ID:
   - Query Getty's SPARQL endpoint for biographical data
@@ -217,9 +217,9 @@ def write_report(report: dict) -> Path:
 # ── CLI ────────────────────────────────────────────────────────────────────────
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Getty ULAN enrichment for ArtBase artists")
+    parser = argparse.ArgumentParser(description="Getty ULAN enrichment for Ars Accordia artists")
     group  = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument("--artist", metavar="ID",    help="Enrich a single artist by ArtBase ID")
+    group.add_argument("--artist", metavar="ID",    help="Enrich a single artist by Ars Accordia ID")
     group.add_argument("--all",    action="store_true", help="Enrich all artists with ULAN IDs")
     parser.add_argument("--dry-run", action="store_true", help="Show diffs, write nothing")
     parser.add_argument("--force",   action="store_true", help="Overwrite manual_overrides fields")

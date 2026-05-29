@@ -18,7 +18,7 @@
 Generate a single VIAF contribution for testing:
 
 ```bash
-cd /Users/elemba/VSCode/ArtBank/Arsaccordia
+cd /Users/elemba/VSCode/Ars Accordia/Arsaccordia
 
 # Dry-run first to see what would be generated
 python3 scripts/wikidata_contribute.py \

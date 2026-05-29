@@ -25,7 +25,7 @@ In practice: a pipeline produces a *proposed edit set*; the cataloguer reviews i
 | **3. Programmatic API** | Pywikibot, mwclient, WikidataIntegrator — Python scripts that edit directly | Ongoing pipelines, custom logic | Encouraged for assisted edits; requires bot approval for autonomous edits |
 | **4. Bot operation** | Registered bot account performing autonomous edits | Very large, repetitive, well-understood operations | Requires formal bot approval process |
 
-For ArtBase, **Level 2 (QuickStatements) is the right default**. Level 3 is justified for the data-assembly side (running locally to prepare the QuickStatements file). Level 4 is overkill until we have proven need.
+For Ars Accordia, **Level 2 (QuickStatements) is the right default**. Level 3 is justified for the data-assembly side (running locally to prepare the QuickStatements file). Level 4 is overkill until we have proven need.
 
 ---
 
@@ -113,7 +113,7 @@ The dividing line is clear: **the script proposes; the cataloguer disposes.**
 
 **WikidataIntegrator** — `github.com/SuLab/WikidataIntegrator`
 - Higher-level Python library focused on Wikidata
-- More ergonomic than raw Pywikibot for ArtBase-style work
+- More ergonomic than raw Pywikibot for Ars Accordia-style work
 - Free, Python
 
 **mwclient** — `mwclient.readthedocs.io`
@@ -148,7 +148,7 @@ The dividing line is clear: **the script proposes; the cataloguer disposes.**
 
 ---
 
-## The ArtBase pipeline: artist_pipeline.py
+## The Ars Accordia pipeline: artist_pipeline.py
 
 The companion script (`artist_pipeline.py`) implements steps 1–5 of the recommended pipeline as a single command-line tool. Usage:
 
@@ -247,7 +247,7 @@ For Year 2+, two extensions become useful:
 
 **Batch reconciliation.** Once you have CatalogIt or Artwork Archive populated with a client's full artist list, you can run the pipeline over all artists in one pass and produce a single QuickStatements file for review. OpenRefine is the natural tool for this: load the CSV, reconcile names, identify gaps, batch-submit.
 
-**Periodic gap-finding via SPARQL.** Once a quarter, query Wikidata for "artists ArtBase has linked to, where statement X is missing" and produce a queue of low-effort improvements. This is how you turn the contribution program into a sustained operation rather than only doing what comes through engagements.
+**Periodic gap-finding via SPARQL.** Once a quarter, query Wikidata for "artists Ars Accordia has linked to, where statement X is missing" and produce a queue of low-effort improvements. This is how you turn the contribution program into a sustained operation rather than only doing what comes through engagements.
 
 ---
 
@@ -265,10 +265,10 @@ The setup is minimal:
 pip install requests mwparserfromhell
 ```
 
-That's it. No services to provision, no accounts to register beyond the existing ArtBase Wikidata account, no infrastructure to maintain. The pipeline is a small local tool that does its job in a few seconds and produces output you can review immediately.
+That's it. No services to provision, no accounts to register beyond the existing Ars Accordia Wikidata account, no infrastructure to maintain. The pipeline is a small local tool that does its job in a few seconds and produces output you can review immediately.
 
 Future extensions (place/school QID lookup, multi-language Wikipedia, DBpedia cross-check, batch mode) build on the same foundation. The principle stays the same: assemble automatically; review humanly; submit through QuickStatements.
 
 ---
 
-*Maintained as part of the ArtBase operations library, alongside ARTIST_IDENTITY_WORKFLOW.md and WIKIDATA_WORKED_EXAMPLE.md.*
+*Maintained as part of the Ars Accordia operations library, alongside ARTIST_IDENTITY_WORKFLOW.md and WIKIDATA_WORKED_EXAMPLE.md.*

@@ -73,7 +73,7 @@ Then visit:
 Once live, run this to update any internal URLs in the generated passports:
 
 ```bash
-cd /Users/elemba/VSCode/ArtBank/ArtBase
+cd /Users/elemba/VSCode/Ars Accordia/Ars Accordia
 python3 scripts/index_generator.py   # regenerate index with correct domain
 python3 scripts/passport_generator.py  # regenerate passports if needed
 ```

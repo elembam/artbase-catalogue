@@ -59,7 +59,7 @@ class AirtableSync:
                 raise RuntimeError(f"Airtable {method} {url} → HTTP {e.code}: {body_text}") from e
 
     def find_record_id(self, artbase_id: str) -> Optional[str]:
-        """Look up the Airtable record ID for an artist by their ArtBase ID."""
+        """Look up the Airtable record ID for an artist by their Ars Accordia ID."""
         formula = urllib.parse.quote(f'{{Artist ID}}="{artbase_id}"')
         url = f"{self._url()}?filterByFormula={formula}&maxRecords=1"
         data = self._request("GET", url)

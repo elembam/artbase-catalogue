@@ -23,7 +23,7 @@ from rich.console import Console
 from rich.table import Table
 from rich import print as rprint
 
-app     = typer.Typer(help="ArtBase export pipeline — Airtable → canonical JSON")
+app     = typer.Typer(help="Ars Accordia export pipeline — Airtable → canonical JSON")
 console = Console()
 
 
@@ -135,8 +135,8 @@ def run(
         try:
             git = GitHandler(
                 repo_root       = output.parent,
-                author_name     = cfg["export"].get("git_author_name", "ArtBase Export"),
-                author_email    = cfg["export"].get("git_author_email", "export@artbase.eu"),
+                author_name     = cfg["export"].get("git_author_name", "Ars Accordia Export"),
+                author_email    = cfg["export"].get("git_author_email", "export@arsaccordia.com"),
             )
             details = _build_commit_details(stats, all_changed)
             sha = git.commit_changes(
@@ -207,7 +207,7 @@ def status(
     else:
         data_dir = output_dir
 
-    table = Table(title="ArtBase Canonical Records")
+    table = Table(title="Ars Accordia Canonical Records")
     table.add_column("ID",          style="cyan",  no_wrap=True)
     table.add_column("Type",        style="dim")
     table.add_column("Name")

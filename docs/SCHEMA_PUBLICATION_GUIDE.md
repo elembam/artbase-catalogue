@@ -1,4 +1,4 @@
-# Publishing and Using the ArtBase Wikidata Schema
+# Publishing and Using the Ars Accordia Wikidata Schema
 
 *Practical guide to taking the ShEx schema from a text file to a published EntitySchema, and using it operationally.*
 
@@ -8,7 +8,7 @@ Version 0.1
 
 ## The schema in three sentences
 
-The file `artbase_wikidata_schema.shex` is a Shape Expressions document that defines the structural requirements for any Wikidata entry referenced by an ArtBase record. It's the machine-readable expression of the ArtBase Wikidata Application Profile. Once published on Wikidata as an EntitySchema, validation tools and automated workflows can use it to check compliance of any Wikidata entry against ArtBase standards.
+The file `artbase_wikidata_schema.shex` is a Shape Expressions document that defines the structural requirements for any Wikidata entry referenced by an Ars Accordia record. It's the machine-readable expression of the Ars Accordia Wikidata Application Profile. Once published on Wikidata as an EntitySchema, validation tools and automated workflows can use it to check compliance of any Wikidata entry against Ars Accordia standards.
 
 ---
 
@@ -40,12 +40,12 @@ Wikidata EntitySchemas live at URLs like `https://www.wikidata.org/wiki/EntitySc
 
 The mechanics:
 
-1. **Sign in** to Wikidata with the ArtBase contributor account
+1. **Sign in** to Wikidata with the Ars Accordia contributor account
 2. Navigate to **Special:NewEntitySchema** (`https://www.wikidata.org/wiki/Special:NewEntitySchema`)
 3. Fill in the form:
-   - **Label (English)**: `ArtBase Application Profile for Visual Artists and Artworks`
-   - **Description (English)**: `Structural requirements for Wikidata entries referenced by ArtBase records — defines artists and artworks per ArtBase v0.1 profile`
-   - **Aliases**: `ArtBase artist schema`, `ArtBase artwork schema`, `ArtBase Wikidata profile`
+   - **Label (English)**: `Ars Accordia Application Profile for Visual Artists and Artworks`
+   - **Description (English)**: `Structural requirements for Wikidata entries referenced by Ars Accordia records — defines artists and artworks per Ars Accordia v0.1 profile`
+   - **Aliases**: `Ars Accordia artist schema`, `Ars Accordia artwork schema`, `Ars Accordia Wikidata profile`
    - **Schema text**: Paste the full content of `artbase_wikidata_schema.shex`
 4. **Submit**
 
@@ -59,10 +59,10 @@ Wikidata assigns an `E` number (e.g., `E12345`). The published URL becomes the c
 
 Once published, update these documents to reference the EntitySchema URL:
 
-- **ARTBASE_WIKIDATA_PROFILE.md** — add the EntitySchema URL to Part 3 (currently a placeholder)
+- **ARS ACCORDIA_WIKIDATA_PROFILE.md** — add the EntitySchema URL to Part 3 (currently a placeholder)
 - **STRUCTURED_WIKIDATA_WORKFLOW.md** — reference it in the pipeline tooling section
 - **artist_pipeline.py** — add a constant pointing to the schema URL
-- The ArtBase public website (when it exists) — link from the `/standards` or `/about` page
+- The Ars Accordia public website (when it exists) — link from the `/standards` or `/about` page
 
 ---
 
@@ -83,8 +83,8 @@ import requests
 
 SCHEMA_URL = "https://www.wikidata.org/wiki/Special:EntitySchemaText/E12345"
 
-def validate_entry(qid: str, shape: str = "ArtBaseArtist") -> dict:
-    """Validate a Wikidata entry against the published ArtBase schema."""
+def validate_entry(qid: str, shape: str = "Ars AccordiaArtist") -> dict:
+    """Validate a Wikidata entry against the published Ars Accordia schema."""
     # Use the rdfshape.weso.es API or a local shex.js process
     # Returns a compliance report: which constraints pass, which fail
     ...
@@ -98,7 +98,7 @@ The pipeline's audit feature in `artist_pipeline.py` can be extended to use this
 
 Once the schema is in production, you can produce useful reports:
 
-**"Compliance overview"** — query Wikidata via SPARQL for all items with an ArtBase ID property, validate each against the schema, produce a percentage compliance metric per quarter. Published on the `/contributions` page of the ArtBase site.
+**"Compliance overview"** — query Wikidata via SPARQL for all items with an Ars Accordia ID property, validate each against the schema, produce a percentage compliance metric per quarter. Published on the `/contributions` page of the Ars Accordia site.
 
 **"Top gaps"** — for items that fail validation, aggregate which constraints fail most often. This tells you where to focus the next batch of improvement work.
 
@@ -114,7 +114,7 @@ When the schema needs to change:
 
 1. Edit the source `.shex` file in your operations repository
 2. Bump the version in the header comment
-3. Update **ARTBASE_WIKIDATA_PROFILE.md** with the change in the changelog
+3. Update **ARS ACCORDIA_WIKIDATA_PROFILE.md** with the change in the changelog
 4. Edit the Wikidata EntitySchema page with the new content
 5. Re-run dashboard validation — items that were compliant under the old version may not be under the new one
 
@@ -127,7 +127,7 @@ Wikidata preserves the full edit history of every EntitySchema, so previous vers
 ```
    PROFILE LAYER
 
-   ARTBASE_WIKIDATA_PROFILE.md         (human-readable spec)
+   ARS ACCORDIA_WIKIDATA_PROFILE.md         (human-readable spec)
               │
               ▼
    artbase_wikidata_schema.shex        (machine-readable spec)
@@ -167,9 +167,9 @@ The schema is the bridge between the human spec (which a person reads) and the o
 
 Three reasons:
 
-**1. Other contributors can use it.** A partner cataloguer onboarding to ArtBase can validate their contributions against the published schema with no additional tooling. The schema is itself the onboarding standard.
+**1. Other contributors can use it.** A partner cataloguer onboarding to Ars Accordia can validate their contributions against the published schema with no additional tooling. The schema is itself the onboarding standard.
 
-**2. The Wikidata community sees the commitment.** A published EntitySchema is a public commitment to a particular quality standard. It's what serious institutional contributors do. The schema is part of what justifies the eventual ArtBase ID property proposal — "we have a documented profile, here it is, here's the validator that proves we follow it."
+**2. The Wikidata community sees the commitment.** A published EntitySchema is a public commitment to a particular quality standard. It's what serious institutional contributors do. The schema is part of what justifies the eventual Ars Accordia ID property proposal — "we have a documented profile, here it is, here's the validator that proves we follow it."
 
 **3. The schema is itself a contribution to shared infrastructure.** Even if no one else uses it directly, it's an example for other small registries thinking about the same problems. Open publication of profiles is how the linked-data community improves over time.
 
@@ -186,4 +186,4 @@ I'd lean toward **publish early** since the schema itself is annotated as v0.1 a
 
 ---
 
-*The published EntitySchema is the formal handoff point between ArtBase's internal standards and the public Wikidata infrastructure. Treat it with the same care as any other public-facing technical artefact.*
+*The published EntitySchema is the formal handoff point between Ars Accordia's internal standards and the public Wikidata infrastructure. Treat it with the same care as any other public-facing technical artefact.*

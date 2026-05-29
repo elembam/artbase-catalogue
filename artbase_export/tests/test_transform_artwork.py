@@ -131,7 +131,7 @@ class TestTransformArtworkVisibility:
 class TestTransformArtworkCataloguing:
     def test_catalogued_by(self, full_artwork_row):
         result = transform_artwork(full_artwork_row)
-        assert result.cataloguing.catalogued_by == "cataloguer@artbase.eu"
+        assert result.cataloguing.catalogued_by == "cataloguer@arsaccordia.com"
 
     def test_review_status_draft(self, full_artwork_row):
         result = transform_artwork(full_artwork_row)

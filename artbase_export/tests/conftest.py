@@ -106,7 +106,7 @@ def full_artwork_row():
         "Inventory Number":         "SC-2019-042",
         "Passport Visibility":      "Private",
         "Passport Status":          "Draft",
-        "Catalogued By":            "cataloguer@artbase.eu",
+        "Catalogued By":            "cataloguer@arsaccordia.com",
         "Cataloguing Notes":        "Needs provenance research",
         "_airtable_record_id":      "recARTWORK999",
         "_sources":                 [],

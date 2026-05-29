@@ -25,15 +25,15 @@ class GitHandler:
     Manages Git commits for the canonical data/ directory.
 
     Usage:
-        handler = GitHandler(repo_root=Path("."), author_name="ArtBase Export", ...)
+        handler = GitHandler(repo_root=Path("."), author_name="Ars Accordia Export", ...)
         handler.commit_changes(changed_paths, summary="Export 2026-05-27")
     """
 
     def __init__(
         self,
         repo_root:      Path,
-        author_name:    str = "ArtBase Export",
-        author_email:   str = "export@artbase.eu",
+        author_name:    str = "Ars Accordia Export",
+        author_email:   str = "export@arsaccordia.com",
     ):
         if not GIT_AVAILABLE:
             raise RuntimeError(

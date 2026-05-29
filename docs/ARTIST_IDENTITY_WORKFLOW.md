@@ -147,4 +147,4 @@ Before marking an artist's authority work complete:
 
 ---
 
-*Maintained as part of the ArtBase house standards. Update the version line at the top when material changes are made.*
+*Maintained as part of the Ars Accordia house standards. Update the version line at the top when material changes are made.*

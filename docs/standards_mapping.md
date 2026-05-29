@@ -1,6 +1,6 @@
-# ArtBase — Standards Mapping
+# Ars Accordia — Standards Mapping
 
-*How ArtBase fields map to Object ID, LIDO 1.1, EODEM, and Dublin Core.*
+*How Ars Accordia fields map to Object ID, LIDO 1.1, EODEM, and Dublin Core.*
 
 Version 0.1
 
@@ -9,10 +9,10 @@ Version 0.1
 ## Object ID
 
 Object ID defines nine categories of information that should be recorded for every
-artwork to enable identification and recovery. The mapping below shows the ArtBase
+artwork to enable identification and recovery. The mapping below shows the Ars Accordia
 canonical field for each category.
 
-| Object ID category | ArtBase canonical field | Airtable field |
+| Object ID category | Ars Accordia canonical field | Airtable field |
 |---|---|---|
 | 1. Type of object | `object_id.object_type` + `object_id.object_type_aat` | Object Type Label + AAT Object Type URI |
 | 2. Materials and techniques | `object_id.materials` + `object_id.materials_aat` | Medium Display + AAT Medium URI |
@@ -29,27 +29,27 @@ canonical field for each category.
 ## LIDO 1.1
 
 LIDO (Lightweight Information Describing Objects) is the primary exchange format for
-cultural heritage object data. ArtBase targets LIDO 1.1.
+cultural heritage object data. Ars Accordia targets LIDO 1.1.
 
 ### lido:lidoWrap / lido:lido
 
-| LIDO element | ArtBase field | Notes |
+| LIDO element | Ars Accordia field | Notes |
 |---|---|---|
-| `lido:lidoRecID` | `artbase_canonical_id` | Format: `artbase.eu/p/AB7F3KQ2X1` |
+| `lido:lidoRecID` | `artbase_canonical_id` | Format: `arsaccordia.com/p/AB7F3KQ2X1` |
 | `lido:recordType` | fixed: `http://terminology.lido-schema.org/lido00141` | Item |
 
 ### lido:descriptiveMetadata
 
 #### lido:objectClassificationWrap
 
-| LIDO element | ArtBase field | Notes |
+| LIDO element | Ars Accordia field | Notes |
 |---|---|---|
 | `lido:objectWorkType/lido:conceptID` | `object_id.object_type_aat.uri` | Getty AAT URI |
 | `lido:objectWorkType/lido:term` | `object_id.object_type_aat.label` | English preferred label |
 
 #### lido:objectIdentificationWrap
 
-| LIDO element | ArtBase field | Notes |
+| LIDO element | Ars Accordia field | Notes |
 |---|---|---|
 | `lido:titleWrap/lido:titleSet/lido:appellationValue` | `object_id.title` | `xml:lang` from `preferred_name_language` |
 | `lido:inscriptionsWrap/lido:inscriptions/lido:inscriptionDescription` | `object_id.inscriptions` | |
@@ -59,7 +59,7 @@ cultural heritage object data. ArtBase targets LIDO 1.1.
 
 #### lido:eventWrap — creation event
 
-| LIDO element | ArtBase field | Notes |
+| LIDO element | Ars Accordia field | Notes |
 |---|---|---|
 | `lido:event/lido:eventType/lido:term` | fixed: `Production` | |
 | `lido:event/lido:eventActor/lido:actorInRole/lido:actor/lido:actorID` | `authority_links.ulan.uri` | Getty ULAN preferred |
@@ -71,7 +71,7 @@ cultural heritage object data. ArtBase targets LIDO 1.1.
 
 #### lido:objectMeasurementsWrap
 
-| LIDO element | ArtBase field | Notes |
+| LIDO element | Ars Accordia field | Notes |
 |---|---|---|
 | `lido:objectMeasurements/lido:measurementsSet/lido:measurementValue` (height) | `object_id.height_cm` | `lido:measurementUnit="cm"` |
 | `lido:objectMeasurements/lido:measurementsSet/lido:measurementValue` (width) | `object_id.width_cm` | |
@@ -90,14 +90,14 @@ Each `provenance[]` entry maps to a separate `lido:event` of type `Provenance`:
 
 ### lido:administrativeMetadata
 
-| LIDO element | ArtBase field | Notes |
+| LIDO element | Ars Accordia field | Notes |
 |---|---|---|
 | `lido:rightsWorkWrap/lido:rightsWork/lido:creditLine` | `location.collection` + rights statement | |
 | `lido:recordWrap/lido:recordID` | `artbase_canonical_id` | |
 | `lido:recordWrap/lido:recordType/lido:term` | fixed: `item` | |
-| `lido:recordWrap/lido:recordSource/lido:legalBodyName` | fixed: `ArtBase / artbase.eu` | |
+| `lido:recordWrap/lido:recordSource/lido:legalBodyName` | fixed: `Ars Accordia / arsaccordia.com` | |
 | `lido:recordWrap/lido:recordRights/lido:rightsType/lido:term` | `CC BY 4.0` | for published records |
-| `lido:recordWrap/lido:recordInfoSet/lido:recordInfoLink` | `https://artbase.eu/p/{artbase_canonical_id}` | |
+| `lido:recordWrap/lido:recordInfoSet/lido:recordInfoLink` | `https://arsaccordia.com/p/{artbase_canonical_id}` | |
 
 ---
 
@@ -109,16 +109,16 @@ additional constraints:
 
 ### EODEM-specific requirements
 
-| Requirement | EODEM level | ArtBase handling |
+| Requirement | EODEM level | Ars Accordia handling |
 |---|---|---|
-| `lido:lidoRecID` must be a URI | Mandatory | Use `https://artbase.eu/p/{id}` |
+| `lido:lidoRecID` must be a URI | Mandatory | Use `https://arsaccordia.com/p/{id}` |
 | `lido:recordType` must use LIDO terminology | Mandatory | `http://terminology.lido-schema.org/lido00141` |
 | At least one `lido:objectWorkType/lido:conceptID` with AAT URI | Mandatory | `object_id.object_type_aat.uri` |
 | `lido:titleSet` with at least one `appellationValue` | Mandatory | `object_id.title` |
 | `lido:repositorySet` with `workID` | Recommended | `location.inventory_number` |
 | `lido:event` of type Production with at least actor or date | Recommended | maker + date |
 | `lido:objectMeasurements` for at least height and width | Recommended | `height_cm`, `width_cm` |
-| `lido:recordSource` with `legalBodyName` and `legalBodyWeblink` | Mandatory | ArtBase / artbase.eu |
+| `lido:recordSource` with `legalBodyName` and `legalBodyWeblink` | Mandatory | Ars Accordia / arsaccordia.com |
 | `lido:recordRights` | Recommended | CC BY 4.0 |
 
 ### EODEM validation
@@ -133,18 +133,18 @@ Validation requires:
 
 Used for legacy aggregators and as a minimal metadata floor.
 
-| Dublin Core element | ArtBase field |
+| Dublin Core element | Ars Accordia field |
 |---|---|
 | `dc:title` | `object_id.title` |
 | `dc:creator` | `identity.preferred_name` (of maker) |
 | `dc:subject` | `object_id.subject` + ICONCLASS codes as keywords |
 | `dc:description` | `object_id.materials` + dimensions + subject |
-| `dc:publisher` | ArtBase / artbase.eu |
+| `dc:publisher` | Ars Accordia / arsaccordia.com |
 | `dc:contributor` | Cataloguer name (if public) |
 | `dc:date` | `object_id.date_display` |
 | `dc:type` | `object_id.object_type` |
 | `dc:format` | `object_id.materials` |
-| `dc:identifier` | `https://artbase.eu/p/{artbase_canonical_id}` |
+| `dc:identifier` | `https://arsaccordia.com/p/{artbase_canonical_id}` |
 | `dc:source` | `location.collection` + `location.inventory_number` |
 | `dc:rights` | Rights statement per record |
 
@@ -155,12 +155,12 @@ Used for legacy aggregators and as a minimal metadata floor.
 EDM is used for ingestion into Europeana. It extends Dublin Core with linked-data
 constructs.
 
-| EDM class/property | ArtBase mapping |
+| EDM class/property | Ars Accordia mapping |
 |---|---|
 | `edm:ProvidedCHO` | The artwork record as a whole |
-| `edm:isShownAt` | `https://artbase.eu/p/{artbase_canonical_id}` |
+| `edm:isShownAt` | `https://arsaccordia.com/p/{artbase_canonical_id}` |
 | `edm:isShownBy` | Primary image URL (if public) |
-| `edm:provider` | ArtBase |
+| `edm:provider` | Ars Accordia |
 | `edm:dataProvider` | Collection / client name |
 | `edm:rights` | `https://creativecommons.org/licenses/by/4.0/` |
 | `owl:sameAs` | `object_id.wikidata.uri` (if present) |
@@ -170,10 +170,10 @@ constructs.
 
 ## Wikidata
 
-ArtBase cross-references Wikidata but does not write to it without the Wikidata
+Ars Accordia cross-references Wikidata but does not write to it without the Wikidata
 contribution workflow (see `STRUCTURED_WIKIDATA_WORKFLOW.md`).
 
-| Wikidata property | ArtBase field |
+| Wikidata property | Ars Accordia field |
 |---|---|
 | P31 (instance of) | `object_id.object_type_aat` → Wikidata concept mapping |
 | P170 (creator) | `object_id.maker_id` → `authority_links.wikidata.id` |
@@ -183,7 +183,7 @@ contribution workflow (see `STRUCTURED_WIKIDATA_WORKFLOW.md`).
 | P2049 (width) | `object_id.width_cm` (convert to metres) |
 | P276 (location) | `location.collection_qid` |
 | P217 (inventory number) | `location.inventory_number` |
-| P973 (described at URL) | `https://artbase.eu/p/{artbase_canonical_id}` |
+| P973 (described at URL) | `https://arsaccordia.com/p/{artbase_canonical_id}` |
 | P18 (image) | Primary image URL (Wikimedia Commons link if available) |
 
 ---

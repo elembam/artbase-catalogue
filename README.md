@@ -1,8 +1,8 @@
-# ArtBase
+# Ars Accordia
 
-**ArtBase** is a standards-compliant cataloguing service for European art collections — corporate, private, and institutional. It produces **Artwork Passports**: per-artwork documents recording identity, provenance, condition, and authority links at museum standards.
+**Ars Accordia** is a standards-compliant cataloguing service for European art collections — corporate, private, and institutional. It produces **Artwork Passports**: per-artwork documents recording identity, provenance, condition, and authority links at museum standards.
 
-The deliverable is human-readable (HTML), machine-readable (LIDO 1.1 / EODEM XML), and permanently identified. Long term, ArtBase becomes a public registry for art in private and corporate collections not yet on Europeana or in museum catalogues.
+The deliverable is human-readable (HTML), machine-readable (LIDO 1.1 / EODEM XML), and permanently identified. Long term, Ars Accordia becomes a public registry for art in private and corporate collections not yet on Europeana or in museum catalogues.
 
 The stack is intentionally simple: **Airtable** (working layer) → **Python CLI** (`artbase-export`) → **canonical JSON in Git** → **static HTML/XML passports**. No database server. No Docker. No PHP.
 
@@ -19,7 +19,7 @@ artbase/
 ├── docs/                    Operations library and standards documentation
 ├── scripts/                 Utility scripts (Wikidata lookup, image embedding)
 ├── demo/                    Demo passports (Mona Lisa example set)
-├── wikidata/                ArtBase Wikidata EntitySchema
+├── wikidata/                Ars Accordia Wikidata EntitySchema
 ├── passports/               Generated HTML/XML output (not committed)
 └── CLAUDE.md                Instructions for AI-assisted development
 ```
@@ -72,7 +72,7 @@ See [`artbase_export/GETTING_STARTED.md`](artbase_export/GETTING_STARTED.md) for
 |---|---|
 | `docs/data_model.md` | Entity types, field glossary, relationship types, quality scoring |
 | `docs/standards_mapping.md` | Field → Object ID / LIDO 1.1 / EODEM / Dublin Core mapping |
-| `docs/ARTBASE_ARCHITECTURE.md` | Technical commitments: domain, URLs, identifiers |
+| `docs/ARS ACCORDIA_ARCHITECTURE.md` | Technical commitments: domain, URLs, identifiers |
 | `docs/EXPORT_ARCHITECTURE.md` | Export pipeline architecture |
 | `docs/LIDO_PIPELINE_ARCHITECTURE.md` | LIDO/EODEM pipeline design |
 | `docs/HOUSE_STYLE_MANUAL.md` | Cataloguing house style |
@@ -98,4 +98,4 @@ See [`artbase_export/GETTING_STARTED.md`](artbase_export/GETTING_STARTED.md) for
 
 ## Canonical domain
 
-`artbase.eu` — all passport URLs, API endpoints, and OAI-PMH feed use this domain.
+`arsaccordia.com` — all passport URLs, API endpoints, and OAI-PMH feed use this domain.

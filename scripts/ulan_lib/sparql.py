@@ -15,7 +15,7 @@ import urllib.request
 from typing import Optional
 
 SPARQL_ENDPOINT = "https://vocab.getty.edu/sparql"
-USER_AGENT = "ArtBase/1.0 (https://github.com/elembam/artbase-catalogue)"
+USER_AGENT = "Ars Accordia/1.0 (https://github.com/elembam/artbase-catalogue)"
 RATE_SLEEP = 1.05  # seconds between requests
 
 

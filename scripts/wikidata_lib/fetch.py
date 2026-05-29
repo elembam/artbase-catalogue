@@ -18,7 +18,7 @@ import urllib.request
 from typing import Optional
 
 WIKIDATA_API = "https://www.wikidata.org/w/api.php"
-USER_AGENT   = "ArtBase/1.0 (https://github.com/elembam/artbase-catalogue)"
+USER_AGENT   = "Ars Accordia/1.0 (https://github.com/elembam/artbase-catalogue)"
 BATCH_SIZE   = 50
 RATE_SLEEP   = 1.05  # seconds between calls — stay under 1 req/s
 

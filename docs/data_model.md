@@ -1,4 +1,4 @@
-# ArtBase — Data Model
+# Ars Accordia — Data Model
 
 *Version 0.1 — covers the Airtable working layer and canonical JSON format.*
 
@@ -6,7 +6,7 @@
 
 ## Overview
 
-ArtBase models art collections as a network of linked entities. The core entities are:
+Ars Accordia models art collections as a network of linked entities. The core entities are:
 
 | Entity | Canonical ID prefix | Airtable table |
 |---|---|---|
@@ -19,7 +19,7 @@ ArtBase models art collections as a network of linked entities. The core entitie
 
 During the Airtable working-layer phase, IDs use the human-readable format:
 `ART-HERBERTS-SILINS-1926`, `AP-2026-000001`. Before any public deployment, these
-migrate to the hash-based canonical scheme (see `ARTBASE_ARCHITECTURE.md §3`).
+migrate to the hash-based canonical scheme (see `ARS ACCORDIA_ARCHITECTURE.md §3`).
 
 ---
 

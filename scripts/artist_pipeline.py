@@ -4,7 +4,7 @@ artist_pipeline.py — Reconcile an artist name against Wikidata, audit the
 existing entry, and produce a QuickStatements file of proposed improvements
 drawn from Wikipedia infobox data.
 
-This is the operational tool referenced in the ArtBase Wikidata workflow.
+This is the operational tool referenced in the Ars Accordia Wikidata workflow.
 Run it once per artist during cataloguing; review its output; submit the
 QuickStatements via the web interface.
 
@@ -41,7 +41,7 @@ except ImportError:
 WIKIDATA_API = "https://www.wikidata.org/w/api.php"
 WIKIDATA_SPARQL = "https://query.wikidata.org/sparql"
 WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php"
-USER_AGENT = "ArtBaseCataloguer/0.1 (artbase.eu; contact@artbase.eu)"
+USER_AGENT = "ArsAccordiaCataloguer/0.1 (arsaccordia.com; contact@arsaccordia.com)"
 
 # Language-code → Wikipedia API base URL (checked in order when no enwiki sitelink)
 FALLBACK_WIKIS = [
@@ -427,7 +427,7 @@ def write_quickstatements(qid: str, proposals: list[ProposedEdit],
 
 REPO_ROOT   = Path(__file__).resolve().parent.parent
 DATA_DIR    = REPO_ROOT / "artbase_export" / "data"
-ARTBASE_URL = "https://artbase.eu/artists"  # placeholder source URL
+ARS ACCORDIA_URL = "https://arsaccordia.com/artists"  # placeholder source URL
 
 
 def load_canonical_artist(artist_id: str) -> dict:
@@ -454,7 +454,7 @@ def canonical_to_authority_proposals(
     links = canonical.get("authority_links", {})
     name  = canonical.get("identity", {}).get("preferred_name", "")
     source_url = (
-        f"{ARTBASE_URL}/{canonical.get('artbase_id', 'unknown')}"
+        f"{ARS ACCORDIA_URL}/{canonical.get('artbase_id', 'unknown')}"
     )
 
     # Mapping: canonical key → (Wikidata PID, human label)
@@ -484,7 +484,7 @@ def canonical_to_authority_proposals(
             value=authority_id,
             value_type="string",
             source_url=source_url,
-            rationale=f"ArtBase canonical record for {name} — status: {status}",
+            rationale=f"Ars Accordia canonical record for {name} — status: {status}",
         ))
 
     return proposals

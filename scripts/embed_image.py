@@ -55,7 +55,7 @@ HTML_FILES = [
 # Wikimedia requires a proper User-Agent for hotlinking-style requests.
 HEADERS = {
     "User-Agent": (
-        "ArtBaseCatalogueTool/0.1 "
+        "ArsAccordiaCatalogueTool/0.1 "
         "(https://example.com; contact@example.com) "
         "python-requests"
     )
@@ -119,7 +119,7 @@ def patch_html_file(path: Path, data_uri: str) -> int:
 
 
 def main() -> int:
-    print("ArtBase — Image embedding tool")
+    print("Ars Accordia — Image embedding tool")
     print("=" * 50)
 
     try:

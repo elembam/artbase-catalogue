@@ -1,4 +1,4 @@
-# ArtBase Export Pipeline — Architecture
+# Ars Accordia Export Pipeline — Architecture
 
 *How Airtable rows become canonical JSON files that drive passports, LIDO exports, and the public registry.*
 
@@ -31,7 +31,7 @@ The export pipeline is the bridge. It runs on demand (or on schedule) and conver
               │  2. Join                │  link authorities + sources into artist
               │  3. Transform           │  Airtable schema → canonical model
               │  4. Validate            │  check required fields, flag conflicts
-              │  5. Assign IDs          │  generate ArtBase IDs if not yet present
+              │  5. Assign IDs          │  generate Ars Accordia IDs if not yet present
               │  6. Write               │  one JSON file per entity
               │  7. Commit              │  git commit with meaningful message
               │  8. Report              │  what changed, what needs review
@@ -52,7 +52,7 @@ The export pipeline is the bridge. It runs on demand (or on schedule) and conver
    (HTML passports)               (EODEM XML)
               │                         │
               ▼                         ▼
-   artbase.eu/p/AB7F3KQ2X1      artbase.eu/api/p/AB7F3KQ2X1/eodem
+   arsaccordia.com/p/AB7F3KQ2X1      arsaccordia.com/api/p/AB7F3KQ2X1/eodem
 ```
 
 ---
@@ -103,7 +103,7 @@ artbase-export/
 │       │   └── schema.py        — Airtable table names + field IDs
 │       ├── canonical/
 │       │   ├── models.py        — Pydantic v2 models for canonical JSON
-│       │   └── ids.py           — ArtBase ID generation
+│       │   └── ids.py           — Ars Accordia ID generation
 │       ├── transform/
 │       │   ├── artist.py        — Airtable record → CanonicalArtist
 │       │   └── artwork.py       — Airtable record → CanonicalArtwork
@@ -139,7 +139,7 @@ The `data/` directory lives in a Git repository. Every export run that produces 
 
 ```
 commit 7f3a2b1
-Author: ArtBase Export <export@artbase.eu>
+Author: Ars Accordia Export <export@arsaccordia.com>
 Date:   2026-05-27T12:00:00Z
 
 Export 2026-05-27T12:00:00Z
