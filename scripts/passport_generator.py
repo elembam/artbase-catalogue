@@ -43,6 +43,8 @@ TEMPLATE    = REPO_ROOT / "templates" / "passport.html.j2"
 DEFAULT_DATA = REPO_ROOT / "artbase_export" / "data"
 PASSPORTS_DIR = REPO_ROOT / "passports"
 
+CATALOGUE_BASE_URL = "https://arsaccordia.com"
+
 
 # ── Roman numerals helper (for the seal year) ──────────────────────────────────
 
@@ -170,7 +172,137 @@ def build_context(artwork: dict, artist: Optional[dict],
         "image_src":         image_src,
         "issued_date":       issued_date,
         "issued_year_roman": issued_year_roman,
+        "jsonld":            build_jsonld(artwork, artist),
     }
+
+
+# ── Schema.org JSON-LD builder ────────────────────────────────────────────────
+
+def build_jsonld(artwork: dict, artist: Optional[dict]) -> dict:
+    """
+    Build a Schema.org VisualArtwork JSON-LD dict for embedding in <head>.
+
+    Uses only data already present in the canonical JSON — no external calls.
+    All sameAs links point to external authority records, never back to ourselves.
+    """
+    oid = artwork.get("object_id", {})
+    auth = artwork.get("authority_links", {})
+    artbase_id = artwork.get("artbase_id", "")
+
+    jsonld: dict[str, Any] = {
+        "@context": "https://schema.org",
+        "@type": "VisualArtwork",
+        "name": oid.get("title") or artbase_id,
+        "url": f"{CATALOGUE_BASE_URL}/{artbase_id}.html",
+        "identifier": artbase_id,
+        "description": oid.get("subject") or "",
+    }
+
+    # Date created
+    date_earliest = oid.get("date_earliest")
+    date_latest = oid.get("date_latest")
+    if date_earliest:
+        jsonld["dateCreated"] = (
+            f"{date_earliest}/{date_latest}" if date_latest and date_latest != date_earliest
+            else str(date_earliest)
+        )
+
+    # Medium / material
+    if oid.get("materials"):
+        jsonld["artMedium"] = oid["materials"]
+
+    # Dimensions
+    if oid.get("dimensions_display"):
+        jsonld["size"] = oid["dimensions_display"]
+
+    # Object type → artform
+    if oid.get("object_type"):
+        jsonld["artform"] = oid["object_type"].capitalize()
+
+    # Artwork sameAs — Wikidata QID only (external authority)
+    artwork_wikidata = auth.get("wikidata", {})
+    if isinstance(artwork_wikidata, dict) and artwork_wikidata.get("uri"):
+        jsonld["sameAs"] = artwork_wikidata["uri"]
+
+    # Creator
+    if artist:
+        a_identity = artist.get("identity", {})
+        a_life = artist.get("life", {})
+        a_auth = artist.get("authority_links", {})
+
+        creator: dict[str, Any] = {
+            "@type": "Person",
+            "name": a_identity.get("preferred_name", ""),
+        }
+
+        # sameAs: collect all confirmed/candidate external authority URIs
+        same_as = []
+
+        wikidata = a_auth.get("wikidata", {})
+        if isinstance(wikidata, dict) and wikidata.get("id") and wikidata.get("status") in ("confirmed", "candidate_verify"):
+            same_as.append(f"https://www.wikidata.org/wiki/{wikidata['id']}")
+
+        viaf = a_auth.get("viaf", {})
+        if isinstance(viaf, dict) and viaf.get("id") and viaf.get("status") in ("confirmed", "candidate_verify"):
+            same_as.append(f"https://viaf.org/viaf/{viaf['id']}")
+
+        ulan = a_auth.get("ulan", {})
+        if isinstance(ulan, dict) and ulan.get("id") and ulan.get("status") in ("confirmed", "candidate_verify"):
+            same_as.append(f"https://www.getty.edu/vow/ULANFullDisplay?find=&role=&nation=&subjectid={ulan['id']}")
+
+        isni = a_auth.get("isni", {})
+        if isinstance(isni, dict) and isni.get("id") and isni.get("status") in ("confirmed", "candidate_verify"):
+            same_as.append(f"https://isni.org/isni/{isni['id']}")
+
+        gnd = a_auth.get("gnd", {})
+        if isinstance(gnd, dict) and gnd.get("id") and gnd.get("status") in ("confirmed", "candidate_verify"):
+            same_as.append(f"https://d-nb.info/gnd/{gnd['id']}")
+
+        bnf = a_auth.get("bnf", {})
+        if isinstance(bnf, dict) and bnf.get("id") and bnf.get("status") in ("confirmed", "candidate_verify"):
+            same_as.append(f"https://data.bnf.fr/ark:/12148/cb{bnf['id']}")
+
+        lc = a_auth.get("lc_naco", {})
+        if isinstance(lc, dict) and lc.get("id") and lc.get("status") in ("confirmed", "candidate_verify"):
+            same_as.append(f"https://id.loc.gov/authorities/names/{lc['id']}.html")
+
+        if same_as:
+            creator["sameAs"] = same_as
+
+        # Birth/death dates
+        birth = a_life.get("birth_date", {})
+        if isinstance(birth, dict) and birth.get("value"):
+            creator["birthDate"] = birth["value"]
+        death = a_life.get("death_date", {})
+        if isinstance(death, dict) and death.get("value"):
+            creator["deathDate"] = death["value"]
+
+        # Nationality
+        descriptors = artist.get("descriptors", {})
+        if descriptors.get("nationality"):
+            creator["nationality"] = descriptors["nationality"]
+
+        jsonld["creator"] = creator
+
+    # Location / collection
+    location = artwork.get("location", {})
+    if location.get("collection"):
+        holder: dict[str, Any] = {"@type": "Organization", "name": location["collection"]}
+        if location.get("collection_qid"):
+            holder["sameAs"] = f"https://www.wikidata.org/wiki/{location['collection_qid']}"
+        jsonld["locationCreated"] = holder  # repurposed as current holder context
+
+    # Iconographic subjects → about
+    iconography = artwork.get("iconography", {})
+    iconclass_labels = iconography.get("iconclass_labels", [])
+    if iconclass_labels:
+        jsonld["about"] = [
+            {"@type": "Thing", "name": item["label"], "url": item["uri"]}
+            for item in iconclass_labels
+            if isinstance(item, dict) and item.get("label") and item.get("uri")
+        ]
+
+    return jsonld
 
 
 # ── Main ───────────────────────────────────────────────────────────────────────
