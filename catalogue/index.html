@@ -413,10 +413,16 @@
   }
 
   @media (max-width: 600px) {
+    body { padding: 20px 16px 60px; }
+    .site-nav { flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .nav-links { gap: 14px; flex-wrap: wrap; }
+    .nav-link { font-size: 0.8rem; }
+    .page-title { font-size: 1.5rem; }
     .artist-header { grid-template-columns: auto 1fr; }
-    .artist-links { grid-column: 2; justify-self: end; }
+    .artist-links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-start; }
     .artworks-grid { grid-template-columns: 1fr; }
     .site-stats { gap: 16px; }
+    .country-section { padding: 14px 16px; }
   }
 </style>
 </head>
