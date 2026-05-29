@@ -35,7 +35,26 @@
       "25H11",
       "31D15"
     ],
-    "iconclass_labels": [],
+    "iconclass_labels": [
+      {
+        "code": "61BB2(Lisa del Giocondo)11",
+        "label": "historical woman (Lisa del Giocondo) portrayed alone",
+        "uri": "https://iconclass.org/61BB2(Lisa%20del%20Giocondo)11",
+        "source": "wikidata:Q12418/P1257"
+      },
+      {
+        "code": "25H11",
+        "label": "mountains",
+        "uri": "https://iconclass.org/25H11",
+        "source": "wikidata:Q12418/P1257"
+      },
+      {
+        "code": "31D15",
+        "label": "adult woman",
+        "uri": "https://iconclass.org/31D15",
+        "source": "wikidata:Q12418/P1257"
+      }
+    ],
     "depicts": []
   },
   "location": {
