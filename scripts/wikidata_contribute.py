@@ -22,12 +22,16 @@ from typing import Optional
 # Phase gate — change this constant to enable higher phases
 CURRENT_PHASE = 1
 
+# Base URL for Ars Accordia artist pages
+ARSACCORDIA_BASE = "https://arsaccordia.com/artists"
+
 # Phase 1: External identifiers (safest)
 PHASE_1_PROPERTIES = {
     "P7400": "lndb",      # LNDB ID
     "P245": "ulan",       # Getty ULAN ID
     "P214": "viaf",       # VIAF ID
     "P373": "commons",    # Commons category
+    "P973": "arsaccordia_page",  # described at URL — Ars Accordia artist page
 }
 
 # Phase 2: Factual biographical data
@@ -148,7 +152,8 @@ class ContributionBatch:
                 f.write(f"- **Adding** {item['property']} = {item['value']}\n")
                 f.write(f"- **Source:** {item['source_url']}\n")
                 f.write(f"- **Arsaccordia confidence:** {item['confidence']}\n")
-                f.write(f"- **Risk:** low — external identifier\n\n")
+                risk = "low — described at URL, no identity claim" if item["property"] == "P973" else "low — external identifier"
+                f.write(f"- **Risk:** {risk}\n\n")
             
             if self.skipped:
                 f.write("\n## Skipped (with reasons)\n\n")
@@ -255,6 +260,29 @@ def get_ulan_id(artist: dict) -> Optional[tuple[str, dict]]:
     return f'"{ulan_id}"', ref
 
 
+def get_artist_page_url(artist: dict) -> Optional[tuple[str, dict]]:
+    """
+    Build P973 (described at URL) statement pointing to the Ars Accordia artist page.
+
+    Only generated when the artist page has been published (i.e. the artist
+    has an artbase_id and a confirmed Wikidata QID — both required before
+    any page is generated or linked to from a Wikidata item).
+    """
+    artbase_id = artist.get("artbase_id")
+    if not artbase_id:
+        return None
+
+    page_url = f"{ARSACCORDIA_BASE}/{artbase_id}.html"
+
+    retrieved = datetime.now(timezone.utc).strftime("+%Y-%m-%dT00:00:00Z/11")
+    ref = {
+        "reference_url": page_url,
+        "retrieved": retrieved,
+    }
+
+    return f'"{page_url}"', ref
+
+
 def fetch_wikidata_current_state(qid: str) -> dict:
     """
     Fetch current Wikidata entity to check existing claims.
@@ -321,6 +349,17 @@ def process_artist(artist: dict, args: argparse.Namespace, batch: ContributionBa
                 if ulan_data:
                     value, refs = ulan_data
                     batch.add_statement(wikidata_qid, "P245", value, refs, {
+                        "name": artist.get("identity", {}).get("preferred_name", "")
+                    })
+                    statements_added += 1
+
+        # P973 — described at URL (Ars Accordia artist page)
+        if not args.property or args.property == "P973":
+            if not has_existing_claim(entity, "P973"):
+                page_data = get_artist_page_url(artist)
+                if page_data:
+                    value, refs = page_data
+                    batch.add_statement(wikidata_qid, "P973", value, refs, {
                         "name": artist.get("identity", {}).get("preferred_name", "")
                     })
                     statements_added += 1
