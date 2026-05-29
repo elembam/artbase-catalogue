@@ -1,4 +1,3 @@
-import os
 #!/usr/bin/env python3
 """
 wikidata_enrich.py — Deep Wikidata enrichment for Ars Accordia artist records.
@@ -25,6 +24,7 @@ from __future__ import annotations
 import argparse
 import copy
 import json
+import os
 import sys
 import time
 from datetime import datetime, timezone
@@ -131,6 +131,21 @@ def extract_enrichment(entity: dict, labels_map: dict[str, str]) -> dict:
     enriched["movement"]  = tier2("P135")
     enriched["genre"]     = tier2("P136")
 
+    # Tier 2 — notable works (P800) stored as references, not copied content
+    notable_qids = wdparse.get_all_entity_ids(entity, "P800")
+    if notable_qids:
+        enriched["notable_works"] = [
+            {"label": labels_map.get(q, q), "wikidata_id": q, "source": "wikidata_auto"}
+            for q in notable_qids[:10]  # cap at 10
+        ]
+
+    # Tier 1 — Wikipedia biography summary (English, then Latvian fallback)
+    summary = wdfetch.fetch_wikipedia_summary(entity, "en")
+    if not summary:
+        summary = wdfetch.fetch_wikipedia_summary(entity, "lv")
+    if summary:
+        enriched["biography_summary"] = summary
+
     return enriched
 
 
@@ -191,6 +206,8 @@ def apply_enrichment_to_json(
         "education":            updated.get("education"),
         "movement":             updated.get("movement"),
         "genre":                updated.get("genre"),
+        "notable_works":        updated.get("notable_works"),
+        "biography_summary":    _nested_get(updated, ["descriptors", "biography_summary"]) or updated.get("biography_summary"),
     }
 
     changes = compute_diff(current_flat, enriched, manual_overrides, force)
@@ -240,6 +257,9 @@ def apply_enrichment_to_json(
                 updated["authorities"]["lndb"] = val
             else:
                 updated["lndb_id"] = val
+
+        elif field == "biography_summary":
+            updated.setdefault("descriptors", {})["biography_summary"] = val
 
         else:
             updated[field] = val
