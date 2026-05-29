@@ -196,6 +196,7 @@ def build_jsonld(artwork: dict, artist: Optional[dict]) -> dict:
     jsonld: dict[str, Any] = {
         "@context": "https://schema.org",
         "@type": "VisualArtwork",
+        "@id": f"{CATALOGUE_BASE_URL}/{artbase_id}",
         "name": oid.get("title") or artbase_id,
         "url": f"{CATALOGUE_BASE_URL}/{artbase_id}.html",
         "identifier": artbase_id,

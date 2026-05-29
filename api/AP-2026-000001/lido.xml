@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lido:lido xmlns:lido="http://www.lido-schema.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.lido-schema.org http://www.lido-schema.org/schema/export/lido-v1.1.xsd">
+  <lido:lidoRecID lido:type="URI" lido:source="ArsAccordia">https://arsaccordia.com/AP-2026-000001</lido:lidoRecID>
+  <lido:category>
+    <lido:conceptID lido:type="URI" lido:source="LIDO Terminology">http://terminology.lido-schema.org/lido00223</lido:conceptID>
+    <lido:term>Man-Made Object</lido:term>
+  </lido:category>
+  <lido:descriptiveMetadata lido:lang="en">
+    <lido:objectClassificationWrap>
+      <lido:objectWorkTypeWrap>
+        <lido:objectWorkType>
+          <lido:conceptID lido:type="URI" lido:source="AAT">http://vocab.getty.edu/aat/300033618</lido:conceptID>
+          <lido:term>Painting</lido:term>
+        </lido:objectWorkType>
+      </lido:objectWorkTypeWrap>
+    </lido:objectClassificationWrap>
+    <lido:objectIdentificationWrap>
+      <lido:titleWrap>
+        <lido:titleSet>
+          <lido:appellationValue lido:lang="en">Mona Lisa</lido:appellationValue>
+        </lido:titleSet>
+      </lido:titleWrap>
+      <lido:repositoryWrap>
+        <lido:repositorySet lido:type="current location">
+          <lido:repositoryName>
+            <lido:legalBodyName>
+              <lido:appellationValue>Musée du Louvre</lido:appellationValue>
+            </lido:legalBodyName>
+          </lido:repositoryName>
+          <lido:workID lido:type="inventory number">INV. 779</lido:workID>
+          <lido:repositoryLocation/>
+        </lido:repositorySet>
+      </lido:repositoryWrap>
+      <lido:objectDescriptionWrap>
+        <lido:objectDescriptionSet>
+          <lido:descriptiveNoteValue lido:lang="en">Half-length portrait of a seated woman with a mountainous landscape background</lido:descriptiveNoteValue>
+        </lido:objectDescriptionSet>
+      </lido:objectDescriptionWrap>
+      <lido:inscriptionsWrap>
+        <lido:inscriptions>
+          <lido:inscriptionDescription/>
+        </lido:inscriptions>
+      </lido:inscriptionsWrap>
+      <lido:objectMeasurementsWrap>
+        <lido:objectMeasurementsSet>
+          <lido:displayObjectMeasurements>77 × 53 cm</lido:displayObjectMeasurements>
+          <lido:objectMeasurements>
+            <lido:measurementsSet>
+              <lido:measurementValue lido:type="height" lido:unit="cm">77.0</lido:measurementValue>
+              <lido:measurementValue lido:type="width" lido:unit="cm">53.0</lido:measurementValue>
+            </lido:measurementsSet>
+          </lido:objectMeasurements>
+        </lido:objectMeasurementsSet>
+      </lido:objectMeasurementsWrap>
+    </lido:objectIdentificationWrap>
+    <lido:eventWrap>
+      <lido:eventSet>
+        <lido:event>
+          <lido:eventType>
+            <lido:conceptID lido:type="URI" lido:source="AAT">http://vocab.getty.edu/aat/300054686</lido:conceptID>
+            <lido:term>creation</lido:term>
+          </lido:eventType>
+          <lido:eventActor>
+            <lido:actorInRole>
+              <lido:actor>
+                <lido:actorID lido:type="URI" lido:source="ULAN">http://vocab.getty.edu/ulan/500010879</lido:actorID>
+                <lido:actorID lido:type="URI" lido:source="Wikidata">https://www.wikidata.org/wiki/Q762</lido:actorID>
+                <lido:actorID lido:type="URI" lido:source="VIAF">https://viaf.org/viaf/24604287</lido:actorID>
+                <lido:nameActorSet>
+                  <lido:appellationValue lido:lang="en">Leonardo da Vinci</lido:appellationValue>
+                </lido:nameActorSet>
+                <lido:actorID lido:type="URI" lido:source="ArsAccordia">https://arsaccordia.com/artists/ART-LEONARDO-1452</lido:actorID>
+              </lido:actor>
+              <lido:roleActor>
+                <lido:term>artist</lido:term>
+              </lido:roleActor>
+            </lido:actorInRole>
+          </lido:eventActor>
+          <lido:eventDate>
+            <lido:displayDate>c. 1503–1519</lido:displayDate>
+            <lido:date>
+              <lido:earliestDate>1503</lido:earliestDate>
+              <lido:latestDate>1519</lido:latestDate>
+            </lido:date>
+          </lido:eventDate>
+        </lido:event>
+      </lido:eventSet>
+    </lido:eventWrap>
+    <lido:objectRelationWrap>
+      <lido:subjectWrap>
+        <lido:subjectSet>
+          <lido:subject lido:type="iconography">
+            <lido:subjectConcept>
+              <lido:conceptID lido:type="URI" lido:source="ICONCLASS">https://iconclass.org/61BB2(Lisa%20del%20Giocondo)11</lido:conceptID>
+              <lido:term lido:lang="en">historical woman (Lisa del Giocondo) portrayed alone</lido:term>
+            </lido:subjectConcept>
+          </lido:subject>
+        </lido:subjectSet>
+        <lido:subjectSet>
+          <lido:subject lido:type="iconography">
+            <lido:subjectConcept>
+              <lido:conceptID lido:type="URI" lido:source="ICONCLASS">https://iconclass.org/25H11</lido:conceptID>
+              <lido:term lido:lang="en">mountains</lido:term>
+            </lido:subjectConcept>
+          </lido:subject>
+        </lido:subjectSet>
+        <lido:subjectSet>
+          <lido:subject lido:type="iconography">
+            <lido:subjectConcept>
+              <lido:conceptID lido:type="URI" lido:source="ICONCLASS">https://iconclass.org/31D15</lido:conceptID>
+              <lido:term lido:lang="en">adult woman</lido:term>
+            </lido:subjectConcept>
+          </lido:subject>
+        </lido:subjectSet>
+      </lido:subjectWrap>
+    </lido:objectRelationWrap>
+  </lido:descriptiveMetadata>
+  <lido:administrativeMetadata lido:lang="en">
+    <lido:rightsWorkWrap>
+      <lido:rightsWorkSet>
+        <lido:rightsType>
+          <lido:conceptID lido:type="URI" lido:source="Creative Commons">http://creativecommons.org/publicdomain/zero/1.0/</lido:conceptID>
+          <lido:term>Public Domain</lido:term>
+        </lido:rightsType>
+      </lido:rightsWorkSet>
+    </lido:rightsWorkWrap>
+    <lido:recordWrap>
+      <lido:recordID lido:type="local">AP-2026-000001</lido:recordID>
+      <lido:recordID lido:type="global" lido:source="ArsAccordia">ABCSZKEFA6</lido:recordID>
+      <lido:recordType>
+        <lido:term>item</lido:term>
+      </lido:recordType>
+      <lido:recordSource>
+        <lido:legalBodyName>
+          <lido:appellationValue>Ars Accordia</lido:appellationValue>
+        </lido:legalBodyName>
+        <lido:legalBodyWeblink>https://arsaccordia.com</lido:legalBodyWeblink>
+      </lido:recordSource>
+      <lido:recordInfoLink>https://arsaccordia.com/AP-2026-000001.html</lido:recordInfoLink>
+      <lido:recordMetadataDate>2026-05-29</lido:recordMetadataDate>
+    </lido:recordWrap>
+  </lido:administrativeMetadata>
+</lido:lido>

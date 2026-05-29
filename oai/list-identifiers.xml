@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-05-29T18:18:22Z</responseDate>
+  <request verb="ListIdentifiers">https://arsaccordia.com/oai</request>
+  <ListIdentifiers>
+    <header>
+      <identifier>https://arsaccordia.com/AP-2026-000001</identifier>
+      <datestamp>2026-05-29</datestamp>
+      <setSpec>artworks</setSpec>
+    </header>
+    <header>
+      <identifier>https://arsaccordia.com/AP-2026-000002</identifier>
+      <datestamp>2026-05-29</datestamp>
+      <setSpec>artworks</setSpec>
+    </header>
+  </ListIdentifiers>
+</OAI-PMH>

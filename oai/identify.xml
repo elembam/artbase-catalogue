@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-05-29T18:18:22Z</responseDate>
+  <request verb="Identify">https://arsaccordia.com/oai</request>
+  <Identify>
+    <repositoryName>Ars Accordia Catalogue</repositoryName>
+    <baseURL>https://arsaccordia.com/oai</baseURL>
+    <protocolVersion>2.0</protocolVersion>
+    <adminEmail>catalogue@arsaccordia.com</adminEmail>
+    <earliestDatestamp>2026-05-29</earliestDatestamp>
+    <deletedRecord>no</deletedRecord>
+    <granularity>YYYY-MM-DD</granularity>
+  </Identify>
+</OAI-PMH>

@@ -1,0 +1,6 @@
+
+# OAI-PMH verb routing
+/oai?verb=Identify         /oai/identify.xml         200
+/oai?verb=ListIdentifiers  /oai/list-identifiers.xml 200
+/oai?verb=ListRecords      /oai/list-records.xml     200
+/oai                       /oai/list-records.xml     200

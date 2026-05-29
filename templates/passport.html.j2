@@ -637,6 +637,7 @@
   <!-- META BAR -->
   <dl class="meta-bar">
     <div><dt>Passport ID</dt><dd>{{ artwork.artbase_id }}</dd></div>
+    {% if artwork.artbase_canonical_id %}<div><dt>Canonical ID</dt><dd style="font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;">{{ artwork.artbase_canonical_id }}</dd></div>{% endif %}
     <div><dt>Issued</dt><dd>{{ issued_date }}</dd></div>
     <div><dt>Version</dt><dd>{{ artwork.version }}.0</dd></div>
     <div><dt>Visibility</dt><dd>{{ artwork.visibility | title_visibility }}</dd></div>
