@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.484496Z",
+  "exported": "2026-05-29T14:06:15.719241Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Helēna Heinrihsone",
@@ -15,8 +15,8 @@
   },
   "life": {
     "birth_date": {
-      "value": "1948-11-21",
-      "precision": "day",
+      "value": "1948",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
@@ -29,9 +29,9 @@
       "notes": null
     },
     "birth_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
@@ -131,24 +131,5 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian painter (1948-)",
-  "description_lv": "Latviešu gleznotāja (1948-)",
-  "education": [
-    {
-      "label": "Jānis Rozentāls Art High School",
-      "wikidata_id": "Q26258704",
-      "source": "wikidata_auto"
-    },
-    {
-      "label": "Art Academy of Latvia",
-      "wikidata_id": "Q2607021",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2473882420,
-    "manual_overrides": []
-  }
+  "_schema": "artbase:artist:v1"
 }

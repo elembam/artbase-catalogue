@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.453165Z",
+  "exported": "2026-05-29T14:06:15.692313Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Kārlis Padegs",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1911-10-08",
-      "precision": "day",
+      "value": "1911",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1940-04-19",
-      "precision": "day",
+      "value": "1940",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -129,41 +129,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "image": {
-    "commons_filename": "K. Padegs.jpg",
-    "commons_url": "https://commons.wikimedia.org/wiki/File:K._Padegs.jpg",
-    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/K._Padegs.jpg?width=400"
-  },
-  "description_en": "Latvian artist (1911-1940)",
-  "education": [
-    {
-      "label": "Art Academy of Latvia",
-      "wikidata_id": "Q2607021",
-      "source": "wikidata_auto"
-    }
-  ],
-  "movement": [
-    {
-      "label": "Expressionism",
-      "wikidata_id": "Q80113",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2320484559,
-    "manual_overrides": [],
-    "ulan_last_enriched": "2026-05-27T18:20:44Z"
-  },
-  "enrichment": {
-    "ulan": {
-      "nationalities": [
-        "Latvian (culture or style)"
-      ],
-      "alternate_names": [
-        "Kārlis Padegs"
-      ]
-    }
-  }
+  "_schema": "artbase:artist:v1"
 }

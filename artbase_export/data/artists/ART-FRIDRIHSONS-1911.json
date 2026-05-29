@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.457123Z",
+  "exported": "2026-05-29T14:06:15.697672Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Kurts Fridrihsons",
@@ -22,22 +22,22 @@
       "notes": null
     },
     "death_date": {
-      "value": "1991-01-31",
-      "precision": "day",
+      "value": "1991",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -129,29 +129,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian artist (1911-1991)",
-  "movement": [
-    {
-      "label": "abstract art",
-      "wikidata_id": "Q128115",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2442773788,
-    "manual_overrides": [],
-    "ulan_last_enriched": "2026-05-27T18:20:44Z"
-  },
-  "enrichment": {
-    "ulan": {
-      "nationalities": [
-        "Latvian (culture or style)"
-      ],
-      "alternate_names": [
-        "Kurts Fridrihsons"
-      ]
-    }
-  }
+  "_schema": "artbase:artist:v1"
 }

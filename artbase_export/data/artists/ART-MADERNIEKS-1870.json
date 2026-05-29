@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.457676Z",
+  "exported": "2026-05-29T14:06:15.699233Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Jūlijs Madernieks",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1870-02-27",
-      "precision": "day",
+      "value": "1870",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1955-07-19",
-      "precision": "day",
+      "value": "1955",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Vecgulbene Parish",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q16355479",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -129,41 +129,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian painter (1870-1955)",
-  "education": [
-    {
-      "label": "Saint Petersburg Stieglitz State Academy of Art and Design",
-      "wikidata_id": "Q2652597",
-      "source": "wikidata_auto"
-    },
-    {
-      "label": "Beaux-Arts de Paris",
-      "wikidata_id": "Q273593",
-      "source": "wikidata_auto"
-    },
-    {
-      "label": "Académie Colarossi",
-      "wikidata_id": "Q337454",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2493164369,
-    "manual_overrides": [],
-    "ulan_last_enriched": "2026-05-27T18:20:44Z"
-  },
-  "enrichment": {
-    "ulan": {
-      "nationalities": [
-        "Latvian (culture or style)"
-      ],
-      "alternate_names": [
-        "Julijs Maderniek",
-        "Jūlijs Madernieks",
-        "Maderniek, Julijs"
-      ]
-    }
-  }
+  "_schema": "artbase:artist:v1"
 }

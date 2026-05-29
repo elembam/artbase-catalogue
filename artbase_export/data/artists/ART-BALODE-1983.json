@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.465013Z",
+  "exported": "2026-05-29T14:06:15.703213Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Zane Balode",
@@ -29,9 +29,9 @@
       "notes": null
     },
     "birth_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
@@ -131,11 +131,5 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "(1983) painter. Born in Riga, Latvia",
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2492475343,
-    "manual_overrides": []
-  }
+  "_schema": "artbase:artist:v1"
 }

@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.481527Z",
+  "exported": "2026-05-29T14:06:15.716578Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Vija Maldupe",
@@ -22,8 +22,8 @@
       "notes": null
     },
     "death_date": {
-      "value": "1996-03-14",
-      "precision": "day",
+      "value": "1996",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
@@ -131,11 +131,5 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian painter",
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2448916451,
-    "manual_overrides": []
-  }
+  "_schema": "artbase:artist:v1"
 }

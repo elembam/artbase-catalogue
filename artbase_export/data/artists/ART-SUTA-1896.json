@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.479976Z",
+  "exported": "2026-05-29T14:06:15.713590Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Romans Suta",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1896-04-28",
-      "precision": "day",
+      "value": "1896",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1944-07-14",
-      "precision": "day",
+      "value": "1944",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Dzērbene Parish",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q4992625",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Tbilisi",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q994",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -129,34 +129,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian painter, potter, sculptor and designer (1896-1944)",
-  "movement": [
-    {
-      "label": "French Realism",
-      "wikidata_id": "Q2642826",
-      "source": "wikidata_auto"
-    },
-    {
-      "label": "cubism",
-      "wikidata_id": "Q42934",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2495436536,
-    "manual_overrides": [],
-    "ulan_last_enriched": "2026-05-27T18:20:44Z"
-  },
-  "enrichment": {
-    "ulan": {
-      "nationalities": [
-        "Latvian (culture or style)"
-      ],
-      "alternate_names": [
-        "Romans Suta"
-      ]
-    }
-  }
+  "_schema": "artbase:artist:v1"
 }

@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.472285Z",
+  "exported": "2026-05-29T14:06:15.709775Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Valdis Kalnroze",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1894-01-17",
-      "precision": "day",
+      "value": "1894",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1993-04-16",
-      "precision": "day",
+      "value": "1993",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Kuldīga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q155281",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -129,34 +129,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian painter (1894-1993)",
-  "education": [
-    {
-      "label": "Art Academy of Latvia",
-      "wikidata_id": "Q2607021",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2448916180,
-    "manual_overrides": [],
-    "ulan_last_enriched": "2026-05-27T18:20:44Z"
-  },
-  "enrichment": {
-    "ulan": {
-      "nationalities": [
-        "Latvian (culture or style)"
-      ],
-      "alternate_names": [
-        "Kalnroze, Valdis Karlovič",
-        "Kalnroze-Rozenberg, Valdis",
-        "Rozenberg, Valdis Karlovič",
-        "Rozenbergs, Valdis",
-        "Rozenbergs, Voldemārs",
-        "Valdis Kalnroze"
-      ]
-    }
-  }
+  "_schema": "artbase:artist:v1"
 }

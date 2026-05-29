@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.452795Z",
+  "exported": "2026-05-29T14:06:15.691538Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Sigismunds Vidbergs",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1890-04-29",
-      "precision": "day",
+      "value": "1890",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1970-01-31",
-      "precision": "day",
+      "value": "1970",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Jelgava",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q179830",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "New York City",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q60",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -129,30 +129,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian graphic artist and painter",
-  "description_lv": "bijušais Latvijas grafiķis un gleznotājs",
-  "education": [
-    {
-      "label": "Saint Petersburg Stieglitz State Academy of Art and Design",
-      "wikidata_id": "Q2652597",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2479730434,
-    "manual_overrides": [],
-    "ulan_last_enriched": "2026-05-27T18:20:44Z"
-  },
-  "enrichment": {
-    "ulan": {
-      "nationalities": [
-        "Latvian (culture or style)"
-      ],
-      "alternate_names": [
-        "Sigismunds Vidbergs"
-      ]
-    }
-  }
+  "_schema": "artbase:artist:v1"
 }

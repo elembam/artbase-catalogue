@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.486775Z",
+  "exported": "2026-05-29T14:06:15.721160Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Nele Zirnīte",
@@ -15,8 +15,8 @@
   },
   "life": {
     "birth_date": {
-      "value": "1959-05-27",
-      "precision": "day",
+      "value": "1959",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
@@ -29,9 +29,9 @@
       "notes": null
     },
     "birth_place": {
-      "display": "Lithuania",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q37",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
@@ -131,16 +131,5 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "image": {
-    "commons_filename": "Nele Zirnite Ruler.jpg",
-    "commons_url": "https://commons.wikimedia.org/wiki/File:Nele_Zirnite_Ruler.jpg",
-    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nele_Zirnite_Ruler.jpg?width=400"
-  },
-  "description_en": "Lithuanian artist",
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2494322343,
-    "manual_overrides": []
-  }
+  "_schema": "artbase:artist:v1"
 }

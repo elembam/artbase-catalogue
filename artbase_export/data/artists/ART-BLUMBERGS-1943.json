@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.452721Z",
+  "exported": "2026-05-29T14:06:15.691425Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Ilmārs Blumbergs",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1943-09-06",
-      "precision": "day",
+      "value": "1943",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "2016-02-11",
-      "precision": "day",
+      "value": "2016",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Latvia",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q211",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -129,29 +129,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian graphic artist, painter and scenographer (1943-2016)",
-  "education": [
-    {
-      "label": "Art Academy of Latvia",
-      "wikidata_id": "Q2607021",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2493171763,
-    "manual_overrides": [],
-    "ulan_last_enriched": "2026-05-27T18:20:44Z"
-  },
-  "enrichment": {
-    "ulan": {
-      "nationalities": [
-        "Latvian (culture or style)"
-      ],
-      "alternate_names": [
-        "Ilmārs Blumbergs"
-      ]
-    }
-  }
+  "_schema": "artbase:artist:v1"
 }

@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.477249Z",
+  "exported": "2026-05-29T14:06:15.711724Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Arvīds Egle",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1905-04-03",
-      "precision": "day",
+      "value": "1905",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1977-11-20",
-      "precision": "day",
+      "value": "1977",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Jelgava Municipality",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1579113",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -129,34 +129,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian painter",
-  "education": [
-    {
-      "label": "Art Academy of Latvia",
-      "wikidata_id": "Q2607021",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2485353834,
-    "manual_overrides": [],
-    "ulan_last_enriched": "2026-05-27T18:20:44Z"
-  },
-  "enrichment": {
-    "ulan": {
-      "nationalities": [
-        "Latvian (culture or style)",
-        "Russian (culture or style)"
-      ],
-      "alternate_names": [
-        "Arvid Indrikovich Egle",
-        "Arvīds Egle",
-        "Egele, Arvids",
-        "Egle, Arvīds",
-        "Egle, Ārvids"
-      ]
-    }
-  }
+  "_schema": "artbase:artist:v1"
 }

@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.478430Z",
+  "exported": "2026-05-29T14:06:15.712131Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Džemma Skulme",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1925-09-20",
-      "precision": "day",
+      "value": "1925",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "2019-11-09",
-      "precision": "day",
+      "value": "2019",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -129,47 +129,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "image": {
-    "commons_filename": "MK balva 2009 (4108603553).jpg",
-    "commons_url": "https://commons.wikimedia.org/wiki/File:MK_balva_2009_(4108603553).jpg",
-    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/MK_balva_2009_%284108603553%29.jpg?width=400"
-  },
-  "description_en": "Latvian artist (1925–2019)",
-  "description_lv": "latviešu gleznotāja, sabiedriskā darbiniece",
-  "education": [
-    {
-      "label": "Art Academy of Latvia",
-      "wikidata_id": "Q2607021",
-      "source": "wikidata_auto"
-    }
-  ],
-  "movement": [
-    {
-      "label": "modern art",
-      "wikidata_id": "Q38166",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2487249182,
-    "manual_overrides": [],
-    "ulan_last_enriched": "2026-05-27T18:20:44Z"
-  },
-  "enrichment": {
-    "ulan": {
-      "nationalities": [
-        "Latvian (culture or style)",
-        "Russian (culture or style)"
-      ],
-      "alternate_names": [
-        "D. O. Skulme",
-        "Džemma Skulme",
-        "Skulme, D. O.",
-        "Skulme, Džemma",
-        "Skulme, Džemma Ottovna"
-      ]
-    }
-  }
+  "_schema": "artbase:artist:v1"
 }

@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.487447Z",
+  "exported": "2026-05-29T14:06:15.721592Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Jāzeps Grosvalds",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1891-04-24",
-      "precision": "day",
+      "value": "1891",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1920-01-01",
-      "precision": "day",
+      "value": "1920",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Paris",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q90",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -129,58 +129,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "image": {
-    "commons_filename": "J.Grosvalds autoportrait.jpg",
-    "commons_url": "https://commons.wikimedia.org/wiki/File:J.Grosvalds_autoportrait.jpg",
-    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/J.Grosvalds_autoportrait.jpg?width=400"
-  },
-  "description_en": "Latvian painter (1891-1920)",
-  "education": [
-    {
-      "label": "Riga State Gymnasium No.1",
-      "wikidata_id": "Q48788",
-      "source": "wikidata_auto"
-    },
-    {
-      "label": "Simon Hollósy",
-      "wikidata_id": "Q165756",
-      "source": "wikidata_auto"
-    }
-  ],
-  "movement": [
-    {
-      "label": "Post-impressionism",
-      "wikidata_id": "Q166713",
-      "source": "wikidata_auto"
-    }
-  ],
-  "genre": [
-    {
-      "label": "portrait",
-      "wikidata_id": "Q134307",
-      "source": "wikidata_auto"
-    },
-    {
-      "label": "landscape painting",
-      "wikidata_id": "Q191163",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2494862573,
-    "manual_overrides": [],
-    "ulan_last_enriched": "2026-05-27T18:20:44Z"
-  },
-  "enrichment": {
-    "ulan": {
-      "nationalities": [
-        "Latvian (culture or style)"
-      ],
-      "alternate_names": [
-        "Jāzeps Grosvalds"
-      ]
-    }
-  }
+  "_schema": "artbase:artist:v1"
 }

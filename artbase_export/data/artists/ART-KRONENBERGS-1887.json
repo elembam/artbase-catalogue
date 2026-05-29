@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.477855Z",
+  "exported": "2026-05-29T14:06:15.711887Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Alberts Kronenbergs",
@@ -22,16 +22,16 @@
       "notes": null
     },
     "death_date": {
-      "value": "1958-09-16",
-      "precision": "day",
+      "value": "1958",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Sloka Parish",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q4423911",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
@@ -131,11 +131,5 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian illustrator",
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2494214934,
-    "manual_overrides": []
-  }
+  "_schema": "artbase:artist:v1"
 }

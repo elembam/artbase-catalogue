@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.478557Z",
+  "exported": "2026-05-29T14:06:15.712251Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Biruta Delle",
@@ -22,22 +22,22 @@
       "notes": null
     },
     "death_date": {
-      "value": "2025-01-24",
-      "precision": "day",
+      "value": "2025",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -131,11 +131,5 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian painter (1944-2025)",
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2495685957,
-    "manual_overrides": []
-  }
+  "_schema": "artbase:artist:v1"
 }

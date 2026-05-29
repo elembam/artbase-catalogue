@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.479656Z",
+  "exported": "2026-05-29T14:06:15.713271Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Eduards Brencēns",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1885-07-02",
-      "precision": "day",
+      "value": "1885",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1929-04-17",
-      "precision": "day",
+      "value": "1929",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Riga County",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q3736484",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -131,30 +131,5 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "image": {
-    "commons_filename": "БРЕНЦЕНС Эдуард2.jpg",
-    "commons_url": "https://commons.wikimedia.org/wiki/File:БРЕНЦЕНС_Эдуард2.jpg",
-    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%91%D0%A0%D0%95%D0%9D%D0%A6%D0%95%D0%9D%D0%A1_%D0%AD%D0%B4%D1%83%D0%B0%D1%80%D0%B42.jpg?width=400"
-  },
-  "description_en": "Latvian painter (1885-1929)",
-  "education": [
-    {
-      "label": "Saint Petersburg Stieglitz State Academy of Art and Design",
-      "wikidata_id": "Q2652597",
-      "source": "wikidata_auto"
-    }
-  ],
-  "genre": [
-    {
-      "label": "stained glass",
-      "wikidata_id": "Q1473346",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2494854427,
-    "manual_overrides": []
-  }
+  "_schema": "artbase:artist:v1"
 }

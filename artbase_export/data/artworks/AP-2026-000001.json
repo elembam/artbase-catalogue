@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:07.518607Z",
+  "exported": "2026-05-29T14:06:16.711763Z",
   "visibility": "private",
   "object_id": {
     "object_type": "painting",
@@ -31,33 +31,11 @@
   },
   "iconography": {
     "iconclass_codes": [
-      "48C5121",
-      "48C51215",
-      "25H15",
-      "31D14"
+      "61BB2(Lisa del Giocondo)11",
+      "25H11",
+      "31D15"
     ],
-    "iconclass_labels": [
-      {
-        "code": "48C5121",
-        "label": "portrait of man",
-        "uri": "https://iconclass.org/48C5121"
-      },
-      {
-        "code": "48C51215",
-        "label": "portrait of man looking at the observer",
-        "uri": "https://iconclass.org/48C51215"
-      },
-      {
-        "code": "25H15",
-        "label": "landscapes",
-        "uri": "https://iconclass.org/25H15"
-      },
-      {
-        "code": "31D14",
-        "label": "sitting figure",
-        "uri": "https://iconclass.org/31D14"
-      }
-    ],
+    "iconclass_labels": [],
     "depicts": []
   },
   "location": {
@@ -87,28 +65,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artwork:v1",
-  "aat_terms": {
-    "type": {
-      "label": "paintings (visual works)",
-      "aat_uri": "http://vocab.getty.edu/aat/300033618"
-    },
-    "materials": [
-      {
-        "role": "technique",
-        "label": "oil painting (technique)",
-        "aat_uri": "http://vocab.getty.edu/aat/300033799"
-      },
-      {
-        "role": "medium",
-        "label": "oil paint (paint)",
-        "aat_uri": "http://vocab.getty.edu/aat/300015050"
-      },
-      {
-        "role": "support",
-        "label": "poplar",
-        "aat_uri": "http://vocab.getty.edu/aat/300012363"
-      }
-    ]
-  }
+  "_schema": "artbase:artwork:v1"
 }

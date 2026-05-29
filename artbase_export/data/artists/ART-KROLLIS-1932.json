@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.453237Z",
+  "exported": "2026-05-29T14:06:15.692427Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Gunārs Krollis",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1932-06-23",
-      "precision": "day",
+      "value": "1932",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "2025-10-31",
-      "precision": "day",
+      "value": "2025",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -131,19 +131,5 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian painter (born 1932)",
-  "description_lv": "latviešu grafiķis",
-  "education": [
-    {
-      "label": "Art Academy of Latvia",
-      "wikidata_id": "Q2607021",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2494123901,
-    "manual_overrides": []
-  }
+  "_schema": "artbase:artist:v1"
 }

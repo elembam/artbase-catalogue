@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.479466Z",
+  "exported": "2026-05-29T14:06:15.713086Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Niklāvs Strunke",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1894-10-06",
-      "precision": "day",
+      "value": "1894",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1966-10-13",
-      "precision": "day",
+      "value": "1966",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Gostynin",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q983735",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Rome",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q220",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -129,37 +129,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian artist and illustrator (1894-1966)",
-  "description_lv": "latviešu gleznotājs, zīmētājs, grafiķis, grāmatu grafiķis, scenogrāfs, vitrāžists, porcelāna apgleznotājs (1894-1966)",
-  "education": [
-    {
-      "label": "Jūlija Madernieka studija",
-      "wikidata_id": "Q13218703",
-      "source": "wikidata_auto"
-    },
-    {
-      "label": "Imperial Academy of Arts",
-      "wikidata_id": "Q628254",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2422056755,
-    "manual_overrides": [],
-    "ulan_last_enriched": "2026-05-27T18:20:44Z"
-  },
-  "enrichment": {
-    "ulan": {
-      "nationalities": [
-        "Latvian (culture or style)"
-      ],
-      "alternate_names": [
-        "Nicolaas Strunke",
-        "Niklāvs Strunke",
-        "Strunke, Niklāvs"
-      ]
-    }
-  }
+  "_schema": "artbase:artist:v1"
 }

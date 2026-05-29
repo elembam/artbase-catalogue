@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.466452Z",
+  "exported": "2026-05-29T14:06:15.704224Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Leo Svemps",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1897-07-07",
-      "precision": "day",
+      "value": "1897",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1975-03-07",
-      "precision": "day",
+      "value": "1975",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Livonia Governorate",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1419584",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -129,44 +129,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian artist and educator (1897-1975)",
-  "education": [
-    {
-      "label": "University of Latvia",
-      "wikidata_id": "Q498407",
-      "source": "wikidata_auto"
-    }
-  ],
-  "genre": [
-    {
-      "label": "landscape painting",
-      "wikidata_id": "Q191163",
-      "source": "wikidata_auto"
-    },
-    {
-      "label": "still life",
-      "wikidata_id": "Q170571",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2494925185,
-    "manual_overrides": [],
-    "ulan_last_enriched": "2026-05-27T18:20:44Z"
-  },
-  "enrichment": {
-    "ulan": {
-      "nationalities": [
-        "Latvian (culture or style)",
-        "Russian (culture or style)"
-      ],
-      "alternate_names": [
-        "Leo Svemps",
-        "Svemp, Leo Simanovič",
-        "Svemps"
-      ]
-    }
-  }
+  "_schema": "artbase:artist:v1"
 }

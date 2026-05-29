@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:07.518736Z",
+  "exported": "2026-05-29T14:06:16.711903Z",
   "visibility": "private",
   "object_id": {
     "object_type": "painting",
@@ -58,28 +58,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artwork:v1",
-  "aat_terms": {
-    "type": {
-      "label": "paintings (visual works)",
-      "aat_uri": "http://vocab.getty.edu/aat/300033618"
-    },
-    "materials": [
-      {
-        "role": "technique",
-        "label": "oil painting (technique)",
-        "aat_uri": "http://vocab.getty.edu/aat/300033799"
-      },
-      {
-        "role": "medium",
-        "label": "oil paint (paint)",
-        "aat_uri": "http://vocab.getty.edu/aat/300015050"
-      },
-      {
-        "role": "support",
-        "label": "canvas",
-        "aat_uri": "http://vocab.getty.edu/aat/300014078"
-      }
-    ]
-  }
+  "_schema": "artbase:artwork:v1"
 }

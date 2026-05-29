@@ -4,7 +4,7 @@
   "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-27T16:29:06.453085Z",
+  "exported": "2026-05-29T14:06:15.692153Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Boriss Bērziņš",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1930-10-07",
-      "precision": "day",
+      "value": "1930",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "2002-02-11",
-      "precision": "day",
+      "value": "2002",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -129,35 +129,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian painter (1930-2002)",
-  "description_lv": "latviešu gleznotājs",
-  "education": [
-    {
-      "label": "Art Academy of Latvia",
-      "wikidata_id": "Q2607021",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-27T17:46:45Z",
-    "wikidata_revision_id": 2448916145,
-    "manual_overrides": [],
-    "ulan_last_enriched": "2026-05-27T18:20:44Z"
-  },
-  "enrichment": {
-    "ulan": {
-      "nationalities": [
-        "Latvian (culture or style)"
-      ],
-      "alternate_names": [
-        "Berdzin, Boris",
-        "Bersin, Boris",
-        "Berzin', Boris",
-        "Berzine, Boris",
-        "Boriss Bērziņš",
-        "Bērzin, Boris Avgustovič"
-      ]
-    }
-  }
+  "_schema": "artbase:artist:v1"
 }
