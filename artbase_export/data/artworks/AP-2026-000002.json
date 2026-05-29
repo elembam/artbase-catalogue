@@ -37,7 +37,22 @@
     "inventory_number": null,
     "location_notes": "Private collection; exact location confidential"
   },
-  "provenance": [],
+  "provenance": [
+    {
+      "date_display": "1979",
+      "owner": "Herberts Siliņš (artist)",
+      "detail": "Created by the artist in 1979.",
+      "source": "Galerija Jēkabs auction catalogue, lot reference.",
+      "is_gap": false
+    },
+    {
+      "date_display": "2000s",
+      "owner": "Private collection",
+      "detail": "Acquired through Galerija Jēkabs. Exact acquisition date confidential at collector's request.",
+      "source": "Galerija Jēkabs catalogue.",
+      "is_gap": false
+    }
+  ],
   "authority_links": {
     "wikidata": {
       "id": null,
@@ -55,6 +70,8 @@
     "review_status": "draft",
     "catalogued_by": null,
     "notes": "First real pilot artwork. Source: Galerija Jēkabs catalogue. Creator: Herberts Siliņš — Wikidata Q23054868 (https://www.wikidata.org/wiki/Q23054868). No photograph available yet. No individual Wikidata entry exists for this painting.",
+    "condition_note": "Good condition. Oil on cardboard; minor surface soiling. No signs of flaking or structural damage. Stored vertically in stable indoor environment.",
+    "condition_date": "2025-01-01",
     "tasks": [],
     "engagement_ids": []
   },

@@ -244,6 +244,57 @@
   }
   .tombstone-grid dd { font-size: 14px; color: var(--ink); }
 
+  /* ─── COMPLETENESS SCORE ─── */
+  .completeness {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .completeness-bar-wrap {
+    flex: 1;
+    height: 5px;
+    background: var(--paper-deep);
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  .completeness-bar {
+    height: 100%;
+    background: var(--seal);
+    border-radius: 3px;
+    transition: width 0.4s;
+  }
+  .completeness-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--ink-faded);
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+  }
+  .completeness-tag {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 2px;
+    background: var(--seal);
+    color: #fff;
+  }
+  .completeness-tag.partial {
+    background: var(--gold);
+    color: #fff;
+  }
+  .completeness-tag.draft {
+    background: var(--paper-deep);
+    color: var(--ink-faded);
+    border: 1px solid var(--rule);
+  }
+
   /* ─── SECTIONS ─── */
   .section {
     padding: 32px 48px;
@@ -625,6 +676,21 @@
         
         
       </dl>
+
+      
+      
+      
+      
+      <div class="completeness">
+        <span class="completeness-label">Object ID 7/9</span>
+        <div class="completeness-bar-wrap">
+          <div class="completeness-bar" style="width:78%"></div>
+        </div>
+        
+        <span class="completeness-tag partial">Partial</span>
+        
+      </div>
+
     </div>
   </section>
 
@@ -746,9 +812,40 @@
       <span class="section-rubric">Documented Chain of Custody</span>
     </div>
     
-    <p class="prov-empty">Provenance not yet documented for this record.</p>
+    <div class="provenance">
+      
+      <div class="prov-event">
+        <div class="prov-date">1979</div>
+        <div class="prov-owner">Herberts Siliņš (artist)</div>
+        <div class="prov-detail">Created by the artist in 1979.</div>
+        <div class="prov-source">Source: Galerija Jēkabs auction catalogue, lot reference.</div>
+      </div>
+      
+      <div class="prov-event">
+        <div class="prov-date">2000s</div>
+        <div class="prov-owner">Private collection</div>
+        <div class="prov-detail">Acquired through Galerija Jēkabs. Exact acquisition date confidential at collector&#39;s request.</div>
+        <div class="prov-source">Source: Galerija Jēkabs catalogue.</div>
+      </div>
+      
+    </div>
     
   </section>
+
+  
+  <!-- CONDITION -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 05</span>
+      <h3 class="section-title">Condition</h3>
+      <span class="section-rubric">Conservation Status</span>
+    </div>
+    <p style="font-size:14px;line-height:1.65;color:var(--ink);">Good condition. Oil on cardboard; minor surface soiling. No signs of flaking or structural damage. Stored vertically in stable indoor environment.</p>
+    
+    <p style="font-size:11px;color:var(--ink-faded);margin-top:8px;">Assessment date: 2025-01-01</p>
+    
+  </section>
+  
 
   <!-- FOOTER -->
   <footer class="footer">

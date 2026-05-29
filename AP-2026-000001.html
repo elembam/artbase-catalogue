@@ -244,6 +244,57 @@
   }
   .tombstone-grid dd { font-size: 14px; color: var(--ink); }
 
+  /* ─── COMPLETENESS SCORE ─── */
+  .completeness {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .completeness-bar-wrap {
+    flex: 1;
+    height: 5px;
+    background: var(--paper-deep);
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  .completeness-bar {
+    height: 100%;
+    background: var(--seal);
+    border-radius: 3px;
+    transition: width 0.4s;
+  }
+  .completeness-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--ink-faded);
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+  }
+  .completeness-tag {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 2px;
+    background: var(--seal);
+    color: #fff;
+  }
+  .completeness-tag.partial {
+    background: var(--gold);
+    color: #fff;
+  }
+  .completeness-tag.draft {
+    background: var(--paper-deep);
+    color: var(--ink-faded);
+    border: 1px solid var(--rule);
+  }
+
   /* ─── SECTIONS ─── */
   .section {
     padding: 32px 48px;
@@ -645,6 +696,21 @@
         <dt>Inventory</dt><dd>INV. 779</dd>
         
       </dl>
+
+      
+      
+      
+      
+      <div class="completeness">
+        <span class="completeness-label">Object ID 9/9</span>
+        <div class="completeness-bar-wrap">
+          <div class="completeness-bar" style="width:100%"></div>
+        </div>
+        
+        <span class="completeness-tag">Complete</span>
+        
+      </div>
+
     </div>
   </section>
 
@@ -818,9 +884,54 @@
       <span class="section-rubric">Documented Chain of Custody</span>
     </div>
     
-    <p class="prov-empty">Provenance not yet documented for this record.</p>
+    <div class="provenance">
+      
+      <div class="prov-event">
+        <div class="prov-date">c. 1503–1519</div>
+        <div class="prov-owner">Leonardo da Vinci</div>
+        <div class="prov-detail">Painted in Leonardo&#39;s studio in Florence and later Milan; retained by the artist until his death.</div>
+        <div class="prov-source">Source: Vasari, Giorgio. Le Vite de&#39; più eccellenti pittori, scultori ed architettori, 1550.</div>
+      </div>
+      
+      <div class="prov-event">
+        <div class="prov-date">1519</div>
+        <div class="prov-owner">King Francis I of France</div>
+        <div class="prov-detail">Acquired by the French Crown following Leonardo&#39;s death; housed at Château de Fontainebleau.</div>
+        <div class="prov-source">Source: Wikidata Q12418, P127 (owned by); Louvre museum records.</div>
+      </div>
+      
+      <div class="prov-event">
+        <div class="prov-date">1692–1797</div>
+        <div class="prov-owner">French Royal Collection / Palace of Versailles</div>
+        <div class="prov-detail">Transferred to the Palace of Versailles under Louis XIV.</div>
+        <div class="prov-source">Source: Louvre museum provenance documentation.</div>
+      </div>
+      
+      <div class="prov-event">
+        <div class="prov-date">1797–present</div>
+        <div class="prov-owner">République Française / Musée du Louvre</div>
+        <div class="prov-detail">Transferred to the Musée du Louvre upon its establishment as a public museum. Inventory no. INV. 779.</div>
+        <div class="prov-source">Source: Louvre official catalogue; Wikidata Q12418, P276 (location).</div>
+      </div>
+      
+    </div>
     
   </section>
+
+  
+  <!-- CONDITION -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 05</span>
+      <h3 class="section-title">Condition</h3>
+      <span class="section-rubric">Conservation Status</span>
+    </div>
+    <p style="font-size:14px;line-height:1.65;color:var(--ink);">Good condition. Poplar panel stable; minor craquelure consistent with age. Housed in purpose-built climate-controlled gallery case with UV filter.</p>
+    
+    <p style="font-size:11px;color:var(--ink-faded);margin-top:8px;">Assessment date: 2024-01-01</p>
+    
+  </section>
+  
 
   <!-- FOOTER -->
   <footer class="footer">

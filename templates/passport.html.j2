@@ -244,6 +244,57 @@
   }
   .tombstone-grid dd { font-size: 14px; color: var(--ink); }
 
+  /* ─── COMPLETENESS SCORE ─── */
+  .completeness {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .completeness-bar-wrap {
+    flex: 1;
+    height: 5px;
+    background: var(--paper-deep);
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  .completeness-bar {
+    height: 100%;
+    background: var(--seal);
+    border-radius: 3px;
+    transition: width 0.4s;
+  }
+  .completeness-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--ink-faded);
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+  }
+  .completeness-tag {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 2px;
+    background: var(--seal);
+    color: #fff;
+  }
+  .completeness-tag.partial {
+    background: var(--gold);
+    color: #fff;
+  }
+  .completeness-tag.draft {
+    background: var(--paper-deep);
+    color: var(--ink-faded);
+    border: 1px solid var(--rule);
+  }
+
   /* ─── SECTIONS ─── */
   .section {
     padding: 32px 48px;
@@ -603,6 +654,35 @@
         <dt>Inventory</dt><dd>{{ artwork.location.inventory_number }}</dd>
         {% endif %}
       </dl>
+
+      {# ── Completeness score ── #}
+      {% set oid = artwork.object_id %}
+      {% set score = [
+        oid.object_type,
+        oid.materials,
+        oid.dimensions_display or (oid.height_cm and oid.width_cm),
+        oid.inscriptions is not none,
+        oid.distinguishing is not none,
+        oid.title,
+        oid.subject,
+        oid.date_display,
+        oid.maker_id
+      ] | select | list | length %}
+      {% set pct = (score / 9 * 100) | round | int %}
+      <div class="completeness">
+        <span class="completeness-label">Object ID {{ score }}/9</span>
+        <div class="completeness-bar-wrap">
+          <div class="completeness-bar" style="width:{{ pct }}%"></div>
+        </div>
+        {% if score == 9 %}
+        <span class="completeness-tag">Complete</span>
+        {% elif score >= 6 %}
+        <span class="completeness-tag partial">Partial</span>
+        {% else %}
+        <span class="completeness-tag draft">Draft</span>
+        {% endif %}
+      </div>
+
     </div>
   </section>
 
@@ -811,6 +891,21 @@
     <p class="prov-empty">Provenance not yet documented for this record.</p>
     {% endif %}
   </section>
+
+  {% if artwork.cataloguing.condition_note %}
+  <!-- CONDITION -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 05</span>
+      <h3 class="section-title">Condition</h3>
+      <span class="section-rubric">Conservation Status</span>
+    </div>
+    <p style="font-size:14px;line-height:1.65;color:var(--ink);">{{ artwork.cataloguing.condition_note }}</p>
+    {% if artwork.cataloguing.condition_date %}
+    <p style="font-size:11px;color:var(--ink-faded);margin-top:8px;">Assessment date: {{ artwork.cataloguing.condition_date }}</p>
+    {% endif %}
+  </section>
+  {% endif %}
 
   <!-- FOOTER -->
   <footer class="footer">
