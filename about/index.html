@@ -170,9 +170,16 @@
   .footer-generated { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--ink-faded); }
 
   @media (max-width: 600px) {
-    .standards-table { font-size: 0.8rem; }
+    body { padding: 20px 16px 60px; }
+    .site-nav { flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .nav-links { gap: 14px; flex-wrap: wrap; }
+    .nav-link { font-size: 0.8rem; }
+    .page-title { font-size: 1.5rem; }
+    .standards-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .standards-table { font-size: 0.8rem; min-width: 480px; }
     .standards-table th, .standards-table td { padding: 8px; }
     .data-flow { flex-direction: column; align-items: flex-start; }
+    .data-flow-arrow { transform: rotate(90deg); }
   }
 </style>
 </head>
@@ -254,6 +261,7 @@
       <p>Every catalogue record is produced in compliance with internationally recognised museum
       documentation standards:</p>
     </div>
+    <div class="standards-wrapper">
     <table class="standards-table">
       <thead>
         <tr>
@@ -277,6 +285,7 @@
         <tr><td class="std-name"><a href="https://schema.org/" target="_blank" rel="noopener">Schema.org</a></td><td>Structured data for web discovery</td><td>Every page (JSON-LD)</td></tr>
       </tbody>
     </table>
+    </div>
   </section>
 
   <!-- ── Authority verification ────────────────────────────────────────────── -->

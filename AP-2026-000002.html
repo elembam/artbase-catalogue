@@ -462,6 +462,9 @@
   @media (max-width: 720px) {
     body { padding: 16px 8px; font-size: 14px; }
     .header, .meta-bar, .hero, .section, .footer { padding-left: 24px; padding-right: 24px; }
+    .topnav { font-size: 0.75rem; flex-wrap: wrap; gap: 4px; }
+    .header { flex-direction: column; gap: 16px; }
+    .seal { align-self: flex-end; width: 80px; height: 80px; }
     .hero { grid-template-columns: 1fr; gap: 24px; }
     .meta-bar { grid-template-columns: repeat(2, 1fr); }
     .object-id { grid-template-columns: 1fr; }
@@ -471,8 +474,19 @@
     .footer-meta { text-align: left; }
     .tombstone .work-title { font-size: 32px; }
     .header-mark .title { font-size: 26px; }
-    .seal { width: 80px; height: 80px; }
     .icon-code { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 8px 4px; font-size: 13px; }
+    .header, .meta-bar, .hero, .section, .footer { padding-left: 16px; padding-right: 16px; }
+    .header::after { left: 16px; right: 16px; }
+    .meta-bar { grid-template-columns: 1fr 1fr; padding: 10px 16px; gap: 12px; }
+    .tombstone .work-title { font-size: 26px; }
+    .header-mark .title { font-size: 22px; }
+    .section-header { flex-wrap: wrap; gap: 6px; }
+    .authority { padding: 10px 12px; }
+    .tombstone-grid { grid-template-columns: 80px 1fr; }
   }
 
   @media print {
