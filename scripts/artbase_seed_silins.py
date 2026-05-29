@@ -1,6 +1,7 @@
+import os
 import json, time, urllib.request, urllib.error, urllib.parse
 
-TOKEN   = "AIRTABLE_TOKEN_REDACTED"
+TOKEN   = os.getenv("AIRTABLE_TOKEN", "")
 BASE_ID = "appoyRXU3qxxKZcbp"
 HEADERS = {"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json"}
 

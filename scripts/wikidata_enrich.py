@@ -1,3 +1,4 @@
+import os
 #!/usr/bin/env python3
 """
 wikidata_enrich.py — Deep Wikidata enrichment for Ars Accordia artist records.
@@ -42,7 +43,7 @@ REPO_ROOT   = Path(__file__).resolve().parent.parent
 DATA_DIR    = REPO_ROOT / "artbase_export" / "data" / "artists"
 REPORTS_DIR = REPO_ROOT / "reports"
 
-TOKEN      = "AIRTABLE_TOKEN_REDACTED"
+TOKEN      = os.getenv("AIRTABLE_TOKEN", "")
 BASE_ID    = "appoyRXU3qxxKZcbp"
 TABLE_NAME = "Artists_Makers"
 
