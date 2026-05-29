@@ -357,35 +357,36 @@ def build_jsonld(artwork: dict, artist: Optional[dict]) -> dict:
             "name": a_identity.get("preferred_name", ""),
         }
 
-        # sameAs: collect all confirmed/candidate external authority URIs
+        # sameAs: confirmed authorities only — candidate links must not appear
+        # as sameAs is an unqualified identity assertion consumed by aggregators.
         same_as = []
 
         wikidata = a_auth.get("wikidata", {})
-        if isinstance(wikidata, dict) and wikidata.get("id") and wikidata.get("status") in ("confirmed", "candidate_verify"):
+        if isinstance(wikidata, dict) and wikidata.get("id") and wikidata.get("status") == "confirmed":
             same_as.append(f"https://www.wikidata.org/wiki/{wikidata['id']}")
 
         viaf = a_auth.get("viaf", {})
-        if isinstance(viaf, dict) and viaf.get("id") and viaf.get("status") in ("confirmed", "candidate_verify"):
+        if isinstance(viaf, dict) and viaf.get("id") and viaf.get("status") == "confirmed":
             same_as.append(f"https://viaf.org/viaf/{viaf['id']}")
 
         ulan = a_auth.get("ulan", {})
-        if isinstance(ulan, dict) and ulan.get("id") and ulan.get("status") in ("confirmed", "candidate_verify"):
+        if isinstance(ulan, dict) and ulan.get("id") and ulan.get("status") == "confirmed":
             same_as.append(f"https://www.getty.edu/vow/ULANFullDisplay?find=&role=&nation=&subjectid={ulan['id']}")
 
         isni = a_auth.get("isni", {})
-        if isinstance(isni, dict) and isni.get("id") and isni.get("status") in ("confirmed", "candidate_verify"):
+        if isinstance(isni, dict) and isni.get("id") and isni.get("status") == "confirmed":
             same_as.append(f"https://isni.org/isni/{isni['id']}")
 
         gnd = a_auth.get("gnd", {})
-        if isinstance(gnd, dict) and gnd.get("id") and gnd.get("status") in ("confirmed", "candidate_verify"):
+        if isinstance(gnd, dict) and gnd.get("id") and gnd.get("status") == "confirmed":
             same_as.append(f"https://d-nb.info/gnd/{gnd['id']}")
 
         bnf = a_auth.get("bnf", {})
-        if isinstance(bnf, dict) and bnf.get("id") and bnf.get("status") in ("confirmed", "candidate_verify"):
+        if isinstance(bnf, dict) and bnf.get("id") and bnf.get("status") == "confirmed":
             same_as.append(f"https://data.bnf.fr/ark:/12148/cb{bnf['id']}")
 
         lc = a_auth.get("lc_naco", {})
-        if isinstance(lc, dict) and lc.get("id") and lc.get("status") in ("confirmed", "candidate_verify"):
+        if isinstance(lc, dict) and lc.get("id") and lc.get("status") == "confirmed":
             same_as.append(f"https://id.loc.gov/authorities/names/{lc['id']}.html")
 
         if same_as:
@@ -412,7 +413,7 @@ def build_jsonld(artwork: dict, artist: Optional[dict]) -> dict:
         holder: dict[str, Any] = {"@type": "Organization", "name": location["collection"]}
         if location.get("collection_qid"):
             holder["sameAs"] = f"https://www.wikidata.org/wiki/{location['collection_qid']}"
-        jsonld["locationCreated"] = holder  # repurposed as current holder context
+        jsonld["owner"] = holder  # current holding institution
 
     # Iconographic subjects → about
     iconography = artwork.get("iconography", {})

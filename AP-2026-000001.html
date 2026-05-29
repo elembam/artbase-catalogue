@@ -714,6 +714,22 @@
     font-weight: 500;
     transition: opacity 0.15s;
   }
+  .demo-banner {
+    max-width: 880px;
+    margin: 0 auto 16px;
+    padding: 9px 16px;
+    background: #fffbe6;
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 12px;
+    color: #7a5c00;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .demo-banner strong { font-weight: 600; }
+  @media print { .demo-banner { display: none; } }
   .topnav a:hover { opacity: 0.75; }
   .topnav-sep { color: var(--rule); }
   @media print { .topnav { display: none; } }
@@ -757,11 +773,11 @@
   "dateCreated": "1503/1519",
   "description": "Half-length portrait of a seated woman with a mountainous landscape background",
   "identifier": "AP-2026-000001",
-  "locationCreated": {
+  "name": "Mona Lisa",
+  "owner": {
     "@type": "Organization",
     "name": "Mus\u00e9e du Louvre"
   },
-  "name": "Mona Lisa",
   "size": "77 \u00d7 53 cm",
   "url": "https://arsaccordia.com/AP-2026-000001.html"
 }
@@ -781,6 +797,13 @@
   <span class="topnav-sep">/</span>
   <span>AP-2026-000001</span>
 </nav>
+
+
+<div class="demo-banner">
+  <span>📋</span>
+  <span><strong>Standards Demonstration Record</strong> — This passport documents a universally known public work to illustrate the Ars Accordia cataloguing standard. The intended subject of the registry is undocumented art held in private and corporate collections.</span>
+</div>
+
 
 <article class="passport">
 
@@ -1466,7 +1489,7 @@
     &lt;span class=&#34;json-key&#34;&gt;&#34;deathDate&#34;&lt;/span&gt;: &lt;span class=&#34;json-str&#34;&gt;&#34;1519&#34;&lt;/span&gt;,
     &lt;span class=&#34;json-key&#34;&gt;&#34;nationality&#34;&lt;/span&gt;: &lt;span class=&#34;json-str&#34;&gt;&#34;Italian&#34;&lt;/span&gt;
   },
-  &lt;span class=&#34;json-key&#34;&gt;&#34;locationCreated&#34;&lt;/span&gt;: {
+  &lt;span class=&#34;json-key&#34;&gt;&#34;owner&#34;&lt;/span&gt;: {
     &lt;span class=&#34;json-key&#34;&gt;&#34;@type&#34;&lt;/span&gt;: &lt;span class=&#34;json-str&#34;&gt;&#34;Organization&#34;&lt;/span&gt;,
     &lt;span class=&#34;json-key&#34;&gt;&#34;name&#34;&lt;/span&gt;: &lt;span class=&#34;json-str&#34;&gt;&#34;Musée du Louvre&#34;&lt;/span&gt;
   },
