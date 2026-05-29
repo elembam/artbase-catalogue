@@ -46,6 +46,107 @@ PASSPORTS_DIR = REPO_ROOT / "passports"
 CATALOGUE_BASE_URL = "https://arsaccordia.com"
 
 
+# ── XML syntax highlighter ─────────────────────────────────────────────────────
+
+import html as _html
+import re as _re
+
+def highlight_xml(xml_str: str) -> str:
+    """
+    Produce HTML with span-based syntax colouring for XML.
+    Returns a string safe to embed inside a <pre> block (no wrapping <pre>).
+    """
+    result = []
+    i = 0
+    src = xml_str
+
+    def esc(s: str) -> str:
+        return _html.escape(s)
+
+    while i < len(src):
+        if src[i:i+4] == "<!--":
+            end = src.find("-->", i)
+            if end == -1:
+                result.append(f'<span class="xml-comment">{esc(src[i:])}</span>')
+                break
+            result.append(f'<span class="xml-comment">{esc(src[i:end+3])}</span>')
+            i = end + 3
+        elif src[i:i+2] == "<?":
+            end = src.find("?>", i)
+            end = (end + 2) if end != -1 else len(src)
+            result.append(f'<span class="xml-comment">{esc(src[i:end])}</span>')
+            i = end
+        elif src[i] == "<":
+            # Find close of tag
+            end = src.find(">", i)
+            if end == -1:
+                result.append(esc(src[i:]))
+                break
+            tag_str = src[i:end+1]
+            # Colour tag name
+            tag_str_hl = _re.sub(
+                r'(</?)([\w:]+)',
+                lambda m: f'<span class="xml-tag">{esc(m.group(1))}{esc(m.group(2))}</span>',
+                tag_str, count=1
+            )
+            # Colour attribute names
+            tag_str_hl = _re.sub(
+                r'([\w:]+)(=)',
+                lambda m: f'<span class="xml-attr">{esc(m.group(1))}</span>{esc(m.group(2))}',
+                tag_str_hl
+            )
+            # Colour attribute values
+            tag_str_hl = _re.sub(
+                r'("(?:[^"\\]|\\.)*")',
+                lambda m: f'<span class="xml-value">{m.group(1)}</span>',
+                tag_str_hl
+            )
+            result.append(tag_str_hl)
+            i = end + 1
+        else:
+            # Text content
+            next_tag = src.find("<", i)
+            if next_tag == -1:
+                result.append(f'<span class="xml-text">{esc(src[i:])}</span>')
+                break
+            text = src[i:next_tag]
+            if text.strip():
+                result.append(f'<span class="xml-text">{esc(text)}</span>')
+            else:
+                result.append(esc(text))
+            i = next_tag
+
+    return "".join(result)
+
+
+def highlight_json(obj) -> str:
+    """Pretty-print a dict/list as syntax-coloured HTML for embedding in <pre>."""
+    import html as _html
+    raw = json.dumps(obj, indent=2, ensure_ascii=False)
+    lines = []
+    for line in raw.splitlines():
+        # Key
+        line = _re.sub(
+            r'^(\s*)"(.*?)"(\s*:)',
+            lambda m: f'{m.group(1)}<span class="json-key">"{_html.escape(m.group(2))}"</span>{m.group(3)}',
+            line
+        )
+        # URL string value
+        line = _re.sub(
+            r'(:\s*)"(https?://[^"]+)"',
+            lambda m: f'{m.group(1)}<span class="json-url">"{_html.escape(m.group(2))}"</span>',
+            line
+        )
+        # Other string value
+        line = _re.sub(
+            r'(:\s*)"([^"]*)"',
+            lambda m: f'{m.group(1)}<span class="json-str">"{_html.escape(m.group(2))}"</span>',
+            line
+        )
+        lines.append(line)
+    return "\n".join(lines)
+
+
 # ── Roman numerals helper (for the seal year) ──────────────────────────────────
 
 def to_roman(n: int) -> str:
@@ -169,6 +270,17 @@ def build_context(artwork: dict, artist: Optional[dict],
     maker_id = artwork.get("object_id", {}).get("maker_id")
     artist_profile_url = f"artists/{maker_id}.html" if maker_id else None
 
+    # Load machine-readable XML if already generated
+    artbase_id = artwork.get("artbase_id", "")
+    api_dir = REPO_ROOT / "api" / artbase_id
+    lido_xml  = (api_dir / "lido.xml").read_text(encoding="utf-8")  if (api_dir / "lido.xml").exists()  else None
+    eodem_xml = (api_dir / "eodem.xml").read_text(encoding="utf-8") if (api_dir / "eodem.xml").exists() else None
+
+    jsonld_data = build_jsonld(artwork, artist)
+    jsonld_pretty_html = highlight_json(jsonld_data)
+    lido_html  = highlight_xml(lido_xml)  if lido_xml  else None
+    eodem_html = highlight_xml(eodem_xml) if eodem_xml else None
+
     return {
         "artwork":            artwork,
         "artist":             artist,
@@ -176,7 +288,12 @@ def build_context(artwork: dict, artist: Optional[dict],
         "image_src":          image_src,
         "issued_date":        issued_date,
         "issued_year_roman":  issued_year_roman,
-        "jsonld":             build_jsonld(artwork, artist),
+        "jsonld":             jsonld_data,
+        "lido_xml":           lido_xml,
+        "eodem_xml":          eodem_xml,
+        "lido_html":          lido_html,
+        "eodem_html":         eodem_html,
+        "jsonld_html":        jsonld_pretty_html,
     }
 
 
