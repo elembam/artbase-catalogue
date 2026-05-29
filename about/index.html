@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About Ars Accordia — Methodology, standards, and mission of the scholarly art catalogue.">
+<title>About — Ars Accordia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:      #f6f1e6;
+    --paper-deep: #ebe3d1;
+    --ink:        #1c1814;
+    --ink-soft:   #4a4338;
+    --ink-faded:  #80766a;
+    --seal:       #6e1818;
+    --seal-light: #94342f;
+    --gold:       #8a6f2e;
+    --rule:       #c7bca5;
+    --grid:       rgba(110, 24, 24, 0.04);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 15px;
+    min-height: 100vh;
+    padding: 40px 20px 80px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+
+  .page { max-width: 800px; margin: 0 auto; position: relative; z-index: 2; }
+
+  .site-nav {
+    max-width: 960px; margin: 0 auto 40px; padding: 0 0 16px;
+    border-bottom: 1px solid var(--rule);
+    display: flex; align-items: center; gap: 32px;
+    position: relative; z-index: 2;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+  .nav-logo-mark { width: 28px; height: 28px; background: var(--seal); border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+  .nav-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 24px; margin-left: auto; }
+  .nav-link { font-size: 0.875rem; color: var(--ink-soft); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+  .nav-link:hover { color: var(--seal); }
+  .nav-link.active { color: var(--seal); border-bottom-color: var(--seal); }
+
+  .page-header {
+    border-bottom: 2px solid var(--seal);
+    padding-bottom: 24px;
+    margin-bottom: 48px;
+  }
+  .page-title { font-family: 'Fraunces', Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+  .page-subtitle { color: var(--ink-faded); font-size: 0.875rem; margin-top: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .section {
+    margin-bottom: 48px;
+  }
+  .section-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.25rem; font-weight: 600; color: var(--ink);
+    margin-bottom: 16px; padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .prose {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    line-height: 1.75;
+  }
+  .prose p + p { margin-top: 14px; }
+  .prose strong { color: var(--ink); font-weight: 600; }
+  .prose a { color: var(--seal); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(110,24,24,0.4); }
+  .prose a:hover { text-decoration-color: var(--seal); }
+
+  /* ── Standards table ──────────────────────────────────────────────────────── */
+  .standards-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    margin-top: 8px;
+  }
+  .standards-table th {
+    text-align: left;
+    padding: 8px 12px;
+    background: var(--paper-deep);
+    color: var(--ink-faded);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-bottom: 2px solid var(--rule);
+  }
+  .standards-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink-soft);
+    vertical-align: top;
+  }
+  .standards-table tr:last-child td { border-bottom: none; }
+  .std-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--seal);
+    white-space: nowrap;
+  }
+
+  /* ── Identifier example ───────────────────────────────────────────────────── */
+  .id-example {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--seal);
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 4px 12px;
+    margin: 4px 0;
+  }
+
+  /* ── Data flow ────────────────────────────────────────────────────────────── */
+  .data-flow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+    font-size: 0.875rem;
+  }
+  .flow-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    color: var(--ink-soft);
+  }
+  .flow-step strong { color: var(--ink); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .flow-arrow { color: var(--rule); font-size: 1.2rem; flex-shrink: 0; }
+
+  .site-footer {
+    margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  .footer-text { font-size: 0.75rem; color: var(--ink-faded); }
+  .footer-generated { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--ink-faded); }
+
+  @media (max-width: 600px) {
+    .standards-table { font-size: 0.8rem; }
+    .standards-table th, .standards-table td { padding: 8px; }
+    .data-flow { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <rect x="3" y="3" width="6" height="6" fill="white" opacity="0.9"/>
+        <rect x="11" y="3" width="6" height="6" fill="white" opacity="0.5"/>
+        <rect x="3" y="11" width="6" height="6" fill="white" opacity="0.5"/>
+        <rect x="11" y="11" width="6" height="6" fill="white" opacity="0.75"/>
+      </svg>
+    </div>
+    <span class="nav-name">Ars Accordia</span>
+  </a>
+  <div class="nav-links">
+    <a href="../catalogue/" class="nav-link">Catalogue</a>
+    <a href="../artworks/" class="nav-link">Artworks</a>
+    <a href="../artists/" class="nav-link">Artists</a>
+    <a href="../about/" class="nav-link active">About</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <header class="page-header">
+    <h1 class="page-title">About Ars Accordia</h1>
+    <p class="page-subtitle">Methodology · Standards · Mission</p>
+  </header>
+
+  <!-- ── What it is ─────────────────────────────────────────────────────────── -->
+  <section class="section">
+    <h2 class="section-title">What is Ars Accordia?</h2>
+    <div class="prose">
+      <p>Ars Accordia is a <strong>standards-compliant scholarly catalogue service</strong> for European art
+      collections — corporate, private, and institutional. It is not a marketplace, a CRM, or a gallery
+      platform. Its sole purpose is rigorous identification, documentation, and permanent registration of
+      works of art.</p>
+      <p>The catalogue serves as a <strong>public registry</strong> for art held in private and corporate
+      collections that does not appear in national museum catalogues or on Europeana. This fills a
+      significant gap in the European cultural heritage record: thousands of works held outside public
+      institutions that are undocumented, unstandardised, and invisible to scholarship.</p>
+    </div>
+  </section>
+
+  <!-- ── The Artwork Passport ───────────────────────────────────────────────── -->
+  <section class="section">
+    <h2 class="section-title">The Artwork Passport</h2>
+    <div class="prose">
+      <p>Each work receives an <strong>Artwork Passport</strong> — a permanent, authoritative identity
+      document analogous to a museum catalogue entry. A passport records:</p>
+      <ul style="margin: 12px 0 12px 20px; color: var(--ink-soft); line-height: 1.9;">
+        <li><strong>Identity</strong> — title, creator, date, medium, dimensions, object type (CDWA)</li>
+        <li><strong>Authority links</strong> — verified connections to Wikidata, Getty ULAN, Getty AAT,
+        ICONCLASS, VIAF, and other international registries</li>
+        <li><strong>Provenance</strong> — chain of ownership with dates and sources</li>
+        <li><strong>Condition</strong> — documented state at time of cataloguing</li>
+        <li><strong>Structured data</strong> — Schema.org JSON-LD for search engines and aggregators</li>
+        <li><strong>Export formats</strong> — LIDO 1.1 and EODEM XML for museum exchange</li>
+      </ul>
+      <p>Passports are human-readable (HTML), machine-readable (Schema.org, LIDO 1.1 / EODEM XML),
+      and permanently identified. Once issued, an Artwork Passport ID is never reused or reassigned.</p>
+    </div>
+  </section>
+
+  <!-- ── Standards ──────────────────────────────────────────────────────────── -->
+  <section class="section">
+    <h2 class="section-title">Standards &amp; Vocabularies</h2>
+    <div class="prose" style="margin-bottom: 16px;">
+      <p>Every catalogue record is produced in compliance with internationally recognised museum
+      documentation standards:</p>
+    </div>
+    <table class="standards-table">
+      <thead>
+        <tr>
+          <th>Standard</th>
+          <th>What it does</th>
+          <th>Where used</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="std-name">Object ID</td><td>ICOM nine-category minimum identification</td><td>Every artwork record</td></tr>
+        <tr><td class="std-name">CDWA</td><td>Cataloguing rules for art (J. Paul Getty Trust)</td><td>House style, field structure</td></tr>
+        <tr><td class="std-name">LIDO 1.1</td><td>XML exchange format for cultural objects</td><td>Export pipeline</td></tr>
+        <tr><td class="std-name">EODEM</td><td>LIDO profile for museum loans (ICOM-CC)</td><td>Export pipeline</td></tr>
+        <tr><td class="std-name">Getty AAT</td><td>Controlled vocabulary for object types &amp; materials</td><td>Artwork records</td></tr>
+        <tr><td class="std-name">Getty ULAN</td><td>Union List of Artist Names authority</td><td>Artist records</td></tr>
+        <tr><td class="std-name">Getty TGN</td><td>Thesaurus of Geographic Names</td><td>Provenance &amp; place records</td></tr>
+        <tr><td class="std-name">ICONCLASS</td><td>Iconographic subject classification</td><td>Subject records</td></tr>
+        <tr><td class="std-name">Wikidata</td><td>Cross-reference hub for all entities</td><td>Artist &amp; artwork records</td></tr>
+        <tr><td class="std-name">VIAF</td><td>Virtual International Authority File (artists)</td><td>Artist records</td></tr>
+        <tr><td class="std-name">ISNI / ORCID / RKD</td><td>Additional artist authority identifiers</td><td>Artist records</td></tr>
+        <tr><td class="std-name">Schema.org</td><td>Structured data for web discovery</td><td>Every page (JSON-LD)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ── Authority verification ────────────────────────────────────────────── -->
+  <section class="section">
+    <h2 class="section-title">Authority Verification</h2>
+    <div class="prose">
+      <p>Authority links have two statuses:</p>
+      <ul style="margin: 12px 0 12px 20px; color: var(--ink-soft); line-height: 1.9;">
+        <li><strong>Confirmed</strong> — the link has been verified by a human cataloguer against
+        primary sources (birth records, exhibition catalogues, museum databases, or direct correspondence
+        with rights holders). Confirmed links are treated as authoritative.</li>
+        <li><strong>Candidate (⚠)</strong> — the link was assigned by automated matching and awaits
+        human verification. Candidate links should not be treated as authoritative without independent
+        corroboration.</li>
+      </ul>
+      <p>The distinction is displayed prominently on every artist record.</p>
+    </div>
+  </section>
+
+  <!-- ── Data provenance ────────────────────────────────────────────────────── -->
+  <section class="section">
+    <h2 class="section-title">Data Provenance</h2>
+    <div class="prose">
+      <p>Catalogue data flows through a transparent pipeline:</p>
+    </div>
+    <div class="data-flow">
+      <div class="flow-step">
+        <div><strong>Airtable</strong><br><span style="font-size:0.8rem;color:var(--ink-faded);">Working layer — cataloguers edit</span></div>
+      </div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-step">
+        <div><strong>Canonical JSON</strong><br><span style="font-size:0.8rem;color:var(--ink-faded);">Versioned in Git</span></div>
+      </div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-step">
+        <div><strong>Artwork Passport</strong><br><span style="font-size:0.8rem;color:var(--ink-faded);">HTML · Schema.org · LIDO XML</span></div>
+      </div>
+    </div>
+    <div class="prose" style="margin-top:16px;">
+      <p>Every export run is committed as a Git version, creating an immutable audit trail of all
+      catalogue changes. This provides the same versioning guarantee as a museum collection management
+      system, without the infrastructure cost.</p>
+    </div>
+  </section>
+
+  <!-- ── Permanent identifiers ──────────────────────────────────────────────── -->
+  <section class="section">
+    <h2 class="section-title">Permanent Identifiers</h2>
+    <div class="prose">
+      <p>Every entity in the catalogue receives a stable identifier that is <strong>never reused,
+      never reassigned</strong>:</p>
+      <ul style="margin: 12px 0 12px 20px; color: var(--ink-soft); line-height: 1.9;">
+        <li>Artwork Passports: <span class="id-example">AP-YYYY-NNNNNN</span> (e.g. AP-2026-000001)</li>
+        <li>Artist records: <span class="id-example">ART-NAME-YYYY</span></li>
+      </ul>
+      <p>Passport IDs form stable URLs at <code style="font-family:'JetBrains Mono',monospace;font-size:0.85em;background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">arsaccordia.com/AP-YYYY-NNNNNN.html</code>.
+      These URLs are permanent and will never be redirected away without a canonical replacement being
+      issued first.</p>
+    </div>
+  </section>
+
+  <!-- ── Mission ────────────────────────────────────────────────────────────── -->
+  <section class="section">
+    <h2 class="section-title">Mission</h2>
+    <div class="prose">
+      <p>The long-term mission of Ars Accordia is to become the <strong>reference registry for European
+      art held in private and corporate collections</strong> — art that is culturally significant but
+      currently undocumented, unavailable to researchers, and unprotected against loss, theft, or
+      misattribution.</p>
+      <p>We believe that scholarly standards should not be reserved for public museums. A work of art
+      deserves the same rigour of identification whether it hangs in a national gallery or a corporate
+      boardroom. Ars Accordia brings museum-grade documentation practice to private collections at scale.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span class="footer-text">Ars Accordia · Scholarly Art Catalogue · arsaccordia.com</span>
+    <span class="footer-generated">Generated 2026-05-29 13:28 UTC</span>
+  </footer>
+
+</div>
+</body>
+</html>

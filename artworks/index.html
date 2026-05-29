@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ars Accordia — All Artwork Passports. Standards-compliant identity records for European art.">
+<title>Artwork Passports — Ars Accordia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:      #f6f1e6;
+    --paper-deep: #ebe3d1;
+    --ink:        #1c1814;
+    --ink-soft:   #4a4338;
+    --ink-faded:  #80766a;
+    --seal:       #6e1818;
+    --seal-light: #94342f;
+    --gold:       #8a6f2e;
+    --rule:       #c7bca5;
+    --grid:       rgba(110, 24, 24, 0.04);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 15px;
+    min-height: 100vh;
+    padding: 40px 20px 80px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+
+  .page { max-width: 960px; margin: 0 auto; position: relative; z-index: 2; }
+
+  .site-nav {
+    max-width: 960px; margin: 0 auto 40px; padding: 0 0 16px;
+    border-bottom: 1px solid var(--rule);
+    display: flex; align-items: center; gap: 32px;
+    position: relative; z-index: 2;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+  .nav-logo-mark {
+    width: 28px; height: 28px; background: var(--seal); border-radius: 3px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .nav-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 24px; margin-left: auto; }
+  .nav-link { font-size: 0.875rem; color: var(--ink-soft); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+  .nav-link:hover { color: var(--seal); }
+  .nav-link.active { color: var(--seal); border-bottom-color: var(--seal); }
+
+  .page-header {
+    border-bottom: 2px solid var(--seal);
+    padding-bottom: 24px;
+    margin-bottom: 36px;
+  }
+  .page-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 2rem; font-weight: 700; color: var(--ink);
+    letter-spacing: -0.01em; margin-bottom: 6px;
+  }
+  .page-subtitle { color: var(--ink-faded); font-size: 0.875rem; }
+
+  .passport-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .passport-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .passport-item:hover {
+    border-color: var(--seal);
+    box-shadow: 0 2px 8px rgba(110, 24, 24, 0.08);
+  }
+  .passport-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--seal);
+    flex-shrink: 0;
+    width: 140px;
+  }
+  .passport-thumb {
+    width: 48px;
+    height: 36px;
+    flex-shrink: 0;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  .passport-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .passport-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 500;
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .passport-artist {
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+    flex-shrink: 0;
+    max-width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .passport-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    flex-shrink: 0;
+    width: 80px;
+    text-align: right;
+  }
+  .passport-arrow { color: var(--seal); font-size: 0.8rem; flex-shrink: 0; }
+
+  .empty-state {
+    padding: 48px 24px;
+    text-align: center;
+    border: 1px dashed var(--rule);
+    border-radius: 4px;
+    color: var(--ink-faded);
+  }
+  .empty-state h2 { font-family: 'Fraunces', Georgia, serif; font-size: 1.25rem; margin-bottom: 8px; color: var(--ink-soft); }
+
+  .site-footer {
+    margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  .footer-text { font-size: 0.75rem; color: var(--ink-faded); }
+  .footer-generated { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--ink-faded); }
+
+  @media (max-width: 600px) {
+    .passport-artist, .passport-date { display: none; }
+    .passport-id { width: 110px; font-size: 0.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <rect x="3" y="3" width="6" height="6" fill="white" opacity="0.9"/>
+        <rect x="11" y="3" width="6" height="6" fill="white" opacity="0.5"/>
+        <rect x="3" y="11" width="6" height="6" fill="white" opacity="0.5"/>
+        <rect x="11" y="11" width="6" height="6" fill="white" opacity="0.75"/>
+      </svg>
+    </div>
+    <span class="nav-name">Ars Accordia</span>
+  </a>
+  <div class="nav-links">
+    <a href="../catalogue/" class="nav-link">Catalogue</a>
+    <a href="../artworks/" class="nav-link active">Artworks</a>
+    <a href="../artists/" class="nav-link">Artists</a>
+    <a href="../about/" class="nav-link">About</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <header class="page-header">
+    <h1 class="page-title">Artwork Passports</h1>
+    <p class="page-subtitle">
+      2 passports published ·
+      Standards-compliant identity records · Object ID · LIDO 1.1
+    </p>
+  </header>
+
+  
+  <div class="passport-list">
+    
+    <a href="../AP-2026-000002.html" class="passport-item">
+      <span class="passport-id">AP-2026-000002</span>
+      <div class="passport-thumb">
+        
+      </div>
+      <span class="passport-title">Juras noskana (Sea Mood)</span>
+      <span class="passport-artist">Herberts Silins</span>
+      <span class="passport-date">1979</span>
+      <span class="passport-arrow">View →</span>
+    </a>
+    
+    <a href="../AP-2026-000001.html" class="passport-item">
+      <span class="passport-id">AP-2026-000001</span>
+      <div class="passport-thumb">
+        
+      </div>
+      <span class="passport-title">Mona Lisa</span>
+      <span class="passport-artist">Leonardo da Vinci</span>
+      <span class="passport-date">c. 1503–1519</span>
+      <span class="passport-arrow">View →</span>
+    </a>
+    
+  </div>
+  
+
+  <footer class="site-footer">
+    <span class="footer-text">Ars Accordia · Artwork Passports · Object ID compliant</span>
+    <span class="footer-generated">Generated 2026-05-29 13:28 UTC</span>
+  </footer>
+
+</div>
+</body>
+</html>

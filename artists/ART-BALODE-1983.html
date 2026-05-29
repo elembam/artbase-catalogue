@@ -51,19 +51,26 @@
     mix-blend-mode: multiply;
   }
 
-  /* ── Top nav ─── */
-  .topnav {
+  /* ── Site nav ─── */
+  .site-nav {
     max-width: 880px;
     margin: 0 auto 24px;
+    padding: 0 0 16px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 32px;
     position: relative;
     z-index: 2;
-    font-size: 0.8125rem;
-    color: var(--ink-faded);
   }
-  .topnav a { color: var(--seal); text-decoration: none; }
-  .topnav a:hover { text-decoration: underline; }
-  .topnav .sep { margin: 0 6px; opacity: 0.5; }
-  @media print { .topnav { display: none; } }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+  .nav-logo-mark { width: 28px; height: 28px; background: var(--seal); border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+  .nav-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 24px; margin-left: auto; }
+  .nav-link { font-size: 0.875rem; color: var(--ink-soft); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+  .nav-link:hover { color: var(--seal); }
+  .nav-link.active { color: var(--seal); border-bottom-color: var(--seal); }
+  @media print { .site-nav { display: none; } }
 
   /* ── Profile card ─── */
   .profile {
@@ -315,10 +322,24 @@
 </head>
 <body>
 
-<nav class="topnav">
-  <a href="../index.html">← Ars Accordia Catalogue</a>
-  <span class="sep">/</span>
-  <span>Zane Balode</span>
+<nav class="site-nav">
+  <a href="../" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <rect x="3" y="3" width="6" height="6" fill="white" opacity="0.9"/>
+        <rect x="11" y="3" width="6" height="6" fill="white" opacity="0.5"/>
+        <rect x="3" y="11" width="6" height="6" fill="white" opacity="0.5"/>
+        <rect x="11" y="11" width="6" height="6" fill="white" opacity="0.75"/>
+      </svg>
+    </div>
+    <span class="nav-name">Ars Accordia</span>
+  </a>
+  <div class="nav-links">
+    <a href="../catalogue/" class="nav-link">Catalogue</a>
+    <a href="../artworks/" class="nav-link">Artworks</a>
+    <a href="../artists/" class="nav-link active">Artists</a>
+    <a href="../about/" class="nav-link">About</a>
+  </div>
 </nav>
 
 <div class="profile">

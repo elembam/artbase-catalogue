@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ars Accordia — Artists hub. Browse artists by country with authority records.">
+<title>Artists — Ars Accordia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:      #f6f1e6;
+    --paper-deep: #ebe3d1;
+    --ink:        #1c1814;
+    --ink-soft:   #4a4338;
+    --ink-faded:  #80766a;
+    --seal:       #6e1818;
+    --seal-light: #94342f;
+    --gold:       #8a6f2e;
+    --rule:       #c7bca5;
+    --grid:       rgba(110, 24, 24, 0.04);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 15px;
+    min-height: 100vh;
+    padding: 40px 20px 80px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+
+  .page { max-width: 960px; margin: 0 auto; position: relative; z-index: 2; }
+
+  .site-nav {
+    max-width: 960px; margin: 0 auto 40px; padding: 0 0 16px;
+    border-bottom: 1px solid var(--rule);
+    display: flex; align-items: center; gap: 32px;
+    position: relative; z-index: 2;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+  .nav-logo-mark { width: 28px; height: 28px; background: var(--seal); border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+  .nav-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 24px; margin-left: auto; }
+  .nav-link { font-size: 0.875rem; color: var(--ink-soft); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+  .nav-link:hover { color: var(--seal); }
+  .nav-link.active { color: var(--seal); border-bottom-color: var(--seal); }
+
+  .page-header {
+    border-bottom: 2px solid var(--seal);
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+  }
+  .page-title { font-family: 'Fraunces', Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; margin-bottom: 6px; }
+  .page-subtitle { color: var(--ink-faded); font-size: 0.875rem; line-height: 1.6; max-width: 560px; }
+
+  .section-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.1rem; font-weight: 600; color: var(--ink);
+    margin-bottom: 16px; padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .country-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .country-card {
+    display: block;
+    padding: 24px 20px;
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+  .country-card:hover {
+    border-color: var(--seal);
+    box-shadow: 0 4px 16px rgba(110, 24, 24, 0.1);
+    transform: translateY(-2px);
+  }
+  .country-flag { font-size: 2rem; margin-bottom: 10px; display: block; }
+  .country-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.1rem; font-weight: 600; color: var(--ink);
+    margin-bottom: 4px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .country-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem; color: var(--seal);
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 2px 7px;
+  }
+  .country-desc { font-size: 0.875rem; color: var(--ink-soft); margin-top: 6px; }
+
+  .notice {
+    padding: 16px 20px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  .notice a { color: var(--seal); text-decoration: none; }
+  .notice a:hover { text-decoration: underline; }
+
+  .site-footer {
+    margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  .footer-text { font-size: 0.75rem; color: var(--ink-faded); }
+  .footer-generated { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--ink-faded); }
+
+  @media (max-width: 600px) { .country-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <rect x="3" y="3" width="6" height="6" fill="white" opacity="0.9"/>
+        <rect x="11" y="3" width="6" height="6" fill="white" opacity="0.5"/>
+        <rect x="3" y="11" width="6" height="6" fill="white" opacity="0.5"/>
+        <rect x="11" y="11" width="6" height="6" fill="white" opacity="0.75"/>
+      </svg>
+    </div>
+    <span class="nav-name">Ars Accordia</span>
+  </a>
+  <div class="nav-links">
+    <a href="../catalogue/" class="nav-link">Catalogue</a>
+    <a href="../artworks/" class="nav-link">Artworks</a>
+    <a href="../artists/" class="nav-link active">Artists</a>
+    <a href="../about/" class="nav-link">About</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <header class="page-header">
+    <h1 class="page-title">Artists</h1>
+    <p class="page-subtitle">
+      Browse artists by country. Each artist record includes authority links to Wikidata,
+      Getty ULAN, VIAF, and other international registries. Individual profiles are available
+      for artists with confirmed Wikidata identifiers.
+    </p>
+  </header>
+
+  <div class="notice">
+    Individual artist profiles are accessible directly at
+    <code style="font-family:'JetBrains Mono',monospace;font-size:0.8em;background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">/artists/ART-XXX.html</code>.
+    Use the country pages below to browse A–Z, or visit the
+    <a href="../catalogue/">full catalogue</a> to see all artists with their artworks.
+  </div>
+
+  <section>
+    <h2 class="section-title">Browse by Country</h2>
+    
+    <div class="country-grid">
+      
+      <a href="latvia/" class="country-card">
+        <span class="country-flag">
+          🇱🇻
+          
+        </span>
+        <div class="country-name">
+          Latvian Artists
+          <span class="country-count">287</span>
+        </div>
+        <p class="country-desc">Browse Latvian artists A–Z with authority records.</p>
+      </a>
+      
+    </div>
+    
+  </section>
+
+  <footer class="site-footer">
+    <span class="footer-text">Ars Accordia · Artists Directory</span>
+    <span class="footer-generated">Generated 2026-05-29 13:28 UTC</span>
+  </footer>
+
+</div>
+</body>
+</html>
