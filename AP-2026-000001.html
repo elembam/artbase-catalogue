@@ -109,6 +109,12 @@
     text-transform: uppercase;
     color: var(--ink-faded);
   }
+  .header-mark .subtitle a {
+    color: inherit; text-decoration: none;
+  }
+  .header-mark .subtitle a:hover {
+    color: var(--seal);
+  }
   .header-mark .colophon {
     margin-top: 14px;
     font-family: 'Fraunces', serif;
@@ -263,6 +269,12 @@
     font-family: 'Public Sans', sans-serif;
     font-size: 10px; letter-spacing: 0.18em;
     text-transform: uppercase; color: var(--ink-faded);
+  }
+  .section-rubric a {
+    color: inherit; text-decoration: none;
+  }
+  .section-rubric a:hover {
+    color: var(--seal); text-decoration: underline;
   }
 
   /* ─── OBJECT ID ─── */
@@ -562,7 +574,7 @@
     <div class="header-mark">
       <div class="issuer">International Cultural Object Record</div>
       <h1 class="title">Artwork Passport</h1>
-      <div class="subtitle">Compliant with Object ID · CDWA · LIDO 1.1</div>
+      <div class="subtitle">Compliant with <a href="https://icom.museum/en/resources/standards-guidelines/objectid/" target="_blank" rel="noopener">Object ID</a> · <a href="https://www.getty.edu/research/publications/electronic_publications/cdwa/" target="_blank" rel="noopener">CDWA</a> · <a href="https://lido-schema.org/" target="_blank" rel="noopener">LIDO 1.1</a></div>
       <p class="colophon">
         A standards-based identity document for a work of art, linking authoritative
         references in international vocabularies and registries. Issued for cultural
@@ -570,7 +582,7 @@
       </p>
     </div>
     <div class="seal" aria-label="Issuing seal">
-      <div class="seal-text">Issued<br>under<br>Object ID</div>
+      <div class="seal-text">Issued<br>under<br><a href="https://icom.museum/en/resources/standards-guidelines/objectid/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Object ID</a></div>
       <div class="seal-id">AP-2026-000001</div>
       <div class="seal-year">MMXXVI</div>
     </div>
@@ -627,7 +639,7 @@
     <div class="section-header">
       <span class="section-number">§ 01</span>
       <h3 class="section-title">Object ID Record</h3>
-      <span class="section-rubric">Nine Categories · ICOM Standard</span>
+      <span class="section-rubric">Nine Categories · <a href="https://icom.museum/en/resources/standards-guidelines/objectid/" target="_blank" rel="noopener">ICOM Standard</a></span>
     </div>
     <div class="object-id">
       <div class="object-id-field">
@@ -756,7 +768,7 @@
     <div class="section-header">
       <span class="section-number">§ 03</span>
       <h3 class="section-title">Iconography</h3>
-      <span class="section-rubric">ICONCLASS — Subject Classification</span>
+      <span class="section-rubric"><a href="https://iconclass.org/" target="_blank" rel="noopener">ICONCLASS</a> — Subject Classification</span>
     </div>
     <div class="iconography">
       

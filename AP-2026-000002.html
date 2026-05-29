@@ -109,6 +109,12 @@
     text-transform: uppercase;
     color: var(--ink-faded);
   }
+  .header-mark .subtitle a {
+    color: inherit; text-decoration: none;
+  }
+  .header-mark .subtitle a:hover {
+    color: var(--seal);
+  }
   .header-mark .colophon {
     margin-top: 14px;
     font-family: 'Fraunces', serif;
@@ -263,6 +269,12 @@
     font-family: 'Public Sans', sans-serif;
     font-size: 10px; letter-spacing: 0.18em;
     text-transform: uppercase; color: var(--ink-faded);
+  }
+  .section-rubric a {
+    color: inherit; text-decoration: none;
+  }
+  .section-rubric a:hover {
+    color: var(--seal); text-decoration: underline;
   }
 
   /* ─── OBJECT ID ─── */
@@ -470,56 +482,29 @@
     .authority { break-inside: avoid; }
     .prov-event { break-inside: avoid; }
   }
-  .site-nav {
+  .topnav {
     max-width: 880px;
-    margin: 0 auto 24px;
-    padding: 0 0 16px;
-    border-bottom: 1px solid var(--rule);
+    margin: 0 auto 18px;
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--ink-faded);
     position: relative;
     z-index: 2;
   }
-  .nav-logo {
-    display: flex;
+  .topnav a {
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    color: var(--seal);
     text-decoration: none;
-    flex-shrink: 0;
+    font-weight: 500;
+    transition: opacity 0.15s;
   }
-  .nav-logo-mark {
-    width: 28px;
-    height: 28px;
-    background: var(--seal);
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .nav-name {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--ink);
-    letter-spacing: -0.01em;
-  }
-  .nav-links {
-    display: flex;
-    gap: 24px;
-    margin-left: auto;
-  }
-  .nav-link {
-    font-size: 0.875rem;
-    color: var(--ink-soft);
-    text-decoration: none;
-    padding: 4px 0;
-    border-bottom: 2px solid transparent;
-    transition: color 0.15s, border-color 0.15s;
-  }
-  .nav-link:hover { color: var(--seal); }
-  .nav-link.active { color: var(--seal); border-bottom-color: var(--seal); }
-  @media print { .site-nav { display: none; } }
+  .topnav a:hover { opacity: 0.75; }
+  .topnav-sep { color: var(--rule); }
+  @media print { .topnav { display: none; } }
 </style>
 <script type="application/ld+json">
 {
@@ -529,62 +514,39 @@
   "artform": "Painting",
   "creator": {
     "@type": "Person",
-    "birthDate": "1926-08-25",
-    "deathDate": "2001-03-04",
+    "birthDate": "1926",
+    "deathDate": "2001",
     "name": "Herberts Silins",
-    "nationality": {
-      "@type": "Country",
-      "name": "Latvia",
-      "sameAs": "https://www.wikidata.org/wiki/Q211"
-    },
+    "nationality": "Latvian",
     "sameAs": [
       "https://www.wikidata.org/wiki/Q23054868",
       "https://viaf.org/viaf/15148752166141201333"
     ]
   },
   "dateCreated": "1979",
-  "description": "Seascape; open sea with atmospheric sky (1979)",
-  "height": {
-    "@type": "Distance",
-    "name": "81.0 cm"
+  "description": "Seascape; open sea with atmospheric sky",
+  "identifier": "AP-2026-000002",
+  "locationCreated": {
+    "@type": "Organization",
+    "name": "Private collection"
   },
-  "identifier": {
-    "@type": "PropertyValue",
-    "propertyID": "Ars Accordia",
-    "value": "AP-2026-000002"
-  },
-  "inLanguage": "lv",
-  "mainEntityOfPage": "https://arsaccordia.com/AP-2026-000002.html",
   "name": "Juras noskana (Sea Mood)",
   "size": "81 x 81 cm",
-  "url": "https://arsaccordia.com/AP-2026-000002.html",
-  "width": {
-    "@type": "Distance",
-    "name": "81.0 cm"
-  }
+  "url": "https://arsaccordia.com/AP-2026-000002.html"
 }
 </script>
 </head>
 <body>
 
-<nav class="site-nav">
-  <a href="" class="nav-logo">
-    <div class="nav-logo-mark">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-        <rect x="3" y="3" width="6" height="6" fill="white" opacity="0.9"/>
-        <rect x="11" y="3" width="6" height="6" fill="white" opacity="0.5"/>
-        <rect x="3" y="11" width="6" height="6" fill="white" opacity="0.5"/>
-        <rect x="11" y="11" width="6" height="6" fill="white" opacity="0.75"/>
-      </svg>
-    </div>
-    <span class="nav-name">Ars Accordia</span>
+<nav class="topnav">
+  <a href="index.html">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Arsaccordia Catalogue
   </a>
-  <div class="nav-links">
-    <a href="catalogue/" class="nav-link">Catalogue</a>
-    <a href="artworks/" class="nav-link">Artworks</a>
-    <a href="artists/" class="nav-link">Artists</a>
-    <a href="about/" class="nav-link">About</a>
-  </div>
+  <span class="topnav-sep">/</span>
+  <span>AP-2026-000002</span>
 </nav>
 
 <article class="passport">
@@ -594,7 +556,7 @@
     <div class="header-mark">
       <div class="issuer">International Cultural Object Record</div>
       <h1 class="title">Artwork Passport</h1>
-      <div class="subtitle">Compliant with Object ID · CDWA · LIDO 1.1</div>
+      <div class="subtitle">Compliant with <a href="https://icom.museum/en/resources/standards-guidelines/objectid/" target="_blank" rel="noopener">Object ID</a> · <a href="https://www.getty.edu/research/publications/electronic_publications/cdwa/" target="_blank" rel="noopener">CDWA</a> · <a href="https://lido-schema.org/" target="_blank" rel="noopener">LIDO 1.1</a></div>
       <p class="colophon">
         A standards-based identity document for a work of art, linking authoritative
         references in international vocabularies and registries. Issued for cultural
@@ -602,7 +564,7 @@
       </p>
     </div>
     <div class="seal" aria-label="Issuing seal">
-      <div class="seal-text">Issued<br>under<br>Object ID</div>
+      <div class="seal-text">Issued<br>under<br><a href="https://icom.museum/en/resources/standards-guidelines/objectid/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Object ID</a></div>
       <div class="seal-id">AP-2026-000002</div>
       <div class="seal-year">MMXXVI</div>
     </div>
@@ -611,7 +573,7 @@
   <!-- META BAR -->
   <dl class="meta-bar">
     <div><dt>Passport ID</dt><dd>AP-2026-000002</dd></div>
-    <div><dt>Issued</dt><dd>2026-05-27</dd></div>
+    <div><dt>Issued</dt><dd>2026-05-29</dd></div>
     <div><dt>Version</dt><dd>1.0</dd></div>
     <div><dt>Visibility</dt><dd>Private</dd></div>
   </dl>
@@ -632,7 +594,7 @@
       <h2 class="work-title">Juras noskana (Sea Mood)</h2>
       
       <p class="work-artist">Herberts Silins</p>
-      <p class="work-artist-dates">Latvian, 1926-08-25 — 2001-03-04</p>
+      <p class="work-artist-dates">Latvian, 1926 — 2001</p>
       
       <dl class="tombstone-grid">
         
@@ -657,7 +619,7 @@
     <div class="section-header">
       <span class="section-number">§ 01</span>
       <h3 class="section-title">Object ID Record</h3>
-      <span class="section-rubric">Nine Categories · ICOM Standard</span>
+      <span class="section-rubric">Nine Categories · <a href="https://icom.museum/en/resources/standards-guidelines/objectid/" target="_blank" rel="noopener">ICOM Standard</a></span>
     </div>
     <div class="object-id">
       <div class="object-id-field">
@@ -666,10 +628,6 @@
         <div class="value">
           Painting
           
-          <div class="aat-link">
-            <a href="http://vocab.getty.edu/aat/300033618" target="_blank" rel="noopener">paintings (visual works)</a>
-          </div>
-          
         </div>
       </div>
       <div class="object-id-field">
@@ -677,16 +635,6 @@
         <div class="label">Materials &amp; Techniques</div>
         <div class="value">
           Oil on canvas
-          
-          <div class="aat-link">
-            
-            <a href="http://vocab.getty.edu/aat/300033799" target="_blank" rel="noopener">oil painting (technique)</a> · 
-            
-            <a href="http://vocab.getty.edu/aat/300015050" target="_blank" rel="noopener">oil paint (paint)</a> · 
-            
-            <a href="http://vocab.getty.edu/aat/300014078" target="_blank" rel="noopener">canvas</a>
-            
-          </div>
           
         </div>
       </div>
@@ -728,7 +676,7 @@
         <div class="label">Maker</div>
         <div class="value">
           
-          Herberts Silins (1926-08-25 — 2001-03-04)
+          Herberts Silins (1926 — 2001)
           
         </div>
       </div>
@@ -802,7 +750,7 @@
       <div class="value">
         Compliant with Object ID (ICOM), CDWA, and <a href="https://lido-schema.org/" target="_blank" rel="noopener">LIDO 1.1</a>.
       </div>
-      <div class="pid">AP-2026-000002 · v1 · 2026-05-27</div>
+      <div class="pid">AP-2026-000002 · v1 · 2026-05-29</div>
     </div>
   </footer>
 
