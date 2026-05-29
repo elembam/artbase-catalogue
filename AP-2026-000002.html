@@ -246,54 +246,79 @@
 
   /* ─── COMPLETENESS SCORE ─── */
   .completeness {
-    margin-top: 18px;
-    padding-top: 14px;
-    border-top: 1px solid var(--rule);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .completeness-bar-wrap {
-    flex: 1;
-    height: 5px;
+    margin-top: 20px;
+    padding: 16px 20px;
     background: var(--paper-deep);
-    border-radius: 3px;
-    overflow: hidden;
     border: 1px solid var(--rule);
+    border-radius: 4px;
   }
-  .completeness-bar {
-    height: 100%;
-    background: var(--seal);
-    border-radius: 3px;
-    transition: width 0.4s;
+  .completeness-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 12px;
   }
-  .completeness-label {
-    font-family: 'JetBrains Mono', monospace;
+  .completeness-title {
+    font-family: 'Public Sans', sans-serif;
     font-size: 10px;
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     color: var(--ink-faded);
-    white-space: nowrap;
-    letter-spacing: 0.05em;
+  }
+  .completeness-score {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+  .completeness-score-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .completeness-score-denom {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-faded);
   }
   .completeness-tag {
     font-size: 9px;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    padding: 2px 7px;
+    padding: 3px 9px;
     border-radius: 2px;
     background: var(--seal);
     color: #fff;
+    align-self: center;
   }
   .completeness-tag.partial {
     background: var(--gold);
     color: #fff;
   }
   .completeness-tag.draft {
-    background: var(--paper-deep);
+    background: transparent;
     color: var(--ink-faded);
     border: 1px solid var(--rule);
   }
+  .completeness-bar-wrap {
+    height: 8px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  .completeness-bar {
+    height: 100%;
+    background: var(--seal);
+    border-radius: 4px;
+    transition: width 0.4s;
+  }
+  .completeness-bar.partial { background: var(--gold); }
+  .completeness-bar.draft   { background: var(--ink-faded); }
 
   /* ─── SECTIONS ─── */
   .section {
@@ -682,13 +707,19 @@
       
       
       <div class="completeness">
-        <span class="completeness-label">Object ID 7/9</span>
-        <div class="completeness-bar-wrap">
-          <div class="completeness-bar" style="width:78%"></div>
+        <div class="completeness-header">
+          <span class="completeness-title">Object ID Completeness</span>
+          <div class="completeness-score">
+            <span class="completeness-score-num">7</span>
+            <span class="completeness-score-denom">/9</span>
+          </div>
+          
+          <span class="completeness-tag partial">Partial</span>
+          
         </div>
-        
-        <span class="completeness-tag partial">Partial</span>
-        
+        <div class="completeness-bar-wrap">
+          <div class="completeness-bar partial" style="width:78%"></div>
+        </div>
       </div>
 
     </div>
