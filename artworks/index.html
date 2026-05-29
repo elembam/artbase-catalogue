@@ -149,6 +149,56 @@
   }
   .passport-arrow { color: var(--seal); font-size: 0.8rem; flex-shrink: 0; }
 
+  .oid-score {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    width: 90px;
+  }
+  .oid-score-header {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+  }
+  .oid-score-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .oid-score-denom {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-faded);
+  }
+  .oid-bar-wrap {
+    width: 100%;
+    height: 4px;
+    background: var(--paper-deep);
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  .oid-bar { height: 100%; border-radius: 2px; }
+  .oid-bar.complete { background: var(--seal); }
+  .oid-bar.partial  { background: var(--gold); }
+  .oid-bar.draft    { background: var(--ink-faded); }
+  .oid-tag {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 1px 5px;
+    border-radius: 2px;
+    color: #fff;
+  }
+  .oid-tag.complete { background: var(--seal); }
+  .oid-tag.partial  { background: var(--gold); }
+  .oid-tag.draft    { background: var(--ink-faded); }
+
   .empty-state {
     padding: 48px 24px;
     text-align: center;
@@ -172,6 +222,8 @@
     .nav-link { font-size: 0.8rem; }
     .passport-artist, .passport-date { display: none; }
     .passport-id { width: 110px; font-size: 0.7rem; }
+    .oid-score { width: 72px; }
+    .oid-score-num { font-size: 14px; }
   }
 </style>
 </head>
@@ -218,6 +270,13 @@
       <span class="passport-title">Juras noskana (Sea Mood)</span>
       <span class="passport-artist">Herberts Silins</span>
       <span class="passport-date">1979</span>
+      <div class="oid-score">
+        <div class="oid-score-header">
+          <span class="oid-score-num">7</span><span class="oid-score-denom">/9</span>
+          <span class="oid-tag partial" style="margin-left:5px;">Partial</span>
+        </div>
+        <div class="oid-bar-wrap"><div class="oid-bar partial" style="width:78%"></div></div>
+      </div>
       <span class="passport-arrow">View →</span>
     </a>
     
@@ -229,6 +288,13 @@
       <span class="passport-title">Mona Lisa</span>
       <span class="passport-artist">Leonardo da Vinci</span>
       <span class="passport-date">c. 1503–1519</span>
+      <div class="oid-score">
+        <div class="oid-score-header">
+          <span class="oid-score-num">9</span><span class="oid-score-denom">/9</span>
+          <span class="oid-tag complete" style="margin-left:5px;">Complete</span>
+        </div>
+        <div class="oid-bar-wrap"><div class="oid-bar complete" style="width:100%"></div></div>
+      </div>
       <span class="passport-arrow">View →</span>
     </a>
     
