@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/110",
+  "airtable_id": "rec09XSB8f56BI9dq",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.382500Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Painting",
+    "object_type_aat": null,
+    "materials": "Oil on canvas",
+    "materials_aat": [],
+    "dimensions_display": "65 (h) x 53 (w) cm",
+    "height_cm": 65.0,
+    "width_cm": 53.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Portrait of Helena Cimze",
+    "subject": null,
+    "date_display": "1851",
+    "date_earliest": 1851,
+    "date_latest": 1851,
+    "maker_id": null,
+    "maker_display_name": "Janis Stanislavs Roze",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GL-13",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Painting Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/portrait-of-helena-cimze/fgE-Nl8852o3nA",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

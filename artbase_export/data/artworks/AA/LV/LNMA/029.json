@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/029",
+  "airtable_id": "recEhPPktAGZYhKSP",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.386948Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Painting",
+    "object_type_aat": null,
+    "materials": "Oil on canvas",
+    "materials_aat": [],
+    "dimensions_display": "101 (h) x 86 (w) cm",
+    "height_cm": 101.0,
+    "width_cm": 86.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "In Front of the Mirror",
+    "subject": null,
+    "date_display": "c. 1918–1920",
+    "date_earliest": 1918,
+    "date_latest": 1920,
+    "maker_id": null,
+    "maker_display_name": "Ģederts Eliass",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GL-4736",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Created circa 1918–1920. Latvian Painting Collection (18th – 1st Half of \nthe 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/in-front-of-the-mirror/qQE_b8ftHALayQ",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

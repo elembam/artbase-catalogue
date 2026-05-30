@@ -1,10 +1,10 @@
 {
   "artbase_id": "ART-RUNGIS-1893",
   "airtable_id": "recEfqad4CiJwVPH7",
-  "artbase_canonical_id": "ARJQ9BZY8A",
+  "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-29T14:06:15.699704Z",
+  "exported": "2026-05-30T17:59:39.586793Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Pēteris Ruņģis",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1893-02-23",
-      "precision": "day",
+      "value": "1893",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1967-02-23",
-      "precision": "day",
+      "value": "1967",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Bērzaune Parish",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q2899814",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Bauska",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q498256",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -119,8 +119,26 @@
     },
     "artbase_id": null
   },
-  "sources": [],
-  "source_refs": [],
+  "sources": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "source_type": "Gallery Artist Index",
+      "title": "Galerija Jēkabs — Artist Index. https://paintings.lv/artists/list. Retrieved 2026-05-30.",
+      "publisher": null,
+      "url": "https://paintings.lv/artists/list",
+      "publication_date": null,
+      "access_date": null,
+      "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
+      "license": null
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "role": null,
+      "accessed": null
+    }
+  ],
   "conflicts": [],
   "cataloguing": {
     "review_status": "draft",
@@ -131,109 +149,5 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian painter, art teacher (1893–1967)",
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
-    "wikidata_revision_id": 2349085383,
-    "manual_overrides": [],
-    "gallery_origin_attached": "2026-05-30"
-  },
-  "attestations": [
-    {
-      "source_id": "SRC-GALERIJA-JEKABS",
-      "role": "data_origin",
-      "url": "https://paintings.lv/artists/view/116",
-      "asserts": {
-        "name": "Pēteris RUŅĢIS",
-        "birth_year": 1893,
-        "death_year": 1967
-      },
-      "authoritative": false,
-      "retrieved": "2026-05-30"
-    }
-  ],
-  "source_ledger": {
-    "generated_at": "2026-05-30",
-    "origin": [
-      {
-        "source_id": "SRC-GALERIJA-JEKABS",
-        "name": "Galerija Jēkabs",
-        "type": "commercial_gallery",
-        "citable": false,
-        "url": "https://paintings.lv/artists/view/116",
-        "role": "data_origin"
-      }
-    ],
-    "authority": [
-      {
-        "source_id": "AUTH-WIKIDATA",
-        "name": "Wikidata",
-        "type": "authority_file",
-        "citable": true,
-        "url": "https://www.wikidata.org/wiki/Q134470673",
-        "id": "Q134470673",
-        "role": "authority_link"
-      },
-      {
-        "source_id": "AUTH-VIAF",
-        "name": "VIAF",
-        "type": "authority_file",
-        "citable": true,
-        "url": "https://viaf.org/viaf/121146936771413782187/",
-        "id": "121146936771413782187",
-        "role": "authority_link"
-      }
-    ],
-    "provenance": [],
-    "verification": {
-      "status": "confirmed",
-      "basis": "authority",
-      "confirmed_by": [
-        "AUTH-WIKIDATA",
-        "AUTH-VIAF"
-      ]
-    },
-    "validation": {
-      "level1": {
-        "level": "FULLY_CORROBORATED",
-        "authority": [
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF"
-        ],
-        "validated_by": "automated",
-        "validated_at": "2026-05-30"
-      },
-      "level2": {
-        "level": "PENDING",
-        "authority": [],
-        "validated_by": "automated",
-        "validated_at": null
-      },
-      "conformance_badge": "amber"
-    },
-    "field_provenance": {
-      "birth_year": {
-        "value": 1893,
-        "sources": [
-          "SRC-GALERIJA-JEKABS",
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF"
-        ],
-        "has_citable_source": true,
-        "discrepancy": false
-      },
-      "death_year": {
-        "value": 1967,
-        "sources": [
-          "SRC-GALERIJA-JEKABS",
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF"
-        ],
-        "has_citable_source": true,
-        "discrepancy": false
-      }
-    },
-    "legacy_status": "confirmed"
-  }
+  "_schema": "artbase:artist:v1"
 }

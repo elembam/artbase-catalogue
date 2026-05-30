@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/206",
+  "airtable_id": "reco9v78bNiEa4nN1",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.404351Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Oil on paper",
+    "materials_aat": [],
+    "dimensions_display": "37.5 (h) x 50 (w) cm",
+    "height_cm": 37.5,
+    "width_cm": 50.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Bathing (Southern Women)",
+    "subject": null,
+    "date_display": "1934",
+    "date_earliest": 1934,
+    "date_latest": 1934,
+    "maker_id": null,
+    "maker_display_name": "Jānis Tīdemanis",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-7582",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Google Arts: https://artsandculture.google.com/asset/bathing-southern-women/QQFFML2N32ZCfQ",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

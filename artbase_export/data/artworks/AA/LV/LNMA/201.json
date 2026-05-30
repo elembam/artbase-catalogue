@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/201",
+  "airtable_id": "rectYruWu7CZ5nN07",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.405671Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": null,
+    "object_type_aat": null,
+    "materials": null,
+    "materials_aat": [],
+    "dimensions_display": null,
+    "height_cm": null,
+    "width_cm": null,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Museum's History 2",
+    "subject": null,
+    "date_display": null,
+    "date_earliest": null,
+    "date_latest": null,
+    "maker_id": null,
+    "maker_display_name": null,
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": null,
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Google Arts: https://artsandculture.google.com/asset/museum-s-history-2/HQEoaOmPPXx5BA",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

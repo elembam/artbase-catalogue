@@ -1,10 +1,10 @@
 {
   "artbase_id": "ART-SPRENKS-1898",
   "airtable_id": "reczBQcgvS4sBBq5g",
-  "artbase_canonical_id": "ARXRM4GXRS",
+  "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-29T14:06:15.721473Z",
+  "exported": "2026-05-30T17:59:39.609791Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Pauls Šprenks",
@@ -119,8 +119,26 @@
     },
     "artbase_id": null
   },
-  "sources": [],
-  "source_refs": [],
+  "sources": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "source_type": "Gallery Artist Index",
+      "title": "Galerija Jēkabs — Artist Index. https://paintings.lv/artists/list. Retrieved 2026-05-30.",
+      "publisher": null,
+      "url": "https://paintings.lv/artists/list",
+      "publication_date": null,
+      "access_date": null,
+      "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
+      "license": null
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "role": null,
+      "accessed": null
+    }
+  ],
   "conflicts": [],
   "cataloguing": {
     "review_status": "draft",
@@ -132,76 +150,5 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "attestations": [
-    {
-      "source_id": "SRC-GALERIJA-JEKABS",
-      "role": "data_origin",
-      "url": "https://paintings.lv/artists/view/215",
-      "asserts": {
-        "name": "Pauls ŠPRENKS",
-        "birth_year": 1898,
-        "death_year": 1988
-      },
-      "authoritative": false,
-      "retrieved": "2026-05-30"
-    }
-  ],
-  "_meta": {
-    "gallery_origin_attached": "2026-05-30"
-  },
-  "source_ledger": {
-    "generated_at": "2026-05-30",
-    "origin": [
-      {
-        "source_id": "SRC-GALERIJA-JEKABS",
-        "name": "Galerija Jēkabs",
-        "type": "commercial_gallery",
-        "citable": false,
-        "url": "https://paintings.lv/artists/view/215",
-        "role": "data_origin"
-      }
-    ],
-    "authority": [],
-    "provenance": [],
-    "verification": {
-      "status": "candidate",
-      "basis": "origin_only",
-      "confirmed_by": []
-    },
-    "validation": {
-      "level1": {
-        "level": "ENTITY_SUPPLIED_ONLY",
-        "authority": [],
-        "validated_by": "automated",
-        "validated_at": "2026-05-30"
-      },
-      "level2": {
-        "level": "PENDING",
-        "authority": [],
-        "validated_by": "automated",
-        "validated_at": null
-      },
-      "conformance_badge": "grey"
-    },
-    "field_provenance": {
-      "birth_year": {
-        "value": 1898,
-        "sources": [
-          "SRC-GALERIJA-JEKABS"
-        ],
-        "has_citable_source": false,
-        "discrepancy": false
-      },
-      "death_year": {
-        "value": 1988,
-        "sources": [
-          "SRC-GALERIJA-JEKABS"
-        ],
-        "has_citable_source": false,
-        "discrepancy": false
-      }
-    },
-    "legacy_status": "candidate"
-  }
+  "_schema": "artbase:artist:v1"
 }

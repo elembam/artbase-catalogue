@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/083",
+  "airtable_id": "recB7AT2kmhhOdF6D",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.385845Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Painting",
+    "object_type_aat": null,
+    "materials": "Oil on canvas",
+    "materials_aat": [],
+    "dimensions_display": "100 (h) x 82 (w) cm",
+    "height_cm": 100.0,
+    "width_cm": 82.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Three Women on the Streets of Baghdad",
+    "subject": null,
+    "date_display": "1919",
+    "date_earliest": 1919,
+    "date_latest": 1919,
+    "maker_id": null,
+    "maker_display_name": "Jāzeps Grosvalds",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GL-350",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Painting Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/three-women-on-the-streets-of-baghdad/NwGit1UP6Egm2g",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

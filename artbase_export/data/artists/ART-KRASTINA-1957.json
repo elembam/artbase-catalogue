@@ -1,10 +1,10 @@
 {
   "artbase_id": "ART-KRASTINA-1957",
   "airtable_id": "recbzFAXZrGWaRzeR",
-  "artbase_canonical_id": "ARZQMVK754",
+  "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-29T14:06:15.711285Z",
+  "exported": "2026-05-30T17:59:39.599823Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Sandra Krastiņa",
@@ -29,9 +29,9 @@
       "notes": null
     },
     "birth_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
@@ -119,8 +119,26 @@
     },
     "artbase_id": null
   },
-  "sources": [],
-  "source_refs": [],
+  "sources": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "source_type": "Gallery Artist Index",
+      "title": "Galerija Jēkabs — Artist Index. https://paintings.lv/artists/list. Retrieved 2026-05-30.",
+      "publisher": null,
+      "url": "https://paintings.lv/artists/list",
+      "publication_date": null,
+      "access_date": null,
+      "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
+      "license": null
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "role": null,
+      "accessed": null
+    }
+  ],
   "conflicts": [],
   "cataloguing": {
     "review_status": "draft",
@@ -132,87 +150,5 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian painter",
-  "description_lv": "latviešu gleznotāja",
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
-    "wikidata_revision_id": 2450563978,
-    "manual_overrides": [],
-    "gallery_origin_attached": "2026-05-30"
-  },
-  "attestations": [
-    {
-      "source_id": "SRC-GALERIJA-JEKABS",
-      "role": "data_origin",
-      "url": "https://paintings.lv/artists/view/370",
-      "asserts": {
-        "name": "Sandra KRASTIŅA",
-        "birth_year": 1957
-      },
-      "authoritative": false,
-      "retrieved": "2026-05-30"
-    }
-  ],
-  "source_ledger": {
-    "generated_at": "2026-05-30",
-    "origin": [
-      {
-        "source_id": "SRC-GALERIJA-JEKABS",
-        "name": "Galerija Jēkabs",
-        "type": "commercial_gallery",
-        "citable": false,
-        "url": "https://paintings.lv/artists/view/370",
-        "role": "data_origin"
-      }
-    ],
-    "authority": [
-      {
-        "source_id": "AUTH-WIKIDATA",
-        "name": "Wikidata",
-        "type": "authority_file",
-        "citable": true,
-        "url": "https://www.wikidata.org/wiki/Q12672317",
-        "id": "Q12672317",
-        "role": "authority_link"
-      }
-    ],
-    "provenance": [],
-    "verification": {
-      "status": "confirmed",
-      "basis": "authority",
-      "confirmed_by": [
-        "AUTH-WIKIDATA"
-      ]
-    },
-    "validation": {
-      "level1": {
-        "level": "FULLY_CORROBORATED",
-        "authority": [
-          "AUTH-WIKIDATA"
-        ],
-        "validated_by": "automated",
-        "validated_at": "2026-05-30"
-      },
-      "level2": {
-        "level": "PENDING",
-        "authority": [],
-        "validated_by": "automated",
-        "validated_at": null
-      },
-      "conformance_badge": "amber"
-    },
-    "field_provenance": {
-      "birth_year": {
-        "value": 1957,
-        "sources": [
-          "SRC-GALERIJA-JEKABS",
-          "AUTH-WIKIDATA"
-        ],
-        "has_citable_source": true,
-        "discrepancy": false
-      }
-    },
-    "legacy_status": "confirmed"
-  }
+  "_schema": "artbase:artist:v1"
 }

@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/022",
+  "airtable_id": "rec33UXt6Kb3nnhYv",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.383183Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Gouache",
+    "object_type_aat": null,
+    "materials": "Gouache on paper",
+    "materials_aat": [],
+    "dimensions_display": "45.7 (h) x 30.4 (w) cm",
+    "height_cm": 45.7,
+    "width_cm": 30.4,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Temptation",
+    "subject": null,
+    "date_display": "1901",
+    "date_earliest": 1901,
+    "date_latest": 1901,
+    "maker_id": null,
+    "maker_display_name": "Janis Rozentāls",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-4250",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Graphic Art Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/temptation/3gGHRHjDSxdBrg",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

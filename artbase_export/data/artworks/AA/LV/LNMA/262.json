@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/262",
+  "airtable_id": "recmMrNYKNe7H4nx2",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.403528Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Pencil on paper",
+    "materials_aat": [],
+    "dimensions_display": "18.5 (h) x 15.2 (w) cm",
+    "height_cm": 18.5,
+    "width_cm": 15.2,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Getting into the Car. Drawing from the series The City",
+    "subject": null,
+    "date_display": "c. 1912–1913",
+    "date_earliest": 1912,
+    "date_latest": 1913,
+    "maker_id": null,
+    "maker_display_name": "Alfrēds Plīte-Pleita",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-2814",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Created circa 1912–1913. Latvian Graphic Art Collection (18th – 1st Half of \nthe 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/getting-into-the-car-drawing-from-the-series-the-city/mQF2o7j9TiLVow",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/031",
+  "airtable_id": "recqU0FwkiNK3TYTv",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.404877Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Painting",
+    "object_type_aat": null,
+    "materials": "Oil on canvas",
+    "materials_aat": [],
+    "dimensions_display": "85 (h) x 66.5 (w) cm",
+    "height_cm": 85.0,
+    "width_cm": 66.5,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Woman with a Fan in a Bar",
+    "subject": null,
+    "date_display": "c. 1918–1920",
+    "date_earliest": 1918,
+    "date_latest": 1920,
+    "maker_id": null,
+    "maker_display_name": "Ģederts Eliass",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GL-4734",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Created circa 1918–1920. Latvian Painting Collection (18th – 1st Half of \nthe 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/woman-with-a-fan-in-a-bar/XQF6NUmuVKDFbQ",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

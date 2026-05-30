@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/183",
+  "airtable_id": "rec7Isgcvl1pmNiHW",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.384502Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Watercolour",
+    "object_type_aat": null,
+    "materials": "Watercolour and gouache on paper",
+    "materials_aat": [],
+    "dimensions_display": "22 (h) x 16,5 (w) cm",
+    "height_cm": 22.0,
+    "width_cm": 16.5,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Latvian Woman. From the Album “Scenes From Latvian Life”",
+    "subject": null,
+    "date_display": "1896",
+    "date_earliest": 1896,
+    "date_latest": 1896,
+    "maker_id": null,
+    "maker_display_name": "Janis Rozentāls",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-3875/11",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Graphic Art Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/latvian-woman-from-the-album-“scenes-from-latvian-life”/egEDqzZ7AcT3cg",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

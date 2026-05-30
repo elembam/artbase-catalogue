@@ -1,10 +1,10 @@
 {
   "artbase_id": "ART-KUPCIS-1928",
   "airtable_id": "recOzC6LWKvNQEuwn",
-  "artbase_canonical_id": "ARRRY2QDF7",
+  "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-29T14:06:15.706591Z",
+  "exported": "2026-05-30T17:59:39.592950Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Laimonis Kupcis",
@@ -132,64 +132,5 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "source_ledger": {
-    "generated_at": "2026-05-30",
-    "origin": [
-      {
-        "source_id": "SRC-PLATFORM-STAFF",
-        "name": "Ars Accordia Cataloguing Staff",
-        "type": "platform_staff",
-        "citable": false,
-        "url": null,
-        "role": "data_origin"
-      }
-    ],
-    "authority": [],
-    "provenance": [],
-    "verification": {
-      "status": "candidate",
-      "basis": "origin_only",
-      "confirmed_by": []
-    },
-    "validation": {
-      "level1": {
-        "level": "ENTITY_SUPPLIED_ONLY",
-        "authority": [],
-        "validated_by": "automated",
-        "validated_at": "2026-05-30"
-      },
-      "level2": {
-        "level": "PENDING",
-        "authority": [],
-        "validated_by": "automated",
-        "validated_at": null
-      },
-      "conformance_badge": "grey"
-    },
-    "field_provenance": {
-      "birth_year": {
-        "value": 1928,
-        "sources": [],
-        "has_citable_source": false,
-        "discrepancy": false
-      },
-      "death_year": {
-        "value": 1976,
-        "sources": [],
-        "has_citable_source": false,
-        "discrepancy": false
-      }
-    },
-    "legacy_status": "candidate"
-  },
-  "attestations": [
-    {
-      "source_id": "SRC-PLATFORM-STAFF",
-      "role": "data_origin",
-      "authoritative": false,
-      "retrieved": "2026-05-30",
-      "note": "Manually catalogued by Ars Accordia staff. Requires authority corroboration for confirmed status."
-    }
-  ]
+  "_schema": "artbase:artist:v1"
 }

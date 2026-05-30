@@ -1,10 +1,10 @@
 {
   "artbase_id": "ART-ARTUMS-1908",
   "airtable_id": "recPLyVzbH8TvQ0AV",
-  "artbase_canonical_id": "ARF2BAF56F",
+  "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-29T14:06:15.706747Z",
+  "exported": "2026-05-30T17:59:39.593216Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Ansis Artums",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1908-01-15",
-      "precision": "day",
+      "value": "1908",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1997-01-13",
-      "precision": "day",
+      "value": "1997",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Tukums",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q636935",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -51,7 +51,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": "Ansis Artums was a Latvian landscape painter and master of still life, who worked in oil painting technique. He spent most of his life in Tukums. Artums is most widely known for his paintings of spring and summer [andscapes, blooming gardens, flower Vases, landscapes of Tukums, blooming chestnut trees, lilacs, and fritillaries."
+    "biography_summary": null
   },
   "authority_links": {
     "wikidata": {
@@ -119,8 +119,26 @@
     },
     "artbase_id": null
   },
-  "sources": [],
-  "source_refs": [],
+  "sources": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "source_type": "Gallery Artist Index",
+      "title": "Galerija Jēkabs — Artist Index. https://paintings.lv/artists/list. Retrieved 2026-05-30.",
+      "publisher": null,
+      "url": "https://paintings.lv/artists/list",
+      "publication_date": null,
+      "access_date": null,
+      "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
+      "license": null
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "role": null,
+      "accessed": null
+    }
+  ],
   "conflicts": [],
   "cataloguing": {
     "review_status": "draft",
@@ -129,134 +147,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "image": {
-    "commons_filename": "Ansis Artums 1933.g.jpg",
-    "commons_url": "https://commons.wikimedia.org/wiki/File:Ansis_Artums_1933.g.jpg",
-    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ansis_Artums_1933.g.jpg?width=400"
-  },
-  "description_en": "Latvian painter (1908-1997)",
-  "education": [
-    {
-      "label": "Art Academy of Latvia",
-      "wikidata_id": "Q2607021",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
-    "wikidata_revision_id": 2494184990,
-    "manual_overrides": [],
-    "gallery_origin_attached": "2026-05-30"
-  },
-  "attestations": [
-    {
-      "source_id": "SRC-GALERIJA-JEKABS",
-      "role": "data_origin",
-      "url": "https://paintings.lv/artists/view/40",
-      "asserts": {
-        "name": "Ansis ARTUMS",
-        "birth_year": 1908,
-        "death_year": 1997
-      },
-      "authoritative": false,
-      "retrieved": "2026-05-30"
-    }
-  ],
-  "source_ledger": {
-    "generated_at": "2026-05-30",
-    "origin": [
-      {
-        "source_id": "SRC-GALERIJA-JEKABS",
-        "name": "Galerija Jēkabs",
-        "type": "commercial_gallery",
-        "citable": false,
-        "url": "https://paintings.lv/artists/view/40",
-        "role": "data_origin"
-      }
-    ],
-    "authority": [
-      {
-        "source_id": "AUTH-WIKIDATA",
-        "name": "Wikidata",
-        "type": "authority_file",
-        "citable": true,
-        "url": "https://www.wikidata.org/wiki/Q17593695",
-        "id": "Q17593695",
-        "role": "authority_link"
-      },
-      {
-        "source_id": "AUTH-VIAF",
-        "name": "VIAF",
-        "type": "authority_file",
-        "citable": true,
-        "url": "https://viaf.org/viaf/96577351/",
-        "id": "96577351",
-        "role": "authority_link"
-      },
-      {
-        "source_id": "AUTH-ULAN",
-        "name": "Getty ULAN",
-        "type": "authority_file",
-        "citable": true,
-        "url": "http://vocab.getty.edu/page/ulan/500121468",
-        "id": "500121468",
-        "role": "authority_link"
-      }
-    ],
-    "provenance": [],
-    "verification": {
-      "status": "confirmed",
-      "basis": "authority",
-      "confirmed_by": [
-        "AUTH-WIKIDATA",
-        "AUTH-VIAF",
-        "AUTH-ULAN"
-      ]
-    },
-    "validation": {
-      "level1": {
-        "level": "FULLY_CORROBORATED",
-        "authority": [
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF",
-          "AUTH-ULAN"
-        ],
-        "validated_by": "automated",
-        "validated_at": "2026-05-30"
-      },
-      "level2": {
-        "level": "PENDING",
-        "authority": [],
-        "validated_by": "automated",
-        "validated_at": null
-      },
-      "conformance_badge": "amber"
-    },
-    "field_provenance": {
-      "birth_year": {
-        "value": 1908,
-        "sources": [
-          "SRC-GALERIJA-JEKABS",
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF",
-          "AUTH-ULAN"
-        ],
-        "has_citable_source": true,
-        "discrepancy": false
-      },
-      "death_year": {
-        "value": 1997,
-        "sources": [
-          "SRC-GALERIJA-JEKABS",
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF",
-          "AUTH-ULAN"
-        ],
-        "has_citable_source": true,
-        "discrepancy": false
-      }
-    },
-    "legacy_status": "confirmed"
-  }
+  "_schema": "artbase:artist:v1"
 }

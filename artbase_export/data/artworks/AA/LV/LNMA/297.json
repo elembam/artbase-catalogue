@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/297",
+  "airtable_id": "recoKwjZoSKz6lLEu",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.404454Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Indian ink on paper",
+    "materials_aat": [],
+    "dimensions_display": "17,3 (h) x 12,3 (w) cm",
+    "height_cm": 17.3,
+    "width_cm": 12.3,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Don't Forget Your Mother at the Last Moment. From the Series \"Red Laughter\"",
+    "subject": null,
+    "date_display": "1930",
+    "date_earliest": 1930,
+    "date_latest": 1930,
+    "maker_id": null,
+    "maker_display_name": "Kārlis Padegs",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-942",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Graphic Art Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/don-t-forget-your-mother-at-the-last-moment-from-the-series-red-laughter/fwH1hs58qdtS7A",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

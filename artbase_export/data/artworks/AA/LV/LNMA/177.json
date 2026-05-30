@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/177",
+  "airtable_id": "recrjQf4tOsxZ23GG",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.405254Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Watercolour",
+    "object_type_aat": null,
+    "materials": "Watercolour on paper",
+    "materials_aat": [],
+    "dimensions_display": "37 (h) x 47 (w) cm",
+    "height_cm": 37.0,
+    "width_cm": 47.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Flower Seller",
+    "subject": null,
+    "date_display": "1930–1939",
+    "date_earliest": 1930,
+    "date_latest": 1939,
+    "maker_id": null,
+    "maker_display_name": "Jānis Tīdemanis",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-6364",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Created circa 1930s. Latvian Graphic Art Collection (18th – 1st Half of the \n20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/flower-seller/yQFy8ECanuIWJw",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/288",
+  "airtable_id": "rec83H5tN1DGeIx6p",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.384716Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Pencil on paper",
+    "materials_aat": [],
+    "dimensions_display": "25.2 (h) x 19.5 (w) cm",
+    "height_cm": 25.2,
+    "width_cm": 19.5,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Herta Reading",
+    "subject": null,
+    "date_display": "1913",
+    "date_earliest": 1913,
+    "date_latest": 1913,
+    "maker_id": null,
+    "maker_display_name": "Alfrēds Plīte-Pleita",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-1193",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Graphic Art Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/herta-reading/vAGFFcZb3lgMhg",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

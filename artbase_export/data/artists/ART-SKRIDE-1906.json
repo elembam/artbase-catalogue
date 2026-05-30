@@ -1,10 +1,10 @@
 {
   "artbase_id": "ART-SKRIDE-1906",
   "airtable_id": "rec8R4NKjeEB9gU1K",
-  "artbase_canonical_id": "ARH2YKSV03",
+  "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-29T14:06:15.696210Z",
+  "exported": "2026-05-30T17:59:39.583515Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Ārijs Skride",
@@ -15,23 +15,23 @@
   },
   "life": {
     "birth_date": {
-      "value": "1906-09-24",
-      "precision": "day",
+      "value": "1906",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1987-11-22",
-      "precision": "day",
+      "value": "1987",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Madona Municipality",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q2198472",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
@@ -51,7 +51,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": "Ārijs Skride (1906—1987) bija latviešu gleznotājs, viens no Vilhelma Purvīša ainavu gleznošanas skolas pārstāvjiem."
+    "biography_summary": null
   },
   "authority_links": {
     "wikidata": {
@@ -119,8 +119,26 @@
     },
     "artbase_id": null
   },
-  "sources": [],
-  "source_refs": [],
+  "sources": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "source_type": "Gallery Artist Index",
+      "title": "Galerija Jēkabs — Artist Index. https://paintings.lv/artists/list. Retrieved 2026-05-30.",
+      "publisher": null,
+      "url": "https://paintings.lv/artists/list",
+      "publication_date": null,
+      "access_date": null,
+      "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
+      "license": null
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "role": null,
+      "accessed": null
+    }
+  ],
   "conflicts": [],
   "cataloguing": {
     "review_status": "draft",
@@ -129,122 +147,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Russian painter",
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
-    "wikidata_revision_id": 2378647354,
-    "manual_overrides": [],
-    "gallery_origin_attached": "2026-05-30"
-  },
-  "attestations": [
-    {
-      "source_id": "SRC-GALERIJA-JEKABS",
-      "role": "data_origin",
-      "url": "https://paintings.lv/artists/view/94",
-      "asserts": {
-        "name": "Ārijs SKRIDE",
-        "birth_year": 1906,
-        "death_year": 1987
-      },
-      "authoritative": false,
-      "retrieved": "2026-05-30"
-    }
-  ],
-  "source_ledger": {
-    "generated_at": "2026-05-30",
-    "origin": [
-      {
-        "source_id": "SRC-GALERIJA-JEKABS",
-        "name": "Galerija Jēkabs",
-        "type": "commercial_gallery",
-        "citable": false,
-        "url": "https://paintings.lv/artists/view/94",
-        "role": "data_origin"
-      }
-    ],
-    "authority": [
-      {
-        "source_id": "AUTH-WIKIDATA",
-        "name": "Wikidata",
-        "type": "authority_file",
-        "citable": true,
-        "url": "https://www.wikidata.org/wiki/Q16698387",
-        "id": "Q16698387",
-        "role": "authority_link"
-      },
-      {
-        "source_id": "AUTH-VIAF",
-        "name": "VIAF",
-        "type": "authority_file",
-        "citable": true,
-        "url": "https://viaf.org/viaf/62558735/",
-        "id": "62558735",
-        "role": "authority_link"
-      },
-      {
-        "source_id": "AUTH-ULAN",
-        "name": "Getty ULAN",
-        "type": "authority_file",
-        "citable": true,
-        "url": "http://vocab.getty.edu/page/ulan/500121457",
-        "id": "500121457",
-        "role": "authority_link"
-      }
-    ],
-    "provenance": [],
-    "verification": {
-      "status": "confirmed",
-      "basis": "authority",
-      "confirmed_by": [
-        "AUTH-WIKIDATA",
-        "AUTH-VIAF",
-        "AUTH-ULAN"
-      ]
-    },
-    "validation": {
-      "level1": {
-        "level": "FULLY_CORROBORATED",
-        "authority": [
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF",
-          "AUTH-ULAN"
-        ],
-        "validated_by": "automated",
-        "validated_at": "2026-05-30"
-      },
-      "level2": {
-        "level": "PENDING",
-        "authority": [],
-        "validated_by": "automated",
-        "validated_at": null
-      },
-      "conformance_badge": "amber"
-    },
-    "field_provenance": {
-      "birth_year": {
-        "value": 1906,
-        "sources": [
-          "SRC-GALERIJA-JEKABS",
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF",
-          "AUTH-ULAN"
-        ],
-        "has_citable_source": true,
-        "discrepancy": false
-      },
-      "death_year": {
-        "value": 1987,
-        "sources": [
-          "SRC-GALERIJA-JEKABS",
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF",
-          "AUTH-ULAN"
-        ],
-        "has_citable_source": true,
-        "discrepancy": false
-      }
-    },
-    "legacy_status": "confirmed"
-  }
+  "_schema": "artbase:artist:v1"
 }

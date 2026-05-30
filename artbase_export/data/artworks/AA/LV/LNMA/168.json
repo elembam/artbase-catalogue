@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/168",
+  "airtable_id": "recNW4QkPQHUFwmic",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.393193Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Etching",
+    "object_type_aat": null,
+    "materials": "Etching on paper",
+    "materials_aat": [],
+    "dimensions_display": "86,5 (h) x 62 (w) cm",
+    "height_cm": 86.5,
+    "width_cm": 62.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Thunder Riding. From the Series “What the Forests of Latvia are Whispering”",
+    "subject": null,
+    "date_display": "c. 1910–1911",
+    "date_earliest": 1910,
+    "date_latest": 1911,
+    "maker_id": null,
+    "maker_display_name": "Rihards Zariņš",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GR-339",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Created circa 1910–1911. Latvian Graphic Art Collection (18th – 1st Half of \nthe 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/thunder-riding-from-the-series-“what-the-forests-of-latvia-are-whispering”/-wEYcbWAqOV35g",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

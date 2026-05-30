@@ -1,10 +1,10 @@
 {
   "artbase_id": "ART-VIDBERGS-1890",
   "airtable_id": "rec11r6IEc4zWZoeA",
-  "artbase_canonical_id": "AR2E2JEGX2",
+  "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-29T14:06:15.691538Z",
+  "exported": "2026-05-30T17:59:39.578725Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Sigismunds Vidbergs",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1890-04-29",
-      "precision": "day",
+      "value": "1890",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1970-01-31",
-      "precision": "day",
+      "value": "1970",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Jelgava",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q179830",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "New York City",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q60",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -51,7 +51,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": "Sigismunds Vidbergs was a Latvian artist."
+    "biography_summary": null
   },
   "authority_links": {
     "wikidata": {
@@ -119,8 +119,26 @@
     },
     "artbase_id": null
   },
-  "sources": [],
-  "source_refs": [],
+  "sources": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "source_type": "Gallery Artist Index",
+      "title": "Galerija Jēkabs — Artist Index. https://paintings.lv/artists/list. Retrieved 2026-05-30.",
+      "publisher": null,
+      "url": "https://paintings.lv/artists/list",
+      "publication_date": null,
+      "access_date": null,
+      "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
+      "license": null
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "role": null,
+      "accessed": null
+    }
+  ],
   "conflicts": [],
   "cataloguing": {
     "review_status": "draft",
@@ -129,130 +147,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian graphic artist and painter",
-  "description_lv": "bijušais Latvijas grafiķis un gleznotājs",
-  "education": [
-    {
-      "label": "Saint Petersburg Stieglitz State Academy of Art and Design",
-      "wikidata_id": "Q2652597",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
-    "wikidata_revision_id": 2479730434,
-    "manual_overrides": [],
-    "gallery_origin_attached": "2026-05-30"
-  },
-  "attestations": [
-    {
-      "source_id": "SRC-GALERIJA-JEKABS",
-      "role": "data_origin",
-      "url": "https://paintings.lv/artists/view/294",
-      "asserts": {
-        "name": "Sigismunds VIDBERGS",
-        "birth_year": 1890,
-        "death_year": 1970
-      },
-      "authoritative": false,
-      "retrieved": "2026-05-30"
-    }
-  ],
-  "source_ledger": {
-    "generated_at": "2026-05-30",
-    "origin": [
-      {
-        "source_id": "SRC-GALERIJA-JEKABS",
-        "name": "Galerija Jēkabs",
-        "type": "commercial_gallery",
-        "citable": false,
-        "url": "https://paintings.lv/artists/view/294",
-        "role": "data_origin"
-      }
-    ],
-    "authority": [
-      {
-        "source_id": "AUTH-WIKIDATA",
-        "name": "Wikidata",
-        "type": "authority_file",
-        "citable": true,
-        "url": "https://www.wikidata.org/wiki/Q13553200",
-        "id": "Q13553200",
-        "role": "authority_link"
-      },
-      {
-        "source_id": "AUTH-VIAF",
-        "name": "VIAF",
-        "type": "authority_file",
-        "citable": true,
-        "url": "https://viaf.org/viaf/56882077/",
-        "id": "56882077",
-        "role": "authority_link"
-      },
-      {
-        "source_id": "AUTH-ULAN",
-        "name": "Getty ULAN",
-        "type": "authority_file",
-        "citable": true,
-        "url": "http://vocab.getty.edu/page/ulan/500056343",
-        "id": "500056343",
-        "role": "authority_link"
-      }
-    ],
-    "provenance": [],
-    "verification": {
-      "status": "confirmed",
-      "basis": "authority",
-      "confirmed_by": [
-        "AUTH-WIKIDATA",
-        "AUTH-VIAF",
-        "AUTH-ULAN"
-      ]
-    },
-    "validation": {
-      "level1": {
-        "level": "FULLY_CORROBORATED",
-        "authority": [
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF",
-          "AUTH-ULAN"
-        ],
-        "validated_by": "automated",
-        "validated_at": "2026-05-30"
-      },
-      "level2": {
-        "level": "PENDING",
-        "authority": [],
-        "validated_by": "automated",
-        "validated_at": null
-      },
-      "conformance_badge": "amber"
-    },
-    "field_provenance": {
-      "birth_year": {
-        "value": 1890,
-        "sources": [
-          "SRC-GALERIJA-JEKABS",
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF",
-          "AUTH-ULAN"
-        ],
-        "has_citable_source": true,
-        "discrepancy": false
-      },
-      "death_year": {
-        "value": 1970,
-        "sources": [
-          "SRC-GALERIJA-JEKABS",
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF",
-          "AUTH-ULAN"
-        ],
-        "has_citable_source": true,
-        "discrepancy": false
-      }
-    },
-    "legacy_status": "confirmed"
-  }
+  "_schema": "artbase:artist:v1"
 }

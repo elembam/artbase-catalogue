@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/114",
+  "airtable_id": "recIEGMBcYR8OoHxS",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.387978Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Collage",
+    "object_type_aat": null,
+    "materials": "Collage, photomontage and gouache on paper",
+    "materials_aat": [],
+    "dimensions_display": "57.8 (h) x 36.1 (w) cm",
+    "height_cm": 57.8,
+    "width_cm": 36.1,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Swallows [Diving]. Design for Postcard",
+    "subject": null,
+    "date_display": "1928",
+    "date_earliest": 1928,
+    "date_latest": 1928,
+    "maker_id": null,
+    "maker_display_name": "Gustavs Klucis",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-7884",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Google Arts: https://artsandculture.google.com/asset/swallows-diving-design-for-postcard/mwH_jazFdAN5pg",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

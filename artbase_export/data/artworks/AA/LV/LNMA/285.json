@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/285",
+  "airtable_id": "recAUSupPcwiPhUDi",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.385644Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Indian ink on paper",
+    "materials_aat": [],
+    "dimensions_display": "12,2 (h) x 11 (w) cm",
+    "height_cm": 12.2,
+    "width_cm": 11.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "The Numbered Room (The Song about the Lover, St. Theresa Street). From the series “Book for the Poor”",
+    "subject": null,
+    "date_display": "1933",
+    "date_earliest": 1933,
+    "date_latest": 1933,
+    "maker_id": null,
+    "maker_display_name": "Kārlis Padegs",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-6666",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Graphic Art Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/the-numbered-room-the-song-about-the-lover-st-theresa-street-from-the-series-“book-for-the-poor”/iwGHX6mWA7LTjQ",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

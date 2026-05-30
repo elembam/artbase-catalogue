@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/287",
+  "airtable_id": "recHPhziykjASiPVT",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.387579Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Etching",
+    "object_type_aat": null,
+    "materials": "Etching and coloured aquatint on paper",
+    "materials_aat": [],
+    "dimensions_display": "62.4 (h) x 46 (w) cm",
+    "height_cm": 62.4,
+    "width_cm": 46.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Poet’s Grave",
+    "subject": null,
+    "date_display": "1913",
+    "date_earliest": 1913,
+    "date_latest": 1913,
+    "maker_id": null,
+    "maker_display_name": "Rihards Zariņš",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GR-337",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Google Arts: https://artsandculture.google.com/asset/poet’s-grave/FAGnzZyWDv-iew",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

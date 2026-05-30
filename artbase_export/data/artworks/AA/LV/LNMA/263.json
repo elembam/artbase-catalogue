@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/263",
+  "airtable_id": "recPoWRTX1YH42YeT",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.393576Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Watercolour",
+    "object_type_aat": null,
+    "materials": "Watercolour on paper",
+    "materials_aat": [],
+    "dimensions_display": "18.3 (h) x 25 (w) cm",
+    "height_cm": 18.3,
+    "width_cm": 25.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Refugees by the Railroad",
+    "subject": null,
+    "date_display": "c. 1915–1916",
+    "date_earliest": 1915,
+    "date_latest": 1916,
+    "maker_id": null,
+    "maker_display_name": "Jāzeps Grosvalds",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-8781",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Created circa 1915–1916. Latvian Graphic Art Collection (18th – 1st Half of \nthe 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/refugees-by-the-railroad/XwGxx9GBoqQ7VQ",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

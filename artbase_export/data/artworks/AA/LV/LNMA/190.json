@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/190",
+  "airtable_id": "recgR2gYMfNA6nzVS",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.402211Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Sculpture",
+    "object_type_aat": null,
+    "materials": "Bronze, wood",
+    "materials_aat": [],
+    "dimensions_display": "41,5 (h) x 46,5 (w) x 16,5 (d) cm",
+    "height_cm": 41.5,
+    "width_cm": 46.5,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Parsifal",
+    "subject": null,
+    "date_display": "1910",
+    "date_earliest": 1910,
+    "date_latest": 1910,
+    "maker_id": null,
+    "maker_display_name": "Konstantīns Rončevskis",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM S-52",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Sculpture Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/parsifal/1gGt7hlZ2-lMYA",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

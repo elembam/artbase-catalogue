@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/142",
+  "airtable_id": "recxOgv9XPUCJfJY6",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.406484Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Sculpture",
+    "object_type_aat": null,
+    "materials": "Black granite",
+    "materials_aat": [],
+    "dimensions_display": "68 (h) x 51 (w) x 40 (d) cm",
+    "height_cm": 68.0,
+    "width_cm": 51.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Portrait of Writer Pāvils Rozītis",
+    "subject": null,
+    "date_display": "1921",
+    "date_earliest": 1921,
+    "date_latest": 1921,
+    "maker_id": null,
+    "maker_display_name": "Emīls Melderis",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM S-31",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Google Arts: https://artsandculture.google.com/asset/portrait-of-writer-pāvils-rozītis/WwHmPp_Pfe4Oaw",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

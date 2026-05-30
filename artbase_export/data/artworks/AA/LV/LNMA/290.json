@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/290",
+  "airtable_id": "recyct7EROMZMeOaP",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.406733Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Linocut",
+    "object_type_aat": null,
+    "materials": "Linocut on paper",
+    "materials_aat": [],
+    "dimensions_display": "31,8 (h) x 25,8 (w) cm",
+    "height_cm": 31.8,
+    "width_cm": 25.8,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Woman with Wounded Man on her Shoulders. From the album of Linocuts \"Expressionists\"",
+    "subject": null,
+    "date_display": "1919",
+    "date_earliest": 1919,
+    "date_latest": 1919,
+    "maker_id": null,
+    "maker_display_name": "Jēkabs Kazaks",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GR-762",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Graphic Art Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/woman-with-wounded-man-on-her-shoulders-from-the-album-of-linocuts-expressionists/swFLbdtSig9zEA",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

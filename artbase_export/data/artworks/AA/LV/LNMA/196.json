@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/196",
+  "airtable_id": "recDXdk52r5TV2FcS",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.386574Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Indian ink, watercolour and gold on paper",
+    "materials_aat": [],
+    "dimensions_display": "33 (h) x 22 (w) cm",
+    "height_cm": 33.0,
+    "width_cm": 22.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "The Last Mother",
+    "subject": null,
+    "date_display": "1935",
+    "date_earliest": 1935,
+    "date_latest": 1935,
+    "maker_id": null,
+    "maker_display_name": "Kārlis Padegs",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-6657",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Graphic Art Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/the-last-mother/mAGI7-izNRfapg",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

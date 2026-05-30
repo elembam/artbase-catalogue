@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/065",
+  "airtable_id": "recMcEl6fEEbF0nck",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.392917Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Etching",
+    "object_type_aat": null,
+    "materials": "Etching on paper",
+    "materials_aat": [],
+    "dimensions_display": "62.4 (h) x 46 (w) cm",
+    "height_cm": 62.4,
+    "width_cm": 46.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Kurbads and the Nine-Headed Devil. From the series \"What the Forests of Latvia are Whispering\"",
+    "subject": null,
+    "date_display": "c. 1908–1911",
+    "date_earliest": 1908,
+    "date_latest": 1911,
+    "maker_id": null,
+    "maker_display_name": "Rihards Zariņš",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GR-340",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Created circa 1908–1911. Latvian Graphic Art Collection (18th – 1st Half of \nthe 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/kurbads-and-the-nine-headed-devil-from-the-series-what-the-forests-of-latvia-are-whispering/LgHjToAq1OsBYg",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

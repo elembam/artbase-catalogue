@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/108",
+  "airtable_id": "recrgipE9JoxGGboE",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.405185Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": null,
+    "object_type_aat": null,
+    "materials": "Oil on canvas",
+    "materials_aat": [],
+    "dimensions_display": "91 (h) x 71 (w) cm",
+    "height_cm": 91.0,
+    "width_cm": 71.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Still Life with a Pipe",
+    "subject": null,
+    "date_display": "1927",
+    "date_earliest": 1927,
+    "date_latest": 1927,
+    "maker_id": null,
+    "maker_display_name": "Jānis Liepiņš",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GL-3551",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Painting Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/still-life-with-a-pipe/0gHpEHubEtl9Iw",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

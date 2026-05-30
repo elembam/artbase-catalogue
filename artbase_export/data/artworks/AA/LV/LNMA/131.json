@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/131",
+  "airtable_id": "recq4rVMWBOtXIosY",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.404703Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Painting",
+    "object_type_aat": null,
+    "materials": "Oil on wood",
+    "materials_aat": [],
+    "dimensions_display": "37,5 (h) x 54 (w) cm",
+    "height_cm": 37.5,
+    "width_cm": 54.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Look Here, This is How We Live!",
+    "subject": null,
+    "date_display": "1813",
+    "date_earliest": 1813,
+    "date_latest": 1813,
+    "maker_id": null,
+    "maker_display_name": "Unknown Artist",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GL-321",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Painting Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/look-here-this-is-how-we-live/dwEgwj5Hvw52XQ",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

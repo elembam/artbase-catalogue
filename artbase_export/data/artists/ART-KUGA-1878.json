@@ -1,10 +1,10 @@
 {
   "artbase_id": "ART-KUGA-1878",
   "airtable_id": "reclZ16lci00noLfG",
-  "artbase_canonical_id": "AR7R8PE3N8",
+  "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-29T14:06:15.716992Z",
+  "exported": "2026-05-30T17:59:39.605136Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Jānis Kuga",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1878-12-12",
-      "precision": "day",
+      "value": "1878",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1969-11-24",
-      "precision": "day",
+      "value": "1969",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Ikšķile",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q753029",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Toronto",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q172",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -51,7 +51,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": "Jānis Kuga bija latviešu zīmēšanas skolotājs, scenogrāfs un gleznotājs. Viņš tiek uzskatīts par vienu no latviešu scenogrāfijas pamatlicējiem. Viņš ir veidojis scenogrāfiju vairāku teātru izrādēm gan Latvijā, gan ārzemēs, tāpat veidojis dekorācijas pirmajām latviešu kinofilmām. Kuga ir Latvijas Nacionālā teātra telpu noformējuma autors, kad 1918. gada 18. novembrī te tika proklamēta Latvijas valsts."
+    "biography_summary": null
   },
   "authority_links": {
     "wikidata": {
@@ -129,121 +129,5 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "description_en": "Latvian painter (1878-1969)",
-  "education": [
-    {
-      "label": "Saint Petersburg Stieglitz State Academy of Art and Design",
-      "wikidata_id": "Q2652597",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
-    "wikidata_revision_id": 2448916270,
-    "manual_overrides": []
-  },
-  "source_ledger": {
-    "generated_at": "2026-05-30",
-    "origin": [
-      {
-        "source_id": "SRC-PLATFORM-STAFF",
-        "name": "Ars Accordia Cataloguing Staff",
-        "type": "platform_staff",
-        "citable": false,
-        "url": null,
-        "role": "data_origin"
-      }
-    ],
-    "authority": [
-      {
-        "source_id": "AUTH-WIKIDATA",
-        "name": "Wikidata",
-        "type": "authority_file",
-        "citable": true,
-        "url": "https://www.wikidata.org/wiki/Q13716310",
-        "id": "Q13716310",
-        "role": "authority_link"
-      },
-      {
-        "source_id": "AUTH-VIAF",
-        "name": "VIAF",
-        "type": "authority_file",
-        "citable": true,
-        "url": "https://viaf.org/viaf/96577488/",
-        "id": "96577488",
-        "role": "authority_link"
-      },
-      {
-        "source_id": "AUTH-ULAN",
-        "name": "Getty ULAN",
-        "type": "authority_file",
-        "citable": true,
-        "url": "http://vocab.getty.edu/page/ulan/500121494",
-        "id": "500121494",
-        "role": "authority_link"
-      }
-    ],
-    "provenance": [],
-    "verification": {
-      "status": "confirmed",
-      "basis": "authority",
-      "confirmed_by": [
-        "AUTH-WIKIDATA",
-        "AUTH-VIAF",
-        "AUTH-ULAN"
-      ]
-    },
-    "validation": {
-      "level1": {
-        "level": "FULLY_CORROBORATED",
-        "authority": [
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF",
-          "AUTH-ULAN"
-        ],
-        "validated_by": "automated",
-        "validated_at": "2026-05-30"
-      },
-      "level2": {
-        "level": "PENDING",
-        "authority": [],
-        "validated_by": "automated",
-        "validated_at": null
-      },
-      "conformance_badge": "amber"
-    },
-    "field_provenance": {
-      "birth_year": {
-        "value": 1878,
-        "sources": [
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF",
-          "AUTH-ULAN"
-        ],
-        "has_citable_source": true,
-        "discrepancy": false
-      },
-      "death_year": {
-        "value": 1969,
-        "sources": [
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF",
-          "AUTH-ULAN"
-        ],
-        "has_citable_source": true,
-        "discrepancy": false
-      }
-    },
-    "legacy_status": "confirmed"
-  },
-  "attestations": [
-    {
-      "source_id": "SRC-PLATFORM-STAFF",
-      "role": "data_origin",
-      "authoritative": false,
-      "retrieved": "2026-05-30",
-      "note": "Manually catalogued by Ars Accordia staff. Requires authority corroboration for confirmed status."
-    }
-  ]
+  "_schema": "artbase:artist:v1"
 }

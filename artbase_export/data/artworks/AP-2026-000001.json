@@ -1,11 +1,10 @@
 {
   "artbase_id": "AP-2026-000001",
   "airtable_id": "rec3j64iDUATwS40m",
-  "artbase_canonical_id": "ABCSZKEFA6",
-  "is_demo": true,
+  "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-29T14:06:16.711763Z",
+  "exported": "2026-05-30T17:59:41.383456Z",
   "visibility": "private",
   "object_id": {
     "object_type": "painting",
@@ -36,26 +35,7 @@
       "25H11",
       "31D15"
     ],
-    "iconclass_labels": [
-      {
-        "code": "61BB2(Lisa del Giocondo)11",
-        "label": "historical woman (Lisa del Giocondo) portrayed alone",
-        "uri": "https://iconclass.org/61BB2(Lisa%20del%20Giocondo)11",
-        "source": "wikidata:Q12418/P1257"
-      },
-      {
-        "code": "25H11",
-        "label": "mountains",
-        "uri": "https://iconclass.org/25H11",
-        "source": "wikidata:Q12418/P1257"
-      },
-      {
-        "code": "31D15",
-        "label": "adult woman",
-        "uri": "https://iconclass.org/31D15",
-        "source": "wikidata:Q12418/P1257"
-      }
-    ],
+    "iconclass_labels": [],
     "depicts": []
   },
   "location": {
@@ -64,36 +44,7 @@
     "inventory_number": "INV. 779",
     "location_notes": "Denon Wing, Room 711 (Salle des États), Musée du Louvre, Paris"
   },
-  "provenance": [
-    {
-      "date_display": "c. 1503–1519",
-      "owner": "Leonardo da Vinci",
-      "detail": "Painted in Leonardo's studio in Florence and later Milan; retained by the artist until his death.",
-      "source": "Vasari, Giorgio. Le Vite de' più eccellenti pittori, scultori ed architettori, 1550.",
-      "is_gap": false
-    },
-    {
-      "date_display": "1519",
-      "owner": "King Francis I of France",
-      "detail": "Acquired by the French Crown following Leonardo's death; housed at Château de Fontainebleau.",
-      "source": "Wikidata Q12418, P127 (owned by); Louvre museum records.",
-      "is_gap": false
-    },
-    {
-      "date_display": "1692–1797",
-      "owner": "French Royal Collection / Palace of Versailles",
-      "detail": "Transferred to the Palace of Versailles under Louis XIV.",
-      "source": "Louvre museum provenance documentation.",
-      "is_gap": false
-    },
-    {
-      "date_display": "1797–present",
-      "owner": "République Française / Musée du Louvre",
-      "detail": "Transferred to the Musée du Louvre upon its establishment as a public museum. Inventory no. INV. 779.",
-      "source": "Louvre official catalogue; Wikidata Q12418, P276 (location).",
-      "is_gap": false
-    }
-  ],
+  "provenance": [],
   "authority_links": {
     "wikidata": {
       "id": null,
@@ -111,19 +62,8 @@
     "review_status": "draft",
     "catalogued_by": "ArtBase Demo",
     "notes": "Demo record based on public-domain sources. For testing only.",
-    "condition_note": "Good condition. Poplar panel stable; minor craquelure consistent with age. Housed in purpose-built climate-controlled gallery case with UV filter.",
-    "condition_date": "2024-01-01",
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artwork:v1",
-  "attestations": [
-    {
-      "source_id": "SRC-PLATFORM-STAFF",
-      "role": "data_origin",
-      "authoritative": false,
-      "retrieved": "2026-05-30",
-      "note": "Manually catalogued by Ars Accordia staff. Requires authority corroboration for confirmed status."
-    }
-  ]
+  "_schema": "artbase:artwork:v1"
 }

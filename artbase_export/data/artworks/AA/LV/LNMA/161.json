@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/161",
+  "airtable_id": "rec2muYUu2iy4HHdo",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.383144Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Indian ink and red pencil on paper",
+    "materials_aat": [],
+    "dimensions_display": "20 (h) x 16.5 (w) cm",
+    "height_cm": 20.0,
+    "width_cm": 16.5,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Embroiderer of the War Flag",
+    "subject": null,
+    "date_display": "1916",
+    "date_earliest": 1916,
+    "date_latest": 1916,
+    "maker_id": null,
+    "maker_display_name": "Rūdolfs Pērle",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-991",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Graphic Art Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/embroiderer-of-the-war-flag/iQGPWIzX6Z5n8A",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

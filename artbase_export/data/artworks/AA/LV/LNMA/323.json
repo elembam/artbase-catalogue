@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/323",
+  "airtable_id": "rectpOhRYdcRcHIcM",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.405777Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Indian ink, charcoal and coloured pencils on toned paper",
+    "materials_aat": [],
+    "dimensions_display": "37.2 (h) x 21.5 (w) cm",
+    "height_cm": 37.2,
+    "width_cm": 21.5,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Forest Secret. II",
+    "subject": null,
+    "date_display": "1899",
+    "date_earliest": 1899,
+    "date_latest": 1899,
+    "maker_id": null,
+    "maker_display_name": "Rihards Zariņš",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": null,
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Google Arts: https://artsandculture.google.com/asset/forest-secret-ii/DQG3IZeqIkov9Q",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

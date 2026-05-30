@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/092",
+  "airtable_id": "recqHneMLNuM9hPvh",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.404805Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Painting",
+    "object_type_aat": null,
+    "materials": "Oil on cardboard",
+    "materials_aat": [],
+    "dimensions_display": "68.1 (h) x 93.6 (w) cm",
+    "height_cm": 68.1,
+    "width_cm": 93.6,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "In Ķeizardārzs (In Viesturdārzs)",
+    "subject": null,
+    "date_display": "1914",
+    "date_earliest": 1914,
+    "date_latest": 1914,
+    "maker_id": null,
+    "maker_display_name": "Vilhelms Purvītis",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GL-132",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Painting Collection (18th – 1st Half of the \n20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/in-Ķeizardārzs-in-viesturdārzs/WAGf7yasFGDeNw",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

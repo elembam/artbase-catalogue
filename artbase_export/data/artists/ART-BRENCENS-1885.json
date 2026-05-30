@@ -1,10 +1,10 @@
 {
   "artbase_id": "ART-BRENCENS-1885",
   "airtable_id": "rechm5cos9CEAb1iV",
-  "artbase_canonical_id": "ARM2KJDQTF",
+  "artbase_canonical_id": null,
   "version": 1,
   "created": null,
-  "exported": "2026-05-29T14:06:15.713271Z",
+  "exported": "2026-05-30T17:59:39.603111Z",
   "visibility": "private",
   "identity": {
     "preferred_name": "Eduards Brencēns",
@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1885-07-02",
-      "precision": "day",
+      "value": "1885",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1929-04-17",
-      "precision": "day",
+      "value": "1929",
+      "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Riga County",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q3736484",
+      "wikidata_qid": null,
       "source_ids": []
     },
     "death_place": {
-      "display": "Riga",
+      "display": null,
       "tgn_uri": null,
-      "wikidata_qid": "Q1773",
+      "wikidata_qid": null,
       "source_ids": []
     }
   },
@@ -51,7 +51,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": "Eduards Brencēns bija latviešu gleznotājs, grafiķis, dekorators un grāmatu ilustrators. Viens no profesionālās scenogrāfijas iedibinātājiem Latvijā. Gleznotāja Kārļa Brencēna brālēns."
+    "biography_summary": null
   },
   "authority_links": {
     "wikidata": {
@@ -119,8 +119,26 @@
     },
     "artbase_id": null
   },
-  "sources": [],
-  "source_refs": [],
+  "sources": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "source_type": "Gallery Artist Index",
+      "title": "Galerija Jēkabs — Artist Index. https://paintings.lv/artists/list. Retrieved 2026-05-30.",
+      "publisher": null,
+      "url": "https://paintings.lv/artists/list",
+      "publication_date": null,
+      "access_date": null,
+      "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
+      "license": null
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "role": null,
+      "accessed": null
+    }
+  ],
   "conflicts": [],
   "cataloguing": {
     "review_status": "draft",
@@ -131,138 +149,5 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1",
-  "image": {
-    "commons_filename": "БРЕНЦЕНС Эдуард2.jpg",
-    "commons_url": "https://commons.wikimedia.org/wiki/File:БРЕНЦЕНС_Эдуард2.jpg",
-    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%91%D0%A0%D0%95%D0%9D%D0%A6%D0%95%D0%9D%D0%A1_%D0%AD%D0%B4%D1%83%D0%B0%D1%80%D0%B42.jpg?width=400"
-  },
-  "description_en": "Latvian painter (1885-1929)",
-  "education": [
-    {
-      "label": "Saint Petersburg Stieglitz State Academy of Art and Design",
-      "wikidata_id": "Q2652597",
-      "source": "wikidata_auto"
-    }
-  ],
-  "genre": [
-    {
-      "label": "stained glass",
-      "wikidata_id": "Q1473346",
-      "source": "wikidata_auto"
-    }
-  ],
-  "_meta": {
-    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
-    "wikidata_revision_id": 2494854427,
-    "manual_overrides": [],
-    "europeana_last_enriched": "2026-05-29T20:41:52.246256+00:00",
-    "gallery_origin_attached": "2026-05-30"
-  },
-  "museum_holdings": [
-    {
-      "institution": "Jānis Prauliņš",
-      "europeana_url": "https://europeana.eu/item/92085/56835",
-      "institution_url": "http://dom.lndb.lv/data/obj/56835.html",
-      "title_example": "Eduards Brencēns",
-      "source": "europeana_auto"
-    }
-  ],
-  "attestations": [
-    {
-      "source_id": "SRC-GALERIJA-JEKABS",
-      "role": "data_origin",
-      "url": "https://paintings.lv/artists/view/263",
-      "asserts": {
-        "name": "Eduards BRENCĒNS",
-        "birth_year": 1885,
-        "death_year": 1929
-      },
-      "authoritative": false,
-      "retrieved": "2026-05-30"
-    }
-  ],
-  "source_ledger": {
-    "generated_at": "2026-05-30",
-    "origin": [
-      {
-        "source_id": "SRC-GALERIJA-JEKABS",
-        "name": "Galerija Jēkabs",
-        "type": "commercial_gallery",
-        "citable": false,
-        "url": "https://paintings.lv/artists/view/263",
-        "role": "data_origin"
-      }
-    ],
-    "authority": [
-      {
-        "source_id": "AUTH-WIKIDATA",
-        "name": "Wikidata",
-        "type": "authority_file",
-        "citable": true,
-        "url": "https://www.wikidata.org/wiki/Q4096317",
-        "id": "Q4096317",
-        "role": "authority_link"
-      },
-      {
-        "source_id": "AUTH-VIAF",
-        "name": "VIAF",
-        "type": "authority_file",
-        "citable": true,
-        "url": "https://viaf.org/viaf/26655662/",
-        "id": "26655662",
-        "role": "authority_link"
-      }
-    ],
-    "provenance": [],
-    "verification": {
-      "status": "confirmed",
-      "basis": "authority",
-      "confirmed_by": [
-        "AUTH-WIKIDATA",
-        "AUTH-VIAF"
-      ]
-    },
-    "validation": {
-      "level1": {
-        "level": "FULLY_CORROBORATED",
-        "authority": [
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF"
-        ],
-        "validated_by": "automated",
-        "validated_at": "2026-05-30"
-      },
-      "level2": {
-        "level": "PENDING",
-        "authority": [],
-        "validated_by": "automated",
-        "validated_at": null
-      },
-      "conformance_badge": "amber"
-    },
-    "field_provenance": {
-      "birth_year": {
-        "value": 1885,
-        "sources": [
-          "SRC-GALERIJA-JEKABS",
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF"
-        ],
-        "has_citable_source": true,
-        "discrepancy": false
-      },
-      "death_year": {
-        "value": 1929,
-        "sources": [
-          "SRC-GALERIJA-JEKABS",
-          "AUTH-WIKIDATA",
-          "AUTH-VIAF"
-        ],
-        "has_citable_source": true,
-        "discrepancy": false
-      }
-    },
-    "legacy_status": "confirmed"
-  }
+  "_schema": "artbase:artist:v1"
 }

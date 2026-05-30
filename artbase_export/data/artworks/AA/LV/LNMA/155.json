@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/155",
+  "airtable_id": "recYZOqAwA7XgffUP",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.399596Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Watercolour",
+    "object_type_aat": null,
+    "materials": "Watercolour on paper",
+    "materials_aat": [],
+    "dimensions_display": "71.5 (h) x 132 (w) cm",
+    "height_cm": 71.5,
+    "width_cm": 132.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Bacchantes and Fauns",
+    "subject": null,
+    "date_display": "1885",
+    "date_earliest": 1885,
+    "date_latest": 1885,
+    "maker_id": null,
+    "maker_display_name": "Arturs Baumanis",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-3980",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Graphic Art Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/bacchantes-and-fauns/nwGeLU2FDi92ng",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

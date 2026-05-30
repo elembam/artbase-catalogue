@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/232",
+  "airtable_id": "rec49y5HCx37okdvb",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.383494Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Pencil on paper",
+    "materials_aat": [],
+    "dimensions_display": "9 (h) x 13,5 (w) cm",
+    "height_cm": 9.0,
+    "width_cm": 13.5,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Drawing",
+    "subject": null,
+    "date_display": "c. 1915–1917",
+    "date_earliest": 1915,
+    "date_latest": 1917,
+    "maker_id": null,
+    "maker_display_name": "Rūdolfs Pērle",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-997",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Created circa 1915–1917. Latvian Graphic Art Collection (18th – 1st Half of \nthe 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/drawing/CQFiq_n32xftpg",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/209",
+  "airtable_id": "recayGVk8CMnKBlvj",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.401063Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Charcoal and coloured pencil on cardboard",
+    "materials_aat": [],
+    "dimensions_display": "55.9 (h) x 86.3 (w) cm",
+    "height_cm": 55.9,
+    "width_cm": 86.3,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Death",
+    "subject": null,
+    "date_display": "1910",
+    "date_earliest": 1910,
+    "date_latest": 1910,
+    "maker_id": null,
+    "maker_display_name": "Teodors Ūders",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-1229",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Google Arts: https://artsandculture.google.com/asset/death/cwEC9yrk5ICEmQ",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

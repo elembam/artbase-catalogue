@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/005",
+  "airtable_id": "recJS8Ij3VKTCAq2W",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.392004Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Coloured pencil and ink on paper",
+    "materials_aat": [],
+    "dimensions_display": "14.7 (h) x 17.6 (w) cm",
+    "height_cm": 14.7,
+    "width_cm": 17.6,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Drawing. Rocks",
+    "subject": null,
+    "date_display": "c. 1915–1917",
+    "date_earliest": 1915,
+    "date_latest": 1917,
+    "maker_id": null,
+    "maker_display_name": "Rūdolfs Pērle",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-1004",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Google Arts: https://artsandculture.google.com/asset/drawing-rocks/TQEy1UUeJ1o7-Q",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

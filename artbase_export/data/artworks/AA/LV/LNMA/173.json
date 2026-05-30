@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/173",
+  "airtable_id": "recgdS6VqarryBtxk",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.402316Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Charcoal on paper",
+    "materials_aat": [],
+    "dimensions_display": "42.3 (h) x 33.2 (w) cm",
+    "height_cm": 42.3,
+    "width_cm": 33.2,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Study of a Head",
+    "subject": null,
+    "date_display": "c. 1908–1910",
+    "date_earliest": 1908,
+    "date_latest": 1910,
+    "maker_id": null,
+    "maker_display_name": "Alfrēds Plīte-Pleita",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-1188",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Created circa 1908–1910. Latvian Graphic Art Collection (18th – 1st Half of \nthe 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/study-of-a-head/XAGiUsMyQYAggw",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

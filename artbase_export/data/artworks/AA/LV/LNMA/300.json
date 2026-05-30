@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/300",
+  "airtable_id": "rec7DFuTETxw6zZuR",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.384458Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Watercolour and Indian ink on paper",
+    "materials_aat": [],
+    "dimensions_display": "34 (h) x 24,4 (w) cm",
+    "height_cm": 34.0,
+    "width_cm": 24.4,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Cavalier in a Chicago Coat (A Girl's Dream)",
+    "subject": null,
+    "date_display": "1934",
+    "date_earliest": 1934,
+    "date_latest": 1934,
+    "maker_id": null,
+    "maker_display_name": "Kārlis Padegs",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-6663",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Graphic Art Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/cavalier-in-a-chicago-coat-a-girl-s-dream/WAEJDp29r_rGyg",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

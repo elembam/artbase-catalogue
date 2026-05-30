@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/309",
+  "airtable_id": "recZ2OrMti4CXounS",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.399671Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Etching",
+    "object_type_aat": null,
+    "materials": "Etching on paper",
+    "materials_aat": [],
+    "dimensions_display": "13.7 (h) x 9 (w) cm",
+    "height_cm": 13.7,
+    "width_cm": 9.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Little Ann",
+    "subject": null,
+    "date_display": "1919",
+    "date_earliest": 1919,
+    "date_latest": 1919,
+    "maker_id": null,
+    "maker_display_name": "Alfrēds Plīte-Pleita",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GR-300",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Google Arts: https://artsandculture.google.com/asset/little-ann/LQFXo63yK-9rmA",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

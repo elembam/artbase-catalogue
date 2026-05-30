@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/078",
+  "airtable_id": "recaBtIXrLMeSi7I2",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.400832Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Charcoal and gouache on paper",
+    "materials_aat": [],
+    "dimensions_display": "86 (h) x 63 (w) cm",
+    "height_cm": 86.0,
+    "width_cm": 63.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Christ on the Cross",
+    "subject": null,
+    "date_display": "c. 1907–1909",
+    "date_earliest": 1907,
+    "date_latest": 1909,
+    "maker_id": null,
+    "maker_display_name": "Teodors Ūders",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-5670",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Created circa 1907–1909. Latvian Graphic Art Collection (18th – 1st Half of \nthe 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/christ-on-the-cross/uAHkHOnyeKiGJQ",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

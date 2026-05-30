@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/137",
+  "airtable_id": "recu35NJTV7EBPTBZ",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.405850Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Painting",
+    "object_type_aat": null,
+    "materials": "Oil on cardboard",
+    "materials_aat": [],
+    "dimensions_display": "71,5 (h) × 100 (w) cm",
+    "height_cm": 71.5,
+    "width_cm": 100.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Autumn",
+    "subject": null,
+    "date_display": "1913",
+    "date_earliest": 1913,
+    "date_latest": 1913,
+    "maker_id": null,
+    "maker_display_name": "Vilhelms Purvītis",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GL-131",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Painting Collection (18th – 1st Half of the \n20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/autumn/UAGmKaU7aYB9LQ",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

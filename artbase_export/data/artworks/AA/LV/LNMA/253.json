@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/253",
+  "airtable_id": "recfoX1OR8H9K4bmL",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.402131Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Watercolour on paper",
+    "materials_aat": [],
+    "dimensions_display": "36 (h) x 26 (w) cm",
+    "height_cm": 36.0,
+    "width_cm": 26.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "The Sick Hanele",
+    "subject": null,
+    "date_display": "1933",
+    "date_earliest": 1933,
+    "date_latest": 1933,
+    "maker_id": null,
+    "maker_display_name": "Jānis Tīdemanis",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-7495",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Graphic Art Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/the-sick-hanele/FwEtbIWMHwqenA",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

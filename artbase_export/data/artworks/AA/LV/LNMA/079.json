@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/079",
+  "airtable_id": "recDShtXTVR7kxvng",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.386534Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Painting",
+    "object_type_aat": null,
+    "materials": "Tempera on cardboard",
+    "materials_aat": [],
+    "dimensions_display": "54,5 (h) x 67 (h) cm",
+    "height_cm": null,
+    "width_cm": null,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Christmas Battles",
+    "subject": null,
+    "date_display": "c. 1916–1917",
+    "date_earliest": 1916,
+    "date_latest": 1917,
+    "maker_id": null,
+    "maker_display_name": "Jāzeps Grosvalds",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GL-2784",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Created circa 1916–1917. Latvian Painting Collection (18th – 1st Half of \nthe 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/christmas-battles/mwFCL4bbtyH1Iw",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

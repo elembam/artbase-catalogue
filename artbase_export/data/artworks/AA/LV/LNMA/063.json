@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/063",
+  "airtable_id": "recBUB1f9M5N4u7ku",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.386025Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Tempera",
+    "object_type_aat": null,
+    "materials": "Tempera on paper",
+    "materials_aat": [],
+    "dimensions_display": "23.3 (h) x 16 (w) cm",
+    "height_cm": 23.3,
+    "width_cm": 16.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Kurds on the Roof",
+    "subject": null,
+    "date_display": "1918",
+    "date_earliest": 1918,
+    "date_latest": 1918,
+    "maker_id": null,
+    "maker_display_name": "Jāzeps Grosvalds",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-8654",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Google Arts: https://artsandculture.google.com/asset/kurds-on-the-roof/kAEkf_O-QyPZqA",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

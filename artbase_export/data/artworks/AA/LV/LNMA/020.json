@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/020",
+  "airtable_id": "rec7X6rj0GCnxfR41",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.384581Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Painting",
+    "object_type_aat": null,
+    "materials": "Oil on plywood",
+    "materials_aat": [],
+    "dimensions_display": "59 (h) x 48 (w) cm",
+    "height_cm": 59.0,
+    "width_cm": 48.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Girl in a Folk Costume",
+    "subject": null,
+    "date_display": "1930",
+    "date_earliest": 1930,
+    "date_latest": 1930,
+    "maker_id": null,
+    "maker_display_name": "Jānis Tīdemanis",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GL-3667",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Google Arts: https://artsandculture.google.com/asset/girl-in-a-folk-costume/hQHi37KqzZUPEA",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/047",
+  "airtable_id": "recHV8T8mDEoZNgTV",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.387676Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Painting",
+    "object_type_aat": null,
+    "materials": "Oil on canvas on cardboard",
+    "materials_aat": [],
+    "dimensions_display": "86 (h) x 75 (w) cm",
+    "height_cm": 86.0,
+    "width_cm": 75.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Expressive Fir Trees",
+    "subject": null,
+    "date_display": "1924",
+    "date_earliest": 1924,
+    "date_latest": 1924,
+    "maker_id": null,
+    "maker_display_name": "Johann Walter",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GL-3360",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Google Arts: https://artsandculture.google.com/asset/expressive-fir-trees/awGXfP1oWga-2A",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

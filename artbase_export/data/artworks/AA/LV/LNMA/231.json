@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/231",
+  "airtable_id": "recDc2z8gjYQQAtvB",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.386613Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Watercolour",
+    "object_type_aat": null,
+    "materials": "Watercolour on paper",
+    "materials_aat": [],
+    "dimensions_display": "24 (h) x 32 (w) cm",
+    "height_cm": 24.0,
+    "width_cm": 32.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "On the First Line",
+    "subject": null,
+    "date_display": "1916",
+    "date_earliest": 1916,
+    "date_latest": 1916,
+    "maker_id": null,
+    "maker_display_name": "Jāzeps Grosvalds",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-5812",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Sub-collection: Latvian Graphic Art Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/on-the-first-line/EwE3B5NmRGtLgw",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

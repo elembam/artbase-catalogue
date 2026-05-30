@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/143",
+  "airtable_id": "recGhRVov3hWcy1ye",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.387430Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Painting",
+    "object_type_aat": null,
+    "materials": "Oil on cardboard",
+    "materials_aat": [],
+    "dimensions_display": "73 (h) x 62 (w) cm",
+    "height_cm": 73.0,
+    "width_cm": 62.0,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Tree Trunks and Canopies",
+    "subject": null,
+    "date_display": "1925",
+    "date_earliest": 1925,
+    "date_latest": 1925,
+    "maker_id": null,
+    "maker_display_name": "Johann Walter",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM GL-3355",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Google Arts: https://artsandculture.google.com/asset/tree-trunks-and-canopies/PQEnzhXMs3iAkg",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}

@@ -1,0 +1,62 @@
+{
+  "artbase_id": "AA/LV/LNMA/204",
+  "airtable_id": "recpRypZyNHyY5let",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-05-30T17:59:41.404561Z",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Drawing",
+    "object_type_aat": null,
+    "materials": "Pencil and charcoal on paper",
+    "materials_aat": [],
+    "dimensions_display": "10.9 (h) x 15.6 (w) cm",
+    "height_cm": 10.9,
+    "width_cm": 15.6,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Scouts",
+    "subject": null,
+    "date_display": "1890",
+    "date_earliest": 1890,
+    "date_latest": 1890,
+    "maker_id": null,
+    "maker_display_name": "Ādams Alksnis",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": null,
+    "inventory_number": "VMM Z-32",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Google Arts: https://artsandculture.google.com/asset/scouts/LQHJh3m-gDDkVQ",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artwork:v1"
+}
