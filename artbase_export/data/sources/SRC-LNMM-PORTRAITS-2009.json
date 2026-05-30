@@ -16,7 +16,10 @@
   "compiler": "Dace Lamberga",
   "compiler_wikidata_qid": "Q109864986",
   "designer": "Juris Petraškevičs",
-  "publishers": ["Latvijas Nacionālais mākslas muzejs", "Neputns"],
+  "publishers": [
+    "Latvijas Nacionālais mākslas muzejs",
+    "Neputns"
+  ],
   "publisher_wikidata_qids": {
     "Latvijas Nacionālais mākslas muzejs": "Q1370465",
     "Neputns": "Q30212561"
@@ -24,14 +27,17 @@
   "publication_year": 2009,
   "place": "Rīga",
   "place_wikidata_qid": "Q1773",
-  "language": ["lv", "en"],
+  "language": [
+    "lv",
+    "en"
+  ],
   "pages": 107,
   "isbn_13": "9789984807522",
   "isbn_10": null,
   "udc": "7.041.5(474.3)(083.824)",
   "subject": "Latvian portrait painting; artists — Latvia — portraits; exhibition catalogues",
-  "wikidata_qid": null,
-  "wikidata_status": "to_create",
+  "wikidata_qid": "Q139986481",
+  "wikidata_status": "created",
   "lndb_id": null,
   "_verified": {
     "isbn_on_wikidata": false,
