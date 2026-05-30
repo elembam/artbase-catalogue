@@ -148,7 +148,7 @@ def build_context(data_dir: Path, passports_dir: Path) -> dict:
 # ── Main ───────────────────────────────────────────────────────────────────────
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate Ars Accordia index page")
+    parser = argparse.ArgumentParser(description="Generate ArtBase index page")
     parser.add_argument("--data-dir",    default=str(DATA_DIR),
                         help="Path to artbase_export/data/")
     parser.add_argument("--passports-dir", default=str(PASSPORTS_DIR),

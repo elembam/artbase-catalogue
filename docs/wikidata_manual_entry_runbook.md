@@ -41,7 +41,7 @@ Fill in the form:
 | **Description** | `2007. gada Hansabankas mūsdienu mākslas kolekcijas katalogs` |
 | **Also known as** | *(leave blank for now)* |
 
-Click **Create**. You will land on the new item page. Note the QID shown in the URL (e.g. `Q12345678`). **Write it down here: ___________**
+Click **Create**. You will land on the new item page. Note the QID shown in the URL (e.g. `Q12345678`). **Write it down here: Q139986317**
 
 ---
 
@@ -63,8 +63,12 @@ Click **Publish**.
 Click **"+ add statement"** for each row below.
 
 ### 3.1 — instance of
-- Property: **instance of** (P31)
-- Value: search for `version, edition, or translation` → select **Q3331189**
+- Click **"+ add statement"**
+- In the **property** box, type `instance of` → select **instance of (P31)**
+- In the **value** box, type `version, edition, or translation` → select **Q3331189**
+- *(This is Wikidata's standard type for a specific published book/edition with its own ISBN.
+  It sounds odd but Q3331189 is the correct choice — not "book (Q571)" — because we are
+  cataloguing this specific 2007 printing, not the abstract concept of the work.)*
 - Click **Publish**
 
 ### 3.2 — title (Latvian)
@@ -128,7 +132,7 @@ After all statements are saved, copy the QID from the URL bar.
 
 Run this command in your terminal:
 ```
-python3 scripts/record_book_qid.py SRC-HANSABANKA-2007 Q_________
+python3 scripts/record_book_qid.py SRC-HANSABANKA-2007 Q139986317
 ```
 Replace `Q_________` with the actual QID.
 
@@ -165,8 +169,9 @@ Click **Publish**.
 ## Step 3 — Add statements
 
 ### 3.1 — instance of
-- Property: **instance of** (P31)
-- Value: **Q3331189** (version, edition, or translation)
+- Click **"+ add statement"**
+- In the **property** box, type `instance of` → select **instance of (P31)**
+- In the **value** box, type `version, edition, or translation` → select **Q3331189**
 - Click **Publish**
 
 ### 3.2 — title (Latvian)
@@ -231,7 +236,7 @@ Click **Publish**.
 ## Step 4 — Record the QID
 
 ```
-python3 scripts/record_book_qid.py SRC-LNMM-PORTRAITS-2009 Q_________
+python3 scripts/record_book_qid.py SRC-LNMM-PORTRAITS-2009 Q139986481
 ```
 
 ---
