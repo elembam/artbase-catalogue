@@ -1,0 +1,46 @@
+{
+  "source_id": "SRC-LNMM-PORTRAITS-2009",
+  "citation": "Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets / Artist. Portrait. Self-portrait. Rīga: Latvijas Nacionālais mākslas muzejs; Neputns, 2009.",
+  "title": "Mākslinieks. Portrets. Pašportrets",
+  "title_parallel_en": "Artist. Portrait. Self-portrait",
+  "type": "exhibition catalogue",
+  "source_type": "published_catalogue",
+  "contributor_type": "published_source",
+  "wikidata_citable": true,
+  "can_confirm": true,
+  "exhibition": {
+    "venue": "Latvijas Nacionālā mākslas muzeja izstāžu zāle \"Arsenāls\"",
+    "start": "2009-11-05",
+    "end": "2010-01-17"
+  },
+  "compiler": "Dace Lamberga",
+  "compiler_wikidata_qid": "Q109864986",
+  "designer": "Juris Petraškevičs",
+  "publishers": ["Latvijas Nacionālais mākslas muzejs", "Neputns"],
+  "publisher_wikidata_qids": {
+    "Latvijas Nacionālais mākslas muzejs": "Q1370465",
+    "Neputns": "Q30212561"
+  },
+  "publication_year": 2009,
+  "place": "Rīga",
+  "place_wikidata_qid": "Q1773",
+  "language": ["lv", "en"],
+  "pages": 107,
+  "isbn_13": "9789984807522",
+  "isbn_10": null,
+  "udc": "7.041.5(474.3)(083.824)",
+  "subject": "Latvian portrait painting; artists — Latvia — portraits; exhibition catalogues",
+  "wikidata_qid": null,
+  "wikidata_status": "to_create",
+  "lndb_id": null,
+  "_verified": {
+    "isbn_on_wikidata": false,
+    "isbn_checked_at": "2026-05-30",
+    "compiler_qid_checked": true,
+    "compiler_qid": "Q109864986",
+    "lnmm_qid_checked": true,
+    "lnmm_qid": "Q1370465",
+    "neputns_qid_checked": true,
+    "neputns_qid": "Q30212561"
+  }
+}
