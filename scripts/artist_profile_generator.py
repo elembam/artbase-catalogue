@@ -23,7 +23,7 @@ from jinja2 import Environment, FileSystemLoader
 REPO_ROOT   = Path(__file__).resolve().parent.parent
 ARTISTS_DIR = REPO_ROOT / "artbase_export" / "data" / "artists"
 ARTWORKS_DIR= REPO_ROOT / "artbase_export" / "data" / "artworks"
-OUT_DIR     = REPO_ROOT / "passports" / "artists"
+OUT_DIR     = REPO_ROOT / "artists"
 TMPL_DIR    = REPO_ROOT / "templates"
 
 
@@ -150,7 +150,7 @@ def main():
         except Exception as e:
             print(f"  ERROR {aid}: {e}", file=sys.stderr)
 
-    print(f"✓ Generated {generated} artist profile pages → passports/artists/")
+    print(f"✓ Generated {generated} artist profile pages → {OUT_DIR}/")
 
 
 if __name__ == "__main__":
