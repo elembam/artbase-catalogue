@@ -298,6 +298,62 @@
     font-style: italic;
   }
 
+  /* ── Data sources section ─── */
+  .section-sources { background: var(--paper-deep); }
+
+  .sources-grid { display: flex; flex-direction: column; gap: 8px; }
+
+  .sources-row {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    font-size: 0.88rem;
+  }
+  .sources-key {
+    min-width: 90px;
+    color: var(--ink-faded);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding-top: 2px;
+  }
+  .sources-val { display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }
+  .sources-none { color: var(--ink-faded); font-style: italic; }
+
+  .source-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.82rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .source-chip a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; }
+  .source-chip a:hover { opacity: 0.8; }
+  .chip-tag {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    font-family: 'Public Sans', sans-serif;
+    font-style: italic;
+  }
+  .origin-chip    { background: #f5f0e8; color: #7a6040; border: 1px solid #e0d4b8; }
+  .authority-chip { background: #eef4ee; color: #2a6040; border: 1px solid #b8d4c0; }
+
+  .vstatus { font-size: 0.85rem; font-family: 'Public Sans', sans-serif; }
+  .vstatus-confirmed  { color: #2a6040; }
+  .vstatus-candidate  { color: #7a5500; }
+  .vstatus-unverified { color: var(--ink-faded); }
+
+  .sources-row-warn { margin-top: 4px; }
+  .sources-warn {
+    font-size: 0.83rem;
+    color: #7a5500;
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .gallery-fields { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
+
   /* ── Footer ─── */
   .footer {
     padding: 20px 48px;
@@ -503,10 +559,64 @@
     
   </section>
 
+  <!-- Data sources & verification -->
+  <section class="section section-sources">
+    <div class="section-label">Data Sources &amp; Verification</div>
+    <div class="sources-grid">
+
+      
+      
+      <div class="sources-row">
+        <div class="sources-key">Origin</div>
+        <div class="sources-val">
+          
+          <span class="source-chip origin-chip">
+            <a href="https://paintings.lv/artists/view/103" target="_blank" rel="noopener">Galerija Jēkabs</a>
+            <span class="chip-tag">not citable</span>
+          </span>
+          
+        </div>
+      </div>
+      
+
+      
+      <div class="sources-row">
+        <div class="sources-key">Authority</div>
+        <div class="sources-val">
+          
+            <span class="sources-none">None confirmed yet</span>
+          
+        </div>
+      </div>
+
+      
+      <div class="sources-row">
+        <div class="sources-key">Status</div>
+        <div class="sources-val">
+          
+          <span class="vstatus vstatus-candidate">⚑ Candidate — awaiting independent authority</span>
+          
+        </div>
+      </div>
+
+      
+      
+      <div class="sources-row sources-row-warn">
+        <div class="sources-key">Note</div>
+        <div class="sources-val sources-warn">
+          The following facts are sourced from Galerija Jēkabs only and have not been confirmed by an independent authority:
+          <span class="gallery-fields">birth_year, death_year</span>.
+        </div>
+      </div>
+      
+
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <span class="footer-left">ARS ACCORDIA · ART-DONCOVS-1916</span>
-    <span>Exported 2026-05-29</span>
+    <span>Exported 2026-05-30</span>
   </footer>
 
 </div>

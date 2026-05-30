@@ -72,6 +72,17 @@ def render_artist(artist: dict, artworks: list[dict], env: Environment) -> str:
             "date": oid.get("creation_date", {}).get("display", "") if isinstance(oid.get("creation_date"), dict) else oid.get("creation_date", ""),
         })
 
+    # Source ledger — build display-ready data
+    ledger = artist.get("source_ledger", {})
+    source_origin    = ledger.get("origin", [])
+    source_authority = ledger.get("authority", [])
+    verification     = ledger.get("verification", {})
+    verification_status = verification.get("status", "unverified")
+    fp = ledger.get("field_provenance", {})
+    gallery_only_fields = [
+        f for f, d in fp.items() if not d.get("has_citable_source")
+    ]
+
     tmpl = env.get_template("artist_profile.html.j2")
     return tmpl.render(
         artist=artist,
@@ -79,6 +90,10 @@ def render_artist(artist: dict, artworks: list[dict], env: Environment) -> str:
         wikidata_status=wikidata_status,
         artworks=aw_list,
         exported_date=datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        source_origin=source_origin,
+        source_authority=source_authority,
+        verification_status=verification_status,
+        gallery_only_fields=gallery_only_fields,
     )
 
 
