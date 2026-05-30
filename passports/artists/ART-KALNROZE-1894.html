@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Artist Profile — Valdis Kalnroze. Ars Accordia scholarly catalogue record.">
-<title>Valdis Kalnroze — Ars Accordia</title>
+<meta name="description" content="Artist Profile — Valdis Kalnroze. ArtBase scholarly catalogue record.">
+<title>Valdis Kalnroze — ArtBase</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -298,82 +298,6 @@
     font-style: italic;
   }
 
-  /* ── Data sources section ─── */
-  .section-sources { background: var(--paper-deep); }
-
-  .sources-grid { display: flex; flex-direction: column; gap: 8px; }
-
-  .sources-row {
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-    font-size: 0.88rem;
-  }
-  .sources-key {
-    min-width: 90px;
-    color: var(--ink-faded);
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding-top: 2px;
-  }
-  .sources-val { display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }
-  .sources-none { color: var(--ink-faded); font-style: italic; }
-
-  .source-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 2px 8px;
-    border-radius: 3px;
-    font-size: 0.82rem;
-    font-family: 'JetBrains Mono', monospace;
-  }
-  .source-chip a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; }
-  .source-chip a:hover { opacity: 0.8; }
-  .chip-tag {
-    font-size: 0.7rem;
-    opacity: 0.6;
-    font-family: 'Public Sans', sans-serif;
-    font-style: italic;
-  }
-  .origin-chip    { background: #f5f0e8; color: #7a6040; border: 1px solid #e0d4b8; }
-  .authority-chip { background: #eef4ee; color: #2a6040; border: 1px solid #b8d4c0; }
-
-  /* Conformance badge (Instruction 10 — four-grade validation model) */
-  .conformance-badge {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-size: 0.82rem; font-family: 'Public Sans', sans-serif;
-    padding: 3px 10px; border-radius: 20px; font-weight: 600;
-    letter-spacing: 0.01em;
-  }
-  .conformance-badge .badge-dot {
-    width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
-  }
-  .conformance-badge.badge-green { background: #eef7f1; color: #1f6637; border: 1px solid #91c9a3; }
-  .conformance-badge.badge-green .badge-dot { background: #2a7d46; }
-  .conformance-badge.badge-amber { background: #fdf5e6; color: #7a5000; border: 1px solid #d4a84b; }
-  .conformance-badge.badge-amber .badge-dot { background: #c27c0b; }
-  .conformance-badge.badge-grey  { background: #f2f2f2; color: #666;   border: 1px solid #bbb; }
-  .conformance-badge.badge-grey  .badge-dot { background: #999; }
-  .conformance-badge.badge-none  { background: #f9f9f9; color: #999;   border: 1px solid #ddd; }
-  .conformance-badge.badge-none  .badge-dot { background: #ccc; }
-
-  .vstatus { font-size: 0.85rem; font-family: 'Public Sans', sans-serif; }
-  /* legacy — kept for progressively-generated pages not yet regenerated */
-  .vstatus-confirmed  { color: #2a6040; }
-  .vstatus-candidate  { color: #7a5500; }
-  .vstatus-unverified { color: var(--ink-faded); }
-
-  .sources-row-warn { margin-top: 4px; }
-  .sources-warn {
-    font-size: 0.83rem;
-    color: #7a5500;
-    font-style: italic;
-    line-height: 1.5;
-  }
-  .gallery-fields { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
-
   /* ── Footer ─── */
   .footer {
     padding: 20px 48px;
@@ -392,7 +316,7 @@
 <body>
 
 <nav class="topnav">
-  <a href="../index.html">← Ars Accordia Catalogue</a>
+  <a href="../index.html">← ArtBase Catalogue</a>
   <span class="sep">/</span>
   <span>Valdis Kalnroze</span>
 </nav>
@@ -403,13 +327,13 @@
   <header class="header">
     
     <div class="header-left">
-      <div class="institution-tag">Ars Accordia · Artist Profile</div>
+      <div class="institution-tag">ArtBase · Artist Profile</div>
       <h1 class="artist-name">Valdis Kalnroze</h1>
       
       
       
       <div class="artist-dates">
-        1894-01-17 – 1993-04-16
+        1894 – 1993
       </div>
       
       
@@ -581,72 +505,9 @@
     
   </section>
 
-  <!-- Data sources & verification -->
-  <section class="section section-sources">
-    <div class="section-label">Data Sources &amp; Verification</div>
-    <div class="sources-grid">
-
-      
-      
-      <div class="sources-row">
-        <div class="sources-key">Origin</div>
-        <div class="sources-val">
-          
-          <span class="source-chip origin-chip">
-            <a href="https://paintings.lv/artists/view/50" target="_blank" rel="noopener">Galerija Jēkabs</a>
-            <span class="chip-tag">not citable</span>
-          </span>
-          
-        </div>
-      </div>
-      
-
-      
-      <div class="sources-row">
-        <div class="sources-key">Authority</div>
-        <div class="sources-val">
-          
-            
-            <span class="source-chip authority-chip">
-              <a href="https://www.wikidata.org/wiki/Q12676372" target="_blank" rel="noopener">Wikidata</a>
-            </span>
-            
-            <span class="source-chip authority-chip">
-              <a href="https://viaf.org/viaf/18653626/" target="_blank" rel="noopener">VIAF</a>
-            </span>
-            
-            <span class="source-chip authority-chip">
-              <a href="http://vocab.getty.edu/page/ulan/500121458" target="_blank" rel="noopener">Getty ULAN</a>
-            </span>
-            
-          
-        </div>
-      </div>
-
-      
-      <div class="sources-row">
-        <div class="sources-key">Status</div>
-        <div class="sources-val">
-          
-          
-          
-          <span class="conformance-badge badge-amber">
-            <span class="badge-dot"></span>
-            Fully Corroborated (automated)
-          </span>
-          
-        </div>
-      </div>
-
-      
-      
-
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer class="footer">
-    <span class="footer-left">ARS ACCORDIA · ART-KALNROZE-1894</span>
+    <span class="footer-left">ARTBASE · ART-KALNROZE-1894</span>
     <span>Exported 2026-05-30</span>
   </footer>
 
