@@ -28,6 +28,7 @@ dev = [
 
 [project.scripts]
 artbase-export = "artbase_export.cli:app"
+artbase-import = "artbase_export.import_cli:app"
 
 [tool.setuptools.packages.find]
 where = ["src"]
