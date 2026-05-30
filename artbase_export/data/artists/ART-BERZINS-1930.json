@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1930",
-      "precision": "year",
+      "value": "1930-10-07",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "2002",
-      "precision": "year",
+      "value": "2002-02-11",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     }
   },
@@ -51,7 +51,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": null
+    "biography_summary": "Boriss Berziņš was a Soviet and Latvian artist, painter, graphic artist and teacher. People's Artist of the Latvian SSR (1989), Corresponding Member of the USSR Academy of Arts (1988)."
   },
   "authority_links": {
     "wikidata": {
@@ -129,5 +129,108 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian painter (1930-2002)",
+  "description_lv": "latviešu gleznotājs",
+  "education": [
+    {
+      "label": "Art Academy of Latvia",
+      "wikidata_id": "Q2607021",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
+    "wikidata_revision_id": 2448916145,
+    "manual_overrides": [],
+    "gallery_origin_attached": "2026-05-30"
+  },
+  "attestations": [
+    {
+      "source_id": "SRC-GALERIJA-JEKABS",
+      "role": "data_origin",
+      "url": "https://paintings.lv/artists/view/80",
+      "asserts": {
+        "name": "Boriss BĒRZIŅŠ",
+        "birth_year": 1930,
+        "death_year": 2002
+      },
+      "authoritative": false,
+      "retrieved": "2026-05-30"
+    }
+  ],
+  "source_ledger": {
+    "generated_at": "2026-05-30",
+    "origin": [
+      {
+        "source_id": "SRC-GALERIJA-JEKABS",
+        "name": "Galerija Jēkabs",
+        "type": "commercial_gallery",
+        "citable": false,
+        "url": "https://paintings.lv/artists/view/80",
+        "role": "data_origin"
+      }
+    ],
+    "authority": [
+      {
+        "source_id": "AUTH-WIKIDATA",
+        "name": "Wikidata",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://www.wikidata.org/wiki/Q4084866",
+        "id": "Q4084866",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-VIAF",
+        "name": "VIAF",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://viaf.org/viaf/15860358/",
+        "id": "15860358",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-ULAN",
+        "name": "Getty ULAN",
+        "type": "authority_file",
+        "citable": true,
+        "url": "http://vocab.getty.edu/page/ulan/500121451",
+        "id": "500121451",
+        "role": "authority_link"
+      }
+    ],
+    "provenance": [],
+    "verification": {
+      "status": "confirmed",
+      "basis": "authority",
+      "confirmed_by": [
+        "AUTH-WIKIDATA",
+        "AUTH-VIAF",
+        "AUTH-ULAN"
+      ]
+    },
+    "field_provenance": {
+      "birth_year": {
+        "value": 1930,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA",
+          "AUTH-ULAN"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      },
+      "death_year": {
+        "value": 2002,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA",
+          "AUTH-ULAN"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      }
+    }
+  }
 }

@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1887",
-      "precision": "year",
+      "value": "1887-09-23",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1975",
-      "precision": "year",
+      "value": "1975-01-29",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Platone Parish",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q4364707",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     }
   },
@@ -51,7 +51,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": null
+    "biography_summary": "Ģederts Eliass (1887—1975) bija latviešu revolucionārs un mākslinieks, viens no reālistiskās glezniecības pārstāvjiem, Latvijas Mākslas akadēmijas pedagogs (1925—1953), Latvijas PSR Tautas mākslinieks (1962)."
   },
   "authority_links": {
     "wikidata": {
@@ -131,5 +131,101 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "image": {
+    "commons_filename": "Gederts Eliass.gif",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Gederts_Eliass.gif",
+    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gederts_Eliass.gif?width=400"
+  },
+  "description_en": "Latvian painter (1887-1975)",
+  "description_lv": "latviešu gleznotājs",
+  "education": [
+    {
+      "label": "Royal Academy of Fine Arts of Brussels",
+      "wikidata_id": "Q2822455",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
+    "wikidata_revision_id": 2492108659,
+    "manual_overrides": [],
+    "gallery_origin_attached": "2026-05-30"
+  },
+  "attestations": [
+    {
+      "source_id": "SRC-GALERIJA-JEKABS",
+      "role": "data_origin",
+      "url": "https://paintings.lv/artists/view/273",
+      "asserts": {
+        "name": "Ģederts ELIASS",
+        "birth_year": 1887,
+        "death_year": 1975
+      },
+      "authoritative": false,
+      "retrieved": "2026-05-30"
+    }
+  ],
+  "source_ledger": {
+    "generated_at": "2026-05-30",
+    "origin": [
+      {
+        "source_id": "SRC-GALERIJA-JEKABS",
+        "name": "Galerija Jēkabs",
+        "type": "commercial_gallery",
+        "citable": false,
+        "url": "https://paintings.lv/artists/view/273",
+        "role": "data_origin"
+      }
+    ],
+    "authority": [
+      {
+        "source_id": "AUTH-WIKIDATA",
+        "name": "Wikidata",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://www.wikidata.org/wiki/Q11238108",
+        "id": "Q11238108",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-VIAF",
+        "name": "VIAF",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://viaf.org/viaf/67272802/",
+        "id": "67272802",
+        "role": "authority_link"
+      }
+    ],
+    "provenance": [],
+    "verification": {
+      "status": "confirmed",
+      "basis": "authority",
+      "confirmed_by": [
+        "AUTH-WIKIDATA",
+        "AUTH-VIAF"
+      ]
+    },
+    "field_provenance": {
+      "birth_year": {
+        "value": 1887,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      },
+      "death_year": {
+        "value": 1975,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      }
+    }
+  }
 }

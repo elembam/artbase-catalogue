@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1911",
-      "precision": "year",
+      "value": "1911-10-08",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1940",
-      "precision": "year",
+      "value": "1940-04-19",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     }
   },
@@ -51,7 +51,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": null
+    "biography_summary": "Kārlis Padegs was a Latvian artist. He studied under Latvian painter Vilhelms Purvītis at the Latvia Art Academy. His best-known work is Madonna with Machine Gun, which belongs to the Latvian National Museum of Art in Riga."
   },
   "authority_links": {
     "wikidata": {
@@ -129,5 +129,129 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "image": {
+    "commons_filename": "K. Padegs.jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:K._Padegs.jpg",
+    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/K._Padegs.jpg?width=400"
+  },
+  "description_en": "Latvian artist (1911-1940)",
+  "education": [
+    {
+      "label": "Art Academy of Latvia",
+      "wikidata_id": "Q2607021",
+      "source": "wikidata_auto"
+    }
+  ],
+  "movement": [
+    {
+      "label": "Expressionism",
+      "wikidata_id": "Q80113",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
+    "wikidata_revision_id": 2320484559,
+    "manual_overrides": [],
+    "europeana_last_enriched": "2026-05-29T20:42:57.075139+00:00",
+    "gallery_origin_attached": "2026-05-30"
+  },
+  "museum_holdings": [
+    {
+      "institution": "Latvian National Museum of Art",
+      "europeana_url": "https://europeana.eu/item/2063605/LAT_280_009",
+      "institution_url": "http://dom.lndb.lv/data/obj/63728.html",
+      "title_example": "Madonna with Machine Gun",
+      "source": "europeana_auto"
+    }
+  ],
+  "attestations": [
+    {
+      "source_id": "SRC-GALERIJA-JEKABS",
+      "role": "data_origin",
+      "url": "https://paintings.lv/artists/view/161",
+      "asserts": {
+        "name": "Kārlis PADEGS",
+        "birth_year": 1911,
+        "death_year": 1940
+      },
+      "authoritative": false,
+      "retrieved": "2026-05-30"
+    }
+  ],
+  "source_ledger": {
+    "generated_at": "2026-05-30",
+    "origin": [
+      {
+        "source_id": "SRC-GALERIJA-JEKABS",
+        "name": "Galerija Jēkabs",
+        "type": "commercial_gallery",
+        "citable": false,
+        "url": "https://paintings.lv/artists/view/161",
+        "role": "data_origin"
+      }
+    ],
+    "authority": [
+      {
+        "source_id": "AUTH-WIKIDATA",
+        "name": "Wikidata",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://www.wikidata.org/wiki/Q4342040",
+        "id": "Q4342040",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-VIAF",
+        "name": "VIAF",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://viaf.org/viaf/8191749/",
+        "id": "8191749",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-ULAN",
+        "name": "Getty ULAN",
+        "type": "authority_file",
+        "citable": true,
+        "url": "http://vocab.getty.edu/page/ulan/500121470",
+        "id": "500121470",
+        "role": "authority_link"
+      }
+    ],
+    "provenance": [],
+    "verification": {
+      "status": "confirmed",
+      "basis": "authority",
+      "confirmed_by": [
+        "AUTH-WIKIDATA",
+        "AUTH-VIAF",
+        "AUTH-ULAN"
+      ]
+    },
+    "field_provenance": {
+      "birth_year": {
+        "value": 1911,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA",
+          "AUTH-ULAN"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      },
+      "death_year": {
+        "value": 1940,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA",
+          "AUTH-ULAN"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      }
+    }
+  }
 }

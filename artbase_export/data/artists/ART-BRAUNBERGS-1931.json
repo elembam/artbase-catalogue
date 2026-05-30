@@ -15,23 +15,23 @@
   },
   "life": {
     "birth_date": {
-      "value": "1931",
-      "precision": "year",
+      "value": "1931-08-06",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "2018",
-      "precision": "year",
+      "value": "2018-06-05",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Tukums",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q636935",
       "source_ids": []
     },
     "death_place": {
@@ -51,7 +51,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": null
+    "biography_summary": "Emīls Braunbergs bija Latvijas mākslinieks un ķirurgs."
   },
   "authority_links": {
     "wikidata": {
@@ -131,5 +131,95 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian painter",
+  "education": [
+    {
+      "label": "Riga Stradiņš University",
+      "wikidata_id": "Q2007643",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
+    "wikidata_revision_id": 2448916048,
+    "manual_overrides": [],
+    "gallery_origin_attached": "2026-05-30"
+  },
+  "attestations": [
+    {
+      "source_id": "SRC-GALERIJA-JEKABS",
+      "role": "data_origin",
+      "url": "https://paintings.lv/artists/view/322",
+      "asserts": {
+        "name": "Emīls BRAUNBERGS",
+        "birth_year": 1931,
+        "death_year": 2018
+      },
+      "authoritative": false,
+      "retrieved": "2026-05-30"
+    }
+  ],
+  "source_ledger": {
+    "generated_at": "2026-05-30",
+    "origin": [
+      {
+        "source_id": "SRC-GALERIJA-JEKABS",
+        "name": "Galerija Jēkabs",
+        "type": "commercial_gallery",
+        "citable": false,
+        "url": "https://paintings.lv/artists/view/322",
+        "role": "data_origin"
+      }
+    ],
+    "authority": [
+      {
+        "source_id": "AUTH-WIKIDATA",
+        "name": "Wikidata",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://www.wikidata.org/wiki/Q16356029",
+        "id": "Q16356029",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-VIAF",
+        "name": "VIAF",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://viaf.org/viaf/305091472/",
+        "id": "305091472",
+        "role": "authority_link"
+      }
+    ],
+    "provenance": [],
+    "verification": {
+      "status": "confirmed",
+      "basis": "authority",
+      "confirmed_by": [
+        "AUTH-WIKIDATA",
+        "AUTH-VIAF"
+      ]
+    },
+    "field_provenance": {
+      "birth_year": {
+        "value": 1931,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      },
+      "death_year": {
+        "value": 2018,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      }
+    }
+  }
 }

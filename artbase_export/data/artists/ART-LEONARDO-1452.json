@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1452",
-      "precision": "year",
+      "value": "1452-04-15",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1519",
-      "precision": "year",
+      "value": "1519-05-02",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": "Vinci, Tuscany, Italy",
+      "display": "Anchiano",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q154184",
       "source_ids": []
     },
     "death_place": {
-      "display": "Amboise, France",
+      "display": "Clos Lucé",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1122731",
       "source_ids": []
     }
   },
@@ -54,7 +54,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": null
+    "biography_summary": "Leonardo di ser Piero da Vinci was an Italian polymath of the High Renaissance who was active as a painter, draughtsman, engineer, scientist, theorist, sculptor, and architect. While his fame initially rested on his achievements as a painter, he has also become known for his notebooks, in which he made drawings and notes on a variety of subjects, including anatomy, astronomy, botany, cartography, painting, and palaeontology. Leonardo is widely regarded as a genius who epitomised the Renaissance humanist ideal, and his collective works contributed to the development of European art to an extent"
   },
   "authority_links": {
     "wikidata": {
@@ -166,5 +166,185 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "image": {
+    "commons_filename": "Francesco Melzi - Portrait of Leonardo.png",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:Francesco_Melzi_-_Portrait_of_Leonardo.png",
+    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Francesco_Melzi_-_Portrait_of_Leonardo.png?width=400"
+  },
+  "description_en": "Italian Renaissance polymath (1452−1519)",
+  "description_lv": "itāļu renesanses polimāts (1452−1519)",
+  "movement": [
+    {
+      "label": "High Renaissance",
+      "wikidata_id": "Q1474884",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Renaissance",
+      "wikidata_id": "Q4692",
+      "source": "wikidata_auto"
+    }
+  ],
+  "genre": [
+    {
+      "label": "portrait",
+      "wikidata_id": "Q134307",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "religious painting",
+      "wikidata_id": "Q2414609",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "religious art",
+      "wikidata_id": "Q2864737",
+      "source": "wikidata_auto"
+    }
+  ],
+  "notable_works": [
+    {
+      "label": "Q1638622",
+      "wikidata_id": "Q1638622",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Q269342",
+      "wikidata_id": "Q269342",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Q12418",
+      "wikidata_id": "Q12418",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Q128910",
+      "wikidata_id": "Q128910",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Q474338",
+      "wikidata_id": "Q474338",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Q215486",
+      "wikidata_id": "Q215486",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Q1217213",
+      "wikidata_id": "Q1217213",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Q972196",
+      "wikidata_id": "Q972196",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Q563727",
+      "wikidata_id": "Q563727",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Q783215",
+      "wikidata_id": "Q783215",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
+    "wikidata_revision_id": 2496704148,
+    "manual_overrides": [],
+    "europeana_last_enriched": "2026-05-29T20:42:45.655523+00:00"
+  },
+  "museum_holdings": [
+    {
+      "institution": "Royal Museums Greenwich",
+      "europeana_url": "https://europeana.eu/item/2022362/_Royal_Museums_Greenwich__http___collections_rmg_co_uk_collections_objects_39719",
+      "institution_url": null,
+      "title_example": "Medal commemorating the Italian battleship 'Leonardo da Vinci'",
+      "source": "europeana_auto"
+    },
+    {
+      "institution": "Library of the Wroclaw University",
+      "europeana_url": "https://europeana.eu/item/0940429/_nhtp31S",
+      "institution_url": "http://fbc.pionier.net.pl/id/oai:www.bibliotekacyfrowa.pl:99764",
+      "title_example": "Leonardo da Vinci",
+      "source": "europeana_auto"
+    },
+    {
+      "institution": "Department of Life Sciences, University of Trieste",
+      "europeana_url": "https://europeana.eu/item/11628/_FOTO_AM_UNITS_ITALY_94609",
+      "institution_url": "http://dryades.units.it/dryades/viewer.php?image=TS104523.jpg",
+      "title_example": "Rosa 'Leonardo da Vinci ®'",
+      "source": "europeana_auto"
+    }
+  ],
+  "source_ledger": {
+    "generated_at": "2026-05-30",
+    "origin": [],
+    "authority": [
+      {
+        "source_id": "AUTH-WIKIDATA",
+        "name": "Wikidata",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://www.wikidata.org/wiki/Q762",
+        "id": "Q762",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-VIAF",
+        "name": "VIAF",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://viaf.org/viaf/24604287/",
+        "id": "24604287",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-ULAN",
+        "name": "Getty ULAN",
+        "type": "authority_file",
+        "citable": true,
+        "url": "http://vocab.getty.edu/page/ulan/500010879",
+        "id": "500010879",
+        "role": "authority_link"
+      }
+    ],
+    "provenance": [],
+    "verification": {
+      "status": "confirmed",
+      "basis": "authority",
+      "confirmed_by": [
+        "AUTH-WIKIDATA",
+        "AUTH-VIAF",
+        "AUTH-ULAN"
+      ]
+    },
+    "field_provenance": {
+      "birth_year": {
+        "value": 1452,
+        "sources": [
+          "AUTH-WIKIDATA",
+          "AUTH-ULAN"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      },
+      "death_year": {
+        "value": 1519,
+        "sources": [
+          "AUTH-WIKIDATA",
+          "AUTH-ULAN"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      }
+    }
+  }
 }

@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1897",
-      "precision": "year",
+      "value": "1897-07-07",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1975",
-      "precision": "year",
+      "value": "1975-03-07",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Livonia Governorate",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1419584",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     }
   },
@@ -51,7 +51,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": null
+    "biography_summary": "Leo Svemps bija latviešu gleznotājs un jurists. Rīgas mākslinieku grupas loceklis, Latvijas Mākslas akadēmijas pedagogs (1940—1975) un rektors (1961—1974)."
   },
   "authority_links": {
     "wikidata": {
@@ -129,5 +129,93 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian artist and educator (1897-1975)",
+  "education": [
+    {
+      "label": "University of Latvia",
+      "wikidata_id": "Q498407",
+      "source": "wikidata_auto"
+    }
+  ],
+  "genre": [
+    {
+      "label": "landscape painting",
+      "wikidata_id": "Q191163",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "still life",
+      "wikidata_id": "Q170571",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
+    "wikidata_revision_id": 2494925185,
+    "manual_overrides": []
+  },
+  "source_ledger": {
+    "generated_at": "2026-05-30",
+    "origin": [],
+    "authority": [
+      {
+        "source_id": "AUTH-WIKIDATA",
+        "name": "Wikidata",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://www.wikidata.org/wiki/Q4410059",
+        "id": "Q4410059",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-VIAF",
+        "name": "VIAF",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://viaf.org/viaf/47782055/",
+        "id": "47782055",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-ULAN",
+        "name": "Getty ULAN",
+        "type": "authority_file",
+        "citable": true,
+        "url": "http://vocab.getty.edu/page/ulan/500095037",
+        "id": "500095037",
+        "role": "authority_link"
+      }
+    ],
+    "provenance": [],
+    "verification": {
+      "status": "confirmed",
+      "basis": "authority",
+      "confirmed_by": [
+        "AUTH-WIKIDATA",
+        "AUTH-VIAF",
+        "AUTH-ULAN"
+      ]
+    },
+    "field_provenance": {
+      "birth_year": {
+        "value": 1897,
+        "sources": [
+          "AUTH-WIKIDATA",
+          "AUTH-ULAN"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      },
+      "death_year": {
+        "value": 1975,
+        "sources": [
+          "AUTH-WIKIDATA",
+          "AUTH-ULAN"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      }
+    }
+  }
 }

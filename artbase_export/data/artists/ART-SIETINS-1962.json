@@ -15,8 +15,8 @@
   },
   "life": {
     "birth_date": {
-      "value": "1962",
-      "precision": "year",
+      "value": "1962-10-23",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
@@ -29,9 +29,9 @@
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Kuldīga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q155281",
       "source_ids": []
     },
     "death_place": {
@@ -131,5 +131,78 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "printmaker (born 1962)",
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
+    "wikidata_revision_id": 2432101769,
+    "manual_overrides": [],
+    "gallery_origin_attached": "2026-05-30"
+  },
+  "attestations": [
+    {
+      "source_id": "SRC-GALERIJA-JEKABS",
+      "role": "data_origin",
+      "url": "https://paintings.lv/artists/view/203",
+      "asserts": {
+        "name": "Guntars SIETIŅŠ",
+        "birth_year": 1962
+      },
+      "authoritative": false,
+      "retrieved": "2026-05-30"
+    }
+  ],
+  "source_ledger": {
+    "generated_at": "2026-05-30",
+    "origin": [
+      {
+        "source_id": "SRC-GALERIJA-JEKABS",
+        "name": "Galerija Jēkabs",
+        "type": "commercial_gallery",
+        "citable": false,
+        "url": "https://paintings.lv/artists/view/203",
+        "role": "data_origin"
+      }
+    ],
+    "authority": [
+      {
+        "source_id": "AUTH-WIKIDATA",
+        "name": "Wikidata",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://www.wikidata.org/wiki/Q59511477",
+        "id": "Q59511477",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-VIAF",
+        "name": "VIAF",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://viaf.org/viaf/301556536/",
+        "id": "301556536",
+        "role": "authority_link"
+      }
+    ],
+    "provenance": [],
+    "verification": {
+      "status": "confirmed",
+      "basis": "authority",
+      "confirmed_by": [
+        "AUTH-WIKIDATA",
+        "AUTH-VIAF"
+      ]
+    },
+    "field_provenance": {
+      "birth_year": {
+        "value": 1962,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      }
+    }
+  }
 }

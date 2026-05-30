@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1925",
-      "precision": "year",
+      "value": "1925-09-20",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "2019",
-      "precision": "year",
+      "value": "2019-11-09",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     }
   },
@@ -51,7 +51,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": null
+    "biography_summary": "Džemma Lija Skulme was a Latvian artist and modernist painter. Džemma Skulme's personality played a paramount role in Latvian art development and social life of Latvia in the second half of the 20th century."
   },
   "authority_links": {
     "wikidata": {
@@ -129,5 +129,137 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "image": {
+    "commons_filename": "MK balva 2009 (4108603553).jpg",
+    "commons_url": "https://commons.wikimedia.org/wiki/File:MK_balva_2009_(4108603553).jpg",
+    "thumb_url": "https://commons.wikimedia.org/wiki/Special:FilePath/MK_balva_2009_%284108603553%29.jpg?width=400"
+  },
+  "description_en": "Latvian artist (1925–2019)",
+  "description_lv": "latviešu gleznotāja, sabiedriskā darbiniece",
+  "education": [
+    {
+      "label": "Art Academy of Latvia",
+      "wikidata_id": "Q2607021",
+      "source": "wikidata_auto"
+    }
+  ],
+  "movement": [
+    {
+      "label": "modern art",
+      "wikidata_id": "Q38166",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
+    "wikidata_revision_id": 2487249182,
+    "manual_overrides": [],
+    "europeana_last_enriched": "2026-05-29T20:43:11.895720+00:00",
+    "gallery_origin_attached": "2026-05-30"
+  },
+  "museum_holdings": [
+    {
+      "institution": "Andris Rake",
+      "europeana_url": "https://europeana.eu/item/92085/22933",
+      "institution_url": "http://dom.lndb.lv/data/obj/22933.html",
+      "title_example": "Mežaparks. Stoholmas un Velmes ielu stūris",
+      "source": "europeana_auto"
+    },
+    {
+      "institution": "Kauguru Parish Development Society",
+      "europeana_url": "https://europeana.eu/item/92085/18231",
+      "institution_url": "http://dom.lndb.lv/data/obj/18231.html",
+      "title_example": "Atjaunotās Mūrmuižas Tautas universitātes trešā nodarbība",
+      "source": "europeana_auto"
+    }
+  ],
+  "attestations": [
+    {
+      "source_id": "SRC-GALERIJA-JEKABS",
+      "role": "data_origin",
+      "url": "https://paintings.lv/artists/view/207",
+      "asserts": {
+        "name": "Džemma SKULME",
+        "birth_year": 1925,
+        "death_year": 2019
+      },
+      "authoritative": false,
+      "retrieved": "2026-05-30"
+    }
+  ],
+  "source_ledger": {
+    "generated_at": "2026-05-30",
+    "origin": [
+      {
+        "source_id": "SRC-GALERIJA-JEKABS",
+        "name": "Galerija Jēkabs",
+        "type": "commercial_gallery",
+        "citable": false,
+        "url": "https://paintings.lv/artists/view/207",
+        "role": "data_origin"
+      }
+    ],
+    "authority": [
+      {
+        "source_id": "AUTH-WIKIDATA",
+        "name": "Wikidata",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://www.wikidata.org/wiki/Q4422700",
+        "id": "Q4422700",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-VIAF",
+        "name": "VIAF",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://viaf.org/viaf/95744315/",
+        "id": "95744315",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-ULAN",
+        "name": "Getty ULAN",
+        "type": "authority_file",
+        "citable": true,
+        "url": "http://vocab.getty.edu/page/ulan/500010372",
+        "id": "500010372",
+        "role": "authority_link"
+      }
+    ],
+    "provenance": [],
+    "verification": {
+      "status": "confirmed",
+      "basis": "authority",
+      "confirmed_by": [
+        "AUTH-WIKIDATA",
+        "AUTH-VIAF",
+        "AUTH-ULAN"
+      ]
+    },
+    "field_provenance": {
+      "birth_year": {
+        "value": 1925,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA",
+          "AUTH-ULAN"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      },
+      "death_year": {
+        "value": 2019,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA",
+          "AUTH-ULAN"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      }
+    }
+  }
 }

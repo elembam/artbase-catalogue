@@ -189,11 +189,27 @@ def classify_field(path: str, value: Any, record: Dict, meta: Dict) -> Tuple[str
     # Accept descriptors fields from Airtable
     if path.startswith("descriptors."):
         return ("core_identity", "descriptor from Airtable export")
-    
+
+    # Accept source_ledger (derived view — not a primary field)
+    if path.startswith("source_ledger"):
+        return ("metadata", "derived source ledger — regenerated from attestations")
+
+    # GALLERY_ORIGIN — attestations from commercial_gallery / data_origin role.
+    # Classified as 'gallery_origin': attributed but NOT authoritative.
+    # This is distinct from unattributed AND from authority-backed fields.
+    if path.startswith("attestations"):
+        # Check if this attestation is from a non-citable origin source
+        attestations = record.get("attestations", [])
+        for att in attestations:
+            if att.get("role") == "data_origin" and att.get("authoritative") is False:
+                return ("gallery_origin",
+                        "data_origin attestation — attributed but non-authoritative (commercial gallery)")
+        return ("attestation", "attestation from citable source")
+
     # Accept sources and conflicts tracking
     if path.startswith("sources") or path.startswith("source_refs") or path.startswith("conflicts"):
         return ("core_identity", "cataloguing metadata")
-    
+
     # 11. UNATTRIBUTED
     return ("unattributed", "field not attributed to any known source")
 

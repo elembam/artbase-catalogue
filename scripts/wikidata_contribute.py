@@ -8,6 +8,10 @@ NEVER auto-submits. Output is human-reviewed .qs files for manual submission.
 Phase 1: External identifiers only (LNDB, ULAN, VIAF, Commons category)
 Phase 2: Factual biographical data (dates, places, images)
 Phase 3: Interpretive data (education, movement, genre) — deferred
+
+Hard rule (Instruction 8): any source with wikidata_citable: false in the
+source registry MUST NOT appear in any QuickStatements reference (S248).
+check_source_citable() enforces this before any statement is emitted.
 """
 
 from __future__ import annotations
@@ -58,6 +62,36 @@ SOURCE_QIDS = {
     "viaf": "Q54919",      # VIAF
     "commons": "Q565",     # Wikimedia Commons
 }
+
+
+def _load_source_registry() -> dict[str, dict]:
+    """Load data/sources/*.json — returns {source_id: source_dict}."""
+    sources_dir = Path(__file__).resolve().parent.parent / "artbase_export" / "data" / "sources"
+    registry: dict[str, dict] = {}
+    if sources_dir.exists():
+        for p in sources_dir.glob("*.json"):
+            try:
+                s = json.loads(p.read_text(encoding="utf-8"))
+                registry[s["source_id"]] = s
+            except (KeyError, json.JSONDecodeError):
+                pass
+    return registry
+
+# Loaded once at import time
+_SOURCE_REGISTRY: dict[str, dict] = _load_source_registry()
+
+
+def check_source_citable(source_id: str) -> bool:
+    """
+    Return True only if this source may back a Wikidata reference.
+    Hard rule (Instruction 8): commercial_gallery / auction_record sources are
+    NEVER citable. Any source with wikidata_citable: false is blocked.
+    Defaults to True for unknown sources (external authority files not in registry).
+    """
+    src = _SOURCE_REGISTRY.get(source_id)
+    if src is None:
+        return True   # unknown → assume authority-grade
+    return bool(src.get("wikidata_citable", True))
 
 
 class ContributionBatch:

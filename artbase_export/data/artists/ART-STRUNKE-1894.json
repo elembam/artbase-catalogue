@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1894",
-      "precision": "year",
+      "value": "1894-10-06",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1966",
-      "precision": "year",
+      "value": "1966-10-13",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Gostynin",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q983735",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Rome",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q220",
       "source_ids": []
     }
   },
@@ -51,7 +51,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": null
+    "biography_summary": "Niklāvs Strunke (1894–1966) was a Latvian painter and graphic artist. One of the most original artists of the Latvian modernist generation, he also worked in stained glass and scenography. He wrote about art.. Born 6 October 1894 in Gostynin, Russian Empire, to the family of a non-commissioned officer in the army of the Russian Empire. In 1903 he moved to Valmiera to live with his father's sister, and in 1909 he graduated from Liepiņš Progymnasium there. He moved to St. Petersburg with his father, and studied 1909–11 at the school of the Imperial Society for the Encouragement of the Arts under"
   },
   "authority_links": {
     "wikidata": {
@@ -129,5 +129,137 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian artist and illustrator (1894-1966)",
+  "description_lv": "latviešu gleznotājs, zīmētājs, grafiķis, grāmatu grafiķis, scenogrāfs, vitrāžists, porcelāna apgleznotājs (1894-1966)",
+  "education": [
+    {
+      "label": "Jūlija Madernieka studija",
+      "wikidata_id": "Q13218703",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Imperial Academy of Arts",
+      "wikidata_id": "Q628254",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
+    "wikidata_revision_id": 2422056755,
+    "manual_overrides": [],
+    "europeana_last_enriched": "2026-05-29T20:43:13.958621+00:00",
+    "gallery_origin_attached": "2026-05-30"
+  },
+  "museum_holdings": [
+    {
+      "institution": "National Library of Latvia",
+      "europeana_url": "https://europeana.eu/item/92085/4577",
+      "institution_url": "http://dom.lndb.lv/data/obj/4577.html",
+      "title_example": "Niklāvs Strunke (1894-1966)",
+      "source": "europeana_auto"
+    },
+    {
+      "institution": "Latvian National Museum of Art",
+      "europeana_url": "https://europeana.eu/item/2063605/LAT_280_007",
+      "institution_url": "http://dom.lndb.lv/data/obj/63726.html",
+      "title_example": "Man Entering a Room",
+      "source": "europeana_auto"
+    },
+    {
+      "institution": "Marija Bikova",
+      "europeana_url": "https://europeana.eu/item/92085/50699",
+      "institution_url": "http://dom.lndb.lv/data/obj/50699.html",
+      "title_example": "Sigulda. Jaunā pils",
+      "source": "europeana_auto"
+    }
+  ],
+  "attestations": [
+    {
+      "source_id": "SRC-GALERIJA-JEKABS",
+      "role": "data_origin",
+      "url": "https://paintings.lv/artists/view/290",
+      "asserts": {
+        "name": "Niklāvs STRUNKE",
+        "birth_year": 1894,
+        "death_year": 1966
+      },
+      "authoritative": false,
+      "retrieved": "2026-05-30"
+    }
+  ],
+  "source_ledger": {
+    "generated_at": "2026-05-30",
+    "origin": [
+      {
+        "source_id": "SRC-GALERIJA-JEKABS",
+        "name": "Galerija Jēkabs",
+        "type": "commercial_gallery",
+        "citable": false,
+        "url": "https://paintings.lv/artists/view/290",
+        "role": "data_origin"
+      }
+    ],
+    "authority": [
+      {
+        "source_id": "AUTH-WIKIDATA",
+        "name": "Wikidata",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://www.wikidata.org/wiki/Q18193873",
+        "id": "Q18193873",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-VIAF",
+        "name": "VIAF",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://viaf.org/viaf/71704247/",
+        "id": "71704247",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-ULAN",
+        "name": "Getty ULAN",
+        "type": "authority_file",
+        "citable": true,
+        "url": "http://vocab.getty.edu/page/ulan/500121474",
+        "id": "500121474",
+        "role": "authority_link"
+      }
+    ],
+    "provenance": [],
+    "verification": {
+      "status": "confirmed",
+      "basis": "authority",
+      "confirmed_by": [
+        "AUTH-WIKIDATA",
+        "AUTH-VIAF",
+        "AUTH-ULAN"
+      ]
+    },
+    "field_provenance": {
+      "birth_year": {
+        "value": 1894,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA",
+          "AUTH-ULAN"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      },
+      "death_year": {
+        "value": 1966,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA",
+          "AUTH-ULAN"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      }
+    }
+  }
 }

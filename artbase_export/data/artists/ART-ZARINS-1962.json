@@ -15,8 +15,8 @@
   },
   "life": {
     "birth_date": {
-      "value": "1962",
-      "precision": "year",
+      "value": "1962-04-10",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
@@ -29,9 +29,9 @@
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     },
     "death_place": {
@@ -51,7 +51,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": null
+    "biography_summary": "Kaspars Zariņš ir latviešu gleznotājs un mākslas pedagogs, Latvijas Mākslas akadēmijas profesors. Darbojas arī grāmatu grafikā un animācijā."
   },
   "authority_links": {
     "wikidata": {
@@ -131,5 +131,95 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian painter (born 1962)",
+  "education": [
+    {
+      "label": "Art Academy of Latvia",
+      "wikidata_id": "Q2607021",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
+    "wikidata_revision_id": 2495036690,
+    "manual_overrides": [],
+    "europeana_last_enriched": "2026-05-29T20:43:38.849118+00:00",
+    "gallery_origin_attached": "2026-05-30"
+  },
+  "museum_holdings": [
+    {
+      "institution": "Tartu Art Museum",
+      "europeana_url": "https://europeana.eu/item/401/item_J5FAF3YVN3QMHGSOFS2VY36HAKDZR7WG",
+      "institution_url": "https://www.muis.ee/museaalView/3202270",
+      "title_example": "Opening of V. Zarina and K. Zarins exhibition 30.03.1999. Kaspars Zarins with mother",
+      "source": "europeana_auto"
+    }
+  ],
+  "attestations": [
+    {
+      "source_id": "SRC-GALERIJA-JEKABS",
+      "role": "data_origin",
+      "url": "https://paintings.lv/artists/view/337",
+      "asserts": {
+        "name": "Kaspars ZARIŅŠ",
+        "birth_year": 1962
+      },
+      "authoritative": false,
+      "retrieved": "2026-05-30"
+    }
+  ],
+  "source_ledger": {
+    "generated_at": "2026-05-30",
+    "origin": [
+      {
+        "source_id": "SRC-GALERIJA-JEKABS",
+        "name": "Galerija Jēkabs",
+        "type": "commercial_gallery",
+        "citable": false,
+        "url": "https://paintings.lv/artists/view/337",
+        "role": "data_origin"
+      }
+    ],
+    "authority": [
+      {
+        "source_id": "AUTH-WIKIDATA",
+        "name": "Wikidata",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://www.wikidata.org/wiki/Q50377551",
+        "id": "Q50377551",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-VIAF",
+        "name": "VIAF",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://viaf.org/viaf/75789334/",
+        "id": "75789334",
+        "role": "authority_link"
+      }
+    ],
+    "provenance": [],
+    "verification": {
+      "status": "confirmed",
+      "basis": "authority",
+      "confirmed_by": [
+        "AUTH-WIKIDATA",
+        "AUTH-VIAF"
+      ]
+    },
+    "field_provenance": {
+      "birth_year": {
+        "value": 1962,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      }
+    }
+  }
 }

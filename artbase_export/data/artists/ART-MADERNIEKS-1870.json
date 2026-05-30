@@ -15,29 +15,29 @@
   },
   "life": {
     "birth_date": {
-      "value": "1870",
-      "precision": "year",
+      "value": "1870-02-27",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1955",
-      "precision": "year",
+      "value": "1955-07-19",
+      "precision": "day",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "birth_place": {
-      "display": null,
+      "display": "Vecgulbene Parish",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q16355479",
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Riga",
       "tgn_uri": null,
-      "wikidata_qid": null,
+      "wikidata_qid": "Q1773",
       "source_ids": []
     }
   },
@@ -51,7 +51,7 @@
     "media": [],
     "subjects": [],
     "movement_notes": null,
-    "biography_summary": null
+    "biography_summary": "Jūlijs Madernieks (1870—1955) bija latviešu gleznotājs, interjerists, pedagogs un mākslas kritiķis. Mākslinieku pulciņa \"Rūķis\" un mākslinieku biedrības \"Sadarbs\" biedrs."
   },
   "authority_links": {
     "wikidata": {
@@ -129,5 +129,141 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "description_en": "Latvian painter (1870-1955)",
+  "education": [
+    {
+      "label": "Saint Petersburg Stieglitz State Academy of Art and Design",
+      "wikidata_id": "Q2652597",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Beaux-Arts de Paris",
+      "wikidata_id": "Q273593",
+      "source": "wikidata_auto"
+    },
+    {
+      "label": "Académie Colarossi",
+      "wikidata_id": "Q337454",
+      "source": "wikidata_auto"
+    }
+  ],
+  "_meta": {
+    "wikidata_last_enriched": "2026-05-29T20:31:21Z",
+    "wikidata_revision_id": 2493164369,
+    "manual_overrides": [],
+    "europeana_last_enriched": "2026-05-29T20:42:48.556555+00:00",
+    "gallery_origin_attached": "2026-05-30"
+  },
+  "museum_holdings": [
+    {
+      "institution": "National Library of Latvia",
+      "europeana_url": "https://europeana.eu/item/92085/16485",
+      "institution_url": "http://dom.lndb.lv/data/obj/16485.html",
+      "title_example": "Izstādes skats",
+      "source": "europeana_auto"
+    },
+    {
+      "institution": "Department of Cultural Heritage Protection, Riga City Council",
+      "europeana_url": "https://europeana.eu/item/92085/50610",
+      "institution_url": "http://dom.lndb.lv/data/obj/50610.html",
+      "title_example": "Rīga. Nams Brīvības ielā 37",
+      "source": "europeana_auto"
+    },
+    {
+      "institution": "Mārtiņš Eglītis",
+      "europeana_url": "https://europeana.eu/item/92085/6843",
+      "institution_url": "http://dom.lndb.lv/data/obj/6843.html",
+      "title_example": "Rīga. Brīvības iela",
+      "source": "europeana_auto"
+    }
+  ],
+  "attestations": [
+    {
+      "source_id": "SRC-GALERIJA-JEKABS",
+      "role": "data_origin",
+      "url": "https://paintings.lv/artists/view/284",
+      "asserts": {
+        "name": "Jūlijs MADERNIEKS",
+        "birth_year": 1870,
+        "death_year": 1955
+      },
+      "authoritative": false,
+      "retrieved": "2026-05-30"
+    }
+  ],
+  "source_ledger": {
+    "generated_at": "2026-05-30",
+    "origin": [
+      {
+        "source_id": "SRC-GALERIJA-JEKABS",
+        "name": "Galerija Jēkabs",
+        "type": "commercial_gallery",
+        "citable": false,
+        "url": "https://paintings.lv/artists/view/284",
+        "role": "data_origin"
+      }
+    ],
+    "authority": [
+      {
+        "source_id": "AUTH-WIKIDATA",
+        "name": "Wikidata",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://www.wikidata.org/wiki/Q13553894",
+        "id": "Q13553894",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-VIAF",
+        "name": "VIAF",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://viaf.org/viaf/47844267/",
+        "id": "47844267",
+        "role": "authority_link"
+      },
+      {
+        "source_id": "AUTH-ULAN",
+        "name": "Getty ULAN",
+        "type": "authority_file",
+        "citable": true,
+        "url": "http://vocab.getty.edu/page/ulan/500121506",
+        "id": "500121506",
+        "role": "authority_link"
+      }
+    ],
+    "provenance": [],
+    "verification": {
+      "status": "confirmed",
+      "basis": "authority",
+      "confirmed_by": [
+        "AUTH-WIKIDATA",
+        "AUTH-VIAF",
+        "AUTH-ULAN"
+      ]
+    },
+    "field_provenance": {
+      "birth_year": {
+        "value": 1870,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA",
+          "AUTH-ULAN"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      },
+      "death_year": {
+        "value": 1955,
+        "sources": [
+          "SRC-GALERIJA-JEKABS",
+          "AUTH-WIKIDATA",
+          "AUTH-ULAN"
+        ],
+        "has_citable_source": true,
+        "discrepancy": false
+      }
+    }
+  }
 }

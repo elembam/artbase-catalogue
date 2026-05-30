@@ -1,0 +1,19 @@
+{
+  "source_id": "SRC-GALERIJA-JEKABS",
+  "name": "Galerija Jēkabs",
+  "also_known_as": ["Izsoļu nams Jēkabs", "Auction House Jēkabs"],
+  "source_type": "commercial_gallery",
+  "subtype": "auction house and gallery",
+  "website": "https://paintings.lv",
+  "artist_index_url": "https://paintings.lv/artists/list",
+  "location": "Jēkaba iela 26/28, Rīga, LV-1050, Latvia",
+  "wikidata_citable": false,
+  "can_confirm": false,
+  "wikidata_qid": null,
+  "wikidata_note": "Not expected to have or need a Wikidata item; commercial entity, internal lineage source only.",
+  "role_in_catalogue": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
+  "_meta": {
+    "registered_at": null,
+    "terms_note": "Factual data (names, life dates) used for attribution and seeding. Do not republish proprietary content (images, descriptions, prices). Respect robots.txt and rate limits."
+  }
+}

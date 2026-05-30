@@ -131,5 +131,42 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "source_ledger": {
+    "generated_at": "2026-05-30",
+    "origin": [],
+    "authority": [
+      {
+        "source_id": "AUTH-VIAF",
+        "name": "VIAF",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://viaf.org/viaf/305073415/",
+        "id": "305073415",
+        "role": "authority_link"
+      }
+    ],
+    "provenance": [],
+    "verification": {
+      "status": "confirmed",
+      "basis": "authority",
+      "confirmed_by": [
+        "AUTH-VIAF"
+      ]
+    },
+    "field_provenance": {
+      "birth_year": {
+        "value": 1904,
+        "sources": [],
+        "has_citable_source": false,
+        "discrepancy": false
+      },
+      "death_year": {
+        "value": 1993,
+        "sources": [],
+        "has_citable_source": false,
+        "discrepancy": false
+      }
+    }
+  }
 }

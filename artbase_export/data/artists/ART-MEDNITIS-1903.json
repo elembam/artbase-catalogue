@@ -131,5 +131,72 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "attestations": [
+    {
+      "source_id": "SRC-GALERIJA-JEKABS",
+      "role": "data_origin",
+      "url": "https://paintings.lv/artists/view/220",
+      "asserts": {
+        "name": "Bernhards MEDNĪTIS",
+        "birth_year": 1903,
+        "death_year": 1982
+      },
+      "authoritative": false,
+      "retrieved": "2026-05-30"
+    }
+  ],
+  "_meta": {
+    "gallery_origin_attached": "2026-05-30"
+  },
+  "source_ledger": {
+    "generated_at": "2026-05-30",
+    "origin": [
+      {
+        "source_id": "SRC-GALERIJA-JEKABS",
+        "name": "Galerija Jēkabs",
+        "type": "commercial_gallery",
+        "citable": false,
+        "url": "https://paintings.lv/artists/view/220",
+        "role": "data_origin"
+      }
+    ],
+    "authority": [
+      {
+        "source_id": "AUTH-VIAF",
+        "name": "VIAF",
+        "type": "authority_file",
+        "citable": true,
+        "url": "https://viaf.org/viaf/51152501099810681600/",
+        "id": "51152501099810681600",
+        "role": "authority_link"
+      }
+    ],
+    "provenance": [],
+    "verification": {
+      "status": "confirmed",
+      "basis": "authority",
+      "confirmed_by": [
+        "AUTH-VIAF"
+      ]
+    },
+    "field_provenance": {
+      "birth_year": {
+        "value": 1903,
+        "sources": [
+          "SRC-GALERIJA-JEKABS"
+        ],
+        "has_citable_source": false,
+        "discrepancy": false
+      },
+      "death_year": {
+        "value": 1982,
+        "sources": [
+          "SRC-GALERIJA-JEKABS"
+        ],
+        "has_citable_source": false,
+        "discrepancy": false
+      }
+    }
+  }
 }

@@ -132,5 +132,30 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "source_ledger": {
+    "generated_at": "2026-05-30",
+    "origin": [],
+    "authority": [],
+    "provenance": [],
+    "verification": {
+      "status": "unverified",
+      "basis": "none",
+      "confirmed_by": []
+    },
+    "field_provenance": {
+      "birth_year": {
+        "value": 1928,
+        "sources": [],
+        "has_citable_source": false,
+        "discrepancy": false
+      },
+      "death_year": {
+        "value": 1976,
+        "sources": [],
+        "has_citable_source": false,
+        "discrepancy": false
+      }
+    }
+  }
 }
