@@ -82,6 +82,8 @@ class ArtistFields:
 
     # Status and workflow
     LIVING_PERSON       = "Living Person?"       # Yes / No — GDPR flag
+    PUBLICATION_STATUS  = "Publication Status"   # pending_review / published / rejected
+    OWNER_VISIBILITY    = "Owner Visibility"     # private / restricted / public
     NOTABILITY_STATUS   = "Notability Status"    # Established / Plausible / Insufficient
     WIKIDATA_STATUS     = "Wikidata Status"      # matched_existing / create_candidate / not_applicable
     REVIEW_STATUS       = "Review Status"        # Approved / Needs review / Draft
@@ -151,6 +153,9 @@ class ArtworkFields:
     CONFIDENTIALITY     = "Confidentiality Level"  # Private / Client Portal / Public Site
     VISIBILITY          = "Passport Visibility"    # Private / Unlisted / Public — Unindexed / Public — Indexed
     STATUS              = "Passport Status"        # Draft / Review / Issued / Archived
+    PUBLICATION_STATUS  = "Publication Status"     # pending_review / published / rejected
+    LIVING_PERSON       = "Living Person?"         # checkbox — governs privacy for living artists
+    OWNER_VISIBILITY    = "Owner Visibility"       # private / restricted / public (default private for living owners)
 
     # Readiness dashboard fields (may be formulas or manually set)
     OBJECT_ID_READINESS = "Object ID Readiness"
@@ -298,12 +303,16 @@ class ContributorFields:
     ID                  = "Contributor ID"        # CON-GALERIJA-JEKABS, CON-USER-00001…
     DISPLAY_NAME        = "Display Name"
     CONTRIBUTOR_TYPE    = "Contributor Type"      # controlled vocab above
+    VERIFICATION_LEVEL  = "Verification Level"    # unverified/email_verified/identity_verified/known_institution
     WEBSITE             = "Website"
     CONTACT_EMAIL       = "Contact Email"         # internal only, never published
     WIKIDATA_CITABLE    = "Wikidata Citable?"     # Yes / No checkbox
     CAN_CONFIRM         = "Can Confirm?"          # Yes / No checkbox
     GDPR_SENSITIVE      = "GDPR Sensitive?"       # Yes / No — private individuals
+    LIVING_PERSON       = "Living Person?"        # checkbox — governs privacy treatment
+    GDPR_ROLE           = "GDPR Role"             # data_subject / not_applicable
     WIKIDATA_QID        = "Wikidata QID"          # if the contributor has a WD item
+    ACCOUNT_REF         = "Account Ref"           # internal account/user reference
     REGISTERED_AT       = "Registered At"
     TERMS_NOTE          = "Terms Note"            # usage terms / data-sharing agreement
     NOTES               = "Notes"
@@ -325,6 +334,16 @@ class SourceFields:
     DOCUMENT_DATE       = "Document Date"
     RELIABILITY         = "Reliability"         # High / Medium / Low
     CONTRIBUTOR         = "Contributor"         # → Contributors table (who provided this doc)
+    # Trust overrides (inherit / true / false) — override the contributor defaults per document
+    WIKIDATA_CITABLE_OVERRIDE = "Wikidata Citable Override"   # inherit / true / false
+    CAN_CONFIRM_OVERRIDE      = "Can Confirm Override"         # inherit / true / false
+    # Moderation / submission workflow
+    STATUS              = "Source Status"       # active / pending_review / accepted / needs_more_info / rejected
+    REVIEWED_BY         = "Reviewed By"         # → Contributors (platform_staff reviewer)
+    REVIEWED_AT         = "Reviewed At"
+    # Privacy flags
+    CONTAINS_PERSONAL_DATA = "Contains Personal Data?"
+    THIRD_PARTIES_NAMED    = "Third Parties Named?"
     PUBLIC              = "Public?"
     GDPR_SENSITIVE      = "GDPR Sensitive?"
     NOTES               = "Notes"
@@ -417,3 +436,44 @@ class WikidataStatus:
     MATCHED     = "matched_existing"
     CANDIDATE   = "create_candidate"
     NOT_APPLICABLE = "not_applicable"
+
+
+class VerificationLevel:
+    UNVERIFIED          = "unverified"
+    EMAIL_VERIFIED      = "email_verified"
+    IDENTITY_VERIFIED   = "identity_verified"
+    KNOWN_INSTITUTION   = "known_institution"
+
+
+class SubmissionStatus:
+    ACTIVE          = "active"
+    PENDING_REVIEW  = "pending_review"
+    ACCEPTED        = "accepted"
+    NEEDS_MORE_INFO = "needs_more_info"
+    REJECTED        = "rejected"
+
+
+class PublicationStatus:
+    PENDING_REVIEW  = "pending_review"
+    PUBLISHED       = "published"
+    REJECTED        = "rejected"
+
+
+class OwnerVisibility:
+    PRIVATE     = "private"
+    RESTRICTED  = "restricted"
+    PUBLIC      = "public"
+
+
+class TrustOverride:
+    INHERIT = "inherit"
+    TRUE    = "true"
+    FALSE   = "false"
+
+
+class AttestationRole:
+    DATA_ORIGIN     = "data_origin"
+    AUTHORITY       = "authority_link"
+    OWNER_ASSERTED  = "owner_asserted"
+    USER_SUBMISSION = "user_submission"
+    PROVENANCE      = "provenance"

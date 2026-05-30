@@ -1,0 +1,16 @@
+{
+  "source_id": "SRC-PLATFORM-STAFF",
+  "contributor_id": "CON-PLATFORM-STAFF",
+  "name": "Ars Accordia Cataloguing Staff",
+  "source_type": "platform_staff",
+  "contributor_type": "platform_staff",
+  "verification_level": "known_institution",
+  "wikidata_citable": false,
+  "can_confirm": true,
+  "gdpr_sensitive": false,
+  "role_in_catalogue": "Ars Accordia cataloguing staff. can_confirm=true but must cite the authority consulted. Manually entered records use this as their data_origin.",
+  "_meta": {
+    "registered_at": "2026-05-30",
+    "terms_note": "Internal platform staff. Confirmation must cite an authority source."
+  }
+}

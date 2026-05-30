@@ -147,7 +147,16 @@
   },
   "source_ledger": {
     "generated_at": "2026-05-30",
-    "origin": [],
+    "origin": [
+      {
+        "source_id": "SRC-PLATFORM-STAFF",
+        "name": "Ars Accordia Cataloguing Staff",
+        "type": "platform_staff",
+        "citable": false,
+        "url": null,
+        "role": "data_origin"
+      }
+    ],
     "authority": [
       {
         "source_id": "AUTH-WIKIDATA",
@@ -195,5 +204,14 @@
         "discrepancy": false
       }
     }
-  }
+  },
+  "attestations": [
+    {
+      "source_id": "SRC-PLATFORM-STAFF",
+      "role": "data_origin",
+      "authoritative": false,
+      "retrieved": "2026-05-30",
+      "note": "Manually catalogued by Ars Accordia staff. Requires authority corroboration for confirmed status."
+    }
+  ]
 }

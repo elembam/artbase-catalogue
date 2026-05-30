@@ -94,10 +94,26 @@ def build_ledger(artist: dict, source_registry: dict[str, dict]) -> dict:
         role = att.get("role", "attestation")
         src  = source_registry.get(sid, {})
 
-        citable     = src.get("wikidata_citable", True)   # unknown sources → assume citable
-        can_confirm = src.get("can_confirm",      True)
-        stype       = src.get("source_type", "unknown")
-        name        = src.get("name", sid)
+        # Resolve trust: source-document override if set, else contributor default.
+        # Override values: "inherit" / "true" / "false"
+        citable_raw = src.get("wikidata_citable_override", "inherit")
+        if citable_raw == "true":
+            citable = True
+        elif citable_raw == "false":
+            citable = False
+        else:
+            citable = src.get("wikidata_citable", True)   # unknown sources → assume citable
+
+        can_confirm_raw = src.get("can_confirm_override", "inherit")
+        if can_confirm_raw == "true":
+            can_confirm = True
+        elif can_confirm_raw == "false":
+            can_confirm = False
+        else:
+            can_confirm = src.get("can_confirm", True)
+
+        stype = src.get("source_type", "unknown")
+        name  = src.get("name", sid)
 
         entry = {
             "source_id":  sid,
@@ -109,6 +125,12 @@ def build_ledger(artist: dict, source_registry: dict[str, dict]) -> dict:
         }
 
         if role == "data_origin":
+            origin.append(entry)
+        elif role in ("owner_asserted", "user_submission"):
+            # owner_asserted and user_submission go into origin (non-authoritative claims)
+            # They are NEVER citable regardless of source trust settings.
+            entry["citable"]    = False
+            entry["can_confirm"] = False
             origin.append(entry)
         elif role.startswith("provenance"):
             provenance.append(entry)
@@ -154,16 +176,22 @@ def build_ledger(artist: dict, source_registry: dict[str, dict]) -> dict:
         basis  = "authority"
         status = "confirmed"
     elif origin:
+        # owner_asserted alone does not elevate to candidate — only data_origin does
+        has_data_origin = any(e.get("role") == "data_origin" for e in origin)
         basis  = "origin_only"
-        status = "candidate"
+        status = "candidate" if has_data_origin else "unverified"
     else:
         basis  = "none"
         status = "unverified"
 
-    # Respect existing verification_status if set
+    # Part G: staff confirmation must cite a basis.
+    # If an existing record is marked 'confirmed' by staff but has no citable authority
+    # sources in the ledger, demote it and flag it.
     existing_status = artist.get("verification_status")
-    if existing_status:
-        status = existing_status
+    if existing_status == "confirmed" and not citable_sources:
+        # Staff confirmation without any citable authority behind it is invalid.
+        status = "confirmed_no_basis"   # surfaced as a flag; will appear in --check output
+        basis  = "staff_only_no_authority_cited"
 
     verification = {
         "status":       status,

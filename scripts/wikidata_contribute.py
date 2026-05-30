@@ -84,13 +84,35 @@ _SOURCE_REGISTRY: dict[str, dict] = _load_source_registry()
 def check_source_citable(source_id: str) -> bool:
     """
     Return True only if this source may back a Wikidata reference.
-    Hard rule (Instruction 8): commercial_gallery / auction_record sources are
-    NEVER citable. Any source with wikidata_citable: false is blocked.
-    Defaults to True for unknown sources (external authority files not in registry).
+
+    Trust is resolved in two layers (Part B):
+      1. Source-document override: wikidata_citable_override in the source JSON.
+         Values: "true" / "false" / "inherit" (or absent → inherit).
+      2. Contributor default: wikidata_citable on the source JSON.
+
+    Hard rules:
+      - Any source with wikidata_citable: false is blocked.
+      - owner_asserted / user_submission / pending_review sources are NEVER citable.
+      - Defaults to True for unknown sources (external authority files not in registry).
     """
     src = _SOURCE_REGISTRY.get(source_id)
     if src is None:
         return True   # unknown → assume authority-grade
+
+    # Hard block: submissions under review or owner-asserted cannot be Wikidata sources
+    if src.get("status") in ("pending_review", "rejected"):
+        return False
+    if src.get("source_type") in ("user_submission",):
+        return False
+
+    # Layer 1: source-document override takes precedence
+    override = src.get("wikidata_citable_override", "inherit")
+    if override == "true":
+        return True
+    if override == "false":
+        return False
+
+    # Layer 2: contributor default
     return bool(src.get("wikidata_citable", True))
 
 

@@ -414,6 +414,47 @@ def _recommend_action(path: str, value: Any) -> str:
         return "review origin; add _meta attribution OR delete if invalid"
 
 
+def check_origins() -> int:
+    """
+    Part H — Origin completeness check.
+    Flag every artist/artwork record that has NO origin attestation
+    (role: data_origin or owner_asserted).
+    Returns the count of records missing an origin.
+    """
+    missing = []
+    files = sorted(
+        list(ARTISTS_DIR.glob("ART-*.json")) +
+        list(ARTWORKS_DIR.glob("AP-*.json"))
+    )
+    for f in files:
+        try:
+            record = json.load(open(f))
+        except Exception:
+            continue
+        attestations = record.get("attestations", [])
+        has_origin = any(
+            a.get("role") in ("data_origin", "owner_asserted", "user_submission")
+            for a in attestations
+        )
+        if not has_origin:
+            missing.append({
+                "id": record.get("artbase_id", f.stem),
+                "file": str(f.relative_to(REPO_ROOT)),
+                "attestations": len(attestations),
+            })
+
+    if missing:
+        print(f"✗ {len(missing)} record(s) have NO origin attestation:\n")
+        for m in missing:
+            print(f"  {m['id']:<30} {m['file']}  ({m['attestations']} attestations)")
+        print(f"\n  Every entity must have at least one data_origin / owner_asserted attestation.")
+        print(f"  Fix: run ingest_gallery_origin.py or add a platform_staff origin attestation manually.")
+    else:
+        print(f"✓ All {len(files)} records have at least one origin attestation.")
+
+    return len(missing)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Audit data provenance in canonical records")
     parser.add_argument("--record", help="Audit single record by ID")
@@ -421,8 +462,15 @@ def main():
                        help="Exit 1 if any unattributed fields found")
     parser.add_argument("--by-source", help="Filter report to show only one source")
     parser.add_argument("--since", help="Only audit records modified after date (YYYY-MM-DD)")
-    
+    parser.add_argument("--check-origins", action="store_true",
+                       help="Flag any artist/artwork with no origin attestation (Part H invariant)")
+
     args = parser.parse_args()
+
+    # Part H: origin completeness check (separate from the main field audit)
+    if args.check_origins:
+        count = check_origins()
+        sys.exit(1 if count > 0 else 0)
     
     # Find records to audit
     if args.record:
