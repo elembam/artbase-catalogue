@@ -20,6 +20,7 @@ class Tables:
     PROVENANCE          = "Provenance_Events"
     CONDITION           = "Condition_Conservation"
     SOURCES             = "Source_Documents"
+    CONTRIBUTORS        = "Contributors"          # NEW — unified source trust registry
     PASSPORT_ISSUES     = "Passport_Issues"
     IMPORTS             = "Imports"
     EXPORT_JOBS         = "Export_Jobs"
@@ -280,6 +281,37 @@ class ConditionFields:
     PRIVATE_NOTES       = "Private Notes"
 
 
+# ── Contributors ───────────────────────────────────────────────────────────────
+# Unified registry of every entity that contributes data to ArtBase:
+# galleries, private collectors, institutions, platform staff, authority files.
+# Every attestation in the canonical JSON traces back to a Contributor row.
+#
+# contributor_type controlled vocabulary:
+#   authority_file      — Wikidata, VIAF, ULAN, LNDB etc.  (wikidata_citable: Yes)
+#   institutional       — museum / foundation with authority file (citable if confirmed)
+#   platform_staff      — Ars Accordia cataloguers           (can_confirm: Yes, not citable)
+#   commercial_gallery  — galleries, auction houses           (not citable)
+#   private_collector   — individual submitting own collection (not citable, GDPR-sensitive)
+#   data_partner        — gallery formally sharing data       (not citable by default)
+
+class ContributorFields:
+    ID                  = "Contributor ID"        # CON-GALERIJA-JEKABS, CON-USER-00001…
+    DISPLAY_NAME        = "Display Name"
+    CONTRIBUTOR_TYPE    = "Contributor Type"      # controlled vocab above
+    WEBSITE             = "Website"
+    CONTACT_EMAIL       = "Contact Email"         # internal only, never published
+    WIKIDATA_CITABLE    = "Wikidata Citable?"     # Yes / No checkbox
+    CAN_CONFIRM         = "Can Confirm?"          # Yes / No checkbox
+    GDPR_SENSITIVE      = "GDPR Sensitive?"       # Yes / No — private individuals
+    WIKIDATA_QID        = "Wikidata QID"          # if the contributor has a WD item
+    REGISTERED_AT       = "Registered At"
+    TERMS_NOTE          = "Terms Note"            # usage terms / data-sharing agreement
+    NOTES               = "Notes"
+    # Reverse links (Airtable linked record fields)
+    SOURCE_DOCUMENTS    = "Source Documents"      # → Source_Documents rows they back
+    ARTISTS             = "Artists"               # → Artists_Makers rows they contributed
+
+
 # ── Source_Documents ──────────────────────────────────────────────────────────
 
 class SourceFields:
@@ -292,6 +324,7 @@ class SourceFields:
     ATTACHMENT          = "Attachment Placeholder"
     DOCUMENT_DATE       = "Document Date"
     RELIABILITY         = "Reliability"         # High / Medium / Low
+    CONTRIBUTOR         = "Contributor"         # → Contributors table (who provided this doc)
     PUBLIC              = "Public?"
     GDPR_SENSITIVE      = "GDPR Sensitive?"
     NOTES               = "Notes"
