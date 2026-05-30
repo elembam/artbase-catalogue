@@ -90,6 +90,20 @@ class ArtistFields:
     LAST_CHECKED        = "Last Checked"
     NOTES               = "Notes"
 
+    # Validation levels (Instruction 10 — four-grade GLEIF-style corroboration model)
+    VALIDATION_LEVEL1       = "Validation Level 1"          # PENDING/ENTITY_SUPPLIED_ONLY/PARTIALLY_CORROBORATED/FULLY_CORROBORATED
+    VALIDATION_AUTHORITY_L1 = "Validation Authority L1"     # corroborating authority source IDs, comma-separated
+    VALIDATED_BY_L1         = "Validated By L1"             # CON-ID or "automated" or "migrated"
+    VALIDATED_AT_L1         = "Validated At L1"             # ISO date
+    REVALIDATE_BY_L1        = "Revalidate By L1"            # ISO date — freshness signal
+    VALIDATION_LEVEL2       = "Validation Level 2"          # same vocab — for relationships/provenance
+    VALIDATION_AUTHORITY_L2 = "Validation Authority L2"
+    VALIDATED_BY_L2         = "Validated By L2"
+    VALIDATED_AT_L2         = "Validated At L2"
+    REVALIDATE_BY_L2        = "Revalidate By L2"
+    CONFORMANCE_BADGE       = "Conformance Badge"           # green / amber / grey / none (derived, not hand-edited)
+    LEGACY_STATUS           = "Legacy Status"               # old confirmed/candidate — retained briefly for audit
+
 
 # ── Artworks (= Passports) ─────────────────────────────────────────────────────
 
@@ -156,6 +170,20 @@ class ArtworkFields:
     PUBLICATION_STATUS  = "Publication Status"     # pending_review / published / rejected
     LIVING_PERSON       = "Living Person?"         # checkbox — governs privacy for living artists
     OWNER_VISIBILITY    = "Owner Visibility"       # private / restricted / public (default private for living owners)
+
+    # Validation levels (Instruction 10 — four-grade GLEIF-style corroboration model)
+    VALIDATION_LEVEL1       = "Validation Level 1"
+    VALIDATION_AUTHORITY_L1 = "Validation Authority L1"
+    VALIDATED_BY_L1         = "Validated By L1"
+    VALIDATED_AT_L1         = "Validated At L1"
+    REVALIDATE_BY_L1        = "Revalidate By L1"
+    VALIDATION_LEVEL2       = "Validation Level 2"
+    VALIDATION_AUTHORITY_L2 = "Validation Authority L2"
+    VALIDATED_BY_L2         = "Validated By L2"
+    VALIDATED_AT_L2         = "Validated At L2"
+    REVALIDATE_BY_L2        = "Revalidate By L2"
+    CONFORMANCE_BADGE       = "Conformance Badge"
+    LEGACY_STATUS           = "Legacy Status"
 
     # Readiness dashboard fields (may be formulas or manually set)
     OBJECT_ID_READINESS = "Object ID Readiness"
@@ -477,3 +505,27 @@ class AttestationRole:
     OWNER_ASSERTED  = "owner_asserted"
     USER_SUBMISSION = "user_submission"
     PROVENANCE      = "provenance"
+
+
+# ── Validation levels (Instruction 10) ────────────────────────────────────────
+# GLEIF-inspired four-grade corroboration model.
+# Applied independently to Level 1 (identity fields) and Level 2 (relationships/provenance).
+
+class ValidationLevel:
+    PENDING                 = "PENDING"                 # not yet assessed
+    ENTITY_SUPPLIED_ONLY    = "ENTITY_SUPPLIED_ONLY"    # only non-citable sources
+    PARTIALLY_CORROBORATED  = "PARTIALLY_CORROBORATED"  # some key fields backed by citable authority
+    FULLY_CORROBORATED      = "FULLY_CORROBORATED"      # all present key fields backed by citable authority
+
+
+class ConformanceBadge:
+    GREEN   = "green"    # Level 1 FULLY_CORROBORATED + validated_by is a human
+    AMBER   = "amber"    # Level 1 PARTIALLY_CORROBORATED, or FULLY_CORROBORATED by automated
+    GREY    = "grey"     # Level 1 ENTITY_SUPPLIED_ONLY
+    NONE    = "none"     # Level 1 PENDING or no data
+
+
+# ── Level 1 key fields ─────────────────────────────────────────────────────────
+# These are the fields evaluated when computing the Level 1 validation grade.
+ARTIST_L1_KEY_FIELDS    = ("birth_year", "death_year", "nationality", "name")
+ARTWORK_L1_KEY_FIELDS   = ("title", "creator", "date", "medium", "dimensions")

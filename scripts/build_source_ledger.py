@@ -167,7 +167,7 @@ def build_ledger(artist: dict, source_registry: dict[str, dict]) -> dict:
             "role":       "authority_link",
         })
 
-    # ── Verification summary ──────────────────────────────────────────────────
+    # ── Verification summary (LEGACY — kept for audit/migration) ─────────────────
     citable_sources = [s for s in authority if s.get("citable")]
     confirmed_by    = [s.get("source_id", s.get("name", "")) for s in citable_sources]
 
@@ -202,13 +202,180 @@ def build_ledger(artist: dict, source_registry: dict[str, dict]) -> dict:
     # ── Field-level provenance ────────────────────────────────────────────────
     field_provenance = _build_field_provenance(artist, attestations, source_registry, auth_links)
 
-    return {
+    # ── Validation block (Instruction 10 — four-grade GLEIF-style model) ─────
+    validation = _build_validation(
+        artist=artist,
+        field_provenance=field_provenance,
+        citable_sources=citable_sources,
+        origin=origin,
+        authority=authority,
+        provenance_list=provenance,
+    )
+
+    result = {
         "generated_at": today,
         "origin":       origin,
         "authority":    authority,
         "provenance":   provenance,
         "verification": verification,
+        "validation":   validation,
         "field_provenance": field_provenance,
+    }
+
+    # Preserve legacy_status if already written by migrate_validation.py
+    legacy = artist.get("source_ledger", {}).get("legacy_status")
+    if legacy is not None:
+        result["legacy_status"] = legacy
+
+    return result
+
+
+
+# ── Instruction 10: four-grade validation model ────────────────────────────────
+# Level 1 key fields for artists. If a field is absent from field_provenance,
+# it is not counted either for or against — only present fields are evaluated.
+_ARTIST_L1_FIELDS = ("birth_year", "death_year", "nationality", "name")
+
+def _compute_validation_level(
+    field_provenance: dict,
+    key_fields: tuple[str, ...],
+    citable_sources: list[dict],
+    has_any_origin: bool,
+    publication_pending: bool,
+) -> tuple[str, list[str]]:
+    """
+    Compute (ValidationLevel, authority_source_ids) for one level.
+
+    Rules (Part D of spec-10):
+    - PENDING if publication_status is pending_review
+    - ENTITY_SUPPLIED_ONLY if no citable sources back any key field
+    - PARTIALLY_CORROBORATED if some key fields have citable sources
+    - FULLY_CORROBORATED if ALL present key fields have citable sources AND no discrepancy
+    Integrity rule (Part B): PARTIALLY / FULLY require non-empty citable_sources list.
+    """
+    if publication_pending:
+        return "PENDING", []
+
+    # Collect which key fields have citable backing
+    present_fields = [f for f in key_fields if f in field_provenance]
+    if not present_fields:
+        # Nothing to evaluate — treat as PENDING for now
+        return "PENDING", []
+
+    citable_ids = [s["source_id"] for s in citable_sources if s.get("source_id")]
+
+    corroborated   = [f for f in present_fields if field_provenance[f].get("has_citable_source")]
+    uncorroborated = [f for f in present_fields if not field_provenance[f].get("has_citable_source")]
+    has_discrepancy = any(field_provenance[f].get("discrepancy") for f in present_fields)
+
+    if not corroborated:
+        return "ENTITY_SUPPLIED_ONLY", []
+
+    # Integrity rule: if we'd assign PARTIALLY/FULLY, citable_sources must be non-empty
+    if not citable_ids:
+        return "ENTITY_SUPPLIED_ONLY", []
+
+    if uncorroborated or has_discrepancy:
+        return "PARTIALLY_CORROBORATED", list(dict.fromkeys(citable_ids))
+
+    return "FULLY_CORROBORATED", list(dict.fromkeys(citable_ids))
+
+
+def _conformance_badge(level1: str, validated_by: str) -> str:
+    """Derive the public-facing conformance badge from Level 1 grade and who validated."""
+    if level1 == "FULLY_CORROBORATED":
+        # Green only when a human validated; amber if automated pipeline only
+        return "green" if (validated_by and validated_by not in ("automated", "migrated")) else "amber"
+    if level1 == "PARTIALLY_CORROBORATED":
+        return "amber"
+    if level1 == "ENTITY_SUPPLIED_ONLY":
+        return "grey"
+    return "none"  # PENDING
+
+
+def _build_validation(
+    artist: dict,
+    field_provenance: dict,
+    citable_sources: list[dict],
+    origin: list[dict],
+    authority: list[dict],
+    provenance_list: list[dict],
+) -> dict:
+    """
+    Build the `validation` block for a canonical artist record.
+
+    Returns a dict with `level1` and `level2` sub-objects.
+    """
+    today = str(date.today())
+    pub_status = artist.get("publication_status", "")
+    publication_pending = pub_status == "pending_review"
+
+    # ── Level 1: identity fields ───────────────────────────────────────────────
+    l1_level, l1_authority = _compute_validation_level(
+        field_provenance=field_provenance,
+        key_fields=_ARTIST_L1_FIELDS,
+        citable_sources=citable_sources,
+        has_any_origin=bool(origin),
+        publication_pending=publication_pending,
+    )
+    # validated_by: if we already have a human-validated flag in existing source_ledger,
+    # preserve it; otherwise "automated" (script-derived)
+    prev_validation = artist.get("source_ledger", {}).get("validation", {})
+    prev_l1 = prev_validation.get("level1", {})
+    validated_by_l1 = prev_l1.get("validated_by", "automated")
+    validated_at_l1 = prev_l1.get("validated_at") or (today if l1_level != "PENDING" else None)
+
+    # ── Level 2: relationships / provenance attestations ──────────────────────
+    # Level 2 is corroborated if any provenance-role attestation comes from a citable source.
+    has_citable_provenance = any(
+        e.get("citable") or any(
+            a.get("citable") for a in authority
+            if a.get("role") == "provenance"
+        )
+        for e in provenance_list
+    )
+    # Simpler: check provenance_list entries for citable flag
+    citable_prov = [e for e in provenance_list if e.get("citable")]
+
+    # Level 2 logic: PENDING | ENTITY_SUPPLIED_ONLY | PARTIALLY_CORROBORATED | FULLY_CORROBORATED
+    if publication_pending:
+        l2_level = "PENDING"
+        l2_authority = []
+    elif not provenance_list:
+        # No provenance data at all — not applicable for now, use PENDING
+        l2_level = "PENDING"
+        l2_authority = []
+    elif citable_prov:
+        l2_level = "FULLY_CORROBORATED"
+        l2_authority = [e.get("source_id", "") for e in citable_prov if e.get("source_id")]
+    elif origin:
+        # Has provenance data but only from non-citable origin
+        l2_level = "ENTITY_SUPPLIED_ONLY"
+        l2_authority = []
+    else:
+        l2_level = "ENTITY_SUPPLIED_ONLY"
+        l2_authority = []
+
+    prev_l2 = prev_validation.get("level2", {})
+    validated_by_l2 = prev_l2.get("validated_by", "automated")
+    validated_at_l2 = prev_l2.get("validated_at") or (today if l2_level != "PENDING" else None)
+
+    conformance = _conformance_badge(l1_level, validated_by_l1)
+
+    return {
+        "level1": {
+            "level":        l1_level,
+            "authority":    l1_authority,
+            "validated_by": validated_by_l1,
+            "validated_at": validated_at_l1,
+        },
+        "level2": {
+            "level":        l2_level,
+            "authority":    l2_authority,
+            "validated_by": validated_by_l2,
+            "validated_at": validated_at_l2,
+        },
+        "conformance_badge": conformance,
     }
 
 
@@ -251,15 +418,17 @@ def _build_field_provenance(
             gallery_asserts.get("birth_year", []) +
             citable_asserts.get("birth_year", [])
         )
-        # Add confirmed authority links that back birth
-        if auth_links.get("wikidata", {}).get("status") == "confirmed":
-            sources_for_birth.append("AUTH-WIKIDATA")
-        if auth_links.get("ulan", {}).get("id"):
-            sources_for_birth.append("AUTH-ULAN")
+        # Any confirmed authority link (Wikidata, ULAN, VIAF, etc.) authoritatively
+        # records birth/death dates and counts as a citable source for those fields.
+        confirmed_auths = [
+            k for k, v in auth_links.items()
+            if k != "artbase_id" and isinstance(v, dict) and v.get("status") == "confirmed" and v.get("id")
+        ]
+        for auth_key in confirmed_auths:
+            sources_for_birth.append(f"AUTH-{auth_key.upper()}")
 
         has_citable = bool(
-            citable_asserts.get("birth_year") or
-            auth_links.get("wikidata", {}).get("status") == "confirmed"
+            citable_asserts.get("birth_year") or confirmed_auths
         )
 
         gallery_val = None
@@ -282,14 +451,15 @@ def _build_field_provenance(
             gallery_asserts.get("death_year", []) +
             citable_asserts.get("death_year", [])
         )
-        if auth_links.get("wikidata", {}).get("status") == "confirmed":
-            sources_for_death.append("AUTH-WIKIDATA")
-        if auth_links.get("ulan", {}).get("id"):
-            sources_for_death.append("AUTH-ULAN")
+        confirmed_auths = [
+            k for k, v in auth_links.items()
+            if k != "artbase_id" and isinstance(v, dict) and v.get("status") == "confirmed" and v.get("id")
+        ]
+        for auth_key in confirmed_auths:
+            sources_for_death.append(f"AUTH-{auth_key.upper()}")
 
         has_citable = bool(
-            citable_asserts.get("death_year") or
-            auth_links.get("wikidata", {}).get("status") == "confirmed"
+            citable_asserts.get("death_year") or confirmed_auths
         )
 
         gallery_val = None

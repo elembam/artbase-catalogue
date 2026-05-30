@@ -17,10 +17,11 @@ import urllib.parse
 import urllib.request
 from typing import Optional
 
-WIKIDATA_API = "https://www.wikidata.org/w/api.php"
-USER_AGENT   = "Ars Accordia/1.0 (https://github.com/elembam/artbase-catalogue)"
-BATCH_SIZE   = 50
-RATE_SLEEP   = 1.05  # seconds between calls — stay under 1 req/s
+WIKIDATA_API  = "https://www.wikidata.org/w/api.php"
+WIKIPEDIA_API = "https://{lang}.wikipedia.org/w/api.php"
+USER_AGENT    = "Ars Accordia/1.0 (https://github.com/elembam/artbase-catalogue)"
+BATCH_SIZE    = 50
+RATE_SLEEP    = 1.05  # seconds between calls — stay under 1 req/s
 
 
 def _get(params: dict, retries: int = 1) -> dict:
@@ -37,6 +38,23 @@ def _get(params: dict, retries: int = 1) -> dict:
                 time.sleep(5.0)
                 continue
             raise
+    return {}
+
+
+def _get_url(url: str, retries: int = 1) -> dict:
+    """Make a raw GET request and return parsed JSON."""
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    for attempt in range(retries + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=20) as r:
+                return json.loads(r.read())
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt < retries:
+                time.sleep(5.0)
+                continue
+            raise
+        except Exception:
+            return {}
     return {}
 
 
@@ -75,3 +93,31 @@ def get_revision_id(entity: dict) -> Optional[int]:
 def is_redirect(entity: dict) -> bool:
     """Wikidata redirects appear as entities with a 'redirects' key."""
     return "redirects" in entity
+
+
+def fetch_wikipedia_summary(entity: dict, lang: str = "en") -> Optional[str]:
+    """
+    Fetch the lead-paragraph summary from Wikipedia for a Wikidata entity.
+    Uses the entity's sitelinks to find the Wikipedia article title, then
+    calls the Wikipedia REST summary API.
+    Returns plain text (no markup), or None if not available.
+    """
+    sitelinks = entity.get("sitelinks", {})
+    site_key  = f"{lang}wiki"
+    title = sitelinks.get(site_key, {}).get("title")
+    if not title:
+        return None
+
+    url = (
+        f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/"
+        + urllib.parse.quote(title.replace(" ", "_"))
+    )
+    try:
+        data = _get_url(url)
+        extract = data.get("extract") or data.get("extract_html")
+        if extract:
+            # Return first 600 chars — enough for a bio paragraph
+            return extract[:600].strip()
+    except Exception:
+        pass
+    return None

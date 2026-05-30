@@ -1,0 +1,6 @@
+record_id,file,field_path,field_value_preview,reason,recommendation
+ART-AIDE-1913,artbase_export/data/artists/ART-AIDE-1913.json,museum_holdings[0].europeana_url,https://europeana.eu/item/92085/53614,field not attributed to any known source,review origin; add _meta attribution OR delete if invalid
+ART-AIDE-1913,artbase_export/data/artists/ART-AIDE-1913.json,museum_holdings[0].institution,Jānis Zeps,field not attributed to any known source,review origin; add _meta attribution OR delete if invalid
+ART-AIDE-1913,artbase_export/data/artists/ART-AIDE-1913.json,museum_holdings[0].institution_url,http://dom.lndb.lv/data/obj/53614.html,field not attributed to any known source,review origin; add _meta attribution OR delete if invalid
+ART-AIDE-1913,artbase_export/data/artists/ART-AIDE-1913.json,museum_holdings[0].source,europeana_auto,field not attributed to any known source,review origin; add _meta attribution OR delete if invalid
+ART-AIDE-1913,artbase_export/data/artists/ART-AIDE-1913.json,museum_holdings[0].title_example,Vecrīga. Nams Jaunavu ielā 19,field not attributed to any known source,review origin; add _meta attribution OR delete if invalid

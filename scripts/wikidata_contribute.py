@@ -361,12 +361,23 @@ def has_existing_claim(entity: dict, prop: str) -> bool:
 def process_artist(artist: dict, args: argparse.Namespace, batch: ContributionBatch) -> int:
     """
     Process a single artist. Returns number of statements added.
+
+    Spec-10 guard: block artists whose Level 1 validation is ENTITY_SUPPLIED_ONLY or PENDING —
+    field values have no corroboration from a citable authority and must not be
+    contributed to Wikidata.
     """
     artist_id = artist.get("artbase_id", "UNKNOWN")
     wikidata_qid = artist.get("authority_links", {}).get("wikidata", {}).get("id")
-    
+
     if not wikidata_qid:
         batch.skip(artist_id, "No Wikidata QID")
+        return 0
+
+    # Instruction 10 guard: do not contribute if Level 1 is PENDING or ENTITY_SUPPLIED_ONLY
+    validation = artist.get("source_ledger", {}).get("validation", {})
+    l1_level   = validation.get("level1", {}).get("level", "PENDING")
+    if l1_level in ("PENDING", "ENTITY_SUPPLIED_ONLY"):
+        batch.skip(artist_id, f"Validation Level 1 = {l1_level} — no citable authority corroboration")
         return 0
     
     # Fetch current Wikidata state only when --refresh-wikidata is explicitly requested.

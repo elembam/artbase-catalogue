@@ -298,18 +298,63 @@
 
   <!-- ── Authority verification ────────────────────────────────────────────── -->
   <section class="section">
-    <h2 class="section-title">Authority Verification</h2>
+    <h2 class="section-title">Validation Levels</h2>
     <div class="prose">
-      <p>Authority links have two statuses:</p>
-      <ul style="margin: 12px 0 12px 20px; color: var(--ink-soft); line-height: 1.9;">
-        <li><strong>Confirmed</strong> — the link has been verified by a human cataloguer against
-        primary sources (birth records, exhibition catalogues, museum databases, or direct correspondence
-        with rights holders). Confirmed links are treated as authoritative.</li>
-        <li><strong>Candidate (⚠)</strong> — the link was assigned by automated matching and awaits
-        human verification. Candidate links should not be treated as authoritative without independent
-        corroboration.</li>
-      </ul>
-      <p>The distinction is displayed prominently on every artist record.</p>
+      <p>Every artist and artwork record carries a four-grade corroboration level
+      modelled on the GLEIF Legal Entity Identifier standard:</p>
+      <table style="margin: 16px 0; border-collapse: collapse; width: 100%; font-size: 0.92rem;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--rule-line);">
+            <th style="text-align:left; padding: 6px 12px 6px 0; color: var(--ink-strong);">Badge</th>
+            <th style="text-align:left; padding: 6px 12px; color: var(--ink-strong);">Level</th>
+            <th style="text-align:left; padding: 6px 0; color: var(--ink-strong);">Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--rule-line);">
+            <td style="padding: 8px 12px 8px 0;">
+              <span style="display:inline-flex;align-items:center;gap:5px;background:#eef7f1;color:#1f6637;border:1px solid #91c9a3;border-radius:20px;padding:2px 10px;font-size:0.8rem;font-weight:600;">
+                <span style="width:7px;height:7px;border-radius:50%;background:#2a7d46;flex-shrink:0;"></span> Green
+              </span>
+            </td>
+            <td style="padding: 8px 12px; color: var(--ink-soft);">Fully Corroborated</td>
+            <td style="padding: 8px 0; color: var(--ink-soft);">All identity fields confirmed by a citable authority
+            (Wikidata, ULAN, VIAF, RKD, etc.) and reviewed by a human cataloguer.</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--rule-line);">
+            <td style="padding: 8px 12px 8px 0;">
+              <span style="display:inline-flex;align-items:center;gap:5px;background:#fdf5e6;color:#7a5000;border:1px solid #d4a84b;border-radius:20px;padding:2px 10px;font-size:0.8rem;font-weight:600;">
+                <span style="width:7px;height:7px;border-radius:50%;background:#c27c0b;flex-shrink:0;"></span> Amber
+              </span>
+            </td>
+            <td style="padding: 8px 12px; color: var(--ink-soft);">Partially Corroborated</td>
+            <td style="padding: 8px 0; color: var(--ink-soft);">Some identity fields are confirmed by citable authority,
+            or all fields are confirmed but only by the automated pipeline (not yet reviewed by a human).</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--rule-line);">
+            <td style="padding: 8px 12px 8px 0;">
+              <span style="display:inline-flex;align-items:center;gap:5px;background:#f2f2f2;color:#666;border:1px solid #bbb;border-radius:20px;padding:2px 10px;font-size:0.8rem;font-weight:600;">
+                <span style="width:7px;height:7px;border-radius:50%;background:#999;flex-shrink:0;"></span> Grey
+              </span>
+            </td>
+            <td style="padding: 8px 12px; color: var(--ink-soft);">Entity-Supplied Only</td>
+            <td style="padding: 8px 0; color: var(--ink-soft);">Data comes only from non-citable sources (commercial gallery,
+            owner assertion). No independent authority corroboration yet.</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 12px 8px 0;">
+              <span style="display:inline-flex;align-items:center;gap:5px;background:#f9f9f9;color:#999;border:1px solid #ddd;border-radius:20px;padding:2px 10px;font-size:0.8rem;font-weight:600;">
+                <span style="width:7px;height:7px;border-radius:50%;background:#ccc;flex-shrink:0;"></span> –
+              </span>
+            </td>
+            <td style="padding: 8px 12px; color: var(--ink-soft);">Pending</td>
+            <td style="padding: 8px 0; color: var(--ink-soft);">Record is under review and has not yet been assessed.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Level 1 covers identity (name, dates, nationality). Level 2 covers relationships and
+      provenance. Both levels are evaluated independently and displayed on every artist record.
+      The badge displayed on artist pages reflects Level 1.</p>
     </div>
   </section>
 

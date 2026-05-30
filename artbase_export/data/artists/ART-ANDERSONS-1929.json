@@ -195,12 +195,31 @@
         "AUTH-VIAF"
       ]
     },
+    "validation": {
+      "level1": {
+        "level": "FULLY_CORROBORATED",
+        "authority": [
+          "AUTH-WIKIDATA",
+          "AUTH-VIAF"
+        ],
+        "validated_by": "automated",
+        "validated_at": "2026-05-30"
+      },
+      "level2": {
+        "level": "PENDING",
+        "authority": [],
+        "validated_by": "automated",
+        "validated_at": null
+      },
+      "conformance_badge": "amber"
+    },
     "field_provenance": {
       "birth_year": {
         "value": 1929,
         "sources": [
           "SRC-GALERIJA-JEKABS",
-          "AUTH-WIKIDATA"
+          "AUTH-WIKIDATA",
+          "AUTH-VIAF"
         ],
         "has_citable_source": true,
         "discrepancy": false
@@ -209,11 +228,13 @@
         "value": 1996,
         "sources": [
           "SRC-GALERIJA-JEKABS",
-          "AUTH-WIKIDATA"
+          "AUTH-WIKIDATA",
+          "AUTH-VIAF"
         ],
         "has_citable_source": true,
         "discrepancy": false
       }
-    }
+    },
+    "legacy_status": "confirmed"
   }
 }

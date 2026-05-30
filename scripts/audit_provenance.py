@@ -455,6 +455,67 @@ def check_origins() -> int:
     return len(missing)
 
 
+def check_levels() -> int:
+    """
+    Instruction 10 — Integrity rule: a record's claimed validation level may not
+    exceed its authority support.
+
+    Violations detected:
+    - FULLY_CORROBORATED with empty authority list
+    - PARTIALLY_CORROBORATED with empty authority list
+    - FULLY_CORROBORATED with field_provenance showing uncorroborated key fields
+    Returns the count of violations.
+    """
+    L1_KEY_FIELDS = ("birth_year", "death_year", "nationality", "name")
+    violations = []
+
+    files = sorted(
+        list(ARTISTS_DIR.glob("ART-*.json")) +
+        list(ARTWORKS_DIR.glob("AP-*.json"))
+    )
+    for f in files:
+        try:
+            record = json.load(open(f))
+        except Exception:
+            continue
+
+        sl  = record.get("source_ledger", {})
+        val = sl.get("validation", {})
+        l1  = val.get("level1", {})
+        level     = l1.get("level", "PENDING")
+        authority = l1.get("authority", [])
+        fp = sl.get("field_provenance", {})
+
+        record_id = record.get("artbase_id", f.stem)
+        issues = []
+
+        if level in ("FULLY_CORROBORATED", "PARTIALLY_CORROBORATED"):
+            if not authority:
+                issues.append(f"level={level} but authority list is empty")
+
+        if level == "FULLY_CORROBORATED":
+            present_fields = [k for k in L1_KEY_FIELDS if k in fp]
+            uncorroborated = [k for k in present_fields
+                              if not fp[k].get("has_citable_source")]
+            if uncorroborated:
+                issues.append(f"FULLY_CORROBORATED but {uncorroborated} lack citable source")
+
+        if issues:
+            violations.append({"id": record_id, "issues": issues})
+
+    if violations:
+        print(f"✗ {len(violations)} validation-level integrity violation(s):\n")
+        for v in violations:
+            print(f"  {v['id']}")
+            for iss in v["issues"]:
+                print(f"    → {iss}")
+        print(f"\n  Rebuild ledgers with: python3 scripts/build_source_ledger.py")
+    else:
+        print(f"✓ All {len(files)} records pass validation-level integrity check.")
+
+    return len(violations)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Audit data provenance in canonical records")
     parser.add_argument("--record", help="Audit single record by ID")
@@ -464,12 +525,19 @@ def main():
     parser.add_argument("--since", help="Only audit records modified after date (YYYY-MM-DD)")
     parser.add_argument("--check-origins", action="store_true",
                        help="Flag any artist/artwork with no origin attestation (Part H invariant)")
+    parser.add_argument("--check-levels", action="store_true",
+                       help="Integrity rule: claimed validation level must not exceed authority support")
 
     args = parser.parse_args()
 
     # Part H: origin completeness check (separate from the main field audit)
     if args.check_origins:
         count = check_origins()
+        sys.exit(1 if count > 0 else 0)
+
+    # Instruction 10: validation-level integrity check
+    if args.check_levels:
+        count = check_levels()
         sys.exit(1 if count > 0 else 0)
     
     # Find records to audit

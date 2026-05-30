@@ -83,6 +83,14 @@ def render_artist(artist: dict, artworks: list[dict], env: Environment) -> str:
         f for f, d in fp.items() if not d.get("has_citable_source")
     ]
 
+    # Instruction 10 — four-grade validation block
+    val_block = ledger.get("validation", {})
+    conformance_badge  = val_block.get("conformance_badge", "none")
+    validation_level1  = val_block.get("level1", {}).get("level", "PENDING")
+    validation_level2  = val_block.get("level2", {}).get("level", "PENDING")
+    validation_authority_l1 = val_block.get("level1", {}).get("authority", [])
+    validated_by_l1    = val_block.get("level1", {}).get("validated_by", "automated")
+
     tmpl = env.get_template("artist_profile.html.j2")
     return tmpl.render(
         artist=artist,
@@ -94,6 +102,11 @@ def render_artist(artist: dict, artworks: list[dict], env: Environment) -> str:
         source_authority=source_authority,
         verification_status=verification_status,
         gallery_only_fields=gallery_only_fields,
+        conformance_badge=conformance_badge,
+        validation_level1=validation_level1,
+        validation_level2=validation_level2,
+        validation_authority_l1=validation_authority_l1,
+        validated_by_l1=validated_by_l1,
     )
 
 

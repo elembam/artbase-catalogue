@@ -168,6 +168,21 @@
       "basis": "origin_only",
       "confirmed_by": []
     },
+    "validation": {
+      "level1": {
+        "level": "ENTITY_SUPPLIED_ONLY",
+        "authority": [],
+        "validated_by": "automated",
+        "validated_at": "2026-05-30"
+      },
+      "level2": {
+        "level": "PENDING",
+        "authority": [],
+        "validated_by": "automated",
+        "validated_at": null
+      },
+      "conformance_badge": "grey"
+    },
     "field_provenance": {
       "birth_year": {
         "value": 1970,
@@ -177,6 +192,7 @@
         "has_citable_source": false,
         "discrepancy": false
       }
-    }
+    },
+    "legacy_status": "candidate"
   }
 }

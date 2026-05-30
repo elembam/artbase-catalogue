@@ -349,7 +349,27 @@
   .origin-chip    { background: #f5f0e8; color: #7a6040; border: 1px solid #e0d4b8; }
   .authority-chip { background: #eef4ee; color: #2a6040; border: 1px solid #b8d4c0; }
 
+  /* Conformance badge (Instruction 10 — four-grade validation model) */
+  .conformance-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.82rem; font-family: 'Public Sans', sans-serif;
+    padding: 3px 10px; border-radius: 20px; font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .conformance-badge .badge-dot {
+    width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+  }
+  .conformance-badge.badge-green { background: #eef7f1; color: #1f6637; border: 1px solid #91c9a3; }
+  .conformance-badge.badge-green .badge-dot { background: #2a7d46; }
+  .conformance-badge.badge-amber { background: #fdf5e6; color: #7a5000; border: 1px solid #d4a84b; }
+  .conformance-badge.badge-amber .badge-dot { background: #c27c0b; }
+  .conformance-badge.badge-grey  { background: #f2f2f2; color: #666;   border: 1px solid #bbb; }
+  .conformance-badge.badge-grey  .badge-dot { background: #999; }
+  .conformance-badge.badge-none  { background: #f9f9f9; color: #999;   border: 1px solid #ddd; }
+  .conformance-badge.badge-none  .badge-dot { background: #ccc; }
+
   .vstatus { font-size: 0.85rem; font-family: 'Public Sans', sans-serif; }
+  /* legacy — kept for progressively-generated pages not yet regenerated */
   .vstatus-confirmed  { color: #2a6040; }
   .vstatus-candidate  { color: #7a5500; }
   .vstatus-unverified { color: var(--ink-faded); }
@@ -614,20 +634,17 @@
         <div class="sources-key">Status</div>
         <div class="sources-val">
           
-          <span class="vstatus vstatus-confirmed">✓ Confirmed</span>
+          
+          
+          <span class="conformance-badge badge-amber">
+            <span class="badge-dot"></span>
+            Fully Corroborated (automated)
+          </span>
           
         </div>
       </div>
 
       
-      
-      <div class="sources-row sources-row-warn">
-        <div class="sources-key">Note</div>
-        <div class="sources-val sources-warn">
-          The following facts are sourced from Galerija Jēkabs only and have not been confirmed by an independent authority:
-          <span class="gallery-fields">birth_year</span>.
-        </div>
-      </div>
       
 
     </div>
