@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ars Accordia contributes verified authority data to Wikidata — identifier links, P973 backlinks, and new items for European artists and artworks.">
+<title>Open Data Contributions — Ars Accordia</title>
+<link rel="canonical" href="https://arsaccordia.com/contributions/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:      #f6f1e6;
+    --paper-deep: #ebe3d1;
+    --ink:        #1c1814;
+    --ink-soft:   #4a4338;
+    --ink-faded:  #80766a;
+    --seal:       #6e1818;
+    --seal-light: #94342f;
+    --gold:       #8a6f2e;
+    --rule:       #c7bca5;
+    --grid:       rgba(110, 24, 24, 0.04);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    min-height: 100vh;
+    padding: 40px 20px 80px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+
+  .page { max-width: 900px; margin: 0 auto; position: relative; z-index: 2; }
+
+  /* Nav */
+  .site-nav {
+    max-width: 960px; margin: 0 auto 40px; padding: 0 0 16px;
+    border-bottom: 1px solid var(--rule);
+    display: flex; align-items: center; gap: 32px;
+    position: relative; z-index: 2;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+  .nav-logo-mark { width: 28px; height: 28px; background: var(--seal); border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+  .nav-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 24px; margin-left: auto; }
+  .nav-link { font-size: 0.875rem; color: var(--ink-soft); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+  .nav-link:hover { color: var(--seal); }
+  .nav-link.active { color: var(--seal); border-bottom-color: var(--seal); }
+
+  /* Page header */
+  .page-header { border-bottom: 2px solid var(--seal); padding-bottom: 24px; margin-bottom: 40px; }
+  .page-title { font-family: 'Fraunces', Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; margin-bottom: 8px; }
+  .page-subtitle { color: var(--ink-faded); font-size: 0.875rem; line-height: 1.6; max-width: 600px; }
+
+  /* Stats row */
+  .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 48px; }
+  .stat-card {
+    background: white; border: 1px solid var(--rule); border-radius: 4px;
+    padding: 18px 20px;
+  }
+  .stat-card.highlight { border-color: var(--seal); background: var(--paper-deep); }
+  .stat-num { font-family: 'JetBrains Mono', monospace; font-size: 2rem; font-weight: 600; color: var(--seal); line-height: 1; }
+  .stat-label { font-size: 0.8rem; color: var(--ink-faded); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .stat-sub { font-size: 0.75rem; color: var(--ink-soft); margin-top: 4px; }
+
+  /* Section */
+  .section { margin-bottom: 52px; }
+  .section-title {
+    font-family: 'Fraunces', Georgia, serif; font-size: 1.15rem; font-weight: 600; color: var(--ink);
+    margin-bottom: 6px; padding-bottom: 12px; border-bottom: 1px solid var(--rule);
+    display: flex; align-items: baseline; gap: 12px;
+  }
+  .section-subtitle { font-size: 0.82rem; color: var(--ink-faded); margin-bottom: 20px; }
+
+  /* Status badges */
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 3px;
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+    font-family: 'Public Sans', sans-serif; flex-shrink: 0;
+  }
+  .badge-verified  { background: var(--seal); color: white; }
+  .badge-submitted { background: var(--ink-soft); color: white; }
+  .badge-ready     { background: var(--gold); color: white; }
+  .badge-draft     { background: transparent; color: var(--ink-faded); border: 1px dashed var(--rule); }
+  .badge-superseded { background: var(--paper-deep); color: var(--ink-faded); text-decoration: line-through; border: 1px solid var(--rule); }
+
+  /* P973 artist cards */
+  .p973-grid { display: flex; flex-direction: column; gap: 8px; }
+  .p973-row {
+    display: flex; align-items: center; gap: 16px;
+    padding: 14px 16px;
+    background: white; border: 1px solid var(--rule); border-radius: 3px;
+  }
+  .p973-row.ready  { border-left: 3px solid var(--gold); }
+  .p973-row.verified { border-left: 3px solid var(--seal); }
+  .p973-artist { font-family: 'Fraunces', Georgia, serif; font-size: 1rem; font-weight: 500; flex: 1; }
+  .p973-qid {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--seal);
+    text-decoration: none; flex-shrink: 0;
+  }
+  .p973-qid:hover { text-decoration: underline; }
+  .p973-page { font-size: 0.8rem; color: var(--ink-faded); flex: 1; }
+  .p973-page a { color: var(--seal); text-decoration: none; font-size: 0.8rem; }
+  .p973-page a:hover { text-decoration: underline; }
+  .p973-works { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--ink-faded); flex-shrink: 0; }
+
+  /* Contribution ledger table */
+  .ledger { width: 100%; border-collapse: collapse; }
+  .ledger th {
+    text-align: left; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--ink-faded); padding: 0 12px 10px 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .ledger td {
+    padding: 11px 12px; border-bottom: 1px solid var(--rule);
+    font-size: 0.875rem; vertical-align: middle;
+  }
+  .ledger tr:last-child td { border-bottom: none; }
+  .ledger tr.superseded td { opacity: 0.45; }
+  .ledger tr:hover:not(.superseded) td { background: white; }
+  .ledger .batch-name {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--seal);
+  }
+  .ledger .batch-type { color: var(--ink-soft); }
+  .ledger .batch-count { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--ink-faded); }
+  .ledger-wrap { background: var(--paper-deep); border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+
+  /* Why box */
+  .why-box {
+    background: white; border: 1px solid var(--rule); border-radius: 4px;
+    padding: 24px 28px; margin-bottom: 48px;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;
+  }
+  .why-item { }
+  .why-icon {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--seal);
+    background: var(--paper-deep); border: 1px solid var(--rule); border-radius: 2px;
+    padding: 2px 8px; display: inline-block; margin-bottom: 10px;
+  }
+  .why-head { font-weight: 600; font-size: 0.9rem; color: var(--ink); margin-bottom: 6px; }
+  .why-body { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.5; }
+
+  /* Account box */
+  .account-box {
+    display: flex; align-items: center; gap: 20px;
+    background: white; border: 1px solid var(--rule); border-radius: 4px;
+    padding: 20px 24px; text-decoration: none; color: var(--ink);
+    transition: border-color 0.15s;
+  }
+  .account-box:hover { border-color: var(--seal); }
+  .account-logo { width: 44px; height: 44px; border-radius: 4px; background: #069; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .account-name { font-weight: 600; font-size: 0.95rem; }
+  .account-url { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--ink-faded); margin-top: 3px; }
+  .account-arrow { color: var(--seal); margin-left: auto; }
+
+  /* Footer */
+  .site-footer {
+    margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  .footer-text { font-size: 0.75rem; color: var(--ink-faded); }
+  .footer-link { color: var(--seal); text-decoration: none; }
+  .footer-link:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    body { padding: 20px 16px 60px; }
+    .site-nav { flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .nav-links { gap: 14px; flex-wrap: wrap; }
+    .nav-link { font-size: 0.8rem; }
+    .page-title { font-size: 1.5rem; }
+    .why-box { grid-template-columns: 1fr; gap: 18px; }
+    .p973-row { flex-wrap: wrap; gap: 6px; }
+    .p973-works { display: none; }
+    .ledger th:nth-child(3), .ledger td:nth-child(3) { display: none; }
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    body::before { display: none; }
+    .site-nav, .site-footer { display: none; }
+    .page { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <rect x="3" y="3" width="6" height="6" fill="white" opacity="0.9"/>
+        <rect x="11" y="3" width="6" height="6" fill="white" opacity="0.5"/>
+        <rect x="3" y="11" width="6" height="6" fill="white" opacity="0.5"/>
+        <rect x="11" y="11" width="6" height="6" fill="white" opacity="0.75"/>
+      </svg>
+    </div>
+    <span class="nav-name">Ars Accordia</span>
+  </a>
+  <div class="nav-links">
+    <a href="../catalogue/" class="nav-link">Catalogue</a>
+    <a href="../artworks/" class="nav-link">Artworks</a>
+    <a href="../collections/" class="nav-link">Collections</a>
+    <a href="../artists/" class="nav-link">Artists</a>
+    <a href="../about/" class="nav-link">About</a>
+    <a href="../contributions/" class="nav-link active">Contributions</a>
+    <a href="../sitemap/" class="nav-link">Index</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <header class="page-header">
+    <h1 class="page-title">Open Data Contributions</h1>
+    <p class="page-subtitle">
+      Ars Accordia contributes verified authority data back to Wikidata — identifier links,
+      descriptive cross-references, and new items for European artists and artworks.
+      All contributions are made under the
+      <a href="https://www.wikidata.org/wiki/User:Arsaccordia" target="_blank" rel="noopener" style="color:var(--seal);">Arsaccordia</a>
+      account.
+    </p>
+  </header>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Statements submitted</div>
+      <div class="stat-sub">First batches pending</div>
+    </div>
+    <div class="stat-card highlight">
+      <div class="stat-num">5</div>
+      <div class="stat-label">P973 links ready</div>
+      <div class="stat-sub">Wikidata → Ars Accordia</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">20</div>
+      <div class="stat-label">VIAF statements ready</div>
+      <div class="stat-sub">Across 10 artists</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">2</div>
+      <div class="stat-label">New items ready</div>
+      <div class="stat-sub">Source catalogues</div>
+    </div>
+  </div>
+
+  <!-- Why we contribute -->
+  <div class="why-box">
+    <div class="why-item">
+      <div class="why-icon">P973</div>
+      <div class="why-head">Knowledge panel links</div>
+      <div class="why-body">
+        P973 (described at URL) on a Wikidata item tells search engines that the Ars Accordia page
+        is an authoritative description of that artist. This is what surfaces the site in Google
+        Knowledge Panels and Europeana aggregation.
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">P214 · P245</div>
+      <div class="why-head">Identifier enrichment</div>
+      <div class="why-body">
+        Adding verified VIAF and Getty ULAN identifiers to Wikidata items strengthens the authority
+        record for artists whose presence in the open knowledge graph is thin or incomplete —
+        particularly Latvian and Baltic artists.
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">CREATE</div>
+      <div class="why-head">New items</div>
+      <div class="why-body">
+        Catalogues used as provenance sources (e.g. the 2007 Hansabanka collection catalogue)
+        and individual artworks need Wikidata items before they can be cited and linked across
+        the open data ecosystem.
+      </div>
+    </div>
+  </div>
+
+  <!-- P973 backlinks — featured -->
+  <section class="section">
+    <h2 class="section-title">
+      P973 — Described at URL
+      <span class="badge badge-ready">5 ready</span>
+    </h2>
+    <p class="section-subtitle">
+      These contributions create a machine-readable link from the artist's Wikidata item directly
+      to their Ars Accordia page. This is the primary mechanism for open-data authority and discovery.
+    </p>
+    <div class="p973-grid">
+
+      <div class="p973-row ready">
+        <span class="p973-artist">Jānis Rozentāls</span>
+        <a href="https://www.wikidata.org/wiki/Q975168" target="_blank" rel="noopener" class="p973-qid">Q975168</a>
+        <span class="p973-page"><a href="https://arsaccordia.com/artists/ART-ROZENTALS-1866.html" target="_blank" rel="noopener">arsaccordia.com/artists/ART-ROZENTALS-1866.html</a></span>
+        <span class="p973-works">39 LNMM works</span>
+        <span class="badge badge-ready">Ready</span>
+      </div>
+
+      <div class="p973-row ready">
+        <span class="p973-artist">Kārlis Padegs</span>
+        <a href="https://www.wikidata.org/wiki/Q4342040" target="_blank" rel="noopener" class="p973-qid">Q4342040</a>
+        <span class="p973-page"><a href="https://arsaccordia.com/artists/ART-PADEGS-1911.html" target="_blank" rel="noopener">arsaccordia.com/artists/ART-PADEGS-1911.html</a></span>
+        <span class="p973-works">25 LNMM works</span>
+        <span class="badge badge-ready">Ready</span>
+      </div>
+
+      <div class="p973-row ready">
+        <span class="p973-artist">Jāzeps Grosvalds</span>
+        <a href="https://www.wikidata.org/wiki/Q4150307" target="_blank" rel="noopener" class="p973-qid">Q4150307</a>
+        <span class="p973-page"><a href="https://arsaccordia.com/artists/ART-GROSVALDS-1891.html" target="_blank" rel="noopener">arsaccordia.com/artists/ART-GROSVALDS-1891.html</a></span>
+        <span class="p973-works">19 LNMM works</span>
+        <span class="badge badge-ready">Ready</span>
+      </div>
+
+      <div class="p973-row ready">
+        <span class="p973-artist">Vilhelms Purvītis</span>
+        <a href="https://www.wikidata.org/wiki/Q2663470" target="_blank" rel="noopener" class="p973-qid">Q2663470</a>
+        <span class="p973-page"><a href="https://arsaccordia.com/artists/ART-PURVITIS-1872.html" target="_blank" rel="noopener">arsaccordia.com/artists/ART-PURVITIS-1872.html</a></span>
+        <span class="p973-works">18 LNMM works</span>
+        <span class="badge badge-ready">Ready</span>
+      </div>
+
+      <div class="p973-row ready">
+        <span class="p973-artist">Romans Suta</span>
+        <a href="https://www.wikidata.org/wiki/Q6711504" target="_blank" rel="noopener" class="p973-qid">Q6711504</a>
+        <span class="p973-page"><a href="https://arsaccordia.com/artists/ART-SUTA-1896.html" target="_blank" rel="noopener">arsaccordia.com/artists/ART-SUTA-1896.html</a></span>
+        <span class="p973-works">18 LNMM works</span>
+        <span class="badge badge-ready">Ready</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contribution ledger -->
+  <section class="section">
+    <h2 class="section-title">Contribution Ledger</h2>
+    <p class="section-subtitle">
+      All QuickStatements batches prepared under the Arsaccordia account.
+      Batch files and review checklists are maintained in the
+      <a href="https://github.com/elembam/artbase-catalogue" target="_blank" rel="noopener" style="color:var(--seal);">ArtBase Git repository</a>.
+    </p>
+
+    <div class="ledger-wrap">
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th>Batch</th>
+            <th>Property / operation</th>
+            <th>Items</th>
+            <th>Collection</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>
+              <div class="batch-name">lnmm_phase1_p973</div>
+              <div style="font-size:0.75rem;color:var(--ink-faded);">2026-06-14</div>
+            </td>
+            <td class="batch-type">P973 — described at URL</td>
+            <td class="batch-count">5 artists</td>
+            <td style="font-size:0.82rem;color:var(--ink-soft);">LNMM</td>
+            <td><span class="badge badge-ready">Ready</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="batch-name">test_batch_first5</div>
+              <div style="font-size:0.75rem;color:var(--ink-faded);">2026-06-02</div>
+            </td>
+            <td class="batch-type">P214 — VIAF ID</td>
+            <td class="batch-count">5 artists</td>
+            <td style="font-size:0.82rem;color:var(--ink-soft);">Latvian artists</td>
+            <td><span class="badge badge-ready">Ready</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="batch-name">test_rozentals_batch</div>
+              <div style="font-size:0.75rem;color:var(--ink-faded);">2026-06-02</div>
+            </td>
+            <td class="batch-type">P214 — VIAF ID</td>
+            <td class="batch-count">5 artists</td>
+            <td style="font-size:0.82rem;color:var(--ink-soft);">LNMM artists</td>
+            <td><span class="badge badge-ready">Ready</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="batch-name">books_batch1</div>
+              <div style="font-size:0.75rem;color:var(--ink-faded);">2026-05-30</div>
+            </td>
+            <td class="batch-type">CREATE — book / catalogue items</td>
+            <td class="batch-count">2 items</td>
+            <td style="font-size:0.82rem;color:var(--ink-soft);">Hansabanka · LNMM</td>
+            <td><span class="badge badge-ready">Ready</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="batch-name">qs_tier2_rozentals</div>
+              <div style="font-size:0.75rem;color:var(--ink-faded);">2026-06-14 (draft)</div>
+            </td>
+            <td class="batch-type">CREATE — painting items</td>
+            <td class="batch-count">5 artworks</td>
+            <td style="font-size:0.82rem;color:var(--ink-soft);">LNMM · Rozentāls</td>
+            <td><span class="badge badge-draft">Draft</span></td>
+          </tr>
+
+          <tr class="superseded">
+            <td>
+              <div class="batch-name">queue_20260528</div>
+              <div style="font-size:0.75rem;color:var(--ink-faded);">2026-05-28</div>
+            </td>
+            <td class="batch-type">P214 — VIAF ID</td>
+            <td class="batch-count">10 artists</td>
+            <td style="font-size:0.82rem;color:var(--ink-faded);">Latvian artists</td>
+            <td><span class="badge badge-superseded">Superseded</span></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.75rem;color:var(--ink-faded);margin-top:10px;">
+      <em>Superseded</em> — queue_20260528 is covered by test_batch_first5 + test_rozentals_batch combined and must not be re-submitted.
+    </p>
+  </section>
+
+  <!-- Planned contributions -->
+  <section class="section">
+    <h2 class="section-title">Planned <span style="font-size:0.85rem;font-weight:400;color:var(--ink-faded);font-family:'Public Sans',sans-serif;">next steps</span></h2>
+    <p class="section-subtitle">Contributions in preparation, pending ArtBase records or issued passports.</p>
+
+    <div style="display:flex;flex-direction:column;gap:8px;">
+
+      <div style="display:flex;align-items:center;gap:14px;padding:13px 16px;background:var(--paper-deep);border:1px solid var(--rule);border-radius:3px;">
+        <div style="flex:1;">
+          <div style="font-weight:600;font-size:0.9rem;">QID resolution — Hūns, Feders, Tīdemanis</div>
+          <div style="font-size:0.8rem;color:var(--ink-soft);margin-top:2px;">3 artists in ArtBase without confirmed Wikidata IDs — search, confirm, update records</div>
+        </div>
+        <span class="badge badge-draft">Planned</span>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:14px;padding:13px 16px;background:var(--paper-deep);border:1px solid var(--rule);border-radius:3px;">
+        <div style="flex:1;">
+          <div style="font-weight:600;font-size:0.9rem;">Phase 3 — ArtBase records for 8 missing LNMM artists</div>
+          <div style="font-size:0.8rem;color:var(--ink-soft);margin-top:2px;">Walter/Valters (28 works), Kazaks (20), Pērle (16), Krastiņš (12), Alksnis (11), Zariņš (9), Ūders (7), Klucis (5)</div>
+        </div>
+        <span class="badge badge-draft">Planned</span>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:14px;padding:13px 16px;background:var(--paper-deep);border:1px solid var(--rule);border-radius:3px;">
+        <div style="flex:1;">
+          <div style="font-weight:600;font-size:0.9rem;">Phase 4 — Artwork items for exemplary LNMM works</div>
+          <div style="font-size:0.8rem;color:var(--ink-soft);margin-top:2px;">Rozentāls "From Church", Purvītis "Winter", Tīdemanis "Carousel" — requires passports to be issued first</div>
+        </div>
+        <span class="badge badge-draft">After passports</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Wikidata account -->
+  <section class="section">
+    <h2 class="section-title">Wikidata Account</h2>
+    <a href="https://www.wikidata.org/wiki/User:Arsaccordia" target="_blank" rel="noopener" class="account-box">
+      <div class="account-logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect x="4" y="8" width="3" height="12" fill="white" opacity="0.9"/>
+          <rect x="8" y="4" width="3" height="20" fill="white" opacity="0.7"/>
+          <rect x="12" y="8" width="3" height="12" fill="white" opacity="0.9"/>
+          <rect x="17" y="4" width="3" height="20" fill="white" opacity="0.7"/>
+          <rect x="21" y="8" width="3" height="12" fill="white" opacity="0.9"/>
+        </svg>
+      </div>
+      <div>
+        <div class="account-name">User:Arsaccordia</div>
+        <div class="account-url">wikidata.org/wiki/User:Arsaccordia</div>
+      </div>
+      <span class="account-arrow">→</span>
+    </a>
+  </section>
+
+  <footer class="site-footer">
+    <span class="footer-text">
+      Ars Accordia · Open Data Contributions ·
+      <a href="../about/" class="footer-link">About &amp; Methodology</a>
+    </span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--ink-faded);">
+      Updated 2026-06-14
+    </span>
+  </footer>
+
+</div>
+</body>
+</html>
