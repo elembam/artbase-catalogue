@@ -6,6 +6,17 @@
 <meta name="description" content="Ars Accordia catalogues European private and corporate art collections to international museum standards — issuing permanent Artwork Passports with ICOM Object ID, LIDO 1.1, and Wikidata authority links.">
 <title>Ars Accordia — Artwork Passports for European Collections</title>
 <link rel="canonical" href="https://arsaccordia.com/">
+<!-- Open Graph — controls link previews on LinkedIn, WhatsApp, Slack, iMessage -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://arsaccordia.com/">
+<meta property="og:site_name"   content="Ars Accordia">
+<meta property="og:title"       content="Ars Accordia — Artwork Passports for European Collections">
+<meta property="og:description" content="Museum-grade art cataloguing for private and corporate collections. Each work receives a permanent Artwork Passport compliant with ICOM Object ID, LIDO 1.1, and Wikidata authority links.">
+<meta property="og:locale"      content="en_GB">
+<!-- Twitter / X card -->
+<meta name="twitter:card"        content="summary">
+<meta name="twitter:title"       content="Ars Accordia — Artwork Passports for European Collections">
+<meta name="twitter:description" content="Museum-grade art cataloguing for private and corporate collections. Permanent Artwork Passports to ICOM Object ID and LIDO 1.1 standards.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght,SOFT,WONK@9..144,0..1,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -633,21 +644,49 @@
     "@id": "https://arsaccordia.com",
     "name": "Ars Accordia",
     "url": "https://arsaccordia.com",
-    "description": "Cataloguing European art collections to international museum standards"
+    "description": "Cataloguing European art collections to international museum standards",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://arsaccordia.com/catalogue/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   },
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "ProfessionalService"],
     "@id": "https://arsaccordia.com/#organization",
     "name": "Ars Accordia",
     "url": "https://arsaccordia.com",
     "description": "Scholarly art cataloguing service issuing Artwork Passports for European private and corporate collections to international museum standards.",
     "email": "catalogue@arsaccordia.com",
     "foundingDate": "2026",
+    "areaServed": "Europe",
+    "serviceType": "Art Cataloguing",
     "knowsAbout": [
       "https://www.wikidata.org/wiki/Q8274",
       "https://www.wikidata.org/wiki/Q210272"
-    ]
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "catalogue@arsaccordia.com",
+      "contactType": "customer service",
+      "availableLanguage": ["English", "Latvian"]
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Artwork Passport Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Artwork Passport",
+            "description": "Permanent, standards-based identity document for works of art in private and corporate collections. Compliant with ICOM Object ID and LIDO 1.1, linked to Wikidata and Getty authority records.",
+            "provider": { "@id": "https://arsaccordia.com/#organization" }
+          }
+        }
+      ]
+    }
   }
 ]
 </script>
