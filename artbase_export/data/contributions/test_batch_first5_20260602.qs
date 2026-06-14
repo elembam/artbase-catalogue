@@ -1,0 +1,12 @@
+#title Arsaccordia Latvian artist records: TEST BATCH (5 artists)
+#summary Adding VIAF identifiers from verified sources — FIRST TEST UPLOAD
+#prepared_by Arsaccordia
+#prepared_at 2026-06-02T10:06:33Z
+#phase 1
+#review_doc test_batch_first5_20260602.review.md
+
+Q3744638	P214	"45473840"	S854	"https://viaf.org/viaf/45473840/"	S813	+2026-06-02T00:00:00Z/11	S248	Q54919
+Q16353281	P214	"305086869"	S854	"https://viaf.org/viaf/305086869/"	S813	+2026-06-02T00:00:00Z/11	S248	Q54919
+Q55286044	P214	"305095725"	S854	"https://viaf.org/viaf/305095725/"	S813	+2026-06-02T00:00:00Z/11	S248	Q54919
+Q85678805	P214	"5587160546926410240004"	S854	"https://viaf.org/viaf/5587160546926410240004/"	S813	+2026-06-02T00:00:00Z/11	S248	Q54919
+Q139097584	P214	"30725574"	S854	"https://viaf.org/viaf/30725574/"	S813	+2026-06-02T00:00:00Z/11	S248	Q54919
