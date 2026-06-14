@@ -150,6 +150,123 @@ def filter_title(value: str) -> str:
     return value.replace("_", " ").title()
 
 
+# ── JSON-LD builder ────────────────────────────────────────────────────────────
+
+def _confirmed_id(authority_links: dict, key: str) -> Optional[str]:
+    """Return an authority ID only if its status is 'confirmed'."""
+    entry = authority_links.get(key) or {}
+    if entry.get("status") == "confirmed" and entry.get("id"):
+        return entry["id"]
+    return None
+
+
+def build_jsonld(artwork: dict, artist: Optional[dict],
+                 image_src: Optional[str]) -> dict:
+    artbase_id = artwork.get("artbase_id", "")
+    base_url   = "https://arsaccordia.com"
+    page_url   = f"{base_url}/{artbase_id}.html"
+    entity_url = f"{base_url}/{artbase_id}"
+
+    oid  = artwork.get("object_id") or {}
+    loc  = artwork.get("location") or {}
+    aw_links = artwork.get("authority_links") or {}
+
+    # Artwork-level sameAs — only confirmed IDs
+    artwork_same_as = []
+    aw_wikidata = _confirmed_id(aw_links, "wikidata")
+    if aw_wikidata:
+        artwork_same_as.append(f"https://www.wikidata.org/wiki/{aw_wikidata}")
+
+    # Creator block
+    creator: dict = {"@type": "Person"}
+    if artist:
+        al = artist.get("authority_links") or {}
+        creator["name"] = artist.get("identity", {}).get("preferred_name", "")
+        artist_id = artist.get("artbase_id", "")
+        if artist_id:
+            creator["@id"] = f"{base_url}/artists/{artist_id}"
+        creator_same_as = []
+        wikidata_qid = _confirmed_id(al, "wikidata")
+        if wikidata_qid:
+            creator_same_as.append(f"https://www.wikidata.org/wiki/{wikidata_qid}")
+        viaf_id = _confirmed_id(al, "viaf")
+        if viaf_id:
+            creator_same_as.append(f"https://viaf.org/viaf/{viaf_id}")
+        ulan_id = _confirmed_id(al, "ulan")
+        if ulan_id:
+            creator_same_as.append(f"https://vocab.getty.edu/page/ulan/{ulan_id}")
+        if artist_id:
+            creator_same_as.append(f"{base_url}/artists/{artist_id}.html")
+        if creator_same_as:
+            creator["sameAs"] = creator_same_as
+        life = artist.get("life") or {}
+        birth = (life.get("birth_date") or {}).get("value")
+        death = (life.get("death_date") or {}).get("value")
+        if birth:
+            creator["birthDate"] = birth
+        if death:
+            creator["deathDate"] = death
+        nationality = (artist.get("descriptors") or {}).get("nationality")
+        if nationality:
+            creator["nationality"] = nationality
+    else:
+        display_name = oid.get("maker_display_name") or oid.get("maker_id")
+        if display_name:
+            creator["name"] = display_name
+
+    # Structured dimensions
+    width_cm  = oid.get("width_cm")
+    height_cm = oid.get("height_cm")
+
+    # Owner / location
+    collection = loc.get("collection") or "Private collection"
+    owner = {"@type": "Organization", "name": collection}
+    collection_qid = loc.get("collection_qid")
+    if collection_qid:
+        owner["sameAs"] = f"https://www.wikidata.org/wiki/{collection_qid}"
+
+    # Base LD object
+    ld: dict = {
+        "@context":  "https://schema.org",
+        "@type":     "VisualArtwork",
+        "@id":       entity_url,
+        "name":      oid.get("title", ""),
+        "url":       page_url,
+        "identifier": artbase_id,
+        "creator":   creator,
+        "artform":   oid.get("object_type", "painting").title(),
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id":   page_url,
+            "isPartOf": {"@id": base_url},
+        },
+    }
+
+    if oid.get("materials"):
+        ld["artMedium"] = oid["materials"]
+    if oid.get("date_display"):
+        ld["dateCreated"] = oid["date_display"]
+    if oid.get("subject"):
+        ld["description"] = oid["subject"]
+    if width_cm is not None:
+        ld["width"]  = {"@type": "QuantitativeValue", "value": width_cm,  "unitCode": "CMT"}
+    if height_cm is not None:
+        ld["height"] = {"@type": "QuantitativeValue", "value": height_cm, "unitCode": "CMT"}
+    if oid.get("dimensions_display"):
+        ld["size"] = oid["dimensions_display"]
+
+    # Image: only include if it's a real URL (not base64), as base64 is not useful for the graph
+    if image_src and not image_src.startswith("data:"):
+        ld["image"] = image_src
+
+    ld["owner"] = owner
+
+    if artwork_same_as:
+        ld["sameAs"] = artwork_same_as
+
+    return ld
+
+
 # ── Template context builder ───────────────────────────────────────────────────
 
 def build_context(artwork: dict, artist: Optional[dict],
@@ -170,6 +287,7 @@ def build_context(artwork: dict, artist: Optional[dict],
         "image_src":         image_src,
         "issued_date":       issued_date,
         "issued_year_roman": issued_year_roman,
+        "jsonld":            build_jsonld(artwork, artist, image_src),
     }
 
 

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ars Accordia — Complete site index. All artwork passports, artist records, and catalogue sections.">
+<title>Site Index — Ars Accordia</title>
+<link rel="canonical" href="https://arsaccordia.com/sitemap/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:      #f6f1e6;
+    --paper-deep: #ebe3d1;
+    --ink:        #1c1814;
+    --ink-soft:   #4a4338;
+    --ink-faded:  #80766a;
+    --seal:       #6e1818;
+    --gold:       #8a6f2e;
+    --rule:       #c7bca5;
+    --grid:       rgba(110, 24, 24, 0.04);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    min-height: 100vh;
+    padding: 40px 20px 80px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+
+  .page { max-width: 800px; margin: 0 auto; position: relative; z-index: 2; }
+
+  .site-nav {
+    max-width: 960px; margin: 0 auto 40px; padding: 0 0 16px;
+    border-bottom: 1px solid var(--rule);
+    display: flex; align-items: center; gap: 32px;
+    position: relative; z-index: 2;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+  .nav-logo-mark { width: 28px; height: 28px; background: var(--seal); border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+  .nav-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 24px; margin-left: auto; }
+  .nav-link { font-size: 0.875rem; color: var(--ink-soft); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+  .nav-link:hover { color: var(--seal); }
+  .nav-link.active { color: var(--seal); border-bottom-color: var(--seal); }
+
+  .page-header { border-bottom: 2px solid var(--seal); padding-bottom: 24px; margin-bottom: 48px; }
+  .page-title { font-family: 'Fraunces', Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+  .page-subtitle { color: var(--ink-faded); font-size: 0.875rem; margin-top: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .section { margin-bottom: 48px; }
+  .section-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.1rem; font-weight: 600; color: var(--ink);
+    margin-bottom: 12px; padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+    display: flex; align-items: baseline; gap: 10px;
+  }
+  .section-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem; color: var(--ink-faded); font-weight: 400;
+  }
+
+  /* Nav links list */
+  .nav-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+  .nav-list li a {
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 12px;
+    background: white; border: 1px solid var(--rule); border-radius: 2px;
+    text-decoration: none; color: var(--ink);
+    transition: border-color 0.12s;
+    font-size: 0.9rem;
+  }
+  .nav-list li a:hover { border-color: var(--seal); }
+  .nav-list li a .url {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem; color: var(--ink-faded);
+    margin-left: auto; flex-shrink: 0;
+  }
+  .nav-list li a .label { color: var(--ink); font-weight: 500; }
+  .nav-list li a .desc { color: var(--ink-soft); font-size: 0.82rem; }
+
+  /* Passport rows */
+  .passport-list { display: flex; flex-direction: column; gap: 6px; }
+  .passport-row {
+    display: flex; align-items: center; gap: 14px;
+    padding: 12px 14px;
+    background: var(--paper-deep); border: 1px solid var(--rule); border-radius: 2px;
+    text-decoration: none; color: var(--ink);
+    transition: border-color 0.12s;
+  }
+  .passport-row:hover { border-color: var(--seal); }
+  .passport-id { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--seal); flex-shrink: 0; width: 130px; }
+  .passport-title { font-family: 'Fraunces', Georgia, serif; font-size: 0.95rem; flex: 1; }
+  .passport-meta { font-size: 0.8rem; color: var(--ink-faded); flex-shrink: 0; }
+
+  /* Artist directory box */
+  .artist-box {
+    display: flex; align-items: center; gap: 20px;
+    padding: 20px 24px;
+    background: white; border: 1px solid var(--rule); border-radius: 3px;
+    text-decoration: none; color: var(--ink);
+    transition: border-color 0.12s;
+  }
+  .artist-box:hover { border-color: var(--seal); }
+  .artist-count { font-family: 'JetBrains Mono', monospace; font-size: 2rem; color: var(--seal); font-weight: 500; flex-shrink: 0; }
+  .artist-label { font-size: 0.9rem; color: var(--ink-soft); }
+  .artist-sub { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+  .artist-sub a {
+    display: inline-block;
+    padding: 4px 10px;
+    background: var(--paper-deep); border: 1px solid var(--rule); border-radius: 2px;
+    font-size: 0.8rem; color: var(--ink-soft); text-decoration: none;
+    transition: border-color 0.12s, color 0.12s;
+  }
+  .artist-sub a:hover { border-color: var(--seal); color: var(--seal); }
+
+  /* Machine-readable */
+  .machine-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+  .machine-list li a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 12px;
+    background: var(--paper-deep); border: 1px solid var(--rule); border-radius: 2px;
+    text-decoration: none; color: var(--ink-soft); font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+    transition: border-color 0.12s, color 0.12s;
+  }
+  .machine-list li a:hover { border-color: var(--seal); color: var(--seal); }
+  .machine-badge {
+    font-size: 0.68rem; padding: 2px 6px;
+    background: var(--seal); color: white; border-radius: 2px;
+    font-family: 'Public Sans', sans-serif; font-weight: 600;
+    letter-spacing: 0.04em; text-transform: uppercase; flex-shrink: 0;
+  }
+
+  .site-footer {
+    margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  .footer-text { font-size: 0.75rem; color: var(--ink-faded); }
+  .footer-link { color: var(--seal); text-decoration: none; }
+  .footer-link:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    body { padding: 20px 16px 60px; }
+    .site-nav { flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .nav-links { gap: 14px; flex-wrap: wrap; }
+    .nav-link { font-size: 0.8rem; }
+    .page-title { font-size: 1.5rem; }
+    .passport-row { flex-wrap: wrap; gap: 4px; }
+    .passport-id { width: auto; }
+    .passport-title { flex: 1 1 100%; }
+    .artist-box { flex-direction: column; align-items: flex-start; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <rect x="3" y="3" width="6" height="6" fill="white" opacity="0.9"/>
+        <rect x="11" y="3" width="6" height="6" fill="white" opacity="0.5"/>
+        <rect x="3" y="11" width="6" height="6" fill="white" opacity="0.5"/>
+        <rect x="11" y="11" width="6" height="6" fill="white" opacity="0.75"/>
+      </svg>
+    </div>
+    <span class="nav-name">Ars Accordia</span>
+  </a>
+  <div class="nav-links">
+    <a href="../catalogue/" class="nav-link">Catalogue</a>
+    <a href="../artworks/" class="nav-link">Artworks</a>
+    <a href="../artists/" class="nav-link">Artists</a>
+    <a href="../about/" class="nav-link">About</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <header class="page-header">
+    <h1 class="page-title">Site Index</h1>
+    <p class="page-subtitle">All pages &amp; machine-readable feeds</p>
+  </header>
+
+  <!-- Main sections -->
+  <section class="section">
+    <h2 class="section-title">Main Sections</h2>
+    <ul class="nav-list">
+      <li>
+        <a href="../">
+          <span class="label">Home</span>
+          <span class="desc">Catalogue overview and recent passports</span>
+          <span class="url">arsaccordia.com/</span>
+        </a>
+      </li>
+      <li>
+        <a href="../catalogue/">
+          <span class="label">Full Catalogue</span>
+          <span class="desc">All artists and artwork passports with authority badges</span>
+          <span class="url">arsaccordia.com/catalogue/</span>
+        </a>
+      </li>
+      <li>
+        <a href="../artworks/">
+          <span class="label">Artwork Passports</span>
+          <span class="desc">All published Artwork Passports</span>
+          <span class="url">arsaccordia.com/artworks/</span>
+        </a>
+      </li>
+      <li>
+        <a href="../artists/">
+          <span class="label">Artist Records</span>
+          <span class="desc">All artist authority records with identity corroboration</span>
+          <span class="url">arsaccordia.com/artists/</span>
+        </a>
+      </li>
+      <li>
+        <a href="../about/">
+          <span class="label">About &amp; Methodology</span>
+          <span class="desc">Standards, validation levels, data provenance</span>
+          <span class="url">arsaccordia.com/about/</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Artwork Passports -->
+  <section class="section">
+    <h2 class="section-title">Artwork Passports <span class="section-count">2 published</span></h2>
+    <div class="passport-list">
+      <a href="../AP-2026-000002.html" class="passport-row">
+        <span class="passport-id">AP-2026-000002</span>
+        <span class="passport-title">Juras noskana (Sea Mood)</span>
+        <span class="passport-meta">Herberts Siliņš · 1979</span>
+      </a>
+      <a href="../AP-2026-000001.html" class="passport-row">
+        <span class="passport-id">AP-2026-000001</span>
+        <span class="passport-title">Mona Lisa</span>
+        <span class="passport-meta">Leonardo da Vinci · c. 1503–1519</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Artist directory -->
+  <section class="section">
+    <h2 class="section-title">Artist Records <span class="section-count">289 records</span></h2>
+    <a href="../artists/" class="artist-box">
+      <span class="artist-count">289</span>
+      <div>
+        <div style="font-weight:600;color:var(--ink);margin-bottom:4px;">Artist authority records</div>
+        <div class="artist-label">Each record carries Wikidata, ULAN, and VIAF identity verification where confirmed.</div>
+      </div>
+    </a>
+    <div class="artist-sub" style="margin-top:10px;">
+      <a href="../artists/latvia/">Latvian artists</a>
+      <a href="../artists/sweden/">Swedish artists</a>
+      <a href="../artists/">All artists A–Z</a>
+    </div>
+  </section>
+
+  <!-- Machine-readable feeds -->
+  <section class="section">
+    <h2 class="section-title">Machine-Readable</h2>
+    <ul class="machine-list">
+      <li>
+        <a href="../sitemap.xml" target="_blank" rel="noopener">
+          <span class="machine-badge">XML</span>
+          arsaccordia.com/sitemap.xml — Search engine sitemap (298 URLs)
+        </a>
+      </li>
+      <li>
+        <a href="../oai" target="_blank" rel="noopener">
+          <span class="machine-badge">OAI</span>
+          arsaccordia.com/oai — OAI-PMH feed for aggregators
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="site-footer">
+    <span class="footer-text">
+      Ars Accordia · Scholarly Art Catalogue ·
+      <a href="../about/" class="footer-link">About &amp; Methodology</a>
+    </span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--ink-faded);">
+      <a href="../sitemap.xml" style="color:var(--ink-faded);text-decoration:none;" target="_blank">sitemap.xml</a>
+    </span>
+  </footer>
+
+</div>
+</body>
+</html>

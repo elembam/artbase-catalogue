@@ -51,6 +51,13 @@
   </url>
 
   <url>
+    <loc>https://arsaccordia.com/sitemap/</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://arsaccordia.com/AP-2026-000001.html</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>

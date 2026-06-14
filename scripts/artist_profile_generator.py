@@ -23,7 +23,7 @@ from jinja2 import Environment, FileSystemLoader
 REPO_ROOT   = Path(__file__).resolve().parent.parent
 ARTISTS_DIR = REPO_ROOT / "artbase_export" / "data" / "artists"
 ARTWORKS_DIR= REPO_ROOT / "artbase_export" / "data" / "artworks"
-OUT_DIR     = REPO_ROOT / "artists"
+OUT_DIR     = REPO_ROOT / "passports" / "artists"
 TMPL_DIR    = REPO_ROOT / "templates"
 
 
@@ -56,6 +56,75 @@ def load_artworks_by_maker() -> dict[str, list[dict]]:
 def artist_has_qid(artist: dict) -> bool:
     al = artist.get("authority_links") or {}
     return bool((al.get("wikidata") or {}).get("id"))
+
+
+def _confirmed_id(authority_links: dict, key: str):
+    entry = authority_links.get(key) or {}
+    if entry.get("status") == "confirmed" and entry.get("id"):
+        return entry["id"]
+    return None
+
+
+def build_person_jsonld(artist: dict) -> dict:
+    artbase_id = artist.get("artbase_id", "")
+    base_url   = "https://arsaccordia.com"
+    page_url   = f"{base_url}/artists/{artbase_id}.html"
+    entity_url = f"{base_url}/artists/{artbase_id}"
+
+    al   = artist.get("authority_links") or {}
+    life = artist.get("life") or {}
+    desc = artist.get("descriptors") or {}
+
+    same_as = []
+    wikidata_qid = _confirmed_id(al, "wikidata")
+    if wikidata_qid:
+        same_as.append(f"https://www.wikidata.org/wiki/{wikidata_qid}")
+    viaf_id = _confirmed_id(al, "viaf")
+    if viaf_id:
+        same_as.append(f"https://viaf.org/viaf/{viaf_id}")
+    ulan_id = _confirmed_id(al, "ulan")
+    if ulan_id:
+        same_as.append(f"https://vocab.getty.edu/page/ulan/{ulan_id}")
+    isni_id = _confirmed_id(al, "isni")
+    if isni_id:
+        same_as.append(f"https://isni.org/isni/{isni_id}")
+
+    ld: dict = {
+        "@context": "https://schema.org",
+        "@type":    "Person",
+        "@id":      entity_url,
+        "name":     artist.get("identity", {}).get("preferred_name", ""),
+        "url":      page_url,
+        "mainEntityOfPage": {
+            "@type":   "WebPage",
+            "@id":     page_url,
+            "isPartOf": {"@id": base_url},
+        },
+    }
+
+    birth = (life.get("birth_date") or {}).get("value")
+    death = (life.get("death_date") or {}).get("value")
+    if birth:
+        ld["birthDate"] = birth
+    if death:
+        ld["deathDate"] = death
+
+    nationality = desc.get("nationality")
+    if nationality:
+        ld["nationality"] = nationality
+
+    occupations = desc.get("occupations") or []
+    if occupations:
+        ld["hasOccupation"] = [{"@type": "Role", "roleName": o} for o in occupations]
+
+    birth_place = (life.get("birth_place") or {}).get("display")
+    if birth_place:
+        ld["birthPlace"] = {"@type": "Place", "name": birth_place}
+
+    if same_as:
+        ld["sameAs"] = same_as
+
+    return ld
 
 
 def render_artist(artist: dict, artworks: list[dict], env: Environment) -> str:
@@ -107,6 +176,7 @@ def render_artist(artist: dict, artworks: list[dict], env: Environment) -> str:
         validation_level2=validation_level2,
         validation_authority_l1=validation_authority_l1,
         validated_by_l1=validated_by_l1,
+        person_jsonld=build_person_jsonld(artist),
     )
 
 
@@ -150,7 +220,7 @@ def main():
         except Exception as e:
             print(f"  ERROR {aid}: {e}", file=sys.stderr)
 
-    print(f"✓ Generated {generated} artist profile pages → {OUT_DIR}/")
+    print(f"✓ Generated {generated} artist profile pages → passports/artists/")
 
 
 if __name__ == "__main__":
