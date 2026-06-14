@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ars Accordia — Cataloguing European art collections to international museum standards.">
-<title>Ars Accordia — Scholarly Art Catalogue</title>
+<meta name="description" content="Ars Accordia catalogues European private and corporate art collections to international museum standards — issuing permanent Artwork Passports with ICOM Object ID, LIDO 1.1, and Wikidata authority links.">
+<title>Ars Accordia — Artwork Passports for European Collections</title>
+<link rel="canonical" href="https://arsaccordia.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght,SOFT,WONK@9..144,0..1,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --paper:      #f6f1e6;
@@ -16,7 +17,7 @@
     --ink-soft:   #4a4338;
     --ink-faded:  #80766a;
     --seal:       #6e1818;
-    --seal-light: #94342f;
+    --seal-light: #8a2020;
     --gold:       #8a6f2e;
     --rule:       #c7bca5;
     --grid:       rgba(110, 24, 24, 0.04);
@@ -37,7 +38,6 @@
     line-height: 1.5;
     font-size: 15px;
     min-height: 100vh;
-    padding: 40px 20px 80px;
   }
 
   body::before {
@@ -51,13 +51,18 @@
     mix-blend-mode: multiply;
   }
 
-  .page { max-width: 960px; margin: 0 auto; position: relative; z-index: 2; }
-
-  /* ── Nav ──────────────────────────────────────────────────────────────────── */
-  .site-nav {
+  /* ── Layout ─────────────────────────────────────────────────────────────────── */
+  .wrap {
     max-width: 960px;
-    margin: 0 auto 40px;
-    padding: 0 0 16px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ── Nav ─────────────────────────────────────────────────────────────────────── */
+  .site-nav {
+    padding: 20px 0 16px;
     border-bottom: 1px solid var(--rule);
     display: flex;
     align-items: center;
@@ -73,26 +78,17 @@
     flex-shrink: 0;
   }
   .nav-logo-mark {
-    width: 28px;
-    height: 28px;
+    width: 28px; height: 28px;
     background: var(--seal);
     border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
   }
   .nav-name {
     font-family: 'Fraunces', Georgia, serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--ink);
-    letter-spacing: -0.01em;
+    font-size: 1.1rem; font-weight: 600;
+    color: var(--ink); letter-spacing: -0.01em;
   }
-  .nav-links {
-    display: flex;
-    gap: 24px;
-    margin-left: auto;
-  }
+  .nav-links { display: flex; gap: 24px; margin-left: auto; }
   .nav-link {
     font-size: 0.875rem;
     color: var(--ink-soft);
@@ -104,88 +100,402 @@
   .nav-link:hover { color: var(--seal); }
   .nav-link.active { color: var(--seal); border-bottom-color: var(--seal); }
 
-  /* ── Hero ─────────────────────────────────────────────────────────────────── */
+  /* ── Hero ────────────────────────────────────────────────────────────────────── */
   .hero {
-    padding: 56px 0 48px;
+    padding: 80px 0 72px;
     border-bottom: 1px solid var(--rule);
-    margin-bottom: 56px;
   }
-  .hero-logo {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 20px;
-  }
-  .hero-logo-mark {
-    width: 52px;
-    height: 52px;
-    background: var(--seal);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .hero-title {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--ink);
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-  }
-  .hero-subtitle {
-    font-size: 1.1rem;
-    color: var(--ink-soft);
-    margin-top: 12px;
-    max-width: 560px;
-    line-height: 1.6;
-  }
-  .hero-tagline {
-    margin-top: 8px;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
+  .hero-eyebrow {
+    font-size: 0.72rem;
     text-transform: uppercase;
-    color: var(--ink-faded);
+    letter-spacing: 0.14em;
+    color: var(--seal);
+    font-weight: 600;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
+  .hero-eyebrow::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 40px;
+    background: var(--seal);
+    opacity: 0.4;
+  }
+  .hero-headline {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 700;
+    font-style: italic;
+    color: var(--ink);
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    max-width: 680px;
+    margin-bottom: 24px;
+  }
+  .hero-body {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    max-width: 560px;
+    line-height: 1.75;
+    margin-bottom: 36px;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-block;
+    padding: 13px 30px;
+    background: var(--seal);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    letter-spacing: 0.02em;
+    transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(110,24,24,0.25);
+  }
+  .btn-primary:hover {
+    background: var(--seal-light);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(110,24,24,0.3);
+  }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 13px 20px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    background: white;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .btn-secondary:hover { color: var(--seal); border-color: var(--seal); }
 
-  /* ── Section ──────────────────────────────────────────────────────────────── */
-  .section {
-    margin-bottom: 56px;
+  /* ── Section scaffolding ─────────────────────────────────────────────────────── */
+  .section { padding: 64px 0; border-bottom: 1px solid var(--rule); }
+  .section:last-of-type { border-bottom: none; }
+  .section-eyebrow {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--seal);
+    font-weight: 600;
+    margin-bottom: 10px;
   }
   .section-title {
     font-family: 'Fraunces', Georgia, serif;
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.7rem;
+    font-weight: 700;
     color: var(--ink);
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--rule);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin-bottom: 12px;
   }
-
-  /* ── What it is ───────────────────────────────────────────────────────────── */
-  .about-text {
+  .section-body {
     font-size: 1rem;
     color: var(--ink-soft);
     line-height: 1.75;
-    max-width: 700px;
+    max-width: 580px;
+    margin-bottom: 40px;
   }
-  .about-text p + p { margin-top: 12px; }
 
-  /* ── Stats ────────────────────────────────────────────────────────────────── */
-  .stats-row {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
+  /* ── Passport showcase ───────────────────────────────────────────────────────── */
+  .passport-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: start;
   }
-  .stat {
+  .passport-features {
     display: flex;
     flex-direction: column;
-    gap: 3px;
-    transition: opacity 0.15s;
+    gap: 14px;
+    margin-top: 4px;
   }
-  .stat:hover { opacity: 0.75; }
-  a.stat { cursor: pointer; }
+  .passport-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 16px;
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+  }
+  .pf-icon {
+    width: 32px; height: 32px;
+    background: var(--paper-deep);
+    border-radius: 3px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    color: var(--seal);
+  }
+  .pf-text { flex: 1; }
+  .pf-title { font-weight: 600; color: var(--ink); font-size: 0.9rem; margin-bottom: 2px; }
+  .pf-desc { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.5; }
+
+  /* Passport card mockup */
+  .passport-mock {
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(28, 24, 20, 0.12), 0 2px 8px rgba(28, 24, 20, 0.06);
+  }
+  .pm-header {
+    background: var(--seal);
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pm-header-left {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+  }
+  .pm-header-badge {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    border: 1px solid rgba(255,255,255,0.35);
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+  .pm-body { padding: 20px 20px 16px; }
+  .pm-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 2px;
+    font-style: italic;
+  }
+  .pm-subtitle { font-size: 0.78rem; color: var(--ink-faded); margin-bottom: 16px; }
+  .pm-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .pm-field {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 7px 10px;
+  }
+  .pm-field-label {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--ink-faded);
+    margin-bottom: 2px;
+  }
+  .pm-field-value {
+    font-size: 0.78rem;
+    color: var(--ink);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .pm-footer {
+    padding: 12px 20px;
+    border-top: 1px solid var(--rule);
+    background: var(--paper);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+  .pm-badges { display: flex; gap: 5px; flex-wrap: wrap; }
+  .pm-badge {
+    font-size: 0.62rem;
+    font-weight: 600;
+    padding: 2px 7px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    color: var(--ink-soft);
+    font-family: 'JetBrains Mono', monospace;
+    white-space: nowrap;
+  }
+  .pm-badge.ok { border-color: #5a8a3a; color: #5a8a3a; }
+  .pm-badge.id { border-color: var(--gold); color: var(--gold); }
+  .pm-link {
+    font-size: 0.75rem;
+    color: var(--seal);
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .pm-link:hover { text-decoration: underline; }
+
+  /* ── Who we work with ────────────────────────────────────────────────────────── */
+  .client-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .client-card {
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 28px 24px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .client-card:hover {
+    border-color: var(--seal);
+    box-shadow: 0 4px 20px rgba(110,24,24,0.07);
+  }
+  .client-icon {
+    width: 38px; height: 38px;
+    background: var(--paper-deep);
+    border-radius: 4px;
+    margin-bottom: 18px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--seal);
+  }
+  .client-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .client-desc {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  /* ── Process steps ───────────────────────────────────────────────────────────── */
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .process-step {
+    padding: 28px 24px;
+    border-right: 1px solid var(--rule);
+    background: white;
+  }
+  .process-step:nth-child(even) { background: var(--paper-deep); }
+  .process-step:last-child { border-right: none; }
+  .step-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--seal);
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .step-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .step-desc { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.55; }
+
+  /* ── Credentials ─────────────────────────────────────────────────────────────── */
+  .credentials-wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .cred-intro {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--ink-faded);
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+  .cred-pill {
+    display: inline-block;
+    padding: 4px 11px;
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    font-size: 0.74rem;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: border-color 0.12s, color 0.12s;
+  }
+  .cred-pill:hover { border-color: var(--seal); color: var(--seal); }
+
+  /* ── Featured passports ──────────────────────────────────────────────────────── */
+  .featured-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+  .featured-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .featured-item:hover {
+    border-color: var(--seal);
+    box-shadow: 0 2px 12px rgba(110,24,24,0.08);
+  }
+  .featured-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.74rem;
+    color: var(--seal);
+    flex-shrink: 0;
+    width: 130px;
+  }
+  .featured-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 0.98rem;
+    flex: 1;
+    font-style: italic;
+  }
+  .featured-meta { color: var(--ink-faded); font-size: 0.85rem; flex-shrink: 0; }
+  .featured-arrow { color: var(--seal); flex-shrink: 0; font-size: 0.9rem; }
+
+  .catalogue-link {
+    font-size: 0.875rem;
+    color: var(--seal);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .catalogue-link:hover { text-decoration: underline; }
+
+  /* Stats row */
+  .stats-row {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .stat { display: flex; flex-direction: column; gap: 3px; }
   .stat-value {
     font-family: 'JetBrains Mono', monospace;
     font-size: 2rem;
@@ -194,158 +504,125 @@
     line-height: 1;
   }
   .stat-label {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--ink-faded);
   }
 
-  /* ── CTA cards ────────────────────────────────────────────────────────────── */
-  .cta-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 16px;
+  /* ── Contact CTA ─────────────────────────────────────────────────────────────── */
+  .contact-cta {
+    background: var(--ink);
+    border-radius: 6px;
+    padding: 60px 56px;
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+    margin: 64px 0 0;
   }
-  .cta-card {
-    display: block;
-    padding: 24px 20px;
-    background: white;
-    border: 1px solid var(--rule);
-    border-radius: 4px;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  .contact-cta::before {
+    content: '';
+    position: absolute;
+    top: -40px; left: -40px;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(110,24,24,0.4) 0%, transparent 70%);
+    pointer-events: none;
   }
-  .cta-card:hover {
-    border-color: var(--seal);
-    box-shadow: 0 4px 16px rgba(110, 24, 24, 0.1);
-    transform: translateY(-2px);
+  .contact-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: -20px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(138,111,46,0.15) 0%, transparent 70%);
+    pointer-events: none;
   }
-  .cta-card-title {
+  .contact-cta-inner { position: relative; z-index: 1; max-width: 560px; }
+  .contact-cta-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(246,241,230,0.5);
+    margin-bottom: 16px;
+  }
+  .contact-cta-title {
     font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    font-weight: 700;
+    color: var(--paper);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .contact-cta-body {
+    font-size: 1rem;
+    color: rgba(246,241,230,0.7);
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+  .contact-email-wrap { display: flex; flex-direction: column; gap: 6px; }
+  .contact-email-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(246,241,230,0.45); }
+  .contact-email {
     font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--ink);
-    margin-bottom: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .cta-card-title .arrow {
-    width: 22px;
-    height: 22px;
-    background: var(--seal);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .cta-card-desc {
-    font-size: 0.875rem;
-    color: var(--ink-soft);
-    line-height: 1.5;
-  }
-
-  /* ── Featured passports ───────────────────────────────────────────────────── */
-  .featured-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .featured-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 14px 16px;
-    background: var(--paper-deep);
-    border: 1px solid var(--rule);
-    border-radius: 2px;
+    color: var(--paper);
     text-decoration: none;
-    color: var(--ink);
+    font-weight: 500;
+    border-bottom: 1px solid rgba(246,241,230,0.3);
+    padding-bottom: 2px;
+    display: inline-block;
     transition: border-color 0.15s;
   }
-  .featured-item:hover { border-color: var(--seal); }
-  .featured-id {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--seal);
-    flex-shrink: 0;
-    width: 130px;
-  }
-  .featured-title {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 1rem;
-    flex: 1;
-  }
-  .featured-meta {
-    color: var(--ink-faded);
-    font-size: 0.875rem;
-    flex-shrink: 0;
-  }
-  .featured-arrow { color: var(--seal); font-size: 0.8rem; flex-shrink: 0; }
+  .contact-email:hover { border-color: rgba(246,241,230,0.7); }
 
-  /* ── Standards ────────────────────────────────────────────────────────────── */
-  .standards-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .std-pill {
-    display: inline-block;
-    padding: 4px 10px;
-    background: var(--paper-deep);
-    border: 1px solid var(--rule);
-    border-radius: 3px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    font-family: 'JetBrains Mono', monospace;
-    color: var(--ink-soft);
-    letter-spacing: 0.03em;
-    text-decoration: none;
-  }
-  a.std-pill:hover {
-    border-color: var(--seal);
-    color: var(--seal);
-  }
-
-  /* ── Footer ───────────────────────────────────────────────────────────────── */
+  /* ── Footer ──────────────────────────────────────────────────────────────────── */
   .site-footer {
-    margin-top: 64px;
-    padding-top: 24px;
+    padding: 28px 0 40px;
     border-top: 1px solid var(--rule);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
+    margin-top: 0;
   }
   .footer-text { font-size: 0.75rem; color: var(--ink-faded); }
   .footer-link { color: var(--seal); text-decoration: none; }
   .footer-link:hover { text-decoration: underline; }
-  .footer-generated {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--ink-faded);
-  }
+  .footer-generated { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--ink-faded); }
 
-  @media (max-width: 600px) {
-    body { padding: 20px 16px 60px; }
-    .site-nav { flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  /* ── Responsive ──────────────────────────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .wrap { padding: 0 16px; }
+    .hero { padding: 48px 0 44px; }
+    .hero-headline { font-size: 2rem; }
+    .passport-split { grid-template-columns: 1fr; gap: 32px; }
+    .client-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .process-step { border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .process-step:nth-child(2n) { border-right: none; }
+    .process-step:nth-child(3), .process-step:nth-child(4) { border-bottom: none; }
+    .contact-cta { padding: 40px 28px; }
+    .contact-cta-title { font-size: 1.5rem; }
+    .stats-row { gap: 24px; }
     .nav-links { gap: 14px; flex-wrap: wrap; }
     .nav-link { font-size: 0.8rem; }
-    .hero { padding: 32px 0 28px; margin-bottom: 36px; }
-    .hero-logo-mark { width: 40px; height: 40px; }
-    .hero-title { font-size: 1.8rem; }
-    .hero-subtitle { font-size: 0.95rem; }
-    .stats-row { gap: 20px; }
+    .section { padding: 48px 0; }
+  }
+  @media (max-width: 480px) {
+    .hero { padding: 36px 0 36px; }
+    .hero-headline { font-size: 1.7rem; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+    .btn-primary, .btn-secondary { width: 100%; text-align: center; justify-content: center; }
+    .process-steps { grid-template-columns: 1fr; }
+    .process-step { border-right: none; border-bottom: 1px solid var(--rule); }
+    .process-step:last-child { border-bottom: none; }
     .featured-item { flex-wrap: wrap; gap: 4px; }
-    .featured-title { flex: 1 1 100%; font-size: 0.95rem; }
-    .featured-meta { font-size: 0.75rem; }
-    .featured-arrow { flex-basis: 100%; text-align: right; }
-    .cta-grid { grid-template-columns: 1fr; }
-    .section-title { font-size: 1.1rem; }
-    .section { margin-bottom: 36px; }
+    .featured-id { width: auto; }
+    .featured-title { flex: 1 1 100%; }
+  }
+
+  @media print {
+    .site-nav, .contact-cta, .site-footer { display: none; }
+    .hero { padding: 20px 0; }
   }
 </style>
 <script type="application/ld+json">
@@ -377,6 +654,8 @@
 </head>
 <body>
 
+<!-- ── Nav ───────────────────────────────────────────────────────────────────── -->
+<div class="wrap">
 <nav class="site-nav">
   <a href="" class="nav-logo">
     <div class="nav-logo-mark">
@@ -397,176 +676,334 @@
     <a href="sitemap/" class="nav-link">Index</a>
   </div>
 </nav>
+</div>
 
-<div class="page">
+<!-- ── Hero ──────────────────────────────────────────────────────────────────── -->
+<div class="wrap">
+<section class="hero">
+  <p class="hero-eyebrow">Art Cataloguing Service · Est. 2026</p>
+  <h1 class="hero-headline">Museum-grade records for every work in your collection.</h1>
+  <p class="hero-body">
+    Ars Accordia issues permanent <strong>Artwork Passports</strong> for European private and
+    corporate art collections — standards-based identity documents compliant with ICOM Object ID
+    and LIDO 1.1, linked to international authority records on Wikidata and Getty.
+  </p>
+  <div class="hero-actions">
+    <a href="mailto:catalogue@arsaccordia.com" class="btn-primary">Enquire about your collection</a>
+    <a href="catalogue/" class="btn-secondary">
+      Browse the catalogue
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</section>
+</div>
 
-  <!-- ── Hero ───────────────────────────────────────────────────────────────── -->
-  <section class="hero">
-    <div class="hero-logo">
-      <div class="hero-logo-mark">
-        <svg width="30" height="30" viewBox="0 0 20 20" fill="none">
-          <rect x="3" y="3" width="6" height="6" fill="white" opacity="0.9"/>
-          <rect x="11" y="3" width="6" height="6" fill="white" opacity="0.5"/>
-          <rect x="3" y="11" width="6" height="6" fill="white" opacity="0.5"/>
-          <rect x="11" y="11" width="6" height="6" fill="white" opacity="0.75"/>
+<!-- ── The Artwork Passport ───────────────────────────────────────────────────── -->
+<div class="wrap">
+<section class="section">
+  <p class="section-eyebrow">The Deliverable</p>
+  <h2 class="section-title">The Artwork Passport</h2>
+  <p class="section-body">
+    A single permanent document for each work — consolidating everything needed for
+    insurance, scholarship, loans, resale, and cultural heritage protection.
+    Each passport carries a permanent ArtBase ID and is listed in the public Ars Accordia registry.
+  </p>
+
+  <div class="passport-split">
+    <!-- Feature list -->
+    <div class="passport-features">
+      <div class="passport-feature">
+        <div class="pf-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M5 8h6M5 5.5h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="pf-text">
+          <div class="pf-title">Identity &amp; Attribution</div>
+          <div class="pf-desc">Title, artist, date, medium, dimensions — all nine ICOM Object ID fields, with attribution qualified to CDWA standards.</div>
+        </div>
+      </div>
+      <div class="passport-feature">
+        <div class="pf-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 13V5l5-3 5 3v8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <rect x="6" y="9" width="4" height="4" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="pf-text">
+          <div class="pf-title">Provenance</div>
+          <div class="pf-desc">Documented ownership history from earliest known date, with sources. Essential for legal title, customs, and due diligence.</div>
+        </div>
+      </div>
+      <div class="passport-feature">
+        <div class="pf-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 5.5v3l2 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="pf-text">
+          <div class="pf-title">Condition Record</div>
+          <div class="pf-desc">Current condition note with date. Forms the baseline for conservation decisions, transport protocols, and loan requirements.</div>
+        </div>
+      </div>
+      <div class="passport-feature">
+        <div class="pf-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 2l1.5 3h3.5l-2.8 2 1.1 3.5L8 8.5 4.7 10.5 5.8 7 3 5h3.5L8 2z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="pf-text">
+          <div class="pf-title">Authority Links</div>
+          <div class="pf-desc">Verified links to Wikidata, Getty ULAN, VIAF, and RKD — corroborating artist identity against international records. Only confirmed matches are published.</div>
+        </div>
+      </div>
+      <div class="passport-feature">
+        <div class="pf-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M5 4V3a3 3 0 0 1 6 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="pf-text">
+          <div class="pf-title">Permanent ArtBase ID</div>
+          <div class="pf-desc">A stable, never-reissued identifier that persists across all systems — insurance files, estate records, auction catalogues, museum loans.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Passport mockup -->
+    <div class="passport-mock">
+      <div class="pm-header">
+        <div class="pm-header-left">
+          ARTWORK PASSPORT<br>
+          AP-2026-000002
+        </div>
+        <div class="pm-header-badge">Ars Accordia</div>
+      </div>
+      <div class="pm-body">
+        <div class="pm-title">Juras noskana</div>
+        <div class="pm-subtitle">Sea Mood · Herberts Siliņš · Latvia · 1979</div>
+        <div class="pm-fields">
+          <div class="pm-field">
+            <div class="pm-field-label">Object Type</div>
+            <div class="pm-field-value">Painting</div>
+          </div>
+          <div class="pm-field">
+            <div class="pm-field-label">Medium</div>
+            <div class="pm-field-value">Oil on canvas</div>
+          </div>
+          <div class="pm-field">
+            <div class="pm-field-label">Dimensions</div>
+            <div class="pm-field-value">81 × 81 cm</div>
+          </div>
+          <div class="pm-field">
+            <div class="pm-field-label">Date</div>
+            <div class="pm-field-value">1979</div>
+          </div>
+          <div class="pm-field">
+            <div class="pm-field-label">Wikidata (artist)</div>
+            <div class="pm-field-value">Q23054868</div>
+          </div>
+          <div class="pm-field">
+            <div class="pm-field-label">VIAF</div>
+            <div class="pm-field-value">15148752···</div>
+          </div>
+        </div>
+      </div>
+      <div class="pm-footer">
+        <div class="pm-badges">
+          <span class="pm-badge ok">Object ID ✓</span>
+          <span class="pm-badge ok">LIDO 1.1 ✓</span>
+          <span class="pm-badge id">Wikidata ✓</span>
+          <span class="pm-badge id">ULAN ✓</span>
+        </div>
+        <a href="AP-2026-000002.html" class="pm-link">View passport →</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ── Who we work with ───────────────────────────────────────────────────────── -->
+<div class="wrap">
+<section class="section">
+  <p class="section-eyebrow">Who We Serve</p>
+  <h2 class="section-title">Expertise for collections of every kind</h2>
+  <p class="section-body">
+    We work with private collectors, corporate holdings, and estates across Europe —
+    anywhere art is held outside a museum and lacks the documentation it deserves.
+  </p>
+  <div class="client-grid">
+    <div class="client-card">
+      <div class="client-icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <rect x="2" y="7" width="14" height="9" rx="1" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M6 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <rect x="7.5" y="10" width="3" height="3" rx="0.5" fill="currentColor"/>
         </svg>
       </div>
-      <h1 class="hero-title">Ars Accordia</h1>
+      <div class="client-title">Corporate Collections</div>
+      <div class="client-desc">Art held as company asset — board-documented, properly attributed, and insurable. We provide the documentation infrastructure for governance, insurance, and eventual transfer.</div>
     </div>
-    <p class="hero-subtitle">
-      An art cataloguing service for European art collections —
-      bringing each work to international museum standards. Each work receives an Artwork Passport:
-      a standards-based, authoritative identity document for cultural heritage.
-    </p>
-    <p class="hero-tagline"><a href="https://icom.museum/en/resources/standards-guidelines/objectid/" target="_blank" rel="noopener">Object ID</a> · <a href="https://lido-schema.org/" target="_blank" rel="noopener">LIDO 1.1</a> · <a href="https://schema.org/" target="_blank" rel="noopener">Schema.org</a> · <a href="https://www.getty.edu/research/tools/vocabularies/" target="_blank" rel="noopener">Getty Vocabularies</a> · <a href="https://www.wikidata.org/" target="_blank" rel="noopener">Wikidata</a></p>
-  </section>
-
-  <!-- ── What it is ─────────────────────────────────────────────────────────── -->
-  <section class="section">
-    <h2 class="section-title">What is Ars Accordia?</h2>
-    <div class="about-text">
-      <p>Ars Accordia issues <strong>Artwork Passports</strong> — standards-based identity documents
-      for works of art held in European private and corporate collections. Each passport records
-      identity, provenance, condition, and authority links at museum standards, compliant with
-      ICOM Object ID, CDWA, and LIDO 1.1.</p>
-      <p>The catalogue serves as a public registry for art that does not appear in national museum
-      catalogues or on Europeana — making it discoverable, verifiable, and permanently identified
-      for scholarship, insurance, loans, and cultural heritage protection.</p>
+    <div class="client-card">
+      <div class="client-icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <circle cx="9" cy="6" r="3" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M3 16c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="client-title">Private Collectors</div>
+      <div class="client-desc">Collections acquired over years or decades — often rich in attribution but thin on documentation. We produce the catalogue that outlasts the collector and protects what they built.</div>
     </div>
-  </section>
-
-  <!-- ── Live stats ──────────────────────────────────────────────────────────── -->
-  <section class="section">
-    <h2 class="section-title">Catalogue at a Glance</h2>
-    <div class="stats-row">
-      <a href="artists/" class="stat" style="text-decoration:none;color:inherit;">
-        <span class="stat-value">288</span>
-        <span class="stat-label">Artists</span>
-      </a>
-      <a href="catalogue/" class="stat" style="text-decoration:none;color:inherit;">
-        <span class="stat-value">2</span>
-        <span class="stat-label">Artwork Passports</span>
-      </a>
-      <a href="about/" class="stat" style="text-decoration:none;color:inherit;">
-        <span class="stat-value">114</span>
-        <span class="stat-label">Confirmed Authority Links</span>
-      </a>
+    <div class="client-card">
+      <div class="client-icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M2 16h14M4 16V8M14 16V8M9 16V8M1 8l8-6 8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="client-title">Estates &amp; Foundations</div>
+      <div class="client-desc">Collections at the point of transition — inheritance, donation, bequest, or sale. The Artwork Passport is the legal and scholarly document the estate needs before any transfer.</div>
     </div>
-  </section>
-
-  <!-- ── Standards ──────────────────────────────────────────────────────────── -->
-  <section class="section">
-    <h2 class="section-title">Standards &amp; Vocabularies</h2>
-    <div class="standards-list">
-      <a href="https://icom.museum/en/resources/standards-guidelines/objectid/" target="_blank" rel="noopener" class="std-pill">Object ID</a>
-      <a href="https://www.getty.edu/research/publications/electronic_publications/cdwa/" target="_blank" rel="noopener" class="std-pill">CDWA</a>
-      <a href="https://lido-schema.org/" target="_blank" rel="noopener" class="std-pill">LIDO 1.1</a>
-      <a href="https://cidoc.mini.icom.museum/working-groups/documentation-standards/eodem-home/" target="_blank" rel="noopener" class="std-pill">EODEM</a>
-      <a href="https://www.getty.edu/research/tools/vocabularies/aat/" target="_blank" rel="noopener" class="std-pill">Getty AAT</a>
-      <a href="https://www.getty.edu/research/tools/vocabularies/ulan/" target="_blank" rel="noopener" class="std-pill">Getty ULAN</a>
-      <a href="https://www.getty.edu/research/tools/vocabularies/tgn/" target="_blank" rel="noopener" class="std-pill">Getty TGN</a>
-      <a href="https://iconclass.org/" target="_blank" rel="noopener" class="std-pill">ICONCLASS</a>
-      <a href="https://www.wikidata.org/" target="_blank" rel="noopener" class="std-pill">Wikidata</a>
-      <a href="https://viaf.org/" target="_blank" rel="noopener" class="std-pill">VIAF</a>
-      <a href="https://isni.org/" target="_blank" rel="noopener" class="std-pill">ISNI</a>
-      <a href="https://schema.org/" target="_blank" rel="noopener" class="std-pill">Schema.org</a>
-    </div>
-  </section>
-
-  <!-- ── Browse entry points ────────────────────────────────────────────────── -->
-  <section class="section">
-    <h2 class="section-title">Browse the Catalogue</h2>
-    <div class="cta-grid">
-      <a href="catalogue/" class="cta-card">
-        <div class="cta-card-title">
-          Full Catalogue
-          <span class="arrow">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-              <path d="M2 5h6M5.5 2.5L8 5l-2.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-        </div>
-        <p class="cta-card-desc">All artists and artwork passports, with authority badges, dates, and media.</p>
-      </a>
-      <a href="artworks/" class="cta-card">
-        <div class="cta-card-title">
-          Artwork Passports
-          <span class="arrow">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-              <path d="M2 5h6M5.5 2.5L8 5l-2.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-        </div>
-        <p class="cta-card-desc">Browse all published Artwork Passports — each catalogued to international museum standards.</p>
-      </a>
-      <a href="artists/latvia/" class="cta-card">
-        <div class="cta-card-title">
-          Latvian Artists
-          <span class="arrow">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-              <path d="M2 5h6M5.5 2.5L8 5l-2.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-        </div>
-        <p class="cta-card-desc">Latvian artists A–Z with Wikidata, ULAN, VIAF authority verification.</p>
-      </a>
-    </div>
-  </section>
-
-  <!-- ── Featured passports ─────────────────────────────────────────────────── -->
-  
-  <section class="section">
-    <h2 class="section-title">Recent Passports</h2>
-    <div class="featured-list">
-      
-      <a href="AP-2026-000002.html" class="featured-item">
-        <span class="featured-id">AP-2026-000002</span>
-        <span class="featured-title">Juras noskana (Sea Mood)</span>
-        <span class="featured-meta">1979</span>
-        <span class="featured-meta" style="color:var(--ink-soft);">Herberts Silins</span>
-        <span class="featured-arrow">View →</span>
-      </a>
-      
-      <a href="AP-2026-000001.html" class="featured-item">
-        <span class="featured-id">AP-2026-000001</span>
-        <span class="featured-title">Mona Lisa</span>
-        <span class="featured-meta">c. 1503–1519</span>
-        <span class="featured-meta" style="color:var(--ink-soft);">Leonardo da Vinci</span>
-        <span class="featured-arrow">View →</span>
-      </a>
-      
-    </div>
-  </section>
-  
-
-  <!-- ── Catalogue your collection ────────────────────────────────────────────── -->
-  <section class="section" style="background:var(--paper-deep);border:1px solid var(--rule);border-radius:4px;padding:28px 32px;">
-    <h2 class="section-title" style="margin-top:0;">Want to document your collection properly?</h2>
-    <div class="about-text">
-      <p>Ars Accordia catalogues works of art held in private and corporate collections that are
-      undocumented, unstandardised, or absent from scholarship — assigning each a permanent
-      Artwork Passport at museum standards.</p>
-      <p>Corporate holdings, private collections, estate inventories, and institutional art —
-      all catalogued against ICOM Object ID, Getty vocabularies, and Wikidata authority records.</p>
-    </div>
-    <a href="about/#catalogue-your-collection" style="display:inline-block;margin-top:16px;padding:10px 22px;background:var(--seal);color:#fff;text-decoration:none;font-weight:600;font-size:0.875rem;border-radius:3px;letter-spacing:0.02em;">
-      Learn how to catalogue your collection →
-    </a>
-    <p style="margin-top:12px;font-size:0.8rem;color:var(--ink-faded);">
-      Or write directly: <a href="mailto:catalogue@arsaccordia.com" style="color:var(--seal);text-decoration:underline;text-underline-offset:2px;">catalogue@arsaccordia.com</a>
-    </p>
-  </section>
-
-  <!-- ── Footer ─────────────────────────────────────────────────────────────── -->
-  <footer class="site-footer">
-    <span class="footer-text">
-      Ars Accordia · Scholarly Art Catalogue ·
-      <a href="about/" class="footer-link">About &amp; Methodology</a> ·
-      <a href="sitemap/" class="footer-link">Site Index</a>
-    </span>
-    <span class="footer-generated">Generated 2026-06-14 UTC</span>
-  </footer>
-
+  </div>
+</section>
 </div>
+
+<!-- ── How it works ───────────────────────────────────────────────────────────── -->
+<div class="wrap">
+<section class="section">
+  <p class="section-eyebrow">The Process</p>
+  <h2 class="section-title">From consultation to published record</h2>
+  <p class="section-body">
+    Every engagement follows the same four-phase process — from an initial conversation
+    to a publicly registered passport for each catalogued work.
+  </p>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <div class="step-title">Consultation</div>
+      <div class="step-desc">A free 45-minute conversation to understand your collection, documentation gaps, and what the engagement will cover.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <div class="step-title">Cataloguing</div>
+      <div class="step-desc">Physical examination or review of existing documentation. Attribution, provenance, and authority research for each work and artist.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <div class="step-title">Passport</div>
+      <div class="step-desc">Each work receives a permanent HTML document, a LIDO 1.1 XML export, and a stable ArtBase ID. Delivered as a complete client package.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <div class="step-title">Registry</div>
+      <div class="step-desc">With your approval, passports are published in the Ars Accordia public catalogue and linked to Wikidata authority records.</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ── Standards ─────────────────────────────────────────────────────────────── -->
+<div class="wrap">
+<section class="section">
+  <p class="section-eyebrow">Standards &amp; Compliance</p>
+  <div class="credentials-wrap">
+    <span class="cred-intro">Compliant with</span>
+    <a href="https://icom.museum/en/resources/standards-guidelines/objectid/" target="_blank" rel="noopener" class="cred-pill">Object ID</a>
+    <a href="https://lido-schema.org/" target="_blank" rel="noopener" class="cred-pill">LIDO 1.1</a>
+    <a href="https://www.getty.edu/research/publications/electronic_publications/cdwa/" target="_blank" rel="noopener" class="cred-pill">CDWA</a>
+    <a href="https://cidoc.mini.icom.museum/working-groups/documentation-standards/eodem-home/" target="_blank" rel="noopener" class="cred-pill">EODEM</a>
+    <a href="https://www.getty.edu/research/tools/vocabularies/aat/" target="_blank" rel="noopener" class="cred-pill">Getty AAT</a>
+    <a href="https://www.getty.edu/research/tools/vocabularies/ulan/" target="_blank" rel="noopener" class="cred-pill">Getty ULAN</a>
+    <a href="https://www.wikidata.org/" target="_blank" rel="noopener" class="cred-pill">Wikidata</a>
+    <a href="https://viaf.org/" target="_blank" rel="noopener" class="cred-pill">VIAF</a>
+    <a href="https://schema.org/" target="_blank" rel="noopener" class="cred-pill">Schema.org</a>
+  </div>
+</section>
+</div>
+
+<!-- ── From the catalogue ─────────────────────────────────────────────────────── -->
+<div class="wrap">
+<section class="section">
+  <p class="section-eyebrow">From the Catalogue</p>
+  <h2 class="section-title">Sample passports</h2>
+  <p class="section-body">
+    Published passports from the Ars Accordia catalogue — each catalogued to the standards above,
+    with authority links and permanent identifiers.
+  </p>
+
+  <div class="featured-list">
+    <a href="AP-2026-000002.html" class="featured-item">
+      <span class="featured-id">AP-2026-000002</span>
+      <span class="featured-title">Juras noskana (Sea Mood)</span>
+      <span class="featured-meta">Herberts Siliņš · 1979</span>
+      <span class="featured-arrow">→</span>
+    </a>
+    <a href="AP-2026-000001.html" class="featured-item">
+      <span class="featured-id">AP-2026-000001</span>
+      <span class="featured-title">Mona Lisa</span>
+      <span class="featured-meta">Leonardo da Vinci · c. 1503–1519</span>
+      <span class="featured-arrow">→</span>
+    </a>
+  </div>
+
+  <a href="catalogue/" class="catalogue-link">
+    View the full catalogue
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+
+  <div class="stats-row">
+    <div class="stat">
+      <span class="stat-value">289</span>
+      <span class="stat-label">Artist Records</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">2</span>
+      <span class="stat-label">Artwork Passports</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">114</span>
+      <span class="stat-label">Confirmed Authority Links</span>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ── Contact CTA ────────────────────────────────────────────────────────────── -->
+<div class="wrap">
+<div class="contact-cta">
+  <div class="contact-cta-inner">
+    <p class="contact-cta-label">Start Here</p>
+    <h2 class="contact-cta-title">Every engagement begins with a conversation.</h2>
+    <p class="contact-cta-body">
+      Tell us what you hold — approximate size, period, and what the collection needs
+      (insurance, estate planning, a loan programme, public visibility). We will propose
+      a realistic scope and a cost estimate at no obligation.
+    </p>
+    <div class="contact-email-wrap">
+      <span class="contact-email-label">Write to us</span>
+      <a href="mailto:catalogue@arsaccordia.com" class="contact-email">catalogue@arsaccordia.com</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ── Footer ─────────────────────────────────────────────────────────────────── -->
+<div class="wrap">
+<footer class="site-footer">
+  <span class="footer-text">
+    Ars Accordia · Scholarly Art Catalogue ·
+    <a href="about/" class="footer-link">About &amp; Methodology</a> ·
+    <a href="sitemap/" class="footer-link">Site Index</a>
+  </span>
+  <span class="footer-generated">Generated 2026-06-14 UTC</span>
+</footer>
+</div>
+
 </body>
 </html>
