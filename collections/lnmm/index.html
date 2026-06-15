@@ -4398,6 +4398,49 @@ function filterTable() {
     row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
   });
 }
+
+var ARTIST_PAGES = {
+  "Janis Rozentāls":  "../../artists/ART-ROZENTALS-1866.html",
+  "Kārlis Padegs":    "../../artists/ART-PADEGS-1911.html",
+  "Jāzeps Grosvalds": "../../artists/ART-GROSVALDS-1891.html",
+  "Vilhelms Purvītis":"../../artists/ART-PURVITIS-1872.html",
+  "Romans Suta":      "../../artists/ART-SUTA-1896.html",
+  "Kārlis Hūns":      "../../artists/ART-HUNS-1831.html",
+  "Jūlijs Feders":    "../../artists/ART-FEDERS-1838.html",
+  "Jānis Tīdemanis":  "../../artists/ART-TIDEMANIS-1897.html",
+  "Ģederts Eliass":   "../../artists/ART-ELIASS-1887.html",
+  "Ludolfs Liberts":  "../../artists/ART-LIBERTS-1895.html",
+  "Niklāvs Strunke":  "../../artists/ART-STRUNKE-1894.html",
+  "Ansis Cīrulis":    "../../artists/ART-CIRULIS-1883.html",
+  "Leo Svemps":       "../../artists/ART-SVEMPS-1897.html",
+  "Valdemārs Tone":   "../../artists/ART-TONE-1892.html",
+  "Alberts Filka":    "../../artists/ART-FILKA-1891.html",
+  "Pēteris Kalve":    "../../artists/ART-KALVE-1882.html",
+};
+
+// Artist cards — make the whole card clickable via a stretched anchor
+document.querySelectorAll('.artist-card').forEach(function(card) {
+  var nameEl = card.querySelector('.artist-name');
+  if (!nameEl) return;
+  var name = nameEl.textContent.trim();
+  var href = ARTIST_PAGES[name];
+  if (!href) return;
+  card.style.position = 'relative';
+  var a = document.createElement('a');
+  a.href = href;
+  a.style.cssText = 'position:absolute;inset:0;z-index:1;border-radius:4px;';
+  a.setAttribute('aria-label', name + ' — artist record');
+  a.setAttribute('title', 'View artist record');
+  card.insertBefore(a, card.firstChild);
+});
+
+// Works table — link artist name in each row
+document.querySelectorAll('td.artist').forEach(function(td) {
+  var name = td.textContent.trim();
+  var href = ARTIST_PAGES[name];
+  if (!href) return;
+  td.innerHTML = '<a href="' + href + '">' + name + '</a>';
+});
 </script>
 </body>
 </html>
