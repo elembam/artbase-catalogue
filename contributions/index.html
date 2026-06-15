@@ -243,25 +243,25 @@
 
   <!-- Stats -->
   <div class="stats-row">
-    <div class="stat-card">
-      <div class="stat-num">0</div>
-      <div class="stat-label">Statements submitted</div>
-      <div class="stat-sub">First batches pending</div>
+    <div class="stat-card highlight">
+      <div class="stat-num">10</div>
+      <div class="stat-label">Statements live</div>
+      <div class="stat-sub">Across 2 completed batches</div>
     </div>
     <div class="stat-card highlight">
       <div class="stat-num">5</div>
-      <div class="stat-label">P973 links ready</div>
+      <div class="stat-label">P973 links live</div>
       <div class="stat-sub">Wikidata → Ars Accordia</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num">20</div>
-      <div class="stat-label">VIAF statements ready</div>
-      <div class="stat-sub">Across 10 artists</div>
+      <div class="stat-num">5</div>
+      <div class="stat-label">VIAF statements live</div>
+      <div class="stat-sub">5 more pending (batch 2)</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num">2</div>
-      <div class="stat-label">New items ready</div>
-      <div class="stat-sub">Source catalogues</div>
+      <div class="stat-num">4</div>
+      <div class="stat-label">New items created</div>
+      <div class="stat-sub">Books &amp; catalogues</div>
     </div>
   </div>
 
@@ -300,54 +300,105 @@
   <section class="section">
     <h2 class="section-title">
       P973 — Described at URL
-      <span class="badge badge-ready">5 ready</span>
+      <span class="badge badge-verified">5 live</span>
     </h2>
     <p class="section-subtitle">
       These contributions create a machine-readable link from the artist's Wikidata item directly
       to their Ars Accordia page. This is the primary mechanism for open-data authority and discovery.
+      All 5 submitted 2026-06-14.
     </p>
     <div class="p973-grid">
 
-      <div class="p973-row ready">
+      <div class="p973-row verified">
         <span class="p973-artist">Jānis Rozentāls</span>
         <a href="https://www.wikidata.org/wiki/Q975168" target="_blank" rel="noopener" class="p973-qid">Q975168</a>
         <span class="p973-page"><a href="https://arsaccordia.com/artists/ART-ROZENTALS-1866.html" target="_blank" rel="noopener">arsaccordia.com/artists/ART-ROZENTALS-1866.html</a></span>
         <span class="p973-works">39 LNMM works</span>
-        <span class="badge badge-ready">Ready</span>
+        <span class="badge badge-verified">Live</span>
       </div>
 
-      <div class="p973-row ready">
+      <div class="p973-row verified">
         <span class="p973-artist">Kārlis Padegs</span>
         <a href="https://www.wikidata.org/wiki/Q4342040" target="_blank" rel="noopener" class="p973-qid">Q4342040</a>
         <span class="p973-page"><a href="https://arsaccordia.com/artists/ART-PADEGS-1911.html" target="_blank" rel="noopener">arsaccordia.com/artists/ART-PADEGS-1911.html</a></span>
         <span class="p973-works">25 LNMM works</span>
-        <span class="badge badge-ready">Ready</span>
+        <span class="badge badge-verified">Live</span>
       </div>
 
-      <div class="p973-row ready">
+      <div class="p973-row verified">
         <span class="p973-artist">Jāzeps Grosvalds</span>
         <a href="https://www.wikidata.org/wiki/Q4150307" target="_blank" rel="noopener" class="p973-qid">Q4150307</a>
         <span class="p973-page"><a href="https://arsaccordia.com/artists/ART-GROSVALDS-1891.html" target="_blank" rel="noopener">arsaccordia.com/artists/ART-GROSVALDS-1891.html</a></span>
         <span class="p973-works">19 LNMM works</span>
-        <span class="badge badge-ready">Ready</span>
+        <span class="badge badge-verified">Live</span>
       </div>
 
-      <div class="p973-row ready">
+      <div class="p973-row verified">
         <span class="p973-artist">Vilhelms Purvītis</span>
         <a href="https://www.wikidata.org/wiki/Q2663470" target="_blank" rel="noopener" class="p973-qid">Q2663470</a>
         <span class="p973-page"><a href="https://arsaccordia.com/artists/ART-PURVITIS-1872.html" target="_blank" rel="noopener">arsaccordia.com/artists/ART-PURVITIS-1872.html</a></span>
         <span class="p973-works">18 LNMM works</span>
-        <span class="badge badge-ready">Ready</span>
+        <span class="badge badge-verified">Live</span>
       </div>
 
-      <div class="p973-row ready">
+      <div class="p973-row verified">
         <span class="p973-artist">Romans Suta</span>
         <a href="https://www.wikidata.org/wiki/Q6711504" target="_blank" rel="noopener" class="p973-qid">Q6711504</a>
         <span class="p973-page"><a href="https://arsaccordia.com/artists/ART-SUTA-1896.html" target="_blank" rel="noopener">arsaccordia.com/artists/ART-SUTA-1896.html</a></span>
         <span class="p973-works">18 LNMM works</span>
-        <span class="badge badge-ready">Ready</span>
+        <span class="badge badge-verified">Live</span>
       </div>
 
+    </div>
+  </section>
+
+  <!-- New items created -->
+  <section class="section">
+    <h2 class="section-title">
+      New Items Created
+      <span class="badge badge-verified">4 live</span>
+    </h2>
+    <p class="section-subtitle">
+      Books and catalogues used as provenance sources, created as Wikidata items so they can be cited
+      across the open data ecosystem. All created 2026-05-30.
+    </p>
+    <div class="ledger-wrap">
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th>QID</th>
+            <th>Item</th>
+            <th>Type</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://www.wikidata.org/wiki/Q139986317" target="_blank" rel="noopener" class="batch-name">Q139986317</a></td>
+            <td style="font-size:0.875rem;">Hansabanka Contemporary Art Collection</td>
+            <td class="batch-type">book</td>
+            <td><span class="badge badge-verified">Live</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.wikidata.org/wiki/Q139986481" target="_blank" rel="noopener" class="batch-name">Q139986481</a></td>
+            <td style="font-size:0.875rem;">Artist. Portrait. Self-portrait</td>
+            <td class="batch-type">book</td>
+            <td><span class="badge badge-verified">Live</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.wikidata.org/wiki/Q139986920" target="_blank" rel="noopener" class="batch-name">Q139986920</a></td>
+            <td style="font-size:0.875rem;">Latvia, wow! : contemporary artists</td>
+            <td class="batch-type">book</td>
+            <td><span class="badge badge-verified">Live</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.wikidata.org/wiki/Q139987283" target="_blank" rel="noopener" class="batch-name">Q139987283</a></td>
+            <td style="font-size:0.875rem;">Archive of visions and actions</td>
+            <td class="batch-type">book</td>
+            <td><span class="badge badge-verified">Live</span></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -381,7 +432,7 @@
             <td class="batch-type">P973 — described at URL</td>
             <td class="batch-count">5 artists</td>
             <td style="font-size:0.82rem;color:var(--ink-soft);">LNMM</td>
-            <td><span class="badge badge-ready">Ready</span></td>
+            <td><span class="badge badge-verified">Live</span></td>
           </tr>
 
           <tr>
@@ -391,14 +442,14 @@
             </td>
             <td class="batch-type">P214 — VIAF ID</td>
             <td class="batch-count">5 artists</td>
-            <td style="font-size:0.82rem;color:var(--ink-soft);">Latvian artists</td>
-            <td><span class="badge badge-ready">Ready</span></td>
+            <td style="font-size:0.82rem;color:var(--ink-soft);">Latvian artists (A–)</td>
+            <td><span class="badge badge-verified">Live</span></td>
           </tr>
 
           <tr>
             <td>
               <div class="batch-name">test_rozentals_batch</div>
-              <div style="font-size:0.75rem;color:var(--ink-faded);">2026-06-02</div>
+              <div style="font-size:0.75rem;color:var(--ink-faded);">pending</div>
             </td>
             <td class="batch-type">P214 — VIAF ID</td>
             <td class="batch-count">5 artists</td>
@@ -412,9 +463,9 @@
               <div style="font-size:0.75rem;color:var(--ink-faded);">2026-05-30</div>
             </td>
             <td class="batch-type">CREATE — book / catalogue items</td>
-            <td class="batch-count">2 items</td>
+            <td class="batch-count">4 items</td>
             <td style="font-size:0.82rem;color:var(--ink-soft);">Hansabanka · LNMM</td>
-            <td><span class="badge badge-ready">Ready</span></td>
+            <td><span class="badge badge-verified">Live</span></td>
           </tr>
 
           <tr class="superseded">
@@ -432,7 +483,7 @@
       </table>
     </div>
     <p style="font-size:0.75rem;color:var(--ink-faded);margin-top:10px;">
-      <em>Superseded</em> — queue_20260528 is covered by test_batch_first5 + test_rozentals_batch combined and must not be re-submitted.
+      <em>Superseded</em> — queue_20260528 is covered by test_batch_first5 (submitted) + test_rozentals_batch (pending) and must not be re-submitted.
     </p>
   </section>
 
@@ -463,7 +514,7 @@
       <a href="../about/" class="footer-link">About &amp; Methodology</a>
     </span>
     <span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--ink-faded);">
-      Updated 2026-06-14
+      Updated 2026-06-15
     </span>
   </footer>
 
