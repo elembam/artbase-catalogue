@@ -55,11 +55,11 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
-      "verified_date": null,
-      "notes": null
+      "id": "Q4152126",
+      "uri": "https://www.wikidata.org/wiki/Q4152126",
+      "status": "confirmed",
+      "verified_date": "2026-06-15",
+      "notes": "Baltic German name: Karl Jacob Wilhelm Huhn. Confirmed by birth 1831-11-13, death 1877-01-16."
     },
     "viaf": {
       "id": null,

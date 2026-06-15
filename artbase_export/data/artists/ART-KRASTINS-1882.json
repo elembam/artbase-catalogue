@@ -1,28 +1,28 @@
 {
-  "artbase_id": "ART-VALTERS-1869",
-  "airtable_id": "recFIfkgiILI2iAbw",
+  "artbase_id": "ART-KRASTINS-1882",
+  "airtable_id": null,
   "artbase_canonical_id": null,
   "version": 1,
-  "created": null,
-  "exported": "2026-05-30T17:59:39.587433Z",
-  "visibility": "private",
+  "created": "2026-06-15",
+  "exported": "2026-06-15T00:00:00Z",
+  "visibility": "public",
   "identity": {
-    "preferred_name": "Jānis Valters",
-    "preferred_name_language": null,
-    "full_name": "Jānis Valters",
-    "name_variants": [],
-    "sort_name": "Valters, Jānis"
+    "preferred_name": "Pēteris Krastiņš",
+    "preferred_name_language": "lv",
+    "full_name": "Pēteris Krastiņš",
+    "name_variants": ["Peteris Krastins"],
+    "sort_name": "Krastiņš, Pēteris"
   },
   "life": {
     "birth_date": {
-      "value": "1869",
+      "value": "1882",
       "precision": "year",
       "status": "working",
       "source_ids": [],
       "notes": null
     },
     "death_date": {
-      "value": "1932",
+      "value": "1942",
       "precision": "year",
       "status": "working",
       "source_ids": [],
@@ -35,7 +35,7 @@
       "source_ids": []
     },
     "death_place": {
-      "display": null,
+      "display": "Riga, Latvia",
       "tgn_uri": null,
       "wikidata_qid": null,
       "source_ids": []
@@ -44,9 +44,7 @@
   "descriptors": {
     "nationality": "Latvian",
     "citizenship": [],
-    "occupations": [
-      "painter"
-    ],
+    "occupations": ["painter"],
     "occupations_aat": [],
     "media": [],
     "subjects": [],
@@ -55,11 +53,11 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": "Q4102980",
-      "uri": "https://www.wikidata.org/wiki/Q4102980",
+      "id": "Q58456712",
+      "uri": "https://www.wikidata.org/wiki/Q58456712",
       "status": "confirmed",
       "verified_date": "2026-06-15",
-      "notes": "Wikidata label: Johann Walter-Kurau. Also known as Jānis Valters in Latvian sources."
+      "notes": "19 statements, 1 sitelink. Confirmed birth 1882, death 1942, Latvian painter."
     },
     "viaf": {
       "id": null,
@@ -119,35 +117,14 @@
     },
     "artbase_id": null
   },
-  "sources": [
-    {
-      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
-      "source_type": "Gallery Artist Index",
-      "title": "Galerija Jēkabs — Artist Index. https://paintings.lv/artists/list. Retrieved 2026-05-30.",
-      "publisher": null,
-      "url": "https://paintings.lv/artists/list",
-      "publication_date": null,
-      "access_date": null,
-      "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
-      "license": null
-    }
-  ],
-  "source_refs": [
-    {
-      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
-      "role": null,
-      "accessed": null
-    }
-  ],
+  "sources": [],
+  "source_refs": [],
   "conflicts": [],
   "cataloguing": {
     "review_status": "draft",
     "catalogued_by": null,
-    "notes": null,
-    "tasks": [
-      "Search VIAF",
-      "Search Getty ULAN"
-    ],
+    "notes": "Added Phase 3 LNMM plan 2026-06-15. 12 works in LNMM collection.",
+    "tasks": ["Search VIAF", "Search Getty ULAN", "Add P973 to Wikidata Q58456712"],
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1"

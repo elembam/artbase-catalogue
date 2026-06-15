@@ -55,11 +55,11 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
-      "verified_date": null,
-      "notes": null
+      "id": "Q4457149",
+      "uri": "https://www.wikidata.org/wiki/Q4457149",
+      "status": "confirmed",
+      "verified_date": "2026-06-15",
+      "notes": "Full name on Wikidata: Jānis Ferdinands Tīdemanis. Confirmed by birth 1897-10-01, death 1964-04-12."
     },
     "viaf": {
       "id": null,

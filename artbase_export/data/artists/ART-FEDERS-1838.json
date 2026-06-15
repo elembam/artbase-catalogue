@@ -55,11 +55,11 @@
   },
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
-      "verified_date": null,
-      "notes": null
+      "id": "Q1977258",
+      "uri": "https://www.wikidata.org/wiki/Q1977258",
+      "status": "confirmed",
+      "verified_date": "2026-06-15",
+      "notes": "English label: Julius Fedders. Confirmed by birth 1838-06-19, death 1909-01-19."
     },
     "viaf": {
       "id": null,
