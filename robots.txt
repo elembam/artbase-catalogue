@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Machine-readable data endpoints — not for indexing
+Disallow: /api/
+Disallow: /oai/
+
 Sitemap: https://arsaccordia.com/sitemap.xml
