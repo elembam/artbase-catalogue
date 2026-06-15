@@ -82,7 +82,7 @@
   .artist-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
   .artist-card {
     background: white; border: 1px solid var(--rule); border-radius: 4px;
-    padding: 18px 20px; transition: border-color 0.15s;
+    padding: 18px 20px; transition: border-color 0.15s; overflow: hidden;
   }
   .artist-card:hover { border-color: var(--seal); }
   .artist-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
@@ -100,6 +100,13 @@
   .badge-needed    { border-color: var(--gold); color: var(--gold); }
   .badge-missing   { border-color: var(--ink-faded); color: var(--ink-faded); }
   .badge-qid { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--ink-faded); margin-left: 2px; }
+  .badge-pd { border-color: #5a8a3a; color: #5a8a3a; }
+  .badge-cr { border-color: var(--seal); color: var(--seal); }
+  .artist-card-img {
+    display: block; width: calc(100% + 40px); height: 90px;
+    object-fit: cover; object-position: center top;
+    border-radius: 3px 3px 0 0; margin: -18px -20px 12px;
+  }
 
   /* Works filter */
   .filter-bar { margin-bottom: 16px; }
@@ -4377,9 +4384,28 @@
     </div>
   </section>
 
+  <section style="margin-top:48px;padding-top:32px;border-top:1px solid var(--rule);">
+    <h2 style="font-size:1rem;font-weight:600;margin-bottom:16px;">Data &amp; Image Credits</h2>
+    <p style="font-size:0.8rem;color:var(--ink-faded);line-height:1.6;max-width:720px;">
+      <strong>Collection data</strong> — Artwork records sourced from
+      <a href="https://lnmm.lv/" class="footer-link">Latvijas Nacionālais mākslas muzejs (LNMM)</a>
+      via <a href="https://artsandculture.google.com/" class="footer-link">Google Arts &amp; Culture</a>
+      open data. Used for non-commercial research and cataloguing purposes.
+    </p>
+    <p style="font-size:0.8rem;color:var(--ink-faded);line-height:1.6;max-width:720px;margin-top:8px;">
+      <strong>Representative images</strong> — Thumbnail images sourced from
+      <a href="https://commons.wikimedia.org/" class="footer-link">Wikimedia Commons</a>
+      and reproduced here as public domain works (EU copyright: life + 70 years).
+      Credits: Janis Rozentāls, <em>Princess with a Monkey</em> (c. 1910) · Vilhelms Purvītis,
+      <em>Blooming Lilacs</em> (c. 1900s) · Kārlis Padegs, <em>Self-Portrait</em> (c. 1930s) ·
+      Jāzeps Grosvalds, <em>White Crosses</em> (c. 1916) · Jēkabs Kazaks, <em>Circus</em> (c. 1912).
+      All artists died before 1956; works are in the public domain in the EU.
+    </p>
+  </section>
+
   <footer class="site-footer">
     <span class="footer-text">
-      Ars Accordia · <a href="../../" class="footer-link">Home</a> ·
+      © 2026 Ars Accordia · <a href="../../" class="footer-link">Home</a> ·
       <a href="../" class="footer-link">Collections</a> ·
       <a href="../../about/" class="footer-link">About</a>
     </span>
@@ -4440,6 +4466,64 @@ document.querySelectorAll('td.artist').forEach(function(td) {
   var href = ARTIST_PAGES[name];
   if (!href) return;
   td.innerHTML = '<a href="' + href + '">' + name + '</a>';
+});
+
+// Thumbnail images in artist cards
+var ARTIST_IMAGES = {
+  "Janis Rozentāls":  "images/rozentals-princess-monkey.jpg",
+  "Vilhelms Purvītis":"images/purvitis-blooming-lilacs.jpg",
+  "Kārlis Padegs":    "images/padegs-self-portrait.jpg",
+  "Jāzeps Grosvalds": "images/grosvalds-white-crosses.jpg",
+  "Jēkabs Kazaks":    "images/kazaks-circus.jpg",
+};
+document.querySelectorAll('.artist-card').forEach(function(card) {
+  var nameEl = card.querySelector('.artist-name');
+  if (!nameEl) return;
+  var src = ARTIST_IMAGES[nameEl.textContent.trim()];
+  if (!src) return;
+  var img = document.createElement('img');
+  img.src = src;
+  img.alt = nameEl.textContent.trim() + ' — representative work';
+  img.className = 'artist-card-img';
+  card.insertBefore(img, card.firstChild);
+});
+
+// Per-artist copyright status badges (EU: life + 70 years; PD threshold 2026 = died ≤ 1955)
+var ARTIST_RIGHTS = {
+  "Janis Rozentāls":1916,"Johann Walter":1932,"Kārlis Padegs":1940,"Jēkabs Kazaks":1920,
+  "Jāzeps Grosvalds":1920,"Vilhelms Purvītis":1945,"Romans Suta":1944,"Rūdolfs Pērle":1917,
+  "Pēteris Krastiņš":1942,"Ādams Alksnis":1897,"Kārlis Hūns":1877,"Jūlijs Feders":1909,
+  "Rihards Zariņš":1939,"Jānis Tīdemanis":1964,"Teodors Ūders":1915,"Jānis Liepiņš":1954,
+  "Gustavs Klucis":1938,"Alfrēds Plīte-Pleita":1921,"Alexander Heubel":1847,"Ģederts Eliass":1975,
+  "Aleksandrs Drēviņš":1938,"Janis Stanislavs Roze":1897,"Voldemārs Matvejs":1914,"Arturs Baumanis":1904,
+  "Gustavs Šķilters":1954,"Valdemārs Tone":1958,"Teodors Zaļkalns":1972,"Aleksandrs Romans":1911,
+  "Konstantīns Rončevskis":1935,"Voldemārs Zeltiņš":1909,"Johann Heinrich Baumann":1930,"Leo Svemps":1975,
+  "Ludolfs Liberts":1959,"Niklāvs Strunke":1966,"Ansis Cīrulis":1942,"Michael Alexander Michelson":1899,
+  "Emīls Melderis":1979,"Jānis Plase":1929,"Johann Samuel Benediktus Grune":1848,"Robert Konstantin Schwede":1871,
+  "Alberts Filka":1938,"Johann Nepomuk Hueber":1885,"Alice Dannenberg":1948,"Arturs Bērnieks":1964,
+  "Jēkabs Belzēns":1938,"Ottilie von Bolschwing":1889,"Karl Gothard Grass":1814,
+  "Ernst Gotthilf Bosse":1862,"Pēteris Kalve":1913,"Emīlija Gruzīte":1927,
+};
+document.querySelectorAll('.artist-card').forEach(function(card) {
+  var nameEl = card.querySelector('.artist-name');
+  if (!nameEl) return;
+  var name = nameEl.textContent.trim();
+  var badgesEl = card.querySelector('.artist-badges');
+  if (!badgesEl) return;
+  var died = ARTIST_RIGHTS[name];
+  var badge = document.createElement('span');
+  badge.className = 'badge';
+  if (died == null) {
+    badge.className += ' badge-cr';
+    badge.textContent = '© unclear';
+  } else if (died <= 1955) {
+    badge.className += ' badge-pd';
+    badge.textContent = 'Public domain · EU';
+  } else {
+    badge.className += ' badge-cr';
+    badge.textContent = '© until ' + (died + 70);
+  }
+  badgesEl.appendChild(badge);
 });
 </script>
 </body>
