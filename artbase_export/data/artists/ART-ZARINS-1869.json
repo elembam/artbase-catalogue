@@ -10,7 +10,10 @@
     "preferred_name": "Rihards Zariņš",
     "preferred_name_language": "lv",
     "full_name": "Rihards Zariņš",
-    "name_variants": ["Richard Zarins", "Rihards Zarins"],
+    "name_variants": [
+      "Richard Zarins",
+      "Rihards Zarins"
+    ],
     "sort_name": "Zariņš, Rihards"
   },
   "life": {
@@ -44,9 +47,15 @@
   "descriptors": {
     "nationality": "Latvian",
     "citizenship": [],
-    "occupations": ["painter", "graphic artist"],
+    "occupations": [
+      "painter",
+      "graphic artist"
+    ],
     "occupations_aat": [],
-    "media": ["etching", "oil"],
+    "media": [
+      "etching",
+      "oil"
+    ],
     "subjects": [],
     "movement_notes": "Known for portraits, landscapes, and graphic work including Latvian banknote designs.",
     "biography_summary": null
@@ -124,8 +133,22 @@
     "review_status": "draft",
     "catalogued_by": null,
     "notes": "Added Phase 3 LNMM plan 2026-06-15. 9 works in LNMM collection. Not to be confused with ART-ZARINS-1929.",
-    "tasks": ["Search VIAF", "Search Getty ULAN", "Add P973 to Wikidata Q2371375"],
+    "tasks": [
+      "Search VIAF",
+      "Search Getty ULAN",
+      "Add P973 to Wikidata Q2371375"
+    ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "collections": [
+    {
+      "id": "lnmm",
+      "name": "Latvian National Museum of Art",
+      "short_name": "LNMM",
+      "url": "https://arsaccordia.com/collections/lnmm/",
+      "work_count": 9,
+      "display_name": "Rihards Zariņš"
+    }
+  ]
 }

@@ -10,7 +10,11 @@
     "preferred_name": "Gustavs Klucis",
     "preferred_name_language": "lv",
     "full_name": "Gustavs Klucis",
-    "name_variants": ["Gustave Klutsis", "Gustav Klutsis", "Густав Клуцис"],
+    "name_variants": [
+      "Gustave Klutsis",
+      "Gustav Klutsis",
+      "Густав Клуцис"
+    ],
     "sort_name": "Klucis, Gustavs"
   },
   "life": {
@@ -44,9 +48,17 @@
   "descriptors": {
     "nationality": "Latvian",
     "citizenship": [],
-    "occupations": ["painter", "graphic artist", "designer"],
+    "occupations": [
+      "painter",
+      "graphic artist",
+      "designer"
+    ],
     "occupations_aat": [],
-    "media": ["photomontage", "poster", "oil"],
+    "media": [
+      "photomontage",
+      "poster",
+      "oil"
+    ],
     "subjects": [],
     "movement_notes": "Latvian Constructivist and Soviet avant-garde artist; major figure in political poster and photomontage.",
     "biography_summary": null
@@ -124,8 +136,22 @@
     "review_status": "draft",
     "catalogued_by": null,
     "notes": "Added Phase 3 LNMM plan 2026-06-15. 5 works in LNMM collection.",
-    "tasks": ["Search VIAF", "Search Getty ULAN", "Add P973 to Wikidata Q1341721"],
+    "tasks": [
+      "Search VIAF",
+      "Search Getty ULAN",
+      "Add P973 to Wikidata Q1341721"
+    ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "collections": [
+    {
+      "id": "lnmm",
+      "name": "Latvian National Museum of Art",
+      "short_name": "LNMM",
+      "url": "https://arsaccordia.com/collections/lnmm/",
+      "work_count": 5,
+      "display_name": "Gustavs Klucis"
+    }
+  ]
 }

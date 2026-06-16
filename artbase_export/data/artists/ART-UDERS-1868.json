@@ -10,7 +10,9 @@
     "preferred_name": "Teodors Ūders",
     "preferred_name_language": "lv",
     "full_name": "Teodors Ūders",
-    "name_variants": ["Teodors Uders"],
+    "name_variants": [
+      "Teodors Uders"
+    ],
     "sort_name": "Ūders, Teodors"
   },
   "life": {
@@ -44,7 +46,9 @@
   "descriptors": {
     "nationality": "Latvian",
     "citizenship": [],
-    "occupations": ["painter"],
+    "occupations": [
+      "painter"
+    ],
     "occupations_aat": [],
     "media": [],
     "subjects": [],
@@ -124,8 +128,22 @@
     "review_status": "draft",
     "catalogued_by": null,
     "notes": "Added Phase 3 LNMM plan 2026-06-15. 7 works in LNMM collection.",
-    "tasks": ["Search VIAF", "Search Getty ULAN", "Add P973 to Wikidata Q20565577"],
+    "tasks": [
+      "Search VIAF",
+      "Search Getty ULAN",
+      "Add P973 to Wikidata Q20565577"
+    ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "collections": [
+    {
+      "id": "lnmm",
+      "name": "Latvian National Museum of Art",
+      "short_name": "LNMM",
+      "url": "https://arsaccordia.com/collections/lnmm/",
+      "work_count": 7,
+      "display_name": "Teodors Ūders"
+    }
+  ]
 }

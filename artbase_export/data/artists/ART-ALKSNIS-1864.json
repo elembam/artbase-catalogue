@@ -10,7 +10,9 @@
     "preferred_name": "Ādams Alksnis",
     "preferred_name_language": "lv",
     "full_name": "Ādams Alksnis",
-    "name_variants": ["Adams Alksnis"],
+    "name_variants": [
+      "Adams Alksnis"
+    ],
     "sort_name": "Alksnis, Ādams"
   },
   "life": {
@@ -44,7 +46,9 @@
   "descriptors": {
     "nationality": "Latvian",
     "citizenship": [],
-    "occupations": ["painter"],
+    "occupations": [
+      "painter"
+    ],
     "occupations_aat": [],
     "media": [],
     "subjects": [],
@@ -124,8 +128,22 @@
     "review_status": "draft",
     "catalogued_by": null,
     "notes": "Added Phase 3 LNMM plan 2026-06-15. 11 works in LNMM collection.",
-    "tasks": ["Search VIAF", "Search Getty ULAN", "Add P973 to Wikidata Q4062525"],
+    "tasks": [
+      "Search VIAF",
+      "Search Getty ULAN",
+      "Add P973 to Wikidata Q4062525"
+    ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "collections": [
+    {
+      "id": "lnmm",
+      "name": "Latvian National Museum of Art",
+      "short_name": "LNMM",
+      "url": "https://arsaccordia.com/collections/lnmm/",
+      "work_count": 11,
+      "display_name": "Ādams Alksnis"
+    }
+  ]
 }

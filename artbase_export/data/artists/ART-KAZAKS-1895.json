@@ -10,7 +10,9 @@
     "preferred_name": "Jēkabs Kazaks",
     "preferred_name_language": "lv",
     "full_name": "Jēkabs Kazaks",
-    "name_variants": ["Jekabs Kazaks"],
+    "name_variants": [
+      "Jekabs Kazaks"
+    ],
     "sort_name": "Kazaks, Jēkabs"
   },
   "life": {
@@ -44,9 +46,14 @@
   "descriptors": {
     "nationality": "Latvian",
     "citizenship": [],
-    "occupations": ["painter"],
+    "occupations": [
+      "painter"
+    ],
     "occupations_aat": [],
-    "media": ["oil", "drawing"],
+    "media": [
+      "oil",
+      "drawing"
+    ],
     "subjects": [],
     "movement_notes": "Latvian Expressionist painter; noted for circus scenes, refugees, and social subjects.",
     "biography_summary": null
@@ -124,8 +131,22 @@
     "review_status": "draft",
     "catalogued_by": null,
     "notes": "Added Phase 3 LNMM plan 2026-06-15. 20 works in LNMM collection.",
-    "tasks": ["Search VIAF", "Search Getty ULAN", "Add P973 to Wikidata Q5763621"],
+    "tasks": [
+      "Search VIAF",
+      "Search Getty ULAN",
+      "Add P973 to Wikidata Q5763621"
+    ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "collections": [
+    {
+      "id": "lnmm",
+      "name": "Latvian National Museum of Art",
+      "short_name": "LNMM",
+      "url": "https://arsaccordia.com/collections/lnmm/",
+      "work_count": 20,
+      "display_name": "Jēkabs Kazaks"
+    }
+  ]
 }

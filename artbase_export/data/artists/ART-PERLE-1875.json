@@ -10,7 +10,10 @@
     "preferred_name": "Rūdolfs Pērle",
     "preferred_name_language": "lv",
     "full_name": "Rūdolfs Pērle",
-    "name_variants": ["Rudolf Perle", "Rudolfs Perle"],
+    "name_variants": [
+      "Rudolf Perle",
+      "Rudolfs Perle"
+    ],
     "sort_name": "Pērle, Rūdolfs"
   },
   "life": {
@@ -44,7 +47,10 @@
   "descriptors": {
     "nationality": "Latvian",
     "citizenship": [],
-    "occupations": ["painter", "graphic artist"],
+    "occupations": [
+      "painter",
+      "graphic artist"
+    ],
     "occupations_aat": [],
     "media": [],
     "subjects": [],
@@ -124,8 +130,22 @@
     "review_status": "draft",
     "catalogued_by": null,
     "notes": "Added Phase 3 LNMM plan 2026-06-15. 16 works in LNMM collection.",
-    "tasks": ["Search VIAF", "Search Getty ULAN", "Add P973 to Wikidata Q14110160"],
+    "tasks": [
+      "Search VIAF",
+      "Search Getty ULAN",
+      "Add P973 to Wikidata Q14110160"
+    ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "collections": [
+    {
+      "id": "lnmm",
+      "name": "Latvian National Museum of Art",
+      "short_name": "LNMM",
+      "url": "https://arsaccordia.com/collections/lnmm/",
+      "work_count": 16,
+      "display_name": "Rūdolfs Pērle"
+    }
+  ]
 }
