@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Artist record — Vita Lēnerte-Grasa. Ars Accordia scholarly catalogue with authority links to Wikidata, Getty ULAN, and VIAF.">
+<title>Vita Lēnerte-Grasa — Ars Accordia</title>
+<link rel="canonical" href="https://arsaccordia.com/artists/ART-LENERTE-1964.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:      #f6f1e6;
+    --paper-deep: #ebe3d1;
+    --ink:        #1c1814;
+    --ink-soft:   #4a4338;
+    --ink-faded:  #80766a;
+    --seal:       #6e1818;
+    --seal-light: #94342f;
+    --gold:       #8a6f2e;
+    --rule:       #c7bca5;
+    --grid:       rgba(110, 24, 24, 0.04);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 15px;
+    min-height: 100vh;
+    padding: 40px 20px 80px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+
+  /* ── Top nav ─── */
+  .topnav {
+    max-width: 880px;
+    margin: 0 auto 24px;
+    position: relative;
+    z-index: 2;
+    font-size: 0.8125rem;
+    color: var(--ink-faded);
+  }
+  .topnav a { color: var(--seal); text-decoration: none; }
+  .topnav a:hover { text-decoration: underline; }
+  .topnav .sep { margin: 0 6px; opacity: 0.5; }
+  @media print { .topnav { display: none; } }
+
+  /* ── Profile card ─── */
+  .profile {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow:
+      0 1px 0 rgba(28,24,20,0.04),
+      0 20px 40px -20px rgba(28,24,20,0.15),
+      0 60px 100px -60px rgba(28,24,20,0.1);
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ── Header band ─── */
+  .header {
+    padding: 28px 48px 24px;
+    border-bottom: 2px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    left: 48px; right: 48px; bottom: -7px;
+    height: 3px;
+    background: repeating-linear-gradient(90deg, var(--seal) 0, var(--seal) 4px, transparent 4px, transparent 8px);
+    opacity: 0.35;
+  }
+
+  .header-left { flex: 1; }
+
+  .institution-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--seal);
+    margin-bottom: 8px;
+  }
+
+  .artist-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  .artist-dates {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+
+  .artist-nationality {
+    color: var(--ink-faded);
+    font-size: 0.875rem;
+    margin-top: 2px;
+  }
+
+  .header-portrait {
+    width: 120px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .header-portrait img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    object-position: top center;
+    border: 1px solid var(--rule);
+    display: block;
+  }
+  .portrait-credit {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.55rem;
+    color: var(--ink-faded);
+    text-align: center;
+    line-height: 1.3;
+  }
+  .portrait-credit a { color: var(--ink-faded); text-decoration: underline; }
+
+  .header-right {
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .artbase-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    letter-spacing: 0.04em;
+  }
+
+  .wikidata-badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 4px 10px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    color: var(--seal);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+  }
+  .wikidata-badge:hover { background: var(--rule); }
+
+  
+
+  /* ── Section layout ─── */
+  .section {
+    padding: 32px 48px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.625rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--seal);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* ── Authority grid ─── */
+  .authority-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .authority-cell {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    padding: 14px 16px;
+    border-radius: 2px;
+  }
+
+  .authority-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 4px;
+  }
+
+  .authority-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8125rem;
+    color: var(--ink);
+    word-break: break-all;
+  }
+
+  .authority-value a {
+    color: var(--seal);
+    text-decoration: none;
+  }
+  .authority-value a:hover { text-decoration: underline; }
+
+  .authority-value.missing {
+    color: var(--ink-faded);
+    font-style: italic;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.8rem;
+  }
+
+  .authority-status {
+    font-size: 0.6875rem;
+    margin-top: 4px;
+    color: var(--ink-faded);
+  }
+  .authority-status.confirmed { color: #2e7d32; }
+  .authority-status.candidate { color: #e65100; }
+
+  /* ── Artworks table ─── */
+  .artworks-list { display: flex; flex-direction: column; gap: 12px; }
+
+  .artwork-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.15s;
+  }
+  .artwork-row:hover { border-color: var(--seal-light); }
+
+  .artwork-passport-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--seal);
+    flex-shrink: 0;
+    width: 130px;
+  }
+
+  .artwork-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 500;
+    flex: 1;
+  }
+
+  .artwork-date {
+    color: var(--ink-faded);
+    font-size: 0.875rem;
+    flex-shrink: 0;
+  }
+
+  .no-artworks {
+    color: var(--ink-faded);
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+  /* ── Collection appearances ─── */
+  .collection-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .collection-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.15s;
+  }
+  .collection-row:hover { border-color: var(--seal-light); }
+
+  .collection-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--seal);
+    flex-shrink: 0;
+    width: 56px;
+  }
+
+  .collection-name {
+    font-weight: 500;
+    flex: 1;
+  }
+
+  .collection-display-name {
+    color: var(--ink-faded);
+    font-size: 0.8125rem;
+    font-style: italic;
+    flex-shrink: 0;
+  }
+
+  .collection-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8125rem;
+    color: var(--ink-faded);
+    flex-shrink: 0;
+    text-align: right;
+  }
+
+  /* ── Footer ─── */
+  .footer {
+    padding: 20px 48px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--paper-deep);
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+  }
+
+  .footer-left { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.04em; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@id": "https://arsaccordia.com/artists/ART-LENERTE-1964",
+  "@type": "Person",
+  "birthDate": "1964",
+  "hasOccupation": [
+    {
+      "@type": "Role",
+      "roleName": "artist"
+    }
+  ],
+  "mainEntityOfPage": {
+    "@id": "https://arsaccordia.com/artists/ART-LENERTE-1964.html",
+    "@type": "WebPage",
+    "isPartOf": {
+      "@id": "https://arsaccordia.com"
+    }
+  },
+  "name": "Vita L\u0113nerte-Grasa",
+  "nationality": "Latvian",
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q139030628"
+  ],
+  "url": "https://arsaccordia.com/artists/ART-LENERTE-1964.html"
+}
+</script>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html">← ArtBase Catalogue</a>
+  <span class="sep">/</span>
+  <span>Vita Lēnerte-Grasa</span>
+</nav>
+
+<div class="profile">
+
+  <!-- Header -->
+  <header class="header">
+    
+    <div class="header-left">
+      <div class="institution-tag">ArtBase · Artist Profile</div>
+      <h1 class="artist-name">Vita Lēnerte-Grasa</h1>
+      
+      
+      
+      <div class="artist-dates">
+        1964
+      </div>
+      
+      
+      <div class="artist-nationality">Latvian · artist</div>
+      
+    </div>
+    <div class="header-right">
+      <div class="artbase-id">ART-LENERTE-1964</div>
+      
+      <a class="wikidata-badge" href="https://www.wikidata.org/wiki/Q139030628" target="_blank" rel="noopener">Q139030628</a>
+      
+    </div>
+  </header>
+
+  
+
+  <!-- Authority Links -->
+  <section class="section">
+    <div class="section-label">Authority Records</div>
+    <div class="authority-grid">
+      
+      
+      
+      
+      <div class="authority-cell">
+        <div class="authority-label">Wikidata</div>
+        <div class="authority-value">
+          
+            <a href="https://www.wikidata.org/wiki/Q139030628" target="_blank" rel="noopener">Q139030628</a>
+          
+        </div>
+        
+        <div class="authority-status confirmed">
+          confirmed
+        </div>
+        
+      </div>
+      
+      
+      
+      
+      <div class="authority-cell">
+        <div class="authority-label">VIAF</div>
+        <div class="authority-value missing">
+          
+            not linked
+          
+        </div>
+        
+        <div class="authority-status ">
+          search needed
+        </div>
+        
+      </div>
+      
+      
+      
+      
+      <div class="authority-cell">
+        <div class="authority-label">Getty ULAN</div>
+        <div class="authority-value missing">
+          
+            not linked
+          
+        </div>
+        
+        <div class="authority-status ">
+          search needed
+        </div>
+        
+      </div>
+      
+      
+      
+      
+      <div class="authority-cell">
+        <div class="authority-label">ISNI</div>
+        <div class="authority-value missing">
+          
+            not linked
+          
+        </div>
+        
+        <div class="authority-status ">
+          search needed
+        </div>
+        
+      </div>
+      
+      
+      
+      
+      <div class="authority-cell">
+        <div class="authority-label">LC / NACO</div>
+        <div class="authority-value missing">
+          
+            not linked
+          
+        </div>
+        
+        <div class="authority-status ">
+          search needed
+        </div>
+        
+      </div>
+      
+      
+      
+      
+      <div class="authority-cell">
+        <div class="authority-label">GND</div>
+        <div class="authority-value missing">
+          
+            not linked
+          
+        </div>
+        
+        <div class="authority-status ">
+          search needed
+        </div>
+        
+      </div>
+      
+      
+      
+      
+      <div class="authority-cell">
+        <div class="authority-label">BnF</div>
+        <div class="authority-value missing">
+          
+            not linked
+          
+        </div>
+        
+        <div class="authority-status ">
+          search needed
+        </div>
+        
+      </div>
+      
+      
+      
+      
+      <div class="authority-cell">
+        <div class="authority-label">RKD</div>
+        <div class="authority-value missing">
+          
+            not linked
+          
+        </div>
+        
+        <div class="authority-status ">
+          search needed
+        </div>
+        
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ULAN Enrichment -->
+  
+
+  <!-- Collection Appearances -->
+  
+  
+  <section class="section">
+    <div class="section-label">Collection Appearances</div>
+    <div class="collection-list">
+      
+      <a class="collection-row" href="https://arsaccordia.com/collections/hansabanka/" target="_self">
+        <span class="collection-badge">Hansabanka</span>
+        <span class="collection-name">Hansabanka Contemporary Art Collection</span>
+        
+        <span class="collection-count">5 works</span>
+      </a>
+      
+    </div>
+  </section>
+  
+
+  <!-- Artworks -->
+  <section class="section">
+    <div class="section-label">Artworks in Catalogue</div>
+    
+    <p class="no-artworks">No artworks catalogued yet.</p>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span class="footer-left">ARTBASE · ART-LENERTE-1964</span>
+    <span>Exported 2026-06-16</span>
+  </footer>
+
+</div>
+</body>
+</html>
