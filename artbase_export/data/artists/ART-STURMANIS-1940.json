@@ -1,0 +1,158 @@
+{
+  "artbase_id": "ART-STURMANIS-1940",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-06-16",
+  "exported": "2026-06-16T00:00:00Z",
+  "visibility": "public",
+  "identity": {
+    "preferred_name": "Indriķis Stūrmanis",
+    "preferred_name_language": "lv",
+    "full_name": "Indriķis Stūrmanis",
+    "name_variants": [
+      "Indrikis Sturmanis"
+    ],
+    "sort_name": "Stūrmanis, Indriķis"
+  },
+  "life": {
+    "birth_date": {
+      "value": "1940",
+      "precision": "year",
+      "status": "working",
+      "source_ids": [
+        "SRC-HANSABANKA-2007"
+      ],
+      "notes": null
+    },
+    "death_date": {
+      "value": null,
+      "precision": null,
+      "status": "unknown",
+      "source_ids": [],
+      "notes": null
+    },
+    "birth_place": {
+      "display": null,
+      "tgn_uri": null,
+      "wikidata_qid": null,
+      "source_ids": []
+    },
+    "death_place": {
+      "display": null,
+      "tgn_uri": null,
+      "wikidata_qid": null,
+      "source_ids": []
+    }
+  },
+  "descriptors": {
+    "nationality": "Latvian",
+    "citizenship": [],
+    "occupations": [
+      "artist"
+    ],
+    "occupations_aat": [],
+    "media": [],
+    "subjects": [],
+    "movement_notes": null,
+    "biography_summary": null
+  },
+  "authority_links": {
+    "wikidata": {
+      "id": "Q112494056",
+      "uri": "https://www.wikidata.org/wiki/Q112494056",
+      "status": "confirmed",
+      "verified_date": "2026-06-16",
+      "notes": null
+    },
+    "viaf": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "ulan": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "isni": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "rkd": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "lc_naco": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "gnd": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "bnf": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "libris": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [
+    {
+      "source_id": "SRC-HANSABANKA-2007",
+      "role": "collection catalogue",
+      "accessed": null
+    }
+  ],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Added from Hansabanka 2007 catalogue. 4 works in collection.",
+    "tasks": [
+      "Verify occupation (painter/sculptor/etc.)",
+      "Search VIAF",
+      "Search Getty ULAN",
+      "Add P973 to Wikidata Q112494056"
+    ],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artist:v1",
+  "collections": [
+    {
+      "id": "hansabanka",
+      "name": "Hansabanka Contemporary Art Collection",
+      "short_name": "Hansabanka",
+      "url": "https://arsaccordia.com/collections/hansabanka/",
+      "work_count": 4,
+      "display_name": "Indriķis Stūrmanis"
+    }
+  ]
+}

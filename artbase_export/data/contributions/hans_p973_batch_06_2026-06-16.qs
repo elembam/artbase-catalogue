@@ -1,0 +1,10 @@
+Q4210275	P973	"https://arsaccordia.com/artists/ART-KALNINS-1904.html"	S854	"https://arsaccordia.com/artists/ART-KALNINS-1904.html"	S813	+2026-06-16T00:00:00Z/11
+Q12654637	P973	"https://arsaccordia.com/artists/ART-KIRKE-1953.html"	S854	"https://arsaccordia.com/artists/ART-KIRKE-1953.html"	S813	+2026-06-16T00:00:00Z/11
+Q8479028	P973	"https://arsaccordia.com/artists/ART-LIBERTS-1895.html"	S854	"https://arsaccordia.com/artists/ART-LIBERTS-1895.html"	S813	+2026-06-16T00:00:00Z/11
+Q113216930	P973	"https://arsaccordia.com/artists/ART-MALDUPE-1947.html"	S854	"https://arsaccordia.com/artists/ART-MALDUPE-1947.html"	S813	+2026-06-16T00:00:00Z/11
+Q139029411	P973	"https://arsaccordia.com/artists/ART-MAURITE-1971.html"	S854	"https://arsaccordia.com/artists/ART-MAURITE-1971.html"	S813	+2026-06-16T00:00:00Z/11
+Q99476971	P973	"https://arsaccordia.com/artists/ART-MIKANS-1970.html"	S854	"https://arsaccordia.com/artists/ART-MIKANS-1970.html"	S813	+2026-06-16T00:00:00Z/11
+Q99482115	P973	"https://arsaccordia.com/artists/ART-PANTELEJEVS-1965.html"	S854	"https://arsaccordia.com/artists/ART-PANTELEJEVS-1965.html"	S813	+2026-06-16T00:00:00Z/11
+Q17280930	P973	"https://arsaccordia.com/artists/ART-PIGOZNIS-1934.html"	S854	"https://arsaccordia.com/artists/ART-PIGOZNIS-1934.html"	S813	+2026-06-16T00:00:00Z/11
+Q56084737	P973	"https://arsaccordia.com/artists/ART-ROZENBERGS-1948.html"	S854	"https://arsaccordia.com/artists/ART-ROZENBERGS-1948.html"	S813	+2026-06-16T00:00:00Z/11
+Q4422700	P973	"https://arsaccordia.com/artists/ART-SKULME-1925.html"	S854	"https://arsaccordia.com/artists/ART-SKULME-1925.html"	S813	+2026-06-16T00:00:00Z/11

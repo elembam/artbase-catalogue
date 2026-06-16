@@ -1,0 +1,10 @@
+Q99482812	P973	"https://arsaccordia.com/artists/ART-IVANOVS-1968.html"	S854	"https://arsaccordia.com/artists/ART-IVANOVS-1968.html"	S813	+2026-06-16T00:00:00Z/11
+Q59548595	P973	"https://arsaccordia.com/artists/ART-LIBIETE-1952.html"	S854	"https://arsaccordia.com/artists/ART-LIBIETE-1952.html"	S813	+2026-06-16T00:00:00Z/11
+Q59511477	P973	"https://arsaccordia.com/artists/ART-SIETINS-1962.html"	S854	"https://arsaccordia.com/artists/ART-SIETINS-1962.html"	S813	+2026-06-16T00:00:00Z/11
+Q99478143	P973	"https://arsaccordia.com/artists/ART-SILINS-1958.html"	S854	"https://arsaccordia.com/artists/ART-SILINS-1958.html"	S813	+2026-06-16T00:00:00Z/11
+Q99480010	P973	"https://arsaccordia.com/artists/ART-VERPE-1958.html"	S854	"https://arsaccordia.com/artists/ART-VERPE-1958.html"	S813	+2026-06-16T00:00:00Z/11
+Q132395962	P973	"https://arsaccordia.com/artists/ART-AVOTINA-1983.html"	S854	"https://arsaccordia.com/artists/ART-AVOTINA-1983.html"	S813	+2026-06-16T00:00:00Z/11
+Q56596666	P973	"https://arsaccordia.com/artists/ART-BRAMBERGS-1974.html"	S854	"https://arsaccordia.com/artists/ART-BRAMBERGS-1974.html"	S813	+2026-06-16T00:00:00Z/11
+Q139066552	P973	"https://arsaccordia.com/artists/ART-BRANTS-1970.html"	S854	"https://arsaccordia.com/artists/ART-BRANTS-1970.html"	S813	+2026-06-16T00:00:00Z/11
+Q94381077	P973	"https://arsaccordia.com/artists/ART-DAGNIJA-1937.html"	S854	"https://arsaccordia.com/artists/ART-DAGNIJA-1937.html"	S813	+2026-06-16T00:00:00Z/11
+Q99483266	P973	"https://arsaccordia.com/artists/ART-JURJANE-1944.html"	S854	"https://arsaccordia.com/artists/ART-JURJANE-1944.html"	S813	+2026-06-16T00:00:00Z/11

@@ -1,0 +1,1613 @@
+{
+  "generated": "2026-06-16",
+  "total_roster": 108,
+  "already_in_artbase": [
+    {
+      "name": "Aija Zariņa",
+      "work_count": 3,
+      "artbase_id": "ART-ZARINA-1954"
+    },
+    {
+      "name": "Aleksandrs Dembo",
+      "work_count": 2,
+      "artbase_id": "ART-DEMBO-1931"
+    },
+    {
+      "name": "Anita Meldere",
+      "work_count": 7,
+      "artbase_id": "ART-MELDERE-1949"
+    },
+    {
+      "name": "Biruta Delle",
+      "work_count": 1,
+      "artbase_id": "ART-DELLE-1944"
+    },
+    {
+      "name": "Džemma Skulme",
+      "work_count": 1,
+      "artbase_id": "ART-SKULME-1925"
+    },
+    {
+      "name": "Edgars Valdmanis",
+      "work_count": 1,
+      "artbase_id": "ART-VALDMANIS-1938"
+    },
+    {
+      "name": "Eduards Kalniņš",
+      "work_count": 1,
+      "artbase_id": "ART-KALNINS-1904"
+    },
+    {
+      "name": "Edvards Grūbe",
+      "work_count": 4,
+      "artbase_id": "ART-GRUBE-1935"
+    },
+    {
+      "name": "Gunārs Krollis",
+      "work_count": 12,
+      "artbase_id": "ART-KROLLIS-1932"
+    },
+    {
+      "name": "Helēna Heinrihsone",
+      "work_count": 19,
+      "artbase_id": "ART-HEINRIHSONE-1948"
+    },
+    {
+      "name": "Herberts Siliņš",
+      "work_count": 4,
+      "artbase_id": "ART-SILINS-1926"
+    },
+    {
+      "name": "Ilmārs Blumbergs",
+      "work_count": 5,
+      "artbase_id": "ART-BLUMBERGS-1943"
+    },
+    {
+      "name": "Imants Vecozols",
+      "work_count": 1,
+      "artbase_id": "ART-VECOZOLS-1933"
+    },
+    {
+      "name": "Indulis Zariņš",
+      "work_count": 1,
+      "artbase_id": "ART-ZARINS-1929"
+    },
+    {
+      "name": "Inta Celmiņa",
+      "work_count": 6,
+      "artbase_id": "ART-CELMINA-1946"
+    },
+    {
+      "name": "Ivars Heinrihsons",
+      "work_count": 9,
+      "artbase_id": "ART-HEINRIHSONS-1945"
+    },
+    {
+      "name": "Juris Jurjāns",
+      "work_count": 2,
+      "artbase_id": "ART-JURJANS-1944"
+    },
+    {
+      "name": "Jānis Tīdemanis",
+      "work_count": 2,
+      "artbase_id": "ART-TIDEMANIS-1897"
+    },
+    {
+      "name": "Jāzeps Pīgoznis",
+      "work_count": 1,
+      "artbase_id": "ART-PIGOZNIS-1934"
+    },
+    {
+      "name": "Jēkabs Spriņģis",
+      "work_count": 2,
+      "artbase_id": "ART-SPRINGIS-1907"
+    },
+    {
+      "name": "Leonīds Āriņš",
+      "work_count": 1,
+      "artbase_id": "ART-ARINS-1907"
+    },
+    {
+      "name": "Ludolfs Liberts",
+      "work_count": 1,
+      "artbase_id": "ART-LIBERTS-1895"
+    },
+    {
+      "name": "Līga Purmale",
+      "work_count": 3,
+      "artbase_id": "ART-PURMALE-1945"
+    },
+    {
+      "name": "Oļģerts Jaunarājs",
+      "work_count": 3,
+      "artbase_id": "ART-JAUNARAJS-1907"
+    },
+    {
+      "name": "Rūdolfs Pinnis",
+      "work_count": 2,
+      "artbase_id": "ART-PINNIS-1902"
+    },
+    {
+      "name": "Valdis Bušs",
+      "work_count": 1,
+      "artbase_id": "ART-BUSS-1924"
+    },
+    {
+      "name": "Vija Maldupe",
+      "work_count": 1,
+      "artbase_id": "ART-MALDUPE-1947"
+    },
+    {
+      "name": "Vilis Ozols",
+      "work_count": 1,
+      "artbase_id": "ART-OZOLS-1929"
+    }
+  ],
+  "new_artists": [
+    {
+      "name": "Aija Jurjāne",
+      "work_count": 2,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q99483266",
+          "label": "Aija Jurjāne",
+          "description": "Latvian painter and art teacher (1944-2015)",
+          "score": 3
+        },
+        {
+          "qid": "Q2021881",
+          "label": "Aija Putniņa",
+          "description": "Latvian basketball player (born 1988)",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q99483266",
+      "birth_year": "1944",
+      "death_year": "2015",
+      "wikidata_label": "Aija Jurjāne",
+      "has_wikipedia": false,
+      "artbase_id": "ART-JURJANE-1944"
+    },
+    {
+      "name": "Aija Ozoliņa",
+      "work_count": 7,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q109864629",
+          "label": "Aija Ozoliņa",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q109864629",
+      "birth_year": "1954",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-OZOLINA-1954"
+    },
+    {
+      "name": "Aleksejs Naumovs",
+      "work_count": 6,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q55420369",
+          "label": "Aleksejs Naumovs",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q55420369",
+      "birth_year": "1955",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-NAUMOVS-1955"
+    },
+    {
+      "name": "Andrejs Kalnācs",
+      "work_count": 9,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q99483889",
+          "label": "Andrejs Kalnačs",
+          "description": "",
+          "score": 0
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Andris Abļevs",
+      "work_count": 5,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Andris Eglītis",
+      "work_count": 1,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q137116325",
+          "label": "Andris Eglītis",
+          "description": "",
+          "score": 1
+        },
+        {
+          "qid": "Q64020700",
+          "label": "Andris Eglitis",
+          "description": "USDA Forest Service",
+          "score": 0
+        }
+      ],
+      "chosen_qid": "Q137116325",
+      "birth_year": "1959",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-EGLITIS-1959"
+    },
+    {
+      "name": "Andris Vītoliņš",
+      "work_count": 5,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q16351423",
+          "label": "Andris Vītoliņš",
+          "description": "Latvian painter",
+          "score": 3
+        },
+        {
+          "qid": "Q121598670",
+          "label": "Andris Vītoliņš",
+          "description": "Latvian organist, composer and instrument teacher",
+          "score": 2
+        },
+        {
+          "qid": "Q121598668",
+          "label": "Andris Vītoliņš",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q16351423",
+      "birth_year": "1975",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-VITOLINS-1975"
+    },
+    {
+      "name": "Andris Žegners",
+      "work_count": 4,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q120495439",
+          "label": "Andris Zēgners",
+          "description": "Latvian photographer",
+          "score": 2
+        }
+      ],
+      "chosen_qid": "Q120495439",
+      "birth_year": "1962",
+      "death_year": null,
+      "wikidata_label": "Andris Zēgners",
+      "has_wikipedia": false,
+      "artbase_id": "ART-ZEGNERS-1962"
+    },
+    {
+      "name": "Anna Heinrihsone",
+      "work_count": 1,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q99477318",
+          "label": "Anna Heinrihsone",
+          "description": "Latvian costume designer, painter and artist",
+          "score": 3
+        }
+      ],
+      "chosen_qid": "Q99477318",
+      "birth_year": "1970",
+      "death_year": null,
+      "wikidata_label": "Anna Heinrihsone",
+      "has_wikipedia": true,
+      "artbase_id": "ART-HEINRIHSONE-1970"
+    },
+    {
+      "name": "Arnis Pelšs",
+      "work_count": 1,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Barbara Gaile",
+      "work_count": 3,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q94415724",
+          "label": "Barbara Gaile",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q94415724",
+      "birth_year": "1968",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-GAILE-1968"
+    },
+    {
+      "name": "Dace Lapiņa",
+      "work_count": 1,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q99481295",
+          "label": "Dace Lapina",
+          "description": "",
+          "score": 0
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Dace Lielā",
+      "work_count": 1,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q99477354",
+          "label": "Dace Liela",
+          "description": "",
+          "score": 0
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Daina Dagnija",
+      "work_count": 2,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q94381077",
+          "label": "Daina Dagnija",
+          "description": "Latvian painter, textile artist and teacher (1937-2019)",
+          "score": 3
+        },
+        {
+          "qid": "Q99479214",
+          "label": "Daina Dagnija Krumina",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q94381077",
+      "birth_year": "1937",
+      "death_year": "2019",
+      "wikidata_label": "Daina Dagnija",
+      "has_wikipedia": true,
+      "artbase_id": "ART-DAGNIJA-1937"
+    },
+    {
+      "name": "Edgars Vērpe",
+      "work_count": 3,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q99480010",
+          "label": "Edgars Vērpe",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q99480010",
+      "birth_year": "1958",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-VERPE-1958"
+    },
+    {
+      "name": "Edīte Gronova",
+      "work_count": 1,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Egils Rozenbergs",
+      "work_count": 1,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q56084737",
+          "label": "Egils Rozenbergs",
+          "description": "Latvian textile artist",
+          "score": 3
+        }
+      ],
+      "chosen_qid": "Q56084737",
+      "birth_year": "1948",
+      "death_year": null,
+      "wikidata_label": "Egils Rozenbergs",
+      "has_wikipedia": true,
+      "artbase_id": "ART-ROZENBERGS-1948"
+    },
+    {
+      "name": "Elita Patmalniece",
+      "work_count": 2,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q99481672",
+          "label": "Elita Patmalniece",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q99481672",
+      "birth_year": "1964",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-PATMALNIECE-1964"
+    },
+    {
+      "name": "Frančeska Kirke",
+      "work_count": 1,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q12654637",
+          "label": "Frančeska Kirke",
+          "description": "Latvian painter and illustrator (1953-)",
+          "score": 3
+        }
+      ],
+      "chosen_qid": "Q12654637",
+      "birth_year": "1953",
+      "death_year": null,
+      "wikidata_label": "Frančeska Kirke",
+      "has_wikipedia": true,
+      "artbase_id": "ART-KIRKE-1953"
+    },
+    {
+      "name": "Genādijs Suhanovs",
+      "work_count": 3,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Gita Okonova-Treice",
+      "work_count": 5,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Gunta Liepiņa-Grīva",
+      "work_count": 4,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q99484571",
+          "label": "Gunta Liepina",
+          "description": "",
+          "score": 0
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Guntars Sietiņš",
+      "work_count": 3,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q59511477",
+          "label": "Guntars Sietiņš",
+          "description": "printmaker (born 1962)",
+          "score": 2
+        }
+      ],
+      "chosen_qid": "Q59511477",
+      "birth_year": "1962",
+      "death_year": null,
+      "wikidata_label": "Guntars Sietiņš",
+      "has_wikipedia": false,
+      "artbase_id": "ART-SIETINS-1962"
+    },
+    {
+      "name": "Gļebs Panteļejevs",
+      "work_count": 1,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q99482115",
+          "label": "Glebs Pantelejevs",
+          "description": "Latvian sculptor",
+          "score": 2
+        }
+      ],
+      "chosen_qid": "Q99482115",
+      "birth_year": "1965",
+      "death_year": null,
+      "wikidata_label": "Gļebs Panteļejevs",
+      "has_wikipedia": false,
+      "artbase_id": "ART-PANTELEJEVS-1965"
+    },
+    {
+      "name": "Harijs Brants",
+      "work_count": 2,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q139066552",
+          "label": "Harijs Brants",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q139066552",
+      "birth_year": "1970",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-BRANTS-1970"
+    },
+    {
+      "name": "Ieva Iltnerē",
+      "work_count": 4,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q55254903",
+          "label": "Ieva Iltnere",
+          "description": "Latvian painter and art professor",
+          "score": 2
+        }
+      ],
+      "chosen_qid": "Q55254903",
+      "birth_year": "1957",
+      "death_year": null,
+      "wikidata_label": "Ieva Iltnere",
+      "has_wikipedia": true,
+      "artbase_id": "ART-ILTNERE-1957"
+    },
+    {
+      "name": "Ieva Maurīte",
+      "work_count": 1,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q139029411",
+          "label": "Ieva Maurīte",
+          "description": "",
+          "score": 1
+        },
+        {
+          "qid": "Q99477509",
+          "label": "Ieva Maurite",
+          "description": "",
+          "score": 0
+        }
+      ],
+      "chosen_qid": "Q139029411",
+      "birth_year": "1971",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-MAURITE-1971"
+    },
+    {
+      "name": "Ilze Avotiņa",
+      "work_count": 5,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q16452865",
+          "label": "Ilze Avotiņa",
+          "description": "Latvian painter",
+          "score": 3
+        }
+      ],
+      "chosen_qid": "Q16452865",
+      "birth_year": "1952",
+      "death_year": null,
+      "wikidata_label": "Ilze Avotiņa",
+      "has_wikipedia": true,
+      "artbase_id": "ART-AVOTINA-1952"
+    },
+    {
+      "name": "Ilze Diāne",
+      "work_count": 1,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Ilze Libiete",
+      "work_count": 3,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q59548595",
+          "label": "Ilze Lībiete",
+          "description": "Latvian heraldist and graphic artist",
+          "score": 2
+        }
+      ],
+      "chosen_qid": "Q59548595",
+      "birth_year": "1952",
+      "death_year": null,
+      "wikidata_label": "Ilze Lībiete",
+      "has_wikipedia": true,
+      "artbase_id": "ART-LIBIETE-1952"
+    },
+    {
+      "name": "Ilze Neilande",
+      "work_count": 7,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q99479313",
+          "label": "Ilze Neilande",
+          "description": "Latvian artist (1959-)",
+          "score": 3
+        }
+      ],
+      "chosen_qid": "Q99479313",
+      "birth_year": "1959",
+      "death_year": null,
+      "wikidata_label": "Ilze Neilande",
+      "has_wikipedia": false,
+      "artbase_id": "ART-NEILANDE-1959"
+    },
+    {
+      "name": "Indra Sproģe",
+      "work_count": 5,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Indriķis Stūrmanis",
+      "work_count": 4,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q112494056",
+          "label": "Indrik̦is Stūrmanis",
+          "description": "photographer",
+          "score": 2
+        }
+      ],
+      "chosen_qid": "Q112494056",
+      "birth_year": "1940",
+      "death_year": null,
+      "wikidata_label": "Indrik̦is Stūrmanis",
+      "has_wikipedia": false,
+      "artbase_id": "ART-STURMANIS-1940"
+    },
+    {
+      "name": "Inese Lieckalniņa",
+      "work_count": 2,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Inga Brūvere",
+      "work_count": 4,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q99480313",
+          "label": "Inga Bruvere",
+          "description": "",
+          "score": 0
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Ināra Petruševiča",
+      "work_count": 5,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q4361680",
+          "label": "Ināra Petrusēviča",
+          "description": "Latvian painter",
+          "score": 2
+        }
+      ],
+      "chosen_qid": "Q4361680",
+      "birth_year": "1969",
+      "death_year": null,
+      "wikidata_label": "Ināra Petrusēviča",
+      "has_wikipedia": true,
+      "artbase_id": "ART-PETRUSEVICA-1969"
+    },
+    {
+      "name": "Irēna Lūse",
+      "work_count": 9,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q99482966",
+          "label": "Irēna Lūse",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q99482966",
+      "birth_year": "1948",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-LUSE-1948"
+    },
+    {
+      "name": "Ivars Poikāns",
+      "work_count": 3,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q99483958",
+          "label": "Ivars Poikans",
+          "description": "",
+          "score": 0
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Ivs Zenne",
+      "work_count": 4,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Juris Putrāms",
+      "work_count": 6,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q99481514",
+          "label": "Juris Putrams",
+          "description": "",
+          "score": 0
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Jānis Kupčs",
+      "work_count": 1,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Jānis Mitrēvics",
+      "work_count": 2,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q99479594",
+          "label": "Janis Mitrevics",
+          "description": "Latvian painter (1957-)",
+          "score": 2
+        }
+      ],
+      "chosen_qid": "Q99479594",
+      "birth_year": "1957",
+      "death_year": null,
+      "wikidata_label": "Jānis Mitrēvics",
+      "has_wikipedia": false,
+      "artbase_id": "ART-MITREVICS-1957"
+    },
+    {
+      "name": "Jānis Spalviņš",
+      "work_count": 2,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q99484411",
+          "label": "Janis Spalvins",
+          "description": "",
+          "score": 0
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Jūlijs Vilumainis",
+      "work_count": 1,
+      "status": "candidate_verify",
+      "candidates": [
+        {
+          "qid": "Q99480030",
+          "label": "Julijs Vilumainis",
+          "description": "Latvian painter",
+          "score": 3
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": "1909",
+      "death_year": "1981",
+      "wikidata_label": "Julijs Vilumainis",
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Kaspars Brambergs",
+      "work_count": 2,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q56596666",
+          "label": "Kaspars Teodors Brambergs",
+          "description": "artist (born 1974)",
+          "score": 2
+        }
+      ],
+      "chosen_qid": "Q56596666",
+      "birth_year": "1974",
+      "death_year": null,
+      "wikidata_label": "Kaspars Teodors Brambergs",
+      "has_wikipedia": false,
+      "artbase_id": "ART-BRAMBERGS-1974"
+    },
+    {
+      "name": "Kaspars Zariņš",
+      "work_count": 5,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q50377551",
+          "label": "Kaspars Zariņš",
+          "description": "Latvian painter (born 1962)",
+          "score": 3
+        }
+      ],
+      "chosen_qid": "Q50377551",
+      "birth_year": "1962",
+      "death_year": null,
+      "wikidata_label": "Kaspars Zariņš",
+      "has_wikipedia": true,
+      "artbase_id": "ART-ZARINS-1962"
+    },
+    {
+      "name": "Kate Seržāne",
+      "work_count": 4,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Kristaps Gulbis",
+      "work_count": 1,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q107012522",
+          "label": "Kristaps Gulbis",
+          "description": "Latvian artist (born 1967)",
+          "score": 3
+        }
+      ],
+      "chosen_qid": "Q107012522",
+      "birth_year": "1967",
+      "death_year": null,
+      "wikidata_label": "Kristaps Gulbis",
+      "has_wikipedia": true,
+      "artbase_id": "ART-GULBIS-1967"
+    },
+    {
+      "name": "Kristaps Zariņš",
+      "work_count": 10,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q18666133",
+          "label": "Christopher Zariņš",
+          "description": "Latvian physician (born 1943)",
+          "score": 2
+        },
+        {
+          "qid": "Q55420339",
+          "label": "Kristaps Zariņš",
+          "description": "",
+          "score": 1
+        },
+        {
+          "qid": "Q61121186",
+          "label": "Kristaps Zariņš",
+          "description": "Wikimedia disambiguation page",
+          "score": 1
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": "1943",
+      "death_year": null,
+      "wikidata_label": "Kristaps Zariņš",
+      "has_wikipedia": true,
+      "artbase_id": null
+    },
+    {
+      "name": "Kristaps Ģelzis",
+      "work_count": 6,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q94405078",
+          "label": "Kristaps Ģelzis",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q94405078",
+      "birth_year": "1962",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-GELZIS-1962"
+    },
+    {
+      "name": "Kristiana Dimitere",
+      "work_count": 5,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q16644243",
+          "label": "Kristiana Dimitere",
+          "description": "Latvian painter",
+          "score": 3
+        }
+      ],
+      "chosen_qid": "Q16644243",
+      "birth_year": "1965",
+      "death_year": null,
+      "wikidata_label": "Kristiana Dimitere",
+      "has_wikipedia": true,
+      "artbase_id": "ART-DIMITERE-1965"
+    },
+    {
+      "name": "Kristīne Drengere",
+      "work_count": 1,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Kristīne Keire",
+      "work_count": 2,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Kristīne Luīze Avotiņa",
+      "work_count": 2,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q132395962",
+          "label": "Kristīne Luīze Avotiņa",
+          "description": "Latvian painter",
+          "score": 3
+        }
+      ],
+      "chosen_qid": "Q132395962",
+      "birth_year": "1983",
+      "death_year": null,
+      "wikidata_label": "Kristīne Luīze Avotiņa",
+      "has_wikipedia": false,
+      "artbase_id": "ART-AVOTINA-1983"
+    },
+    {
+      "name": "Kārlis Siliņš",
+      "work_count": 3,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q100922847",
+          "label": "Kārlis Šiliņš",
+          "description": "Latvian basketball player",
+          "score": 1
+        },
+        {
+          "qid": "Q99478143",
+          "label": "Karlis Silins",
+          "description": "visual artist",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q99478143",
+      "birth_year": "1958",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-SILINS-1958"
+    },
+    {
+      "name": "Laima Bikše",
+      "work_count": 3,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q109864713",
+          "label": "Laima Bikše",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q109864713",
+      "birth_year": "1970",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-BIKSE-1970"
+    },
+    {
+      "name": "Laima Puntule",
+      "work_count": 2,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q99483795",
+          "label": "Laima Puntule",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q99483795",
+      "birth_year": "1963",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-PUNTULE-1963"
+    },
+    {
+      "name": "Laris Strunke",
+      "work_count": 5,
+      "status": "candidate_verify",
+      "candidates": [
+        {
+          "qid": "Q15453752",
+          "label": "Laris Strunke",
+          "description": "Swedish painter (1931-2020)",
+          "score": 2
+        },
+        {
+          "qid": "Q109891777",
+          "label": "Laris Strunke",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": "1931",
+      "death_year": "2020",
+      "wikidata_label": "Laris Strunke",
+      "has_wikipedia": true,
+      "artbase_id": null
+    },
+    {
+      "name": "Lilija Dinere",
+      "work_count": 6,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q4161919",
+          "label": "Lilija Dinere",
+          "description": "Latvian painter (born 1955)",
+          "score": 3
+        }
+      ],
+      "chosen_qid": "Q4161919",
+      "birth_year": "1955",
+      "death_year": null,
+      "wikidata_label": "Lilija Dinere",
+      "has_wikipedia": true,
+      "artbase_id": "ART-DINERE-1955"
+    },
+    {
+      "name": "Linda Daņiļevska",
+      "work_count": 3,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q99481390",
+          "label": "Linda Danilevska",
+          "description": "",
+          "score": 0
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Madara Gulbis",
+      "work_count": 1,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Mihails Šemjakins",
+      "work_count": 3,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Māra Vaičunas",
+      "work_count": 1,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q65515690",
+          "label": "Māra Vaičunas",
+          "description": "Latvian painter",
+          "score": 3
+        }
+      ],
+      "chosen_qid": "Q65515690",
+      "birth_year": "1944",
+      "death_year": "2019",
+      "wikidata_label": "Māra Vaičunas",
+      "has_wikipedia": true,
+      "artbase_id": "ART-VAICUNAS-1944"
+    },
+    {
+      "name": "Māris Subačs",
+      "work_count": 10,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q99480580",
+          "label": "Maris Subacs",
+          "description": "",
+          "score": 0
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Mārtiņš Krūklis",
+      "work_count": 7,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q99479153",
+          "label": "Martins Kruklis",
+          "description": "",
+          "score": 0
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Ojārs Pētersons",
+      "work_count": 3,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Olga Šilova",
+      "work_count": 6,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q99481538",
+          "label": "Olga Silova",
+          "description": "",
+          "score": 0
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Oskars Mikāns",
+      "work_count": 1,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q99476971",
+          "label": "Oskars Mikans",
+          "description": "Latvian artist (born 1970)",
+          "score": 2
+        }
+      ],
+      "chosen_qid": "Q99476971",
+      "birth_year": "1970",
+      "death_year": null,
+      "wikidata_label": "Oskars Mikans",
+      "has_wikipedia": false,
+      "artbase_id": "ART-MIKANS-1970"
+    },
+    {
+      "name": "Oskars Muižnieks",
+      "work_count": 3,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q2034178",
+          "label": "Oskars Muižnieks",
+          "description": "Latvian biathlete",
+          "score": 2
+        },
+        {
+          "qid": "Q134570321",
+          "label": "Oskars Muižnieks",
+          "description": "",
+          "score": 1
+        },
+        {
+          "qid": "Q135349650",
+          "label": "Oskars Muiznieks",
+          "description": "Latvian basketball player (born 1979)",
+          "score": 1
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": "1989",
+      "death_year": null,
+      "wikidata_label": "Oskars Muižnieks",
+      "has_wikipedia": true,
+      "artbase_id": null
+    },
+    {
+      "name": "Ritums Ivanovs",
+      "work_count": 3,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q99482812",
+          "label": "Ritums Ivanovs",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q99482812",
+      "birth_year": "1968",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-IVANOVS-1968"
+    },
+    {
+      "name": "Sandra Krastiņa",
+      "work_count": 4,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q12672317",
+          "label": "Sandra Krastiņa",
+          "description": "Latvian painter",
+          "score": 3
+        },
+        {
+          "qid": "Q99478969",
+          "label": "Sandra Krastiņa",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q12672317",
+      "birth_year": "1957",
+      "death_year": null,
+      "wikidata_label": "Sandra Krastiņa",
+      "has_wikipedia": false,
+      "artbase_id": "ART-KRASTINA-1957"
+    },
+    {
+      "name": "Tatjana Krivenkova",
+      "work_count": 11,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Tomass Fēnikss",
+      "work_count": 2,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Uno Daņiļevskis",
+      "work_count": 5,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q99483779",
+          "label": "Uno Danilevskis",
+          "description": "Latvian artist of Estonian origin (1945-2008)",
+          "score": 2
+        }
+      ],
+      "chosen_qid": "Q99483779",
+      "birth_year": "1945",
+      "death_year": "2008",
+      "wikidata_label": "Uno Danilevskis",
+      "has_wikipedia": false,
+      "artbase_id": "ART-DANILEVSKIS-1945"
+    },
+    {
+      "name": "Vija Zariņa",
+      "work_count": 4,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q50359512",
+          "label": "Vija Zariņa",
+          "description": "Latvian painter (born 1961)",
+          "score": 3
+        }
+      ],
+      "chosen_qid": "Q50359512",
+      "birth_year": "1961",
+      "death_year": null,
+      "wikidata_label": "Vija Zariņa",
+      "has_wikipedia": true,
+      "artbase_id": "ART-ZARINA-1961"
+    },
+    {
+      "name": "Vilnis Zābers",
+      "work_count": 4,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q94381072",
+          "label": "Vilnis Zābers",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q94381072",
+      "birth_year": "1963",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-ZABERS-1963"
+    },
+    {
+      "name": "Vineta Kaulača",
+      "work_count": 3,
+      "status": "no_match",
+      "candidates": [],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Vita Lēnerte-Grasa",
+      "work_count": 5,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q139030628",
+          "label": "Vita Lēnerte-Grasa",
+          "description": "",
+          "score": 1
+        }
+      ],
+      "chosen_qid": "Q139030628",
+      "birth_year": "1964",
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": "ART-LENERTE-1964"
+    },
+    {
+      "name": "Vladislavs Grišins",
+      "work_count": 4,
+      "status": "no_match",
+      "candidates": [
+        {
+          "qid": "Q99481698",
+          "label": "Vladislavs Grisins",
+          "description": "",
+          "score": 0
+        }
+      ],
+      "chosen_qid": null,
+      "birth_year": null,
+      "death_year": null,
+      "wikidata_label": null,
+      "has_wikipedia": false,
+      "artbase_id": null
+    },
+    {
+      "name": "Ģirts Muižnieks",
+      "work_count": 6,
+      "status": "auto_match",
+      "candidates": [
+        {
+          "qid": "Q16451856",
+          "label": "G̦irts Muižnieks",
+          "description": "Latvian painter",
+          "score": 3
+        }
+      ],
+      "chosen_qid": "Q16451856",
+      "birth_year": "1956",
+      "death_year": null,
+      "wikidata_label": "Ģirts Muižnieks",
+      "has_wikipedia": false,
+      "artbase_id": "ART-MUIZNIEKS-1956"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+Q99479594	P973	"https://arsaccordia.com/artists/ART-MITREVICS-1957.html"	S854	"https://arsaccordia.com/artists/ART-MITREVICS-1957.html"	S813	+2026-06-16T00:00:00Z/11
+Q99481672	P973	"https://arsaccordia.com/artists/ART-PATMALNIECE-1964.html"	S854	"https://arsaccordia.com/artists/ART-PATMALNIECE-1964.html"	S813	+2026-06-16T00:00:00Z/11
+Q99483795	P973	"https://arsaccordia.com/artists/ART-PUNTULE-1963.html"	S854	"https://arsaccordia.com/artists/ART-PUNTULE-1963.html"	S813	+2026-06-16T00:00:00Z/11
+Q4457149	P973	"https://arsaccordia.com/artists/ART-TIDEMANIS-1897.html"	S854	"https://arsaccordia.com/artists/ART-TIDEMANIS-1897.html"	S813	+2026-06-16T00:00:00Z/11
+Q16362314	P973	"https://arsaccordia.com/artists/ART-ARINS-1907.html"	S854	"https://arsaccordia.com/artists/ART-ARINS-1907.html"	S813	+2026-06-16T00:00:00Z/11
+Q99480739	P973	"https://arsaccordia.com/artists/ART-BUSS-1924.html"	S854	"https://arsaccordia.com/artists/ART-BUSS-1924.html"	S813	+2026-06-16T00:00:00Z/11
+Q94497611	P973	"https://arsaccordia.com/artists/ART-DELLE-1944.html"	S854	"https://arsaccordia.com/artists/ART-DELLE-1944.html"	S813	+2026-06-16T00:00:00Z/11
+Q137116325	P973	"https://arsaccordia.com/artists/ART-EGLITIS-1959.html"	S854	"https://arsaccordia.com/artists/ART-EGLITIS-1959.html"	S813	+2026-06-16T00:00:00Z/11
+Q107012522	P973	"https://arsaccordia.com/artists/ART-GULBIS-1967.html"	S854	"https://arsaccordia.com/artists/ART-GULBIS-1967.html"	S813	+2026-06-16T00:00:00Z/11
+Q99477318	P973	"https://arsaccordia.com/artists/ART-HEINRIHSONE-1970.html"	S854	"https://arsaccordia.com/artists/ART-HEINRIHSONE-1970.html"	S813	+2026-06-16T00:00:00Z/11

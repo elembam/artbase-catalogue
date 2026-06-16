@@ -1,0 +1,10 @@
+Q12656414	P973	"https://arsaccordia.com/artists/ART-HEINRIHSONE-1948.html"	S854	"https://arsaccordia.com/artists/ART-HEINRIHSONE-1948.html"	S813	+2026-06-16T00:00:00Z/11
+Q16667368	P973	"https://arsaccordia.com/artists/ART-KROLLIS-1932.html"	S854	"https://arsaccordia.com/artists/ART-KROLLIS-1932.html"	S813	+2026-06-16T00:00:00Z/11
+Q99478595	P973	"https://arsaccordia.com/artists/ART-HEINRIHSONS-1945.html"	S854	"https://arsaccordia.com/artists/ART-HEINRIHSONS-1945.html"	S813	+2026-06-16T00:00:00Z/11
+Q99482966	P973	"https://arsaccordia.com/artists/ART-LUSE-1948.html"	S854	"https://arsaccordia.com/artists/ART-LUSE-1948.html"	S813	+2026-06-16T00:00:00Z/11
+Q16443738	P973	"https://arsaccordia.com/artists/ART-MELDERE-1949.html"	S854	"https://arsaccordia.com/artists/ART-MELDERE-1949.html"	S813	+2026-06-16T00:00:00Z/11
+Q99479313	P973	"https://arsaccordia.com/artists/ART-NEILANDE-1959.html"	S854	"https://arsaccordia.com/artists/ART-NEILANDE-1959.html"	S813	+2026-06-16T00:00:00Z/11
+Q109864629	P973	"https://arsaccordia.com/artists/ART-OZOLINA-1954.html"	S854	"https://arsaccordia.com/artists/ART-OZOLINA-1954.html"	S813	+2026-06-16T00:00:00Z/11
+Q99480545	P973	"https://arsaccordia.com/artists/ART-CELMINA-1946.html"	S854	"https://arsaccordia.com/artists/ART-CELMINA-1946.html"	S813	+2026-06-16T00:00:00Z/11
+Q4161919	P973	"https://arsaccordia.com/artists/ART-DINERE-1955.html"	S854	"https://arsaccordia.com/artists/ART-DINERE-1955.html"	S813	+2026-06-16T00:00:00Z/11
+Q94405078	P973	"https://arsaccordia.com/artists/ART-GELZIS-1962.html"	S854	"https://arsaccordia.com/artists/ART-GELZIS-1962.html"	S813	+2026-06-16T00:00:00Z/11

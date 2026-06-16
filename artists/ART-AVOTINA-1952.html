@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Artist Profile — Ilze Avotiņa. ArtBase scholarly catalogue record.">
-<title>Ilze Avotiņa — ArtBase</title>
+<meta name="description" content="Artist record — Ilze Avotiņa. Ars Accordia scholarly catalogue with authority links to Wikidata, Getty ULAN, and VIAF.">
+<title>Ilze Avotiņa — Ars Accordia</title>
+<link rel="canonical" href="https://arsaccordia.com/artists/ART-AVOTINA-1952.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -298,6 +299,53 @@
     font-style: italic;
   }
 
+  /* ── Collection appearances ─── */
+  .collection-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .collection-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.15s;
+  }
+  .collection-row:hover { border-color: var(--seal-light); }
+
+  .collection-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--seal);
+    flex-shrink: 0;
+    width: 56px;
+  }
+
+  .collection-name {
+    font-weight: 500;
+    flex: 1;
+  }
+
+  .collection-display-name {
+    color: var(--ink-faded);
+    font-size: 0.8125rem;
+    font-style: italic;
+    flex-shrink: 0;
+  }
+
+  .collection-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8125rem;
+    color: var(--ink-faded);
+    flex-shrink: 0;
+    text-align: right;
+  }
+
   /* ── Footer ─── */
   .footer {
     padding: 20px 48px;
@@ -312,6 +360,33 @@
 
   .footer-left { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.04em; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@id": "https://arsaccordia.com/artists/ART-AVOTINA-1952",
+  "@type": "Person",
+  "birthDate": "1952",
+  "hasOccupation": [
+    {
+      "@type": "Role",
+      "roleName": "artist"
+    }
+  ],
+  "mainEntityOfPage": {
+    "@id": "https://arsaccordia.com/artists/ART-AVOTINA-1952.html",
+    "@type": "WebPage",
+    "isPartOf": {
+      "@id": "https://arsaccordia.com"
+    }
+  },
+  "name": "Ilze Avoti\u0146a",
+  "nationality": "Latvian",
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q16452865"
+  ],
+  "url": "https://arsaccordia.com/artists/ART-AVOTINA-1952.html"
+}
+</script>
 </head>
 <body>
 
@@ -337,7 +412,7 @@
       </div>
       
       
-      <div class="artist-nationality">Latvian · painter</div>
+      <div class="artist-nationality">Latvian · artist</div>
       
     </div>
     <div class="header-right">
@@ -377,14 +452,14 @@
       
       <div class="authority-cell">
         <div class="authority-label">VIAF</div>
-        <div class="authority-value">
+        <div class="authority-value missing">
           
-            <a href="https://viaf.org/viaf/53558352" target="_blank" rel="noopener">53558352</a>
+            not linked
           
         </div>
         
-        <div class="authority-status confirmed">
-          confirmed
+        <div class="authority-status ">
+          search needed
         </div>
         
       </div>
@@ -497,6 +572,24 @@
   <!-- ULAN Enrichment -->
   
 
+  <!-- Collection Appearances -->
+  
+  
+  <section class="section">
+    <div class="section-label">Collection Appearances</div>
+    <div class="collection-list">
+      
+      <a class="collection-row" href="https://arsaccordia.com/collections/hansabanka/" target="_self">
+        <span class="collection-badge">Hansabanka</span>
+        <span class="collection-name">Hansabanka Contemporary Art Collection</span>
+        
+        <span class="collection-count">5 works</span>
+      </a>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -508,7 +601,7 @@
   <!-- Footer -->
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-AVOTINA-1952</span>
-    <span>Exported 2026-05-30</span>
+    <span>Exported 2026-06-16</span>
   </footer>
 
 </div>

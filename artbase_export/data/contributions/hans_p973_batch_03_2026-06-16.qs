@@ -1,0 +1,10 @@
+Q16450235	P973	"https://arsaccordia.com/artists/ART-GRUBE-1935.html"	S854	"https://arsaccordia.com/artists/ART-GRUBE-1935.html"	S813	+2026-06-16T00:00:00Z/11
+Q55254903	P973	"https://arsaccordia.com/artists/ART-ILTNERE-1957.html"	S854	"https://arsaccordia.com/artists/ART-ILTNERE-1957.html"	S813	+2026-06-16T00:00:00Z/11
+Q12672317	P973	"https://arsaccordia.com/artists/ART-KRASTINA-1957.html"	S854	"https://arsaccordia.com/artists/ART-KRASTINA-1957.html"	S813	+2026-06-16T00:00:00Z/11
+Q23054868	P973	"https://arsaccordia.com/artists/ART-SILINS-1926.html"	S854	"https://arsaccordia.com/artists/ART-SILINS-1926.html"	S813	+2026-06-16T00:00:00Z/11
+Q112494056	P973	"https://arsaccordia.com/artists/ART-STURMANIS-1940.html"	S854	"https://arsaccordia.com/artists/ART-STURMANIS-1940.html"	S813	+2026-06-16T00:00:00Z/11
+Q94381072	P973	"https://arsaccordia.com/artists/ART-ZABERS-1963.html"	S854	"https://arsaccordia.com/artists/ART-ZABERS-1963.html"	S813	+2026-06-16T00:00:00Z/11
+Q50359512	P973	"https://arsaccordia.com/artists/ART-ZARINA-1961.html"	S854	"https://arsaccordia.com/artists/ART-ZARINA-1961.html"	S813	+2026-06-16T00:00:00Z/11
+Q120495439	P973	"https://arsaccordia.com/artists/ART-ZEGNERS-1962.html"	S854	"https://arsaccordia.com/artists/ART-ZEGNERS-1962.html"	S813	+2026-06-16T00:00:00Z/11
+Q109864713	P973	"https://arsaccordia.com/artists/ART-BIKSE-1970.html"	S854	"https://arsaccordia.com/artists/ART-BIKSE-1970.html"	S813	+2026-06-16T00:00:00Z/11
+Q94415724	P973	"https://arsaccordia.com/artists/ART-GAILE-1968.html"	S854	"https://arsaccordia.com/artists/ART-GAILE-1968.html"	S813	+2026-06-16T00:00:00Z/11
