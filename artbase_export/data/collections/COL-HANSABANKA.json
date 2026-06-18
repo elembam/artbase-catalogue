@@ -13,6 +13,10 @@
   "member_passports": [],
   "visibility": "private",
   "consent_to_publish_score": false,
+  "engagement_depth": {
+    "condition": false,
+    "image": false
+  },
   "score": {
     "documentation_score": 0,
     "band": "Inventory Only",
@@ -24,9 +28,15 @@
       "L2": null
     },
     "gaps": {},
+    "sections_in_scope": [
+      "authority",
+      "identity",
+      "provenance",
+      "structured"
+    ],
     "config_version": "weights-v1"
   },
-  "score_generated_at": "2026-06-18T17:07:43+00:00",
+  "score_generated_at": "2026-06-18T18:09:12+00:00",
   "_schema": "artbase:collection:v1",
   "_notes": "No individual artwork passports created yet. Coverage = 0. Score will show 'Inventory Only' until passport creation begins."
 }

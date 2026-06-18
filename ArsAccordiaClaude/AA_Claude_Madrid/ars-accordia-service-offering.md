@@ -19,7 +19,7 @@ We are a documentation and reference service — not a marketplace, a gallery, o
 The score is the heart of the offering. It answers a question every serious owner has and none can currently answer: *how well documented is my collection, really?*
 
 - It is measured against the collection's **full defined extent** — every work in scope, not just the ones we've catalogued — so it reflects reality and can't be inflated by leaving works out.
-- It combines three things: **Coverage** (how much of the collection is catalogued), **Completeness** (how full each record is — identity, provenance, condition, authority links, image), and **Corroboration** (how well each record is verified against independent authorities, on our four-level standard).
+- It combines three things: **Coverage** (how much of the collection has a passport), **Completeness** (how complete each passport is — identity, authority links, sourced provenance, structured data, and where commissioned, condition and image), and **Corroboration** (how well each record is verified against independent authorities, on our four-level standard).
 - It produces a **band** — from *Inventory Only* to *Fully Documented* — with a percentage and a **gap map** showing exactly where the score is lost.
 - It is **private by default** (a confidential KPI for the owner) and **public only with consent** (a credential the collection can display).
 

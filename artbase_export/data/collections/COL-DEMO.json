@@ -15,11 +15,15 @@
   ],
   "visibility": "private",
   "consent_to_publish_score": false,
+  "engagement_depth": {
+    "condition": false,
+    "image": false
+  },
   "score": {
-    "documentation_score": 64.6,
+    "documentation_score": 55.6,
     "band": "Partially Documented",
     "coverage": 1.0,
-    "completeness": 0.75,
+    "completeness": 0.6,
     "corroboration": {
       "blended": 0.49,
       "L1": 0.15,
@@ -27,14 +31,22 @@
     },
     "gaps": {
       "provenance_documented": 1.0,
+      "provenance_sourced": 1.0,
       "condition_documented": 1.0,
       "authority_linked": 0.0,
       "image_present": 0.0,
+      "structured_present": 0.0,
       "fully_corroborated_L1": 0.0,
       "fully_corroborated_L2": 1.0
     },
+    "sections_in_scope": [
+      "authority",
+      "identity",
+      "provenance",
+      "structured"
+    ],
     "config_version": "weights-v1"
   },
-  "score_generated_at": "2026-06-18T17:07:43+00:00",
+  "score_generated_at": "2026-06-18T18:09:12+00:00",
   "_schema": "artbase:collection:v1"
 }

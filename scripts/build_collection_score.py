@@ -5,9 +5,12 @@ build_collection_score.py — Compute the Documentation Score for a collection.
 Score = Coverage × Quality
 where Quality = (w_g × Completeness) + (w_r × Corroboration)
 
-Coverage is always measured against total_extent (the denominator rule).
-Completeness and Corroboration are means over catalogued works only.
-L1 and L2 corroboration are reported separately.
+Completeness is measured exclusively on the Ars Accordia Passport.
+Four core sections are always scored: identity, authority links, sourced
+provenance, and structured/export.  Two depth sections (condition, image)
+enter the score only when the engagement's passport depth commissions them
+(collection.engagement_depth), and are excluded from the denominator otherwise.
+Weights renormalise to sum to 1.0 over the in-scope sections.
 
 Usage:
     python3 scripts/build_collection_score.py COL-LNMM
@@ -16,7 +19,7 @@ Usage:
     python3 scripts/build_collection_score.py COL-DEMO --gaps
     python3 scripts/build_collection_score.py --check
 
-From copilot-spec-11-collection-score.md.
+From copilot-spec-11-collection-score_passport.md.
 """
 
 from __future__ import annotations
@@ -33,31 +36,34 @@ COLLECTIONS_DIR = REPO_ROOT / "artbase_export" / "data" / "collections"
 ARTWORKS_DIR    = REPO_ROOT / "artbase_export" / "data" / "artworks"
 
 # ── Default weights (config_version: "weights-v1") ────────────────────────────
-# All tunable; stored alongside each score as config_version so results are
-# reproducible under the weights that were in force at generation time.
+# Passport-anchored model. Core sections always scored; depth sections enter
+# only when the engagement produces them (collection.engagement_depth).
+# Reference weights are raw; they are renormalised over in-scope sections before
+# use so that the in-scope weights always sum to 1.0.
 
 WEIGHTS_V1 = {
     "config_version": "weights-v1",
 
-    # Completeness section weights (must sum to 1.0)
-    "completeness": {
-        "identity":    0.30,   # title, creator, date, medium, dimensions, object type
-        "provenance":  0.25,   # ownership chain recorded
-        "authority":   0.15,   # ≥1 confirmed authority link
-        "condition":   0.15,   # condition statement present
-        "image":       0.10,   # image present
-        "structured":  0.05,   # permanent ID + export record
+    # Passport sections with reference weights.
+    # depth=False → always in scope; depth=True → only when engagement commissions it.
+    "sections": {
+        "identity":   {"weight": 0.35, "depth": False},  # title, creator, date, medium, dimensions, type
+        "authority":  {"weight": 0.25, "depth": False},  # ≥1 corroborated authority link on the work
+        "provenance": {"weight": 0.25, "depth": False},  # ownership chain with cited source per step
+        "structured": {"weight": 0.15, "depth": False},  # JSON-LD + EODEM export record
+        "condition":  {"weight": 0.15, "depth": True},   # AA-produced condition report
+        "image":      {"weight": 0.10, "depth": True},   # AA-captured or AA-verified image
     },
 
     # Quality blend
-    "w_completeness": 0.60,    # weight of Completeness in Quality
-    "w_corroboration": 0.40,   # weight of Corroboration in Quality
+    "w_completeness":  0.60,
+    "w_corroboration": 0.40,
 
-    # Per-level L1 corroboration blend
+    # Corroboration level blend (L1 = identity, L2 = provenance)
     "corr_blend_L1": 0.60,
     "corr_blend_L2": 0.40,
 
-    # Corroboration level → numeric value
+    # Level → numeric
     "level_values": {
         "FULLY_CORROBORATED":     1.00,
         "PARTIALLY_CORROBORATED": 0.50,
@@ -76,10 +82,29 @@ WEIGHTS_V1 = {
 }
 
 
-# ── Completeness ──────────────────────────────────────────────────────────────
+# ── Section weighting ─────────────────────────────────────────────────────────
+
+def active_section_weights(depth_flags: dict, weights: dict) -> dict[str, float]:
+    """
+    Return {section: normalised_weight} over the sections in scope.
+
+    depth_flags comes from collection.engagement_depth, e.g.
+        {"condition": True, "image": False}
+    Core sections are always included; depth sections included only when flagged.
+    Weights are renormalised so they sum to 1.0 over the in-scope set.
+    """
+    in_scope = {}
+    for name, cfg in weights["sections"].items():
+        if not cfg["depth"] or depth_flags.get(name):
+            in_scope[name] = cfg["weight"]
+    total = sum(in_scope.values())
+    return {k: v / total for k, v in in_scope.items()}
+
+
+# ── Completeness per section ───────────────────────────────────────────────────
 
 def _completeness_identity(oid: dict) -> float:
-    """Fill fraction for identity section (6 key fields)."""
+    """Fill fraction for identity: title, creator, date, medium, dimensions, type."""
     fields = [
         oid.get("title"),
         oid.get("maker_id") or oid.get("maker_display_name"),
@@ -92,76 +117,79 @@ def _completeness_identity(oid: dict) -> float:
     return present / len(fields)
 
 
-def _completeness_provenance(passport: dict) -> float:
-    prov = passport.get("provenance") or []
-    if not prov:
-        return 0.0
-    # Partial if some entries lack source; full if all have sources and no gaps
-    sourced = sum(1 for p in prov if p.get("source"))
-    gap_free = all(not p.get("is_gap") for p in prov)
-    fill = sourced / max(len(prov), 1)
-    return fill * (1.0 if gap_free else 0.7)
-
-
 def _completeness_authority(passport: dict) -> float:
+    """1.0 if ≥1 confirmed authority link on the work; 0 otherwise."""
     links = passport.get("authority_links") or {}
     confirmed = any(
-        (v.get("status") if isinstance(v, dict) else None) in ("confirmed", "working")
+        isinstance(v, dict) and v.get("status") in ("confirmed", "working")
         for k, v in links.items()
-        if k != "artbase_id" and isinstance(v, dict)
+        if k != "artbase_id"
     )
     return 1.0 if confirmed else 0.0
 
 
+def _completeness_provenance(passport: dict) -> float:
+    """
+    Fill fraction = sourced entries / total entries.
+    The spec requires a cited source for each step of the ownership chain.
+    A chain with no entries at all returns 0.
+    """
+    prov = passport.get("provenance") or []
+    if not prov:
+        return 0.0
+    sourced = sum(1 for p in prov if p.get("source"))
+    return sourced / len(prov)
+
+
+def _completeness_structured(passport: dict) -> float:
+    """1.0 if a structured export block (JSON-LD or EODEM) is present."""
+    structured = passport.get("structured_data") or passport.get("exports") or {}
+    return 1.0 if structured else 0.0
+
+
 def _completeness_condition(passport: dict) -> float:
+    """1.0 if a condition report is present (depth section — only scored when in scope)."""
     cat = passport.get("cataloguing") or {}
     return 1.0 if cat.get("condition_note") else 0.0
 
 
 def _completeness_image(passport: dict) -> float:
+    """1.0 if an image is present (depth section — only scored when in scope)."""
     return 1.0 if (passport.get("object_id") or {}).get("has_photograph") else 0.0
 
 
-def _completeness_structured(passport: dict) -> float:
-    # Permanent canonical ID = export-ready record
-    return 1.0 if passport.get("artbase_canonical_id") else 0.0
-
-
-def work_completeness(passport: dict, weights: dict) -> float:
+def work_completeness(passport: dict, section_weights: dict[str, float]) -> float:
+    """
+    Compute per-work completeness over the in-scope passport sections.
+    section_weights is already renormalised (sums to 1.0).
+    """
     oid = passport.get("object_id") or {}
-    w   = weights["completeness"]
-    return (
-        w["identity"]   * _completeness_identity(oid)   +
-        w["provenance"] * _completeness_provenance(passport) +
-        w["authority"]  * _completeness_authority(passport) +
-        w["condition"]  * _completeness_condition(passport) +
-        w["image"]      * _completeness_image(passport)  +
-        w["structured"] * _completeness_structured(passport)
-    )
+    fillers = {
+        "identity":   _completeness_identity(oid),
+        "authority":  _completeness_authority(passport),
+        "provenance": _completeness_provenance(passport),
+        "structured": _completeness_structured(passport),
+        "condition":  _completeness_condition(passport),
+        "image":      _completeness_image(passport),
+    }
+    return sum(section_weights[s] * fillers[s] for s in section_weights)
 
 
 # ── Corroboration ─────────────────────────────────────────────────────────────
 
 def derive_L1_level(passport: dict) -> str:
-    """
-    L1 = identity corroboration.  Derived from authority_links and attestations.
-    If the passport carries an explicit 'validation_level.L1', use it.
-    """
+    """L1 = identity corroboration, from authority_links and attestations."""
     vl = (passport.get("source_ledger") or {}).get("validation") or {}
     if vl.get("L1"):
         return vl["L1"]
 
-    # Derive from authority_links
     links = passport.get("authority_links") or {}
-    confirmed_links = [
-        k for k, v in links.items()
-        if k != "artbase_id" and isinstance(v, dict)
-        and v.get("status") in ("confirmed",)
-    ]
-    if confirmed_links:
+    if any(
+        isinstance(v, dict) and v.get("status") == "confirmed"
+        for k, v in links.items() if k != "artbase_id"
+    ):
         return "FULLY_CORROBORATED"
 
-    # Check attestations for authoritative entries
     attestations = passport.get("attestations") or []
     authoritative = [a for a in attestations if a.get("authoritative")]
     origin_only   = all(a.get("role") == "data_origin" for a in attestations)
@@ -176,10 +204,7 @@ def derive_L1_level(passport: dict) -> str:
 
 
 def derive_L2_level(passport: dict) -> str:
-    """
-    L2 = provenance corroboration.  Derived from the provenance chain quality.
-    If the passport carries an explicit 'validation_level.L2', use it.
-    """
+    """L2 = provenance corroboration, from the provenance chain quality."""
     vl = (passport.get("source_ledger") or {}).get("validation") or {}
     if vl.get("L2"):
         return vl["L2"]
@@ -188,9 +213,9 @@ def derive_L2_level(passport: dict) -> str:
     if not prov:
         return "PENDING"
 
-    sourced      = [p for p in prov if p.get("source")]
-    has_gap      = any(p.get("is_gap") for p in prov)
-    n_sourced    = len(sourced)
+    sourced   = [p for p in prov if p.get("source")]
+    has_gap   = any(p.get("is_gap") for p in prov)
+    n_sourced = len(sourced)
 
     if n_sourced >= 2 and not has_gap:
         return "FULLY_CORROBORATED"
@@ -223,6 +248,7 @@ def score_to_band(score_pct: float, weights: dict) -> str:
 # ── Gap breakdown ─────────────────────────────────────────────────────────────
 
 def compute_gaps(passports: list[dict]) -> dict:
+    """Per-dimension coverage map across the catalogued works."""
     if not passports:
         return {}
     n = len(passports)
@@ -230,13 +256,13 @@ def compute_gaps(passports: list[dict]) -> dict:
     def rate(fn) -> float:
         return sum(1 for p in passports if fn(p)) / n
 
-    lv = WEIGHTS_V1["level_values"]
-
     return {
         "provenance_documented":  rate(lambda p: bool(p.get("provenance"))),
+        "provenance_sourced":     rate(lambda p: _completeness_provenance(p) == 1.0),
         "condition_documented":   rate(lambda p: bool((p.get("cataloguing") or {}).get("condition_note"))),
         "authority_linked":       rate(lambda p: _completeness_authority(p) > 0),
         "image_present":          rate(lambda p: _completeness_image(p) > 0),
+        "structured_present":     rate(lambda p: _completeness_structured(p) > 0),
         "fully_corroborated_L1":  rate(lambda p: derive_L1_level(p) == "FULLY_CORROBORATED"),
         "fully_corroborated_L2":  rate(lambda p: derive_L2_level(p) == "FULLY_CORROBORATED"),
     }
@@ -255,13 +281,16 @@ def score_collection(col: dict, passports: list[dict],
     if not total_extent:
         return None  # Scope not established → not scorable
 
+    depth_flags     = col.get("engagement_depth") or {}
+    section_weights = active_section_weights(depth_flags, weights)
+    sections_active = sorted(section_weights.keys())
+
     n_catalogued = len(passports)
 
     # B1 Coverage
     coverage = n_catalogued / total_extent
 
     if n_catalogued == 0:
-        # Zero catalogued: completeness and corroboration are vacuously 0
         return {
             "documentation_score": 0,
             "band": "Inventory Only",
@@ -269,11 +298,12 @@ def score_collection(col: dict, passports: list[dict],
             "completeness": None,
             "corroboration": {"blended": None, "L1": None, "L2": None},
             "gaps": {},
+            "sections_in_scope": sections_active,
             "config_version": weights["config_version"],
         }
 
-    # B2 Completeness
-    comps = [work_completeness(p, weights) for p in passports]
+    # B2 Completeness (passport-anchored, renormalised over in-scope sections)
+    comps = [work_completeness(p, section_weights) for p in passports]
     mean_completeness = sum(comps) / n_catalogued
 
     # B3 Corroboration
@@ -284,8 +314,8 @@ def score_collection(col: dict, passports: list[dict],
     mean_L2 = sum(lv[r[2]] for r in corr_results) / n_catalogued
 
     # B4 Composite
-    quality = (weights["w_completeness"] * mean_completeness +
-               weights["w_corroboration"] * mean_blended)
+    quality   = (weights["w_completeness"] * mean_completeness +
+                 weights["w_corroboration"] * mean_blended)
     raw_score = coverage * quality
     score_pct = round(raw_score * 100, 1)
 
@@ -300,6 +330,7 @@ def score_collection(col: dict, passports: list[dict],
             "L2": round(mean_L2, 4),
         },
         "gaps": compute_gaps(passports),
+        "sections_in_scope": sections_active,
         "config_version": weights["config_version"],
     }
 
@@ -336,9 +367,9 @@ def save_collection(col: dict, path: Path, score: Optional[dict]):
 # ── Human-readable output ──────────────────────────────────────────────────────
 
 def print_scorecard(col: dict):
-    name   = col.get("name", col.get("collection_id"))
-    scope  = col.get("scope") or {}
-    score  = col.get("score")
+    name  = col.get("name", col.get("collection_id"))
+    scope = col.get("scope") or {}
+    score = col.get("score")
 
     print(f"\n{'═'*62}")
     print(f"  {name}")
@@ -351,16 +382,17 @@ def print_scorecard(col: dict):
         print(f"{'═'*62}\n")
         return
 
-    band  = score.get("band", "—")
-    pct   = score.get("documentation_score", "—")
-    cov   = score.get("coverage")
-    comp  = score.get("completeness")
-    corr  = score.get("corroboration") or {}
+    band    = score.get("band", "—")
+    pct     = score.get("documentation_score", "—")
+    cov     = score.get("coverage")
+    comp    = score.get("completeness")
+    corr    = score.get("corroboration") or {}
+    secs    = score.get("sections_in_scope") or []
 
     print(f"  DOCUMENTATION SCORE: {pct}%  [{band}]")
     print(f"{'─'*62}")
     print(f"  Coverage      {_pct(cov)}  ({int((cov or 0) * (scope.get('total_extent') or 0))} of {scope.get('total_extent')} works catalogued)")
-    print(f"  Completeness  {_pct(comp)}  (mean field fill across catalogued works)")
+    print(f"  Completeness  {_pct(comp)}  (passport sections: {', '.join(secs)})")
     print(f"  Corroboration {_pct(corr.get('blended'))}  (L1 identity: {_pct(corr.get('L1'))}  |  L2 provenance: {_pct(corr.get('L2'))})")
 
     gaps = score.get("gaps") or {}
@@ -370,7 +402,7 @@ def print_scorecard(col: dict):
         for k, v in gaps.items():
             label = k.replace("_", " ").capitalize()
             bar   = "█" * int((v or 0) * 20)
-            print(f"    {label:<30} {_pct(v)}  {bar}")
+            print(f"    {label:<32} {_pct(v)}  {bar}")
 
     cv = score.get("config_version", "—")
     at = col.get("score_generated_at", "—")
@@ -394,7 +426,7 @@ def check_all() -> bool:
         col = json.loads(path.read_text())
         stored = col.get("score")
         if stored is None:
-            continue  # not yet scored — skip
+            continue
         passports = load_passports(col.get("member_passports") or [])
         fresh = score_collection(col, passports, WEIGHTS_V1)
         if fresh is None:
@@ -445,7 +477,7 @@ def main():
             print(f"Not found: {path}", file=sys.stderr)
             continue
 
-        col = json.loads(path.read_text())
+        col    = json.loads(path.read_text())
         col_id = col.get("collection_id", path.stem)
         passports = load_passports(col.get("member_passports") or [])
 
@@ -460,19 +492,18 @@ def main():
             gaps = (score or {}).get("gaps") or {}
             print(f"\n{col_id} — gap breakdown:")
             for k, v in gaps.items():
-                print(f"  {k:<30} {_pct(v)}")
+                print(f"  {k:<32} {_pct(v)}")
             continue
 
         if args.print_card:
-            col["score"] = score  # inject for display, don't write
+            col["score"] = score
             print_scorecard(col)
             continue
 
-        # Default: compute and write
         save_collection(col, path, score)
-        band = (score or {}).get("band", "Scope Not Established")
-        pct  = (score or {}).get("documentation_score", "—")
-        n    = len(passports)
+        band  = (score or {}).get("band", "Scope Not Established")
+        pct   = (score or {}).get("documentation_score", "—")
+        n     = len(passports)
         total = scope.get("total_extent", "?")
         print(f"  {col_id:<25}  {pct}%  [{band}]  ({n}/{total} works)")
 
