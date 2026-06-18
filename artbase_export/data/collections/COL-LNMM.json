@@ -1,0 +1,32 @@
+{
+  "collection_id": "COL-LNMM",
+  "name": "Latvian National Museum of Art — Portrait Collection",
+  "name_lv": "Latvijas Nacionālā mākslas muzeja portretkrājums",
+  "owner": "Q1370465",
+  "owner_display": "Latvijas Nacionālais mākslas muzejs",
+  "scope": {
+    "definition": "Works documented in the 2009 exhibition catalogue 'Mākslinieks. Portrets. Pašportrets' — portraits and self-portraits from the LNMM collection, as published. Scoped to the 354 works catalogued in that publication.",
+    "total_extent": 354,
+    "status": "inventory_confirmed",
+    "source": "Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets. Rīga: LNMM; Neputns, 2009. (SRC-LNMM-PORTRAITS-2009)"
+  },
+  "member_passports": [],
+  "visibility": "public",
+  "consent_to_publish_score": false,
+  "score": {
+    "documentation_score": 0,
+    "band": "Inventory Only",
+    "coverage": 0.0,
+    "completeness": null,
+    "corroboration": {
+      "blended": null,
+      "L1": null,
+      "L2": null
+    },
+    "gaps": {},
+    "config_version": "weights-v1"
+  },
+  "score_generated_at": "2026-06-18T17:07:43+00:00",
+  "_schema": "artbase:collection:v1",
+  "_notes": "No individual artwork passports created yet. Coverage = 0. Score will show 'Inventory Only' until passport creation begins."
+}

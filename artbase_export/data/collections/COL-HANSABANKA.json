@@ -1,0 +1,32 @@
+{
+  "collection_id": "COL-HANSABANKA",
+  "name": "Hansabanka Contemporary Art Collection",
+  "name_lv": "Hansabankas mūsdienu mākslas kolekcija",
+  "owner": "Q104429642",
+  "owner_display": "Swedbank Latvia (formerly AS Hansabanka)",
+  "scope": {
+    "definition": "All works documented in the 2007 Hansabanka Contemporary Art Collection catalogue. 386 works by 108 Latvian artists, as listed on catalogue pages 222–229.",
+    "total_extent": 386,
+    "status": "inventory_confirmed",
+    "source": "Žeivaite, Ilze, et al. Hansabankas mūsdienu mākslas kolekcija / Hansabanka Contemporary Art Collection. Rīga: Hansabanka, 2007. (SRC-HANSABANKA-2007, Wikidata Q139986317)"
+  },
+  "member_passports": [],
+  "visibility": "private",
+  "consent_to_publish_score": false,
+  "score": {
+    "documentation_score": 0,
+    "band": "Inventory Only",
+    "coverage": 0.0,
+    "completeness": null,
+    "corroboration": {
+      "blended": null,
+      "L1": null,
+      "L2": null
+    },
+    "gaps": {},
+    "config_version": "weights-v1"
+  },
+  "score_generated_at": "2026-06-18T17:07:43+00:00",
+  "_schema": "artbase:collection:v1",
+  "_notes": "No individual artwork passports created yet. Coverage = 0. Score will show 'Inventory Only' until passport creation begins."
+}

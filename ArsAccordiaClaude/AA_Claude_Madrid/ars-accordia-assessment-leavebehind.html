@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ars Accordia — Collection Assessment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Spectral:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE6D8;
+    --paper-deep:#E4DDCB;
+    --ink:#211C17;
+    --ink-soft:#5A5040;
+    --oxblood:#7C2A24;
+    --oxblood-deep:#5E1F1B;
+    --gilt:#9A7B33;
+    --gilt-soft:#BFA66A;
+    --rule:#C9BE9F;
+    --display:"Fraunces",Georgia,serif;
+    --body:"Spectral",Georgia,serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{background:#8d8576;}
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    padding:24px;
+    display:flex;justify-content:center;
+  }
+  .sheet{
+    width:210mm;min-height:297mm;
+    background:
+      radial-gradient(120% 80% at 85% -5%, rgba(154,123,51,0.07), transparent 60%),
+      var(--paper);
+    padding:17mm 18mm 14mm;
+    box-shadow:0 4px 30px rgba(0,0,0,0.35);
+    position:relative;
+    display:flex;flex-direction:column;
+  }
+  /* ---- masthead ---- */
+  .mast{display:flex;justify-content:space-between;align-items:flex-start;}
+  .wordmark{
+    font-family:var(--display);
+    font-weight:600;font-size:25px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink);line-height:1;
+  }
+  .wordmark .accord{color:var(--oxblood);}
+  .eyebrow{
+    font-family:var(--mono);font-size:10px;font-weight:500;
+    letter-spacing:.34em;text-transform:uppercase;color:var(--ink-soft);
+    margin-top:9px;
+  }
+  .seal{
+    width:54px;height:54px;border-radius:50%;
+    border:1.5px solid var(--oxblood);
+    color:var(--oxblood);flex:none;
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:.04em;
+    position:relative;
+  }
+  .seal::after{
+    content:"";position:absolute;inset:4px;border-radius:50%;
+    border:0.5px solid var(--gilt-soft);
+  }
+  .mast-rule{height:2px;background:var(--oxblood);margin:13px 0 0;}
+  .mast-rule.thin{height:1px;background:var(--gilt);margin-top:2px;}
+
+  /* ---- hero ---- */
+  .hero{margin-top:22px;}
+  .hero h1{
+    font-family:var(--display);
+    font-weight:500;font-size:39px;line-height:1.04;
+    letter-spacing:-.01em;color:var(--ink);max-width:15ch;
+  }
+  .hero .lede{
+    font-size:15.5px;line-height:1.5;color:var(--oxblood-deep);
+    font-weight:500;margin-top:11px;font-style:italic;
+  }
+  .hero p.def{
+    font-size:13px;line-height:1.62;color:var(--ink-soft);
+    margin-top:13px;max-width:64ch;
+  }
+
+  /* ---- three dimensions ---- */
+  .dims{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:26px;
+    border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+  .dim{padding:15px 18px 16px;position:relative;}
+  .dim + .dim{border-left:1px solid var(--rule);}
+  .dim .n{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--gilt);font-weight:600;}
+  .dim h3{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--oxblood);margin:8px 0 7px;}
+  .dim p{font-size:12.5px;line-height:1.5;color:var(--ink);}
+
+  /* ---- band scale : signature ---- */
+  .scale-wrap{margin-top:26px;}
+  .scale-head{display:flex;justify-content:space-between;align-items:baseline;}
+  .scale-head .k{font-family:var(--mono);font-size:10px;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--ink-soft);}
+  .scale-head .v{font-family:var(--body);font-size:12.5px;font-style:italic;color:var(--ink-soft);}
+  .scale{display:grid;grid-template-columns:repeat(5,1fr);margin-top:12px;
+    border:1px solid var(--gilt);}
+  .seg{padding:11px 9px 10px;border-right:1px solid var(--gilt);position:relative;min-height:62px;
+    display:flex;flex-direction:column;justify-content:space-between;}
+  .seg:last-child{border-right:none;}
+  .seg .lvl{font-family:var(--mono);font-size:9px;color:var(--gilt);font-weight:600;letter-spacing:.08em;}
+  .seg .name{font-family:var(--body);font-size:11.5px;font-weight:500;line-height:1.18;color:var(--ink);}
+  .seg.s1{background:rgba(124,42,36,0.04);}
+  .seg.s2{background:rgba(124,42,36,0.09);}
+  .seg.s3{background:rgba(124,42,36,0.16);}
+  .seg.s4{background:rgba(124,42,36,0.27);}
+  .seg.s5{background:var(--oxblood);}
+  .seg.s5 .name{color:#F4ECDA;}
+  .seg.s5 .lvl{color:var(--gilt-soft);}
+  .scale-foot{font-family:var(--body);font-size:12px;color:var(--ink-soft);margin-top:9px;line-height:1.5;
+    font-style:italic;}
+
+  /* ---- deliverables ---- */
+  .deliver{margin-top:24px;}
+  .deliver .k{font-family:var(--mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--ink-soft);margin-bottom:11px;}
+  .items{display:grid;grid-template-columns:1fr 1fr;gap:11px 26px;}
+  .item{display:flex;gap:11px;align-items:flex-start;}
+  .item .mk{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--gilt);
+    line-height:1.4;flex:none;padding-top:1px;}
+  .item .tx b{font-family:var(--body);font-weight:600;font-size:13px;color:var(--ink);display:block;}
+  .item .tx span{font-size:12px;line-height:1.45;color:var(--ink-soft);}
+
+  /* ---- footer ---- */
+  .foot{margin-top:auto;padding-top:16px;}
+  .foot .rule{height:1px;background:var(--gilt);margin-bottom:11px;}
+  .foot .row{display:flex;justify-content:space-between;align-items:baseline;gap:18px;}
+  .foot .privacy{font-size:11.5px;font-style:italic;color:var(--ink-soft);max-width:52ch;line-height:1.45;}
+  .foot .cta{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--oxblood);
+    text-align:right;line-height:1.7;white-space:nowrap;}
+  .foot .cta b{display:block;color:var(--ink);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:10px;}
+
+  @media print{
+    @page{size:A4;margin:0;}
+    html,body{background:#fff;}
+    body{padding:0;}
+    .sheet{box-shadow:none;width:auto;min-height:auto;height:100vh;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+  @media(max-width:760px){
+    .sheet{width:100%;padding:24px 20px;}
+    .hero h1{font-size:30px;}
+    .dims{grid-template-columns:1fr;}
+    .dim + .dim{border-left:none;border-top:1px solid var(--rule);}
+    .scale{grid-template-columns:1fr;}
+    .seg{border-right:none;border-bottom:1px solid var(--gilt);min-height:0;flex-direction:row;justify-content:flex-start;gap:10px;align-items:baseline;}
+    .seg:last-child{border-bottom:none;}
+    .items{grid-template-columns:1fr;}
+    .foot .row{flex-direction:column;gap:10px;}
+    .foot .cta{text-align:left;}
+  }
+</style>
+</head>
+<body>
+  <div class="sheet">
+
+    <header class="mast">
+      <div>
+        <div class="wordmark">Ars&nbsp;<span class="accord">Accordia</span></div>
+        <div class="eyebrow">Collection Assessment</div>
+      </div>
+      <div class="seal">AA</div>
+    </header>
+    <div class="mast-rule"></div>
+    <div class="mast-rule thin"></div>
+
+    <section class="hero">
+      <h1>How well documented is your collection?</h1>
+      <div class="lede">Now there is a number — and a plan to raise it.</div>
+      <p class="def">The Ars Accordia Documentation Score measures your collection's documentation health against its <strong>full defined extent</strong> — every work in scope, not only the pieces already on file. So it reflects reality, and it cannot be inflated by leaving works out.</p>
+    </section>
+
+    <section class="dims">
+      <div class="dim">
+        <div class="n">01</div>
+        <h3>Coverage</h3>
+        <p>How much of the collection is catalogued at all.</p>
+      </div>
+      <div class="dim">
+        <div class="n">02</div>
+        <h3>Completeness</h3>
+        <p>How full each record is — identity, provenance, condition, authority links.</p>
+      </div>
+      <div class="dim">
+        <div class="n">03</div>
+        <h3>Corroboration</h3>
+        <p>How well each record is verified against independent authorities.</p>
+      </div>
+    </section>
+
+    <section class="scale-wrap">
+      <div class="scale-head">
+        <span class="k">The Documentation Scale</span>
+        <span class="v">where your collection stands today</span>
+      </div>
+      <div class="scale">
+        <div class="seg s1"><span class="lvl">I</span><span class="name">Inventory Only</span></div>
+        <div class="seg s2"><span class="lvl">II</span><span class="name">Catalogued</span></div>
+        <div class="seg s3"><span class="lvl">III</span><span class="name">Partially Documented</span></div>
+        <div class="seg s4"><span class="lvl">IV</span><span class="name">Substantially Documented</span></div>
+        <div class="seg s5"><span class="lvl">V</span><span class="name">Fully Documented</span></div>
+      </div>
+      <div class="scale-foot">Your score places the collection on this scale, with the exact gaps that hold it back — and what it would take to reach the next band.</div>
+    </section>
+
+    <section class="deliver">
+      <div class="k">What the Assessment Delivers</div>
+      <div class="items">
+        <div class="item"><span class="mk">—</span><span class="tx"><b>A definitive inventory</b><span>Your collection's agreed full extent, established and recorded.</span></span></div>
+        <div class="item"><span class="mk">—</span><span class="tx"><b>Your baseline score &amp; band</b><span>A single, defensible measure of where the collection stands.</span></span></div>
+        <div class="item"><span class="mk">—</span><span class="tx"><b>A gap map</b><span>Exactly where the score is lost — by work and by dimension.</span></span></div>
+        <div class="item"><span class="mk">—</span><span class="tx"><b>A roadmap to the next band</b><span>The specific work, scope, and cost to get there.</span></span></div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <div class="rule"></div>
+      <div class="row">
+        <div class="privacy">Private by default. Your score is yours — held in confidence, and published as a public credential only if you choose.</div>
+        <div class="cta"><b>Begin an Assessment</b>catalogue@arsaccordia.com<br>arsaccordia.com</div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
