@@ -13,6 +13,17 @@
     "AP-2026-000001",
     "AP-2026-000002"
   ],
+  "segment": null,
+  "assessment_status": "assessed",
+  "listing": {
+    "description": "Internal demo collection used for pipeline testing. Not a real collection.",
+    "public_works_catalogued": 0
+  },
+  "claim": {
+    "status": "unclaimed",
+    "claimant_contributor": null,
+    "verified_at": null
+  },
   "visibility": "private",
   "consent_to_publish_score": false,
   "engagement_depth": {
@@ -20,22 +31,22 @@
     "image": false
   },
   "score": {
-    "documentation_score": 55.6,
-    "band": "Partially Documented",
-    "coverage": 1.0,
+    "ars_accordia_score": 111.2,
+    "average_standard": 55.6,
+    "works_documented": 2,
+    "band": "Partially Corroborated",
     "completeness": 0.6,
     "corroboration": {
       "blended": 0.49,
       "L1": 0.15,
       "L2": 1.0
     },
+    "relative_completeness": 0.556,
     "gaps": {
-      "provenance_documented": 1.0,
-      "provenance_sourced": 1.0,
-      "condition_documented": 1.0,
+      "identity_complete": 1.0,
       "authority_linked": 0.0,
-      "image_present": 0.0,
-      "structured_present": 0.0,
+      "provenance_sourced": 1.0,
+      "structured_export": 0.0,
       "fully_corroborated_L1": 0.0,
       "fully_corroborated_L2": 1.0
     },
@@ -45,8 +56,8 @@
       "provenance",
       "structured"
     ],
-    "config_version": "weights-v1"
+    "config_version": "weights-v2"
   },
-  "score_generated_at": "2026-06-18T18:09:12+00:00",
+  "score_generated_at": "2026-06-19T07:44:12+00:00",
   "_schema": "artbase:collection:v1"
 }

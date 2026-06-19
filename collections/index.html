@@ -3,228 +3,429 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ars Accordia Collections — catalogued art collections with authority records, Wikidata links, and permanent Artwork Passports.">
-<title>Collections — Ars Accordia</title>
-<link rel="canonical" href="https://arsaccordia.com/collections/">
+<title>Documented Collections — Ars Accordia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght,SOFT,WONK@9..144,0..1,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Spectral:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --paper:      #f6f1e6;
-    --paper-deep: #ebe3d1;
-    --ink:        #1c1814;
-    --ink-soft:   #4a4338;
-    --ink-faded:  #80766a;
-    --seal:       #6e1818;
-    --gold:       #8a6f2e;
-    --rule:       #c7bca5;
-    --grid:       rgba(110, 24, 24, 0.04);
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--paper);
-    background-image:
-      linear-gradient(var(--grid) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-    background-size: 32px 32px;
-    color: var(--ink);
-    font-family: 'Public Sans', -apple-system, sans-serif;
-    font-size: 15px; line-height: 1.5; min-height: 100vh;
-  }
-  body::before {
-    content: ''; position: fixed; inset: 0; pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
-    opacity: 0.5; z-index: 1; mix-blend-mode: multiply;
-  }
-  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+:root{
+  --bg:#E5DECE;
+  --surface:#F1ECE0;
+  --surface-deep:#E9E2D2;
+  --ink:#211C17;
+  --ink-soft:#5A5040;
+  --oxblood:#7C2A24;
+  --oxblood-deep:#5E1F1B;
+  --gilt:#9A7B33;
+  --gilt-soft:#BFA66A;
+  --rule:#CDC2A3;
+  --green:#4C6B3C;
+  --amber:#A8761F;
+  --grey:#8A8170;
+  --display:"Fraunces",Georgia,serif;
+  --body:"Spectral",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);
+  -webkit-font-smoothing:antialiased;line-height:1.5;}
+.wrap{max-width:1020px;margin:0 auto;padding:0 24px;}
 
-  /* Nav */
-  .site-nav { border-bottom: 1px solid var(--rule); position: relative; z-index: 2; background: var(--paper); }
-  .site-nav .wrap { display: flex; align-items: center; gap: 32px; padding-top: 20px; padding-bottom: 16px; }
-  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
-  .nav-logo-mark { width: 28px; height: 28px; background: var(--seal); border-radius: 3px; display: flex; align-items: center; justify-content: center; }
-  .nav-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
-  .nav-links { display: flex; gap: 24px; margin-left: auto; }
-  .nav-link { font-size: 0.875rem; color: var(--ink-soft); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
-  .nav-link:hover { color: var(--seal); }
-  .nav-link.active { color: var(--seal); border-bottom-color: var(--seal); }
+/* nav */
+nav{border-bottom:1px solid var(--rule);background:var(--bg);}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px;}
+.brand{font-family:var(--display);font-weight:600;font-size:17px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink);text-decoration:none;}
+.brand .a{color:var(--oxblood);}
+.nav-links{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-soft);display:flex;gap:24px;}
+.nav-links a{color:inherit;text-decoration:none;}
+.nav-links a:hover{color:var(--oxblood);}
+.nav-links .active{color:var(--oxblood);}
 
-  /* Page header */
-  .page-header { padding: 56px 0 40px; border-bottom: 2px solid var(--seal); margin-bottom: 52px; }
-  .page-eyebrow { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--seal); font-weight: 600; margin-bottom: 10px; }
-  .page-title { font-family: 'Fraunces', Georgia, serif; font-size: 2.4rem; font-weight: 700; font-style: italic; color: var(--ink); letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 12px; }
-  .page-body { font-size: 1rem; color: var(--ink-soft); max-width: 560px; line-height: 1.75; }
+/* page header */
+.page-head{padding:40px 0 0;}
+.eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--gilt);font-weight:600;}
+.page-head h1{font-family:var(--display);font-weight:500;font-size:36px;
+  line-height:1.05;margin:10px 0 8px;letter-spacing:-.01em;}
+.page-head .lede{font-size:15px;color:var(--ink-soft);max-width:66ch;line-height:1.6;font-style:italic;}
 
-  /* Collection cards */
-  .collection-list { display: flex; flex-direction: column; gap: 16px; }
-  .collection-card {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 16px;
-    align-items: start;
-    background: white;
-    border: 1px solid var(--rule);
-    border-radius: 6px;
-    padding: 28px 32px;
-    text-decoration: none;
-    color: var(--ink);
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  .collection-card:hover {
-    border-color: var(--seal);
-    box-shadow: 0 4px 20px rgba(110,24,24,0.07);
-  }
-  .collection-eyebrow { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--seal); font-weight: 600; margin-bottom: 8px; }
-  .collection-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.3rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; margin-bottom: 6px; }
-  .collection-desc { font-size: 0.875rem; color: var(--ink-soft); line-height: 1.65; max-width: 520px; margin-bottom: 16px; }
-  .collection-meta { display: flex; gap: 24px; flex-wrap: wrap; }
-  .collection-stat { display: flex; flex-direction: column; gap: 1px; }
-  .collection-stat-value { font-family: 'JetBrains Mono', monospace; font-size: 1.2rem; font-weight: 500; color: var(--seal); line-height: 1; }
-  .collection-stat-label { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-faded); }
-  .collection-arrow {
-    display: flex; align-items: center; justify-content: center;
-    width: 36px; height: 36px;
-    background: var(--seal); border-radius: 50%;
-    flex-shrink: 0; margin-top: 4px;
-    color: white;
-    transition: transform 0.15s;
-  }
-  .collection-card:hover .collection-arrow { transform: translateX(3px); }
-  .collection-tag {
-    display: inline-block; font-size: 0.68rem; font-weight: 600;
-    font-family: 'JetBrains Mono', monospace;
-    padding: 2px 8px; border: 1px solid var(--rule); border-radius: 2px;
-    color: var(--ink-soft); margin-right: 4px;
-  }
+/* explainer strip */
+.explainer{display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border:1px solid var(--rule);background:var(--surface);margin-top:28px;}
+.expl{padding:16px 18px;border-right:1px solid var(--rule);}
+.expl:last-child{border-right:none;}
+.expl .el{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gilt);font-weight:600;margin-bottom:5px;}
+.expl h3{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--oxblood);margin-bottom:5px;}
+.expl p{font-size:12.5px;color:var(--ink-soft);line-height:1.5;}
 
-  /* Coming soon card */
-  .collection-card-placeholder {
-    background: var(--paper-deep);
-    border: 1px dashed var(--rule);
-    border-radius: 6px;
-    padding: 28px 32px;
-    color: var(--ink-faded);
-  }
-  .placeholder-title { font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; font-weight: 600; color: var(--ink-soft); margin-bottom: 6px; }
-  .placeholder-desc { font-size: 0.85rem; line-height: 1.6; }
+/* controls */
+.controls{display:flex;align-items:center;justify-content:space-between;
+  padding:22px 0 14px;flex-wrap:wrap;gap:12px;}
+.chips{display:flex;gap:7px;flex-wrap:wrap;}
+.chip{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  padding:5px 12px;border:1px solid var(--rule);border-radius:2px;cursor:pointer;
+  background:var(--surface);color:var(--ink-soft);transition:all .12s;
+  appearance:none;-webkit-appearance:none;}
+.chip:hover{border-color:var(--gilt);color:var(--ink);}
+.chip.active{background:var(--oxblood);border-color:var(--oxblood);color:#F4ECDA;}
+.sort-row{display:flex;align-items:center;gap:10px;}
+.sort-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-soft);}
+.sort-btn{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  padding:5px 11px;border:1px solid var(--rule);border-radius:2px;cursor:pointer;
+  background:var(--surface);color:var(--ink-soft);transition:all .12s;
+  appearance:none;-webkit-appearance:none;}
+.sort-btn:hover{border-color:var(--gilt);}
+.sort-btn.active{border-color:var(--gilt);color:var(--ink);background:var(--surface-deep);}
 
-  /* Footer */
-  .site-footer { margin-top: 64px; padding: 24px 0 40px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-  .footer-text { font-size: 0.75rem; color: var(--ink-faded); }
-  .footer-link { color: var(--seal); text-decoration: none; }
-  .footer-link:hover { text-decoration: underline; }
+/* count line */
+.count-line{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-soft);padding-bottom:12px;
+  border-bottom:1px solid var(--rule);min-height:29px;}
+.count-line b{color:var(--ink);}
 
-  @media (max-width: 640px) {
-    .nav-links { gap: 12px; flex-wrap: wrap; }
-    .nav-link { font-size: 0.78rem; }
-    .collection-card { grid-template-columns: 1fr; }
-    .page-title { font-size: 1.8rem; }
-  }
+/* sample notice */
+.sample-notice{display:flex;align-items:center;gap:10px;margin:14px 0 0;
+  padding:9px 14px;background:var(--surface);border:1px solid var(--gilt);
+  font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--ink-soft);}
+.sample-notice b{color:var(--amber);}
+
+/* collection entries */
+.entries{margin-top:0;}
+.entry{border-bottom:1px solid var(--rule);padding:22px 0;display:grid;
+  grid-template-columns:1fr 180px;gap:16px 28px;align-items:center;}
+.entry:last-child{border-bottom:none;}
+
+/* left */
+.entry-name{font-family:var(--display);font-size:20px;font-weight:500;
+  color:var(--ink);line-height:1.1;margin-bottom:4px;}
+.entry-name a{color:inherit;text-decoration:none;}
+.entry-name a:hover{color:var(--oxblood);}
+.entry-owner{font-size:13px;color:var(--ink-soft);font-style:italic;margin-bottom:11px;}
+.entry-badge{display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  padding:3px 9px;border-radius:2px;border:1px solid var(--rule);
+  color:var(--ink-soft);margin-bottom:13px;}
+.entry-badge.corporate{border-color:var(--gilt);color:var(--gilt);}
+.entry-badge.private{border-color:var(--ink-soft);color:var(--ink-soft);}
+.entry-badge.estate{border-color:var(--gilt-soft);color:var(--gilt-soft);}
+.entry-badge.institution{border-color:var(--oxblood);color:var(--oxblood);}
+
+.std-row{display:flex;align-items:center;gap:10px;}
+.std-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-soft);width:116px;flex:none;}
+.std-bar-track{flex:1;max-width:160px;height:6px;background:var(--surface-deep);
+  border:.5px solid var(--rule);position:relative;}
+.std-bar-fill{position:absolute;left:0;top:0;bottom:0;background:var(--oxblood);}
+.std-val{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--ink-soft);
+  width:26px;flex:none;}
+
+.scale-mini{display:grid;grid-template-columns:repeat(5,1fr);margin-top:7px;
+  border:1px solid var(--gilt);max-width:160px;margin-left:126px;}
+.sm-seg{height:5px;}
+.sm-seg.s1{background:rgba(124,42,36,.05);}
+.sm-seg.s2{background:rgba(124,42,36,.12);}
+.sm-seg.s3{background:rgba(124,42,36,.20);}
+.sm-seg.s4{background:rgba(124,42,36,.33);}
+.sm-seg.s5{background:var(--oxblood);}
+.sm-seg.here{outline:2px solid var(--gilt);outline-offset:-1px;}
+.sm-seg:not(:last-child){border-right:1px solid var(--gilt);}
+
+/* right: score block */
+.entry-score{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:5px;}
+.score-lbl{font-family:var(--mono);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gilt);}
+.score-fig{font-family:var(--display);font-size:34px;font-weight:600;
+  color:var(--oxblood-deep);line-height:1;letter-spacing:-.01em;}
+.works-fig{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);}
+.band-chip{display:inline-block;font-family:var(--mono);font-size:8.5px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:2px;}
+.band-1{border:1px solid var(--grey);color:var(--grey);}
+.band-2{border:1px solid var(--ink-soft);color:var(--ink-soft);}
+.band-3{border:1px solid var(--gilt);color:var(--gilt);}
+.band-4{border:1px solid var(--amber);color:var(--amber);}
+.band-5{border:1px solid var(--green);color:var(--green);}
+
+/* empty state */
+.empty{padding:56px 0;text-align:center;}
+.empty h2{font-family:var(--display);font-weight:500;font-size:26px;
+  color:var(--ink);margin-bottom:10px;}
+.empty p{font-size:14px;color:var(--ink-soft);max-width:46ch;margin:0 auto 24px;line-height:1.6;}
+.empty .cta-link{font-family:var(--mono);font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--oxblood);text-decoration:none;
+  border-bottom:1px solid var(--gilt);padding-bottom:2px;}
+
+/* method note */
+.method-note{margin-top:42px;padding-top:20px;border-top:1px solid var(--rule);
+  font-size:13px;color:var(--ink-soft);line-height:1.65;max-width:74ch;}
+.method-note b{color:var(--ink);}
+.method-note a{color:var(--oxblood);}
+
+footer{margin-top:48px;border-top:1px solid var(--rule);}
+footer .wrap{padding:16px 24px;display:flex;justify-content:space-between;align-items:baseline;
+  font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--ink-soft);
+  text-transform:uppercase;}
+footer a{color:inherit;text-decoration:none;}
+
+@media(max-width:760px){
+  .explainer{grid-template-columns:1fr;}
+  .expl{border-right:none;border-bottom:1px solid var(--rule);}
+  .expl:last-child{border-bottom:none;}
+  .controls{flex-direction:column;align-items:flex-start;}
+  .entry{grid-template-columns:1fr;}
+  .entry-score{align-items:flex-start;text-align:left;}
+  .nav-links{display:none;}
+}
 </style>
 </head>
 <body>
 
-<nav class="site-nav">
-  <div class="wrap">
-    <a href="../" class="nav-logo">
-      <div class="nav-logo-mark">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <rect x="3" y="3" width="6" height="6" fill="white" opacity="0.9"/>
-          <rect x="11" y="3" width="6" height="6" fill="white" opacity="0.5"/>
-          <rect x="3" y="11" width="6" height="6" fill="white" opacity="0.5"/>
-          <rect x="11" y="11" width="6" height="6" fill="white" opacity="0.75"/>
-        </svg>
-      </div>
-      <span class="nav-name">Ars Accordia</span>
-    </a>
-    <div class="nav-links">
-      <a href="../catalogue/" class="nav-link">Catalogue</a>
-      <a href="../artworks/" class="nav-link">Artworks</a>
-      <a href="../collections/" class="nav-link active">Collections</a>
-      <a href="../artists/" class="nav-link">Artists</a>
-      <a href="../about/" class="nav-link">About</a>
-      <a href="../contributions/" class="nav-link">Contributions</a>
-      <a href="../sitemap/" class="nav-link">Index</a>
-    </div>
+<nav><div class="wrap">
+  <a href="/" class="brand">Ars&nbsp;<span class="a">Accordia</span></a>
+  <div class="nav-links">
+    <a href="/collections/" class="active">Collections</a>
+    <a href="/artists/">Artists</a>
+    <a href="/method/">Method</a>
+    <a href="/about/">About</a>
   </div>
-</nav>
+</div></nav>
 
-<div class="wrap">
+<main class="wrap">
 
-  <header class="page-header">
-    <p class="page-eyebrow">Source Collections</p>
-    <h1 class="page-title">Collections</h1>
-    <p class="page-body">
-      Ars Accordia catalogues works from institutional, corporate, and private collections.
-      Each collection listed here has been ingested from a primary source — museum open data,
-      published catalogue OCR, or client documentation — and cross-referenced against
-      Wikidata, Getty, and VIAF authority records.
-    </p>
+  <header class="page-head">
+    <div class="eyebrow">Ars Accordia · Documented Collections</div>
+    <h1>The Collections Directory</h1>
+    <p class="lede">Collections assessed by Ars Accordia and published here with the owner's consent. Each carries an Ars Accordia Score — read alongside the average standard of the records and the number of works documented.</p>
   </header>
 
-  <div class="collection-list">
+  <div class="explainer">
+    <div class="expl">
+      <div class="el">01</div>
+      <h3>The Score</h3>
+      <p>An open absolute figure — the sum of the value of all documented passports. Grows as more of the collection is catalogued and records are strengthened. Not a percentage; no ceiling.</p>
+    </div>
+    <div class="expl">
+      <div class="el">02</div>
+      <h3>Average Standard</h3>
+      <p>Size-independent quality. A small perfectly documented collection reads near the top, as does a large one. Sort by this for a like-for-like quality comparison.</p>
+    </div>
+    <div class="expl">
+      <div class="el">03</div>
+      <h3>Works Documented</h3>
+      <p>The volume behind the score. The count keeps both the score and the standard honest — <em>Fully Corroborated · 3 works</em> is not the same as <em>Fully Corroborated · 312 works.</em></p>
+    </div>
+  </div>
 
-    <!-- LNMM -->
-    <a href="lnmm/" class="collection-card">
-      <div>
-        <p class="collection-eyebrow">Public Museum · Latvia</p>
-        <h2 class="collection-name">Latvia National Museum of Art</h2>
-        <p class="collection-desc">
-          Paintings, drawings, watercolours, pastels, and sculpture from the LNMA permanent
-          collection — Latvian art spanning the 18th through the first half of the 20th century.
-          Source data via LNMA open data / Google Arts &amp; Culture.
-        </p>
-        <div class="collection-meta">
-          <div class="collection-stat">
-            <span class="collection-stat-value">354</span>
-            <span class="collection-stat-label">Works</span>
-          </div>
-          <div class="collection-stat">
-            <span class="collection-stat-value">55</span>
-            <span class="collection-stat-label">Artists</span>
-          </div>
-          <div class="collection-stat">
-            <span class="collection-stat-value">c. 1800–1945</span>
-            <span class="collection-stat-label">Period</span>
-          </div>
+  <div class="controls">
+    <div class="chips">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="corporate">Corporate</button>
+      <button class="chip" data-filter="private">Private</button>
+      <button class="chip" data-filter="estate">Estate</button>
+      <button class="chip" data-filter="institution">Institution</button>
+    </div>
+    <div class="sort-row">
+      <span class="sort-label">Sort by</span>
+      <button class="sort-btn active" data-sort="avg_std">Avg Standard ↓</button>
+      <button class="sort-btn" data-sort="score">AA Score ↓</button>
+      <button class="sort-btn" data-sort="works">Works ↓</button>
+    </div>
+  </div>
+
+  <div class="count-line" id="count-line">&nbsp;</div>
+
+  <div class="sample-notice">
+    <b>Sample data</b>&nbsp;· Illustrative entries showing the directory layout.
+    Real collections appear once assessed and published with consent.
+  </div>
+
+  <div class="entries" id="entries">
+
+    <!-- Sūnu Foundation — institution, avg std 87, Fully Corroborated -->
+    <div class="entry"
+         data-segment="institution" data-avg-std="87" data-score="9744" data-works="112" data-band="5">
+      <div class="entry-left">
+        <div class="entry-name"><a href="#">Sūnu Foundation Collection</a></div>
+        <div class="entry-owner">Sūnu Foundation for Baltic Art · institutional collection · Vilnius</div>
+        <div class="entry-badge institution">Institution</div>
+        <div class="std-row">
+          <span class="std-lbl">Avg standard</span>
+          <div class="std-bar-track"><div class="std-bar-fill" style="width:87%"></div></div>
+          <span class="std-val">87</span>
         </div>
-        <div style="margin-top:14px;">
-          <span class="collection-tag">Painting</span>
-          <span class="collection-tag">Drawing</span>
-          <span class="collection-tag">Watercolour</span>
-          <span class="collection-tag">Latvian art</span>
+        <div class="scale-mini">
+          <div class="sm-seg s1"></div><div class="sm-seg s2"></div>
+          <div class="sm-seg s3"></div><div class="sm-seg s4"></div>
+          <div class="sm-seg s5 here"></div>
         </div>
       </div>
-      <div class="collection-arrow">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M3 7h8M8 4l3 3-3 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+      <div class="entry-score">
+        <div class="score-lbl">Ars Accordia Score</div>
+        <div class="score-fig">9,744</div>
+        <div class="works-fig">112 works documented</div>
+        <div class="band-chip band-5">Fully Corroborated</div>
       </div>
-    </a>
+    </div>
 
-    <!-- Hansabanka (coming soon) -->
-    <div class="collection-card-placeholder">
-      <div class="placeholder-title">Hansabanka / Swedbank Contemporary Art Collection</div>
-      <p class="placeholder-desc">
-        386 works by 108 contemporary Latvian artists. Corporate collection from the
-        Hansabanka bank catalogue, pages 222–229. Ingestion in progress — passports
-        to be issued following Wikidata authority work.
-      </p>
+    <!-- Kalēju Estate — estate, avg std 71, Substantially Corroborated -->
+    <div class="entry"
+         data-segment="estate" data-avg-std="71" data-score="497" data-works="7" data-band="4">
+      <div class="entry-left">
+        <div class="entry-name"><a href="#">Kalēju Estate Collection</a></div>
+        <div class="entry-owner">Estate of Artūrs Kalējs · estate collection · Jūrmala</div>
+        <div class="entry-badge estate">Estate</div>
+        <div class="std-row">
+          <span class="std-lbl">Avg standard</span>
+          <div class="std-bar-track"><div class="std-bar-fill" style="width:71%"></div></div>
+          <span class="std-val">71</span>
+        </div>
+        <div class="scale-mini">
+          <div class="sm-seg s1"></div><div class="sm-seg s2"></div>
+          <div class="sm-seg s3"></div><div class="sm-seg s4 here"></div>
+          <div class="sm-seg s5"></div>
+        </div>
+      </div>
+      <div class="entry-score">
+        <div class="score-lbl">Ars Accordia Score</div>
+        <div class="score-fig">497</div>
+        <div class="works-fig">7 works documented</div>
+        <div class="band-chip band-4">Substantially Corroborated</div>
+      </div>
+    </div>
+
+    <!-- Meridian Maritime Bank — corporate, avg std 68, Substantially Corroborated -->
+    <div class="entry"
+         data-segment="corporate" data-avg-std="68" data-score="6528" data-works="96" data-band="4">
+      <div class="entry-left">
+        <div class="entry-name"><a href="#">The Meridian Collection</a></div>
+        <div class="entry-owner">Meridian Maritime Bank · corporate collection · Stockholm</div>
+        <div class="entry-badge corporate">Corporate</div>
+        <div class="std-row">
+          <span class="std-lbl">Avg standard</span>
+          <div class="std-bar-track"><div class="std-bar-fill" style="width:68%"></div></div>
+          <span class="std-val">68</span>
+        </div>
+        <div class="scale-mini">
+          <div class="sm-seg s1"></div><div class="sm-seg s2"></div>
+          <div class="sm-seg s3"></div><div class="sm-seg s4 here"></div>
+          <div class="sm-seg s5"></div>
+        </div>
+      </div>
+      <div class="entry-score">
+        <div class="score-lbl">Ars Accordia Score</div>
+        <div class="score-fig">6,528</div>
+        <div class="works-fig">96 works documented</div>
+        <div class="band-chip band-4">Substantially Corroborated</div>
+      </div>
+    </div>
+
+    <!-- Rosenberg Family — private, avg std 44, Partially Corroborated -->
+    <div class="entry"
+         data-segment="private" data-avg-std="44" data-score="1232" data-works="28" data-band="3">
+      <div class="entry-left">
+        <div class="entry-name"><a href="#">Rosenberg Family Collection</a></div>
+        <div class="entry-owner">Private collector · Riga</div>
+        <div class="entry-badge private">Private</div>
+        <div class="std-row">
+          <span class="std-lbl">Avg standard</span>
+          <div class="std-bar-track"><div class="std-bar-fill" style="width:44%"></div></div>
+          <span class="std-val">44</span>
+        </div>
+        <div class="scale-mini">
+          <div class="sm-seg s1"></div><div class="sm-seg s2"></div>
+          <div class="sm-seg s3 here"></div><div class="sm-seg s4"></div>
+          <div class="sm-seg s5"></div>
+        </div>
+      </div>
+      <div class="entry-score">
+        <div class="score-lbl">Ars Accordia Score</div>
+        <div class="score-fig">1,232</div>
+        <div class="works-fig">28 works documented</div>
+        <div class="band-chip band-3">Partially Corroborated</div>
+      </div>
     </div>
 
   </div>
 
-  <footer class="site-footer">
-    <span class="footer-text">
-      © 2026 Ars Accordia · <a href="../" class="footer-link">Home</a> ·
-      <a href="../about/" class="footer-link">About &amp; Methodology</a> ·
-      <a href="../sitemap/" class="footer-link">Site Index</a>
-    </span>
-    <span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--ink-faded);">2026</span>
-  </footer>
+  <div class="empty" id="empty-state" style="display:none;">
+    <h2>No collections in this segment yet</h2>
+    <p>As more collections are assessed and consent to publish, they appear in the directory.</p>
+    <a href="mailto:catalogue@arsaccordia.com" class="cta-link">Begin an assessment →</a>
+  </div>
 
-</div>
+  <p class="method-note">
+    <b>How to read this directory.</b> The <b>Ars Accordia Score</b> is an open absolute figure — the sum of the value of all documented passports — not a percentage. It grows as more works are catalogued and records are strengthened. The <b>average standard</b> is size-independent: it reflects how good the records are, not how many there are. Sort by average standard for a like-for-like quality view; use the score to understand volume. A 7-work estate at standard 71 and a 96-work corporate collection at standard 68 are not in the same contest — read with the count, neither misleads. Collections appear here only after Ars Accordia assessment and with the owner's explicit consent to publish. <a href="/method/">Full methodology →</a>
+  </p>
+
+</main>
+
+<footer><div class="wrap">
+  <div><a href="/">Ars Accordia</a> · arsaccordia.com</div>
+  <div>Documented Collections Directory</div>
+</div></footer>
+
+<script>
+(function(){
+  var entries    = Array.from(document.querySelectorAll('.entry'));
+  var countLine  = document.getElementById('count-line');
+  var emptyState = document.getElementById('empty-state');
+  var chips      = Array.from(document.querySelectorAll('.chip'));
+  var sortBtns   = Array.from(document.querySelectorAll('.sort-btn'));
+  var currentFilter = 'all';
+  var currentSort   = 'avg_std';
+
+  function visible(e){
+    return currentFilter === 'all' || e.dataset.segment === currentFilter;
+  }
+
+  function sortKey(e){
+    if(currentSort === 'avg_std') return -parseFloat(e.dataset.avgStd || 0);
+    if(currentSort === 'score')   return -parseFloat(e.dataset.score  || 0);
+    if(currentSort === 'works')   return -parseInt(e.dataset.works    || 0, 10);
+    return 0;
+  }
+
+  function render(){
+    var parent = document.getElementById('entries');
+    var vis = entries.filter(visible);
+    var hid = entries.filter(function(e){ return !visible(e); });
+
+    vis.sort(function(a,b){ return sortKey(a) - sortKey(b); });
+
+    hid.forEach(function(e){ e.style.display='none'; });
+    vis.forEach(function(e){ e.style.display=''; parent.appendChild(e); });
+
+    var n = vis.length;
+    countLine.innerHTML = n === 0 ? '' :
+      '<b>' + n + '</b> collection' + (n !== 1 ? 's' : '');
+    emptyState.style.display = n === 0 ? '' : 'none';
+  }
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      currentFilter = chip.dataset.filter;
+      render();
+    });
+  });
+
+  sortBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      sortBtns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      currentSort = btn.dataset.sort;
+      render();
+    });
+  });
+
+  render();
+})();
+</script>
+
 </body>
 </html>

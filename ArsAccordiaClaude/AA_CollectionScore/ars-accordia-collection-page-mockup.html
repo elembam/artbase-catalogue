@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian Collection — Ars Accordia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Spectral:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#E5DECE;
+    --surface:#F1ECE0;
+    --surface-deep:#E9E2D2;
+    --paper:#ECE6D8;
+    --ink:#211C17;
+    --ink-soft:#5A5040;
+    --oxblood:#7C2A24;
+    --oxblood-deep:#5E1F1B;
+    --gilt:#9A7B33;
+    --gilt-soft:#BFA66A;
+    --rule:#CDC2A3;
+    --green:#4C6B3C;
+    --amber:#A8761F;
+    --grey:#8A8170;
+    --display:"Fraunces",Georgia,serif;
+    --body:"Spectral",Georgia,serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);
+    -webkit-font-smoothing:antialiased;line-height:1.5;}
+  .wrap{max-width:980px;margin:0 auto;padding:0 22px;}
+
+  /* nav */
+  nav{border-bottom:1px solid var(--rule);}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px;}
+  .brand{font-family:var(--display);font-weight:600;font-size:18px;letter-spacing:.13em;
+    text-transform:uppercase;}
+  .brand .a{color:var(--oxblood);}
+  nav .links{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ink-soft);display:flex;gap:22px;}
+  nav .links span{cursor:default;}
+
+  /* collection header */
+  header.coll{padding:34px 0 8px;}
+  .eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--gilt);font-weight:600;}
+  header.coll h1{font-family:var(--display);font-weight:500;font-size:38px;line-height:1.05;
+    margin:9px 0 6px;letter-spacing:-.01em;}
+  header.coll .meta{font-size:14.5px;color:var(--ink-soft);font-style:italic;}
+  .credential{display:inline-flex;align-items:center;gap:8px;margin-top:14px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--oxblood);border:1px solid var(--gilt);border-radius:2px;padding:5px 10px;}
+  .credential::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--oxblood);}
+
+  /* score panel */
+  .score-panel{background:var(--surface);border:1px solid var(--rule);border-top:3px solid var(--oxblood);
+    margin-top:24px;display:grid;grid-template-columns:248px 1fr;}
+  .score-left{padding:26px 24px;border-right:1px solid var(--rule);text-align:center;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .seal{width:128px;height:128px;border-radius:50%;border:2px solid var(--oxblood);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;}
+  .seal::after{content:"";position:absolute;inset:6px;border-radius:50%;border:.5px solid var(--gilt-soft);}
+  .seal .pct{font-family:var(--display);font-weight:600;font-size:31px;line-height:1;color:var(--oxblood-deep);letter-spacing:-.01em;}
+  .seal .of{font-family:var(--mono);font-size:8px;letter-spacing:.14em;color:var(--gilt);margin-top:5px;text-transform:uppercase;}
+  .score-left .band{font-family:var(--display);font-weight:500;font-size:18px;margin-top:16px;color:var(--ink);}
+  .score-left .asof{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:var(--ink-soft);
+    text-transform:uppercase;margin-top:6px;}
+
+  .score-right{padding:24px 26px;}
+  .sr-head{font-family:var(--mono);font-size:10px;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--ink-soft);margin-bottom:16px;}
+  .dim-row{display:flex;align-items:center;gap:14px;margin-bottom:15px;}
+  .dim-row .lbl{width:120px;flex:none;}
+  .dim-row .lbl b{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--oxblood);display:block;}
+  .dim-row .lbl span{font-size:11px;color:var(--ink-soft);}
+  .bar{flex:1;height:9px;background:var(--surface-deep);border:.5px solid var(--rule);position:relative;}
+  .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--oxblood);display:block;}
+  .bar.soft i{background:var(--gilt);}
+  .dim-row .val{font-family:var(--mono);font-size:12px;font-weight:600;width:42px;text-align:right;flex:none;}
+  .sub{margin:-6px 0 14px 134px;font-size:11px;color:var(--ink-soft);font-style:italic;}
+
+  .scale{display:grid;grid-template-columns:repeat(5,1fr);margin-top:8px;border:1px solid var(--gilt);}
+  .seg{padding:7px 6px;border-right:1px solid var(--gilt);text-align:center;position:relative;}
+  .seg:last-child{border-right:none;}
+  .seg .nm{font-family:var(--mono);font-size:8.5px;letter-spacing:.04em;color:var(--ink-soft);line-height:1.25;}
+  .seg.s1{background:rgba(124,42,36,.04);}
+  .seg.s2{background:rgba(124,42,36,.09);}
+  .seg.s3{background:rgba(124,42,36,.16);}
+  .seg.s4{background:rgba(124,42,36,.27);}
+  .seg.s5{background:var(--oxblood);}
+  .seg.s5 .nm{color:#F4ECDA;}
+  .seg.here{outline:2px solid var(--gilt);outline-offset:-2px;}
+  .seg.here::after{content:"▲";position:absolute;left:50%;transform:translateX(-50%);bottom:-15px;
+    color:var(--gilt);font-size:9px;}
+  .meth{font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--ink-soft);margin-top:24px;}
+  .meth a{color:var(--oxblood);}
+
+  /* section heads */
+  .shead{font-family:var(--mono);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--ink-soft);margin:42px 0 4px;}
+  .shead-rule{height:1px;background:var(--gilt);margin-bottom:18px;}
+
+  /* gap map */
+  .gap{display:grid;grid-template-columns:1fr 1fr;gap:13px 34px;}
+  .gap .g{display:flex;align-items:center;gap:13px;}
+  .gap .g .gl{width:150px;flex:none;font-size:13px;}
+  .gap .g .gbar{flex:1;height:7px;background:var(--surface-deep);border:.5px solid var(--rule);position:relative;}
+  .gap .g .gbar i{position:absolute;left:0;top:0;bottom:0;background:var(--gilt);}
+  .gap .g .gv{font-family:var(--mono);font-size:11px;width:36px;text-align:right;flex:none;color:var(--ink-soft);}
+  .gap .g.low .gbar i{background:var(--oxblood);}
+  .gapnote{font-size:12.5px;color:var(--ink-soft);font-style:italic;margin-top:16px;line-height:1.55;}
+  .excl{font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--grey);margin-top:10px;}
+
+  /* works */
+  .scope-line{display:flex;gap:26px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;
+    color:var(--ink-soft);text-transform:uppercase;margin-bottom:18px;}
+  .scope-line b{color:var(--ink);font-weight:600;}
+  .works{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .work{background:var(--surface);border:1px solid var(--rule);display:flex;flex-direction:column;}
+  .work .thumb{aspect-ratio:4/3;background:
+      repeating-linear-gradient(45deg,var(--surface-deep),var(--surface-deep) 9px,var(--paper) 9px,var(--paper) 18px);
+    border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:center;}
+  .work .thumb span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink-soft);
+    background:var(--surface);padding:3px 7px;border:.5px solid var(--rule);}
+  .work .body{padding:11px 12px 13px;flex:1;display:flex;flex-direction:column;}
+  .work .ttl{font-family:var(--display);font-size:14.5px;font-weight:500;line-height:1.15;}
+  .work .art{font-size:12px;color:var(--ink-soft);font-style:italic;margin:2px 0 9px;}
+  .work .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;}
+  .work .ap{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:var(--gilt);}
+  .badge{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 7px;border-radius:2px;display:inline-flex;align-items:center;gap:5px;}
+  .badge::before{content:"";width:6px;height:6px;border-radius:50%;}
+  .badge.green{color:var(--green);border:1px solid var(--green);}
+  .badge.green::before{background:var(--green);}
+  .badge.amber{color:var(--amber);border:1px solid var(--amber);}
+  .badge.amber::before{background:var(--amber);}
+  .badge.grey{color:var(--grey);border:1px solid var(--grey);}
+  .badge.grey::before{background:var(--grey);}
+
+  footer{margin-top:50px;border-top:1px solid var(--rule);}
+  footer .wrap{padding:18px 22px;display:flex;justify-content:space-between;align-items:baseline;
+    font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase;}
+  footer .sample{color:var(--oxblood);font-style:normal;}
+
+  @media(max-width:760px){
+    .score-panel{grid-template-columns:1fr;}
+    .score-left{border-right:none;border-bottom:1px solid var(--rule);}
+    .dim-row .lbl{width:100px;}
+    .sub{margin-left:114px;}
+    .gap{grid-template-columns:1fr;}
+    .works{grid-template-columns:1fr 1fr;}
+    nav .links{display:none;}
+  }
+  @media(max-width:460px){.works{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+  <nav><div class="wrap">
+    <div class="brand">Ars&nbsp;<span class="a">Accordia</span></div>
+    <div class="links"><span>Registry</span><span>Collections</span><span>Method</span><span>About</span></div>
+  </div></nav>
+
+  <main class="wrap">
+
+    <header class="coll">
+      <div class="eyebrow">Documented Collection</div>
+      <h1>The Meridian Collection</h1>
+      <div class="meta">Meridian Maritime Bank · corporate collection · Stockholm</div>
+      <div class="credential">Ars Accordia · Substantially Corroborated — published with owner's consent</div>
+    </header>
+
+    <section class="score-panel">
+      <div class="score-left">
+        <div class="seal">
+          <div class="pct">6,528</div>
+          <div class="of">AA Score</div>
+        </div>
+        <div class="band">Substantially Corroborated</div>
+        <div class="asof">96 works · avg standard 68</div>
+        <div class="asof">Assessed May 2026</div>
+      </div>
+      <div class="score-right">
+        <div class="sr-head">The average standard — what's behind it</div>
+
+        <div class="dim-row">
+          <div class="lbl"><b>Completeness</b><span>of each passport</span></div>
+          <div class="bar"><i style="width:74%"></i></div>
+          <div class="val">74%</div>
+        </div>
+        <div class="dim-row">
+          <div class="lbl"><b>Corroboration</b><span>against authorities</span></div>
+          <div class="bar soft"><i style="width:60%"></i></div>
+          <div class="val">60%</div>
+        </div>
+        <div class="sub">Identity (L1) 78% · Provenance (L2) 34% — strong on identity, light on provenance</div>
+
+        <div style="font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:5px;">Average standard</div>
+        <div class="scale">
+          <div class="seg s1"><div class="nm">Minimal<br>Record</div></div>
+          <div class="seg s2"><div class="nm">Source-<br>Supplied</div></div>
+          <div class="seg s3"><div class="nm">Partially<br>Corrob.</div></div>
+          <div class="seg s4 here"><div class="nm">Substantially<br>Corrob.</div></div>
+          <div class="seg s5"><div class="nm">Fully<br>Corrob.</div></div>
+        </div>
+
+        <div class="meth">An open figure — read with the standard and the work count. <a href="#">How the score works →</a></div>
+      </div>
+    </section>
+
+    <div class="shead">Where the score is held back</div>
+    <div class="shead-rule"></div>
+    <div class="gap">
+      <div class="g"><div class="gl">Identity recorded</div><div class="gbar"><i style="width:95%"></i></div><div class="gv">95%</div></div>
+      <div class="g"><div class="gl">Authority-linked</div><div class="gbar"><i style="width:82%"></i></div><div class="gv">82%</div></div>
+      <div class="g low"><div class="gl">Provenance sourced</div><div class="gbar"><i style="width:34%"></i></div><div class="gv">34%</div></div>
+      <div class="g"><div class="gl">Structured / export</div><div class="gbar"><i style="width:90%"></i></div><div class="gv">90%</div></div>
+    </div>
+    <div class="gapnote">Provenance is the clear gap: 34% of catalogued works carry a sourced ownership chain. Closing it is the largest single move toward a <em>Fully Corroborated</em> standard — and it lifts both the Score and the average standard.</div>
+    <div class="excl">Not scored — condition and imaging (not commissioned for this collection) · authenticity · valuation</div>
+
+    <div class="shead">The works</div>
+    <div class="shead-rule"></div>
+    <div class="scope-line">
+      <div>Works documented <b>96</b></div>
+      <div>Corroborated <b>61</b></div>
+      <div>Ars Accordia Score <b>6,528</b></div>
+    </div>
+    <div class="works">
+      <div class="work">
+        <div class="thumb"><span>AP-2026-000118</span></div>
+        <div class="body">
+          <div class="ttl">Harbour, Evening</div>
+          <div class="art">Herberts Siliņš</div>
+          <div class="foot"><span class="ap">AP-2026-000118</span><span class="badge green">Corroborated</span></div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="thumb"><span>AP-2026-000119</span></div>
+        <div class="body">
+          <div class="ttl">Composition in Grey</div>
+          <div class="art">Romans Suta</div>
+          <div class="foot"><span class="ap">AP-2026-000119</span><span class="badge amber">Partial</span></div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="thumb"><span>AP-2026-000120</span></div>
+        <div class="body">
+          <div class="ttl">Still Life with Jug</div>
+          <div class="art">Uga Skulme</div>
+          <div class="foot"><span class="ap">AP-2026-000120</span><span class="badge green">Corroborated</span></div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="thumb"><span>AP-2026-000121</span></div>
+        <div class="body">
+          <div class="ttl">Portrait of a Sailor</div>
+          <div class="art">Jēkabs Tīlbergs</div>
+          <div class="foot"><span class="ap">AP-2026-000121</span><span class="badge grey">Source-supplied</span></div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="thumb"><span>AP-2026-000122</span></div>
+        <div class="body">
+          <div class="ttl">Northern Coast</div>
+          <div class="art">Vilhelms Purvītis</div>
+          <div class="foot"><span class="ap">AP-2026-000122</span><span class="badge green">Corroborated</span></div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="thumb"><span>AP-2026-000123</span></div>
+        <div class="body">
+          <div class="ttl">Untitled (Quay)</div>
+          <div class="art">attrib. — under review</div>
+          <div class="foot"><span class="ap">AP-2026-000123</span><span class="badge amber">Partial</span></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer><div class="wrap">
+    <div>Ars Accordia · arsaccordia.com</div>
+    <div class="sample">Sample / mockup — illustrative data</div>
+  </div></footer>
+
+</body>
+</html>

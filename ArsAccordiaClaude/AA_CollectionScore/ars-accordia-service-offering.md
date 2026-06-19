@@ -1,14 +1,14 @@
 # Ars Accordia — Service Offering
 
-*Draft v0.2 — score-led. The Collection Documentation Score is the product; the Artwork Passport is the unit of work that raises it; the engagement is a loop, not a one-off. Pricing figures are placeholders for you to set.*
+*Draft v0.3 — score-led. The Ars Accordia Score is the product; the Artwork Passport is the unit of work that raises it; the engagement is a loop, not a one-off. Pricing figures are placeholders for you to set.*
 
 ---
 
 ## What Ars Accordia does
 
-Ars Accordia **measures and improves the documentation health of art collections.** We give a collection a single, defensible **Ars Accordia Score** — and a program to raise it over time.
+Ars Accordia **measures and improves the documentation health of art collections.** We give a collection a single, defensible **Ars Accordia Score** — an open figure that grows as the collection is documented — together with the **standard** of its records, and a program to raise both over time.
 
-Underneath, the work is standards-based cataloguing: each work becomes a permanent **Artwork Passport** linking identity, sourced provenance, authority links, and structured export data. But what the collector holds, tracks, and improves is the **score** — a measurable KPI for something that has never been measurable before, and a figure a board, an insurer, or an estate can actually manage.
+Underneath, the work is standards-based cataloguing: each work becomes a permanent **Artwork Passport** linking identity, provenance, condition, and the authority records institutions rely on (Wikidata, Getty ULAN/AAT, VIAF, national libraries). But what the collector holds, tracks, and improves is the **score** — a measurable KPI for something that has never been measurable before, and a number a board, an insurer, or an estate can actually manage.
 
 We are a documentation and reference service — not a marketplace, a gallery, or a valuation house.
 
@@ -19,7 +19,7 @@ We are a documentation and reference service — not a marketplace, a gallery, o
 The score is the heart of the offering. It answers a question every serious owner has and none can currently answer: *how well documented is my collection, really?*
 
 - It measures the **Ars Accordia Passport** — the record we produce for each work — and nothing outside it: not authenticity, not value, only documentation.
-- Each passport earns a value from how **complete** it is and how well it is **corroborated** against independent authorities. Your **Ars Accordia Score** is the sum of those values — an **open figure** that climbs as more of the collection is documented and as records are strengthened.
+- Each passport earns a value from how **complete** it is and how well it is **corroborated** against independent authorities (on our four-level standard). Your **Ars Accordia Score** is the sum of those values — an **open figure** that climbs as more of the collection is documented and as records are strengthened.
 - Beside it sits the **average standard** of your records — a *size-independent* measure of how good they are, carrying a band from *Source-Supplied* to *Fully Corroborated* — and the **number of works documented**. The three are always read together: how much, how good, how many.
 - We don't reduce it to a percentage of the whole collection, because the true total is rarely knowable with confidence — and a number built on a guess is a guess. An open figure with the standard beside it is the honest measure.
 - A **gap map** shows exactly where value is being lost. The score is **private by default** (a confidential KPI for the owner) and **public only with consent** (a credential the collection can display).
@@ -55,10 +55,10 @@ The recurring situation: significant works, no measurable record. When the perso
 
 The entry point, and a complete deliverable in itself. We:
 
-- **Establish scope** — agree the collection's full extent and produce a definitive inventory (the denominator the score is measured against).
-- **Score the collection as it stands** — a baseline Documentation Score and band.
-- **Deliver the gap map** — where the score is lost: provenance documented for X% of works, condition for Y%, authority links for Z%, and so on.
-- **Propose the path to the next band** — the specific work it would take to move from, say, *Partially Documented* to *Substantially Documented*, with scope and cost.
+- **Establish scope** — agree what the collection comprises and produce a definitive inventory of its works. (The score needs no total to be computed; the inventory is valuable in its own right, and lets us track the collection as it grows.)
+- **Score the collection as it stands** — a baseline Ars Accordia Score, the average standard of existing records, the work count, and the band.
+- **Deliver the gap map** — where value is lost: provenance sourced for X% of works, authority links for Y%, and so on.
+- **Propose the path forward** — the specific work it would take to raise the Score and lift the standard a band — say from *Partially Corroborated* to *Substantially Corroborated* — with scope and cost.
 
 The Assessment is discrete, fixed-scope, and low-commitment. It gives a collector a number and a roadmap on its own — and it is what makes the program that follows concrete rather than open-ended.
 
@@ -66,20 +66,20 @@ The Assessment is discrete, fixed-scope, and low-commitment. It gives a collecto
 
 ## Step 2 — The Documentation Program
 
-The core engagement: the cataloguing that raises the score toward an agreed **target band.** Each work researched and catalogued to standard, authorities reconciled, provenance and condition documented and sourced, passports issued with permanent IDs. We **re-score at milestones**, so progress is visible the whole way.
+The core engagement: the cataloguing that raises the **Score** and lifts the **average standard** of the records toward an agreed **target.** Each work researched and catalogued to standard, authorities reconciled, provenance and condition documented and sourced, passports issued with permanent IDs. We **re-score at milestones**, so progress is visible the whole way.
 
 How deep each work is catalogued is itself a lever on how fast and how high the score climbs:
 
 - **Essential depth** — identity, authority links, structured data: the core record.
 - **Documented depth** — adds sourced provenance and a condition report: the full passport.
 
-A program targets a band; the depth and the number of works are set to reach it within scope and budget.
+A program targets a **Score and a standard band**; the depth and the number of works are set to reach them within scope and budget.
 
 ---
 
 ## Step 3 — Maintenance & Monitoring
 
-Once a target band is reached, an optional ongoing engagement keeps it there: new acquisitions catalogued (so coverage stays complete as the collection grows), records re-validated as the authorities they rest on change, and the score monitored and reported on a regular cadence. For an institution or corporate collection, this is the line item that keeps documentation from quietly decaying.
+Once a target is reached, an optional ongoing engagement holds it: new acquisitions catalogued (so the Score keeps pace as the collection grows), records re-validated as the authorities they rest on change, and the score monitored and reported on a regular cadence. For an institution or corporate collection, this is the line item that keeps documentation from quietly decaying.
 
 ---
 
@@ -91,7 +91,7 @@ Each catalogued work receives a permanent **Artwork Passport** (`AP-YYYY-NNNNNN`
 
 ## What you receive
 
-- Your **Collection Documentation Score**, band, and gap map — the KPI you can report and improve.
+- Your **Ars Accordia Score**, the **average standard** of your records, the **work count**, band, and gap map — the KPI you can report and improve.
 - A permanent **Artwork Passport** for each catalogued work.
 - A **private collection workspace** showing the score, milestone progress, and per-work completeness against the standard.
 - **Verified authority links, graded for corroboration.**

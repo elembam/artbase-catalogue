@@ -10,6 +10,17 @@
     "status": "inventory_confirmed",
     "source": "Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets. Rīga: LNMM; Neputns, 2009. (SRC-LNMM-PORTRAITS-2009)"
   },
+  "segment": "institution",
+  "assessment_status": "not_assessed",
+  "listing": {
+    "description": "Portrait and self-portrait collection of the Latvian National Museum of Art, scoped to works documented in the 2009 exhibition catalogue 'Mākslinieks. Portrets. Pašportrets'.",
+    "public_works_catalogued": 0
+  },
+  "claim": {
+    "status": "unclaimed",
+    "claimant_contributor": null,
+    "verified_at": null
+  },
   "member_passports": [],
   "visibility": "public",
   "consent_to_publish_score": false,
@@ -18,15 +29,17 @@
     "image": false
   },
   "score": {
-    "documentation_score": 0,
-    "band": "Inventory Only",
-    "coverage": 0.0,
+    "ars_accordia_score": 0,
+    "average_standard": null,
+    "works_documented": 0,
+    "band": null,
     "completeness": null,
     "corroboration": {
       "blended": null,
       "L1": null,
       "L2": null
     },
+    "relative_completeness": null,
     "gaps": {},
     "sections_in_scope": [
       "authority",
@@ -34,9 +47,9 @@
       "provenance",
       "structured"
     ],
-    "config_version": "weights-v1"
+    "config_version": "weights-v2"
   },
-  "score_generated_at": "2026-06-18T18:09:12+00:00",
+  "score_generated_at": "2026-06-19T07:44:12+00:00",
   "_schema": "artbase:collection:v1",
   "_notes": "No individual artwork passports created yet. Coverage = 0. Score will show 'Inventory Only' until passport creation begins."
 }
