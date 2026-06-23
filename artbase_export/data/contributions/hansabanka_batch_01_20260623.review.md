@@ -16,7 +16,7 @@
 - [x] **Ilmārs Blumbergs → Q13611050** — confirmed 2026-06-23
 - [x] **Džemma Skulme → Q4422700** — confirmed 2026-06-23
 - [x] **Indulis Zariņš → Q13561029** — confirmed 2026-06-23
-- [x] **Mihail Chemiakin → Q2025924** — confirmed 2026-06-23 *(note: not Q214867 as initially estimated)*
+- [x] **Rūdolfs Pinnis → Q55984280** — confirmed 2026-06-23
 - [x] **Vija Maldupe → Q113216930** — confirmed 2026-06-23
 
 ---
@@ -85,17 +85,15 @@
 - P186: Q296955 + Q4259259
 - Risk: LOW
 
-### Work 5 — Mihails Šemjakins, "The Belly of Paris", 1976
-- Latvian: *Parīzes vēders*
-- Medium: lithograph on paper
-- Dimensions: 64 (h) × 46 (w) cm
-- Catalogue no. 192 · page 228
-- Note: artist is Mikhail Shemyakin (Q214867 probable) — internationally famous.
-  1976 = Parisian exile period. A second copy (cat#193, same title, same dimensions)
-  also appears in the catalogue — treat as a separate work only if confirmed distinct.
-- P31: Q185511 (lithograph)
-- P186: Q11472 (paper)
-- Risk: MEDIUM — must verify no duplicate Wikidata item
+### Work 5 — Rūdolfs Pinnis, "Folk-Style Totem", 1989
+- Latvian: *Tautisks totēms*
+- Medium: oil and gold on canvas
+- Dimensions: 150 (h) × 180 (w) cm
+- Catalogue no. 150 · page 227
+- Artist QID: Q55984280 (confirmed 2026-06-23)
+- P31: Q3305213 (painting)
+- P186: Q296955 (oil paint) + Q4259259 (canvas) + Q31020 (gold)
+- Risk: LOW
 
 ### Work 6 — Vija Maldupe, "Carnival", 1977
 - Latvian: *Karnevāls*

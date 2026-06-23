@@ -21,7 +21,7 @@
 #   Ilmārs Blumbergs     → Q13611050
 #   Džemma Skulme        → Q4422700
 #   Indulis Zariņš       → Q13561029
-#   Mihail Chemiakin     → Q2025924
+#   Rūdolfs Pinnis       → Q55984280
 #   Vija Maldupe         → Q113216930
 #
 # BEFORE SUBMITTING:
@@ -94,23 +94,21 @@ LAST	P2048	112U174728	S248	Q139986317	S304	"229"
 LAST	P2049	96U174728	S248	Q139986317	S304	"229"
 
 
-# ── WORK 5: Mihails Šemjakins — "The Belly of Paris" (Parīzes vēders), 1976 ──
-# Lithograph on paper · 64 × 46 cm · catalogue no. 192 · p. 228
-# Artist QID confirmed: Q2025924 (Mihail Chemiakin).
-# STILL CHECK: search Wikidata for this specific work before submitting —
-# Chemiakin is internationally documented and this work may already exist.
-# If found: convert to ENRICH (add P2048, P2049 to the existing item).
+# ── WORK 5: Rūdolfs Pinnis — "Folk-Style Totem" (Tautisks totēms), 1989 ──
+# Oil and gold on canvas · 150 × 180 cm · catalogue no. 150 · p. 227
 
 CREATE
-LAST	Len	"The Belly of Paris"
-LAST	Llv	"Parīzes vēders"
-LAST	Den	"1976 lithograph by Mikhail Shemyakin"
-LAST	P31	Q185511
-LAST	P170	Q2025924	S248	Q139986317	S304	"228"
-LAST	P571	+1976-00-00T00:00:00Z/9	S248	Q139986317	S304	"228"
-LAST	P186	Q11472
-LAST	P2048	64U174728	S248	Q139986317	S304	"228"
-LAST	P2049	46U174728	S248	Q139986317	S304	"228"
+LAST	Len	"Folk-Style Totem"
+LAST	Llv	"Tautisks totēms"
+LAST	Den	"1989 painting by Rūdolfs Pinnis"
+LAST	P31	Q3305213
+LAST	P170	Q55984280	S248	Q139986317	S304	"227"
+LAST	P571	+1989-00-00T00:00:00Z/9	S248	Q139986317	S304	"227"
+LAST	P186	Q296955
+LAST	P186	Q4259259
+LAST	P186	Q31020
+LAST	P2048	150U174728	S248	Q139986317	S304	"227"
+LAST	P2049	180U174728	S248	Q139986317	S304	"227"
 
 
 # ── WORK 6: Vija Maldupe — "Carnival" (Karnevāls), 1977 ──

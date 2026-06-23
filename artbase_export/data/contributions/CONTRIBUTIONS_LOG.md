@@ -258,10 +258,10 @@ passport appears in search results as the authoritative catalogue record.
 | 2 | Sudraba laikmets (The Silver Age) | Ilmārs Blumbergs | 1998 | 222 | Q13611050 ✓ |
 | 3 | Kariatīde (Caryatid) | Džemma Skulme | 2004 | 228 | Q4422700 ✓ |
 | 4 | Šagāla piemiņai (In Memory of Chagall) | Indulis Zariņš | 1996 | 229 | Q13561029 ✓ |
-| 5 | Parīzes vēders (The Belly of Paris) | Mihail Chemiakin | 1976 | 228 | Q2025924 ✓ — check if work already exists before submitting |
+| 5 | Tautisks totēms (Folk-Style Totem) | Rūdolfs Pinnis | 1989 | 227 | Q55984280 ✓ |
 | 6 | Karnevāls (Carnival) | Vija Maldupe | 1977 | 226 | Q113216930 ✓ |
 
-**Status: all artist QIDs resolved. One pre-flight check remaining: search Wikidata for Work 5 (Chemiakin "The Belly of Paris") before submitting.**
+**Status: all artist QIDs resolved. Batch is ready to submit.**
 
 **Submission status:**
 - All artist QIDs resolved: ___
