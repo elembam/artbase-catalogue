@@ -1,5 +1,5 @@
 # Wikidata Contributions Log
-*ArsAccordia account on Wikidata · Last updated: 2026-06-20*
+*ArsAccordia account on Wikidata · Last updated: 2026-06-23*
 
 This file is the single source of truth for all Wikidata work done under the ArsAccordia account.
 It tracks what has been submitted, what is ready to submit, and what is planned — and explains
@@ -13,7 +13,7 @@ why each contribution matters to the Ars Accordia website and business strategy.
 |---|---|---|
 | ✅ VERIFIED | 0 | — |
 | 📤 SUBMITTED | 0 | — |
-| 🟢 READY | 3 batches | test_batch_first5, test_rozentals_batch, lnmm_batch_02_artwork_items |
+| 🟢 READY | 4 batches | test_batch_first5, test_rozentals_batch, lnmm_batch_02_artwork_items, hansabanka_batch_01 |
 | ✅ SUPERSEDED | 1 batch | books_batch1 — both book QIDs already exist (Q139986317, Q139986481) |
 | 📝 DRAFT | 1 batch | qs_tier2_rozentals (artwork CREATEs — superseded by lnmm_batch_02 for 006) |
 | 🟢 READY | 1 batch | lnmm_phase1_p973_20260614 — P973 backlinks for 5 LNMM artists |
@@ -34,8 +34,9 @@ Do these in order. Each step builds trust before the next.
 | 2 | `test_rozentals_batch_20260602` | 5 VIAF IDs | Second test — wait 48h after step 1 for community reaction |
 | 3 | `lnmm_phase1_p973_20260614` | 5 P973 links | Highest strategic value — links Wikidata items to Ars Accordia pages |
 | 4 | `lnmm_batch_02_artwork_items_20260620` | 1 enrich + 4 CREATE | 5 LNMM artwork items; confirm QLNMM_INSTITUTION before submitting |
-| 5 | Phase 3 artist records | 8 ArtBase records | Create canonical records before issuing passports |
-| 6 | Phase 4 artwork items (follow-on) | 5–8 CREATE | Additional LNMM works after batch 02 QIDs are returned |
+| 5 | `hansabanka_batch_01_20260623` | 6 CREATE | Hansabanka works — resolve 5 artist QIDs first |
+| 6 | Phase 3 artist records | 8 ArtBase records | Create canonical records before issuing passports |
+| 7 | Phase 4 artwork items (follow-on) | 5–8 CREATE | Additional LNMM works after batch 02 QIDs are returned |
 
 ---
 
@@ -239,6 +240,38 @@ passport appears in search results as the authoritative catalogue record.
 - [ ] Add Latvian labels (Lnl) for each item
 
 **Do not submit until the Rozentāls exemplary passport is issued.**
+
+---
+
+### BATCH: hansabanka_batch_01_20260623 · 🟢 READY (pending artist QID verification)
+
+**File:** `hansabanka_batch_01_20260623.qs`
+**Review doc:** `hansabanka_batch_01_20260623.review.md`
+**Generated:** 2026-06-23
+**Operations:** 6 CREATE
+**Source:** Q139986317 (Hansabanka Contemporary Art Collection catalogue, 2007)
+**Pages used:** 222, 226, 228, 229
+
+| # | Work | Artist | Year | Page | Artist QID status |
+|---|---|---|---|---|---|
+| 1 | Ciešanu atziņas (Verities of Suffering) | Ilmārs Blumbergs | 1999 | 222 | QARTIST_BLUMBERGS — needs verification |
+| 2 | Sudraba laikmets (The Silver Age) | Ilmārs Blumbergs | 1998 | 222 | QARTIST_BLUMBERGS — needs verification |
+| 3 | Kariatīde (Caryatid) | Džemma Skulme | 2004 | 228 | QARTIST_SKULME — needs verification |
+| 4 | Šagāla piemiņai (In Memory of Chagall) | Indulis Zariņš | 1996 | 229 | QARTIST_ZARINS_INDULIS — needs verification |
+| 5 | Parīzes vēders (The Belly of Paris) | Mihails Šemjakins | 1976 | 228 | likely Q214867 — verify + check if work already exists |
+| 6 | Karnevāls (Carnival) | Vija Maldupe | 1977 | 226 | QARTIST_MALDUPE — needs verification |
+
+**To unblock:** Look up each artist on Wikidata and substitute QIDs in the .qs file.
+
+**Submission status:**
+- All artist QIDs resolved: ___
+- Submitted at: _______________
+- Work 1 QID: _______________
+- Work 2 QID: _______________
+- Work 3 QID: _______________
+- Work 4 QID: _______________
+- Work 5 QID: _______________ *(or "ENRICH — existing item" if already on Wikidata)*
+- Work 6 QID: _______________
 
 ---
 
