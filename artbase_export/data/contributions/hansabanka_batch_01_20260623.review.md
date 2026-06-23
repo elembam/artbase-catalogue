@@ -13,15 +13,11 @@
 
 ### Artist QIDs — resolve all before submitting
 
-- [ ] **QARTIST_BLUMBERGS** — Ilmārs Blumbergs (1943–2016), Latvian painter, graphic artist, theater designer. One of Latvia's most celebrated artists. Search: `Ilmārs Blumbergs` on Wikidata. Substitute into 2 rows (Works 1 and 2).
-
-- [ ] **QARTIST_SKULME** — Džemma Skulme (1925–2022), Latvian painter. National Artist of Latvia, longtime chair of the Latvian Artists' Union. Search: `Džemma Skulme` on Wikidata. Substitute into 1 row (Work 3).
-
-- [ ] **QARTIST_ZARINS_INDULIS** — Indulis Zariņš (1929–1997), Latvian graphic artist and painter. Famous for Latvian banknote and stamp design, ethnographic illustration. *(Note: there are multiple Zariņš artists in this catalogue — this is specifically Indulis.)* Search: `Indulis Zariņš` on Wikidata. Substitute into 1 row (Work 4).
-
-- [ ] **QARTIST_SHEMYAKIN** — Mihails Šemjakins = Mikhail Shemyakin, Russian-American artist (b. 1943). Internationally famous; likely **Q214867** — verify by checking that item. Substitute into 1 row (Work 5).
-
-- [ ] **QARTIST_MALDUPE** — Vija Maldupe (b. 1941), Latvian painter. Search: `Vija Maldupe` on Wikidata. If no item exists, she may need to be created first (artist item) before this work item can be created. Substitute into 1 row (Work 6).
+- [x] **Ilmārs Blumbergs → Q13611050** — confirmed 2026-06-23
+- [x] **Džemma Skulme → Q4422700** — confirmed 2026-06-23
+- [x] **Indulis Zariņš → Q13561029** — confirmed 2026-06-23
+- [x] **Mihail Chemiakin → Q2025924** — confirmed 2026-06-23 *(note: not Q214867 as initially estimated)*
+- [x] **Vija Maldupe → Q113216930** — confirmed 2026-06-23
 
 ---
 

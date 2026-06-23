@@ -17,18 +17,17 @@
 #   The Hansabanka/Swedbank art collection does not yet have a confirmed
 #   Wikidata QID. Omitted from this batch. Add as a follow-up once resolved.
 #
-# STILL NEEDED (resolve before submitting):
-#   QARTIST_BLUMBERGS     = QID for Ilmārs Blumbergs (Latvian artist, 1943–2016)
-#   QARTIST_SKULME        = QID for Džemma Skulme (Latvian artist, 1925–2022)
-#   QARTIST_ZARINS_INDULIS = QID for Indulis Zariņš (Latvian artist, 1929–1997)
-#   QARTIST_SHEMYAKIN     = QID for Mihails Šemjakins (likely Q214867 — verify)
-#   QARTIST_MALDUPE       = QID for Vija Maldupe (Latvian painter)
+# RESOLVED (2026-06-23):
+#   Ilmārs Blumbergs     → Q13611050
+#   Džemma Skulme        → Q4422700
+#   Indulis Zariņš       → Q13561029
+#   Mihail Chemiakin     → Q2025924
+#   Vija Maldupe         → Q113216930
 #
 # BEFORE SUBMITTING:
-#   1. Verify no duplicate Wikidata items exist (especially for Šemjakins —
-#      his works are internationally documented and may already be on Wikidata).
-#   2. Confirm all artist QIDs by searching Wikidata.
-#   3. Replace all QARTIST_* placeholders with real QIDs.
+#   1. Verify no duplicate Wikidata item exists for Work 5 (Šemjakins "The Belly
+#      of Paris" 1976 — search Wikidata before submitting this CREATE block).
+#   2. Check Q22043968-style existence search for each work title + creator.
 # ══════════════════════════════════════════════════════════════════════
 
 
@@ -40,7 +39,7 @@ LAST	Len	"Verities of Suffering"
 LAST	Llv	"Ciešanu atziņas"
 LAST	Den	"1999 print by Ilmārs Blumbergs"
 LAST	P31	Q11060274
-LAST	P170	QARTIST_BLUMBERGS	S248	Q139986317	S304	"222"
+LAST	P170	Q13611050	S248	Q139986317	S304	"222"
 LAST	P571	+1999-00-00T00:00:00Z/9	S248	Q139986317	S304	"222"
 LAST	P186	Q11472
 LAST	P2048	61U174728	S248	Q139986317	S304	"222"
@@ -55,7 +54,7 @@ LAST	Len	"The Silver Age"
 LAST	Llv	"Sudraba laikmets"
 LAST	Den	"1998 print by Ilmārs Blumbergs"
 LAST	P31	Q11060274
-LAST	P170	QARTIST_BLUMBERGS	S248	Q139986317	S304	"222"
+LAST	P170	Q13611050	S248	Q139986317	S304	"222"
 LAST	P571	+1998-00-00T00:00:00Z/9	S248	Q139986317	S304	"222"
 LAST	P186	Q11472
 LAST	P2048	59U174728	S248	Q139986317	S304	"222"
@@ -71,7 +70,7 @@ LAST	Len	"Caryatid (Scare-Crow)"
 LAST	Llv	"Kariatīde. (Putnu biedēklis)"
 LAST	Den	"2004 painting by Džemma Skulme"
 LAST	P31	Q3305213
-LAST	P170	QARTIST_SKULME	S248	Q139986317	S304	"228"
+LAST	P170	Q4422700	S248	Q139986317	S304	"228"
 LAST	P571	+2004-00-00T00:00:00Z/9	S248	Q139986317	S304	"228"
 LAST	P186	Q296955
 LAST	P186	Q614700
@@ -87,7 +86,7 @@ LAST	Len	"In Memory of Chagall"
 LAST	Llv	"Šagāla piemiņai"
 LAST	Den	"1996 painting by Indulis Zariņš"
 LAST	P31	Q3305213
-LAST	P170	QARTIST_ZARINS_INDULIS	S248	Q139986317	S304	"229"
+LAST	P170	Q13561029	S248	Q139986317	S304	"229"
 LAST	P571	+1996-00-00T00:00:00Z/9	S248	Q139986317	S304	"229"
 LAST	P186	Q296955
 LAST	P186	Q4259259
@@ -97,17 +96,17 @@ LAST	P2049	96U174728	S248	Q139986317	S304	"229"
 
 # ── WORK 5: Mihails Šemjakins — "The Belly of Paris" (Parīzes vēders), 1976 ──
 # Lithograph on paper · 64 × 46 cm · catalogue no. 192 · p. 228
-# IMPORTANT: Šemjakins (= Mikhail Shemyakin) is internationally famous.
-#   Likely QID: Q214867 — VERIFY before submitting.
-#   This work may ALREADY exist on Wikidata — search before CREATEing.
-#   If it exists: convert to ENRICH (add P195, P2048, P2049 to the existing item).
+# Artist QID confirmed: Q2025924 (Mihail Chemiakin).
+# STILL CHECK: search Wikidata for this specific work before submitting —
+# Chemiakin is internationally documented and this work may already exist.
+# If found: convert to ENRICH (add P2048, P2049 to the existing item).
 
 CREATE
 LAST	Len	"The Belly of Paris"
 LAST	Llv	"Parīzes vēders"
 LAST	Den	"1976 lithograph by Mikhail Shemyakin"
 LAST	P31	Q185511
-LAST	P170	QARTIST_SHEMYAKIN	S248	Q139986317	S304	"228"
+LAST	P170	Q2025924	S248	Q139986317	S304	"228"
 LAST	P571	+1976-00-00T00:00:00Z/9	S248	Q139986317	S304	"228"
 LAST	P186	Q11472
 LAST	P2048	64U174728	S248	Q139986317	S304	"228"
@@ -122,7 +121,7 @@ LAST	Len	"Carnival"
 LAST	Llv	"Karnevāls"
 LAST	Den	"1977 painting by Vija Maldupe"
 LAST	P31	Q3305213
-LAST	P170	QARTIST_MALDUPE	S248	Q139986317	S304	"226"
+LAST	P170	Q113216930	S248	Q139986317	S304	"226"
 LAST	P571	+1977-00-00T00:00:00Z/9	S248	Q139986317	S304	"226"
 LAST	P186	Q296955
 LAST	P186	Q4259259

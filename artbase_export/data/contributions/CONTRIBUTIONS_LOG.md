@@ -254,14 +254,14 @@ passport appears in search results as the authoritative catalogue record.
 
 | # | Work | Artist | Year | Page | Artist QID status |
 |---|---|---|---|---|---|
-| 1 | Ciešanu atziņas (Verities of Suffering) | Ilmārs Blumbergs | 1999 | 222 | QARTIST_BLUMBERGS — needs verification |
-| 2 | Sudraba laikmets (The Silver Age) | Ilmārs Blumbergs | 1998 | 222 | QARTIST_BLUMBERGS — needs verification |
-| 3 | Kariatīde (Caryatid) | Džemma Skulme | 2004 | 228 | QARTIST_SKULME — needs verification |
-| 4 | Šagāla piemiņai (In Memory of Chagall) | Indulis Zariņš | 1996 | 229 | QARTIST_ZARINS_INDULIS — needs verification |
-| 5 | Parīzes vēders (The Belly of Paris) | Mihails Šemjakins | 1976 | 228 | likely Q214867 — verify + check if work already exists |
-| 6 | Karnevāls (Carnival) | Vija Maldupe | 1977 | 226 | QARTIST_MALDUPE — needs verification |
+| 1 | Ciešanu atziņas (Verities of Suffering) | Ilmārs Blumbergs | 1999 | 222 | Q13611050 ✓ |
+| 2 | Sudraba laikmets (The Silver Age) | Ilmārs Blumbergs | 1998 | 222 | Q13611050 ✓ |
+| 3 | Kariatīde (Caryatid) | Džemma Skulme | 2004 | 228 | Q4422700 ✓ |
+| 4 | Šagāla piemiņai (In Memory of Chagall) | Indulis Zariņš | 1996 | 229 | Q13561029 ✓ |
+| 5 | Parīzes vēders (The Belly of Paris) | Mihail Chemiakin | 1976 | 228 | Q2025924 ✓ — check if work already exists before submitting |
+| 6 | Karnevāls (Carnival) | Vija Maldupe | 1977 | 226 | Q113216930 ✓ |
 
-**To unblock:** Look up each artist on Wikidata and substitute QIDs in the .qs file.
+**Status: all artist QIDs resolved. One pre-flight check remaining: search Wikidata for Work 5 (Chemiakin "The Belly of Paris") before submitting.**
 
 **Submission status:**
 - All artist QIDs resolved: ___
