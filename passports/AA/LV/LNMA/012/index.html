@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Artwork Passport — Folk Festival at Kokmuiža. (Kocēni Parish near Valmiera. Vidzeme) by Kārlis Hūns. Documented by Ars Accordia. ArtBase ID AA/LV/LNMA/012.">
+<title>Passport — Folk Festival at Kokmuiža. (Kocēni Parish near Valmiera. Vidzeme) · Ars Accordia</title>
+<link rel="canonical" href="https://arsaccordia.com/passports/AA/LV/LNMA/012/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght,SOFT,WONK@9..144,0..1,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:      #f6f1e6;
+    --paper-deep: #ebe3d1;
+    --ink:        #1c1814;
+    --ink-soft:   #4a4338;
+    --ink-faded:  #80766a;
+    --seal:       #6e1818;
+    --gold:       #8a6f2e;
+    --rule:       #c7bca5;
+    --grid:       rgba(110,24,24,0.04);
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body {
+    background: var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+  body::before {
+    content:'';
+    position:fixed; inset:0; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity:0.5; z-index:1; mix-blend-mode:multiply;
+  }
+  .wrap { max-width:880px; margin:0 auto; padding:40px 24px; position:relative; z-index:2; }
+
+  .breadcrumb { font-size:0.75rem; color:var(--ink-faded); margin-bottom:24px; }
+  .breadcrumb a { color:var(--seal); text-decoration:none; }
+  .breadcrumb a:hover { text-decoration:underline; }
+  .breadcrumb span { margin:0 6px; }
+
+  .passport {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow:
+      0 1px 0 rgba(28,24,20,0.04),
+      0 20px 40px -20px rgba(28,24,20,0.15),
+      0 60px 100px -60px rgba(28,24,20,0.1);
+  }
+
+  /* HEADER */
+  .pp-header {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid var(--ink);
+    display: flex; justify-content:space-between; align-items:flex-start; gap:24px;
+    position:relative;
+  }
+  .pp-header::after {
+    content:''; position:absolute; left:40px; right:40px; bottom:-7px;
+    border-bottom:1px solid var(--ink);
+  }
+  .pp-issuer {
+    font-family:'Fraunces',serif; font-weight:600; font-size:10px;
+    letter-spacing:0.28em; text-transform:uppercase; color:var(--seal); margin-bottom:5px;
+  }
+  .pp-doc-title {
+    font-family:'Fraunces',serif; font-weight:400; font-style:italic;
+    font-size:26px; line-height:1; color:var(--ink);
+  }
+  .pp-subtitle {
+    margin-top:3px; font-size:10px; letter-spacing:0.18em;
+    text-transform:uppercase; color:var(--ink-faded);
+  }
+  .pp-seal {
+    width:80px; height:80px; border-radius:50%;
+    border:1.5px solid var(--seal); flex-shrink:0;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; color:var(--seal);
+    background:radial-gradient(circle at center, var(--paper) 60%, rgba(110,24,24,0.06));
+    position:relative;
+  }
+  .pp-seal::before {
+    content:''; position:absolute; inset:5px; border-radius:50%;
+    border:0.5px solid var(--seal);
+  }
+  .pp-seal-label { font-family:'Fraunces',serif; font-style:italic; font-size:8px; letter-spacing:0.12em; text-transform:uppercase; line-height:1.2; }
+  .pp-seal-score { font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; margin-top:2px; }
+  .pp-seal-unit  { font-family:'Fraunces',serif; font-style:italic; font-size:9px; color:var(--gold); }
+
+  /* META BAR */
+  .pp-meta {
+    padding:12px 40px;
+    background:var(--paper-deep);
+    display:flex; gap:32px; flex-wrap:wrap;
+    border-bottom:1px solid var(--rule);
+  }
+  .pp-meta dl { display:flex; flex-direction:column; gap:2px; }
+  .pp-meta dt { font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-faded); font-weight:500; }
+  .pp-meta dd { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink); font-weight:500; }
+
+  /* HERO */
+  .pp-hero {
+    padding:36px 40px 28px;
+    display:grid; grid-template-columns:200px 1fr; gap:36px;
+    border-bottom:1px solid var(--rule);
+  }
+  @media (max-width:640px) { .pp-hero { grid-template-columns:1fr; } }
+  .no-image {
+    width:100%; aspect-ratio:3/4; background:var(--paper-deep);
+    border:1px solid var(--rule); display:flex; align-items:center;
+    justify-content:center; font-family:'Fraunces',serif;
+    font-style:italic; color:var(--ink-faded); font-size:12px; text-align:center;
+    padding:16px;
+  }
+  .tombstone-label {
+    font-size:9px; letter-spacing:0.22em; text-transform:uppercase;
+    color:var(--ink-faded); font-weight:500; margin-bottom:6px;
+  }
+  .tombstone-title {
+    font-family:'Fraunces',serif; font-style:italic; font-weight:400;
+    font-size:36px; line-height:1.05; letter-spacing:-0.01em;
+    color:var(--ink); margin-bottom:4px;
+  }
+  .tombstone-artist {
+    font-family:'Fraunces',serif; font-weight:500; font-size:17px;
+    color:var(--ink-soft); margin-bottom:2px;
+  }
+  .tombstone-dates {
+    font-size:12px; color:var(--ink-faded); letter-spacing:0.04em; margin-bottom:16px;
+  }
+  .tombstone-grid {
+    display:grid; grid-template-columns:100px 1fr;
+    row-gap:6px; column-gap:12px;
+    padding-top:16px; border-top:1px solid var(--rule);
+  }
+  .tombstone-grid dt { font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-faded); font-weight:500; padding-top:2px; }
+  .tombstone-grid dd { font-size:13px; color:var(--ink); }
+
+  /* SECTIONS */
+  .pp-section { padding:28px 40px; border-bottom:1px solid var(--rule); }
+  .pp-section:last-child { border-bottom:none; }
+  .pp-section-title {
+    font-size:9px; letter-spacing:0.24em; text-transform:uppercase;
+    color:var(--ink-faded); font-weight:600; margin-bottom:16px;
+  }
+
+  .score-table { width:100%; border-collapse:collapse; }
+
+  /* FOOTER */
+  .pp-footer {
+    padding:20px 40px;
+    background:var(--paper-deep);
+    border-top:1px solid var(--rule);
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;
+  }
+  .pp-footer-id { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-faded); }
+  .pp-footer-link { font-size:11px; color:var(--seal); text-decoration:none; }
+  .pp-footer-link:hover { text-decoration:underline; }
+
+  @media print {
+    body { background:white; background-image:none; }
+    body::before { display:none; }
+    .breadcrumb { display:none; }
+    .passport { box-shadow:none; border:1px solid #ccc; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "VisualArtwork",
+  "name": "Folk Festival at Kokmuiža. (Kocēni Parish near Valmiera. Vidzeme)",
+  "creator": {
+    "@type": "Person",
+    "name": "Kārlis Hūns",
+    "sameAs": "https://www.wikidata.org/wiki/Q4152126"
+  },
+  "dateCreated": "1855",
+  "artMedium": "Watercolour on paper",
+  "artform": "Watercolour",
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Latvia"
+  },
+  "contentLocation": {
+    "@type": "Museum",
+    "name": "Latvian National Museum of Art",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rīga",
+      "addressCountry": "LV"
+    },
+    "sameAs": "https://www.wikidata.org/wiki/Q1370465"
+  },
+  "height": {
+    "@type": "QuantitativeValue",
+    "value": 21.7,
+    "unitCode": "CMT"
+  },
+  "width": {
+    "@type": "QuantitativeValue",
+    "value": 27.3,
+    "unitCode": "CMT"
+  },
+  "identifier": "VMM Z-4128"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="breadcrumb">
+    <a href="/">Ars Accordia</a>
+    <span>›</span>
+    <a href="/collections/">Collections</a>
+    <span>›</span>
+    <a href="/collections/lnmm/">LNMM Portrait Collection</a>
+    <span>›</span>
+    Folk Festival at Kokmuiža. (Kocēni Parish near Valmiera. Vidzeme)
+  </nav>
+
+  <article class="passport">
+
+    <header class="pp-header">
+      <div>
+        <div class="pp-issuer">Ars Accordia · Artwork Passport</div>
+        <div class="pp-doc-title">Folk Festival at Kokmuiža. (Kocēni Parish near Valmiera. Vidzeme)</div>
+        <div class="pp-subtitle">Kārlis Hūns · 1855 · Latvian National Museum of Art</div>
+      </div>
+      <div class="pp-seal">
+        <div class="pp-seal-label">Ars Accordia Score</div>
+        <div class="pp-seal-score">63</div>
+        <div class="pp-seal-unit">Partial Record</div>
+      </div>
+    </header>
+
+    <div class="pp-meta">
+      <dl><dt>ArtBase ID</dt><dd>AA/LV/LNMA/012</dd></dl>
+      <dl><dt>Object type</dt><dd>Watercolour</dd></dl>
+      <dl><dt>Inventory no.</dt><dd>VMM Z-4128</dd></dl>
+      <dl><dt>Score</dt><dd>63 / 100</dd></dl>
+      <dl><dt>Status</dt><dd><span style="display:inline-flex;align-items:center;gap:6px;font-size:0.78rem;color:#b45309;font-weight:500"><span style="width:8px;height:8px;border-radius:50%;background:#b45309;flex-shrink:0"></span>Cross-referenced</span></dd></dl>
+    </div>
+
+    <section class="pp-hero">
+      <div>
+        <div class="no-image">No photograph<br>on record</div>
+      </div>
+      <div>
+        <div class="tombstone-label">Work identity</div>
+        <div class="tombstone-title">Folk Festival at Kokmuiža. (Kocēni Parish near Valmiera. Vidzeme)</div>
+        <div class="tombstone-artist">Kārlis Hūns</div>
+        <div class="tombstone-dates"></div>
+        <dl class="tombstone-grid">
+          <dt>Date</dt><dd>1855</dd>
+          <dt>Medium</dt><dd>Watercolour on paper</dd>
+          <dt>Dimensions</dt><dd>21.7 (h) x 27.3 (w) cm</dd>
+          <dt>Inventory</dt><dd>VMM Z-4128</dd>
+          <dt>Collection</dt><dd>Latvian National Museum of Art</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="pp-section">
+      <div class="pp-section-title">Authority links · 1 authority linked</div>
+      <dl style="margin:0">
+        
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid var(--rule)">
+        <dt style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-faded);font-weight:500;padding-top:2px">Artist (Wikidata)</dt>
+        <dd style="display:flex;align-items:flex-start;gap:8px"><span style="width:6px;height:6px;border-radius:50%;background:#2e7d32;flex-shrink:0;margin-top:4px"></span><a href="https://www.wikidata.org/wiki/Q4152126" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--seal);text-decoration:none">Q4152126</a></dd>
+      </div>
+      </dl>
+    </section>
+
+    <section class="pp-section">
+      <div class="pp-section-title">Provenance · 1 step</div>
+      
+    <div style="display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--rule)">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--ink-faded);flex-shrink:0;padding-top:2px">01</div>
+      <div>
+        <div style="font-size:0.9rem;color:var(--ink)">Held in the collection of Latvijas Nacionālais mākslas muzejs (LNMM), Rīga, Latvia</div>
+        <div style="font-size:0.7rem;color:var(--ink-faded);margin-top:4px;font-style:italic">Current location confirmed: LNMM open data via Google Arts & Culture (https://artsandculture.google.com/asset/folk-festival-at-kokmu%C4%BC%C4%BC%C4%81-koc%C4%93ni-parish-near-valmiera-vidzeme/zwHCxzbKvTxMjA). Citation to SRC-LNMM-PORTRAITS-2009 removed: this is a genre/landscape work held in the Latvian Graphic Art Collection, not a portrait — it cannot be sourced to the 2009 portrait exhibition catalogue without individual verification.</div>
+      </div>
+    </div>
+    </section>
+
+    <section class="pp-section"><div class="pp-section-title">Sources</div><div style="padding:10px 0;border-bottom:1px solid var(--rule);font-size:0.85rem;color:var(--ink)">Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets. Rīga: Latvijas Nacionālais mākslas muzejs; Neputns, 2009.<span style="display:inline-block;margin-left:8px;font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--ink-faded)">SRC-LNMM-PORTRAITS-2009</span></div></section>
+
+    <section class="pp-section">
+      <div class="pp-section-title">Documentation score · Partial Record</div>
+      <table class="score-table">
+        <thead>
+          <tr style="border-bottom:2px solid var(--ink)">
+            <th style="text-align:left;padding:6px 12px 6px 0;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faded);font-weight:600">Section</th>
+            <th style="text-align:left;padding:6px 12px;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faded);font-weight:600">Coverage</th>
+            <th style="text-align:right;padding:6px 0 6px 12px;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faded);font-weight:600">Weight × Fill = Contrib</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+    <tr style="border-bottom:1px solid var(--rule)">
+      <td style="padding:10px 12px 10px 0;font-size:0.82rem;color:var(--ink)">Identity</td>
+      <td style="padding:10px 12px;font-size:0.7rem;color:var(--ink-soft);width:220px">6 of 6 fields<br><div style="height:4px;background:var(--rule);border-radius:2px;margin-top:4px"><div style="height:4px;width:100%;background:var(--seal);border-radius:2px"></div></div></td>
+      <td style="padding:10px 0 10px 12px;font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--ink-faded);text-align:right;white-space:nowrap">0.35 × 100% = 0.35</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--rule)">
+      <td style="padding:10px 12px 10px 0;font-size:0.82rem;color:var(--ink)">Authority</td>
+      <td style="padding:10px 12px;font-size:0.7rem;color:var(--ink-soft);width:220px">1 public authority — ARTIST_WIKIDATA<br><div style="height:4px;background:var(--rule);border-radius:2px;margin-top:4px"><div style="height:4px;width:50%;background:var(--seal);border-radius:2px"></div></div></td>
+      <td style="padding:10px 0 10px 12px;font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--ink-faded);text-align:right;white-space:nowrap">0.25 × 50% = 0.12</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--rule)">
+      <td style="padding:10px 12px 10px 0;font-size:0.82rem;color:var(--ink)">Provenance</td>
+      <td style="padding:10px 12px;font-size:0.7rem;color:var(--ink-soft);width:220px">0 of 1 step sourced — citation removed pending verification<br><div style="height:4px;background:var(--rule);border-radius:2px;margin-top:4px"><div style="height:4px;width:0%;background:var(--seal);border-radius:2px"></div></div></td>
+      <td style="padding:10px 0 10px 12px;font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--ink-faded);text-align:right;white-space:nowrap">0.25 × 0% = 0.00</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--rule)">
+      <td style="padding:10px 12px 10px 0;font-size:0.82rem;color:var(--ink)">Structured</td>
+      <td style="padding:10px 12px;font-size:0.7rem;color:var(--ink-soft);width:220px">JSON-LD only<br><div style="height:4px;background:var(--rule);border-radius:2px;margin-top:4px"><div style="height:4px;width:100%;background:var(--seal);border-radius:2px"></div></div></td>
+      <td style="padding:10px 0 10px 12px;font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--ink-faded);text-align:right;white-space:nowrap">0.15 × 100% = 0.15</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--rule)">
+      <td style="padding:10px 12px 10px 0;font-size:0.82rem;color:var(--ink)">Condition <span style="font-size:0.65rem;color:var(--ink-faded)">(not in scope)</span></td>
+      <td style="padding:10px 12px;font-size:0.7rem;color:var(--ink-soft);width:220px">not commissioned<br></td>
+      <td style="padding:10px 0 10px 12px;font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--ink-faded);text-align:right;white-space:nowrap">0.00 × — = —</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--rule)">
+      <td style="padding:10px 12px 10px 0;font-size:0.82rem;color:var(--ink)">Image <span style="font-size:0.65rem;color:var(--ink-faded)">(not in scope)</span></td>
+      <td style="padding:10px 12px;font-size:0.7rem;color:var(--ink-soft);width:220px">not commissioned<br></td>
+      <td style="padding:10px 0 10px 12px;font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--ink-faded);text-align:right;white-space:nowrap">0.00 × — = —</td>
+    </tr>
+          <tr>
+            <td colspan="2" style="padding:12px 12px 0 0;font-size:0.8rem;font-weight:600;color:var(--ink)">Passport score</td>
+            <td style="padding:12px 0 0 12px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:700;color:var(--seal)">63 / 100</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:12px;font-size:0.7rem;color:var(--ink-faded)">Weights-v3 · condition and image out of scope for museum-held works not commissioned for physical assessment · <a href="/method/" style="color:var(--seal)">methodology</a></p>
+    </section>
+
+    <footer class="pp-footer">
+      <span class="pp-footer-id">AA/LV/LNMA/012</span>
+      <a href="/collections/lnmm/" class="pp-footer-link">← LNMM Portrait Collection</a>
+    </footer>
+
+  </article>
+</div>
+</body>
+</html>
