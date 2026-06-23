@@ -34,11 +34,6 @@
     "works_documented": 0,
     "band": null,
     "completeness": null,
-    "corroboration": {
-      "blended": null,
-      "L1": null,
-      "L2": null
-    },
     "relative_completeness": null,
     "gaps": {},
     "sections_in_scope": [
@@ -47,9 +42,9 @@
       "provenance",
       "structured"
     ],
-    "config_version": "weights-v2"
+    "config_version": "weights-v3"
   },
-  "score_generated_at": "2026-06-19T07:44:12+00:00",
+  "score_generated_at": "2026-06-20T06:49:44+00:00",
   "_schema": "artbase:collection:v1",
   "_notes": "No individual artwork passports created yet. Coverage = 0. Score will show 'Inventory Only' until passport creation begins."
 }

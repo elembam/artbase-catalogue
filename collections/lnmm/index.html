@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Latvia National Museum of Art (LNMA) collection — 354 works by 55 artists in the Ars Accordia catalogue. Latvian art 18th–20th century.">
-<title>LNMA Collection — Ars Accordia</title>
+<meta name="description" content="Works held at the Latvian National Museum of Art (LNMM), documented by Ars Accordia. Ars Accordia Score 550 · 6 works catalogued · avg standard 91.7 · Complete Record.">
+<title>LNMM — Works documented by Ars Accordia</title>
 <link rel="canonical" href="https://arsaccordia.com/collections/lnmm/">
 <meta property="og:title"       content="LNMA Collection — Ars Accordia">
 <meta property="og:description" content="354 works by 55 Latvian artists from the Latvia National Museum of Art.">
@@ -149,6 +149,38 @@
   }
   @media print { .site-nav, .filter-bar { display: none; } }
 
+  /* Ars Accordia Score panel */
+  .aa-score-panel { margin: 28px 0 0; padding: 20px 24px; background: white; border: 1px solid var(--rule); border-left: 3px solid var(--seal); border-radius: 2px; }
+  .aa-score-headline { display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; margin-bottom: 14px; }
+  .aa-score-number { font-family: 'Fraunces', Georgia, serif; font-size: 3rem; font-weight: 500; color: var(--seal); line-height: 1; letter-spacing: -0.02em; }
+  .aa-score-meta { display: flex; flex-direction: column; gap: 3px; }
+  .aa-score-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-faded); font-weight: 600; }
+  .aa-score-standard { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--ink); }
+  .aa-score-gaps { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 14px; border-top: 1px solid var(--rule); padding-top: 12px; }
+  .aa-score-gap { display: flex; flex-direction: column; gap: 2px; }
+  .aa-score-gap-val { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 500; color: var(--ink); }
+  .aa-score-gap-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faded); }
+  .aa-score-note { font-size: 0.72rem; color: var(--ink-faded); font-style: italic; margin-top: 12px; line-height: 1.6; }
+  .aa-method-link { color: var(--seal); text-decoration: none; }
+  .aa-method-link:hover { text-decoration: underline; }
+
+  /* Cross-reference status badges on passports */
+  .badge-amber { border-color: #b87c15; color: #b87c15; background: #fff9ed; }
+
+  /* Documented passports section */
+  .passport-list { display: grid; gap: 8px; }
+  .passport-row {
+    background: white; border: 1px solid var(--rule); border-radius: 3px;
+    padding: 14px 16px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    transition: border-color 0.15s;
+  }
+  .passport-row:hover { border-color: var(--seal); }
+  .passport-title { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 0.95rem; color: var(--ink); flex: 1; min-width: 200px; }
+  .passport-artist { font-size: 0.8rem; color: var(--ink-soft); min-width: 160px; }
+  .passport-date { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--ink-faded); min-width: 56px; }
+  .passport-score { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 500; color: var(--seal); min-width: 40px; text-align: right; }
+  .passport-inv { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--ink-faded); }
+
 </style>
 </head>
 <body>
@@ -181,20 +213,120 @@
 <div class="wrap">
 
   <header class="page-header">
-    <p class="page-eyebrow">Collection · Latvia National Museum of Art</p>
-    <h1 class="page-title">LNMA Latvian Art Collection</h1>
+    <p class="page-eyebrow">Latvijas Nacionālais mākslas muzejs · Works documented by Ars Accordia</p>
+    <h1 class="page-title">LNMM — Latvian National Museum of Art</h1>
     <p class="page-subtitle">
-      Works from the Latvia National Museum of Art (Latvijas Nacionālais mākslas muzejs) —
-      paintings, drawings, watercolours, and sculpture spanning the 18th through the first
-      half of the 20th century. Source: LNMA open data via Google Arts &amp; Culture.
+      Ars Accordia's public-registry catalogue of works held at LNMM. This is not a commissioned
+      assessment of the museum — it is Ars Accordia's own catalogue, built from public sources
+      and authority cross-references. Scores reflect what has been documented; no coverage
+      percentage is claimed. <a href="../../method/" class="aa-method-link">How the score is built →</a>
     </p>
+
+    <div class="aa-score-panel">
+      <div class="aa-score-headline">
+        <div class="aa-score-number">502</div>
+        <div class="aa-score-meta">
+          <span class="aa-score-label">Ars Accordia Score</span>
+          <span class="aa-score-standard">6 works documented · avg standard 83.7 · <strong>Substantial Record</strong></span>
+        </div>
+      </div>
+      <div class="aa-score-gaps">
+        <div class="aa-score-gap">
+          <span class="aa-score-gap-val">100%</span>
+          <span class="aa-score-gap-label">Identity</span>
+        </div>
+        <div class="aa-score-gap">
+          <span class="aa-score-gap-val">100%</span>
+          <span class="aa-score-gap-label">Authority</span>
+        </div>
+        <div class="aa-score-gap">
+          <span class="aa-score-gap-val">67%</span>
+          <span class="aa-score-gap-label">Provenance</span>
+        </div>
+        <div class="aa-score-gap">
+          <span class="aa-score-gap-val">100%</span>
+          <span class="aa-score-gap-label">Structured</span>
+        </div>
+      </div>
+      <p class="aa-score-note">Score = sum of passport scores for all 6 documented works. Condition and image are not in scope for these passports (museum-held works, not commissioned for physical assessment). Weights-v3 · config: <a href="../../method/" class="aa-method-link">arsaccordia.com/method</a></p>
+    </div>
+
     <div class="stats-row">
-      <div class="stat"><span class="stat-value">354</span><span class="stat-label">Works</span></div>
+      <div class="stat"><span class="stat-value">6</span><span class="stat-label">Passports</span></div>
+      <div class="stat"><span class="stat-value">354</span><span class="stat-label">Catalogue entries</span></div>
       <div class="stat"><span class="stat-value">55</span><span class="stat-label">Artists</span></div>
-      <div class="stat"><span class="stat-value">14</span><span class="stat-label">Wikidata confirmed</span></div>
       <div class="stat"><span class="stat-value">c. 1800–1945</span><span class="stat-label">Period</span></div>
     </div>
   </header>
+
+  <!-- Documented Passports -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Documented passports</h2>
+      <span class="section-count">6 works · cross-reference status shown</span>
+    </div>
+    <div class="passport-list">
+
+      <div class="passport-row">
+        <span class="passport-title">Princess with a Monkey</span>
+        <span class="passport-artist">Janis Rozentāls</span>
+        <span class="passport-date">1913</span>
+        <span class="passport-inv">AA/LV/LNMA/001</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </div>
+
+      <div class="passport-row">
+        <span class="passport-title">From Church (After the Service)</span>
+        <span class="passport-artist">Janis Rozentāls</span>
+        <span class="passport-date">1894</span>
+        <span class="passport-inv">AA/LV/LNMA/006</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </div>
+
+      <div class="passport-row">
+        <span class="passport-title">Carousel</span>
+        <span class="passport-artist">Jānis Tīdemanis</span>
+        <span class="passport-date">1932</span>
+        <span class="passport-inv">AA/LV/LNMA/004</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">88</span>
+      </div>
+
+      <div class="passport-row">
+        <span class="passport-title">Folk Festival at Kokmuiža</span>
+        <span class="passport-artist">Kārlis Hūns</span>
+        <span class="passport-date">1855</span>
+        <span class="passport-inv">AA/LV/LNMA/012</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">63</span>
+      </div>
+
+      <div class="passport-row">
+        <span class="passport-title">Young Gipsy Woman</span>
+        <span class="passport-artist">Kārlis Hūns</span>
+        <span class="passport-date">1870</span>
+        <span class="passport-inv">AA/LV/LNMA/017</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">88</span>
+      </div>
+
+      <div class="passport-row">
+        <span class="passport-title">Country Landscape</span>
+        <span class="passport-artist">Jūlijs Feders</span>
+        <span class="passport-date">1880</span>
+        <span class="passport-inv">AA/LV/LNMA/019</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">63</span>
+      </div>
+
+    </div>
+    <p style="font-size:0.72rem;color:var(--ink-faded);margin-top:12px;font-style:italic;">
+      Remaining 348 catalogue entries below are skeleton records — they appear in the artist grid
+      but are not yet assessed for the Ars Accordia score. Passports are published as assessment is completed.
+    </p>
+  </section>
 
   <!-- Artists -->
   <section class="section">
@@ -4385,6 +4517,20 @@
   </section>
 
   <section style="margin-top:48px;padding-top:32px;border-top:1px solid var(--rule);">
+    <h2 style="font-size:1rem;font-weight:600;margin-bottom:12px;">Documentation Dossier</h2>
+    <p style="font-size:0.85rem;color:var(--ink-soft);line-height:1.6;max-width:680px;margin-bottom:16px;">
+      The complete collection documentation dossier — cover, gap map, per-work records, and export
+      note — is available as a single self-contained HTML file, print-ready to PDF.
+    </p>
+    <a href="../../artbase_export/data/dossiers/COL-LNMM-dossier-2026-06-20.html"
+       style="display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border:1px solid var(--seal);border-radius:3px;color:var(--seal);font-size:0.8rem;font-weight:600;text-decoration:none;letter-spacing:0.03em;"
+       target="_blank">
+      ↓ Download documentation dossier
+    </a>
+    <span style="display:inline-block;margin-left:12px;font-size:0.75rem;color:var(--ink-faded);">HTML · print to PDF · 2026-06-20</span>
+  </section>
+
+  <section style="margin-top:40px;padding-top:32px;border-top:1px solid var(--rule);">
     <h2 style="font-size:1rem;font-weight:600;margin-bottom:16px;">Data &amp; Image Credits</h2>
     <p style="font-size:0.8rem;color:var(--ink-faded);line-height:1.6;max-width:720px;">
       <strong>Collection data</strong> — Artwork records sourced from

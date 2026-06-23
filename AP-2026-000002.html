@@ -733,6 +733,49 @@
   .topnav a:hover { opacity: 0.75; }
   .topnav-sep { color: var(--rule); }
   @media print { .topnav { display: none; } }
+  @media print { .sp-table { break-inside: avoid; } }
+
+  /* ─── DOCUMENTATION SCORE PANEL ─── */
+  .score-panel { padding: 0 0 4px; }
+  .sp-headline { display:flex; align-items:flex-start; gap:28px; padding:20px 0 22px; border-bottom:1px solid var(--rule); }
+  .sp-number { font-family:'Fraunces',serif; font-weight:500; font-size:72px; line-height:1; color:var(--seal); letter-spacing:-0.02em; flex-shrink:0; min-width:96px; text-align:center; }
+  .sp-meta { padding-top:8px; display:flex; flex-direction:column; gap:9px; }
+  .sp-badge { display:inline-flex; align-items:center; gap:6px; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; font-weight:500; padding:4px 10px; border-radius:2px; width:fit-content; }
+  .sp-green { background:rgba(22,101,52,0.08); color:#155e2b; border:1px solid rgba(22,101,52,0.3); }
+  .sp-amber { background:rgba(146,94,10,0.08); color:#7c5207; border:1px solid rgba(146,94,10,0.3); }
+  .sp-grey  { background:rgba(100,92,80,0.08); color:#4a4338; border:1px solid rgba(100,92,80,0.3); }
+  .sp-formula { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-faded); letter-spacing:0.02em; }
+  .sp-block { margin-top:22px; padding-bottom:18px; border-bottom:1px solid var(--rule); }
+  .sp-block-head { font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:var(--ink-faded); font-weight:500; margin-bottom:13px; }
+  .sp-block-head .sp-wt-note { font-weight:400; color:var(--gold); letter-spacing:0.12em; margin-left:8px; }
+  .sp-table { width:100%; border-collapse:collapse; font-size:13px; }
+  .sp-table thead th { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-faded); font-weight:500; text-align:left; padding:0 16px 8px 0; border-bottom:1px solid var(--rule); }
+  .sp-table thead th:last-child { text-align:right; padding-right:0; }
+  .sp-table tbody td { padding:8px 16px 8px 0; color:var(--ink); vertical-align:top; border-bottom:1px solid rgba(199,188,165,0.35); }
+  .sp-table tbody tr:last-child td { border-bottom:none; }
+  .sp-table tbody td:last-child { text-align:right; padding-right:0; }
+  .sp-table td.sp-sec-name { font-family:'Fraunces',serif; font-weight:400; font-size:14px; width:30%; }
+  .sp-table td.sp-math { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-soft); }
+  .sp-table td.sp-present { font-size:12px; color:var(--ink-soft); font-style:italic; }
+  .sp-table td.sp-zero { color:var(--ink-faded); }
+  .sp-table td.sp-excluded { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--ink-faded); letter-spacing:0.06em; text-transform:uppercase; }
+  .sp-table td.sp-contribution { font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:500; color:var(--ink-soft); text-align:right; }
+  .sp-table td.sp-contribution.sp-zero { color:var(--ink-faded); }
+  .sp-table tfoot td { font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; color:var(--ink); padding:10px 16px 0 0; border-top:1.5px solid var(--ink); text-align:right; }
+  .sp-table tfoot td:first-child { text-align:left; }
+  .sp-table tfoot td:last-child { padding-right:0; }
+  .sp-combine { margin-top:20px; padding:14px 16px; background:var(--paper-deep); border:1px solid var(--rule); border-left:3px solid var(--seal); }
+  .sp-combine-math { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-soft); line-height:1.8; }
+  .sp-combine-math b { color:var(--seal); font-weight:600; }
+  .sp-exclusion { margin-top:18px; font-size:13px; color:var(--ink-faded); font-style:italic; line-height:1.6; border-left:2px solid var(--rule); padding-left:12px; }
+  .sp-method-link { margin-top:14px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; }
+  .sp-method-link a { color:var(--seal); text-decoration:none; border-bottom:1px solid rgba(110,24,24,0.3); }
+  .sp-method-link a:hover { border-color:var(--seal); }
+  @media (max-width:720px) {
+    .sp-headline { flex-direction:column; gap:12px; }
+    .sp-number { font-size:56px; min-width:auto; text-align:left; }
+    .sp-table { font-size:12px; }
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -1043,6 +1086,74 @@
 
   <!-- MACHINE-READABLE OUTPUTS -->
   
+
+  <!-- DOCUMENTATION SCORE -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 06</span>
+      <h3 class="section-title">Documentation Score</h3>
+      <span class="section-rubric">How this score is derived · Ars Accordia</span>
+    </div>
+    <div class="score-panel">
+      <div class="sp-headline">
+        <div class="sp-number">60</div>
+        <div class="sp-meta">
+          <div class="sp-badge sp-grey">● No public-authority cross-reference yet</div>
+          <div class="sp-formula">Passport Score = 100 × Completeness</div>
+        </div>
+      </div>
+      <div class="sp-block">
+        <div class="sp-block-head">Completeness</div>
+        <table class="sp-table">
+          <thead><tr><th>Section</th><th>Weight</th><th>What is present</th><th>Contribution</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="sp-sec-name">Identity</td>
+              <td class="sp-math">0.35 × 1.00</td>
+              <td class="sp-present">6 of 6 fields</td>
+              <td class="sp-contribution">0.3500</td>
+            </tr>
+            <tr>
+              <td class="sp-sec-name sp-zero">Authority links</td>
+              <td class="sp-math sp-zero">0.25 × 0.00</td>
+              <td class="sp-present sp-zero">— no public authority cross-reference yet</td>
+              <td class="sp-contribution sp-zero">0.0000</td>
+            </tr>
+            <tr>
+              <td class="sp-sec-name">Provenance (sourced)</td>
+              <td class="sp-math">0.25 × 1.00</td>
+              <td class="sp-present">2 of 2 steps sourced</td>
+              <td class="sp-contribution">0.2500</td>
+            </tr>
+            <tr>
+              <td class="sp-sec-name sp-zero">Structured / export</td>
+              <td class="sp-math sp-zero">0.15 × 0.00</td>
+              <td class="sp-present sp-zero">— not yet produced</td>
+              <td class="sp-contribution sp-zero">0.0000</td>
+            </tr>
+            <tr>
+              <td class="sp-sec-name sp-zero">Condition</td>
+              <td class="sp-excluded" colspan="2">not commissioned — excluded from score</td>
+              <td class="sp-contribution sp-zero">—</td>
+            </tr>
+            <tr>
+              <td class="sp-sec-name sp-zero">Image</td>
+              <td class="sp-excluded" colspan="2">not commissioned — excluded from score</td>
+              <td class="sp-contribution sp-zero">—</td>
+            </tr>
+          </tbody>
+          <tfoot><tr><td colspan="3"><strong>Completeness</strong></td><td><strong>0.6000</strong></td></tr></tfoot>
+        </table>
+      </div>
+      <div class="sp-combine">
+        <div class="sp-combine-math">
+          Passport Score = 100 × <b>0.6000</b> = <b>60</b>
+        </div>
+      </div>
+      <p class="sp-exclusion">We measure how complete and cross-referenced the record is. We do not grade how trustworthy a source is, nor a work's authenticity or its value — Ars Accordia compares publicly available reference data, it does not pass judgement on it. Authenticity is a connoisseur's question and value a valuer's; neither is part of this score.</p>
+      <div class="sp-method-link"><a href="/method/">How we score a passport →</a></div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="footer">

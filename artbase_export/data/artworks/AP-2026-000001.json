@@ -96,11 +96,18 @@
   ],
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
-      "verified_date": null,
-      "notes": null
+      "id": "Q12418",
+      "uri": "https://www.wikidata.org/wiki/Q12418",
+      "status": "confirmed",
+      "verified_date": "2026-06-20",
+      "notes": "Wikidata item for the Mona Lisa (Joconde). Widely cross-referenced cultural object item."
+    },
+    "artist_ulan": {
+      "id": "500010879",
+      "uri": "http://vocab.getty.edu/ulan/500010879",
+      "status": "confirmed",
+      "verified_date": "2026-06-20",
+      "notes": "Getty ULAN for Leonardo da Vinci."
     },
     "artbase_id": null
   },
@@ -125,5 +132,107 @@
       "retrieved": "2026-05-30",
       "note": "Manually catalogued by Ars Accordia staff. Requires authority corroboration for confirmed status."
     }
-  ]
+  ],
+  "score": {
+    "passport_score": 100,
+    "status": "amber",
+    "completeness": {
+      "value": 1.0,
+      "sections": [
+        {
+          "section": "identity",
+          "weight": 0.35,
+          "fill": 1.0,
+          "present": "6 of 6 fields",
+          "contribution": 0.35,
+          "in_scope": true
+        },
+        {
+          "section": "authority",
+          "weight": 0.25,
+          "fill": 1.0,
+          "present": "2 public authorities — Wikidata Q12418, ULAN 500010879",
+          "contribution": 0.25,
+          "in_scope": true
+        },
+        {
+          "section": "provenance",
+          "weight": 0.25,
+          "fill": 1.0,
+          "present": "4 of 4 steps sourced",
+          "contribution": 0.25,
+          "in_scope": true
+        },
+        {
+          "section": "structured",
+          "weight": 0.15,
+          "fill": 1.0,
+          "present": "JSON-LD present",
+          "contribution": 0.15,
+          "in_scope": true
+        },
+        {
+          "section": "condition",
+          "weight": 0.0,
+          "fill": null,
+          "present": "not commissioned",
+          "contribution": 0.0,
+          "in_scope": false
+        },
+        {
+          "section": "image",
+          "weight": 0.0,
+          "fill": null,
+          "present": "not commissioned",
+          "contribution": 0.0,
+          "in_scope": false
+        }
+      ]
+    },
+    "excluded": [
+      "source_quality_judgement",
+      "authenticity",
+      "monetary_value"
+    ],
+    "config_version": "weights-v3"
+  },
+  "score_generated_at": "2026-06-20T09:58:00+00:00",
+  "structured_data": {
+    "json_ld": {
+      "@context": "https://schema.org/",
+      "@type": "VisualArtwork",
+      "name": "Mona Lisa",
+      "alternateName": "La Joconde",
+      "creator": {
+        "@type": "Person",
+        "name": "Leonardo da Vinci",
+        "sameAs": "http://vocab.getty.edu/ulan/500010879"
+      },
+      "dateCreated": "c. 1503–1519",
+      "artMedium": "Oil on poplar panel",
+      "artform": "Painting",
+      "artworkSurface": "Poplar panel",
+      "height": {
+        "@type": "QuantitativeValue",
+        "value": 77.0,
+        "unitCode": "CMT"
+      },
+      "width": {
+        "@type": "QuantitativeValue",
+        "value": 53.0,
+        "unitCode": "CMT"
+      },
+      "contentLocation": {
+        "@type": "Museum",
+        "name": "Musée du Louvre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Paris",
+          "addressCountry": "FR"
+        }
+      },
+      "sameAs": "https://www.wikidata.org/wiki/Q12418",
+      "identifier": "INV. 779"
+    }
+  }
 }

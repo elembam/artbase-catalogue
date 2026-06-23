@@ -84,5 +84,69 @@
       "retrieved": "2026-05-30",
       "note": "Manually catalogued by Ars Accordia staff. Requires authority corroboration for confirmed status."
     }
-  ]
+  ],
+  "score": {
+    "passport_score": 60,
+    "status": "grey",
+    "completeness": {
+      "value": 0.6,
+      "sections": [
+        {
+          "section": "identity",
+          "weight": 0.35,
+          "fill": 1.0,
+          "present": "6 of 6 fields",
+          "contribution": 0.35,
+          "in_scope": true
+        },
+        {
+          "section": "authority",
+          "weight": 0.25,
+          "fill": 0.0,
+          "present": "—",
+          "contribution": 0.0,
+          "in_scope": true
+        },
+        {
+          "section": "provenance",
+          "weight": 0.25,
+          "fill": 1.0,
+          "present": "2 of 2 steps sourced",
+          "contribution": 0.25,
+          "in_scope": true
+        },
+        {
+          "section": "structured",
+          "weight": 0.15,
+          "fill": 0.0,
+          "present": "—",
+          "contribution": 0.0,
+          "in_scope": true
+        },
+        {
+          "section": "condition",
+          "weight": 0.0,
+          "fill": null,
+          "present": "not commissioned",
+          "contribution": 0.0,
+          "in_scope": false
+        },
+        {
+          "section": "image",
+          "weight": 0.0,
+          "fill": null,
+          "present": "not commissioned",
+          "contribution": 0.0,
+          "in_scope": false
+        }
+      ]
+    },
+    "excluded": [
+      "source_quality_judgement",
+      "authenticity",
+      "monetary_value"
+    ],
+    "config_version": "weights-v3"
+  },
+  "score_generated_at": "2026-06-20T06:49:41+00:00"
 }

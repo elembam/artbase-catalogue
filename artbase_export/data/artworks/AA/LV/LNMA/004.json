@@ -5,7 +5,7 @@
   "version": 1,
   "created": null,
   "exported": "2026-05-30T17:59:41.399707Z",
-  "visibility": "private",
+  "visibility": "public",
   "object_id": {
     "object_type": "Painting",
     "object_type_aat": null,
@@ -22,7 +22,7 @@
     "date_display": "1932",
     "date_earliest": 1932,
     "date_latest": 1932,
-    "maker_id": null,
+    "maker_id": "ART-TIDEMANIS-1897",
     "maker_display_name": "Jānis Tīdemanis",
     "has_photograph": false
   },
@@ -37,18 +37,42 @@
     "inventory_number": "VMM GL-2822",
     "location_notes": null
   },
-  "provenance": [],
+  "provenance": [
+    {
+      "step": 1,
+      "description": "Held in the collection of Latvijas Nacionālais mākslas muzejs (LNMM), Rīga, Latvia",
+      "date": null,
+      "holder": "Latvijas Nacionālais mākslas muzejs",
+      "type": "current_location",
+      "source": "SRC-LNMM-PORTRAITS-2009",
+      "source_note": "Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets. Rīga: Latvijas Nacionālais mākslas muzejs; Neputns, 2009.",
+      "is_gap": false
+    }
+  ],
   "authority_links": {
     "wikidata": {
       "id": null,
       "uri": null,
       "status": "search_needed",
       "verified_date": null,
-      "notes": null
+      "notes": "Work-level Wikidata item not yet identified — artist QID confirmed"
     },
-    "artbase_id": null
+    "artist_wikidata": {
+      "id": "Q4457149",
+      "uri": "https://www.wikidata.org/wiki/Q4457149",
+      "status": "confirmed",
+      "verified_date": "2026-06-20",
+      "notes": "Wikidata item for the artist Jānis Tīdemanis; QID confirmed 2026-06-15"
+    },
+    "artbase_id": "ART-TIDEMANIS-1897"
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-LNMM-PORTRAITS-2009",
+      "type": "book",
+      "citation": "Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets. Rīga: Latvijas Nacionālais mākslas muzejs; Neputns, 2009."
+    }
+  ],
   "source_refs": [],
   "conflicts": [],
   "cataloguing": {
@@ -58,5 +82,109 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artwork:v1"
+  "_schema": "artbase:artwork:v1",
+  "score": {
+    "passport_score": 88,
+    "status": "amber",
+    "completeness": {
+      "value": 0.875,
+      "sections": [
+        {
+          "section": "identity",
+          "weight": 0.35,
+          "fill": 1.0,
+          "present": "6 of 6 fields",
+          "contribution": 0.35,
+          "in_scope": true
+        },
+        {
+          "section": "authority",
+          "weight": 0.25,
+          "fill": 0.5,
+          "present": "1 public authority — ARTIST_WIKIDATA",
+          "contribution": 0.125,
+          "in_scope": true
+        },
+        {
+          "section": "provenance",
+          "weight": 0.25,
+          "fill": 1.0,
+          "present": "1 of 1 step sourced",
+          "contribution": 0.25,
+          "in_scope": true
+        },
+        {
+          "section": "structured",
+          "weight": 0.15,
+          "fill": 1.0,
+          "present": "JSON-LD only",
+          "contribution": 0.15,
+          "in_scope": true
+        },
+        {
+          "section": "condition",
+          "weight": 0.0,
+          "fill": null,
+          "present": "not commissioned",
+          "contribution": 0.0,
+          "in_scope": false
+        },
+        {
+          "section": "image",
+          "weight": 0.0,
+          "fill": null,
+          "present": "not commissioned",
+          "contribution": 0.0,
+          "in_scope": false
+        }
+      ]
+    },
+    "excluded": [
+      "source_quality_judgement",
+      "authenticity",
+      "monetary_value"
+    ],
+    "config_version": "weights-v3"
+  },
+  "score_generated_at": "2026-06-20T09:57:17+00:00",
+  "structured_data": {
+    "json_ld": {
+      "@context": "https://schema.org/",
+      "@type": "VisualArtwork",
+      "name": "Carousel",
+      "creator": {
+        "@type": "Person",
+        "name": "Jānis Tīdemanis",
+        "sameAs": "https://www.wikidata.org/wiki/Q4457149"
+      },
+      "dateCreated": "1932",
+      "artMedium": "Oil on canvas",
+      "artform": "Painting",
+      "locationCreated": {
+        "@type": "Place",
+        "name": "Latvia"
+      },
+      "contentLocation": {
+        "@type": "Museum",
+        "name": "Latvian National Museum of Art",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rīga",
+          "addressCountry": "LV"
+        },
+        "sameAs": "https://www.wikidata.org/wiki/Q1370465"
+      },
+      "height": {
+        "@type": "QuantitativeValue",
+        "value": 65.0,
+        "unitCode": "CMT"
+      },
+      "width": {
+        "@type": "QuantitativeValue",
+        "value": 95.0,
+        "unitCode": "CMT"
+      },
+      "identifier": "VMM GL-2822"
+    }
+  }
 }

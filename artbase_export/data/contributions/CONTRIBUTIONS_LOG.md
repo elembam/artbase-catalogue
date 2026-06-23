@@ -1,5 +1,5 @@
 # Wikidata Contributions Log
-*ArsAccordia account on Wikidata · Last updated: 2026-06-14*
+*ArsAccordia account on Wikidata · Last updated: 2026-06-20*
 
 This file is the single source of truth for all Wikidata work done under the ArsAccordia account.
 It tracks what has been submitted, what is ready to submit, and what is planned — and explains
@@ -13,8 +13,9 @@ why each contribution matters to the Ars Accordia website and business strategy.
 |---|---|---|
 | ✅ VERIFIED | 0 | — |
 | 📤 SUBMITTED | 0 | — |
-| 🟢 READY | 3 batches | books_batch1, test_batch_first5, test_rozentals_batch |
-| 📝 DRAFT | 1 batch | qs_tier2_rozentals (artwork CREATEs — needs review) |
+| 🟢 READY | 3 batches | test_batch_first5, test_rozentals_batch, lnmm_batch_02_artwork_items |
+| ✅ SUPERSEDED | 1 batch | books_batch1 — both book QIDs already exist (Q139986317, Q139986481) |
+| 📝 DRAFT | 1 batch | qs_tier2_rozentals (artwork CREATEs — superseded by lnmm_batch_02 for 006) |
 | 🟢 READY | 1 batch | lnmm_phase1_p973_20260614 — P973 backlinks for 5 LNMM artists |
 | 🔵 PLANNED | 2 | Phase 3 artist records, Phase 4 artwork items |
 | ⚠️ DUPLICATE | 1 | queue_20260528 (superseded by test_batch_first5 + test_rozentals_batch) |
@@ -32,9 +33,9 @@ Do these in order. Each step builds trust before the next.
 | 1 | `test_batch_first5_20260602` | 5 VIAF IDs | First-ever submission; smallest possible safe test |
 | 2 | `test_rozentals_batch_20260602` | 5 VIAF IDs | Second test — wait 48h after step 1 for community reaction |
 | 3 | `lnmm_phase1_p973_20260614` | 5 P973 links | Highest strategic value — links Wikidata items to Ars Accordia pages |
-| 4 | `books_batch1_20260530` | CREATE 2 book items | Source catalogue items, needed as `stated in` references |
+| 4 | `lnmm_batch_02_artwork_items_20260620` | 1 enrich + 4 CREATE | 5 LNMM artwork items; confirm QLNMM_INSTITUTION before submitting |
 | 5 | Phase 3 artist records | 8 ArtBase records | Create canonical records before issuing passports |
-| 6 | Phase 4 artwork items | 5–8 CREATE | Create Wikidata items for exemplary LNMM artworks (link to issued passports) |
+| 6 | Phase 4 artwork items (follow-on) | 5–8 CREATE | Additional LNMM works after batch 02 QIDs are returned |
 
 ---
 
@@ -111,7 +112,7 @@ of those citations. Also directly links two of our key collections to Wikidata.
 
 ---
 
-### BATCH: books_batch1_20260530 · 🟢 READY
+### BATCH: books_batch1_20260530 · ✅ SUPERSEDED — DO NOT SUBMIT
 
 **File:** `books_batch1_20260530.qs`  
 **Review doc:** `books_batch1_20260530.review.md`  
@@ -123,12 +124,13 @@ of those citations. Also directly links two of our key collections to Wikidata.
 | SRC-HANSABANKA-2007 | Hansabankas mūsdienu mākslas kolekcija | 978-9984-39-381-0 | Hansabanka contemporary art collection catalogue |
 | SRC-LNMM-PORTRAITS-2009 | Mākslinieks. Portrets. Pašportrets | 978-9984-807-52-2 | LNMM portraits catalogue — key source for LNMM artist records |
 
-**After submission:** Run `python3 scripts/record_book_qid.py <SOURCE_ID> <QID>` for each.
+**Status: ✅ SUPERSEDED — both items already exist on Wikidata.**
 
-**Submission status:**
-- SRC-HANSABANKA-2007 QID: _______________
-- SRC-LNMM-PORTRAITS-2009 QID: _______________
-- Submitted at: _______________
+- SRC-HANSABANKA-2007 → **Q139986317** ("Hansabanka Contemporary Art Collection")
+- SRC-LNMM-PORTRAITS-2009 → **Q139986481** ("Artist. Portrait. Self-portrait")
+
+Confirmed 2026-06-20. `books_batch1_20260530.qs` should **not** be submitted — the CREATE operations
+would attempt to create items that already exist. Use these QIDs directly as `S248` references.
 
 ---
 
@@ -166,6 +168,40 @@ Priority: do this for the 5 confirmed LNMM artists immediately.
 - Batch ID: _______________
 - Submitted at: _______________
 - Result: ___ / 5 success
+
+---
+
+### BATCH: lnmm_batch_02_artwork_items_20260620 · 🟢 READY
+
+**File:** `lnmm_batch_02_artwork_items_20260620.qs`
+**Review doc:** `lnmm_batch_02_artwork_items_20260620.review.md`
+**Generated:** 2026-06-20
+**Operations:** 1 enrichment (Q22043968) + 4 CREATE
+**Statements proposed:** 48 (4 enrichment + 11 × 4 CREATE)
+**Properties:** P31, P170, P571, P186, P195, P217, P2048, P2049 · References: S248/S304
+
+| Work | ID | Operation | Artist | Inv | Notes |
+|---|---|---|---|---|---|
+| Princess with a Monkey | AA/LV/LNMA/001 | ENRICH Q22043968 | Rozentāls Q975168 | VMM GL-5668 | Add P195/P217/dimensions |
+| Carousel | AA/LV/LNMA/004 | CREATE | Tīdemanis Q4457149 | VMM GL-2822 | 1932 |
+| From Church (After the Service) | AA/LV/LNMA/006 | CREATE | Rozentāls Q975168 | VMM GL-55 | 1894 |
+| Young Gipsy Woman | AA/LV/LNMA/017 | CREATE | Hūns Q4152126 | VMM GL-1509 | 1870 |
+| Country Landscape | AA/LV/LNMA/019 | CREATE | Feders Q1977258 | VMM GL-1501 | 1880 |
+| Folk Festival at Kokmuiža | AA/LV/LNMA/012 | **EXCLUDED** | Hūns (unverified) | VMM Z-4128 | Attribution not yet confirmed |
+
+**⚠️ GATING PLACEHOLDERS in batch file — replace before submitting:**
+- `QLNMM_INSTITUTION` — Q681819 or Q1370465? Open both on Wikidata and confirm which is LNMM
+- `QLNMM_PORTRAITS_2009` — submit `books_batch1_20260530.qs` first; use the QID it creates
+- `PAGE_TO_CONFIRM` — verify page numbers from Lamberga 2009; if unconfirmable, remove S248/S304
+
+**Submission status:**
+- Submitted at: _______________
+- Batch ID: _______________
+- Q22043968 (enrich) result: _______________
+- 004 new QID: _______________
+- 006 new QID: _______________
+- 017 new QID: _______________
+- 019 new QID: _______________
 
 ---
 

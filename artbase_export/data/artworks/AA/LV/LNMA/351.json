@@ -58,5 +58,69 @@
     "tasks": [],
     "engagement_ids": []
   },
-  "_schema": "artbase:artwork:v1"
+  "_schema": "artbase:artwork:v1",
+  "score": {
+    "passport_score": 6,
+    "status": "grey",
+    "completeness": {
+      "value": 0.0583,
+      "sections": [
+        {
+          "section": "identity",
+          "weight": 0.35,
+          "fill": 0.1667,
+          "present": "1 of 6 fields (missing: creator, date, medium, dimensions, object type)",
+          "contribution": 0.0583,
+          "in_scope": true
+        },
+        {
+          "section": "authority",
+          "weight": 0.25,
+          "fill": 0.0,
+          "present": "—",
+          "contribution": 0.0,
+          "in_scope": true
+        },
+        {
+          "section": "provenance",
+          "weight": 0.25,
+          "fill": 0.0,
+          "present": "no chain",
+          "contribution": 0.0,
+          "in_scope": true
+        },
+        {
+          "section": "structured",
+          "weight": 0.15,
+          "fill": 0.0,
+          "present": "—",
+          "contribution": 0.0,
+          "in_scope": true
+        },
+        {
+          "section": "condition",
+          "weight": 0.0,
+          "fill": null,
+          "present": "not commissioned",
+          "contribution": 0.0,
+          "in_scope": false
+        },
+        {
+          "section": "image",
+          "weight": 0.0,
+          "fill": null,
+          "present": "not commissioned",
+          "contribution": 0.0,
+          "in_scope": false
+        }
+      ]
+    },
+    "excluded": [
+      "source_quality_judgement",
+      "authenticity",
+      "monetary_value"
+    ],
+    "config_version": "weights-v3"
+  },
+  "score_generated_at": "2026-06-20T06:49:41+00:00"
 }

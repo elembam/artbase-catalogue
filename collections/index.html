@@ -165,6 +165,38 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center;height:5
 .method-note b{color:var(--ink);}
 .method-note a{color:var(--oxblood);}
 
+/* open registry */
+.registry-section{margin-top:52px;padding-top:28px;border-top:1.5px solid var(--rule);}
+.registry-head{margin-bottom:20px;}
+.registry-eyebrow{font-family:var(--mono);font-size:9px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--gilt);font-weight:600;}
+.registry-title{font-family:var(--display);font-weight:500;font-size:21px;
+  color:var(--ink);margin:6px 0 5px;line-height:1.1;}
+.registry-sub{font-size:13px;color:var(--ink-soft);line-height:1.55;max-width:66ch;font-style:italic;}
+.reg-entry{border-bottom:1px solid var(--rule);padding:20px 0;display:grid;
+  grid-template-columns:1fr 160px;gap:16px 28px;align-items:start;}
+.reg-entry:last-child{border-bottom:none;}
+.reg-name{font-family:var(--display);font-size:18px;font-weight:500;
+  color:var(--ink);line-height:1.1;margin-bottom:4px;}
+.reg-owner{font-size:13px;color:var(--ink-soft);font-style:italic;margin-bottom:9px;}
+.reg-desc{font-size:13px;color:var(--ink-soft);line-height:1.55;margin-top:8px;max-width:58ch;}
+.reg-scope{font-family:var(--mono);font-size:10px;letter-spacing:.06em;
+  color:var(--ink-soft);margin-top:8px;}
+.reg-status{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:6px;
+  padding-top:4px;}
+.reg-status-lbl{font-family:var(--mono);font-size:8.5px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--grey);}
+.reg-status-val{font-family:var(--mono);font-size:11px;letter-spacing:.06em;
+  color:var(--grey);font-weight:600;text-transform:uppercase;}
+.reg-claim{font-family:var(--mono);font-size:9px;letter-spacing:.08em;
+  color:var(--oxblood);text-transform:uppercase;text-decoration:none;
+  border-bottom:1px solid var(--gilt-soft);padding-bottom:1px;margin-top:4px;}
+.reg-claim:hover{color:var(--oxblood-deep);}
+@media(max-width:760px){
+  .reg-entry{grid-template-columns:1fr;}
+  .reg-status{align-items:flex-start;text-align:left;}
+}
+
 footer{margin-top:48px;border-top:1px solid var(--rule);}
 footer .wrap{padding:16px 24px;display:flex;justify-content:space-between;align-items:baseline;
   font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--ink-soft);
@@ -238,50 +270,19 @@ footer a{color:inherit;text-decoration:none;}
 
   <div class="count-line" id="count-line">&nbsp;</div>
 
-  <div class="sample-notice">
-    <b>Sample data</b>&nbsp;· Illustrative entries showing the directory layout.
-    Real collections appear once assessed and published with consent.
-  </div>
-
   <div class="entries" id="entries">
 
-    <!-- Sūnu Foundation — institution, avg std 87, Fully Corroborated -->
+    <!-- LNMM Portrait Collection — institution, avg std 84, Substantial Record -->
     <div class="entry"
-         data-segment="institution" data-avg-std="87" data-score="9744" data-works="112" data-band="5">
+         data-segment="institution" data-avg-std="84" data-score="502" data-works="6" data-band="4">
       <div class="entry-left">
-        <div class="entry-name"><a href="#">Sūnu Foundation Collection</a></div>
-        <div class="entry-owner">Sūnu Foundation for Baltic Art · institutional collection · Vilnius</div>
+        <div class="entry-name"><a href="lnmm/">Latvian National Museum of Art — Portrait Collection</a></div>
+        <div class="entry-owner">Latvijas Nacionālais mākslas muzejs · institutional collection · Riga</div>
         <div class="entry-badge institution">Institution</div>
         <div class="std-row">
           <span class="std-lbl">Avg standard</span>
-          <div class="std-bar-track"><div class="std-bar-fill" style="width:87%"></div></div>
-          <span class="std-val">87</span>
-        </div>
-        <div class="scale-mini">
-          <div class="sm-seg s1"></div><div class="sm-seg s2"></div>
-          <div class="sm-seg s3"></div><div class="sm-seg s4"></div>
-          <div class="sm-seg s5 here"></div>
-        </div>
-      </div>
-      <div class="entry-score">
-        <div class="score-lbl">Ars Accordia Score</div>
-        <div class="score-fig">9,744</div>
-        <div class="works-fig">112 works documented</div>
-        <div class="band-chip band-5">Fully Corroborated</div>
-      </div>
-    </div>
-
-    <!-- Kalēju Estate — estate, avg std 71, Substantially Corroborated -->
-    <div class="entry"
-         data-segment="estate" data-avg-std="71" data-score="497" data-works="7" data-band="4">
-      <div class="entry-left">
-        <div class="entry-name"><a href="#">Kalēju Estate Collection</a></div>
-        <div class="entry-owner">Estate of Artūrs Kalējs · estate collection · Jūrmala</div>
-        <div class="entry-badge estate">Estate</div>
-        <div class="std-row">
-          <span class="std-lbl">Avg standard</span>
-          <div class="std-bar-track"><div class="std-bar-fill" style="width:71%"></div></div>
-          <span class="std-val">71</span>
+          <div class="std-bar-track"><div class="std-bar-fill" style="width:84%"></div></div>
+          <span class="std-val">84</span>
         </div>
         <div class="scale-mini">
           <div class="sm-seg s1"></div><div class="sm-seg s2"></div>
@@ -291,61 +292,9 @@ footer a{color:inherit;text-decoration:none;}
       </div>
       <div class="entry-score">
         <div class="score-lbl">Ars Accordia Score</div>
-        <div class="score-fig">497</div>
-        <div class="works-fig">7 works documented</div>
-        <div class="band-chip band-4">Substantially Corroborated</div>
-      </div>
-    </div>
-
-    <!-- Meridian Maritime Bank — corporate, avg std 68, Substantially Corroborated -->
-    <div class="entry"
-         data-segment="corporate" data-avg-std="68" data-score="6528" data-works="96" data-band="4">
-      <div class="entry-left">
-        <div class="entry-name"><a href="#">The Meridian Collection</a></div>
-        <div class="entry-owner">Meridian Maritime Bank · corporate collection · Stockholm</div>
-        <div class="entry-badge corporate">Corporate</div>
-        <div class="std-row">
-          <span class="std-lbl">Avg standard</span>
-          <div class="std-bar-track"><div class="std-bar-fill" style="width:68%"></div></div>
-          <span class="std-val">68</span>
-        </div>
-        <div class="scale-mini">
-          <div class="sm-seg s1"></div><div class="sm-seg s2"></div>
-          <div class="sm-seg s3"></div><div class="sm-seg s4 here"></div>
-          <div class="sm-seg s5"></div>
-        </div>
-      </div>
-      <div class="entry-score">
-        <div class="score-lbl">Ars Accordia Score</div>
-        <div class="score-fig">6,528</div>
-        <div class="works-fig">96 works documented</div>
-        <div class="band-chip band-4">Substantially Corroborated</div>
-      </div>
-    </div>
-
-    <!-- Rosenberg Family — private, avg std 44, Partially Corroborated -->
-    <div class="entry"
-         data-segment="private" data-avg-std="44" data-score="1232" data-works="28" data-band="3">
-      <div class="entry-left">
-        <div class="entry-name"><a href="#">Rosenberg Family Collection</a></div>
-        <div class="entry-owner">Private collector · Riga</div>
-        <div class="entry-badge private">Private</div>
-        <div class="std-row">
-          <span class="std-lbl">Avg standard</span>
-          <div class="std-bar-track"><div class="std-bar-fill" style="width:44%"></div></div>
-          <span class="std-val">44</span>
-        </div>
-        <div class="scale-mini">
-          <div class="sm-seg s1"></div><div class="sm-seg s2"></div>
-          <div class="sm-seg s3 here"></div><div class="sm-seg s4"></div>
-          <div class="sm-seg s5"></div>
-        </div>
-      </div>
-      <div class="entry-score">
-        <div class="score-lbl">Ars Accordia Score</div>
-        <div class="score-fig">1,232</div>
-        <div class="works-fig">28 works documented</div>
-        <div class="band-chip band-3">Partially Corroborated</div>
+        <div class="score-fig">502</div>
+        <div class="works-fig">6 works documented</div>
+        <div class="band-chip band-4">Substantial Record</div>
       </div>
     </div>
 
@@ -360,6 +309,30 @@ footer a{color:inherit;text-decoration:none;}
   <p class="method-note">
     <b>How to read this directory.</b> The <b>Ars Accordia Score</b> is an open absolute figure — the sum of the value of all documented passports — not a percentage. It grows as more works are catalogued and records are strengthened. The <b>average standard</b> is size-independent: it reflects how good the records are, not how many there are. Sort by average standard for a like-for-like quality view; use the score to understand volume. A 7-work estate at standard 71 and a 96-work corporate collection at standard 68 are not in the same contest — read with the count, neither misleads. Collections appear here only after Ars Accordia assessment and with the owner's explicit consent to publish. <a href="/method/">Full methodology →</a>
   </p>
+
+  <section class="registry-section">
+    <div class="registry-head">
+      <div class="registry-eyebrow">Open Registry</div>
+      <h2 class="registry-title">Also in the Registry</h2>
+      <p class="registry-sub">Collections recorded in the Ars Accordia registry with cataloguing underway. No score or band is shown until assessment is complete — only a description and confirmed scope.</p>
+    </div>
+
+    <div class="reg-entry">
+      <div>
+        <div class="reg-name">Hansabanka Contemporary Art Collection</div>
+        <div class="reg-owner">Swedbank Latvia (formerly AS Hansabanka)</div>
+        <span class="entry-badge corporate">Corporate</span>
+        <p class="reg-desc">386 works by 108 Latvian artists collected by Hansabanka between 1998 and 2007, documenting a decade of contemporary Latvian art. Now held by Swedbank Latvia.</p>
+        <div class="reg-scope">386 works · inventory confirmed · COL-HANSABANKA</div>
+      </div>
+      <div class="reg-status">
+        <div class="reg-status-lbl">Assessment</div>
+        <div class="reg-status-val" style="color:var(--amber)">In progress</div>
+        <a href="mailto:catalogue@arsaccordia.com" class="reg-claim">Enquire →</a>
+      </div>
+    </div>
+
+  </section>
 
 </main>
 

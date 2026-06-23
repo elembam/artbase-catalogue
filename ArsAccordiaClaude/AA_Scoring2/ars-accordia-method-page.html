@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How Ars Accordia scoring works — a plain-language guide to the Passport Score and the collection-level Ars Accordia Score, for collectors and investors.">
+<title>How Scoring Works — Ars Accordia</title>
+<link rel="canonical" href="https://arsaccordia.com/method/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f6f1e6;
+    --paper-deep:#ebe3d1;
+    --ink:#1c1814;
+    --ink-soft:#4a4338;
+    --ink-faded:#80766a;
+    --seal:#6e1818;
+    --seal-light:#94342f;
+    --gold:#8a6f2e;
+    --gold-soft:#b59a52;
+    --rule:#c7bca5;
+    --grid:rgba(110,24,24,0.04);
+    --disp:'Fraunces',Georgia,serif;
+    --body:'Public Sans',-apple-system,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:32px 32px;
+    color:var(--ink);font-family:var(--body);font-weight:400;line-height:1.58;font-size:15.5px;
+    min-height:100vh;padding:40px 20px;
+  }
+  body::before{
+    content:'';position:fixed;inset:0;pointer-events:none;z-index:1;mix-blend-mode:multiply;opacity:.5;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .topnav{max-width:880px;margin:0 auto 18px;display:flex;align-items:center;gap:9px;position:relative;z-index:2;
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--ink-faded);}
+  .topnav a{color:var(--ink-soft);text-decoration:none;display:inline-flex;align-items:center;gap:7px;}
+  .topnav a:hover{color:var(--seal);}
+  .topnav-sep{color:var(--rule);}
+
+  .doc{max-width:880px;margin:0 auto;background:var(--paper);border:1px solid var(--rule);position:relative;z-index:2;
+    box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 18px 50px rgba(28,24,20,.13);padding:0 0 8px;}
+
+  /* header */
+  .header{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;
+    padding:44px 48px 30px;border-bottom:2px solid var(--seal);position:relative;}
+  .header::after{content:'';position:absolute;left:48px;right:48px;bottom:-5px;height:1px;background:var(--gold-soft);}
+  .issuer{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--seal);}
+  h1.title{font-family:var(--disp);font-weight:500;font-size:43px;line-height:1.02;letter-spacing:-.015em;margin:11px 0 0;}
+  .subtitle{font-size:14px;color:var(--ink-faded);margin-top:11px;}
+  .colophon{font-size:13.5px;color:var(--ink-soft);margin-top:15px;max-width:54ch;line-height:1.6;}
+  .seal{width:104px;height:104px;border-radius:50%;border:1.5px solid var(--seal);color:var(--seal);flex:none;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;}
+  .seal::after{content:'';position:absolute;inset:5px;border-radius:50%;border:.5px solid var(--gold-soft);}
+  .seal-text{font-family:var(--disp);font-weight:500;font-size:13px;line-height:1.18;letter-spacing:.02em;}
+  .seal-id{font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;margin-top:5px;color:var(--gold);}
+  .seal-year{font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;color:var(--ink-faded);}
+
+  /* meta bar */
+  .meta-bar{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--rule);background:var(--paper-deep);}
+  .meta-bar div{flex:1;min-width:150px;padding:11px 18px;border-right:1px solid var(--rule);}
+  .meta-bar div:last-child{border-right:none;}
+  .meta-bar dt{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faded);}
+  .meta-bar dd{font-size:13.5px;color:var(--ink);margin-top:3px;font-weight:500;}
+
+  /* sections */
+  .section{padding:34px 48px;border-bottom:1px solid var(--rule);}
+  .section:last-child{border-bottom:none;}
+  .section-header{display:flex;align-items:baseline;gap:13px;margin-bottom:18px;}
+  .section-number{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--seal);letter-spacing:.08em;flex:none;}
+  .section-title{font-family:var(--disp);font-weight:500;font-size:25px;letter-spacing:-.01em;}
+  .section-rubric{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faded);margin-left:auto;}
+  .section p{margin-bottom:13px;color:var(--ink-soft);}
+  .section p.lead{font-size:18px;line-height:1.55;color:var(--ink);font-weight:400;}
+  .section p strong{color:var(--ink);font-weight:600;}
+  .section p:last-child{margin-bottom:0;}
+
+  .pull{font-family:var(--disp);font-weight:400;font-style:italic;font-size:19px;line-height:1.4;color:var(--seal);
+    border-left:2px solid var(--gold);padding:3px 0 3px 18px;margin:20px 0;}
+
+  /* two components */
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0 6px;}
+  .card{border:1px solid var(--rule);background:var(--paper-deep);padding:17px 18px;}
+  .card .ct{font-family:var(--disp);font-weight:500;font-size:18px;margin-bottom:3px;}
+  .card .cq{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--seal);margin-bottom:9px;}
+  .card p{font-size:13.5px;margin:0;color:var(--ink-soft);line-height:1.5;}
+
+  /* weighting bar */
+  .wbar{margin:22px 0 6px;}
+  .wbar-track{display:flex;height:34px;border:1px solid var(--rule);overflow:hidden;}
+  .wbar-c{display:flex;align-items:center;padding-left:13px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:#f6f1e6;font-weight:500;}
+  .wbar-c.comp{width:60%;background:var(--seal);}
+  .wbar-c.corr{width:40%;background:var(--gold);}
+  .wbar-cap{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--ink-faded);margin-top:7px;text-align:center;}
+
+  /* example */
+  .example{border:1px solid var(--gold-soft);background:rgba(138,111,46,.05);padding:17px 19px;margin:20px 0 6px;}
+  .example .ex-h{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:9px;}
+  .example p{font-size:14px;margin-bottom:9px;color:var(--ink-soft);}
+  .example .ex-math{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);padding:9px 12px;letter-spacing:.01em;}
+
+  /* trio */
+  .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 6px;}
+  .tile{border:1px solid var(--rule);padding:16px 15px;text-align:center;background:var(--paper-deep);}
+  .tile .tq{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faded);}
+  .tile .tn{font-family:var(--disp);font-weight:500;font-size:19px;margin:7px 0 4px;color:var(--seal);line-height:1.1;}
+  .tile .td{font-size:12.5px;color:var(--ink-soft);line-height:1.45;}
+
+  /* exclusion / trust note */
+  .note{border:1px solid var(--rule);border-left:3px solid var(--seal);background:var(--paper-deep);padding:15px 18px;margin:20px 0 6px;}
+  .note .nh{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--seal);margin-bottom:7px;}
+  .note p{font-size:13.5px;margin:0;color:var(--ink-soft);line-height:1.55;}
+
+  .checklist{list-style:none;margin:16px 0 4px;}
+  .checklist li{position:relative;padding:7px 0 7px 26px;font-size:14.5px;color:var(--ink-soft);border-bottom:1px solid var(--rule);line-height:1.5;}
+  .checklist li:last-child{border-bottom:none;}
+  .checklist li::before{content:'';position:absolute;left:2px;top:13px;width:9px;height:9px;border:1.5px solid var(--seal);border-radius:50%;}
+  .checklist li b{color:var(--ink);font-weight:600;}
+
+  .closing{padding:30px 48px 38px;text-align:center;}
+  .closing .cta-h{font-family:var(--disp);font-weight:500;font-size:21px;margin-bottom:8px;}
+  .closing p{font-size:14px;color:var(--ink-soft);margin-bottom:5px;}
+  .closing a{color:var(--seal);text-decoration:none;font-weight:500;}
+  .closing .addr{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--ink-faded);margin-top:11px;}
+
+  a.inline{color:var(--seal);text-decoration:none;border-bottom:1px solid var(--gold-soft);}
+  a.inline:hover{border-bottom-color:var(--seal);}
+
+  @media(max-width:720px){
+    body{padding:20px 12px;}
+    .header{flex-direction:column;padding:32px 24px 24px;}
+    .header::after{left:24px;right:24px;}
+    h1.title{font-size:33px;}
+    .seal{order:-1;}
+    .section{padding:28px 24px;}
+    .section-rubric{display:none;}
+    .pair,.trio{grid-template-columns:1fr;}
+    .closing{padding:26px 24px 32px;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 1L1 5.5V12h4V8.5h3V12h4V5.5L6.5 1z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+    Ars Accordia
+  </a>
+  <span class="topnav-sep">/</span>
+  <span>The Method</span>
+</nav>
+
+<article class="doc">
+
+  <header class="header">
+    <div class="header-mark">
+      <div class="issuer">The Ars Accordia Method</div>
+      <h1 class="title">How Scoring Works</h1>
+      <div class="subtitle">A plain-language guide for collectors and investors</div>
+      <p class="colophon">Ars Accordia gives a work of art — and a whole collection — a single, defensible measure of how well it is documented. This page explains exactly how that measure is built. The method is the same for every work and every collection, and it is published here in full.</p>
+    </div>
+    <div class="seal" aria-label="Seal">
+      <div class="seal-text">Published<br>in<br>full</div>
+      <div class="seal-id">METHOD</div>
+      <div class="seal-year">MMXXVI</div>
+    </div>
+  </header>
+
+  <dl class="meta-bar">
+    <div><dt>Measures</dt><dd>Documentation</dd></div>
+    <div><dt>Does not measure</dt><dd>Authenticity · value</dd></div>
+    <div><dt>Two levels</dt><dd>Work · collection</dd></div>
+    <div><dt>Working</dt><dd>Shown on every page</dd></div>
+  </dl>
+
+  <!-- 01 -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 01</span>
+      <h3 class="section-title">The idea in one minute</h3>
+      <span class="section-rubric">Why a number at all</span>
+    </div>
+    <p class="lead">Art has never had a simple, trustworthy way to answer a basic question: <em>how well documented is this — really?</em> Ars Accordia provides one.</p>
+    <p>It works at two levels. Every work we document receives an <strong>Artwork Passport</strong> with a <strong>Passport Score</strong> from 0 to 100 — a measure of how complete its record is, including how fully it is cross-referenced to public authority records. A whole collection then receives an <strong>Ars Accordia Score</strong>, which is simply the sum of its works' passport scores, read alongside the <strong>average standard</strong> of those records and the <strong>number of works</strong> documented.</p>
+    <p>One thing to be clear about from the start: this is a measure of <strong>documentation</strong> — how good the record is. It is not a judgement of a work's authenticity, and not an estimate of its monetary value. Those belong to specialists of a different kind, and they form no part of the score.</p>
+    <div class="pull">A score you can trust is one whose working you can see — so we show the working, every time.</div>
+  </section>
+
+  <!-- 02 -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 02</span>
+      <h3 class="section-title">The Passport Score — one work</h3>
+      <span class="section-rubric">0 to 100</span>
+    </div>
+    <p>Each documented work earns a score out of 100 that measures one thing: <strong>how complete the record is</strong>. Completeness is made of four parts of the passport.</p>
+
+    <div class="pair">
+      <div class="card">
+        <div class="ct">Identity</div>
+        <div class="cq">Weight 0.35</div>
+        <p>The work itself, recorded to standard: title, maker, date, medium, dimensions, and type.</p>
+      </div>
+      <div class="card">
+        <div class="ct">Authority links</div>
+        <div class="cq">Weight 0.25</div>
+        <p>Cross-references to public authority records — Getty, Wikidata, VIAF, national libraries. The heart of what we do: gathering the public identifiers that already stand behind a work.</p>
+      </div>
+      <div class="card">
+        <div class="ct">Provenance</div>
+        <div class="cq">Weight 0.25</div>
+        <p>The chain of ownership, with a source cited for each step.</p>
+      </div>
+      <div class="card">
+        <div class="ct">Structured data</div>
+        <div class="cq">Weight 0.15</div>
+        <p>Machine-readable records for exchange between institutions and registries.</p>
+      </div>
+    </div>
+
+    <div class="pull">The authority links carry weight because they are <em>public</em>: a Getty or Wikidata identifier exists because that institution created it. We gather and present it — we never grade it. Ars Accordia compares publicly available information; it does not pass judgement on it.</div>
+
+    <div class="example">
+      <div class="ex-h">A worked example</div>
+      <p>Suppose a work has its full identity recorded (0.35), is cross-referenced to two public authorities (0.25), has three of its four ownership steps sourced (0.19), and carries structured data (0.15). The score is simply the sum of the parts:</p>
+      <div class="ex-math">Passport Score = 100 × ( 0.35 + 0.25 + 0.19 + 0.15 ) = 100 × 0.94 = <b>94</b></div>
+      <p style="margin-top:9px;margin-bottom:0;">A near-complete record. The one gap — a single unsourced ownership step — is exactly what the passport shows, so the way to raise the score is obvious.</p>
+    </div>
+
+    <p>Every passport shows this breakdown in full — each section, what it contributes, and what is still missing — so the number is never a black box, and the gaps double as the to-do list for raising it.</p>
+  </section>
+
+  <!-- 03 -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 03</span>
+      <h3 class="section-title">The Ars Accordia Score — a collection</h3>
+      <span class="section-rubric">How much · how good · how many</span>
+    </div>
+    <p>A collection's score is built directly from its works. It is the <strong>sum</strong> of its passport scores — an open figure with no ceiling, which climbs as more of the collection is documented and as existing records are strengthened. Three figures are always read together:</p>
+
+    <div class="trio">
+      <div class="tile">
+        <div class="tq">How much</div>
+        <div class="tn">Ars Accordia<br>Score</div>
+        <div class="td">The sum of all passport scores. An open figure that grows with the work.</div>
+      </div>
+      <div class="tile">
+        <div class="tq">How good</div>
+        <div class="tn">Average<br>Standard</div>
+        <div class="td">The average passport score, 0–100. Independent of size — quality, not quantity.</div>
+      </div>
+      <div class="tile">
+        <div class="tq">How many</div>
+        <div class="tn">Works<br>Documented</div>
+        <div class="td">The number of works carrying a full record. The volume behind the figure.</div>
+      </div>
+    </div>
+
+    <p>The <strong>average standard</strong> is what keeps the score honest. Because the Ars Accordia Score is a sum, a large collection of average records could out-total a small collection of immaculate ones. The average standard corrects for that: a small, perfectly documented collection reads just as high on standard as a large one. <strong>The score tells you how much documentation exists; the standard tells you how good it is; the count tells you how many works it covers.</strong></p>
+
+    <p><strong>Why not a simple percentage?</strong> A percentage would need a denominator — the exact total number of works a collection contains. For most collections that number is genuinely unknowable: few museums or private owners can enumerate, with confidence, every work they hold. A percentage built on a guessed total is itself a guess. An open figure, read with the standard of the records beside it, is the more honest measure — and it can never be inflated by quietly leaving works out.</p>
+
+    <div class="pull">More documentation, and better-verified documentation, raise the score. Nothing else does.</div>
+  </section>
+
+  <!-- 04 -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 04</span>
+      <h3 class="section-title">What we deliberately do not score</h3>
+      <span class="section-rubric">Where the line is drawn</span>
+    </div>
+    <p>The score measures the record, and only the record. Three things sit firmly outside it, by design.</p>
+    <div class="note">
+      <div class="nh">Not scored — how good a source is</div>
+      <p>We count whether a work is cross-referenced to public authorities and whether each ownership step is sourced. We do not rank one source above another or judge how trustworthy it is. The public record carries its own authority — weighing it would mean substituting our opinion for it, and that is not our place.</p>
+    </div>
+    <div class="note">
+      <div class="nh">Not scored — authenticity</div>
+      <p>A passport records that a work is correctly <em>identified and linked</em> to the right reference entities — not that an attribution is genuine. A forgery could carry a flawless record. Authenticity is a connoisseur's judgement, and no part of this score.</p>
+    </div>
+    <div class="note">
+      <div class="nh">Not scored — monetary value</div>
+      <p>What a work is worth is a valuer's judgement, made by an independent specialist. It never enters a passport, and it never enters the score.</p>
+    </div>
+    <p style="margin-top:15px;">This boundary is not timidity — it is the source of the score's neutrality. We take no view on what a work is worth, whether it is authentic, or how one source compares with another; our only interest is in the completeness of its record. That is exactly what lets the score be trusted.</p>
+  </section>
+
+  <!-- 05 -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 05</span>
+      <h3 class="section-title">Why you can trust the number</h3>
+      <span class="section-rubric">Four commitments</span>
+    </div>
+    <ul class="checklist">
+      <li><b>It is computed, never assigned.</b> Every score is calculated from the record itself. No one at Ars Accordia hand-sets a score, and no fee changes one.</li>
+      <li><b>It is earned, never inferred.</b> A collection is scored only once its works have actually been documented and assessed. We never publish a score for a collection we were not engaged to assess.</li>
+      <li><b>The working is always visible.</b> Each passport shows precisely how its score is built, line by line. This page shows the method. Nothing is hidden.</li>
+      <li><b>The method is the same for everyone.</b> The same rules apply to every work and every collection, published in full and unchanged from one client to the next.</li>
+    </ul>
+  </section>
+
+  <div class="closing">
+    <div class="cta-h">A measurable record — owned, tracked, improved</div>
+    <p>For a collector, an estate, or an institution, the score turns documentation from an open-ended task into something you can hold, report, and raise over time — a defensible record for insurance, succession, and governance.</p>
+    <p>To discuss an assessment of your collection:</p>
+    <div class="addr"><a href="mailto:catalogue@arsaccordia.com">catalogue@arsaccordia.com</a> · arsaccordia.com</div>
+  </div>
+
+</article>
+
+</body>
+</html>

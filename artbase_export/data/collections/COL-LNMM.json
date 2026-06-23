@@ -1,17 +1,16 @@
 {
   "collection_id": "COL-LNMM",
-  "name": "Latvian National Museum of Art — Portrait Collection",
-  "name_lv": "Latvijas Nacionālā mākslas muzeja portretkrājums",
+  "name": "Latvian National Museum of Art — works documented by Ars Accordia",
+  "name_lv": "Latvijas Nacionālā mākslas muzeja — Ars Accordia reģistrs",
   "owner": "Q1370465",
   "owner_display": "Latvijas Nacionālais mākslas muzejs",
   "scope": {
-    "definition": "Works documented in the 2009 exhibition catalogue 'Mākslinieks. Portrets. Pašportrets' — portraits and self-portraits from the LNMM collection, as published. Scoped to the 354 works catalogued in that publication.",
-    "total_extent": 354,
-    "status": "inventory_confirmed",
-    "source": "Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets. Rīga: LNMM; Neputns, 2009. (SRC-LNMM-PORTRAITS-2009)"
+    "definition": "Works held by the Latvijas Nacionālais mākslas muzejs (LNMM) catalogued by Ars Accordia for the public registry. Framed as Ars Accordia's own catalogue — not a commissioned assessment of the museum. No total_extent: coverage percentage is not claimed.",
+    "status": "unknown",
+    "source": "Ars Accordia registry. Primary source for catalogued works: Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets. Rīga: LNMM; Neputns, 2009. (SRC-LNMM-PORTRAITS-2009)"
   },
   "segment": "institution",
-  "assessment_status": "not_assessed",
+  "assessment_status": "assessing",
   "listing": {
     "description": "Portrait and self-portrait collection of the Latvian National Museum of Art, scoped to works documented in the 2009 exhibition catalogue 'Mākslinieks. Portrets. Pašportrets'.",
     "public_works_catalogued": 0
@@ -21,35 +20,42 @@
     "claimant_contributor": null,
     "verified_at": null
   },
-  "member_passports": [],
+  "member_passports": [
+    "AA/LV/LNMA/001",
+    "AA/LV/LNMA/004",
+    "AA/LV/LNMA/006",
+    "AA/LV/LNMA/012",
+    "AA/LV/LNMA/017",
+    "AA/LV/LNMA/019"
+  ],
   "visibility": "public",
-  "consent_to_publish_score": false,
+  "consent_to_publish_score": true,
   "engagement_depth": {
     "condition": false,
     "image": false
   },
   "score": {
-    "ars_accordia_score": 0,
-    "average_standard": null,
-    "works_documented": 0,
-    "band": null,
-    "completeness": null,
-    "corroboration": {
-      "blended": null,
-      "L1": null,
-      "L2": null
-    },
+    "ars_accordia_score": 502.0,
+    "average_standard": 83.7,
+    "works_documented": 6,
+    "band": "Substantial Record",
+    "completeness": 0.837,
     "relative_completeness": null,
-    "gaps": {},
+    "gaps": {
+      "identity_complete": 1.0,
+      "authority_linked": 1.0,
+      "provenance_sourced": 0.67,
+      "structured_export": 1.0
+    },
     "sections_in_scope": [
       "authority",
       "identity",
       "provenance",
       "structured"
     ],
-    "config_version": "weights-v2"
+    "config_version": "weights-v3"
   },
-  "score_generated_at": "2026-06-19T07:44:12+00:00",
+  "score_generated_at": "2026-06-20T09:58:18+00:00",
   "_schema": "artbase:collection:v1",
-  "_notes": "No individual artwork passports created yet. Coverage = 0. Score will show 'Inventory Only' until passport creation begins."
+  "_notes": "6 passports scored. Provenance citations for 012 and 019 removed pending verification against SRC-LNMM-PORTRAITS-2009 — these are genre/landscape works unlikely to appear in the 2009 portrait exhibition catalogue. Score will update when provenance is confirmed."
 }
