@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SMK Source Preview — See how Ars Accordia structures a Statens Museum for Kunst record into a standards-compliant passport. Live demo; not a published catalogue record.">
+<title>SMK Source Preview · Ars Accordia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ── Design tokens (mirrors the Ars Accordia passport palette) ─────────── */
+:root {
+  --paper:       #f6f1e6;
+  --paper-deep:  #ebe3d1;
+  --ink:         #1c1814;
+  --ink-soft:    #4a4338;
+  --ink-faded:   #80766a;
+  --seal:        #6e1818;
+  --seal-light:  #94342f;
+  --gold:        #8a6f2e;
+  --rule:        #c7bca5;
+  --grid:        rgba(110, 24, 24, 0.04);
+  --preview-bg:  #fffbe8;
+  --preview-border: #c9a837;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--ink);
+  font-family: 'Public Sans', -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  min-height: 100vh;
+  padding: 32px 20px 80px;
+}
+
+/* ── Persistent preview banner ──────────────────────────────────────────── */
+.preview-banner-top {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--preview-bg);
+  border-bottom: 1.5px solid var(--preview-border);
+  padding: 9px 24px;
+  font-size: 12px;
+  color: var(--ink-soft);
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+.preview-banner-top strong { color: var(--ink); }
+
+/* ── Page shell ─────────────────────────────────────────────────────────── */
+.page-shell {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── Page header ─────────────────────────────────────────────────────────── */
+.page-header {
+  padding: 32px 0 24px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 32px;
+}
+.page-header .issuer {
+  font-family: 'Fraunces', serif;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--seal);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.page-header .page-title {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  font-variation-settings: 'opsz' 144, 'SOFT' 40;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.page-header .page-desc {
+  font-size: 14px;
+  color: var(--ink-soft);
+  max-width: 600px;
+  line-height: 1.55;
+}
+
+/* ── Search area ─────────────────────────────────────────────────────────── */
+.search-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+@media (max-width: 600px) { .search-area { grid-template-columns: 1fr; } }
+
+.search-block { display: flex; flex-direction: column; gap: 6px; }
+.search-block label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+  font-weight: 500;
+}
+.search-row { display: flex; gap: 8px; }
+.search-row input {
+  flex: 1;
+  padding: 9px 12px;
+  border: 1px solid var(--rule);
+  background: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.search-row input:focus { border-color: var(--seal); }
+.search-row input::placeholder { color: var(--ink-faded); font-style: normal; }
+.search-row button {
+  padding: 9px 18px;
+  background: var(--seal);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.search-row button:hover { background: var(--seal-light); }
+.search-row button:disabled { background: var(--rule); cursor: wait; }
+
+/* ── CORS notice ─────────────────────────────────────────────────────────── */
+.cors-notice {
+  font-size: 11px;
+  color: var(--ink-faded);
+  margin-bottom: 24px;
+  padding: 8px 12px;
+  border-left: 2px solid var(--rule);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── Loading / error / empty states ─────────────────────────────────────── */
+.loading-state {
+  padding: 40px 0;
+  text-align: center;
+}
+.loading-bar {
+  width: 120px;
+  height: 3px;
+  background: var(--rule);
+  margin: 0 auto 14px;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.loading-bar::after {
+  content: '';
+  position: absolute;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: var(--seal);
+  animation: loading 1.1s ease-in-out infinite;
+  border-radius: 2px;
+}
+@keyframes loading {
+  0%   { left: -40%; }
+  100% { left: 100%; }
+}
+.loading-label {
+  font-size: 12px;
+  color: var(--ink-faded);
+  letter-spacing: 0.08em;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.error-state {
+  padding: 32px;
+  border: 1px solid var(--rule);
+  background: #fff8f8;
+  text-align: center;
+}
+.error-icon {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 24px;
+  color: var(--seal);
+  margin-bottom: 10px;
+}
+.error-msg { font-size: 14px; color: var(--ink-soft); }
+
+.no-results { font-size: 14px; color: var(--ink-faded); padding: 16px 0; }
+
+/* ── Search results list ─────────────────────────────────────────────────── */
+.results-list {
+  border: 1px solid var(--rule);
+  background: #fff;
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+.result-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--rule);
+  cursor: pointer;
+  transition: background 0.12s;
+  font-size: 13px;
+}
+.result-row:last-child { border-bottom: none; }
+.result-row:hover { background: var(--paper-deep); }
+.result-num { font-family: 'JetBrains Mono', monospace; color: var(--seal); font-size: 12px; min-width: 80px; }
+.result-creator { font-weight: 500; }
+.result-title { color: var(--ink-soft); font-style: italic; font-family: 'Fraunces', serif; font-size: 14px; }
+.result-period { font-size: 12px; color: var(--ink-faded); }
+.result-sep { color: var(--rule); }
+.pd-flag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 2px 6px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.pd-flag.pd   { background: #d4edda; color: #1a6632; }
+.pd-flag.copy { background: #f8d7da; color: #721c24; }
+.pd-flag.unknown { background: var(--paper-deep); color: var(--ink-faded); }
+
+/* ── Passport card ───────────────────────────────────────────────────────── */
+.passport {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  box-shadow:
+    0 1px 0 rgba(28, 24, 20, 0.04),
+    0 20px 40px -20px rgba(28, 24, 20, 0.15),
+    0 60px 100px -60px rgba(28, 24, 20, 0.1);
+  margin-bottom: 40px;
+}
+
+/* ── Passport header ─────────────────────────────────────────────────────── */
+.header {
+  padding: 28px 48px 24px;
+  border-bottom: 2px solid var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  left: 48px; right: 48px; bottom: -7px;
+  border-bottom: 1px solid var(--ink);
+}
+.header-mark { flex: 1; }
+.header-mark .issuer {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--seal);
+  margin-bottom: 6px;
+}
+.header-mark .title {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+  font-size: 30px;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.header-mark .subtitle {
+  margin-top: 6px;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+}
+.header-mark .colophon {
+  margin-top: 12px;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.maker-dates { font-style: normal; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+.seal {
+  width: 86px; height: 86px;
+  border-radius: 50%;
+  border: 1.5px solid var(--seal);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; color: var(--seal);
+  flex-shrink: 0;
+  background: radial-gradient(circle at center, var(--paper) 60%, rgba(110,24,24,0.06));
+  position: relative;
+}
+.seal::before {
+  content: '';
+  position: absolute; inset: 5px;
+  border-radius: 50%;
+  border: 0.5px solid var(--seal);
+}
+.seal .seal-text {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 500;
+  font-size: 9px; letter-spacing: 0.12em;
+  text-transform: uppercase; line-height: 1.2;
+}
+.seal .seal-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; font-weight: 500;
+  margin-top: 2px; letter-spacing: 0.03em;
+}
+.seal .seal-year {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-size: 10px;
+  margin-top: 3px; font-weight: 500;
+}
+
+/* ── Inline preview banner (inside passport card) ───────────────────────── */
+.preview-banner-inline {
+  background: var(--preview-bg);
+  border-bottom: 1px solid var(--preview-border);
+  padding: 10px 48px;
+  font-size: 12px;
+  color: var(--ink-soft);
+  letter-spacing: 0.01em;
+  line-height: 1.55;
+  font-style: italic;
+}
+
+/* ── Hero ────────────────────────────────────────────────────────────────── */
+.hero {
+  padding: 36px 48px 28px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 36px;
+  border-bottom: 1px solid var(--rule);
+}
+@media (max-width: 640px) { .hero { grid-template-columns: 1fr; } }
+.hero-image { position: relative; }
+.hero-image img {
+  width: 100%; height: auto; display: block;
+  box-shadow: 0 1px 0 var(--rule), 0 12px 30px -8px rgba(28,24,20,0.3);
+}
+.corner {
+  position: absolute; width: 14px; height: 14px;
+  border: 1px solid var(--seal);
+}
+.corner.tl { top: -7px; left: -7px; border-right: none; border-bottom: none; }
+.corner.tr { top: -7px; right: -7px; border-left: none; border-bottom: none; }
+.corner.bl { bottom: -7px; left: -7px; border-right: none; border-top: none; }
+.corner.br { bottom: -7px; right: -7px; border-left: none; border-top: none; }
+.img-caption {
+  margin-top: 8px;
+  font-size: 10px;
+  color: var(--ink-faded);
+  text-align: center;
+}
+.img-caption a { color: var(--seal); }
+.no-image-wrap { }
+.no-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: var(--ink-faded);
+  font-size: 13px;
+  padding: 16px;
+  line-height: 1.6;
+}
+.no-image a { color: var(--seal); font-style: normal; }
+.tombstone { padding-top: 4px; }
+.tombstone .label {
+  font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--ink-faded);
+  font-weight: 500; margin-bottom: 8px;
+}
+.work-title {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-weight: 400;
+  font-variation-settings: 'opsz' 144;
+  font-size: 38px; line-height: 1.05;
+  letter-spacing: -0.015em; color: var(--ink);
+  margin-bottom: 6px;
+}
+.work-artist {
+  font-family: 'Fraunces', serif;
+  font-weight: 500; font-size: 17px;
+  color: var(--ink); margin-bottom: 2px;
+}
+.work-artist-dates {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 12px; color: var(--ink-soft);
+  letter-spacing: 0.04em; margin-bottom: 16px;
+}
+.tombstone-grid {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  row-gap: 6px; column-gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+}
+.tombstone-grid dt {
+  font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--ink-faded);
+  font-weight: 500; padding-top: 1px;
+}
+.tombstone-grid dd { font-size: 14px; color: var(--ink); }
+.tombstone-grid dd.mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+
+/* ── Sections ────────────────────────────────────────────────────────────── */
+.section {
+  padding: 28px 48px;
+  border-bottom: 1px solid var(--rule);
+}
+.section:last-of-type { border-bottom: none; }
+.section-header {
+  display: flex; align-items: baseline;
+  gap: 14px; margin-bottom: 22px;
+  padding-bottom: 10px; border-bottom: 1px solid var(--ink);
+}
+.section-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--seal); letter-spacing: 0.1em;
+}
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 500; font-style: italic;
+  font-size: 19px; color: var(--ink);
+  letter-spacing: -0.005em; flex: 1;
+}
+.section-rubric {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--ink-faded);
+}
+
+/* ── Object ID grid ──────────────────────────────────────────────────────── */
+.object-id {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; border: 1px solid var(--rule);
+}
+.object-id-field {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  display: flex; flex-direction: column; gap: 3px;
+}
+.object-id-field:nth-child(2n) { border-right: none; }
+.object-id-field:nth-last-child(-n+2) { border-bottom: none; }
+.object-id-field.wide { grid-column: 1 / -1; border-right: none; }
+.object-id-field .num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: var(--seal); letter-spacing: 0.08em;
+}
+.object-id-field .label {
+  font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ink-faded); font-weight: 500;
+}
+.object-id-field .value {
+  font-family: 'Fraunces', serif;
+  font-size: 15px; color: var(--ink); line-height: 1.35;
+}
+.object-id-field.missing .value { color: var(--ink-faded); font-style: italic; }
+
+/* ── Authority links ─────────────────────────────────────────────────────── */
+.authority-group { margin-bottom: 20px; }
+.authority-group:last-child { margin-bottom: 0; }
+.authority-group-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.authorities { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.authority {
+  border: 1px solid var(--rule);
+  padding: 14px 16px;
+  text-decoration: none; color: var(--ink);
+  display: block;
+  background: rgba(255,255,255,0.3);
+  transition: all 0.18s ease;
+  position: relative;
+}
+a.authority:hover { background: rgba(255,255,255,0.6); border-color: var(--seal); }
+.authority.missing { background: var(--paper-deep); }
+.authority.candidate { background: rgba(255,255,255,0.15); }
+.auth-system {
+  font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--seal);
+  font-weight: 600; margin-bottom: 5px;
+  display: flex; align-items: center; gap: 8px;
+}
+a.authority .auth-system::after { content: '↗'; margin-left: auto; font-size: 13px; color: var(--ink-faded); }
+.auth-id {
+  font-family: 'Fraunces', serif;
+  font-size: 17px; font-weight: 500; margin-bottom: 2px;
+}
+.auth-label { font-family: 'Public Sans', sans-serif; font-size: 12px; color: var(--ink-soft); margin-bottom: 4px; }
+.auth-uri {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: var(--ink-faded);
+  word-break: break-all;
+}
+.auth-note { font-size: 11px; color: var(--gold); font-style: italic; margin-top: 4px; }
+.scope-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  background: var(--paper-deep);
+  color: var(--ink-faded);
+  border: 1px solid var(--rule);
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+/* ── Rights block ────────────────────────────────────────────────────────── */
+.rights-block {
+  border: 1px solid var(--rule);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.rights-block.rights-ok     { border-left: 3px solid #2a7d46; }
+.rights-block.rights-copy   { border-left: 3px solid var(--seal); }
+.rights-block.rights-unknown { border-left: 3px solid var(--gold); }
+.rights-status-line {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; font-weight: 500;
+}
+.rights-dot {
+  width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+}
+.rights-ok    .rights-dot { background: #2a7d46; }
+.rights-copy  .rights-dot { background: var(--seal); }
+.rights-unknown .rights-dot { background: var(--gold); }
+.rights-detail {
+  font-size: 12px;
+  color: var(--ink-soft);
+  font-family: 'Public Sans', sans-serif;
+  padding-left: 20px;
+}
+.rights-detail a { color: var(--seal); }
+.rights-attribution { font-style: italic; }
+.rights-source { color: var(--ink-faded); }
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+.passport-footer {
+  padding: 16px 48px;
+  background: var(--paper-deep);
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.footer-cite {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-faded);
+}
+.footer-note {
+  font-size: 11px;
+  color: var(--ink-faded);
+  font-style: italic;
+}
+
+/* ── Empty state ─────────────────────────────────────────────────────────── */
+.empty-state {
+  padding: 60px 0;
+  text-align: center;
+  border: 1px solid var(--rule);
+  background: rgba(255,255,255,0.3);
+}
+.empty-state .empty-icon {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 32px;
+  color: var(--rule);
+  margin-bottom: 16px;
+}
+.empty-state .empty-desc {
+  font-size: 13px;
+  color: var(--ink-faded);
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.empty-state .example-btns {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.example-btn {
+  padding: 6px 14px;
+  background: none;
+  border: 1px solid var(--rule);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--seal);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.example-btn:hover { background: var(--seal); color: #fff; border-color: var(--seal); }
+
+@media (max-width: 640px) {
+  .header, .hero, .section, .passport-footer, .preview-banner-inline { padding-left: 20px; padding-right: 20px; }
+  .header::after { left: 20px; right: 20px; }
+  .section-header { flex-wrap: wrap; }
+  .authorities { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- Persistent preview banner — always visible, every state -->
+<div class="preview-banner-top" role="banner" aria-label="Preview notice">
+  <strong>Live preview</strong> — this shows how Ars Accordia structures a public museum record.
+  It is not a catalogued passport. No record is stored or scored.
+  Catalogued passports are produced through Ars Accordia's reviewed pipeline.
+</div>
+
+<div class="page-shell">
+
+  <!-- Page header -->
+  <header class="page-header">
+    <div class="issuer">Ars Accordia · Sources</div>
+    <h1 class="page-title">SMK Open — Source Preview</h1>
+    <p class="page-desc">
+      Enter an SMK inventory number or search by keyword to see how Ars Accordia
+      structures a Statens Museum for Kunst record into a standards-compliant
+      passport — live, in your browser, sourced directly from SMK's open API.
+    </p>
+  </header>
+
+  <!-- Search area -->
+  <div class="search-area">
+    <div class="search-block">
+      <label for="obj-input">Object number</label>
+      <div class="search-row">
+        <input id="obj-input" type="text" placeholder="e.g. KMS4185" autocomplete="off" spellcheck="false">
+        <button id="lookup-btn">Look up</button>
+      </div>
+    </div>
+    <div class="search-block">
+      <label for="search-input">Keyword search</label>
+      <div class="search-row">
+        <input id="search-input" type="text" placeholder="e.g. Hunæus" autocomplete="off">
+        <button id="search-btn">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cors-notice">
+    Calling api.smk.dk directly from your browser · CORS: Access-Control-Allow-Origin: * · No proxy required
+  </div>
+
+  <!-- Search results (shown when keyword search is used) -->
+  <div id="results-area"></div>
+
+  <!-- Status (loading / error) -->
+  <div id="status-area"></div>
+
+  <!-- Preview (passport-style render) -->
+  <div id="preview-area">
+    <div class="empty-state">
+      <div class="empty-icon">—</div>
+      <p class="empty-desc">
+        Enter an SMK inventory number above to preview how Ars Accordia
+        maps a museum record to a standards-compliant passport format.
+      </p>
+      <div class="example-btns">
+        <button class="example-btn" data-num="KMS4185">KMS4185</button>
+        <button class="example-btn" data-num="KMS3490">KMS3490</button>
+        <button class="example-btn" data-num="KMS3145">KMS3145</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="smk-preview.js"></script>
+<script>
+/* ── App controller ───────────────────────────────────────────────────────── */
+
+const objInput    = document.getElementById('obj-input');
+const lookupBtn   = document.getElementById('lookup-btn');
+const searchInput = document.getElementById('search-input');
+const searchBtn   = document.getElementById('search-btn');
+const resultsArea = document.getElementById('results-area');
+const statusArea  = document.getElementById('status-area');
+const previewArea = document.getElementById('preview-area');
+
+function setLoading(on) {
+  lookupBtn.disabled = on;
+  searchBtn.disabled = on;
+  if (on) renderLoading(statusArea);
+  else statusArea.innerHTML = '';
+}
+
+async function doLookup(num) {
+  if (!num) return;
+  resultsArea.innerHTML = '';
+  previewArea.innerHTML = '';
+  setLoading(true);
+  try {
+    const raw      = await fetchByObjectNumber(num);
+    const passport = mapRecord(raw);
+    setLoading(false);
+    renderPreview(passport, previewArea);
+    previewArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } catch (err) {
+    setLoading(false);
+    const msg = err.message.startsWith('Not found')
+      ? `Not found: "${num}" is not a valid SMK object number, or no record exists.`
+      : `Error fetching from SMK: ${err.message}`;
+    renderError(msg, statusArea);
+    previewArea.innerHTML = '';
+  }
+}
+
+async function doSearch(query) {
+  if (!query) return;
+  previewArea.innerHTML = '';
+  setLoading(true);
+  try {
+    const results = await searchSMK(query);
+    setLoading(false);
+    renderSearchResults(results, resultsArea, (num) => {
+      objInput.value = num;
+      doLookup(num);
+    });
+  } catch (err) {
+    setLoading(false);
+    renderError(`Search error: ${err.message}`, statusArea);
+  }
+}
+
+/* ── Event listeners ──────────────────────────────────────────────────────── */
+
+lookupBtn.addEventListener('click', () => doLookup(objInput.value.trim().toUpperCase()));
+
+objInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') doLookup(objInput.value.trim().toUpperCase());
+});
+
+searchBtn.addEventListener('click', () => doSearch(searchInput.value.trim()));
+
+searchInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') doSearch(searchInput.value.trim());
+});
+
+// Example buttons
+document.querySelectorAll('.example-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const num = btn.dataset.num;
+    objInput.value = num;
+    doLookup(num);
+  });
+});
+</script>
+</body>
+</html>

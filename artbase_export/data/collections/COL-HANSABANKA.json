@@ -11,31 +11,43 @@
     "source": "Žeivaite, Ilze, et al. Hansabankas mūsdienu mākslas kolekcija / Hansabanka Contemporary Art Collection. Rīga: Hansabanka, 2007. (SRC-HANSABANKA-2007, Wikidata Q139986317)"
   },
   "segment": "corporate",
-  "assessment_status": "not_assessed",
+  "assessment_status": "assessing",
   "listing": {
     "description": "386 works by 108 Latvian artists collected by Hansabanka between 1998 and 2007, documenting a decade of contemporary Latvian art. Now held by Swedbank Latvia.",
-    "public_works_catalogued": 0
+    "public_works_catalogued": 18
   },
   "claim": {
     "status": "unclaimed",
     "claimant_contributor": null,
     "verified_at": null
   },
-  "member_passports": [],
-  "visibility": "private",
-  "consent_to_publish_score": false,
+  "member_passports": [
+    "AA/LV/HANS/001", "AA/LV/HANS/002", "AA/LV/HANS/003", "AA/LV/HANS/004",
+    "AA/LV/HANS/005", "AA/LV/HANS/006", "AA/LV/HANS/007", "AA/LV/HANS/008",
+    "AA/LV/HANS/009", "AA/LV/HANS/010", "AA/LV/HANS/011", "AA/LV/HANS/012",
+    "AA/LV/HANS/013", "AA/LV/HANS/014", "AA/LV/HANS/015", "AA/LV/HANS/016",
+    "AA/LV/HANS/017", "AA/LV/HANS/018"
+  ],
+  "visibility": "public",
+  "consent_to_publish_score": true,
   "engagement_depth": {
     "condition": false,
     "image": false
   },
   "score": {
-    "ars_accordia_score": 0,
-    "average_standard": null,
-    "works_documented": 0,
-    "band": null,
+    "ars_accordia_score": 1728,
+    "average_standard": 96.0,
+    "works_documented": 18,
+    "band": "Complete Record",
     "completeness": null,
     "relative_completeness": null,
-    "gaps": {},
+    "gap_map": {
+      "identity": 1.0,
+      "authority": 0.833,
+      "provenance": 1.0,
+      "structured": 1.0
+    },
+    "notes": "Authority gap: 6 works awaiting artwork Wikidata QID confirmation (HANS/001, 007, 013–018). Scores will rise from 88 → 100 once QIDs are logged.",
     "sections_in_scope": [
       "authority",
       "identity",
@@ -44,7 +56,7 @@
     ],
     "config_version": "weights-v3"
   },
-  "score_generated_at": "2026-06-20T06:49:44+00:00",
+  "score_generated_at": "2026-06-24",
   "_schema": "artbase:collection:v1",
-  "_notes": "No individual artwork passports created yet. Coverage = 0. Score will show 'Inventory Only' until passport creation begins."
+  "_notes": "18 passport JSONs created 2026-06-24. Wikidata items exist for 12 of 18 works (Batches 01+02 Works 2–6 confirmed). Batch 03 QIDs pending."
 }

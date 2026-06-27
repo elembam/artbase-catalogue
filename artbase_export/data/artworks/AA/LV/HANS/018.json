@@ -1,29 +1,30 @@
 {
-  "artbase_id": "AA/LV/LNMA/017",
-  "airtable_id": "recCefAOHKoENTiVl",
+  "artbase_id": "AA/LV/HANS/018",
+  "airtable_id": null,
   "artbase_canonical_id": null,
   "version": 1,
-  "created": null,
-  "exported": "2026-05-30T17:59:41.386317Z",
+  "created": "2026-06-24",
+  "exported": "2026-06-24T13:04:25.522659+00:00",
   "visibility": "public",
   "object_id": {
-    "object_type": "Painting",
+    "object_type": "Work of art",
     "object_type_aat": null,
-    "materials": "Oil on canvas",
+    "materials": "Mixed media on zinc sheet",
     "materials_aat": [],
-    "dimensions_display": "125 (h) x 90 (w) cm",
-    "height_cm": 125.0,
-    "width_cm": 90.0,
+    "dimensions_display": "90.5 (h) x 70.5 (w) cm",
+    "height_cm": 90.5,
+    "width_cm": 70.5,
     "depth_cm": null,
     "inscriptions": null,
     "distinguishing": null,
-    "title": "Young Gipsy Woman",
+    "title": "Chameleon's Companion. Diptych. Part II",
+    "title_lv": "Hameleona pavadonis. Diptihs II daļa",
     "subject": null,
-    "date_display": "1870",
-    "date_earliest": 1870,
-    "date_latest": 1870,
-    "maker_id": "ART-HUNS-1831",
-    "maker_display_name": "Kārlis Hūns",
+    "date_display": "1993",
+    "date_earliest": 1993,
+    "date_latest": 1993,
+    "maker_id": "ART-PUTRAMS-1956",
+    "maker_display_name": "Juris Putrāms",
     "has_photograph": false
   },
   "iconography": {
@@ -32,45 +33,41 @@
     "depicts": []
   },
   "location": {
-    "collection": "Latvian National Museum of Art",
-    "collection_qid": "Q1370465",
-    "inventory_number": "VMM GL-1509",
-    "location_notes": null
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": null,
+    "inventory_number": null,
+    "catalogue_number": "163",
+    "catalogue_page": 227,
+    "catalogue_source": "Q139986317",
+    "location_notes": "Collection transferred to Swedbank following acquisition of Hansabanka, 2005."
   },
   "provenance": [
     {
       "step": 1,
-      "description": "Held in the collection of Latvijas Nacionālais mākslas muzejs (LNMM), Rīga, Latvia",
+      "description": "Held in the Hansabanka Contemporary Art Collection, Rīga, Latvia (collection transferred to Swedbank following acquisition of Hansabanka by Swedbank, 2005)",
       "date": null,
-      "holder": "Latvijas Nacionālais mākslas muzejs",
+      "holder": "Hansabanka / Swedbank",
       "type": "current_location",
-      "source": "SRC-LNMM-PORTRAITS-2009",
-      "source_note": "Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets. Rīga: Latvijas Nacionālais mākslas muzejs; Neputns, 2009.",
+      "source": "SRC-HANSABANKA-2007",
+      "source_note": "Hansabanka Contemporary Art Collection. Rīga: Hansabanka, 2007. Catalogue no. 163 · p. 227.",
       "is_gap": false
     }
   ],
   "authority_links": {
-    "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
-      "verified_date": null,
-      "notes": "Work-level Wikidata item not yet identified — artist QID confirmed"
-    },
     "artist_wikidata": {
-      "id": "Q4152126",
-      "uri": "https://www.wikidata.org/wiki/Q4152126",
+      "id": "Q99481514",
+      "uri": "https://www.wikidata.org/wiki/Q99481514",
       "status": "confirmed",
-      "verified_date": "2026-06-20",
-      "notes": "Wikidata item for the artist Kārlis Hūns; QID confirmed 2026-06-15"
+      "verified_date": "2026-06-24",
+      "notes": "Wikidata item for Juris Putrāms"
     },
-    "artbase_id": "ART-HUNS-1831"
+    "artbase_id": "ART-PUTRAMS-1956"
   },
   "sources": [
     {
-      "source_id": "SRC-LNMM-PORTRAITS-2009",
+      "source_id": "SRC-HANSABANKA-2007",
       "type": "book",
-      "citation": "Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets. Rīga: Latvijas Nacionālais mākslas muzejs; Neputns, 2009."
+      "citation": "Hansabanka Contemporary Art Collection. Rīga: Hansabanka, 2007."
     }
   ],
   "source_refs": [],
@@ -78,8 +75,10 @@
   "cataloguing": {
     "review_status": "draft",
     "catalogued_by": null,
-    "notes": "Google Arts: https://artsandculture.google.com/asset/young-gipsy-woman/OQHY3BUl6daw7Q",
-    "tasks": [],
+    "notes": "Catalogue no. 163 · p. 227 · Wikidata QID: pending (submitted; awaiting confirmation)\nSubmitted to Wikidata: Hansabanka Batch 03 Work 6",
+    "tasks": [
+      "Add artwork Wikidata QID once confirmed"
+    ],
     "engagement_ids": []
   },
   "_schema": "artbase:artwork:v1",
@@ -146,45 +145,40 @@
     ],
     "config_version": "weights-v3"
   },
-  "score_generated_at": "2026-06-20T09:57:17+00:00",
+  "score_generated_at": "2026-06-24T13:04:25.522659+00:00",
   "structured_data": {
     "json_ld": {
       "@context": "https://schema.org/",
       "@type": "VisualArtwork",
-      "name": "Young Gipsy Woman",
+      "name": "Chameleon's Companion. Diptych. Part II",
       "creator": {
         "@type": "Person",
-        "name": "Kārlis Hūns",
-        "sameAs": "https://www.wikidata.org/wiki/Q4152126"
+        "name": "Juris Putrāms",
+        "sameAs": "https://www.wikidata.org/wiki/Q99481514"
       },
-      "dateCreated": "1870",
-      "artMedium": "Oil on canvas",
-      "artform": "Painting",
+      "dateCreated": "1993",
+      "artMedium": "Mixed media on zinc sheet",
+      "artform": "Work of art",
       "locationCreated": {
         "@type": "Place",
         "name": "Latvia"
       },
       "contentLocation": {
-        "@type": "Museum",
-        "name": "Latvian National Museum of Art",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Rīga",
-          "addressCountry": "LV"
-        },
-        "sameAs": "https://www.wikidata.org/wiki/Q1370465"
+        "@type": "Organization",
+        "name": "Hansabanka Contemporary Art Collection",
+        "description": "Corporate art collection (transferred to Swedbank following acquisition, 2005)"
       },
       "height": {
         "@type": "QuantitativeValue",
-        "value": 125.0,
+        "value": 90.5,
         "unitCode": "CMT"
       },
       "width": {
         "@type": "QuantitativeValue",
-        "value": 90.0,
+        "value": 70.5,
         "unitCode": "CMT"
       },
-      "identifier": "VMM GL-1509"
+      "identifier": "AA/LV/HANS/018"
     }
   }
 }

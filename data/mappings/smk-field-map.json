@@ -1,0 +1,110 @@
+{
+  "_comment": "Shared field map for SMK Open API → ArtBase passport. Read by: (1) Python SMKAdapter, (2) JS smk-preview.js, (3) parity test. Confirm field names against https://api.smk.dk/api/v1/docs/ if the API changes.",
+  "version": "1.0",
+  "confirmed_against_api": "2026-06-26",
+
+  "source": {
+    "name": "SMK Open API",
+    "base": "https://api.smk.dk/api/v1",
+    "open_base": "https://open.smk.dk/artwork/image",
+    "collection_qid": "Q671249",
+    "collection_name": "Statens Museum for Kunst",
+    "cors": "Access-Control-Allow-Origin: * — direct browser calls permitted"
+  },
+
+  "direct_fields": [
+    { "smk": "object_number",                     "passport": "object_id.inventory_number",       "note": "primary identifier; also the work-level authority link id" },
+    { "smk": "titles[0].title",                   "passport": "object_id.title",                  "note": "first entry is the primary museum title (Danish)" },
+    { "smk": "object_names[0].name",              "passport": "object_id.object_type",            "note": "e.g. 'Maleri'" },
+    { "smk": "production[0].creator",             "passport": "object_id.maker_display_name",     "note": "format: 'Surname, Forename'" },
+    { "smk": "production[0].creator_forename",    "passport": "object_id.maker_forename" },
+    { "smk": "production[0].creator_surname",     "passport": "object_id.maker_surname" },
+    { "smk": "production[0].creator_lref",        "passport": "smk_raw.creator_lref",             "note": "SMK internal person ID; used for reconciliation, not display" },
+    { "smk": "production[0].creator_nationality", "passport": "object_id.maker_nationality" },
+    { "smk": "production_date[0].period",         "passport": "object_id.date_display",           "note": "e.g. '1843-1847'" },
+    { "smk": "frontend_url",                      "passport": "authority_links.work_level[0].uri","note": "the SMK Open human URL" },
+    { "smk": "public_domain",                     "passport": "rights.public_domain",             "note": "boolean; per-object; NEVER assume true" },
+    { "smk": "rights",                            "passport": "rights.license",                   "note": "CC URI or null" },
+    { "smk": "iiif_manifest",                     "passport": "media[iiif_manifest].uri",         "rights_gated": false, "note": "manifest URI safe to store regardless of rights" },
+    { "smk": "image_thumbnail",                   "passport": "media[image_thumbnail].uri",       "rights_gated": true,  "note": "only if public_domain === true" },
+    { "smk": "image_iiif_id",                     "passport": "media[image_iiif].uri",            "rights_gated": true,  "note": "only if public_domain === true" },
+    { "smk": "image_width",                       "passport": "media[image_iiif].width",          "rights_gated": true },
+    { "smk": "image_height",                      "passport": "media[image_iiif].height",         "rights_gated": true },
+    { "smk": "acquisition_date",                  "passport": "provenance[0].date",               "note": "ISO datetime; extract year" },
+    { "smk": "responsible_department",            "passport": "location.department" },
+    { "smk": "current_location_name",             "passport": "location.location_notes" },
+    { "smk": "has_image",                         "passport": "object_id.has_photograph" }
+  ],
+
+  "computed_fields": {
+    "materials_display": {
+      "logic": "If techniques[] non-empty: join(techniques, '; '). Else if materials[] non-empty: join(materials, '; '). Else null.",
+      "passport": "object_id.materials"
+    },
+    "dimensions_display": {
+      "logic": "From dimensions[]: find entry where type='højde' and unit='centimeter' → height_cm (float). Find type='bredde' → width_cm. Format: '{h} × {w} cm'. Null if either absent.",
+      "passport": "object_id.dimensions_display"
+    },
+    "date_earliest": {
+      "logic": "parseInt(production_date[0].start.substring(0, 4)). Null if absent.",
+      "passport": "object_id.date_earliest"
+    },
+    "date_latest": {
+      "logic": "parseInt(production_date[0].end.substring(0, 4)). Null if absent.",
+      "passport": "object_id.date_latest"
+    },
+    "height_cm": {
+      "logic": "parseFloat(dimensions[type='højde', unit='centimeter'].value). Null if absent.",
+      "passport": "object_id.height_cm"
+    },
+    "width_cm": {
+      "logic": "parseFloat(dimensions[type='bredde', unit='centimeter'].value). Null if absent.",
+      "passport": "object_id.width_cm"
+    }
+  },
+
+  "dimension_type_names": {
+    "height": "højde",
+    "width":  "bredde",
+    "depth":  "dybde"
+  },
+
+  "rights_rule": {
+    "field":               "public_domain",
+    "true":                { "copyright_status": "public_domain",  "image_action": "display_inline" },
+    "false":               { "copyright_status": "in_copyright",   "image_action": "link_only" },
+    "null_or_missing":     { "copyright_status": "unknown",        "image_action": "link_only",     "note": "Missing or ambiguous → treat as restricted. Never assume CC0." }
+  },
+
+  "authority_link_templates": {
+    "work_level_smk": {
+      "scope":   "artwork_object",
+      "system":  "SMK",
+      "id":      "{object_number}",
+      "uri":     "https://open.smk.dk/artwork/image/{object_number}",
+      "status":  "approved_institutional_source"
+    },
+    "person_level_artist": {
+      "scope":   "artist_maker",
+      "system":  "SMK",
+      "id":      "{production[0].creator_lref}",
+      "note":    "Reconcile to Wikidata / ULAN / RKD — SMK lref is an internal ID, not a public authority"
+    }
+  },
+
+  "parity_test_fields": [
+    "object_id.title",
+    "object_id.maker_display_name",
+    "object_id.date_display",
+    "object_id.date_earliest",
+    "object_id.date_latest",
+    "object_id.materials",
+    "object_id.dimensions_display",
+    "object_id.height_cm",
+    "object_id.width_cm",
+    "object_id.object_type",
+    "object_id.inventory_number",
+    "rights.public_domain",
+    "rights.copyright_status"
+  ]
+}

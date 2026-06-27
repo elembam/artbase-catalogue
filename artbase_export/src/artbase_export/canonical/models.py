@@ -39,11 +39,23 @@ class ReviewStatus(str, Enum):
     ARCHIVED    = "archived"
 
 class AuthorityStatus(str, Enum):
-    CONFIRMED           = "confirmed"
-    CANDIDATE           = "candidate_verify"
-    SEARCH_NEEDED       = "search_needed"
-    NOT_FOUND           = "not_found"
-    NOT_APPLICABLE      = "not_applicable"
+    CONFIRMED                   = "confirmed"
+    APPROVED_INSTITUTIONAL      = "approved_institutional_source"
+    CANDIDATE                   = "candidate_verify"
+    SEARCH_NEEDED               = "search_needed"
+    NOT_FOUND                   = "not_found"
+    NOT_APPLICABLE              = "not_applicable"
+
+
+class AuthorityScope(str, Enum):
+    """What entity type a given authority link identifies."""
+    ARTIST_MAKER        = "artist_maker"
+    ARTWORK_OBJECT      = "artwork_object"
+    INSTITUTION         = "institution"
+    PLACE               = "place"
+    SUBJECT             = "subject"
+    MATERIAL_TECHNIQUE  = "material_technique"
+    SOURCE_DOCUMENT     = "source_document"
 
 class ConflictStatus(str, Enum):
     UNRESOLVED  = "unresolved"
@@ -78,11 +90,13 @@ class AatTerm(BaseModel):
 
 class AuthorityLink(BaseModel):
     """A link from a canonical record to an external authority."""
-    id:             Optional[str]           = None
-    uri:            Optional[str]           = None
-    status:         AuthorityStatus         = AuthorityStatus.SEARCH_NEEDED
-    verified_date:  Optional[str]           = None
-    notes:          Optional[str]           = None
+    scope:          Optional[AuthorityScope]    = None  # what entity type this link identifies
+    system:         Optional[str]               = None  # SMK / Wikidata / ULAN / VIAF / etc.
+    id:             Optional[str]               = None
+    uri:            Optional[str]               = None
+    status:         AuthorityStatus             = AuthorityStatus.SEARCH_NEEDED
+    verified_date:  Optional[str]               = None
+    notes:          Optional[str]               = None
 
 
 class SourceReference(BaseModel):
@@ -282,9 +296,31 @@ class ArtworkLocation(BaseModel):
     location_notes:     Optional[str]   = None
 
 
+class RightsBlock(BaseModel):
+    """Per-object rights — always stored, read from source, never assumed."""
+    public_domain:      Optional[bool]  = None
+    license:            Optional[str]   = None  # CC0 URI, CC BY, etc.
+    copyright_status:   Optional[str]   = None  # "public_domain" / "in_copyright" / "unknown"
+    attribution:        Optional[str]   = None  # required attribution text if applicable
+    source:             Optional[str]   = None  # where the rights determination came from
+
+
+class MediaRecord(BaseModel):
+    """An image or IIIF reference — only stored when rights allow reuse."""
+    type:               str             # "image_thumbnail" / "image_iiif" / "iiif_manifest"
+    uri:                str
+    iiif_service:       Optional[str]   = None  # base IIIF image service URL
+    width:              Optional[int]   = None
+    height:             Optional[int]   = None
+    rights_verified:    bool            = False  # must be True before storing
+
+
 class ArtworkAuthorityLinks(BaseModel):
-    wikidata:   AuthorityLink   = Field(default_factory=AuthorityLink)
-    artbase_id: Optional[str]   = None   # AB + 8 base32
+    wikidata:   AuthorityLink           = Field(default_factory=AuthorityLink)
+    artbase_id: Optional[str]           = None   # AB + 8 base32
+    # Generic list for work-level links (SMK, Rijksmuseum, Met, etc.) — adapter extension point.
+    # Scope is always artwork_object for entries here.
+    work_level: list[AuthorityLink]     = Field(default_factory=list)
 
 
 class CanonicalArtwork(BaseModel):
@@ -304,6 +340,8 @@ class CanonicalArtwork(BaseModel):
     location:       ArtworkLocation             = Field(default_factory=ArtworkLocation)
     provenance:     list[dict]                  = Field(default_factory=list)
     authority_links:ArtworkAuthorityLinks       = Field(default_factory=ArtworkAuthorityLinks)
+    rights:         RightsBlock                 = Field(default_factory=RightsBlock)
+    media:          list[MediaRecord]           = Field(default_factory=list)
 
     sources:        list[SourceDocument]        = Field(default_factory=list)
     source_refs:    list[SourceReference]       = Field(default_factory=list)

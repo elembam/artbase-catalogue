@@ -1,29 +1,30 @@
 {
-  "artbase_id": "AA/LV/LNMA/006",
-  "airtable_id": "recw2Fczj9qBcQfe7",
+  "artbase_id": "AA/LV/HANS/011",
+  "airtable_id": null,
   "artbase_canonical_id": null,
   "version": 1,
-  "created": null,
-  "exported": "2026-05-30T17:59:41.406423Z",
+  "created": "2026-06-24",
+  "exported": "2026-06-24T13:04:25.522659+00:00",
   "visibility": "public",
   "object_id": {
-    "object_type": "Painting",
+    "object_type": "Work of art",
     "object_type_aat": null,
-    "materials": "Oil on canvas",
+    "materials": "Wool and metal",
     "materials_aat": [],
-    "dimensions_display": "175 (h) x 103 (w) cm",
-    "height_cm": 175.0,
-    "width_cm": 103.0,
+    "dimensions_display": "220 (h) x 250 (w) cm",
+    "height_cm": 220,
+    "width_cm": 250,
     "depth_cm": null,
     "inscriptions": null,
     "distinguishing": null,
-    "title": "From Church (After the Service)",
+    "title": "The Sea",
+    "title_lv": "Jūra",
     "subject": null,
-    "date_display": "1894",
-    "date_earliest": 1894,
-    "date_latest": 1894,
-    "maker_id": "ART-ROZENTALS-1866",
-    "maker_display_name": "Janis Rozentāls",
+    "date_display": "2004",
+    "date_earliest": 2004,
+    "date_latest": 2004,
+    "maker_id": "ART-ROZENBERGS-1948",
+    "maker_display_name": "Egils Rozenbergs",
     "has_photograph": false
   },
   "iconography": {
@@ -32,52 +33,48 @@
     "depicts": []
   },
   "location": {
-    "collection": "Latvian National Museum of Art",
-    "collection_qid": "Q1370465",
-    "inventory_number": "VMM GL-55",
-    "location_notes": null
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": null,
+    "inventory_number": null,
+    "catalogue_number": "165",
+    "catalogue_page": 227,
+    "catalogue_source": "Q139986317",
+    "location_notes": "Collection transferred to Swedbank following acquisition of Hansabanka, 2005."
   },
   "provenance": [
     {
       "step": 1,
-      "description": "Held in the collection of Latvijas Nacionālais mākslas muzejs (LNMM), Rīga, Latvia",
+      "description": "Held in the Hansabanka Contemporary Art Collection, Rīga, Latvia (collection transferred to Swedbank following acquisition of Hansabanka by Swedbank, 2005)",
       "date": null,
-      "holder": "Latvijas Nacionālais mākslas muzejs",
+      "holder": "Hansabanka / Swedbank",
       "type": "current_location",
-      "source": "SRC-LNMM-PORTRAITS-2009",
-      "source_note": "Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets. Rīga: Latvijas Nacionālais mākslas muzejs; Neputns, 2009.",
+      "source": "SRC-HANSABANKA-2007",
+      "source_note": "Hansabanka Contemporary Art Collection. Rīga: Hansabanka, 2007. Catalogue no. 165 · p. 227.",
       "is_gap": false
     }
   ],
   "authority_links": {
-    "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
-      "verified_date": null,
-      "notes": "Work-level Wikidata item not yet identified — artist QID confirmed"
-    },
     "artist_wikidata": {
-      "id": "Q975168",
-      "uri": "https://www.wikidata.org/wiki/Q975168",
+      "id": "Q56084737",
+      "uri": "https://www.wikidata.org/wiki/Q56084737",
       "status": "confirmed",
-      "verified_date": "2026-06-20",
-      "notes": "Wikidata item for the artist Janis Rozentāls"
+      "verified_date": "2026-06-24",
+      "notes": "Wikidata item for Egils Rozenbergs"
     },
-    "artist_ulan": {
-      "id": "500281390",
-      "uri": "http://vocab.getty.edu/ulan/500281390",
+    "artbase_id": "ART-ROZENBERGS-1948",
+    "wikidata": {
+      "id": "Q140323556",
+      "uri": "https://www.wikidata.org/wiki/Q140323556",
       "status": "confirmed",
-      "verified_date": "2026-06-20",
-      "notes": "Getty ULAN record for Janis Rozentāls"
-    },
-    "artbase_id": "ART-ROZENTALS-1866"
+      "verified_date": "2026-06-24",
+      "notes": "Wikidata item for this artwork — created by ArsAccordia"
+    }
   },
   "sources": [
     {
-      "source_id": "SRC-LNMM-PORTRAITS-2009",
+      "source_id": "SRC-HANSABANKA-2007",
       "type": "book",
-      "citation": "Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets. Rīga: Latvijas Nacionālais mākslas muzejs; Neputns, 2009."
+      "citation": "Hansabanka Contemporary Art Collection. Rīga: Hansabanka, 2007."
     }
   ],
   "source_refs": [],
@@ -85,7 +82,7 @@
   "cataloguing": {
     "review_status": "draft",
     "catalogued_by": null,
-    "notes": "Sub-collection: Latvian Painting Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/from-church-after-the-service/ZAHd0RC6Nrk3jw",
+    "notes": "Catalogue no. 165 · p. 227 · Wikidata QID: Q140323556\nSubmitted to Wikidata: Hansabanka Batch 02 Work 5",
     "tasks": [],
     "engagement_ids": []
   },
@@ -108,7 +105,7 @@
           "section": "authority",
           "weight": 0.25,
           "fill": 1.0,
-          "present": "2 public authorities — ARTIST_WIKIDATA, ARTIST_ULAN",
+          "present": "2 public authorities — ARTIST_WIKIDATA, WIKIDATA",
           "contribution": 0.25,
           "in_scope": true
         },
@@ -153,45 +150,41 @@
     ],
     "config_version": "weights-v3"
   },
-  "score_generated_at": "2026-06-20T09:57:17+00:00",
+  "score_generated_at": "2026-06-24T13:04:25.522659+00:00",
   "structured_data": {
     "json_ld": {
       "@context": "https://schema.org/",
       "@type": "VisualArtwork",
-      "name": "From Church (After the Service)",
+      "name": "The Sea",
       "creator": {
         "@type": "Person",
-        "name": "Janis Rozentāls",
-        "sameAs": "https://www.wikidata.org/wiki/Q975168"
+        "name": "Egils Rozenbergs",
+        "sameAs": "https://www.wikidata.org/wiki/Q56084737"
       },
-      "dateCreated": "1894",
-      "artMedium": "Oil on canvas",
-      "artform": "Painting",
+      "dateCreated": "2004",
+      "artMedium": "Wool and metal",
+      "artform": "Work of art",
       "locationCreated": {
         "@type": "Place",
         "name": "Latvia"
       },
       "contentLocation": {
-        "@type": "Museum",
-        "name": "Latvian National Museum of Art",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Rīga",
-          "addressCountry": "LV"
-        },
-        "sameAs": "https://www.wikidata.org/wiki/Q1370465"
+        "@type": "Organization",
+        "name": "Hansabanka Contemporary Art Collection",
+        "description": "Corporate art collection (transferred to Swedbank following acquisition, 2005)"
       },
       "height": {
         "@type": "QuantitativeValue",
-        "value": 175.0,
+        "value": 220,
         "unitCode": "CMT"
       },
       "width": {
         "@type": "QuantitativeValue",
-        "value": 103.0,
+        "value": 250,
         "unitCode": "CMT"
       },
-      "identifier": "VMM GL-55"
+      "identifier": "AA/LV/HANS/011",
+      "sameAs": "https://www.wikidata.org/wiki/Q140323556"
     }
   }
 }

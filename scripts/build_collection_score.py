@@ -124,16 +124,31 @@ def _completeness_identity(oid: dict) -> float:
     return present / len(fields)
 
 
+_AUTHORITY_STATUSES = {"confirmed", "working", "approved_institutional_source"}
+
 def _completeness_authority(passport: dict, weights: dict | None = None) -> float:
-    """fill = min(1, confirmed_count / authority_target). Counted by presence, never graded."""
+    """fill = min(1, confirmed_count / authority_target). Counted by presence, never graded.
+
+    Counts both flat authority_links dict entries and work_level list entries (Spec 16).
+    Scope is descriptive only — artwork_object links count identically to artist_maker links.
+    """
     target = (weights or WEIGHTS_V3).get("authority_target", 2)
     links  = passport.get("authority_links") or {}
-    count  = sum(
+
+    # Flat named links (wikidata, artist_wikidata, ulan, etc.)
+    count = sum(
         1 for k, v in links.items()
-        if k != "artbase_id"
+        if k not in ("artbase_id", "work_level")
         and isinstance(v, dict)
-        and v.get("status") in ("confirmed", "working")
+        and v.get("status") in _AUTHORITY_STATUSES
     )
+
+    # work_level list — adapter-supplied links (SMK, Rijksmuseum, Met, …)
+    # Counted scope-neutrally: one confirmed work-level link = one count.
+    for wl in (links.get("work_level") or []):
+        if isinstance(wl, dict) and wl.get("status") in _AUTHORITY_STATUSES:
+            count += 1
+
     return min(1.0, count / target)
 
 

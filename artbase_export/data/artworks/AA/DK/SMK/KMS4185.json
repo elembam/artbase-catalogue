@@ -1,0 +1,145 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "_source_adapter": "SMKAdapter",
+  "artbase_id": "SMK-KMS4185",
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-06-26",
+  "exported": "2026-06-26T15:52:18+00:00",
+  "visibility": "private",
+  "object_id": {
+    "object_type": "Maleri",
+    "materials": "Olie på lærred",
+    "dimensions_display": "28.0 × 23.5 cm",
+    "height_cm": 28.0,
+    "width_cm": 23.5,
+    "depth_cm": null,
+    "title": "Selvportræt",
+    "title_original": "Selvportræt",
+    "date_display": "1843-1847",
+    "date_earliest": 1843,
+    "date_latest": 1847,
+    "maker_id": null,
+    "maker_display_name": "Hunæus, Andreas Herman",
+    "has_photograph": true
+  },
+  "location": {
+    "collection": "Statens Museum for Kunst",
+    "collection_qid": "Q671249",
+    "inventory_number": "KMS4185",
+    "location_notes": "Sal 218B",
+    "department": "Den Kongelige Maleri- og Skulptursamling"
+  },
+  "provenance": [
+    {
+      "step": 1,
+      "description": "Acquired by Statens Museum for Kunst",
+      "date": "1938",
+      "holder": "Statens Museum for Kunst",
+      "type": "acquisition",
+      "source": "SRC-SMK-API-KMS4185",
+      "source_note": "Acquisition date per SMK Open API record"
+    }
+  ],
+  "authority_links": {
+    "wikidata": {
+      "scope": "artwork_object",
+      "system": "Wikidata",
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "notes": "Wikidata artwork QID not yet reconciled"
+    },
+    "artbase_id": null,
+    "work_level": [
+      {
+        "scope": "artwork_object",
+        "system": "SMK",
+        "id": "KMS4185",
+        "uri": "https://open.smk.dk/artwork/image/KMS4185",
+        "api_uri": "https://api.smk.dk/api/v1/art?object_number=KMS4185",
+        "status": "approved_institutional_source",
+        "verified_date": "2026-06-26",
+        "notes": "Work-level authority record: SMK Open collection entry"
+      }
+    ]
+  },
+  "rights": {
+    "public_domain": true,
+    "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "copyright_status": "public_domain",
+    "attribution": null,
+    "source": "SMK Open API public_domain field"
+  },
+  "media": [
+    {
+      "type": "iiif_manifest",
+      "uri": "https://api.smk.dk/api/v1/iiif/manifest?id=KMS4185",
+      "iiif_service": null,
+      "width": null,
+      "height": null,
+      "rights_verified": true
+    },
+    {
+      "type": "image_thumbnail",
+      "uri": "https://iip-thumb.smk.dk/iiif/jp2/70795b99s_KMS4185.tif.jp2/full/!1024,/0/default.jpg",
+      "iiif_service": null,
+      "width": null,
+      "height": null,
+      "rights_verified": true
+    },
+    {
+      "type": "image_iiif",
+      "uri": "https://iip.smk.dk/iiif/jp2/70795b99s_KMS4185.tif.jp2",
+      "iiif_service": "https://iip.smk.dk/iiif/jp2/70795b99s_KMS4185.tif.jp2",
+      "width": 2568,
+      "height": 3102,
+      "rights_verified": true
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-SMK-API-KMS4185",
+      "source_type": "collection_api",
+      "title": "SMK Open — KMS4185",
+      "publisher": "Statens Museum for Kunst",
+      "url": "https://api.smk.dk/api/v1/art?object_number=KMS4185",
+      "frontend_url": "https://open.smk.dk/artwork/image/KMS4185",
+      "publication_date": "2025-07-11",
+      "access_date": "2026-06-26",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "use_notes": "SMK Open data is CC BY 4.0. Image reuse governed by per-object public_domain flag."
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SRC-SMK-API-KMS4185",
+      "role": "primary_record",
+      "accessed": "2026-06-26"
+    }
+  ],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "SMKAdapter v0.1",
+    "notes": "Draft imported from SMK Open API. Requires human review before publication.",
+    "tasks": [
+      "Reconcile creator to Wikidata / ULAN artist record",
+      "Verify title translation if publishing in English",
+      "Confirm provenance completeness against SMK catalogue"
+    ]
+  },
+  "smk_raw": {
+    "id": "1170091378_object",
+    "object_number": "KMS4185",
+    "frontend_url": "https://open.smk.dk/artwork/image/KMS4185",
+    "iiif_manifest": "https://api.smk.dk/api/v1/iiif/manifest?id=KMS4185",
+    "on_display": true,
+    "responsible_department": "Den Kongelige Maleri- og Skulptursamling",
+    "creator_lref": "544_person",
+    "production_dates_notes": [
+      "Værkdatering: Ca. 1845",
+      "afsluttet: fagligt skøn"
+    ]
+  }
+}

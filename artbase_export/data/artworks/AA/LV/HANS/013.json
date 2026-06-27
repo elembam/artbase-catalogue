@@ -1,29 +1,30 @@
 {
-  "artbase_id": "AA/LV/LNMA/019",
-  "airtable_id": "recK4gwXnbvm0kgLa",
+  "artbase_id": "AA/LV/HANS/013",
+  "airtable_id": null,
   "artbase_canonical_id": null,
   "version": 1,
-  "created": null,
-  "exported": "2026-05-30T17:59:41.392154Z",
+  "created": "2026-06-24",
+  "exported": "2026-06-24T13:04:25.522659+00:00",
   "visibility": "public",
   "object_id": {
     "object_type": "Painting",
     "object_type_aat": null,
     "materials": "Oil on canvas",
     "materials_aat": [],
-    "dimensions_display": "80 (h) x 120 (w) cm",
-    "height_cm": 80.0,
-    "width_cm": 120.0,
+    "dimensions_display": "80 (h) x 100 (w) cm",
+    "height_cm": 80,
+    "width_cm": 100,
     "depth_cm": null,
     "inscriptions": null,
     "distinguishing": null,
-    "title": "Country Landscape",
+    "title": "Paris under the Evening Sun",
+    "title_lv": "Parīze vakara saulē",
     "subject": null,
-    "date_display": "1880",
-    "date_earliest": 1880,
-    "date_latest": 1880,
-    "maker_id": "ART-FEDERS-1838",
-    "maker_display_name": "Jūlijs Feders",
+    "date_display": "1987",
+    "date_earliest": 1987,
+    "date_latest": 1987,
+    "maker_id": "ART-NAUMOVS-1955",
+    "maker_display_name": "Aleksejs Naumovs",
     "has_photograph": false
   },
   "iconography": {
@@ -32,45 +33,41 @@
     "depicts": []
   },
   "location": {
-    "collection": "Latvian National Museum of Art",
-    "collection_qid": "Q1370465",
-    "inventory_number": "VMM GL-1501",
-    "location_notes": null
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": null,
+    "inventory_number": null,
+    "catalogue_number": "130",
+    "catalogue_page": 226,
+    "catalogue_source": "Q139986317",
+    "location_notes": "Collection transferred to Swedbank following acquisition of Hansabanka, 2005."
   },
   "provenance": [
     {
       "step": 1,
-      "description": "Held in the collection of Latvijas Nacionālais mākslas muzejs (LNMM), Rīga, Latvia",
+      "description": "Held in the Hansabanka Contemporary Art Collection, Rīga, Latvia (collection transferred to Swedbank following acquisition of Hansabanka by Swedbank, 2005)",
       "date": null,
-      "holder": "Latvijas Nacionālais mākslas muzejs",
+      "holder": "Hansabanka / Swedbank",
       "type": "current_location",
-      "source": null,
-      "source_note": "Current location confirmed: LNMM open data via Google Arts & Culture (https://artsandculture.google.com/asset/country-landscape/qQEUkQQxSi3yzQ). Citation to SRC-LNMM-PORTRAITS-2009 removed: this is a landscape in the Latvian Painting Collection, not a portrait — it cannot be sourced to the 2009 portrait exhibition catalogue without individual verification.",
-      "is_gap": true
+      "source": "SRC-HANSABANKA-2007",
+      "source_note": "Hansabanka Contemporary Art Collection. Rīga: Hansabanka, 2007. Catalogue no. 130 · p. 226.",
+      "is_gap": false
     }
   ],
   "authority_links": {
-    "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
-      "verified_date": null,
-      "notes": "Work-level Wikidata item not yet identified — artist QID confirmed"
-    },
     "artist_wikidata": {
-      "id": "Q1977258",
-      "uri": "https://www.wikidata.org/wiki/Q1977258",
+      "id": "Q55420369",
+      "uri": "https://www.wikidata.org/wiki/Q55420369",
       "status": "confirmed",
-      "verified_date": "2026-06-20",
-      "notes": "Wikidata item for the artist Jūlijs Feders; QID confirmed 2026-06-15"
+      "verified_date": "2026-06-24",
+      "notes": "Wikidata item for Aleksejs Naumovs"
     },
-    "artbase_id": "ART-FEDERS-1838"
+    "artbase_id": "ART-NAUMOVS-1955"
   },
   "sources": [
     {
-      "source_id": "SRC-LNMM-PORTRAITS-2009",
+      "source_id": "SRC-HANSABANKA-2007",
       "type": "book",
-      "citation": "Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets. Rīga: Latvijas Nacionālais mākslas muzejs; Neputns, 2009."
+      "citation": "Hansabanka Contemporary Art Collection. Rīga: Hansabanka, 2007."
     }
   ],
   "source_refs": [],
@@ -78,16 +75,18 @@
   "cataloguing": {
     "review_status": "draft",
     "catalogued_by": null,
-    "notes": "Sub-collection: Latvian Painting Collection (18th – 1st Half of the 20th Century)\nGoogle Arts: https://artsandculture.google.com/asset/country-landscape/qQEUkQQxSi3yzQ",
-    "tasks": [],
+    "notes": "Catalogue no. 130 · p. 226 · Wikidata QID: pending (submitted; awaiting confirmation)\nSubmitted to Wikidata: Hansabanka Batch 03 Work 1",
+    "tasks": [
+      "Add artwork Wikidata QID once confirmed"
+    ],
     "engagement_ids": []
   },
   "_schema": "artbase:artwork:v1",
   "score": {
-    "passport_score": 63,
+    "passport_score": 88,
     "status": "amber",
     "completeness": {
-      "value": 0.625,
+      "value": 0.875,
       "sections": [
         {
           "section": "identity",
@@ -108,9 +107,9 @@
         {
           "section": "provenance",
           "weight": 0.25,
-          "fill": 0.0,
-          "present": "0 of 1 step sourced — citation removed pending verification",
-          "contribution": 0.0,
+          "fill": 1.0,
+          "present": "1 of 1 step sourced",
+          "contribution": 0.25,
           "in_scope": true
         },
         {
@@ -146,18 +145,18 @@
     ],
     "config_version": "weights-v3"
   },
-  "score_generated_at": "2026-06-20T09:57:17+00:00",
+  "score_generated_at": "2026-06-24T13:04:25.522659+00:00",
   "structured_data": {
     "json_ld": {
       "@context": "https://schema.org/",
       "@type": "VisualArtwork",
-      "name": "Country Landscape",
+      "name": "Paris under the Evening Sun",
       "creator": {
         "@type": "Person",
-        "name": "Jūlijs Feders",
-        "sameAs": "https://www.wikidata.org/wiki/Q1977258"
+        "name": "Aleksejs Naumovs",
+        "sameAs": "https://www.wikidata.org/wiki/Q55420369"
       },
-      "dateCreated": "1880",
+      "dateCreated": "1987",
       "artMedium": "Oil on canvas",
       "artform": "Painting",
       "locationCreated": {
@@ -165,26 +164,21 @@
         "name": "Latvia"
       },
       "contentLocation": {
-        "@type": "Museum",
-        "name": "Latvian National Museum of Art",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Rīga",
-          "addressCountry": "LV"
-        },
-        "sameAs": "https://www.wikidata.org/wiki/Q1370465"
+        "@type": "Organization",
+        "name": "Hansabanka Contemporary Art Collection",
+        "description": "Corporate art collection (transferred to Swedbank following acquisition, 2005)"
       },
       "height": {
         "@type": "QuantitativeValue",
-        "value": 80.0,
+        "value": 80,
         "unitCode": "CMT"
       },
       "width": {
         "@type": "QuantitativeValue",
-        "value": 120.0,
+        "value": 100,
         "unitCode": "CMT"
       },
-      "identifier": "VMM GL-1501"
+      "identifier": "AA/LV/HANS/013"
     }
   }
 }
