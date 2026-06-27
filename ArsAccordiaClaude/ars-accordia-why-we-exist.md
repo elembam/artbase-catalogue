@@ -1,5 +1,7 @@
 # Why Ars Accordia exists
 
+**Secure the record.** Know exactly what you hold, prove it is yours, and be ready for whatever comes. That is what a documented collection gives its owner first — and everything below is how.
+
 Art data sits on a deep stack of standards. Look closely and they do four things well — and one thing only in fragments.
 
 **The five layers of an artwork's record**
@@ -16,6 +18,6 @@ Layers one through four are well served. The fifth is fragmented — and it fail
 
 We give the individual work a permanent Artwork Passport and connect it to the anchors that already hold it: a museum object number, an inventory record, a catalogue reference, a Wikidata artwork item. Where the anchor exists, we preserve it and make it visible. Where the public record is missing and the sources support it, we contribute it back. Where none exists at all, the passport itself becomes the stable starting point — a cited, reviewable object identity others can rely on.
 
-**Why it matters: a well-anchored work is a liquid one.** An artwork that can be pointed to, cited, and verified changes hands with less friction — it is easier to insure, value, move, divide, sell, donate, and lend. That friction is what surfaces at the moments that test a collection: inheritance, insurance, a sale, a division among heirs, a donation, a loan. Documentation is what turns a singular, hard-to-transfer possession into a transferable asset. We don't make art *fungible* — nothing does, and its singularity is the whole point. We make it *liquid*: anchored and documented enough to move.
+**Why it matters.** A work nobody can properly identify is hard to insure, hard to pass on, hard to sell or lend. A documented one isn't. These are the moments that test a collection — inheritance, insurance, a sale, a division among heirs, a donation, a loan — and at each of them, the difference is whether the record exists. We don't change what a work is worth. We make it straightforward to deal with when the time comes.
 
 We do not replace museums, catalogues, or authority files; we connect them at the level where the gap is most often felt — the individual object. And we do not judge, authenticate, or value the work ourselves. The contribution is the object anchor; the liquidity is what it earns.
