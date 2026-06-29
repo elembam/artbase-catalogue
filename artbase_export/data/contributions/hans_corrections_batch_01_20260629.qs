@@ -1,0 +1,96 @@
+#title Hansabanka — page-citation corrections for Batch 01
+#summary S304 page references were wrong in batch 01. The OCR CSV used a running HTML page number (222–229) instead of the catalogue_no column, which is the actual page number in the physical book. This batch removes each affected statement and re-adds it with the correct catalogue_no value. Batches 02 and 03 were corrected separately on 2026-06-29.
+#prepared_by Arsaccordia
+#prepared_at 2026-06-29T00:00:00Z
+#source Q139986317 (Hansabanka Contemporary Art Collection catalogue, 2007)
+#method Physical verification of page numbers against the printed book
+
+# ══════════════════════════════════════════════════════════════════════
+# HOW THIS WORKS
+#   Each corrected claim is handled in two steps:
+#     1. Remove the statement with the wrong S304 value
+#     2. Re-add the statement with the correct S304 value
+#   P31 and P186 claims had no S304 references — they are not touched.
+# ══════════════════════════════════════════════════════════════════════
+
+
+# ────────────────────────────────────────────────────────────────────────
+# BATCH 01 CORRECTIONS (6 works — originally submitted 2026-06-23)
+# ────────────────────────────────────────────────────────────────────────
+
+# ── Q140326148 — Ilmārs Blumbergs, "Verities of Suffering" (Ciešanu atziņas), 1999 ──
+# Wrong S304: "222"   Correct S304: "32"
+
+Q140326148	-P170	Q13611050
+Q140326148	P170	Q13611050	S248	Q139986317	S304	"32"
+Q140326148	-P571	+1999-00-00T00:00:00Z/9
+Q140326148	P571	+1999-00-00T00:00:00Z/9	S248	Q139986317	S304	"32"
+Q140326148	-P2048	61U174728
+Q140326148	P2048	61U174728	S248	Q139986317	S304	"32"
+Q140326148	-P2049	90.5U174728
+Q140326148	P2049	90.5U174728	S248	Q139986317	S304	"32"
+
+
+# ── Q140323417 — Ilmārs Blumbergs, "The Silver Age" (Sudraba laikmets), 1998 ──
+# Wrong S304: "222"   Correct S304: "33"
+
+Q140323417	-P170	Q13611050
+Q140323417	P170	Q13611050	S248	Q139986317	S304	"33"
+Q140323417	-P571	+1998-00-00T00:00:00Z/9
+Q140323417	P571	+1998-00-00T00:00:00Z/9	S248	Q139986317	S304	"33"
+Q140323417	-P2048	59U174728
+Q140323417	P2048	59U174728	S248	Q139986317	S304	"33"
+Q140323417	-P2049	89U174728
+Q140323417	P2049	89U174728	S248	Q139986317	S304	"33"
+
+
+# ── Q140323442 — Džemma Skulme, "Caryatid (Scare-Crow)" (Kariatīde. Putnu biedēklis), 2004 ──
+# Wrong S304: "228"   Correct S304: "171"
+
+Q140323442	-P170	Q4422700
+Q140323442	P170	Q4422700	S248	Q139986317	S304	"171"
+Q140323442	-P571	+2004-00-00T00:00:00Z/9
+Q140323442	P571	+2004-00-00T00:00:00Z/9	S248	Q139986317	S304	"171"
+Q140323442	-P2048	150U174728
+Q140323442	P2048	150U174728	S248	Q139986317	S304	"171"
+Q140323442	-P2049	120U174728
+Q140323442	P2049	120U174728	S248	Q139986317	S304	"171"
+
+
+# ── Q140323447 — Indulis Zariņš, "In Memory of Chagall" (Šagāla piemiņai), 1996 ──
+# Wrong S304: "229"   Correct S304: "209"
+
+Q140323447	-P170	Q13561029
+Q140323447	P170	Q13561029	S248	Q139986317	S304	"209"
+Q140323447	-P571	+1996-00-00T00:00:00Z/9
+Q140323447	P571	+1996-00-00T00:00:00Z/9	S248	Q139986317	S304	"209"
+Q140323447	-P2048	112U174728
+Q140323447	P2048	112U174728	S248	Q139986317	S304	"209"
+Q140323447	-P2049	96U174728
+Q140323447	P2049	96U174728	S248	Q139986317	S304	"209"
+
+
+# ── Q140323450 — Rūdolfs Pinnis, "Folk-Style Totem" (Tautisks totēms), 1989 ──
+# Wrong S304: "227"   Correct S304: "150"
+
+Q140323450	-P170	Q55984280
+Q140323450	P170	Q55984280	S248	Q139986317	S304	"150"
+Q140323450	-P571	+1989-00-00T00:00:00Z/9
+Q140323450	P571	+1989-00-00T00:00:00Z/9	S248	Q139986317	S304	"150"
+Q140323450	-P2048	150U174728
+Q140323450	P2048	150U174728	S248	Q139986317	S304	"150"
+Q140323450	-P2049	180U174728
+Q140323450	P2049	180U174728	S248	Q139986317	S304	"150"
+
+
+# ── Q140323452 — Vija Maldupe, "Carnival" (Karnevāls), 1977 ──
+# Wrong S304: "226"   Correct S304: "121"
+
+Q140323452	-P170	Q113216930
+Q140323452	P170	Q113216930	S248	Q139986317	S304	"121"
+Q140323452	-P571	+1977-00-00T00:00:00Z/9
+Q140323452	P571	+1977-00-00T00:00:00Z/9	S248	Q139986317	S304	"121"
+Q140323452	-P2048	79U174728
+Q140323452	P2048	79U174728	S248	Q139986317	S304	"121"
+Q140323452	-P2049	94U174728
+Q140323452	P2049	94U174728	S248	Q139986317	S304	"121"

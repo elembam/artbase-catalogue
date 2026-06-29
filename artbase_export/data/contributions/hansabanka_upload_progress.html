@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hansabanka — Wikidata Upload Progress</title>
+<style>
+  body { font-family: 'Public Sans', Arial, sans-serif; margin: 2rem auto; max-width: 1100px; padding: 0 1.5rem; color: #1a1a1a; background: #f8f6f2; }
+  h1 { font-size: 1.4rem; border-bottom: 3px solid #8b1a1a; padding-bottom: 0.4rem; margin-bottom: 0.3rem; }
+  h2 { font-size: 1.1rem; margin-top: 2rem; margin-bottom: 0.5rem; border-bottom: 1px solid #ccc; padding-bottom: 0.2rem; }
+  h3 { font-size: 0.95rem; margin-top: 1.5rem; margin-bottom: 0.4rem; color: #444; }
+  .meta { font-size: 0.8rem; color: #666; margin-bottom: 1.5rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-bottom: 1rem; }
+  th { background: #2c2c2c; color: #fff; text-align: left; padding: 6px 10px; font-weight: 600; }
+  td { padding: 5px 10px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f0ede8; }
+  .done   { background: #d4edda !important; }
+  .pending { background: #fff3cd !important; }
+  .blocked { background: #f8d7da !important; }
+  .needcreate { background: #e2d9f3 !important; }
+  .badge { display: inline-block; font-size: 0.7rem; padding: 1px 6px; border-radius: 3px; font-weight: 700; letter-spacing: 0.03em; }
+  .b-done { background: #28a745; color: #fff; }
+  .b-pending { background: #ffc107; color: #1a1a1a; }
+  .b-blocked { background: #dc3545; color: #fff; }
+  .b-needcreate { background: #6f42c1; color: #fff; }
+  .b-merge { background: #17a2b8; color: #fff; }
+  .qid { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #8b1a1a; }
+  a.qid { color: #8b1a1a; }
+  .note { font-size: 0.78rem; color: #555; }
+  ul.tasklist { font-size: 0.85rem; padding-left: 1.2rem; }
+  ul.tasklist li { margin-bottom: 0.3rem; }
+  .section-summary { font-size: 0.82rem; color: #444; margin-bottom: 0.8rem; }
+</style>
+</head>
+<body>
+
+<h1>Hansabanka Contemporary Art Collection — Wikidata Upload Progress</h1>
+<p class="meta">
+  Source: <span class="qid">Q139986317</span> — Hansabanka Contemporary Art Collection catalogue, 2007<br>
+  Last updated: 2026-06-29 &nbsp;|&nbsp; Prepared by ArsAccordia
+</p>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2>1. Upload Batches</h2>
+<p class="section-summary">Works already created on Wikidata. All page citations (S304) must use catalogue_no from the physical book, not the OCR page column (222–229).</p>
+
+<table>
+  <tr>
+    <th>Batch</th><th>File</th><th>Works</th><th>QIDs</th><th>S304 status</th><th>Status</th>
+  </tr>
+  <tr class="done">
+    <td>Batch 01</td>
+    <td class="note">hansabanka_batch_01_…qs</td>
+    <td>Blumbergs ×2, Skulme, Zariņš, Pinnis (cat 150), Maldupe</td>
+    <td class="qid">Q140326148, Q140323417, Q140323442, Q140323447, Q140323450, Q140323452</td>
+    <td><span class="badge b-done">CORRECTED</span> 2026-06-29</td>
+    <td><span class="badge b-done">LIVE</span></td>
+  </tr>
+  <tr class="done">
+    <td>Batch 02</td>
+    <td class="note">hansabanka_batch_02_…qs</td>
+    <td>Āriņš, Mitrēvics (Atslābums), Siliņš, Sietiņš (Levitācija I), Rozenbergs, Ģelzis (Ziedu pikets)</td>
+    <td class="qid">Q140326149, Q140323550, Q140323551, Q140323553, Q140323556, Q140323559</td>
+    <td><span class="badge b-done">CORRECTED</span> 2026-06-29</td>
+    <td><span class="badge b-done">LIVE</span></td>
+  </tr>
+  <tr class="done">
+    <td>Batch 03</td>
+    <td class="note">hansabanka_batch_03_…qs</td>
+    <td>Naumovs (Parīze), Liberts, Heinrihsons (Pelēkās klavieres), Krollis (Aizmirstie karaļdārzi III), Putrāms ×2</td>
+    <td class="qid">Q140334282, Q140334283, Q140334284, Q140334285, Q140334286, Q140334287</td>
+    <td><span class="badge b-done">CORRECTED</span> 2026-06-29</td>
+    <td><span class="badge b-done">LIVE</span></td>
+  </tr>
+  <tr class="done">
+    <td>Batch 04</td>
+    <td class="note">hansabanka_batch_04_20260629.qs</td>
+    <td>
+      Blumbergs <em>Untitled</em> (cat 31) · Ģelzis <em>Mulder</em> (cat 70) · Ģelzis <em>Over. 2</em> (cat 71) ·
+      Heinrihsons <em>Day</em> (cat 80) · Heinrihsons <em>Night</em> (cat 80) ·
+      Krollis <em>Fleeing Time</em> (cat 109) · Krollis <em>Voice of Pain</em> (cat 109) · Krollis <em>Spring Dream</em> (cat 109) ·
+      Mitrēvics <em>The Opposite</em> (cat 127) · Naumovs <em>Etruscan Vases</em> (cat 131) ·
+      Pinnis <em>A Vase with Fruit</em> (cat 151) ·
+      Putrāms <em>The Marked One</em> (cat 160) · Putrāms <em>The Tribune</em> (cat 162) ·
+      Sietiņš <em>Levitation. XIII</em> (cat 166)
+    </td>
+    <td class="qid">
+      Q140379282 · Q140379283 · Q140379284 · Q140379285 · Q140379286 ·
+      Q140379287 · Q140379288 · Q140379289 · Q140379290 · Q140379291 ·
+      Q140379292 · Q140379293 · Q140379294 · Q140379296
+    </td>
+    <td><span class="badge b-done">ALL VERIFIED</span></td>
+    <td><span class="badge b-done">LIVE</span> 2026-06-29 · batch 1782739407900</td>
+  </tr>
+</table>
+
+<h3>Pending corrections file</h3>
+<table>
+  <tr><th>File</th><th>Covers</th><th>Operations</th><th>Status</th></tr>
+  <tr class="done">
+    <td class="note">hans_corrections_batch_01_20260629.qs</td>
+    <td>Batch 01 only (6 works: Blumbergs ×2, Skulme, Zariņš, Pinnis, Maldupe)</td>
+    <td>48 ops</td>
+    <td><span class="badge b-done">SUBMITTED</span> 2026-06-29 · batch 1782737529220</td>
+  </tr>
+</table>
+
+<h3>Other pending QS tasks</h3>
+<ul class="tasklist">
+  <li><strong>hans_p973_batch_08_20260624.qs</strong> — 6 P973 backlink lines for batch 08. Still pending.</li>
+  <li><strong>Latvian labels block</strong> — prepared, not yet submitted.</li>
+  <li><strong>Batch 03 QIDs → JSON</strong> — retrieve from Wikidata contribution history → write to HANS/013–018 JSON files.</li>
+  <li><strong>Batch 01 W1 + Batch 02 W1 QIDs → JSON</strong> — write to HANS/001 and HANS/007.</li>
+  <li><strong>Rerun build_collection_score.py COL-HANSABANKA</strong> — after QID backfill.</li>
+</ul>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2>2. Artists — Wikidata QID Lookup</h2>
+<p class="section-summary">
+  Lookup run 2026-06-29 via SPARQL + wbsearchentities. Sorted A–Z by surname.
+  <strong>47 confirmed</strong> &nbsp;|&nbsp;
+  <strong>2 merge needed</strong> (Celmiņa, Maurīte) &nbsp;|&nbsp;
+  <strong>2 verify</strong> (Eglītis, Žegners — photographer?) &nbsp;|&nbsp;
+  <strong>16 not found</strong> (need new Wikidata items)
+</p>
+
+<table>
+  <tr><th>Artist</th><th>QID</th><th>Wikidata description</th><th>Status</th><th>Notes</th></tr>
+
+  <tr class="needcreate"><td>Andris Ablēvs</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="done"><td>Ilze Avotiņa</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q16452865">Q16452865</a></td><td>Latvian painter</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Laima Bikše</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q109864713">Q109864713</a></td><td>painter, b.1970</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Ilmārs Blumbergs</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q13611050">Q13611050</a></td><td>Latvian painter</td><td><span class="badge b-done">CONFIRMED</span></td><td>cat 31 → Batch 04; cat 32–33 → Batch 01</td></tr>
+  <tr class="done"><td>Kaspars Brambergs</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q56596666">Q56596666</a></td><td>artist, b.1974</td><td><span class="badge b-done">CONFIRMED</span></td><td>Full name: Kaspars Teodors Brambergs</td></tr>
+  <tr class="done"><td>Harijs Brants</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q139066552">Q139066552</a></td><td>artist, b.1970</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Inga Brūvere</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99480313">Q99480313</a></td><td>visual artist, b.1963</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Valdis Bušs</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99480739">Q99480739</a></td><td>visual artist, b.1924</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="pending"><td>Inta Celmiņa</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q12656807">Q12656807</a></td><td>Latvian painter, b.1946</td><td><span class="badge b-merge">MERGE NEEDED</span></td><td>Duplicate: Q99480545. Run <code>MERGE Q12656807 Q99480545</code> in QS. Use Q12656807 after.</td></tr>
+  <tr class="done"><td>Daina Dagnija</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q94381077">Q94381077</a></td><td>painter, textile artist (1937–2019)</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="needcreate"><td>Uno Dašiļevskis</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="done"><td>Aleksandrs Dembo</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99478532">Q99478532</a></td><td>visual artist, b.1931</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Kristiana Dimitere</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q16644243">Q16644243</a></td><td>painter, b.1965</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Lilija Dinere</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q4161919">Q4161919</a></td><td>Latvian painter, b.1955</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="needcreate"><td>Kristīne Drengere</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="blocked"><td>Andris Eglītis</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q137116325">Q137116325</a></td><td>b.1959, photographer</td><td><span class="badge b-blocked">VERIFY</span></td><td>Listed as photographer — confirm this is the visual artist in the catalogue</td></tr>
+  <tr class="needcreate"><td>Tomass Fēnikss</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="done"><td>Barbara Gaile</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q94415724">Q94415724</a></td><td>b.1968</td><td><span class="badge b-done">CONFIRMED</span></td><td>Stub — no occupation listed yet</td></tr>
+  <tr class="done"><td>Vladislavs Grišins</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99481698">Q99481698</a></td><td>visual artist, b.1937</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="needcreate"><td>Edīte Gronova</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="done"><td>Edvards Grūbe</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q16450235">Q16450235</a></td><td>Latvian painter</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Kristaps Gulbis</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q107012522">Q107012522</a></td><td>Latvian artist, b.1967</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="needcreate"><td>Madara Gulbis</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="done"><td>Anna Heinrihsone</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99477318">Q99477318</a></td><td>costume designer, painter</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Helēna Heinrihsone</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q12656414">Q12656414</a></td><td>Latvian painter, b.1948</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Ieva Iltnerē</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q55254903">Q55254903</a></td><td>Latvian painter and art professor</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Ritums Ivanovs</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99482812">Q99482812</a></td><td>visual artist, b.1968</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Oļģerts Jaunarājs</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99477133">Q99477133</a></td><td>visual artist, b.1907</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Aija Jurjāne</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99483266">Q99483266</a></td><td>painter, art teacher, b.1944</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Juris Jurjāns</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99484012">Q99484012</a></td><td>painter, b.1944</td><td><span class="badge b-done">CONFIRMED</span></td><td>Ignore Q20902254 (19th-c. musician) and Q21002099 (empty stub)</td></tr>
+  <tr class="done"><td>Andrejs Kalnācs</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99483889">Q99483889</a></td><td>visual artist, b.1958</td><td><span class="badge b-done">CONFIRMED</span></td><td>Wikidata label is "Kalnačs" — minor transcription variant</td></tr>
+  <tr class="needcreate"><td>Vineta Kaulača</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="needcreate"><td>Kristīne Keire</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="done"><td>Frančeska Kirke</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q12654637">Q12654637</a></td><td>painter, illustrator, printmaker, b.1953</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Sandra Krastiņa</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q12672317">Q12672317</a></td><td>painter, b.1957</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="needcreate"><td>Tatjana Krivenkova</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="done"><td>Mārtiņš Krūklis</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99479153">Q99479153</a></td><td>visual artist, b.1972</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="needcreate"><td>Jānis Kupčs</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="done"><td>Dace Lielā</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99477354">Q99477354</a></td><td>visual artist, b.1957</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Ilze Libiete</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q59548595">Q59548595</a></td><td>heraldist and graphic artist</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Irēna Lūse</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99482966">Q99482966</a></td><td>visual artist, b.1948</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="pending"><td>Ieva Maurīte</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q139029411">Q139029411</a></td><td>artist, b.1971</td><td><span class="badge b-merge">MERGE NEEDED</span></td><td>Duplicate: Q99477509 (same DOB, same gender). Run <code>MERGE Q139029411 Q99477509</code>. Use Q139029411 after.</td></tr>
+  <tr class="done"><td>Anita Meldere</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q16443738">Q16443738</a></td><td>Latvian painter, b.1949</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Ģirts Muižnieks</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q16451856">Q16451856</a></td><td>painter, b.1956</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Ilze Neilande</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99479313">Q99479313</a></td><td>Latvian artist, b.1959</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="needcreate"><td>Gita Okonova-Treice</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="needcreate"><td>Aija Ozoliņa</td><td>—</td><td>painter, b.1932</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td>Q109864629 is a different person (author, b.1954)</td></tr>
+  <tr class="done"><td>Vilis Ozols</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99476864">Q99476864</a></td><td>painter, b.1929</td><td><span class="badge b-done">CONFIRMED</span></td><td>Ignore Q124314638 (choreographer, b.1923)</td></tr>
+  <tr class="done"><td>Ģļebs Panteļejevs</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99482115">Q99482115</a></td><td>Latvian sculptor</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Elita Patmalniece</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99481672">Q99481672</a></td><td>visual artist, b.1964</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="needcreate"><td>Ojārs Pētersons</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="needcreate"><td>Arnis Pelšs</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="done"><td>Jāzeps Pīgoznis</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q17280930">Q17280930</a></td><td>painter, b.1934</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Rūdolfs Pinnis</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q55984280">Q55984280</a></td><td>Latvian painter</td><td><span class="badge b-done">CONFIRMED</span></td><td>cat 151 → Batch 04; cat 150 → Batch 01</td></tr>
+  <tr class="done"><td>Ivars Poikāns</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99483958">Q99483958</a></td><td>visual artist, b.1952</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Laima Puntule</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99483795">Q99483795</a></td><td>animator, producer, visual artist, b.1963</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Līga Purmale</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q6711682">Q6711682</a></td><td>painter, b.1948</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="needcreate"><td>Indra Sproģe</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="done"><td>Māris Subačs</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99480580">Q99480580</a></td><td>visual artist, b.1963</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="needcreate"><td>Ģenādijs Suhanovs</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
+  <tr class="done"><td>Mihails Šemjakins</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q2025924">Q2025924</a></td><td>Russian artist, b.1943 (Mihail Chemiakin)</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Olga Šilova</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99481538">Q99481538</a></td><td>visual artist, b.1966</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Jānis Tīdemanis</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q4457149">Q4457149</a></td><td>Latvian painter, 1897–1964</td><td><span class="badge b-done">CONFIRMED</span></td><td>Same item used for LNMA/004 (Carousel)</td></tr>
+  <tr class="done"><td>Andris Vītoliņš</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q16351423">Q16351423</a></td><td>Latvian painter</td><td><span class="badge b-done">CONFIRMED</span></td><td>Two other items exist (organist, athlete) — painter is Q16351423</td></tr>
+  <tr class="done"><td>Vilnis Zābers</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q94381072">Q94381072</a></td><td>artist, b.1963</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
+  <tr class="done"><td>Kristaps Zariņš</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q55420339">Q55420339</a></td><td>painter, b.1962</td><td><span class="badge b-done">CONFIRMED</span></td><td>Ignore Q61121186 (disambiguation) and Q18666133 (physician)</td></tr>
+  <tr class="blocked"><td>Andris Žegners</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q120495439">Q120495439</a></td><td>photographer ("Andris Zēgners")</td><td><span class="badge b-blocked">VERIFY</span></td><td>Different diacritic in Wikidata label and listed as photographer — confirm same person as in catalogue</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2>3. Legend</h2>
+<table style="width:auto;">
+  <tr><td><span class="badge b-done">CONFIRMED</span></td><td style="padding:4px 10px">QID verified, ready to use in QS batches</td></tr>
+  <tr><td><span class="badge b-done">LIVE</span></td><td style="padding:4px 10px">Batch submitted and live on Wikidata</td></tr>
+  <tr><td><span class="badge b-done">CORRECTED</span></td><td style="padding:4px 10px">S304 corrections applied</td></tr>
+  <tr><td><span class="badge b-pending">READY TO SUBMIT</span></td><td style="padding:4px 10px">QS file prepared, awaiting upload</td></tr>
+  <tr><td><span class="badge b-pending">LOOKUP PENDING</span></td><td style="padding:4px 10px">SPARQL search not yet run</td></tr>
+  <tr><td><span class="badge b-merge">MERGE NEEDED</span></td><td style="padding:4px 10px">Duplicate Wikidata items found — merge before use</td></tr>
+  <tr><td><span class="badge b-needcreate">CREATE NEEDED</span></td><td style="padding:4px 10px">Not found on Wikidata — new item required</td></tr>
+  <tr><td><span class="badge b-needcreate">NOT FOUND</span></td><td style="padding:4px 10px">Not found; may need new item</td></tr>
+</table>
+
+</body>
+</html>

@@ -44,9 +44,9 @@
       "date": null,
       "holder": "Latvijas Nacionālais mākslas muzejs",
       "type": "current_location",
-      "source": "SRC-LNMM-PORTRAITS-2009",
-      "source_note": "Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets. Rīga: Latvijas Nacionālais mākslas muzejs; Neputns, 2009.",
-      "is_gap": false
+      "source": null,
+      "source_note": "Current location confirmed: LNMM open data via Google Arts & Culture (https://artsandculture.google.com/asset/from-church-after-the-service/ZAHd0RC6Nrk3jw). Citation to SRC-LNMM-PORTRAITS-2009 removed: the Lamberga 2009 portrait catalogue has no documented relation to the LNMM permanent collection — individual verification against the physical book required before this source can be reinstated.",
+      "is_gap": true
     }
   ],
   "authority_links": {
@@ -73,13 +73,7 @@
     },
     "artbase_id": "ART-ROZENTALS-1866"
   },
-  "sources": [
-    {
-      "source_id": "SRC-LNMM-PORTRAITS-2009",
-      "type": "book",
-      "citation": "Lamberga, Dace (comp.). Mākslinieks. Portrets. Pašportrets. Rīga: Latvijas Nacionālais mākslas muzejs; Neputns, 2009."
-    }
-  ],
+  "sources": [],
   "source_refs": [],
   "conflicts": [],
   "cataloguing": {
