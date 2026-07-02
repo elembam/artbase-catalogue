@@ -368,6 +368,8 @@
   }
 
   .footer-left { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.04em; }
+  .footer-contact { color: var(--ink-faded); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
+  .footer-contact:hover { border-bottom-color: var(--ink-faded); }
 </style>
 <script type="application/ld+json">
 {
@@ -609,13 +611,22 @@
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
     
-    <p class="no-artworks">No artworks catalogued yet.</p>
+    <div class="artworks-list">
+      
+      <a class="artwork-row" href="/AP-2026-000253.html">
+        <span class="artwork-passport-id">AP-2026-000253</span>
+        <span class="artwork-title">Eastern Motif</span>
+        <span class="artwork-date">1989</span>
+      </a>
+      
+    </div>
     
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-JURJANS-1944</span>
+    <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
     <span>Exported 2026-07-02</span>
   </footer>
 

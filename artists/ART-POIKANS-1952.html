@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Artist Profile — Ivars Poikāns. ArtBase scholarly catalogue record.">
-<title>Ivars Poikāns — ArtBase</title>
+<meta name="description" content="Artist record — Ivars Poikāns. Ars Accordia scholarly catalogue with authority links to Wikidata, Getty ULAN, and VIAF.">
+<title>Ivars Poikāns — Ars Accordia</title>
+<link rel="canonical" href="https://arsaccordia.com/artists/ART-POIKANS-1952.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -184,15 +185,6 @@
   .wikidata-badge:hover { background: var(--rule); }
 
   
-  .review-banner {
-    background: #fffbeb;
-    border-bottom: 1px solid #d4a800;
-    padding: 10px 48px;
-    font-size: 0.8125rem;
-    color: #7a5c00;
-  }
-  .review-banner strong { color: #5c4400; }
-  
 
   /* ── Section layout ─── */
   .section {
@@ -307,6 +299,53 @@
     font-style: italic;
   }
 
+  /* ── Collection appearances ─── */
+  .collection-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .collection-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.15s;
+  }
+  .collection-row:hover { border-color: var(--seal-light); }
+
+  .collection-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--seal);
+    flex-shrink: 0;
+    width: 56px;
+  }
+
+  .collection-name {
+    font-weight: 500;
+    flex: 1;
+  }
+
+  .collection-display-name {
+    color: var(--ink-faded);
+    font-size: 0.8125rem;
+    font-style: italic;
+    flex-shrink: 0;
+  }
+
+  .collection-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8125rem;
+    color: var(--ink-faded);
+    flex-shrink: 0;
+    text-align: right;
+  }
+
   /* ── Footer ─── */
   .footer {
     padding: 20px 48px;
@@ -320,7 +359,30 @@
   }
 
   .footer-left { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.04em; }
+  .footer-contact { color: var(--ink-faded); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
+  .footer-contact:hover { border-bottom-color: var(--ink-faded); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@id": "https://arsaccordia.com/artists/ART-POIKANS-1952",
+  "@type": "Person",
+  "birthDate": "1952",
+  "mainEntityOfPage": {
+    "@id": "https://arsaccordia.com/artists/ART-POIKANS-1952.html",
+    "@type": "WebPage",
+    "isPartOf": {
+      "@id": "https://arsaccordia.com"
+    }
+  },
+  "name": "Ivars Poik\u0101ns",
+  "nationality": "Latvian",
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q99483958"
+  ],
+  "url": "https://arsaccordia.com/artists/ART-POIKANS-1952.html"
+}
+</script>
 </head>
 <body>
 
@@ -346,7 +408,7 @@
       </div>
       
       
-      <div class="artist-nationality">Latvian · painter</div>
+      <div class="artist-nationality">Latvian</div>
       
     </div>
     <div class="header-right">
@@ -357,11 +419,6 @@
     </div>
   </header>
 
-  
-  <div class="review-banner">
-    <strong>⚠ Candidate match — awaiting verification.</strong>
-    Wikidata link was assigned by automated matching (birth year only). Please verify before treating as authoritative.
-  </div>
   
 
   <!-- Authority Links -->
@@ -380,8 +437,8 @@
           
         </div>
         
-        <div class="authority-status candidate">
-          candidate verify
+        <div class="authority-status confirmed">
+          confirmed
         </div>
         
       </div>
@@ -397,10 +454,6 @@
           
         </div>
         
-        <div class="authority-status ">
-          search needed
-        </div>
-        
       </div>
       
       
@@ -412,10 +465,6 @@
           
             not linked
           
-        </div>
-        
-        <div class="authority-status ">
-          search needed
         </div>
         
       </div>
@@ -431,10 +480,6 @@
           
         </div>
         
-        <div class="authority-status ">
-          search needed
-        </div>
-        
       </div>
       
       
@@ -446,10 +491,6 @@
           
             not linked
           
-        </div>
-        
-        <div class="authority-status ">
-          search needed
         </div>
         
       </div>
@@ -465,10 +506,6 @@
           
         </div>
         
-        <div class="authority-status ">
-          search needed
-        </div>
-        
       </div>
       
       
@@ -480,10 +517,6 @@
           
             not linked
           
-        </div>
-        
-        <div class="authority-status ">
-          search needed
         </div>
         
       </div>
@@ -499,10 +532,6 @@
           
         </div>
         
-        <div class="authority-status ">
-          search needed
-        </div>
-        
       </div>
       
     </div>
@@ -511,18 +540,31 @@
   <!-- ULAN Enrichment -->
   
 
+  <!-- Collection Appearances -->
+  
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
     
-    <p class="no-artworks">No artworks catalogued yet.</p>
+    <div class="artworks-list">
+      
+      <a class="artwork-row" href="/AP-2026-000300.html">
+        <span class="artwork-passport-id">AP-2026-000300</span>
+        <span class="artwork-title">A Self-Portrait with Ears and a Tie. I</span>
+        <span class="artwork-date">1980</span>
+      </a>
+      
+    </div>
     
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-POIKANS-1952</span>
-    <span>Exported 2026-05-30</span>
+    <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
+    <span>Exported 2026-07-02</span>
   </footer>
 
 </div>

@@ -359,6 +359,8 @@
   }
 
   .footer-left { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.04em; }
+  .footer-contact { color: var(--ink-faded); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
+  .footer-contact:hover { border-bottom-color: var(--ink-faded); }
 </style>
 <script type="application/ld+json">
 {
@@ -594,13 +596,28 @@
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
     
-    <p class="no-artworks">No artworks catalogued yet.</p>
+    <div class="artworks-list">
+      
+      <a class="artwork-row" href="/AP-2026-000222.html">
+        <span class="artwork-passport-id">AP-2026-000222</span>
+        <span class="artwork-title">Me and Berta on a Swing</span>
+        <span class="artwork-date">2004</span>
+      </a>
+      
+      <a class="artwork-row" href="/AP-2026-000223.html">
+        <span class="artwork-passport-id">AP-2026-000223</span>
+        <span class="artwork-title">Moon Pipe</span>
+        <span class="artwork-date">2004</span>
+      </a>
+      
+    </div>
     
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-DIMITERE-1965</span>
+    <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
     <span>Exported 2026-07-02</span>
   </footer>
 
