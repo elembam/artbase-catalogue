@@ -941,7 +941,7 @@
         <div class="label">Maker</div>
         <div class="value">
           {% if artist %}
-          {{ artist.identity.preferred_name }} ({{ artist.life.birth_date.value or "?" }} — {{ artist.life.death_date.value or "present" }})
+          {% if artist_profile_url %}<a href="{{ artist_profile_url }}" style="color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(28,24,20,0.3);">{{ artist.identity.preferred_name }}</a>{% else %}{{ artist.identity.preferred_name }}{% endif %} ({{ artist.life.birth_date.value or "?" }} — {{ artist.life.death_date.value or "present" }})
           {% elif artwork.object_id.maker_id %}
           {{ artwork.object_id.maker_id }}
           {% else %}
