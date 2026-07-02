@@ -41,7 +41,7 @@ SCRIPT_DIR  = Path(__file__).parent
 REPO_ROOT   = SCRIPT_DIR.parent
 TEMPLATE    = REPO_ROOT / "templates" / "passport.html.j2"
 DEFAULT_DATA = REPO_ROOT / "artbase_export" / "data"
-PASSPORTS_DIR = REPO_ROOT / "passports"
+PASSPORTS_DIR = REPO_ROOT  # passports live at repo root → arsaccordia.com/AP-*.html
 
 
 # ── Roman numerals helper (for the seal year) ──────────────────────────────────
@@ -293,77 +293,92 @@ def build_context(artwork: dict, artist: Optional[dict],
 
 # ── Main ───────────────────────────────────────────────────────────────────────
 
+def _generate_one(passport_id: str, data_dir: Path, out_dir: Path,
+                   env: "Environment", open_browser: bool = False) -> bool:
+    artwork_path = data_dir / "artworks" / f"{passport_id}.json"
+    if not artwork_path.exists():
+        print(f"✗ Artwork JSON not found: {artwork_path}", file=sys.stderr)
+        return False
+
+    artwork   = load_json(artwork_path)
+    artist    = find_artist_json(artwork, data_dir)
+    image_src = resolve_image(artwork, data_dir)
+
+    template  = env.get_template(TEMPLATE.name)
+    context   = build_context(artwork, artist, image_src)
+    html      = template.render(**context)
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / f"{passport_id}.html"
+    out_path.write_text(html, encoding="utf-8")
+
+    artist_name = artist.get("identity", {}).get("preferred_name", "?") if artist else "(not found)"
+    img_note    = f"{len(image_src)//1024} KB" if image_src else "none"
+    print(f"  ✓ {out_path.name}  [{artist_name}]  image:{img_note}  {len(html)//1024} KB")
+
+    if open_browser:
+        webbrowser.open(out_path.as_uri())
+    return True
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Generate an HTML artwork passport from canonical JSON."
+        description="Generate HTML artwork passports from canonical JSON."
     )
-    parser.add_argument("passport_id", help="Artwork passport ID, e.g. AP-2026-000001")
+    parser.add_argument(
+        "passport_id", nargs="?",
+        help="Artwork passport ID, e.g. AP-2026-000001 (omit with --all)",
+    )
+    parser.add_argument(
+        "--all", action="store_true",
+        help="Generate passports for every artwork JSON in data/artworks/",
+    )
     parser.add_argument(
         "--data-dir", default=None,
-        help=f"Path to data/ directory (default: {DEFAULT_DATA})"
+        help=f"Path to data/ directory (default: {DEFAULT_DATA})",
     )
     parser.add_argument(
         "--out-dir", default=None,
-        help=f"Output directory (default: {PASSPORTS_DIR})"
+        help=f"Output directory (default: {PASSPORTS_DIR})",
     )
     parser.add_argument(
         "--open", action="store_true",
-        help="Open the generated passport in the default browser"
+        help="Open the generated passport(s) in the default browser",
     )
     args = parser.parse_args()
 
-    data_dir    = Path(args.data_dir) if args.data_dir else DEFAULT_DATA
-    out_dir     = Path(args.out_dir)  if args.out_dir  else PASSPORTS_DIR
-    artwork_path = data_dir / "artworks" / f"{args.passport_id}.json"
+    if not args.all and not args.passport_id:
+        parser.error("Provide a passport ID or use --all")
 
-    if not artwork_path.exists():
-        print(f"✗ Artwork JSON not found: {artwork_path}", file=sys.stderr)
-        return 1
+    data_dir = Path(args.data_dir) if args.data_dir else DEFAULT_DATA
+    out_dir  = Path(args.out_dir)  if args.out_dir  else PASSPORTS_DIR
 
     if not TEMPLATE.exists():
         print(f"✗ Template not found: {TEMPLATE}", file=sys.stderr)
         return 1
 
-    # Load data
-    artwork = load_json(artwork_path)
-    artist  = find_artist_json(artwork, data_dir)
-    image_src = resolve_image(artwork, data_dir)
-
-    if artist:
-        print(f"  Artist: {artist.get('artbase_id')} — {artist.get('identity', {}).get('preferred_name', '?')}")
-    else:
-        print(f"  Artist: (not found)")
-    if image_src:
-        print(f"  Image:  embedded ({len(image_src)//1024} KB)")
-    else:
-        print(f"  Image:  not available")
-
-    # Set up Jinja2
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATE.parent)),
         autoescape=True,
-        undefined=Undefined,   # silently skip missing vars
+        undefined=Undefined,
     )
     env.filters["title_visibility"] = filter_title_visibility
     env.filters["aat_id"]           = filter_aat_id
     env.filters["title"]            = filter_title
 
-    template = env.get_template(TEMPLATE.name)
-    context  = build_context(artwork, artist, image_src)
-    html     = template.render(**context)
+    if args.all:
+        artworks_dir = data_dir / "artworks"
+        files = sorted(artworks_dir.glob("*.json"))
+        if not files:
+            print(f"No artwork JSON files found in {artworks_dir}", file=sys.stderr)
+            return 1
+        print(f"Generating {len(files)} passport(s) → {out_dir}/")
+        ok = sum(_generate_one(f.stem, data_dir, out_dir, env) for f in files)
+        print(f"\n✓ {ok}/{len(files)} passports written")
+        return 0 if ok == len(files) else 1
 
-    # Write output
-    out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / f"{args.passport_id}.html"
-    out_path.write_text(html, encoding="utf-8")
-
-    print(f"\n✓ Passport written: {out_path}")
-    print(f"  Size: {len(html)//1024} KB")
-
-    if args.open:
-        webbrowser.open(out_path.as_uri())
-
-    return 0
+    ok = _generate_one(args.passport_id, data_dir, out_dir, env, open_browser=args.open)
+    return 0 if ok else 1
 
 
 if __name__ == "__main__":
