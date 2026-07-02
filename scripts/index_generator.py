@@ -25,7 +25,7 @@ except ImportError:
 
 REPO_ROOT    = Path(__file__).resolve().parent.parent
 DATA_DIR     = REPO_ROOT / "artbase_export" / "data"
-PASSPORTS_DIR = REPO_ROOT / "passports"
+PASSPORTS_DIR = REPO_ROOT  # passports live at repo root → arsaccordia.com/AP-*.html
 TEMPLATES_DIR = REPO_ROOT / "templates"
 
 
@@ -72,7 +72,7 @@ def build_artwork_entry(artwork: dict, passports_dir: Path, artist: dict = None)
         "medium":        oid.get("materials"),
         "dimensions":    oid.get("dimensions_display"),
         "image_src":     artwork_image_src(artwork, passports_dir),
-        "passport_url":  f"{passport_id}.html" if passport_file.exists() else None,
+        "passport_url":  f"/{passport_id}.html" if passport_file.exists() else None,
         "has_passport":  passport_file.exists(),
         "visibility":    artwork.get("visibility", "private"),
         "artist_name":   artist_name,
@@ -153,14 +153,14 @@ def main():
                         help="Path to artbase_export/data/")
     parser.add_argument("--passports-dir", default=str(PASSPORTS_DIR),
                         help="Output directory for passports/")
-    parser.add_argument("--out",         default=None,
-                        help="Output HTML path (default: <passports-dir>/index.html)")
+    parser.add_argument("--out",         default=str(REPO_ROOT / "catalogue" / "index.html"),
+                        help="Output HTML path (default: catalogue/index.html)")
     parser.add_argument("--templates-dir", default=str(TEMPLATES_DIR))
     args = parser.parse_args()
 
     data_dir      = Path(args.data_dir)
     passports_dir = Path(args.passports_dir)
-    out_path      = Path(args.out) if args.out else passports_dir / "index.html"
+    out_path      = Path(args.out)
     templates_dir = Path(args.templates_dir)
 
     if not data_dir.exists():

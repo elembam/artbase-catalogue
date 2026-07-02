@@ -494,7 +494,7 @@
     <div class="artist-header">
       {% if entry.artist.get('image') and entry.artist.image.get('thumb_url') %}
       <div class="artist-portrait">
-        <a href="artists/{{ entry.artist.artbase_id }}.html">
+        <a href="/artists/{{ entry.artist.artbase_id }}.html">
           <img src="{{ entry.artist.image.thumb_url }}" alt="{{ entry.artist.identity.preferred_name }}" loading="lazy">
         </a>
       </div>
@@ -502,7 +502,7 @@
       <div class="artist-portrait placeholder"></div>
       {% endif %}
       <div>
-        {% set profile_path = "artists/" + entry.artist.artbase_id + ".html" %}
+        {% set profile_path = "/artists/" + entry.artist.artbase_id + ".html" %}
         <h2 class="artist-name">
           {% if entry.artist.authority_links.wikidata.id %}
           <a href="{{ profile_path }}" style="color:var(--seal);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(110,24,24,0.35);">{{ entry.artist.identity.preferred_name }}</a>
@@ -559,7 +559,7 @@
         {% endif %}
         {% if entry.artist.authority_links.wikidata.id %}
         <a class="authority-badge" style="background:var(--seal);color:#fff;border-color:var(--seal);"
-           href="artists/{{ entry.artist.artbase_id }}.html">
+           href="/artists/{{ entry.artist.artbase_id }}.html">
           Profile →
         </a>
         {% endif %}
