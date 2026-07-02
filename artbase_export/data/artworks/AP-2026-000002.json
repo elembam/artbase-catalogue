@@ -55,11 +55,11 @@
   ],
   "authority_links": {
     "wikidata": {
-      "id": null,
-      "uri": null,
-      "status": "search_needed",
-      "verified_date": null,
-      "notes": null
+      "id": "Q140404508",
+      "uri": "https://www.wikidata.org/wiki/Q140404508",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": "Created via QuickStatements 2026-07-02"
     },
     "artbase_id": null
   },
