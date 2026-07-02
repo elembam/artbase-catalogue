@@ -1,0 +1,44 @@
+{
+  "_schema": "artbase:artist:v1",
+  "artbase_id": "ART-OZOLINA-1932",
+  "identity": {
+    "preferred_name": "Aija Ozoliņa",
+    "sort_name": "Aija Ozoliņa",
+    "alt_names": []
+  },
+  "life": {
+    "birth_date": {
+      "value": "1932",
+      "precision": "year"
+    },
+    "death_date": {
+      "value": null
+    },
+    "birth_place": null,
+    "death_place": null
+  },
+  "descriptors": {
+    "nationality": "Latvian",
+    "occupation": "painter",
+    "active_dates": "",
+    "gender": ""
+  },
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140402310",
+      "uri": "https://www.wikidata.org/wiki/Q140402310",
+      "status": "confirmed",
+      "verified_date": "2026-07-02"
+    },
+    "ulan": {
+      "id": null,
+      "uri": null,
+      "status": null
+    },
+    "viaf": {
+      "id": null,
+      "uri": null,
+      "status": null
+    }
+  }
+}

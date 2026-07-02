@@ -1,0 +1,44 @@
+{
+  "_schema": "artbase:artist:v1",
+  "artbase_id": "ART-SILOVA-1966",
+  "identity": {
+    "preferred_name": "Olga Šilova",
+    "sort_name": "Olga Šilova",
+    "alt_names": []
+  },
+  "life": {
+    "birth_date": {
+      "value": "1966",
+      "precision": "year"
+    },
+    "death_date": {
+      "value": null
+    },
+    "birth_place": null,
+    "death_place": null
+  },
+  "descriptors": {
+    "nationality": "Latvian",
+    "occupation": "painter",
+    "active_dates": "",
+    "gender": ""
+  },
+  "authority_links": {
+    "wikidata": {
+      "id": "Q99481538",
+      "uri": "https://www.wikidata.org/wiki/Q99481538",
+      "status": "confirmed",
+      "verified_date": "2026-07-02"
+    },
+    "ulan": {
+      "id": null,
+      "uri": null,
+      "status": null
+    },
+    "viaf": {
+      "id": null,
+      "uri": null,
+      "status": null
+    }
+  }
+}

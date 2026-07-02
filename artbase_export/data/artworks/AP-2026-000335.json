@@ -1,0 +1,61 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000335",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-07-02",
+  "exported": "2026-07-02T00:00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "object_type": "painting",
+    "materials": "",
+    "materials_raw": "",
+    "dimensions_display": "150 × 280 cm",
+    "height_cm": 150.0,
+    "width_cm": 280.0,
+    "depth_cm": null,
+    "title": "A Picket of Flowers",
+    "title_en": "A Picket of Flowers",
+    "title_lv": "Ziedu pikets",
+    "subject": "",
+    "date_display": "2007",
+    "date_earliest": 2007,
+    "date_latest": 2007,
+    "maker_id": "ART-GELZIS-1962",
+    "maker_display_name": "Kristaps Ģelzis",
+    "has_photograph": false
+  },
+  "location": {
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": "Q139986317",
+    "inventory_number": "72–73",
+    "location_notes": "Hansabanka Contemporary Art Collection (2007 catalogue)"
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140323559",
+      "uri": "https://www.wikidata.org/wiki/Q140323559",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": "Hansabanka catalogue cat. 72–73"
+    }
+  },
+  "sources": [],
+  "cataloguing": {
+    "review_status": "stub",
+    "notes": "Stub record. Source: Hansabanka Contemporary Art Collection, 2007 catalogue, p.72–73. Wikidata: Q140323559."
+  },
+  "score": {
+    "passport_score": 30,
+    "status": "stub"
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "aat_terms": {},
+  "is_demo": false
+}

@@ -1,0 +1,43 @@
+{
+  "_schema": "artbase:artist:v1",
+  "artbase_id": "ART-KRIVENKOVA-TATJANA",
+  "identity": {
+    "preferred_name": "Tatjana Krivenkova",
+    "sort_name": "Tatjana Krivenkova",
+    "alt_names": []
+  },
+  "life": {
+    "birth_date": {
+      "value": null
+    },
+    "death_date": {
+      "value": null
+    },
+    "birth_place": null,
+    "death_place": null
+  },
+  "descriptors": {
+    "nationality": "Latvian",
+    "occupation": "painter",
+    "active_dates": "",
+    "gender": ""
+  },
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140402307",
+      "uri": "https://www.wikidata.org/wiki/Q140402307",
+      "status": "confirmed",
+      "verified_date": "2026-07-02"
+    },
+    "ulan": {
+      "id": null,
+      "uri": null,
+      "status": null
+    },
+    "viaf": {
+      "id": null,
+      "uri": null,
+      "status": null
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "_schema": "artbase:artist:v1",
+  "artbase_id": "ART-SPROGE-INDRA",
+  "identity": {
+    "preferred_name": "Indra Sproģe",
+    "sort_name": "Indra Sproģe",
+    "alt_names": []
+  },
+  "life": {
+    "birth_date": {
+      "value": null
+    },
+    "death_date": {
+      "value": null
+    },
+    "birth_place": null,
+    "death_place": null
+  },
+  "descriptors": {
+    "nationality": "Latvian",
+    "occupation": "painter",
+    "active_dates": "",
+    "gender": ""
+  },
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140402314",
+      "uri": "https://www.wikidata.org/wiki/Q140402314",
+      "status": "confirmed",
+      "verified_date": "2026-07-02"
+    },
+    "ulan": {
+      "id": null,
+      "uri": null,
+      "status": null
+    },
+    "viaf": {
+      "id": null,
+      "uri": null,
+      "status": null
+    }
+  }
+}

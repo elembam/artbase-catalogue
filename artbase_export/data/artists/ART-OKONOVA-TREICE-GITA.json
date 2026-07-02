@@ -1,0 +1,43 @@
+{
+  "_schema": "artbase:artist:v1",
+  "artbase_id": "ART-OKONOVA-TREICE-GITA",
+  "identity": {
+    "preferred_name": "Gita Okonova-Treice",
+    "sort_name": "Gita Okonova-Treice",
+    "alt_names": []
+  },
+  "life": {
+    "birth_date": {
+      "value": null
+    },
+    "death_date": {
+      "value": null
+    },
+    "birth_place": null,
+    "death_place": null
+  },
+  "descriptors": {
+    "nationality": "Latvian",
+    "occupation": "painter",
+    "active_dates": "",
+    "gender": ""
+  },
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140402309",
+      "uri": "https://www.wikidata.org/wiki/Q140402309",
+      "status": "confirmed",
+      "verified_date": "2026-07-02"
+    },
+    "ulan": {
+      "id": null,
+      "uri": null,
+      "status": null
+    },
+    "viaf": {
+      "id": null,
+      "uri": null,
+      "status": null
+    }
+  }
+}

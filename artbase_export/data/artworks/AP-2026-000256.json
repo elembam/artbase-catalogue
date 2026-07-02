@@ -1,0 +1,61 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000256",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-07-02",
+  "exported": "2026-07-02T00:00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "object_type": "painting",
+    "materials": "Etching on paper",
+    "materials_raw": "papīrs, oforts / etching on paper",
+    "dimensions_display": "39.5 × 49.5 cm",
+    "height_cm": 39.5,
+    "width_cm": 49.5,
+    "depth_cm": null,
+    "title": "Astrological Calendar. II",
+    "title_en": "Astrological Calendar. II",
+    "title_lv": "Astroloģiskais kalendārs. II",
+    "subject": "",
+    "date_display": "1986",
+    "date_earliest": 1986,
+    "date_latest": 1986,
+    "maker_id": "ART-KALNACS-1958",
+    "maker_display_name": "Andrejs Kalnācs",
+    "has_photograph": false
+  },
+  "location": {
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": "Q139986317",
+    "inventory_number": "94",
+    "location_notes": "Hansabanka Contemporary Art Collection (2007 catalogue)"
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140404048",
+      "uri": "https://www.wikidata.org/wiki/Q140404048",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": "Hansabanka catalogue cat. 94"
+    }
+  },
+  "sources": [],
+  "cataloguing": {
+    "review_status": "stub",
+    "notes": "Stub record. Source: Hansabanka Contemporary Art Collection, 2007 catalogue, p.94. Wikidata: Q140404048."
+  },
+  "score": {
+    "passport_score": 30,
+    "status": "stub"
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "aat_terms": {},
+  "is_demo": false
+}

@@ -1,0 +1,43 @@
+{
+  "_schema": "artbase:artist:v1",
+  "artbase_id": "ART-GULBIS-MADARA",
+  "identity": {
+    "preferred_name": "Madara Gulbis",
+    "sort_name": "Madara Gulbis",
+    "alt_names": []
+  },
+  "life": {
+    "birth_date": {
+      "value": null
+    },
+    "death_date": {
+      "value": null
+    },
+    "birth_place": null,
+    "death_place": null
+  },
+  "descriptors": {
+    "nationality": "Latvian",
+    "occupation": "painter",
+    "active_dates": "",
+    "gender": ""
+  },
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140402304",
+      "uri": "https://www.wikidata.org/wiki/Q140402304",
+      "status": "confirmed",
+      "verified_date": "2026-07-02"
+    },
+    "ulan": {
+      "id": null,
+      "uri": null,
+      "status": null
+    },
+    "viaf": {
+      "id": null,
+      "uri": null,
+      "status": null
+    }
+  }
+}

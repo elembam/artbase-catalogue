@@ -1,0 +1,44 @@
+{
+  "_schema": "artbase:artist:v1",
+  "artbase_id": "ART-KRUKLIS-1972",
+  "identity": {
+    "preferred_name": "Mārtiņš Krūklis",
+    "sort_name": "Mārtiņš Krūklis",
+    "alt_names": []
+  },
+  "life": {
+    "birth_date": {
+      "value": "1972",
+      "precision": "year"
+    },
+    "death_date": {
+      "value": null
+    },
+    "birth_place": null,
+    "death_place": null
+  },
+  "descriptors": {
+    "nationality": "Latvian",
+    "occupation": "painter",
+    "active_dates": "",
+    "gender": ""
+  },
+  "authority_links": {
+    "wikidata": {
+      "id": "Q99479153",
+      "uri": "https://www.wikidata.org/wiki/Q99479153",
+      "status": "confirmed",
+      "verified_date": "2026-07-02"
+    },
+    "ulan": {
+      "id": null,
+      "uri": null,
+      "status": null
+    },
+    "viaf": {
+      "id": null,
+      "uri": null,
+      "status": null
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000300",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-07-02",
+  "exported": "2026-07-02T00:00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "object_type": "painting",
+    "materials": "Lithograph on paper",
+    "materials_raw": "papīrs, litogrāfija / lithograph on paper",
+    "dimensions_display": "62 × 47 cm",
+    "height_cm": 62.0,
+    "width_cm": 47.0,
+    "depth_cm": null,
+    "title": "A Self-Portrait with Ears and a Tie. I",
+    "title_en": "A Self-Portrait with Ears and a Tie. I",
+    "title_lv": "Pašportrets ar ausīm un kaklasaiti. I",
+    "subject": "",
+    "date_display": "1980",
+    "date_earliest": 1980,
+    "date_latest": 1980,
+    "maker_id": "ART-POIKANS-1952",
+    "maker_display_name": "Ivars Poikāns",
+    "has_photograph": false
+  },
+  "location": {
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": "Q139986317",
+    "inventory_number": "155",
+    "location_notes": "Hansabanka Contemporary Art Collection (2007 catalogue)"
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140404102",
+      "uri": "https://www.wikidata.org/wiki/Q140404102",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": "Hansabanka catalogue cat. 155"
+    }
+  },
+  "sources": [],
+  "cataloguing": {
+    "review_status": "stub",
+    "notes": "Stub record. Source: Hansabanka Contemporary Art Collection, 2007 catalogue, p.155. Wikidata: Q140404102."
+  },
+  "score": {
+    "passport_score": 30,
+    "status": "stub"
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "aat_terms": {},
+  "is_demo": false
+}

@@ -1,0 +1,61 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000297",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-07-02",
+  "exported": "2026-07-02T00:00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "object_type": "painting",
+    "materials": "Wood, wax, phosphorus",
+    "materials_raw": "koks, vasks, fosfors / wood, wax, phosphorus",
+    "dimensions_display": "70.5 × 52 cm",
+    "height_cm": 70.5,
+    "width_cm": 52.0,
+    "depth_cm": null,
+    "title": "The Little Arch of Triumph. Diptych. Part II",
+    "title_en": "The Little Arch of Triumph. Diptych. Part II",
+    "title_lv": "Mazā triumfa arka. Diptihs II daļa",
+    "subject": "",
+    "date_display": "1994",
+    "date_earliest": 1994,
+    "date_latest": 1994,
+    "maker_id": "ART-PETERSONS-OJARS",
+    "maker_display_name": "Ojārs Pētersons",
+    "has_photograph": false
+  },
+  "location": {
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": "Q139986317",
+    "inventory_number": "149",
+    "location_notes": "Hansabanka Contemporary Art Collection (2007 catalogue)"
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140404131",
+      "uri": "https://www.wikidata.org/wiki/Q140404131",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": "Hansabanka catalogue cat. 149"
+    }
+  },
+  "sources": [],
+  "cataloguing": {
+    "review_status": "stub",
+    "notes": "Stub record. Source: Hansabanka Contemporary Art Collection, 2007 catalogue, p.149. Wikidata: Q140404131."
+  },
+  "score": {
+    "passport_score": 30,
+    "status": "stub"
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "aat_terms": {},
+  "is_demo": false
+}

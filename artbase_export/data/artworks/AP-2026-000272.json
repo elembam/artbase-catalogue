@@ -1,0 +1,61 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000272",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-07-02",
+  "exported": "2026-07-02T00:00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "object_type": "painting",
+    "materials": "Author's technique on paper",
+    "materials_raw": "papīrs, autortehnika / author's technique on paper",
+    "dimensions_display": "80 × 120 cm",
+    "height_cm": 80.0,
+    "width_cm": 120.0,
+    "depth_cm": null,
+    "title": "Flowers, Ornaments, Crosses",
+    "title_en": "Flowers, Ornaments, Crosses",
+    "title_lv": "Ziedi, krusti, ornamenti",
+    "subject": "",
+    "date_display": "2006",
+    "date_earliest": 2006,
+    "date_latest": 2006,
+    "maker_id": "ART-KRUKLIS-1972",
+    "maker_display_name": "Mārtiņš Krūklis",
+    "has_photograph": false
+  },
+  "location": {
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": "Q139986317",
+    "inventory_number": "112",
+    "location_notes": "Hansabanka Contemporary Art Collection (2007 catalogue)"
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140404129",
+      "uri": "https://www.wikidata.org/wiki/Q140404129",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": "Hansabanka catalogue cat. 112"
+    }
+  },
+  "sources": [],
+  "cataloguing": {
+    "review_status": "stub",
+    "notes": "Stub record. Source: Hansabanka Contemporary Art Collection, 2007 catalogue, p.112. Wikidata: Q140404129."
+  },
+  "score": {
+    "passport_score": 30,
+    "status": "stub"
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "aat_terms": {},
+  "is_demo": false
+}

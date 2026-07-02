@@ -1,0 +1,61 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000304",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-07-02",
+  "exported": "2026-07-02T00:00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "object_type": "painting",
+    "materials": "Etching, watercolour on paper",
+    "materials_raw": "papīrs, oforts, akvarelis / etching, watercolour on paper",
+    "dimensions_display": "19 × 13 cm",
+    "height_cm": 19.0,
+    "width_cm": 13.0,
+    "depth_cm": null,
+    "title": "The Marked One",
+    "title_en": "The Marked One",
+    "title_lv": "Iezīmētais",
+    "subject": "",
+    "date_display": "1985",
+    "date_earliest": 1985,
+    "date_latest": 1985,
+    "maker_id": "ART-PUTRAMS-1956",
+    "maker_display_name": "Juris Putrāms",
+    "has_photograph": false
+  },
+  "location": {
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": "Q139986317",
+    "inventory_number": "160",
+    "location_notes": "Hansabanka Contemporary Art Collection (2007 catalogue)"
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140379293",
+      "uri": "https://www.wikidata.org/wiki/Q140379293",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": "Hansabanka catalogue cat. 160"
+    }
+  },
+  "sources": [],
+  "cataloguing": {
+    "review_status": "stub",
+    "notes": "Stub record. Source: Hansabanka Contemporary Art Collection, 2007 catalogue, p.160. Wikidata: Q140379293."
+  },
+  "score": {
+    "passport_score": 30,
+    "status": "stub"
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "aat_terms": {},
+  "is_demo": false
+}

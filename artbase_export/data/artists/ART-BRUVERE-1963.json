@@ -1,0 +1,44 @@
+{
+  "_schema": "artbase:artist:v1",
+  "artbase_id": "ART-BRUVERE-1963",
+  "identity": {
+    "preferred_name": "Inga Brūvere",
+    "sort_name": "Inga Brūvere",
+    "alt_names": []
+  },
+  "life": {
+    "birth_date": {
+      "value": "1963",
+      "precision": "year"
+    },
+    "death_date": {
+      "value": null
+    },
+    "birth_place": null,
+    "death_place": null
+  },
+  "descriptors": {
+    "nationality": "Latvian",
+    "occupation": "painter",
+    "active_dates": "",
+    "gender": ""
+  },
+  "authority_links": {
+    "wikidata": {
+      "id": "Q99480313",
+      "uri": "https://www.wikidata.org/wiki/Q99480313",
+      "status": "confirmed",
+      "verified_date": "2026-07-02"
+    },
+    "ulan": {
+      "id": null,
+      "uri": null,
+      "status": null
+    },
+    "viaf": {
+      "id": null,
+      "uri": null,
+      "status": null
+    }
+  }
+}

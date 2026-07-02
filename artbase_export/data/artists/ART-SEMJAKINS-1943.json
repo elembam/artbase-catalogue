@@ -1,0 +1,44 @@
+{
+  "_schema": "artbase:artist:v1",
+  "artbase_id": "ART-SEMJAKINS-1943",
+  "identity": {
+    "preferred_name": "Mihails Šemjakins",
+    "sort_name": "Mihails Šemjakins",
+    "alt_names": []
+  },
+  "life": {
+    "birth_date": {
+      "value": "1943",
+      "precision": "year"
+    },
+    "death_date": {
+      "value": null
+    },
+    "birth_place": null,
+    "death_place": null
+  },
+  "descriptors": {
+    "nationality": "Latvian",
+    "occupation": "painter",
+    "active_dates": "",
+    "gender": ""
+  },
+  "authority_links": {
+    "wikidata": {
+      "id": "Q2025924",
+      "uri": "https://www.wikidata.org/wiki/Q2025924",
+      "status": "confirmed",
+      "verified_date": "2026-07-02"
+    },
+    "ulan": {
+      "id": null,
+      "uri": null,
+      "status": null
+    },
+    "viaf": {
+      "id": null,
+      "uri": null,
+      "status": null
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000203",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-07-02",
+  "exported": "2026-07-02T00:00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "object_type": "painting",
+    "materials": "Lithograph on paper",
+    "materials_raw": "papīrs / litogrāfija / lithograph on paper",
+    "dimensions_display": "82 × 54 cm",
+    "height_cm": 82.0,
+    "width_cm": 54.0,
+    "depth_cm": null,
+    "title": "Cliffs",
+    "title_en": "Cliffs",
+    "title_lv": "Klintis",
+    "subject": "",
+    "date_display": "2004",
+    "date_earliest": 2004,
+    "date_latest": 2004,
+    "maker_id": "ART-ABLEVS-ANDRIS",
+    "maker_display_name": "Andris Ablēvs",
+    "has_photograph": false
+  },
+  "location": {
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": "Q139986317",
+    "inventory_number": "21",
+    "location_notes": "Hansabanka Contemporary Art Collection (2007 catalogue)"
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140404050",
+      "uri": "https://www.wikidata.org/wiki/Q140404050",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": "Hansabanka catalogue cat. 21"
+    }
+  },
+  "sources": [],
+  "cataloguing": {
+    "review_status": "stub",
+    "notes": "Stub record. Source: Hansabanka Contemporary Art Collection, 2007 catalogue, p.21. Wikidata: Q140404050."
+  },
+  "score": {
+    "passport_score": 30,
+    "status": "stub"
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "aat_terms": {},
+  "is_demo": false
+}

@@ -1,0 +1,61 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000253",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-07-02",
+  "exported": "2026-07-02T00:00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "object_type": "painting",
+    "materials": "Oil, gold on canvas",
+    "materials_raw": "audekls, eļļa, zelts / oil, gold on canvas",
+    "dimensions_display": "65 × 50 cm",
+    "height_cm": 65.0,
+    "width_cm": 50.0,
+    "depth_cm": null,
+    "title": "Eastern Motif",
+    "title_en": "Eastern Motif",
+    "title_lv": "Austrumu motīvs",
+    "subject": "",
+    "date_display": "1989",
+    "date_earliest": 1989,
+    "date_latest": 1989,
+    "maker_id": "ART-JURJANS-1944",
+    "maker_display_name": "Juris Jurjāns",
+    "has_photograph": false
+  },
+  "location": {
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": "Q139986317",
+    "inventory_number": "91",
+    "location_notes": "Hansabanka Contemporary Art Collection (2007 catalogue)"
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140404103",
+      "uri": "https://www.wikidata.org/wiki/Q140404103",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": "Hansabanka catalogue cat. 91"
+    }
+  },
+  "sources": [],
+  "cataloguing": {
+    "review_status": "stub",
+    "notes": "Stub record. Source: Hansabanka Contemporary Art Collection, 2007 catalogue, p.91. Wikidata: Q140404103."
+  },
+  "score": {
+    "passport_score": 30,
+    "status": "stub"
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "aat_terms": {},
+  "is_demo": false
+}

@@ -1,0 +1,61 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000310",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-07-02",
+  "exported": "2026-07-02T00:00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "object_type": "painting",
+    "materials": "Acrylic on wood",
+    "materials_raw": "koks, akrils / acrylic on wood",
+    "dimensions_display": "100 × 134 cm",
+    "height_cm": 100.0,
+    "width_cm": 134.0,
+    "depth_cm": null,
+    "title": "… the sky turns into buds",
+    "title_en": "… the sky turns into buds",
+    "title_lv": "… par pumpuriem pārvēršas debesis",
+    "subject": "",
+    "date_display": "2004",
+    "date_earliest": 2004,
+    "date_latest": 2004,
+    "maker_id": "ART-SPROGE-INDRA",
+    "maker_display_name": "Indra Sproģe",
+    "has_photograph": false
+  },
+  "location": {
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": "Q139986317",
+    "inventory_number": "176",
+    "location_notes": "Hansabanka Contemporary Art Collection (2007 catalogue)"
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140404093",
+      "uri": "https://www.wikidata.org/wiki/Q140404093",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": "Hansabanka catalogue cat. 176"
+    }
+  },
+  "sources": [],
+  "cataloguing": {
+    "review_status": "stub",
+    "notes": "Stub record. Source: Hansabanka Contemporary Art Collection, 2007 catalogue, p.176. Wikidata: Q140404093."
+  },
+  "score": {
+    "passport_score": 30,
+    "status": "stub"
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "aat_terms": {},
+  "is_demo": false
+}

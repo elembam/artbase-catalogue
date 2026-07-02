@@ -1,0 +1,61 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000270",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-07-02",
+  "exported": "2026-07-02T00:00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "object_type": "painting",
+    "materials": "Etching on paper",
+    "materials_raw": "papīrs, oforts / etching on paper",
+    "dimensions_display": "30.5 × 38 cm",
+    "height_cm": 30.5,
+    "width_cm": 38.0,
+    "depth_cm": null,
+    "title": "Fleeing Time. Illustration to J. Rainis 'The Beginning and the End'",
+    "title_en": "Fleeing Time. Illustration to J. Rainis 'The Beginning and the End'",
+    "title_lv": "Skrejošais laiks. Ilustrācija J. Raiņa dzejas ciklam 'Gals un sākums'",
+    "subject": "",
+    "date_display": "1988",
+    "date_earliest": 1988,
+    "date_latest": 1988,
+    "maker_id": "ART-KROLLIS-1932",
+    "maker_display_name": "Gunārs Krollis",
+    "has_photograph": false
+  },
+  "location": {
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": "Q139986317",
+    "inventory_number": "109",
+    "location_notes": "Hansabanka Contemporary Art Collection (2007 catalogue)"
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140379287",
+      "uri": "https://www.wikidata.org/wiki/Q140379287",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": "Hansabanka catalogue cat. 109"
+    }
+  },
+  "sources": [],
+  "cataloguing": {
+    "review_status": "stub",
+    "notes": "Stub record. Source: Hansabanka Contemporary Art Collection, 2007 catalogue, p.109. Wikidata: Q140379287."
+  },
+  "score": {
+    "passport_score": 30,
+    "status": "stub"
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "aat_terms": {},
+  "is_demo": false
+}

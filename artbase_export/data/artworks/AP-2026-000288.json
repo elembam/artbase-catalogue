@@ -1,0 +1,61 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000288",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-07-02",
+  "exported": "2026-07-02T00:00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "object_type": "painting",
+    "materials": "Author's technique on paper",
+    "materials_raw": "papīrs, autortehnika / author's technique on paper",
+    "dimensions_display": "52 × 71 cm",
+    "height_cm": 52.0,
+    "width_cm": 71.0,
+    "depth_cm": null,
+    "title": "The Magnificent",
+    "title_en": "The Magnificent",
+    "title_lv": "Lieliskais",
+    "subject": "",
+    "date_display": "1998",
+    "date_earliest": 1998,
+    "date_latest": 1998,
+    "maker_id": "ART-OKONOVA-TREICE-GITA",
+    "maker_display_name": "Gita Okonova-Treice",
+    "has_photograph": false
+  },
+  "location": {
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": "Q139986317",
+    "inventory_number": "134",
+    "location_notes": "Hansabanka Contemporary Art Collection (2007 catalogue)"
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140404075",
+      "uri": "https://www.wikidata.org/wiki/Q140404075",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": "Hansabanka catalogue cat. 134"
+    }
+  },
+  "sources": [],
+  "cataloguing": {
+    "review_status": "stub",
+    "notes": "Stub record. Source: Hansabanka Contemporary Art Collection, 2007 catalogue, p.134. Wikidata: Q140404075."
+  },
+  "score": {
+    "passport_score": 30,
+    "status": "stub"
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "aat_terms": {},
+  "is_demo": false
+}

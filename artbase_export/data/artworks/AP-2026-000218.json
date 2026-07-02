@@ -1,0 +1,61 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000218",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-07-02",
+  "exported": "2026-07-02T00:00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "object_type": "painting",
+    "materials": "Oil on wood",
+    "materials_raw": "koks / eļļa / oil on wood",
+    "dimensions_display": "69 × 93 cm",
+    "height_cm": 69.0,
+    "width_cm": 93.0,
+    "depth_cm": null,
+    "title": "Towards the Sun. Sprouts",
+    "title_en": "Towards the Sun. Sprouts",
+    "title_lv": "Pretī saulei. Dīgļi",
+    "subject": "",
+    "date_display": "2003",
+    "date_earliest": 2003,
+    "date_latest": 2003,
+    "maker_id": "ART-DAGNIJA-1937",
+    "maker_display_name": "Daina Dagnija",
+    "has_photograph": false
+  },
+  "location": {
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": "Q139986317",
+    "inventory_number": "44",
+    "location_notes": "Hansabanka Contemporary Art Collection (2007 catalogue)"
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": "Q140404064",
+      "uri": "https://www.wikidata.org/wiki/Q140404064",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": "Hansabanka catalogue cat. 44"
+    }
+  },
+  "sources": [],
+  "cataloguing": {
+    "review_status": "stub",
+    "notes": "Stub record. Source: Hansabanka Contemporary Art Collection, 2007 catalogue, p.44. Wikidata: Q140404064."
+  },
+  "score": {
+    "passport_score": 30,
+    "status": "stub"
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "aat_terms": {},
+  "is_demo": false
+}
