@@ -1,0 +1,66 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000025",
+  "version": 1,
+  "exported": "2026-07-02T07:52:03.479255+00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "title": "Woman with Leaflets",
+    "title_en": "Woman with Leaflets",
+    "title_lv": null,
+    "object_type": "painting",
+    "materials": null,
+    "dimensions_display": "74.0 × 90.0 cm",
+    "height_cm": 74.0,
+    "width_cm": 90.0,
+    "date_display": "1933",
+    "date_earliest": 1933,
+    "date_latest": 1933,
+    "maker_id": "ART-DREVINS-1889",
+    "maker_display_name": "Aleksandrs Drēviņš",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": "Q1370465",
+    "inventory_number": "21A",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "scope": "artwork_object",
+      "system": "Wikidata",
+      "id": "Q28801400",
+      "uri": "https://www.wikidata.org/wiki/Q28801400",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": null
+    },
+    "artbase_id": null,
+    "work_level": []
+  },
+  "rights": {
+    "public_domain": true,
+    "copyright_status": "public_domain",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": null,
+    "source": "Artist born before 1874 or work created before 1929 (Latvia)"
+  },
+  "media": [],
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "wikidata_to_passports.py",
+    "notes": "Auto-generated from Wikidata Q28801400",
+    "tasks": [],
+    "engagement_ids": []
+  }
+}

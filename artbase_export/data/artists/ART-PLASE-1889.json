@@ -1,0 +1,134 @@
+{
+  "artbase_id": "ART-PLASE-1889",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-07-02T09:54:52.349637+00:00",
+  "exported": "2026-07-02T09:54:52.349637+00:00",
+  "visibility": "public",
+  "identity": {
+    "preferred_name": "Jānis Plase",
+    "preferred_name_language": "lv",
+    "full_name": "Jānis Plase",
+    "name_variants": [],
+    "sort_name": "Plase, Jānis"
+  },
+  "life": {
+    "birth_date": {
+      "value": null,
+      "precision": "year",
+      "status": "working",
+      "source_ids": [],
+      "notes": null
+    },
+    "death_date": {
+      "value": null,
+      "precision": "year",
+      "status": "working",
+      "source_ids": [],
+      "notes": null
+    },
+    "birth_place": {
+      "display": null,
+      "tgn_uri": null,
+      "wikidata_qid": null,
+      "source_ids": []
+    },
+    "death_place": {
+      "display": null,
+      "tgn_uri": null,
+      "wikidata_qid": null,
+      "source_ids": []
+    }
+  },
+  "descriptors": {
+    "nationality": "Latvian",
+    "citizenship": [],
+    "occupations": [
+      "painter"
+    ],
+    "occupations_aat": [],
+    "media": [],
+    "subjects": [],
+    "movement_notes": "Latvian modernism (Klasiskais modernisms)",
+    "biography_summary": null
+  },
+  "authority_links": {
+    "wikidata": {
+      "id": "Q109894439",
+      "uri": "https://www.wikidata.org/wiki/Q109894439",
+      "status": "confirmed",
+      "verified_date": null,
+      "notes": null
+    },
+    "viaf": {
+      "id": "1027158915915950000000",
+      "uri": null,
+      "status": "confirmed",
+      "verified_date": null,
+      "notes": null
+    },
+    "ulan": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "isni": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "rkd": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "lc_naco": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "gnd": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "bnf": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "libris": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "generate_km_artist_stubs.py",
+    "notes": "Wikidata stub generated from Q109894439",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artist:v1",
+  "collections": []
+}

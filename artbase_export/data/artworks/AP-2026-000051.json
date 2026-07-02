@@ -1,0 +1,66 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000051",
+  "version": 1,
+  "exported": "2026-07-02T07:52:16.523802+00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "title": null,
+    "title_en": null,
+    "title_lv": null,
+    "object_type": "painting",
+    "materials": "Oil, canvas",
+    "dimensions_display": "63.0 × 79.0 cm",
+    "height_cm": 63.0,
+    "width_cm": 79.0,
+    "date_display": "1926",
+    "date_earliest": 1926,
+    "date_latest": 1926,
+    "maker_id": "ART-DREVINS-1889",
+    "maker_display_name": "Aleksandrs Drēviņš",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Museum Ludwig",
+    "collection_qid": "Q703640",
+    "inventory_number": "ML 01500",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "scope": "artwork_object",
+      "system": "Wikidata",
+      "id": "Q133043361",
+      "uri": "https://www.wikidata.org/wiki/Q133043361",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": null
+    },
+    "artbase_id": null,
+    "work_level": []
+  },
+  "rights": {
+    "public_domain": true,
+    "copyright_status": "public_domain",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": null,
+    "source": "Artist born before 1874 or work created before 1929 (Latvia)"
+  },
+  "media": [],
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "wikidata_to_passports.py",
+    "notes": "Auto-generated from Wikidata Q133043361",
+    "tasks": [],
+    "engagement_ids": []
+  }
+}
