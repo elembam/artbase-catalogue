@@ -60,6 +60,4 @@ exports/*/validated/large/
 *.swp
 *.swo
 
-# Generated passports
-passports/*.html
-passports/*.xml
+# Generated passports — AP-*.html are committed for GitHub Pages serving

@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Artwork Passport — Portreta kompozīcija by Oto Skulme. Standards-compliant international cultural object record.">
+<title>Artwork Passport — Portreta kompozīcija</title>
+<link rel="canonical" href="https://arsaccordia.com/AP-2026-000076.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f6f1e6;
+    --paper-deep: #ebe3d1;
+    --ink: #1c1814;
+    --ink-soft: #4a4338;
+    --ink-faded: #80766a;
+    --seal: #6e1818;
+    --seal-light: #94342f;
+    --gold: #8a6f2e;
+    --rule: #c7bca5;
+    --grid: rgba(110, 24, 24, 0.04);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 15px;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+
+  .passport {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow:
+      0 1px 0 rgba(28, 24, 20, 0.04),
+      0 20px 40px -20px rgba(28, 24, 20, 0.15),
+      0 60px 100px -60px rgba(28, 24, 20, 0.1);
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ─── HEADER ─── */
+  .header {
+    padding: 28px 48px 24px;
+    border-bottom: 2px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    left: 48px; right: 48px; bottom: -7px;
+    border-bottom: 1px solid var(--ink);
+  }
+  .header-mark { flex: 1; }
+  .header-mark .issuer {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--seal);
+    margin-bottom: 6px;
+  }
+  .header-mark .title {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-variation-settings: 'opsz' 144, 'SOFT' 50;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .header-mark .subtitle {
+    margin-top: 4px;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+  }
+  .header-mark .subtitle a {
+    color: inherit; text-decoration: none;
+  }
+  .header-mark .subtitle a:hover {
+    color: var(--seal);
+  }
+  .header-mark .colophon {
+    margin-top: 14px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+    max-width: 480px;
+  }
+  .seal {
+    width: 96px; height: 96px;
+    border-radius: 50%;
+    border: 1.5px solid var(--seal);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; color: var(--seal);
+    position: relative; flex-shrink: 0;
+    background: radial-gradient(circle at center, var(--paper) 60%, rgba(110, 24, 24, 0.06));
+  }
+  .seal::before {
+    content: '';
+    position: absolute; inset: 5px;
+    border-radius: 50%;
+    border: 0.5px solid var(--seal);
+  }
+  .seal .seal-text {
+    font-family: 'Fraunces', serif;
+    font-style: italic; font-weight: 500;
+    font-size: 9px; letter-spacing: 0.15em;
+    text-transform: uppercase; line-height: 1.1;
+  }
+  .seal .seal-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; font-weight: 500;
+    margin-top: 3px; letter-spacing: 0.05em;
+  }
+  .seal .seal-year {
+    font-family: 'Fraunces', serif;
+    font-style: italic; font-size: 11px;
+    margin-top: 4px; font-weight: 500;
+  }
+
+  /* ─── META BAR ─── */
+  .meta-bar {
+    padding: 14px 48px;
+    background: var(--paper-deep);
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 24px; border-bottom: 1px solid var(--rule);
+  }
+  .meta-bar dt {
+    font-size: 9px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--ink-faded);
+    font-weight: 500; margin-bottom: 4px;
+  }
+  .meta-bar dd {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--ink); font-weight: 500;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    padding: 40px 48px 32px;
+    display: grid; grid-template-columns: 280px 1fr;
+    gap: 40px; border-bottom: 1px solid var(--rule);
+  }
+  .hero-image { position: relative; }
+  .hero-image img {
+    width: 100%; height: auto; display: block;
+    box-shadow:
+      0 1px 0 var(--rule),
+      0 12px 30px -8px rgba(28, 24, 20, 0.3),
+      0 30px 60px -30px rgba(28, 24, 20, 0.2);
+  }
+  .hero-image .no-image {
+    width: 100%; aspect-ratio: 3/4;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-style: italic; color: var(--ink-faded); font-size: 13px;
+  }
+  .hero-image .corner {
+    position: absolute; width: 16px; height: 16px;
+    border: 1px solid var(--seal);
+  }
+  .hero-image .corner.tl { top: -8px; left: -8px; border-right: none; border-bottom: none; }
+  .hero-image .corner.tr { top: -8px; right: -8px; border-left: none; border-bottom: none; }
+  .hero-image .corner.bl { bottom: -8px; left: -8px; border-right: none; border-top: none; }
+  .hero-image .corner.br { bottom: -8px; right: -8px; border-left: none; border-top: none; }
+
+  .tombstone .label {
+    font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--ink-faded);
+    font-weight: 500; margin-bottom: 8px;
+  }
+  .tombstone .work-title {
+    font-family: 'Fraunces', serif;
+    font-style: italic; font-weight: 400;
+    font-variation-settings: 'opsz' 144;
+    font-size: 44px; line-height: 1;
+    letter-spacing: -0.015em; color: var(--ink); margin-bottom: 6px;
+  }
+  .tombstone .work-alt-titles {
+    font-family: 'Fraunces', serif;
+    font-style: italic; font-size: 16px;
+    color: var(--ink-faded); margin-bottom: 20px;
+  }
+  .tombstone .work-artist {
+    font-family: 'Fraunces', serif;
+    font-weight: 500; font-size: 19px;
+    color: var(--ink); margin-bottom: 2px;
+  }
+  .tombstone .work-artist-dates {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 12px; color: var(--ink-soft);
+    letter-spacing: 0.04em; margin-bottom: 18px;
+  }
+  .tombstone-grid {
+    display: grid; grid-template-columns: 100px 1fr;
+    row-gap: 7px; column-gap: 16px;
+    padding-top: 18px; border-top: 1px solid var(--rule);
+  }
+  .tombstone-grid dt {
+    font-size: 10px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--ink-faded);
+    font-weight: 500; padding-top: 1px;
+  }
+  .tombstone-grid dd { font-size: 14px; color: var(--ink); }
+
+  /* ─── COMPLETENESS SCORE ─── */
+  .completeness {
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+  }
+  .completeness-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 12px;
+  }
+  .completeness-title {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+  }
+  .completeness-score {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+  .completeness-score-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .completeness-score-denom {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-faded);
+  }
+  .completeness-tag {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 2px;
+    background: var(--seal);
+    color: #fff;
+    align-self: center;
+  }
+  .completeness-tag.partial {
+    background: var(--gold);
+    color: #fff;
+  }
+  .completeness-tag.draft {
+    background: transparent;
+    color: var(--ink-faded);
+    border: 1px solid var(--rule);
+  }
+  .completeness-bar-wrap {
+    height: 8px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  .completeness-bar {
+    height: 100%;
+    background: var(--seal);
+    border-radius: 4px;
+    transition: width 0.4s;
+  }
+  .completeness-bar.partial { background: var(--gold); }
+  .completeness-bar.draft   { background: var(--ink-faded); }
+
+  /* ─── SECTIONS ─── */
+  .section {
+    padding: 32px 48px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section:last-of-type { border-bottom: none; }
+  .section-header {
+    display: flex; align-items: baseline;
+    gap: 16px; margin-bottom: 24px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--ink);
+  }
+  .section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--seal); letter-spacing: 0.1em;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 500; font-style: italic;
+    font-size: 20px; color: var(--ink);
+    letter-spacing: -0.005em; flex: 1;
+  }
+  .section-rubric {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 10px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--ink-faded);
+  }
+  .section-rubric a {
+    color: inherit; text-decoration: none;
+  }
+  .section-rubric a:hover {
+    color: var(--seal); text-decoration: underline;
+  }
+
+  /* ─── OBJECT ID ─── */
+  .object-id {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 0; border: 1px solid var(--rule);
+  }
+  .object-id-field {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .object-id-field:nth-child(2n) { border-right: none; }
+  .object-id-field:nth-last-child(-n+2) { border-bottom: none; }
+  .object-id-field.wide {
+    grid-column: 1 / -1; border-right: none;
+  }
+  .object-id-field .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; color: var(--seal); letter-spacing: 0.08em;
+  }
+  .object-id-field .label {
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--ink-faded); font-weight: 500;
+  }
+  .object-id-field .value {
+    font-family: 'Fraunces', serif;
+    font-size: 16px; color: var(--ink); line-height: 1.35;
+  }
+  .object-id-field .value .aat-link {
+    margin-top: 6px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  .object-id-field .value .aat-link a {
+    color: var(--ink-faded);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(0,0,0,0.2);
+  }
+  .object-id-field .value .aat-link a:hover {
+    color: var(--seal);
+    border-bottom-color: var(--seal);
+  }
+  .object-id-field.missing .value { color: var(--ink-faded); font-style: italic; }
+
+  /* ─── AUTHORITIES ─── */
+  .authorities {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+  }
+  .authority {
+    border: 1px solid var(--rule);
+    padding: 16px 18px;
+    text-decoration: none; color: var(--ink);
+    display: block; background: rgba(255,255,255,0.3);
+    transition: all 0.2s ease; position: relative;
+  }
+  .authority::before {
+    content: ''; position: absolute; inset: -1px;
+    border: 1px solid var(--seal); opacity: 0;
+    transition: opacity 0.2s ease; pointer-events: none;
+  }
+  .authority:hover { background: rgba(255,255,255,0.6); }
+  .authority:hover::before { opacity: 1; }
+  .authority .auth-system {
+    font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--seal);
+    font-weight: 600; margin-bottom: 6px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .authority .auth-system::after {
+    content: '↗'; margin-left: auto;
+    font-size: 13px; color: var(--ink-faded);
+  }
+  .authority .auth-id {
+    font-family: 'Fraunces', serif;
+    font-size: 19px; font-weight: 500; margin-bottom: 2px;
+  }
+  .authority .auth-label {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 12px; color: var(--ink-soft); margin-bottom: 6px;
+  }
+  .authority .auth-uri {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; color: var(--ink-faded);
+    word-break: break-all; line-height: 1.35;
+  }
+  .authority.no-link { cursor: default; }
+  .authority.no-link::before { display: none; }
+  .authority.no-link .auth-system::after { content: ''; }
+
+  /* ─── PROVENANCE ─── */
+  .provenance { position: relative; padding-left: 24px; }
+  .provenance::before {
+    content: ''; position: absolute;
+    left: 4px; top: 8px; bottom: 8px;
+    width: 1px; background: var(--rule);
+  }
+  .prov-event { position: relative; padding-bottom: 22px; }
+  .prov-event:last-child { padding-bottom: 0; }
+  .prov-event::before {
+    content: ''; position: absolute;
+    left: -24px; top: 6px;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--paper); border: 1.5px solid var(--seal);
+  }
+  .prov-event.gap::before {
+    border-style: dashed; border-color: var(--ink-faded);
+  }
+  .prov-event .prov-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--seal);
+    font-weight: 500; letter-spacing: 0.04em; margin-bottom: 2px;
+  }
+  .prov-event .prov-owner {
+    font-family: 'Fraunces', serif;
+    font-weight: 500; font-size: 16px; color: var(--ink); margin-bottom: 2px;
+  }
+  .prov-event .prov-detail {
+    font-size: 13px; color: var(--ink-soft); line-height: 1.4;
+  }
+  .prov-event .prov-source {
+    margin-top: 3px; font-size: 11px;
+    color: var(--ink-faded); font-style: italic;
+  }
+  .prov-empty {
+    font-family: 'Fraunces', serif;
+    font-style: italic; color: var(--ink-faded); font-size: 14px;
+  }
+
+  /* ─── ICONOGRAPHY ─── */
+  .iconography { display: flex; flex-direction: column; gap: 12px; }
+  .icon-code {
+    display: grid; grid-template-columns: 110px 1fr auto;
+    gap: 16px; align-items: baseline;
+    padding: 10px 14px;
+    border-left: 2px solid var(--seal);
+    background: rgba(255,255,255,0.3);
+  }
+  .icon-code .code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; color: var(--seal); font-weight: 500;
+  }
+  .icon-code .desc { font-family: 'Fraunces', serif; font-size: 15px; color: var(--ink); }
+  .icon-code .lookup {
+    font-size: 10px; color: var(--ink-faded);
+    letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none;
+  }
+  .icon-code .lookup:hover { color: var(--seal); }
+  .iconography-empty {
+    font-family: 'Fraunces', serif;
+    font-style: italic; color: var(--ink-faded); font-size: 14px;
+  }
+
+  /* ─── FOOTER ─── */
+  .footer {
+    padding: 24px 48px 32px;
+    background: var(--paper-deep);
+    border-top: 2px solid var(--ink);
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 24px; align-items: end;
+  }
+
+  /* ─── MACHINE-READABLE OUTPUTS ─── */
+  .machine-section {
+    padding: 32px 48px;
+    border-top: 1px solid var(--rule);
+    background: var(--paper-deep);
+  }
+  .machine-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 16px;
+  }
+  .machine-section-title {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+  }
+  .machine-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .machine-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    padding: 3px 10px;
+    border: 1px solid var(--seal);
+    border-radius: 2px;
+    color: var(--seal);
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .machine-link:hover { background: var(--seal); color: #fff; }
+
+  .machine-panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .machine-panel {
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .machine-panel-full {
+    grid-column: 1 / -1;
+  }
+  .machine-panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px;
+    background: var(--ink);
+    color: #fff;
+  }
+  .machine-panel-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+  .machine-panel-badge {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+  details.machine-panel > summary { list-style: none; cursor: pointer; }
+  details.machine-panel > summary::-webkit-details-marker { display: none; }
+  details.machine-panel[open] .machine-panel-head::after { content: "▲"; font-size: 8px; opacity: 0.5; }
+  details.machine-panel:not([open]) .machine-panel-head::after { content: "▼"; font-size: 8px; opacity: 0.5; }
+  .machine-panel-body {
+    max-height: 380px;
+    overflow-y: auto;
+    padding: 14px;
+  }
+  .machine-panel-body pre {
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: var(--ink);
+  }
+  /* XML syntax colouring */
+  .xml-tag    { color: #9e2828; }
+  .xml-attr   { color: #0066aa; }
+  .xml-value  { color: #337733; }
+  .xml-text   { color: var(--ink); }
+  .xml-comment { color: var(--ink-faded); font-style: italic; }
+  /* JSON-LD colours */
+  .json-key   { color: #9e2828; }
+  .json-str   { color: #337733; }
+  .json-url   { color: #0066aa; text-decoration: underline; }
+  .footer-block .label {
+    font-size: 9px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--ink-faded);
+    font-weight: 500; margin-bottom: 4px;
+  }
+  .footer-block .value { font-family: 'Public Sans', sans-serif; font-size: 12px; color: var(--ink); }
+  .footer-block .value strong { font-weight: 600; }
+  .footer-meta { text-align: right; }
+  .footer-meta .pid {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--ink-soft); margin-top: 8px;
+  }
+  .footer-block .value a {
+    color: var(--seal); text-decoration: none;
+    border-bottom: 1px solid var(--seal-light);
+    transition: all 0.15s ease;
+  }
+  .footer-block .value a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 720px) {
+    body { padding: 16px 8px; font-size: 14px; }
+    .header, .meta-bar, .hero, .section, .footer { padding-left: 24px; padding-right: 24px; }
+    .topnav { font-size: 0.75rem; flex-wrap: wrap; gap: 4px; }
+    .header { flex-direction: column; gap: 16px; }
+    .seal { align-self: flex-end; width: 80px; height: 80px; }
+    .hero { grid-template-columns: 1fr; gap: 24px; }
+    .meta-bar { grid-template-columns: repeat(2, 1fr); }
+    .object-id { grid-template-columns: 1fr; }
+    .object-id-field { border-right: none !important; }
+    .authorities { grid-template-columns: 1fr; }
+    .footer { grid-template-columns: 1fr; }
+    .footer-meta { text-align: left; }
+    .tombstone .work-title { font-size: 32px; }
+    .header-mark .title { font-size: 26px; }
+    .icon-code { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 8px 4px; font-size: 13px; }
+    .header, .meta-bar, .hero, .section, .footer { padding-left: 16px; padding-right: 16px; }
+    .header::after { left: 16px; right: 16px; }
+    .meta-bar { grid-template-columns: 1fr 1fr; padding: 10px 16px; gap: 12px; }
+    .tombstone .work-title { font-size: 26px; }
+    .header-mark .title { font-size: 22px; }
+    .section-header { flex-wrap: wrap; gap: 6px; }
+    .authority { padding: 10px 12px; }
+    .tombstone-grid { grid-template-columns: 80px 1fr; }
+    .machine-panels { grid-template-columns: 1fr; }
+    .machine-section { padding-left: 16px; padding-right: 16px; }
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    body::before { display: none; }
+    .passport { box-shadow: none; border: none; max-width: none; }
+    .authority { break-inside: avoid; }
+    .prov-event { break-inside: avoid; }
+  }
+  .topnav {
+    max-width: 880px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.8rem;
+    color: var(--ink-faded);
+    position: relative;
+    z-index: 2;
+  }
+  .topnav-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px 7px 12px;
+    background: var(--ink);
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 3px;
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    transition: background 0.15s, transform 0.1s;
+    flex-shrink: 0;
+  }
+  .topnav-home:hover { background: var(--seal); transform: translateY(-1px); }
+  .topnav-home svg { opacity: 0.7; }
+  .topnav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--seal);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.15s;
+  }
+  .demo-banner {
+    max-width: 880px;
+    margin: 0 auto 16px;
+    padding: 9px 16px;
+    background: #fffbe6;
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 12px;
+    color: #7a5c00;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .demo-banner strong { font-weight: 600; }
+  @media print { .demo-banner { display: none; } }
+  .topnav a:hover { opacity: 0.75; }
+  .topnav-sep { color: var(--rule); }
+  @media print { .topnav { display: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@id": "https://arsaccordia.com/AP-2026-000076",
+  "@type": "VisualArtwork",
+  "artMedium": "Oil on canvas",
+  "artform": "Painting",
+  "creator": {
+    "@id": "https://arsaccordia.com/artists/ART-SKULME-1889",
+    "@type": "Person",
+    "birthDate": "1889",
+    "deathDate": "1967",
+    "name": "Oto Skulme",
+    "nationality": "Latvian",
+    "sameAs": [
+      "https://viaf.org/viaf/96577403",
+      "https://vocab.getty.edu/page/ulan/500121476",
+      "https://arsaccordia.com/artists/ART-SKULME-1889.html"
+    ]
+  },
+  "dateCreated": "1923",
+  "height": {
+    "@type": "QuantitativeValue",
+    "unitCode": "CMT",
+    "value": 138.0
+  },
+  "identifier": "AP-2026-000076",
+  "mainEntityOfPage": {
+    "@id": "https://arsaccordia.com/AP-2026-000076.html",
+    "@type": "WebPage",
+    "isPartOf": {
+      "@id": "https://arsaccordia.com"
+    }
+  },
+  "name": "Portreta kompoz\u012bcija",
+  "owner": {
+    "@type": "Organization",
+    "name": "Private collection"
+  },
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q140399954"
+  ],
+  "size": "138.0 \u00d7 103.0 cm",
+  "url": "https://arsaccordia.com/AP-2026-000076.html",
+  "width": {
+    "@type": "QuantitativeValue",
+    "unitCode": "CMT",
+    "value": 103.0
+  }
+}
+</script>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="topnav-home" href="index.html">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+      <path d="M6.5 1L1 5.5V12h4V8.5h3V12h4V5.5L6.5 1z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+    </svg>
+    Ars Accordia
+  </a>
+  <span class="topnav-sep">/</span>
+  <a href="artworks/">Artworks</a>
+  <span class="topnav-sep">/</span>
+  <span>AP-2026-000076</span>
+</nav>
+
+
+
+<article class="passport">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-mark">
+      <div class="issuer">International Cultural Object Record</div>
+      <h1 class="title">Artwork Passport</h1>
+      <div class="subtitle">Compliant with <a href="https://icom.museum/en/resources/standards-guidelines/objectid/" target="_blank" rel="noopener">Object ID</a> · <a href="https://www.getty.edu/research/publications/electronic_publications/cdwa/" target="_blank" rel="noopener">CDWA</a> · <a href="https://lido-schema.org/" target="_blank" rel="noopener">LIDO 1.1</a></div>
+      <p class="colophon">
+        A standards-based identity document for a work of art, linking authoritative
+        references in international vocabularies and registries. Issued for cultural
+        heritage protection, insurance, scholarly research, and museum exchange.
+      </p>
+    </div>
+    <div class="seal" aria-label="Issuing seal">
+      <div class="seal-text">Issued<br>under<br><a href="https://icom.museum/en/resources/standards-guidelines/objectid/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Object ID</a></div>
+      <div class="seal-id">AP-2026-000076</div>
+      <div class="seal-year">MMXXVI</div>
+    </div>
+  </header>
+
+  <!-- META BAR -->
+  <dl class="meta-bar">
+    <div><dt>Passport ID</dt><dd>AP-2026-000076</dd></div>
+    
+    <div><dt>Issued</dt><dd>2026-07-02</dd></div>
+    <div><dt>Version</dt><dd>1.0</dd></div>
+    <div><dt>Visibility</dt><dd>Public — Indexed</dd></div>
+  </dl>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-image">
+      <span class="corner tl"></span>
+      <span class="corner tr"></span>
+      <span class="corner bl"></span>
+      <span class="corner br"></span>
+      
+      <div class="no-image">No image available</div>
+      
+    </div>
+    <div class="tombstone">
+      <div class="label">Identification</div>
+      <h2 class="work-title">Portreta kompozīcija</h2>
+      
+      <p class="work-artist">Oto Skulme</p>
+      <p class="work-artist-dates">Latvian, 1889 — 1967</p>
+      
+      <dl class="tombstone-grid">
+        
+        <dt>Date</dt><dd>1923</dd>
+        
+        
+        <dt>Medium</dt><dd>Oil on canvas</dd>
+        
+        
+        <dt>Dimensions</dt><dd>138.0 × 103.0 cm</dd>
+        
+        
+        
+      </dl>
+
+      
+      
+      
+      
+      <div class="completeness">
+        <div class="completeness-header">
+          <span class="completeness-title">Object ID Completeness</span>
+          <div class="completeness-score">
+            <span class="completeness-score-num">8</span>
+            <span class="completeness-score-denom">/9</span>
+          </div>
+          
+          <span class="completeness-tag partial">Partial</span>
+          
+        </div>
+        <div class="completeness-bar-wrap">
+          <div class="completeness-bar partial" style="width:89%"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OBJECT ID -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 01</span>
+      <h3 class="section-title">Object ID Record</h3>
+      <span class="section-rubric">Nine Categories · <a href="https://icom.museum/en/resources/standards-guidelines/objectid/" target="_blank" rel="noopener">ICOM Standard</a></span>
+    </div>
+    <div class="object-id">
+      <div class="object-id-field">
+        <div class="num">i</div>
+        <div class="label">Type of Object</div>
+        <div class="value">
+          Painting
+          
+        </div>
+      </div>
+      <div class="object-id-field">
+        <div class="num">ii</div>
+        <div class="label">Materials &amp; Techniques</div>
+        <div class="value">
+          Oil on canvas
+          
+        </div>
+      </div>
+      <div class="object-id-field">
+        <div class="num">iii</div>
+        <div class="label">Measurements</div>
+        <div class="value">138.0 × 103.0 cm</div>
+      </div>
+      <div class="object-id-field">
+        <div class="num">iv</div>
+        <div class="label">Inscriptions &amp; Markings</div>
+        <div class="value"></div>
+      </div>
+      <div class="object-id-field wide">
+        <div class="num">v</div>
+        <div class="label">Distinguishing Features</div>
+        <div class="value"></div>
+      </div>
+      <div class="object-id-field">
+        <div class="num">vi</div>
+        <div class="label">Title</div>
+        <div class="value">Portreta kompozīcija</div>
+      </div>
+      <div class="object-id-field missing">
+        <div class="num">vii</div>
+        <div class="label">Subject</div>
+        <div class="value">
+          Not recorded
+          
+        </div>
+      </div>
+      <div class="object-id-field">
+        <div class="num">viii</div>
+        <div class="label">Date or Period</div>
+        <div class="value">1923</div>
+      </div>
+      <div class="object-id-field">
+        <div class="num">ix</div>
+        <div class="label">Maker</div>
+        <div class="value">
+          
+          Oto Skulme (1889 — 1967)
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHORITIES -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 02</span>
+      <h3 class="section-title">International Authorities</h3>
+      <span class="section-rubric">Cross-Reference Endorsements</span>
+    </div>
+    <div class="authorities">
+
+      
+      <a class="authority" href="http://vocab.getty.edu/ulan/500121476" target="_blank" rel="noopener">
+        <div class="auth-system">Getty ULAN · Artist</div>
+        <div class="auth-id">500121476</div>
+        <div class="auth-label">Oto Skulme</div>
+        <div class="auth-uri">http://vocab.getty.edu/ulan/500121476</div>
+      </a>
+      
+
+      
+
+      
+      <a class="authority" href="https://www.wikidata.org/wiki/Q140399954" target="_blank" rel="noopener">
+        <div class="auth-system">Wikidata · Work</div>
+        <div class="auth-id">Q140399954</div>
+        <div class="auth-label">Portreta kompozīcija</div>
+        <div class="auth-uri">wikidata.org/wiki/Q140399954</div>
+      </a>
+      
+
+      
+      <a class="authority" href="https://www.wikidata.org/wiki/Q4422702" target="_blank" rel="noopener">
+        <div class="auth-system">Wikidata · Artist</div>
+        <div class="auth-id">Q4422702</div>
+        <div class="auth-label">Oto Skulme</div>
+        <div class="auth-uri">wikidata.org/wiki/Q4422702</div>
+      </a>
+      
+
+      
+      <a class="authority" href="https://viaf.org/viaf/96577403/" target="_blank" rel="noopener">
+        <div class="auth-system">VIAF · Artist Authority</div>
+        <div class="auth-id">96577403</div>
+        <div class="auth-label">Oto Skulme (cross-library)</div>
+        <div class="auth-uri">viaf.org/viaf/96577403</div>
+      </a>
+      
+
+      
+
+    </div>
+  </section>
+
+  <!-- ICONOGRAPHY -->
+  
+
+  <!-- PROVENANCE -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">§ 04</span>
+      <h3 class="section-title">Provenance</h3>
+      <span class="section-rubric">Documented Chain of Custody</span>
+    </div>
+    
+    <p class="prov-empty">Provenance not yet documented for this record.</p>
+    
+  </section>
+
+  
+
+  <!-- MACHINE-READABLE OUTPUTS -->
+  
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-block">
+      <div class="label">Issued By</div>
+      <div class="value">
+        <strong>Arsaccordia Cataloguing Services</strong><br>
+        wikidata_to_passports.py · Draft
+      </div>
+    </div>
+    <div class="footer-block footer-meta">
+      <div class="label">Authentication</div>
+      <div class="value">
+        Compliant with Object ID (ICOM), CDWA, and <a href="https://lido-schema.org/" target="_blank" rel="noopener">LIDO 1.1</a>.
+      </div>
+      <div class="pid">AP-2026-000076 · v1 · 2026-07-02</div>
+    </div>
+  </footer>
+
+</article>
+</body>
+</html>
