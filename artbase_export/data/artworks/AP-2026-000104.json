@@ -1,0 +1,66 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000104",
+  "version": 1,
+  "exported": "2026-07-02T07:52:19.199623+00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "title": "Kompozīcija",
+    "title_en": "Composition",
+    "title_lv": "Kompozīcija",
+    "object_type": "drawing",
+    "materials": "Coloured pencil on paper",
+    "dimensions_display": "24.1 × 32.2 cm",
+    "height_cm": 24.1,
+    "width_cm": 32.2,
+    "date_display": "1921",
+    "date_earliest": 1921,
+    "date_latest": 1921,
+    "maker_id": null,
+    "maker_display_name": "Kārlis Johansons",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "MOMus — Museum of Modern Art — Costakis Collection",
+    "collection_qid": "Q247518",
+    "inventory_number": null,
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "scope": "artwork_object",
+      "system": "Wikidata",
+      "id": "Q140400121",
+      "uri": "https://www.wikidata.org/wiki/Q140400121",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": null
+    },
+    "artbase_id": null,
+    "work_level": []
+  },
+  "rights": {
+    "public_domain": true,
+    "copyright_status": "public_domain",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": null,
+    "source": "Artist born before 1874 or work created before 1929 (Latvia)"
+  },
+  "media": [],
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "wikidata_to_passports.py",
+    "notes": "Auto-generated from Wikidata Q140400121",
+    "tasks": [],
+    "engagement_ids": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000201",
+  "version": 1,
+  "exported": "2026-07-02T07:52:24.462286+00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "title": "Tējnīcā",
+    "title_en": "In a Teahouse",
+    "title_lv": "Tējnīcā",
+    "object_type": "painting",
+    "materials": "Oil on canvas",
+    "dimensions_display": "118.0 × 100.0 cm",
+    "height_cm": 118.0,
+    "width_cm": 100.0,
+    "date_display": "c. 1929",
+    "date_earliest": 1929,
+    "date_latest": 1929,
+    "maker_id": null,
+    "maker_display_name": "Jānis Plase",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": "Q1370465",
+    "inventory_number": null,
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "scope": "artwork_object",
+      "system": "Wikidata",
+      "id": "Q140400175",
+      "uri": "https://www.wikidata.org/wiki/Q140400175",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": null
+    },
+    "artbase_id": null,
+    "work_level": []
+  },
+  "rights": {
+    "public_domain": true,
+    "copyright_status": "public_domain",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": null,
+    "source": "Artist born before 1874 or work created before 1929 (Latvia)"
+  },
+  "media": [],
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "wikidata_to_passports.py",
+    "notes": "Auto-generated from Wikidata Q140400175",
+    "tasks": [],
+    "engagement_ids": []
+  }
+}

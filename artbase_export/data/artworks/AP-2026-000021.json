@@ -1,0 +1,66 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000021",
+  "version": 1,
+  "exported": "2026-07-02T07:52:02.198786+00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "title": "Mountain near Metzinger",
+    "title_en": "Mountain near Metzinger",
+    "title_lv": null,
+    "object_type": "painting",
+    "materials": null,
+    "dimensions_display": "62.0 × 73.0 cm",
+    "height_cm": 62.0,
+    "width_cm": 73.0,
+    "date_display": "1925",
+    "date_earliest": 1925,
+    "date_latest": 1925,
+    "maker_id": "ART-VALTERS-1869",
+    "maker_display_name": "Jānis Valters",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": "Q1370465",
+    "inventory_number": "4F",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "scope": "artwork_object",
+      "system": "Wikidata",
+      "id": "Q28797823",
+      "uri": "https://www.wikidata.org/wiki/Q28797823",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": null
+    },
+    "artbase_id": null,
+    "work_level": []
+  },
+  "rights": {
+    "public_domain": true,
+    "copyright_status": "public_domain",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": null,
+    "source": "Artist born before 1874 or work created before 1929 (Latvia)"
+  },
+  "media": [],
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "wikidata_to_passports.py",
+    "notes": "Auto-generated from Wikidata Q28797823",
+    "tasks": [],
+    "engagement_ids": []
+  }
+}

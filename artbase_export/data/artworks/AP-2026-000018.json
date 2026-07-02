@@ -1,0 +1,66 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000018",
+  "version": 1,
+  "exported": "2026-07-02T07:52:02.197194+00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "title": "Ziema",
+    "title_en": "Winter",
+    "title_lv": "Ziema",
+    "object_type": "painting",
+    "materials": "Oil on cardboard",
+    "dimensions_display": "72.0 × 101.3 cm",
+    "height_cm": 72.0,
+    "width_cm": 101.3,
+    "date_display": "1910",
+    "date_earliest": 1910,
+    "date_latest": 1910,
+    "maker_id": "ART-PURVITIS-1872",
+    "maker_display_name": "Vilhelms Purvītis",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": "Q1370465",
+    "inventory_number": "VMM GL-1568",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "scope": "artwork_object",
+      "system": "Wikidata",
+      "id": "Q22056352",
+      "uri": "https://www.wikidata.org/wiki/Q22056352",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": null
+    },
+    "artbase_id": null,
+    "work_level": []
+  },
+  "rights": {
+    "public_domain": true,
+    "copyright_status": "public_domain",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": null,
+    "source": "Artist born before 1874 or work created before 1929 (Latvia)"
+  },
+  "media": [],
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "wikidata_to_passports.py",
+    "notes": "Auto-generated from Wikidata Q22056352",
+    "tasks": [],
+    "engagement_ids": []
+  }
+}

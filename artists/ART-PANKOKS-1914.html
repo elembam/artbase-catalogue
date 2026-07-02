@@ -299,6 +299,53 @@
     font-style: italic;
   }
 
+  /* ── Collection appearances ─── */
+  .collection-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .collection-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.15s;
+  }
+  .collection-row:hover { border-color: var(--seal-light); }
+
+  .collection-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--seal);
+    flex-shrink: 0;
+    width: 56px;
+  }
+
+  .collection-name {
+    font-weight: 500;
+    flex: 1;
+  }
+
+  .collection-display-name {
+    color: var(--ink-faded);
+    font-size: 0.8125rem;
+    font-style: italic;
+    flex-shrink: 0;
+  }
+
+  .collection-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8125rem;
+    color: var(--ink-faded);
+    flex-shrink: 0;
+    text-align: right;
+  }
+
   /* ── Footer ─── */
   .footer {
     padding: 20px 48px;
@@ -521,6 +568,10 @@
   <!-- ULAN Enrichment -->
   
 
+  <!-- Collection Appearances -->
+  
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -532,7 +583,7 @@
   <!-- Footer -->
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-PANKOKS-1914</span>
-    <span>Exported 2026-06-14</span>
+    <span>Exported 2026-07-02</span>
   </footer>
 
 </div>

@@ -23,7 +23,7 @@ from jinja2 import Environment, FileSystemLoader
 REPO_ROOT   = Path(__file__).resolve().parent.parent
 ARTISTS_DIR = REPO_ROOT / "artbase_export" / "data" / "artists"
 ARTWORKS_DIR= REPO_ROOT / "artbase_export" / "data" / "artworks"
-OUT_DIR     = REPO_ROOT / "passports" / "artists"
+OUT_DIR     = REPO_ROOT / "artists"
 TMPL_DIR    = REPO_ROOT / "templates"
 
 
@@ -136,9 +136,9 @@ def render_artist(artist: dict, artworks: list[dict], env: Environment) -> str:
     for aw in artworks:
         oid = aw.get("object_id") or {}
         aw_list.append({
-            "passport_id": aw.get("passport_id", ""),
-            "title": oid.get("title", "Untitled"),
-            "date": oid.get("creation_date", {}).get("display", "") if isinstance(oid.get("creation_date"), dict) else oid.get("creation_date", ""),
+            "passport_id": aw.get("artbase_id", ""),
+            "title": oid.get("title") or "Untitled",
+            "date": oid.get("date_display") or "",
         })
 
     # Source ledger — build display-ready data

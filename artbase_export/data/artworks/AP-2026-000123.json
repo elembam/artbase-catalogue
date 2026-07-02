@@ -1,0 +1,66 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000123",
+  "version": 1,
+  "exported": "2026-07-02T07:52:20.515978+00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "title": "Still Life with Chess",
+    "title_en": "Still Life with Chess",
+    "title_lv": null,
+    "object_type": "painting",
+    "materials": null,
+    "dimensions_display": "90.5 × 70.0 cm",
+    "height_cm": 90.5,
+    "width_cm": 70.0,
+    "date_display": "1927",
+    "date_earliest": 1927,
+    "date_latest": 1927,
+    "maker_id": "ART-SUTA-1896",
+    "maker_display_name": "Romans Suta",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": "Q1370465",
+    "inventory_number": null,
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "scope": "artwork_object",
+      "system": "Wikidata",
+      "id": "Q63434772",
+      "uri": "https://www.wikidata.org/wiki/Q63434772",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": null
+    },
+    "artbase_id": null,
+    "work_level": []
+  },
+  "rights": {
+    "public_domain": true,
+    "copyright_status": "public_domain",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": null,
+    "source": "Artist born before 1874 or work created before 1929 (Latvia)"
+  },
+  "media": [],
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "wikidata_to_passports.py",
+    "notes": "Auto-generated from Wikidata Q63434772",
+    "tasks": [],
+    "engagement_ids": []
+  }
+}

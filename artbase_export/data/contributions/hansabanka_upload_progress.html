@@ -37,7 +37,7 @@
 <h1>Hansabanka Contemporary Art Collection — Wikidata Upload Progress</h1>
 <p class="meta">
   Source: <span class="qid">Q139986317</span> — Hansabanka Contemporary Art Collection catalogue, 2007<br>
-  Last updated: 2026-06-29 &nbsp;|&nbsp; Prepared by ArsAccordia
+  Last updated: 2026-07-02 (2) &nbsp;|&nbsp; Prepared by ArsAccordia
 </p>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
@@ -105,13 +105,25 @@
   </tr>
 </table>
 
-<h3>Other pending QS tasks</h3>
+<h3>P973 backlink batches</h3>
+<p class="note">These add "described at URL" (P973) links from each artist's Wikidata item to their ArsAccordia profile page.</p>
 <ul class="tasklist">
-  <li><strong>hans_p973_batch_08_20260624.qs</strong> — 6 P973 backlink lines for batch 08. Still pending.</li>
-  <li><strong>Latvian labels block</strong> — prepared, not yet submitted.</li>
+  <li><span class="badge b-done">SUBMITTED</span> <strong>hans_p973_batch_08_20260624.qs</strong> — 6 ops · Vilumainis, Poikāns, Lapiņa, Putrāms, Lielā, Subačs · 2026-07-02</li>
+  <li><span class="badge b-done">SUBMITTED</span> <strong>smk_wd_KMS4185_20260626.qs</strong> — SMK adapter task (KMS4185) · 2026-07-02</li>
+  <li><span class="badge b-blocked">DEFERRED</span> <strong>p973_batch_09_20260624.qs</strong> — 45 ops · ART-ABOLS-1922 → ART-GLAUDANS-1915</li>
+  <li><span class="badge b-blocked">DEFERRED</span> <strong>p973_batch_10_20260624.qs</strong> — 45 ops · ART-GRASMANIS-1916 → ART-OZOLS-1929</li>
+  <li><span class="badge b-blocked">DEFERRED</span> <strong>p973_batch_11_20260624.qs</strong> — 46 ops · ART-PAULUKA-1925 → ART-ZVIRBULIS-1944</li>
+</ul>
+
+<h3>Other pending tasks</h3>
+<ul class="tasklist">
+  <li><strong>Artist QIDs → verify Eglītis + Žegners</strong> — check physical catalogue against photographer descriptions on Wikidata before using.</li>
+  <li><strong>16 NOT FOUND artists</strong> — new Wikidata items needed before their works can be submitted.</li>
+  <li><strong>Batch 05 build</strong> — pull catalogue rows from swedbank.html for the 49 confirmed artists; write QS file.</li>
   <li><strong>Batch 03 QIDs → JSON</strong> — retrieve from Wikidata contribution history → write to HANS/013–018 JSON files.</li>
   <li><strong>Batch 01 W1 + Batch 02 W1 QIDs → JSON</strong> — write to HANS/001 and HANS/007.</li>
   <li><strong>Rerun build_collection_score.py COL-HANSABANKA</strong> — after QID backfill.</li>
+  <li><strong>DO NOT submit: bruno_aide_P20_draft.qs</strong> — P20 value is a string, not a QID. Needs correction first.</li>
 </ul>
 
 
@@ -119,10 +131,10 @@
 <h2>2. Artists — Wikidata QID Lookup</h2>
 <p class="section-summary">
   Lookup run 2026-06-29 via SPARQL + wbsearchentities. Sorted A–Z by surname.
-  <strong>47 confirmed</strong> &nbsp;|&nbsp;
-  <strong>2 merge needed</strong> (Celmiņa, Maurīte) &nbsp;|&nbsp;
+  <strong>49 confirmed</strong> &nbsp;|&nbsp;
   <strong>2 verify</strong> (Eglītis, Žegners — photographer?) &nbsp;|&nbsp;
-  <strong>16 not found</strong> (need new Wikidata items)
+  <strong>16 not found</strong> (need new Wikidata items)<br>
+  <em>Merges completed 2026-07-02: Celmiņa (Q12656807 ← Q99480545) · Maurīte (Q139029411 ← Q99477509)</em>
 </p>
 
 <table>
@@ -136,7 +148,7 @@
   <tr class="done"><td>Harijs Brants</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q139066552">Q139066552</a></td><td>artist, b.1970</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
   <tr class="done"><td>Inga Brūvere</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99480313">Q99480313</a></td><td>visual artist, b.1963</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
   <tr class="done"><td>Valdis Bušs</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99480739">Q99480739</a></td><td>visual artist, b.1924</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
-  <tr class="pending"><td>Inta Celmiņa</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q12656807">Q12656807</a></td><td>Latvian painter, b.1946</td><td><span class="badge b-merge">MERGE NEEDED</span></td><td>Duplicate: Q99480545. Run <code>MERGE Q12656807 Q99480545</code> in QS. Use Q12656807 after.</td></tr>
+  <tr class="done"><td>Inta Celmiņa</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q12656807">Q12656807</a></td><td>Latvian painter, b.1946</td><td><span class="badge b-done">CONFIRMED</span></td><td>Merged Q99480545 → Q12656807 on 2026-07-02</td></tr>
   <tr class="done"><td>Daina Dagnija</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q94381077">Q94381077</a></td><td>painter, textile artist (1937–2019)</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
   <tr class="needcreate"><td>Uno Dašiļevskis</td><td>—</td><td>—</td><td><span class="badge b-needcreate">NOT FOUND</span></td><td></td></tr>
   <tr class="done"><td>Aleksandrs Dembo</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99478532">Q99478532</a></td><td>visual artist, b.1931</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
@@ -169,7 +181,7 @@
   <tr class="done"><td>Dace Lielā</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99477354">Q99477354</a></td><td>visual artist, b.1957</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
   <tr class="done"><td>Ilze Libiete</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q59548595">Q59548595</a></td><td>heraldist and graphic artist</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
   <tr class="done"><td>Irēna Lūse</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99482966">Q99482966</a></td><td>visual artist, b.1948</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
-  <tr class="pending"><td>Ieva Maurīte</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q139029411">Q139029411</a></td><td>artist, b.1971</td><td><span class="badge b-merge">MERGE NEEDED</span></td><td>Duplicate: Q99477509 (same DOB, same gender). Run <code>MERGE Q139029411 Q99477509</code>. Use Q139029411 after.</td></tr>
+  <tr class="done"><td>Ieva Maurīte</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q139029411">Q139029411</a></td><td>artist, b.1971</td><td><span class="badge b-done">CONFIRMED</span></td><td>Merged Q99477509 → Q139029411 on 2026-07-02</td></tr>
   <tr class="done"><td>Anita Meldere</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q16443738">Q16443738</a></td><td>Latvian painter, b.1949</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
   <tr class="done"><td>Ģirts Muižnieks</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q16451856">Q16451856</a></td><td>painter, b.1956</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>
   <tr class="done"><td>Ilze Neilande</td><td><a class="qid" href="https://www.wikidata.org/wiki/Q99479313">Q99479313</a></td><td>Latvian artist, b.1959</td><td><span class="badge b-done">CONFIRMED</span></td><td></td></tr>

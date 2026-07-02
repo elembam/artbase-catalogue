@@ -1,0 +1,66 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000061",
+  "version": 1,
+  "exported": "2026-07-02T07:52:17.836521+00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "title": "Karavīri bēdājās... (Ievainotie latviešu strēlnieki)",
+    "title_en": "Soldiers Grieved... (Wounded Latvian Riflemen)",
+    "title_lv": "Karavīri bēdājās... (Ievainotie latviešu strēlnieki)",
+    "object_type": "painting",
+    "materials": "Tempera on cardboard",
+    "dimensions_display": "54.5 × 67.0 cm",
+    "height_cm": 54.5,
+    "width_cm": 67.0,
+    "date_display": "c. 1917",
+    "date_earliest": 1917,
+    "date_latest": 1917,
+    "maker_id": "ART-GROSVALDS-1891",
+    "maker_display_name": "Jāzeps Grosvalds",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": "Q1370465",
+    "inventory_number": null,
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "scope": "artwork_object",
+      "system": "Wikidata",
+      "id": "Q140399534",
+      "uri": "https://www.wikidata.org/wiki/Q140399534",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": null
+    },
+    "artbase_id": null,
+    "work_level": []
+  },
+  "rights": {
+    "public_domain": true,
+    "copyright_status": "public_domain",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": null,
+    "source": "Artist born before 1874 or work created before 1929 (Latvia)"
+  },
+  "media": [],
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "wikidata_to_passports.py",
+    "notes": "Auto-generated from Wikidata Q140399534",
+    "tasks": [],
+    "engagement_ids": []
+  }
+}

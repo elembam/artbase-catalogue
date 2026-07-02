@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Artwork Passport — {{ artwork.object_id.title }} by {{ artist.identity.preferred_name }}. Standards-compliant international cultural object record.">
+<meta name="description" content="Artwork Passport — {{ artwork.object_id.title }} by {{ artist.identity.preferred_name if artist else artwork.object_id.maker_display_name }}. Standards-compliant international cultural object record.">
 <title>Artwork Passport — {{ artwork.object_id.title }}</title>
 <link rel="canonical" href="https://arsaccordia.com/{{ artwork.artbase_id }}.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -798,7 +798,7 @@
       <span class="corner bl"></span>
       <span class="corner br"></span>
       {% if image_src %}
-      <img src="{{ image_src }}" alt="{{ artwork.object_id.title }}, {{ artist.identity.preferred_name }}">
+      <img src="{{ image_src }}" alt="{{ artwork.object_id.title }}{% if artist %}, {{ artist.identity.preferred_name }}{% endif %}">
       {% else %}
       <div class="no-image">No image available</div>
       {% endif %}

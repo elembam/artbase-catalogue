@@ -1,0 +1,66 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000188",
+  "version": 1,
+  "exported": "2026-07-02T07:52:21.888658+00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "title": "Kapri",
+    "title_en": "Capri",
+    "title_lv": "Kapri",
+    "object_type": "painting",
+    "materials": "Oil on canvas",
+    "dimensions_display": "34.0 × 32.0 cm",
+    "height_cm": 34.0,
+    "width_cm": 32.0,
+    "date_display": "1924",
+    "date_earliest": 1924,
+    "date_latest": 1924,
+    "maker_id": "ART-STRUNKE-1894",
+    "maker_display_name": "Niklāvs Strunke",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": null,
+    "collection_qid": null,
+    "inventory_number": null,
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "scope": "artwork_object",
+      "system": "Wikidata",
+      "id": "Q140400012",
+      "uri": "https://www.wikidata.org/wiki/Q140400012",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": null
+    },
+    "artbase_id": null,
+    "work_level": []
+  },
+  "rights": {
+    "public_domain": true,
+    "copyright_status": "public_domain",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": null,
+    "source": "Artist born before 1874 or work created before 1929 (Latvia)"
+  },
+  "media": [],
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "wikidata_to_passports.py",
+    "notes": "Auto-generated from Wikidata Q140400012",
+    "tasks": [],
+    "engagement_ids": []
+  }
+}

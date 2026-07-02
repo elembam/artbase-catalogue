@@ -1,0 +1,66 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000088",
+  "version": 1,
+  "exported": "2026-07-02T07:52:17.872053+00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "title": "Dzērāji",
+    "title_en": "The Drinkers",
+    "title_lv": "Dzērāji",
+    "object_type": "painting",
+    "materials": "Oil on canvas",
+    "dimensions_display": "75.0 × 63.5 cm",
+    "height_cm": 75.0,
+    "width_cm": 63.5,
+    "date_display": "1920",
+    "date_earliest": 1920,
+    "date_latest": 1920,
+    "maker_id": "ART-LIEPINS-1894",
+    "maker_display_name": "Jānis Liepiņš",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": "Q1370465",
+    "inventory_number": null,
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "scope": "artwork_object",
+      "system": "Wikidata",
+      "id": "Q140400025",
+      "uri": "https://www.wikidata.org/wiki/Q140400025",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": null
+    },
+    "artbase_id": null,
+    "work_level": []
+  },
+  "rights": {
+    "public_domain": true,
+    "copyright_status": "public_domain",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": null,
+    "source": "Artist born before 1874 or work created before 1929 (Latvia)"
+  },
+  "media": [],
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "wikidata_to_passports.py",
+    "notes": "Auto-generated from Wikidata Q140400025",
+    "tasks": [],
+    "engagement_ids": []
+  }
+}

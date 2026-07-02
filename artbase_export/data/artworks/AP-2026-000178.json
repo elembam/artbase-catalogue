@@ -1,0 +1,66 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000178",
+  "version": 1,
+  "exported": "2026-07-02T07:52:21.876086+00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "title": "Ainava ar ģindeņiem",
+    "title_en": "Landscape with Fir Trees",
+    "title_lv": "Ainava ar ģindeņiem",
+    "object_type": "painting",
+    "materials": "Oil on canvas",
+    "dimensions_display": "135.0 × 88.5 cm",
+    "height_cm": 135.0,
+    "width_cm": 88.5,
+    "date_display": "1928",
+    "date_earliest": 1928,
+    "date_latest": 1928,
+    "maker_id": "ART-SKULME-1895",
+    "maker_display_name": "Uga Skulme",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": null,
+    "collection_qid": null,
+    "inventory_number": null,
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "scope": "artwork_object",
+      "system": "Wikidata",
+      "id": "Q140399974",
+      "uri": "https://www.wikidata.org/wiki/Q140399974",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": null
+    },
+    "artbase_id": null,
+    "work_level": []
+  },
+  "rights": {
+    "public_domain": true,
+    "copyright_status": "public_domain",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": null,
+    "source": "Artist born before 1874 or work created before 1929 (Latvia)"
+  },
+  "media": [],
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "wikidata_to_passports.py",
+    "notes": "Auto-generated from Wikidata Q140399974",
+    "tasks": [],
+    "engagement_ids": []
+  }
+}

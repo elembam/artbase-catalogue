@@ -1,0 +1,66 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000010",
+  "version": 1,
+  "exported": "2026-07-02T07:44:42.448887+00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "title": "G. L. kundzes portrets",
+    "title_en": "Portrait of Mrs G. L.",
+    "title_lv": "G. L. kundzes portrets",
+    "object_type": "painting",
+    "materials": "Oil on canvas",
+    "dimensions_display": "53.0 × 38.0 cm",
+    "height_cm": 53.0,
+    "width_cm": 38.0,
+    "date_display": "1923",
+    "date_earliest": 1923,
+    "date_latest": 1923,
+    "maker_id": "ART-TONE-1892",
+    "maker_display_name": "Valdemārs Tone",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Latvian National Museum of Art",
+    "collection_qid": "Q1370465",
+    "inventory_number": null,
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "scope": "artwork_object",
+      "system": "Wikidata",
+      "id": "Q140399722",
+      "uri": "https://www.wikidata.org/wiki/Q140399722",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": null
+    },
+    "artbase_id": null,
+    "work_level": []
+  },
+  "rights": {
+    "public_domain": true,
+    "copyright_status": "public_domain",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": null,
+    "source": "Artist born before 1874 or work created before 1929 (Latvia)"
+  },
+  "media": [],
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "wikidata_to_passports.py",
+    "notes": "Auto-generated from Wikidata Q140399722",
+    "tasks": [],
+    "engagement_ids": []
+  }
+}

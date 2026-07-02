@@ -1,0 +1,66 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000035",
+  "version": 1,
+  "exported": "2026-07-02T07:52:07.420122+00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "title": "The Female Worker in England",
+    "title_en": "The Female Worker in England",
+    "title_lv": null,
+    "object_type": "drawing",
+    "materials": "Gouache, graphite",
+    "dimensions_display": "21.27 × 28.1 cm",
+    "height_cm": 21.27,
+    "width_cm": 28.1,
+    "date_display": "1929",
+    "date_earliest": 1929,
+    "date_latest": 1929,
+    "maker_id": "ART-KLUCIS-1895",
+    "maker_display_name": "Gustavs Klucis",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Nacionālā mākslas galerija",
+    "collection_qid": "Q214867",
+    "inventory_number": "2005.92.2",
+    "location_notes": null
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "scope": "artwork_object",
+      "system": "Wikidata",
+      "id": "Q64572792",
+      "uri": "https://www.wikidata.org/wiki/Q64572792",
+      "status": "confirmed",
+      "verified_date": "2026-07-02",
+      "notes": null
+    },
+    "artbase_id": null,
+    "work_level": []
+  },
+  "rights": {
+    "public_domain": true,
+    "copyright_status": "public_domain",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": null,
+    "source": "Artist born before 1874 or work created before 1929 (Latvia)"
+  },
+  "media": [],
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": "wikidata_to_passports.py",
+    "notes": "Auto-generated from Wikidata Q64572792",
+    "tasks": [],
+    "engagement_ids": []
+  }
+}

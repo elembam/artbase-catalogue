@@ -532,7 +532,7 @@
     {% if artworks %}
     <div class="artworks-list">
       {% for aw in artworks %}
-      <a class="artwork-row" href="{{ aw.passport_id }}.html">
+      <a class="artwork-row" href="/{{ aw.passport_id }}.html">
         <span class="artwork-passport-id">{{ aw.passport_id }}</span>
         <span class="artwork-title">{{ aw.title }}</span>
         <span class="artwork-date">{{ aw.date or '' }}</span>
