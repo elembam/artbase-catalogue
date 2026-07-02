@@ -5,31 +5,6 @@
   <ListRecords>
     <record>
       <header>
-        <identifier>https://arsaccordia.com/AP-2026-000001</identifier>
-        <datestamp>2026-05-29</datestamp>
-        <setSpec>artworks</setSpec>
-      </header>
-      <metadata>
-        <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-          <dc:identifier>https://arsaccordia.com/AP-2026-000001</dc:identifier>
-          <dc:title>Mona Lisa</dc:title>
-          <dc:creator>Leonardo da Vinci</dc:creator>
-          <dc:type>Painting</dc:type>
-          <dc:description>Half-length portrait of a seated woman with a mountainous landscape background</dc:description>
-          <dc:date>c. 1503–1519</dc:date>
-          <dc:format>Oil on poplar panel</dc:format>
-          <dc:source>Musée du Louvre</dc:source>
-          <dc:coverage>Denon Wing, Room 711 (Salle des États), Musée du Louvre, Paris</dc:coverage>
-          <dc:rights>Public Domain / Ars Accordia Catalogue Record</dc:rights>
-          <dc:language>en</dc:language>
-          <dc:subject>ICONCLASS:61BB2(Lisa del Giocondo)11 historical woman (Lisa del Giocondo) portrayed alone</dc:subject>
-          <dc:subject>ICONCLASS:25H11 mountains</dc:subject>
-          <dc:subject>ICONCLASS:31D15 adult woman</dc:subject>
-        </oai_dc:dc>
-      </metadata>
-    </record>
-    <record>
-      <header>
         <identifier>https://arsaccordia.com/AP-2026-000002</identifier>
         <datestamp>2026-05-29</datestamp>
         <setSpec>artworks</setSpec>

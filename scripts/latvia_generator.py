@@ -30,7 +30,8 @@ def load_artists() -> list[dict]:
     for f in sorted(ARTISTS_DIR.glob("*.json")):
         try:
             a = json.load(open(f, encoding="utf-8"))
-            if a.get("artbase_id") != "UNKNOWN":
+            nat = (a.get("descriptors") or {}).get("nationality", "")
+            if a.get("artbase_id") != "UNKNOWN" and nat in ("Latvian", ""):
                 artists.append(a)
         except Exception:
             pass
