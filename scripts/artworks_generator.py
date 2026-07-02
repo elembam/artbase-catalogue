@@ -327,7 +327,6 @@ def generate(artworks: list[dict], generated_at: str) -> str:
     <span class="nav-name">Ars Accordia</span>
   </a>
   <div class="nav-links">
-    <a href="../catalogue/" class="nav-link">Catalogue</a>
     <a href="../artworks/" class="nav-link active">Artworks</a>
     <a href="../collections/" class="nav-link">Collections</a>
     <a href="../artists/" class="nav-link">Artists</a>

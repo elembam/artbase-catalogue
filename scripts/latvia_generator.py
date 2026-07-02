@@ -368,7 +368,6 @@ def generate(artists: list[dict], artworks_by_maker: dict[str, list[dict]], now:
     <span class="nav-name">Ars Accordia</span>
   </a>
   <div class="nav-links">
-    <a href="/catalogue/" class="nav-link">Catalogue</a>
     <a href="/artworks/" class="nav-link">Artworks</a>
     <a href="/artists/" class="nav-link active">Artists</a>
     <a href="/about/" class="nav-link">About</a>
