@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Works from the Hansabanka Contemporary Art Collection (now Swedbank Latvia), documented by Ars Accordia. Ars Accordia Score 1800 · 18 works catalogued · avg standard 100.0 · Complete Record.">
+<title>Hansabanka Contemporary Art Collection — Ars Accordia</title>
+<link rel="canonical" href="https://arsaccordia.com/collections/hansabanka/">
+<meta property="og:title"       content="Hansabanka Contemporary Art Collection — Ars Accordia">
+<meta property="og:description" content="18 works from the Hansabanka Contemporary Art Collection, documented by Ars Accordia.">
+<meta property="og:url"         content="https://arsaccordia.com/collections/hansabanka/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght,SOFT,WONK@9..144,0..1,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+  :root {
+    --paper:      #f6f1e6;
+    --paper-deep: #ebe3d1;
+    --ink:        #1c1814;
+    --ink-soft:   #4a4338;
+    --ink-faded:  #80766a;
+    --seal:       #6e1818;
+    --gold:       #8a6f2e;
+    --rule:       #c7bca5;
+    --grid:       rgba(110, 24, 24, 0.04);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.5; z-index: 1; mix-blend-mode: multiply;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+
+  .site-nav { border-bottom: 1px solid var(--rule); position: relative; z-index: 2; background: var(--paper); }
+  .site-nav .wrap { display: flex; align-items: center; gap: 32px; padding-top: 20px; padding-bottom: 16px; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+  .nav-logo-mark { width: 28px; height: 28px; background: var(--seal); border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+  .nav-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 24px; margin-left: auto; }
+  .nav-link { font-size: 0.875rem; color: var(--ink-soft); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+  .nav-link:hover { color: var(--seal); }
+  .nav-link.active { color: var(--seal); border-bottom-color: var(--seal); }
+
+  .page-header { padding: 52px 0 40px; border-bottom: 2px solid var(--seal); margin-bottom: 52px; }
+  .page-eyebrow { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--seal); font-weight: 600; margin-bottom: 10px; }
+  .page-title { font-family: 'Fraunces', Georgia, serif; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; color: var(--ink); letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 12px; font-style: italic; }
+  .page-subtitle { font-size: 1rem; color: var(--ink-soft); max-width: 620px; line-height: 1.7; margin-bottom: 28px; }
+  .stats-row { display: flex; gap: 40px; flex-wrap: wrap; }
+  .stat { display: flex; flex-direction: column; gap: 2px; }
+  .stat-value { font-family: 'JetBrains Mono', monospace; font-size: 1.8rem; font-weight: 500; color: var(--seal); line-height: 1; }
+  .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-faded); }
+
+  .section { margin-bottom: 60px; }
+  .section-header { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid var(--rule); padding-bottom: 12px; margin-bottom: 24px; }
+  .section-title { font-family: 'Fraunces', Georgia, serif; font-size: 1.2rem; font-weight: 600; color: var(--ink); }
+  .section-count { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--ink-faded); }
+
+  .artist-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+  .artist-card { background: white; border: 1px solid var(--rule); border-radius: 4px; padding: 18px 20px; transition: border-color 0.15s; }
+  .artist-card:hover { border-color: var(--seal); }
+  .artist-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+  .artist-name { font-family: 'Fraunces', Georgia, serif; font-size: 0.95rem; font-weight: 600; color: var(--ink); }
+  .artist-lifespan { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--ink-faded); margin-top: 2px; }
+  .artist-count { font-family: 'JetBrains Mono', monospace; font-size: 1.3rem; font-weight: 500; color: var(--seal); line-height: 1; flex-shrink: 0; }
+  .artist-types { font-size: 0.78rem; color: var(--ink-soft); margin-top: 8px; }
+  .artist-badges { display: flex; gap: 5px; margin-top: 10px; flex-wrap: wrap; }
+  .badge { font-size: 0.62rem; font-weight: 600; padding: 2px 7px; border: 1px solid var(--rule); border-radius: 2px; font-family: 'JetBrains Mono', monospace; white-space: nowrap; }
+  .badge-confirmed { border-color: #5a8a3a; color: #5a8a3a; }
+  .badge-needed { border-color: var(--gold); color: var(--gold); }
+  .badge-missing { border-color: var(--ink-faded); color: var(--ink-faded); }
+  .badge-qid { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--ink-faded); margin-left: 2px; }
+
+  .site-footer { margin-top: 64px; padding: 24px 0 40px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-text { font-size: 0.75rem; color: var(--ink-faded); }
+  .footer-link { color: var(--seal); text-decoration: none; }
+  .footer-link:hover { text-decoration: underline; }
+
+  @media (max-width: 640px) {
+    .nav-links { gap: 12px; flex-wrap: wrap; }
+    .nav-link { font-size: 0.78rem; }
+    .artist-grid { grid-template-columns: 1fr; }
+    .stats-row { gap: 20px; }
+  }
+  @media print { .site-nav { display: none; } }
+
+  .aa-score-panel { margin: 28px 0 0; padding: 20px 24px; background: white; border: 1px solid var(--rule); border-left: 3px solid var(--seal); border-radius: 2px; }
+  .aa-score-headline { display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; margin-bottom: 14px; }
+  .aa-score-number { font-family: 'Fraunces', Georgia, serif; font-size: 3rem; font-weight: 500; color: var(--seal); line-height: 1; letter-spacing: -0.02em; }
+  .aa-score-meta { display: flex; flex-direction: column; gap: 3px; }
+  .aa-score-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-faded); font-weight: 600; }
+  .aa-score-standard { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--ink); }
+  .aa-score-gaps { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 14px; border-top: 1px solid var(--rule); padding-top: 12px; }
+  .aa-score-gap { display: flex; flex-direction: column; gap: 2px; }
+  .aa-score-gap-val { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 500; color: var(--ink); }
+  .aa-score-gap-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faded); }
+  .aa-score-note { font-size: 0.72rem; color: var(--ink-faded); font-style: italic; margin-top: 12px; line-height: 1.6; }
+  .aa-method-link { color: var(--seal); text-decoration: none; }
+  .aa-method-link:hover { text-decoration: underline; }
+
+  .badge-amber { border-color: #b87c15; color: #b87c15; background: #fff9ed; }
+
+  .passport-list { display: grid; gap: 8px; }
+  .passport-row { background: white; border: 1px solid var(--rule); border-radius: 3px; padding: 14px 16px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; transition: border-color 0.15s, box-shadow 0.15s; text-decoration: none; color: inherit; cursor: pointer; }
+  .passport-row:hover { border-color: var(--seal); box-shadow: 0 2px 8px -2px rgba(110,24,24,0.12); }
+  .passport-title { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 0.95rem; color: var(--ink); flex: 1; min-width: 200px; }
+  .passport-artist { font-size: 0.8rem; color: var(--ink-soft); min-width: 160px; }
+  .passport-date { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--ink-faded); min-width: 56px; }
+  .passport-score { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 500; color: var(--seal); min-width: 40px; text-align: right; }
+  .passport-inv { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--ink-faded); }
+
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+  <a href="../../" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <rect x="3" y="3" width="6" height="6" fill="white" opacity="0.9"/>
+        <rect x="11" y="3" width="6" height="6" fill="white" opacity="0.5"/>
+        <rect x="3" y="11" width="6" height="6" fill="white" opacity="0.5"/>
+        <rect x="11" y="11" width="6" height="6" fill="white" opacity="0.75"/>
+      </svg>
+    </div>
+    <span class="nav-name">Ars Accordia</span>
+  </a>
+  <div class="nav-links">
+    <a href="../../artworks/" class="nav-link">Artworks</a>
+    <a href="../../collections/" class="nav-link active">Collections</a>
+    <a href="../../artists/" class="nav-link">Artists</a>
+    <a href="../../about/" class="nav-link">About</a>
+    <a href="../../contributions/" class="nav-link">Contributions</a>
+    <a href="../../sitemap/" class="nav-link">Index</a>
+  </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="page-header">
+    <p class="page-eyebrow">Swedbank Latvia (formerly AS Hansabanka) · Works documented by Ars Accordia</p>
+    <h1 class="page-title">Hansabanka Contemporary Art Collection</h1>
+    <p class="page-subtitle">
+      Ars Accordia's public-registry catalogue of works from the Hansabanka Contemporary Art
+      Collection — 386 works by 108 Latvian artists assembled between 1998 and 2007, now held
+      by Swedbank Latvia. This is Ars Accordia's own catalogue, built from the 2007 collection
+      publication and public authority cross-references — not a commissioned assessment by the
+      bank. Scores reflect what has been documented so far; no coverage percentage is claimed.
+      <a href="../../method/" class="aa-method-link">How the score is built →</a>
+    </p>
+
+    <div class="aa-score-panel">
+      <div class="aa-score-headline">
+        <div class="aa-score-number">1800</div>
+        <div class="aa-score-meta">
+          <span class="aa-score-label">Ars Accordia Score</span>
+          <span class="aa-score-standard">18 works documented · avg standard 100.0 · <strong>Complete Record</strong></span>
+        </div>
+      </div>
+      <div class="aa-score-gaps">
+        <div class="aa-score-gap"><span class="aa-score-gap-val">100%</span><span class="aa-score-gap-label">Identity</span></div>
+        <div class="aa-score-gap"><span class="aa-score-gap-val">100%</span><span class="aa-score-gap-label">Authority</span></div>
+        <div class="aa-score-gap"><span class="aa-score-gap-val">100%</span><span class="aa-score-gap-label">Provenance</span></div>
+        <div class="aa-score-gap"><span class="aa-score-gap-val">100%</span><span class="aa-score-gap-label">Structured</span></div>
+      </div>
+      <p class="aa-score-note">Score = sum of passport scores for the 18 documented works. Condition and image are not in scope for these passports (corporate-held works, not commissioned for physical assessment). 18 of 386 catalogue works documented so far (4.7% of the full inventory) — the remaining works are recorded in scope but not yet catalogued to passport standard. Weights-v3 · config: <a href="../../method/" class="aa-method-link">arsaccordia.com/method</a></p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat"><span class="stat-value">18</span><span class="stat-label">Passports</span></div>
+      <div class="stat"><span class="stat-value">386</span><span class="stat-label">Catalogue entries</span></div>
+      <div class="stat"><span class="stat-value">108</span><span class="stat-label">Artists (roster)</span></div>
+      <div class="stat"><span class="stat-value">1998–2007</span><span class="stat-label">Period assembled</span></div>
+    </div>
+  </header>
+
+  <!-- Documented Passports -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Documented passports</h2>
+      <span class="section-count">18 works · cross-reference status shown</span>
+    </div>
+    <div class="passport-list">
+
+      <a class="passport-row" href="../../AP-2026-000284.html">
+        <span class="passport-title">Paris under the Evening Sun</span>
+        <span class="passport-artist">Aleksejs Naumovs</span>
+        <span class="passport-date">1987</span>
+        <span class="passport-inv">AP-2026-000284</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000332.html">
+        <span class="passport-title">Caryatid (Scare-Crow)</span>
+        <span class="passport-artist">Džemma Skulme</span>
+        <span class="passport-date">2004</span>
+        <span class="passport-inv">AP-2026-000332</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000331.html">
+        <span class="passport-title">The Sea</span>
+        <span class="passport-artist">Egils Rozenbergs</span>
+        <span class="passport-date">2004</span>
+        <span class="passport-inv">AP-2026-000331</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000333.html">
+        <span class="passport-title">Levitation. I</span>
+        <span class="passport-artist">Guntars Sietiņš</span>
+        <span class="passport-date">1995</span>
+        <span class="passport-inv">AP-2026-000333</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000328.html">
+        <span class="passport-title">Forgotten King's Gardens. III</span>
+        <span class="passport-artist">Gunārs Krollis</span>
+        <span class="passport-date">1994</span>
+        <span class="passport-inv">AP-2026-000328</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000336.html">
+        <span class="passport-title">Autumn</span>
+        <span class="passport-artist">Herberts Siliņš</span>
+        <span class="passport-date">1974</span>
+        <span class="passport-inv">AP-2026-000336</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000209.html">
+        <span class="passport-title">The Silver Age</span>
+        <span class="passport-artist">Ilmārs Blumbergs</span>
+        <span class="passport-date">1998</span>
+        <span class="passport-inv">AP-2026-000209</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000325.html">
+        <span class="passport-title">Verities of Suffering</span>
+        <span class="passport-artist">Ilmārs Blumbergs</span>
+        <span class="passport-date">1999</span>
+        <span class="passport-inv">AP-2026-000325</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000321.html">
+        <span class="passport-title">In Memory of Chagall</span>
+        <span class="passport-artist">Indulis Zariņš</span>
+        <span class="passport-date">1996</span>
+        <span class="passport-inv">AP-2026-000321</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000326.html">
+        <span class="passport-title">The Grey Piano</span>
+        <span class="passport-artist">Ivars Heinrihsons</span>
+        <span class="passport-date">2004</span>
+        <span class="passport-inv">AP-2026-000326</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000307.html">
+        <span class="passport-title">Chameleon's Companion. Diptych. Part II</span>
+        <span class="passport-artist">Juris Putrāms</span>
+        <span class="passport-date">1993</span>
+        <span class="passport-inv">AP-2026-000307</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000305.html">
+        <span class="passport-title">Chameleon. Diptych. Part I</span>
+        <span class="passport-artist">Juris Putrāms</span>
+        <span class="passport-date">1993</span>
+        <span class="passport-inv">AP-2026-000305</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000329.html">
+        <span class="passport-title">Slackening</span>
+        <span class="passport-artist">Jānis Mitrēvics</span>
+        <span class="passport-date">1990</span>
+        <span class="passport-inv">AP-2026-000329</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000335.html">
+        <span class="passport-title">A Picket of Flowers</span>
+        <span class="passport-artist">Kristaps Ģelzis</span>
+        <span class="passport-date">2007</span>
+        <span class="passport-inv">AP-2026-000335</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000324.html">
+        <span class="passport-title">The Rustling of the Sea</span>
+        <span class="passport-artist">Leonīds Āriņš</span>
+        <span class="passport-date">1960</span>
+        <span class="passport-inv">AP-2026-000324</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000327.html">
+        <span class="passport-title">Venice. The Doge's Palace</span>
+        <span class="passport-artist">Ludolfs Liberts</span>
+        <span class="passport-date">1930</span>
+        <span class="passport-inv">AP-2026-000327</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000330.html">
+        <span class="passport-title">Folk-Style Totem</span>
+        <span class="passport-artist">Rūdolfs Pinnis</span>
+        <span class="passport-date">1989</span>
+        <span class="passport-inv">AP-2026-000330</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+      <a class="passport-row" href="../../AP-2026-000279.html">
+        <span class="passport-title">Carnival</span>
+        <span class="passport-artist">Vija Maldupe</span>
+        <span class="passport-date">1977</span>
+        <span class="passport-inv">AP-2026-000279</span>
+        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
+        <span class="passport-score">100</span>
+      </a>
+    </div>
+    <p style="font-size:0.72rem;color:var(--ink-faded);margin-top:12px;font-style:italic;">
+      The remaining catalogue entries (368 of 386) are confirmed in scope from the 2007 collection
+      publication but not yet catalogued to passport standard. Passports are published as
+      documentation is completed.
+    </p>
+  </section>
+
+  <!-- Artists -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Artists in this slice</h2>
+      <span class="section-count">16 of 108 roster artists · works documented so far</span>
+    </div>
+    <div class="artist-grid">
+
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Gunārs Krollis</div>
+            <div class="artist-lifespan">1932–2025</div>
+          </div>
+          <div class="artist-count">1</div>
+        </div>
+        <div class="artist-types">12 works in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q16667368</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Ivars Heinrihsons</div>
+            <div class="artist-lifespan">1945–</div>
+          </div>
+          <div class="artist-count">1</div>
+        </div>
+        <div class="artist-types">9 works in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q99478595</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Kristaps Ģelzis</div>
+            <div class="artist-lifespan">1962–</div>
+          </div>
+          <div class="artist-count">1</div>
+        </div>
+        <div class="artist-types">6 works in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q94405078</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Aleksejs Naumovs</div>
+            <div class="artist-lifespan">1955–</div>
+          </div>
+          <div class="artist-count">1</div>
+        </div>
+        <div class="artist-types">6 works in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q55420369</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Juris Putrāms</div>
+            <div class="artist-lifespan">1956–</div>
+          </div>
+          <div class="artist-count">2</div>
+        </div>
+        <div class="artist-types">6 works in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q99481514</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Ilmārs Blumbergs</div>
+            <div class="artist-lifespan">1943–2016</div>
+          </div>
+          <div class="artist-count">2</div>
+        </div>
+        <div class="artist-types">5 works in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q13611050</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Herberts Siliņš</div>
+            <div class="artist-lifespan">1926–2001</div>
+          </div>
+          <div class="artist-count">1</div>
+        </div>
+        <div class="artist-types">4 works in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q23054868</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Guntars Sietiņš</div>
+            <div class="artist-lifespan">1962–</div>
+          </div>
+          <div class="artist-count">1</div>
+        </div>
+        <div class="artist-types">3 works in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q59511477</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Jānis Mitrēvics</div>
+            <div class="artist-lifespan">1957–</div>
+          </div>
+          <div class="artist-count">1</div>
+        </div>
+        <div class="artist-types">2 works in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q99479594</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Rūdolfs Pinnis</div>
+            <div class="artist-lifespan">1902–1992</div>
+          </div>
+          <div class="artist-count">1</div>
+        </div>
+        <div class="artist-types">2 works in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q55984280</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Leonīds Āriņš</div>
+            <div class="artist-lifespan">1907–1991</div>
+          </div>
+          <div class="artist-count">1</div>
+        </div>
+        <div class="artist-types">1 work in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q16362314</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Ludolfs Liberts</div>
+            <div class="artist-lifespan">1895–1959</div>
+          </div>
+          <div class="artist-count">1</div>
+        </div>
+        <div class="artist-types">1 work in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q8479028</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Vija Maldupe</div>
+            <div class="artist-lifespan">1947–1996</div>
+          </div>
+          <div class="artist-count">1</div>
+        </div>
+        <div class="artist-types">1 work in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q113216930</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Egils Rozenbergs</div>
+            <div class="artist-lifespan">1948–</div>
+          </div>
+          <div class="artist-count">1</div>
+        </div>
+        <div class="artist-types">1 work in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q56084737</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Džemma Skulme</div>
+            <div class="artist-lifespan">1925–2019</div>
+          </div>
+          <div class="artist-count">1</div>
+        </div>
+        <div class="artist-types">1 work in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q4422700</span></div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-card-top">
+          <div>
+            <div class="artist-name">Indulis Zariņš</div>
+            <div class="artist-lifespan">1929–1997</div>
+          </div>
+          <div class="artist-count">1</div>
+        </div>
+        <div class="artist-types">1 work in full 2007 catalogue roster</div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q13561029</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span class="footer-text">
+      Ars Accordia · <a href="../../" class="footer-link">Home</a> ·
+      <a href="../" class="footer-link">Collections</a> ·
+      <a href="../../about/" class="footer-link">About</a>
+    </span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--ink-faded);">
+      Source: Hansabanka Contemporary Art Collection, 2007 catalogue (SRC-HANSABANKA-2007)
+    </span>
+  </footer>
+
+</div>
+</body>
+</html>

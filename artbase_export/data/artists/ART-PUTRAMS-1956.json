@@ -40,5 +40,15 @@
       "uri": null,
       "status": null
     }
-  }
+  },
+  "collections": [
+    {
+      "id": "hansabanka",
+      "name": "Hansabanka Contemporary Art Collection",
+      "short_name": "Hansabanka",
+      "url": "https://arsaccordia.com/collections/hansabanka/",
+      "work_count": 6,
+      "display_name": "Juris Putrāms"
+    }
+  ]
 }

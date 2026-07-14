@@ -41,6 +41,7 @@ def generate() -> str:
         ("/artists/sweden/", "0.8", "monthly"),
         ("/collections/",    "0.8", "monthly"),
         ("/collections/lnmm/","0.7","monthly"),
+        ("/collections/hansabanka/","0.7","monthly"),
         ("/contributions/",  "0.6", "monthly"),
         ("/about/",          "0.5", "monthly"),
         ("/sitemap/",        "0.3", "monthly"),

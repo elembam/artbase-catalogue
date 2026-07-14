@@ -1,0 +1,193 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000336",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": "2026-07-14",
+  "exported": "2026-07-14T08:51:19+00:00",
+  "visibility": "public",
+  "object_id": {
+    "object_type": "Painting",
+    "object_type_aat": null,
+    "materials": "Oil on canvas",
+    "materials_aat": [],
+    "dimensions_display": "92 (h) x 93 (w) cm",
+    "height_cm": 92,
+    "width_cm": 93,
+    "depth_cm": null,
+    "inscriptions": null,
+    "distinguishing": null,
+    "title": "Autumn",
+    "title_lv": "Rudens",
+    "subject": null,
+    "date_display": "1974",
+    "date_earliest": 1974,
+    "date_latest": 1974,
+    "maker_id": "ART-SILINS-1926",
+    "maker_display_name": "Herberts Siliņš",
+    "has_photograph": false
+  },
+  "location": {
+    "collection": "Hansabanka Contemporary Art Collection",
+    "collection_qid": "Q139986317",
+    "inventory_number": null,
+    "catalogue_number": "169",
+    "catalogue_page": 228,
+    "catalogue_source": "Q139986317",
+    "location_notes": "Collection transferred to Swedbank following acquisition of Hansabanka, 2005."
+  },
+  "provenance": [
+    {
+      "step": 1,
+      "description": "Held in the Hansabanka Contemporary Art Collection, Rīga, Latvia (collection transferred to Swedbank following acquisition of Hansabanka by Swedbank, 2005)",
+      "date": null,
+      "holder": "Hansabanka / Swedbank",
+      "type": "current_location",
+      "source": "SRC-HANSABANKA-2007",
+      "source_note": "Hansabanka Contemporary Art Collection. Rīga: Hansabanka, 2007. Catalogue no. 169 · p. 228.",
+      "is_gap": false
+    }
+  ],
+  "authority_links": {
+    "artist_wikidata": {
+      "id": "Q23054868",
+      "uri": "https://www.wikidata.org/wiki/Q23054868",
+      "status": "confirmed",
+      "verified_date": "2026-06-24",
+      "notes": "Wikidata item for Herberts Siliņš"
+    },
+    "artbase_id": "ART-SILINS-1926",
+    "wikidata": {
+      "id": "Q140323551",
+      "uri": "https://www.wikidata.org/wiki/Q140323551",
+      "status": "confirmed",
+      "verified_date": "2026-06-24",
+      "notes": "Wikidata item for this artwork — created by ArsAccordia"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "SRC-HANSABANKA-2007",
+      "type": "book",
+      "citation": "Hansabanka Contemporary Art Collection. Rīga: Hansabanka, 2007."
+    }
+  ],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Promoted from AA/LV/HANS/009 (Hansabanka slice, spec 15 Part C3), the 18th work in the scored slice — no duplicate in the 2026-07-02 stub batch. Catalogue no. 169 · p. 228 · Wikidata QID: Q140323551 Submitted to Wikidata: Hansabanka Batch 02 Work 3",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "aat_terms": {},
+  "is_demo": false,
+  "structured_data": {
+    "json_ld": {
+      "@context": "https://schema.org/",
+      "@type": "VisualArtwork",
+      "name": "Autumn",
+      "creator": {
+        "@type": "Person",
+        "name": "Herberts Siliņš",
+        "sameAs": "https://www.wikidata.org/wiki/Q23054868"
+      },
+      "dateCreated": "1974",
+      "artMedium": "Oil on canvas",
+      "artform": "Painting",
+      "locationCreated": {
+        "@type": "Place",
+        "name": "Latvia"
+      },
+      "contentLocation": {
+        "@type": "Organization",
+        "name": "Hansabanka Contemporary Art Collection",
+        "description": "Corporate art collection (transferred to Swedbank following acquisition, 2005)"
+      },
+      "height": {
+        "@type": "QuantitativeValue",
+        "value": 92,
+        "unitCode": "CMT"
+      },
+      "width": {
+        "@type": "QuantitativeValue",
+        "value": 93,
+        "unitCode": "CMT"
+      },
+      "identifier": "AP-2026-000336",
+      "sameAs": "https://www.wikidata.org/wiki/Q140323551",
+      "url": "https://arsaccordia.com/AP-2026-000336.html"
+    }
+  },
+  "score": {
+    "passport_score": 100,
+    "status": "amber",
+    "completeness": {
+      "value": 1.0,
+      "sections": [
+        {
+          "section": "identity",
+          "weight": 0.35,
+          "fill": 1.0,
+          "present": "6 of 6 fields",
+          "contribution": 0.35,
+          "in_scope": true
+        },
+        {
+          "section": "authority",
+          "weight": 0.25,
+          "fill": 1.0,
+          "present": "2 public authorities — ARTIST_WIKIDATA, WIKIDATA",
+          "contribution": 0.25,
+          "in_scope": true
+        },
+        {
+          "section": "provenance",
+          "weight": 0.25,
+          "fill": 1.0,
+          "present": "1 of 1 step sourced",
+          "contribution": 0.25,
+          "in_scope": true
+        },
+        {
+          "section": "structured",
+          "weight": 0.15,
+          "fill": 1.0,
+          "present": "JSON-LD only",
+          "contribution": 0.15,
+          "in_scope": true
+        },
+        {
+          "section": "condition",
+          "weight": 0.0,
+          "fill": null,
+          "present": "not commissioned",
+          "contribution": 0.0,
+          "in_scope": false
+        },
+        {
+          "section": "image",
+          "weight": 0.0,
+          "fill": null,
+          "present": "not commissioned",
+          "contribution": 0.0,
+          "in_scope": false
+        }
+      ]
+    },
+    "excluded": [
+      "source_quality_judgement",
+      "authenticity",
+      "monetary_value"
+    ],
+    "config_version": "weights-v3"
+  },
+  "score_generated_at": "2026-07-14T08:51:27+00:00"
+}

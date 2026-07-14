@@ -22,11 +22,24 @@
     "verified_at": null
   },
   "member_passports": [
-    "AA/LV/HANS/001", "AA/LV/HANS/002", "AA/LV/HANS/003", "AA/LV/HANS/004",
-    "AA/LV/HANS/005", "AA/LV/HANS/006", "AA/LV/HANS/007", "AA/LV/HANS/008",
-    "AA/LV/HANS/009", "AA/LV/HANS/010", "AA/LV/HANS/011", "AA/LV/HANS/012",
-    "AA/LV/HANS/013", "AA/LV/HANS/014", "AA/LV/HANS/015", "AA/LV/HANS/016",
-    "AA/LV/HANS/017", "AA/LV/HANS/018"
+    "AP-2026-000209",
+    "AP-2026-000279",
+    "AP-2026-000284",
+    "AP-2026-000305",
+    "AP-2026-000307",
+    "AP-2026-000321",
+    "AP-2026-000324",
+    "AP-2026-000325",
+    "AP-2026-000326",
+    "AP-2026-000327",
+    "AP-2026-000328",
+    "AP-2026-000329",
+    "AP-2026-000330",
+    "AP-2026-000331",
+    "AP-2026-000332",
+    "AP-2026-000333",
+    "AP-2026-000335",
+    "AP-2026-000336"
   ],
   "visibility": "public",
   "consent_to_publish_score": true,
@@ -35,19 +48,18 @@
     "image": false
   },
   "score": {
-    "ars_accordia_score": 1728,
-    "average_standard": 96.0,
+    "ars_accordia_score": 1800.0,
+    "average_standard": 100.0,
     "works_documented": 18,
     "band": "Complete Record",
-    "completeness": null,
-    "relative_completeness": null,
-    "gap_map": {
-      "identity": 1.0,
-      "authority": 0.833,
-      "provenance": 1.0,
-      "structured": 1.0
+    "completeness": 1.0,
+    "relative_completeness": 0.0466,
+    "gaps": {
+      "identity_complete": 1.0,
+      "authority_linked": 1.0,
+      "provenance_sourced": 1.0,
+      "structured_export": 1.0
     },
-    "notes": "Authority gap: 6 works awaiting artwork Wikidata QID confirmation (HANS/001, 007, 013–018). Scores will rise from 88 → 100 once QIDs are logged.",
     "sections_in_scope": [
       "authority",
       "identity",
@@ -56,7 +68,7 @@
     ],
     "config_version": "weights-v3"
   },
-  "score_generated_at": "2026-06-24",
+  "score_generated_at": "2026-07-14T08:52:32+00:00",
   "_schema": "artbase:collection:v1",
-  "_notes": "18 passport JSONs created 2026-06-24. Wikidata items exist for 12 of 18 works (Batches 01+02 Works 2–6 confirmed). Batch 03 QIDs pending."
+  "_notes": "Spec 15 Part C3 slice. 18 works originally catalogued 2026-06-24 under AA/LV/HANS/001-018; on 2026-07-05, 17 were found to duplicate thinner stub records already published under AP-2026-000203-000335 (2026-07-02 bulk batch) — the richer AA/LV/HANS documentation (provenance, artist authority links, structured data) was merged into those live AP-2026 records, which are now canonical. The 18th (HANS/009, Autumn by Herberts Siliņš) had no stub counterpart and was published as new record AP-2026-000336. AA/LV/HANS/001-018 are superseded and retained only as data-layer history."
 }

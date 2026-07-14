@@ -151,14 +151,5 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": [
-    {
-      "id": "hansabanka",
-      "name": "Hansabanka Contemporary Art Collection",
-      "short_name": "Hansabanka",
-      "url": "https://arsaccordia.com/collections/hansabanka/",
-      "work_count": 6,
-      "display_name": "Inta Celmiņa"
-    }
-  ]
+  "collections": []
 }

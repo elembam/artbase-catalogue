@@ -57,9 +57,9 @@
     "wikidata": {
       "id": "Q55984280",
       "uri": "https://www.wikidata.org/wiki/Q55984280",
-      "status": "candidate_verify",
-      "verified_date": null,
-      "notes": null
+      "status": "confirmed",
+      "verified_date": "2026-06-24",
+      "notes": "Confirmed during Hansabanka Batch 01 QID resolution (2026-06-23/24) — corrected from an initial Chemiakin misattribution."
     },
     "viaf": {
       "id": "77116372",

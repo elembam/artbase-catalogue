@@ -3,9 +3,9 @@
   "artbase_id": "AP-2026-000305",
   "airtable_id": null,
   "artbase_canonical_id": null,
-  "version": 1,
+  "version": 2,
   "created": "2026-07-02",
-  "exported": "2026-07-02T00:00:00Z",
+  "exported": "2026-07-14T08:51:19+00:00",
   "visibility": "public",
   "object_id": {
     "object_type": "painting",
@@ -30,9 +30,22 @@
     "collection": "Hansabanka Contemporary Art Collection",
     "collection_qid": "Q139986317",
     "inventory_number": "162",
-    "location_notes": "Hansabanka Contemporary Art Collection (2007 catalogue)"
+    "location_notes": "Collection transferred to Swedbank following acquisition of Hansabanka, 2005.",
+    "catalogue_number": "162",
+    "catalogue_source": "Q139986317"
   },
-  "provenance": [],
+  "provenance": [
+    {
+      "step": 1,
+      "description": "Held in the Hansabanka Contemporary Art Collection, Rīga, Latvia (collection transferred to Swedbank following acquisition of Hansabanka by Swedbank, 2005)",
+      "date": null,
+      "holder": "Hansabanka / Swedbank",
+      "type": "current_location",
+      "source": "SRC-HANSABANKA-2007",
+      "source_note": "Hansabanka Contemporary Art Collection. Rīga: Hansabanka, 2007. Catalogue no. 162 · p. 227.",
+      "is_gap": false
+    }
+  ],
   "authority_links": {
     "wikidata": {
       "id": "Q140334286",
@@ -40,16 +53,93 @@
       "status": "confirmed",
       "verified_date": "2026-07-02",
       "notes": "Hansabanka catalogue cat. 162"
+    },
+    "artist_wikidata": {
+      "id": "Q99481514",
+      "uri": "https://www.wikidata.org/wiki/Q99481514",
+      "status": "confirmed",
+      "verified_date": "2026-06-24",
+      "notes": "Wikidata item for Juris Putrāms"
     }
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-HANSABANKA-2007",
+      "type": "book",
+      "citation": "Hansabanka Contemporary Art Collection. Rīga: Hansabanka, 2007."
+    }
+  ],
   "cataloguing": {
-    "review_status": "stub",
-    "notes": "Stub record. Source: Hansabanka Contemporary Art Collection, 2007 catalogue, p.162. Wikidata: Q140334286."
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Enriched from AA/LV/HANS/017 (Hansabanka slice, spec 15 Part C3): Catalogue no. 162 · p. 227 · Wikidata QID: pending (submitted; awaiting confirmation) Submitted to Wikidata: Hansabanka Batch 03 Work 5",
+    "tasks": [
+      "Add artwork Wikidata QID once confirmed"
+    ],
+    "engagement_ids": []
   },
   "score": {
-    "passport_score": 30,
-    "status": "stub"
+    "passport_score": 100,
+    "status": "amber",
+    "completeness": {
+      "value": 1.0,
+      "sections": [
+        {
+          "section": "identity",
+          "weight": 0.35,
+          "fill": 1.0,
+          "present": "6 of 6 fields",
+          "contribution": 0.35,
+          "in_scope": true
+        },
+        {
+          "section": "authority",
+          "weight": 0.25,
+          "fill": 1.0,
+          "present": "2 public authorities — WIKIDATA, ARTIST_WIKIDATA",
+          "contribution": 0.25,
+          "in_scope": true
+        },
+        {
+          "section": "provenance",
+          "weight": 0.25,
+          "fill": 1.0,
+          "present": "1 of 1 step sourced",
+          "contribution": 0.25,
+          "in_scope": true
+        },
+        {
+          "section": "structured",
+          "weight": 0.15,
+          "fill": 1.0,
+          "present": "JSON-LD only",
+          "contribution": 0.15,
+          "in_scope": true
+        },
+        {
+          "section": "condition",
+          "weight": 0.0,
+          "fill": null,
+          "present": "not commissioned",
+          "contribution": 0.0,
+          "in_scope": false
+        },
+        {
+          "section": "image",
+          "weight": 0.0,
+          "fill": null,
+          "present": "not commissioned",
+          "contribution": 0.0,
+          "in_scope": false
+        }
+      ]
+    },
+    "excluded": [
+      "source_quality_judgement",
+      "authenticity",
+      "monetary_value"
+    ],
+    "config_version": "weights-v3"
   },
   "iconography": {
     "iconclass_codes": [],
@@ -57,5 +147,42 @@
     "depicts": []
   },
   "aat_terms": {},
-  "is_demo": false
+  "is_demo": false,
+  "structured_data": {
+    "json_ld": {
+      "@context": "https://schema.org/",
+      "@type": "VisualArtwork",
+      "name": "Chameleon. Diptych. Part I",
+      "creator": {
+        "@type": "Person",
+        "name": "Juris Putrāms",
+        "sameAs": "https://www.wikidata.org/wiki/Q99481514"
+      },
+      "dateCreated": "1993",
+      "artMedium": "Mixed media on zinc sheet",
+      "artform": "Work of art",
+      "locationCreated": {
+        "@type": "Place",
+        "name": "Latvia"
+      },
+      "contentLocation": {
+        "@type": "Organization",
+        "name": "Hansabanka Contemporary Art Collection",
+        "description": "Corporate art collection (transferred to Swedbank following acquisition, 2005)"
+      },
+      "height": {
+        "@type": "QuantitativeValue",
+        "value": 90.5,
+        "unitCode": "CMT"
+      },
+      "width": {
+        "@type": "QuantitativeValue",
+        "value": 70.5,
+        "unitCode": "CMT"
+      },
+      "identifier": "AP-2026-000305",
+      "url": "https://arsaccordia.com/AP-2026-000305.html"
+    }
+  },
+  "score_generated_at": "2026-07-14T08:51:27+00:00"
 }
