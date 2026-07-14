@@ -109,7 +109,7 @@
           "section": "provenance",
           "weight": 0.25,
           "fill": 0.0,
-          "present": "0 of 1 step sourced — citation removed pending verification",
+          "present": "0 of 1 step sourced",
           "contribution": 0.0,
           "in_scope": true
         },
@@ -146,7 +146,7 @@
     ],
     "config_version": "weights-v3"
   },
-  "score_generated_at": "2026-06-20T09:57:17+00:00",
+  "score_generated_at": "2026-07-14T09:16:05+00:00",
   "structured_data": {
     "json_ld": {
       "@context": "https://schema.org/",

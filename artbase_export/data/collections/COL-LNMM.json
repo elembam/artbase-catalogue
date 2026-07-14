@@ -35,16 +35,16 @@
     "image": false
   },
   "score": {
-    "ars_accordia_score": 502.0,
-    "average_standard": 83.7,
+    "ars_accordia_score": 402.0,
+    "average_standard": 67.0,
     "works_documented": 6,
     "band": "Substantial Record",
-    "completeness": 0.837,
+    "completeness": 0.6667,
     "relative_completeness": null,
     "gaps": {
       "identity_complete": 1.0,
       "authority_linked": 1.0,
-      "provenance_sourced": 0.67,
+      "provenance_sourced": 0.0,
       "structured_export": 1.0
     },
     "sections_in_scope": [
@@ -55,7 +55,7 @@
     ],
     "config_version": "weights-v3"
   },
-  "score_generated_at": "2026-06-20T09:58:18+00:00",
+  "score_generated_at": "2026-07-14T09:16:06+00:00",
   "_schema": "artbase:collection:v1",
-  "_notes": "6 passports scored. Provenance citations for 012 and 019 removed pending verification against SRC-LNMM-PORTRAITS-2009 — these are genre/landscape works unlikely to appear in the 2009 portrait exhibition catalogue. Score will update when provenance is confirmed."
+  "_notes": "6 passports scored. The SRC-LNMM-PORTRAITS-2009 provenance citation was removed from all six works on verification: that book documents a 2009 portrait exhibition, not the LNMM permanent collection, and could not be confirmed as a source for these specific holdings' provenance. Current location remains confirmed via LNMM open data (Google Arts & Culture, Wikidata). Score recomputed 2026-07-14 to reflect this — provenance section now 0% filled, avg standard 83.7 -> 67.0, still Substantial Record."
 }
