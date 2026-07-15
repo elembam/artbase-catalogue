@@ -80,7 +80,41 @@ def _confirmed_id(authority_links: dict, key: str):
     return None
 
 
-def build_person_jsonld(artist: dict) -> dict:
+_CITATION_TYPE_MAP = {
+    "book": "Book",
+    "web": "WebPage",
+    "periodical": "Article",
+    "thesis": "CreativeWork",  # schema.org has no Thesis type
+}
+
+
+def build_citation_jsonld(artist: dict, sources_registry: dict[str, dict]) -> list[dict]:
+    """One Book stub per literature source that resolves to a registry entry with
+    a real ISBN. Web references and non-ISBN books are deliberately excluded from
+    the machine-readable citation block — an ISBN is a verifiable claim, a bare
+    citation string or URL isn't, and this field should only assert what's backed."""
+    out = []
+    for src in artist.get("sources") or []:
+        if not isinstance(src, dict) or "citation" not in src:
+            continue
+        reg = sources_registry.get(src.get("source_id")) if src.get("source_id") else None
+        if not reg:
+            continue
+        isbn = reg.get("isbn_13") or reg.get("isbn_10")
+        if not isbn:
+            continue
+        node: dict = {
+            "@type": _CITATION_TYPE_MAP.get(src.get("type"), "Book"),
+            "name": src["citation"],
+            "isbn": isbn,
+        }
+        if reg.get("openlibrary_url"):
+            node["sameAs"] = reg["openlibrary_url"]
+        out.append(node)
+    return out
+
+
+def build_person_jsonld(artist: dict, sources_registry: dict[str, dict]) -> dict:
     artbase_id = artist.get("artbase_id", "")
     base_url   = "https://arsaccordia.com"
     page_url   = f"{base_url}/artists/{artbase_id}.html"
@@ -104,17 +138,25 @@ def build_person_jsonld(artist: dict) -> dict:
     if isni_id:
         same_as.append(f"https://isni.org/isni/{isni_id}")
 
+    main_entity: dict = {
+        "@type":   "WebPage",
+        "@id":     page_url,
+        "isPartOf": {"@id": base_url},
+    }
+    citations = build_citation_jsonld(artist, sources_registry)
+    if citations:
+        # citation is a CreativeWork property — belongs on the WebPage node, not
+        # the Person node (Person isn't a CreativeWork in schema.org's vocabulary).
+        main_entity["citation"] = citations
+
     ld: dict = {
         "@context": "https://schema.org",
         "@type":    "Person",
         "@id":      entity_url,
         "name":     artist.get("identity", {}).get("preferred_name", ""),
+        "identifier": artbase_id,
         "url":      page_url,
-        "mainEntityOfPage": {
-            "@type":   "WebPage",
-            "@id":     page_url,
-            "isPartOf": {"@id": base_url},
-        },
+        "mainEntityOfPage": main_entity,
     }
 
     birth = (life.get("birth_date") or {}).get("value")
@@ -192,7 +234,7 @@ def render_artist(artist: dict, artworks: list[dict], env: Environment,
         validation_level2=validation_level2,
         validation_authority_l1=validation_authority_l1,
         validated_by_l1=validated_by_l1,
-        person_jsonld=build_person_jsonld(artist),
+        person_jsonld=build_person_jsonld(artist, sources_registry),
         sources_registry=sources_registry,
     )
 

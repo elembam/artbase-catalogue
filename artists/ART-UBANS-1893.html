@@ -346,6 +346,38 @@
     text-align: right;
   }
 
+  /* ── Sources / Literature ─── */
+  .sources-list { display: flex; flex-direction: column; gap: 8px; }
+
+  .source-row {
+    padding: 10px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    font-size: 0.85rem;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .source-row a { color: var(--seal); text-decoration: none; }
+  .source-row a:hover { text-decoration: underline; }
+
+  .source-extlink {
+    margin-left: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--ink-faded) !important;
+  }
+  .source-extlink:hover { color: var(--seal) !important; }
+
+  .source-type-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-right: 8px;
+  }
+
   /* ── Footer ─── */
   .footer {
     padding: 20px 48px;
@@ -375,6 +407,7 @@
       "roleName": "painter"
     }
   ],
+  "identifier": "ART-UBANS-1893",
   "mainEntityOfPage": {
     "@id": "https://arsaccordia.com/artists/ART-UBANS-1893.html",
     "@type": "WebPage",
@@ -657,11 +690,16 @@
     
   </section>
 
+  <!-- Sources -->
+  
+  
+  
+
   <!-- Footer -->
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-UBANS-1893</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-02</span>
+    <span>Exported 2026-07-15</span>
   </footer>
 
 </div>
