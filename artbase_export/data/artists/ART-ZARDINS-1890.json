@@ -130,6 +130,29 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-IV",
+      "type": "book",
+      "citation": "Osmanis A. Zārdiņš, Ādolfs // Māksla un arhitektūra biogrāfijās, IV / Atb. red. A. Vanaga. R.: A/S Preses nams, 2003, 102.­–103. lpp.",
+      "raw": "1) Osmanis A. Zārdiņš, Ādolfs // Māksla un arhitektūra biogrāfijās, IV / Atb. red. A. Vanaga. R.: A/S Preses nams, 2003, 102.­–103. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "IV",
+        "pages": "103",
+        "entry_author": "Osmanis A.",
+        "entry_title": "Zārdiņš, Ādolfs"
+      }
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Kļaviņš E., Pelše S. Tēlotāja māksla // Latvijas mākslas vēsture V. Klasiskā modernisma un tradicionālisma periods: 1915–1940 / Sast. E.Kļaviņš. – Jelgava: Latvijas Mākslas akadēmijas Mākslas vēstures institūts, Mākslas vēstures pētījumu atbalsta fonds, 2016.",
+      "raw": "2) Kļaviņš E., Pelše S. Tēlotāja māksla // Latvijas mākslas vēsture V. Klasiskā modernisma un tradicionālisma periods: 1915–1940 / Sast. E.Kļaviņš. – Jelgava: Latvijas Mākslas akadēmijas Mākslas vēstures institūts, Mākslas vēstures pētījumu atbalsta fonds, 2016.",
+      "flags": [],
+      "wikidata_batch_eligible": false
     }
   ],
   "source_refs": [

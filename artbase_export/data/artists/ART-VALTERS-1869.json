@@ -133,6 +133,43 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": null,
+      "type": "web",
+      "citation": "http://www.lnmm.lv/lv/lnmm/info/explore/exhibition/2009/johans-valters-1969-19",
+      "raw": "1) http://www.lnmm.lv/lv/lnmm/info/explore/exhibition/2009/johans-valters-1969-19",
+      "flags": [],
+      "wikidata_batch_eligible": false,
+      "url": "http://www.lnmm.lv/lv/lnmm/info/explore/exhibition/2009/johans-valters-1969-19",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Māksla un arhitektūra biogrāfijās, Latvijas enciklopēdija, Rīga, 1995.gads",
+      "raw": "2) Māksla un arhitektūra biogrāfijās, Latvijas enciklopēdija, Rīga, 1995.gads",
+      "flags": [
+        "no-pages"
+      ],
+      "wikidata_batch_eligible": false,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": null,
+        "entry_author": null,
+        "entry_title": null
+      }
+    },
+    {
+      "source_id": null,
+      "type": "web",
+      "citation": "http://www.kulturaskanons.lv/lv/1/5/43/",
+      "raw": "3) http://www.kulturaskanons.lv/lv/1/5/43/",
+      "flags": [],
+      "wikidata_batch_eligible": false,
+      "url": "http://www.kulturaskanons.lv/lv/1/5/43/",
+      "accessed": null
     }
   ],
   "source_refs": [

@@ -123,7 +123,16 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Ževaite I. Hansabankas mūsdienu mākslas kolekcija. Rīga: Hansabanka, 2007, 24.lpp.",
+      "raw": "1) Ževaite I. Hansabankas mūsdienu mākslas kolekcija. Rīga: Hansabanka, 2007, 24.lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": false
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",

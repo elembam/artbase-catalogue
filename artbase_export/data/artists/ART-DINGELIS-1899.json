@@ -130,6 +130,21 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Māksla un arhitektūra biogrāfijās, Latvijas enciklopēdija, Rīga, 1995.gads, 121. lpp.",
+      "raw": "1) Māksla un arhitektūra biogrāfijās, Latvijas enciklopēdija, Rīga, 1995.gads, 121. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": "121",
+        "entry_author": null,
+        "entry_title": null
+      }
     }
   ],
   "source_refs": [

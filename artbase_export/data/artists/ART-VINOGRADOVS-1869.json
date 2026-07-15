@@ -130,6 +130,16 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": null,
+      "type": "web",
+      "citation": "http://www.russkije.lv/lv/lib/read/sergey-vinogradov-artist.html",
+      "raw": "1) http://www.russkije.lv/lv/lib/read/sergey-vinogradov-artist.html",
+      "flags": [],
+      "wikidata_batch_eligible": false,
+      "url": "http://www.russkije.lv/lv/lib/read/sergey-vinogradov-artist.html",
+      "accessed": null
     }
   ],
   "source_refs": [

@@ -130,6 +130,29 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-III",
+      "type": "book",
+      "citation": "Vanaga A. Skulme, Oto // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 65­­–66. lpp.",
+      "raw": "1) Vanaga A. Skulme, Oto // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 65­­–66. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "III",
+        "pages": "66",
+        "entry_author": "Vanaga A.",
+        "entry_title": "Skulme, Oto"
+      }
+    },
+    {
+      "source_id": null,
+      "type": "periodical",
+      "citation": "Siliņš J. Oto Skulme // Ilustrēts Žurnāls. – 1926. – Nr. 7. – 216. lpp",
+      "raw": "2) Siliņš J. Oto Skulme // Ilustrēts Žurnāls. – 1926. – Nr. 7. – 216. lpp",
+      "flags": [],
+      "wikidata_batch_eligible": false
     }
   ],
   "source_refs": [

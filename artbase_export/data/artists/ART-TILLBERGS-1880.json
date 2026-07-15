@@ -130,6 +130,29 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-III",
+      "type": "book",
+      "citation": "Brancis M. Tillbergs, Jānis Roberts // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 203–204. lpp.",
+      "raw": "1) Brancis M. Tillbergs, Jānis Roberts // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 203–204. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "III",
+        "pages": "204",
+        "entry_author": "Brancis M.",
+        "entry_title": "Tillbergs, Jānis Roberts"
+      }
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Bancis M. Jānis Roberts Tillbergs. Rīga: Neputns, 2015.",
+      "raw": "2) Bancis M. Jānis Roberts Tillbergs. Rīga: Neputns, 2015.",
+      "flags": [],
+      "wikidata_batch_eligible": false
     }
   ],
   "source_refs": [

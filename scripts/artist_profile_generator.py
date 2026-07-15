@@ -23,8 +23,23 @@ from jinja2 import Environment, FileSystemLoader
 REPO_ROOT   = Path(__file__).resolve().parent.parent
 ARTISTS_DIR = REPO_ROOT / "artbase_export" / "data" / "artists"
 ARTWORKS_DIR= REPO_ROOT / "artbase_export" / "data" / "artworks"
+SOURCES_DIR = REPO_ROOT / "artbase_export" / "data" / "sources"
 OUT_DIR     = REPO_ROOT / "artists"
 TMPL_DIR    = REPO_ROOT / "templates"
+
+
+def load_sources_registry() -> dict[str, dict]:
+    """Return {source_id: source_record} for every file in data/sources/."""
+    registry: dict[str, dict] = {}
+    for f in sorted(SOURCES_DIR.glob("*.json")):
+        try:
+            rec = json.loads(f.read_text())
+        except Exception:
+            continue
+        sid = rec.get("source_id")
+        if sid:
+            registry[sid] = rec
+    return registry
 
 
 def load_all_artists() -> list[dict]:
@@ -127,7 +142,8 @@ def build_person_jsonld(artist: dict) -> dict:
     return ld
 
 
-def render_artist(artist: dict, artworks: list[dict], env: Environment) -> str:
+def render_artist(artist: dict, artworks: list[dict], env: Environment,
+                   sources_registry: dict[str, dict]) -> str:
     al = artist.get("authority_links") or {}
     wikidata_qid = (al.get("wikidata") or {}).get("id")
     wikidata_status = (al.get("wikidata") or {}).get("status", "")
@@ -177,6 +193,7 @@ def render_artist(artist: dict, artworks: list[dict], env: Environment) -> str:
         validation_authority_l1=validation_authority_l1,
         validated_by_l1=validated_by_l1,
         person_jsonld=build_person_jsonld(artist),
+        sources_registry=sources_registry,
     )
 
 
@@ -197,6 +214,7 @@ def main():
 
     artworks_by_maker = load_artworks_by_maker()
     all_artists = load_all_artists()
+    sources_registry = load_sources_registry()
 
     if args.artist_id:
         candidates = [a for a in all_artists if a.get("artbase_id") == args.artist_id]
@@ -213,7 +231,7 @@ def main():
         aid = artist.get("artbase_id", "UNKNOWN")
         artworks = artworks_by_maker.get(aid, [])
         try:
-            html = render_artist(artist, artworks, env)
+            html = render_artist(artist, artworks, env, sources_registry)
             out_path = OUT_DIR / f"{aid}.html"
             out_path.write_text(html, encoding="utf-8")
             generated += 1

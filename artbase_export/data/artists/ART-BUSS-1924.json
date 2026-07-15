@@ -119,7 +119,39 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Ževaite I. Hansabankas mūsdienu mākslas kolekcija. Rīga: Hansabanka, 2007, 40.lpp.",
+      "raw": "1) Ževaite I. Hansabankas mūsdienu mākslas kolekcija. Rīga: Hansabanka, 2007, 40.lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": false
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Vilsons A. Māksla un arhitektūra biogrāfijās, 1. sējums. Rīga: “Latvijas enciklopēdija”, 1995, 95.lpp.",
+      "raw": "2) Vilsons A. Māksla un arhitektūra biogrāfijās, 1. sējums. Rīga: “Latvijas enciklopēdija”, 1995, 95.lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": "95",
+        "entry_author": null,
+        "entry_title": null
+      }
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Šmite E. Vadis Bušs. Rīga: Neputns, 2003.",
+      "raw": "3) Šmite E. Vadis Bušs. Rīga: Neputns, 2003.",
+      "flags": [],
+      "wikidata_batch_eligible": false
+    }
+  ],
   "source_refs": [],
   "conflicts": [],
   "cataloguing": {

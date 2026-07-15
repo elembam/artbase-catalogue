@@ -130,6 +130,21 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Tidomane G. Āriņš, Leonīds // Māksla un arhitektūra biogrāfijās, I / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1995, 32. lpp.",
+      "raw": "1) Tidomane G. Āriņš, Leonīds // Māksla un arhitektūra biogrāfijās, I / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1995, 32. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": "32",
+        "entry_author": "Tidomane G.",
+        "entry_title": "Āriņš, Leonīds"
+      }
     }
   ],
   "source_refs": [

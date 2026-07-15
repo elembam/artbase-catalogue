@@ -130,6 +130,21 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-II",
+      "type": "book",
+      "citation": "Pujāte I. Rozentāls, Janis // Māksla un arhitektūra biogrāfijās, II / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1996, 232. – 233. lpp.",
+      "raw": "1) Pujāte I. Rozentāls, Janis // Māksla un arhitektūra biogrāfijās, II / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1996, 232. – 233. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "II",
+        "pages": "233",
+        "entry_author": "Pujāte I.",
+        "entry_title": "Rozentāls, Janis"
+      }
     }
   ],
   "source_refs": [

@@ -130,6 +130,21 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-II",
+      "type": "book",
+      "citation": "Vilsons A.Māksla un arhitektūra biogrāfijās, 2. sējums. Rīga: “Latvijas enciklopēdija”, 1996, 235.lpp.",
+      "raw": "1) Vilsons A.Māksla un arhitektūra biogrāfijās, 2. sējums. Rīga: “Latvijas enciklopēdija”, 1996, 235.lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "II",
+        "pages": "235",
+        "entry_author": null,
+        "entry_title": null
+      }
     }
   ],
   "source_refs": [

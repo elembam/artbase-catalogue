@@ -130,6 +130,31 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-IV",
+      "type": "book",
+      "citation": "Kļaviņa A. Zariņa, Aija // Māksla un arhitektūra biogrāfijās, IV / Atb. red. A. Vanaga. R.: A/S Preses nams, 2003, 103.–104. lpp.",
+      "raw": "1) Kļaviņa A. Zariņa, Aija // Māksla un arhitektūra biogrāfijās, IV / Atb. red. A. Vanaga. R.: A/S Preses nams, 2003, 103.–104. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "IV",
+        "pages": "104",
+        "entry_author": "Kļaviņa A.",
+        "entry_title": "Zariņa, Aija"
+      }
+    },
+    {
+      "source_id": null,
+      "type": "web",
+      "citation": "http://www.diena.lv/kd/maksla/aija-zarina-intensiva-ka-kliedziens-14078194?cp=1#comments",
+      "raw": "2) http://www.diena.lv/kd/maksla/aija-zarina-intensiva-ka-kliedziens-14078194?cp=1#comments",
+      "flags": [],
+      "wikidata_batch_eligible": false,
+      "url": "http://www.diena.lv/kd/maksla/aija-zarina-intensiva-ka-kliedziens-14078194?cp=1#comments",
+      "accessed": null
     }
   ],
   "source_refs": [

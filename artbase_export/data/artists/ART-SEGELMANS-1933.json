@@ -130,6 +130,21 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-III",
+      "type": "book",
+      "citation": "Vanaga A. Šegelmans, Semjons // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 138–139. lpp.",
+      "raw": "1) Vanaga A. Šegelmans, Semjons // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 138–139. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "III",
+        "pages": "139",
+        "entry_author": "Vanaga A.",
+        "entry_title": "Šegelmans, Semjons"
+      }
     }
   ],
   "source_refs": [

@@ -130,6 +130,37 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Daugule S. Jānis Liepiņš. Rīga: Neputns, 2015.",
+      "raw": "1) Daugule S. Jānis Liepiņš. Rīga: Neputns, 2015.",
+      "flags": [],
+      "wikidata_batch_eligible": false
+    },
+    {
+      "source_id": "SRC-MAB-II",
+      "type": "book",
+      "citation": "Burāne I. Liepiņš, Jānis // Māksla un arhitektūra biogrāfijās, II / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1996, 86. lpp.",
+      "raw": "2) Burāne I. Liepiņš, Jānis // Māksla un arhitektūra biogrāfijās, II / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1996, 86. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "II",
+        "pages": "86",
+        "entry_author": "Burāne I.",
+        "entry_title": "Liepiņš, Jānis"
+      }
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Bēms R. Jānis Liepiņš. Rīga: Latvijas Valsts izdevniecība, 1964.",
+      "raw": "3) Bēms R. Jānis Liepiņš. Rīga: Latvijas Valsts izdevniecība, 1964.",
+      "flags": [],
+      "wikidata_batch_eligible": false
     }
   ],
   "source_refs": [

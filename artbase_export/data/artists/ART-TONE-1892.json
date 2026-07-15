@@ -130,6 +130,16 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": null,
+      "type": "web",
+      "citation": "http://www.tvnet.lv/izklaide/makslas/60717-valdemars_tone_gleznieciba_1945_1958",
+      "raw": "1) http://www.tvnet.lv/izklaide/makslas/60717-valdemars_tone_gleznieciba_1945_1958",
+      "flags": [],
+      "wikidata_batch_eligible": false,
+      "url": "http://www.tvnet.lv/izklaide/makslas/60717-valdemars_tone_gleznieciba_1945_1958",
+      "accessed": null
     }
   ],
   "source_refs": [

@@ -130,6 +130,21 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-IV",
+      "type": "book",
+      "citation": "Brasliņa A. Vasiļevskis, Bruno // Māksla un arhitektūra biogrāfijās, IV / Atb. red. A. Vanaga. R.: A/S Preses nams, 2003, 28.–29. lpp.",
+      "raw": "1) Brasliņa A. Vasiļevskis, Bruno // Māksla un arhitektūra biogrāfijās, IV / Atb. red. A. Vanaga. R.: A/S Preses nams, 2003, 28.–29. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "IV",
+        "pages": "29",
+        "entry_author": "Brasliņa A.",
+        "entry_title": "Vasiļevskis, Bruno"
+      }
     }
   ],
   "source_refs": [

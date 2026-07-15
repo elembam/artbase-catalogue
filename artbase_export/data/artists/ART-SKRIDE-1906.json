@@ -130,6 +130,21 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-III",
+      "type": "book",
+      "citation": "Tidomane G. Skride, Ārijs // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 57. lpp.",
+      "raw": "1) Tidomane G. Skride, Ārijs // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 57. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "III",
+        "pages": "57",
+        "entry_author": "Tidomane G.",
+        "entry_title": "Skride, Ārijs"
+      }
     }
   ],
   "source_refs": [

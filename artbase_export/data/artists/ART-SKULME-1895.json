@@ -130,6 +130,29 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-III",
+      "type": "book",
+      "citation": "Skulme J. Skulme, U // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 66 ­­– 68. lpp.",
+      "raw": "1) Skulme J. Skulme, U // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 66 ­­– 68. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "III",
+        "pages": "68",
+        "entry_author": "Skulme J.",
+        "entry_title": "Skulme, U"
+      }
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Lamberga D. Iekšējās svelmes pilnais  // Uga Skulme  / Sast. L.Slava. – Rīga: Neputns, SIA Alfor, 2013.",
+      "raw": "2) Lamberga D. Iekšējās svelmes pilnais  // Uga Skulme  / Sast. L.Slava. – Rīga: Neputns, SIA Alfor, 2013.",
+      "flags": [],
+      "wikidata_batch_eligible": false
     }
   ],
   "source_refs": [

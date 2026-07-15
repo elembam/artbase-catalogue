@@ -130,6 +130,21 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Burāne I. Ģērmanis, Juris // Māksla un arhitektūra biogrāfijās, I / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1995, 192. lpp.",
+      "raw": "1) Burāne I. Ģērmanis, Juris // Māksla un arhitektūra biogrāfijās, I / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1995, 192. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": "192",
+        "entry_author": "Burāne I.",
+        "entry_title": "Ģērmanis, Juris"
+      }
     }
   ],
   "source_refs": [

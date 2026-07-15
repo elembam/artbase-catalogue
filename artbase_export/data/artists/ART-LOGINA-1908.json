@@ -130,6 +130,16 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": null,
+      "type": "web",
+      "citation": "http://www.zentalogina.lv/",
+      "raw": "1) 1. http://www.zentalogina.lv/",
+      "flags": [],
+      "wikidata_batch_eligible": false,
+      "url": "http://www.zentalogina.lv/",
+      "accessed": null
     }
   ],
   "source_refs": [

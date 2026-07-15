@@ -130,6 +130,21 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-II",
+      "type": "book",
+      "citation": "Konstants Z. Milts, Fridrihs // Māksla un arhitektūra biogrāfijās, II / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1996, 128. lpp.",
+      "raw": "1) Konstants Z. Milts, Fridrihs // Māksla un arhitektūra biogrāfijās, II / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1996, 128. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "II",
+        "pages": "128",
+        "entry_author": "Konstants Z.",
+        "entry_title": "Milts, Fridrihs"
+      }
     }
   ],
   "source_refs": [

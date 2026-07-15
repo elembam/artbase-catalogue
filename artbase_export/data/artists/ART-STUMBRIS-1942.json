@@ -130,6 +130,34 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Stumbris, Mārcis,  Tas bija nesen, nē - sen / Mārcis Stumbris ; dizainere Daiga Brinkmane ; fotogrāfi: Jānis Šabanovs, Mārcis Stumbris ; atbildīgā par izdevumu un priekšvārda autore Marija Kaupere. [Jelgava] : Ģederta Eliasa Jelgavas Vēstures un mākslas muzejs, 2017",
+      "raw": "1) Stumbris, Mārcis,  Tas bija nesen, nē - sen / Mārcis Stumbris ; dizainere Daiga Brinkmane ; fotogrāfi: Jānis Šabanovs, Mārcis Stumbris ; atbildīgā par izdevumu un priekšvārda autore Marija Kaupere. [Jelgava] : Ģederta Eliasa Jelgavas Vēstures un mākslas muzejs, 2017",
+      "flags": [],
+      "wikidata_batch_eligible": false
+    },
+    {
+      "source_id": null,
+      "type": "web",
+      "citation": "www.travelnews.lv",
+      "raw": "2) www.travelnews.lv",
+      "flags": [],
+      "wikidata_batch_eligible": false,
+      "url": "www.travelnews.lv",
+      "accessed": null
+    },
+    {
+      "source_id": null,
+      "type": "web",
+      "citation": "www.la.lv",
+      "raw": "3) www.la.lv",
+      "flags": [],
+      "wikidata_batch_eligible": false,
+      "url": "www.la.lv",
+      "accessed": null
     }
   ],
   "source_refs": [

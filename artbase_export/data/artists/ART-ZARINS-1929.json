@@ -130,6 +130,21 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-IV",
+      "type": "book",
+      "citation": "Vanaga A. Zariņš, Indulis // Māksla un arhitektūra biogrāfijās, IV / Atb. red. A. Vanaga. R.: A/S Preses nams, 2003, 109.–110. lpp.",
+      "raw": "1) Vanaga A. Zariņš, Indulis // Māksla un arhitektūra biogrāfijās, IV / Atb. red. A. Vanaga. R.: A/S Preses nams, 2003, 109.–110. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "IV",
+        "pages": "110",
+        "entry_author": "Vanaga A.",
+        "entry_title": "Zariņš, Indulis"
+      }
     }
   ],
   "source_refs": [

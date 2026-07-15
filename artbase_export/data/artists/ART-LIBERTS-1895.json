@@ -130,6 +130,21 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-II",
+      "type": "book",
+      "citation": "Ņefedova I. Liberts, Ludolfs // Māksla un arhitektūra biogrāfijās, II / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1996, 80.–81. lpp.",
+      "raw": "1) Ņefedova I. Liberts, Ludolfs // Māksla un arhitektūra biogrāfijās, II / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1996, 80.–81. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "II",
+        "pages": "81",
+        "entry_author": "Ņefedova I.",
+        "entry_title": "Liberts, Ludolfs"
+      }
     }
   ],
   "source_refs": [

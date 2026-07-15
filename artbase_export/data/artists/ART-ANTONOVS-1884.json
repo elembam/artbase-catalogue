@@ -130,6 +130,24 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": null,
+      "type": "web",
+      "citation": "Feigmane, Tatjana. Sergejs Antonovs, pieejams: http://www.russkije.lv/lv/lib/read/s-antonov.html",
+      "raw": "1) Feigmane, Tatjana. Sergejs Antonovs, pieejams: http://www.russkije.lv/lv/lib/read/s-antonov.html",
+      "flags": [],
+      "wikidata_batch_eligible": false,
+      "url": "http://www.russkije.lv/lv/lib/read/s-antonov.html",
+      "accessed": null
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Pedan A. Vārdi atgriežas : 19.-20. gadsimtu krievu māksla no Anatola Pedana kolekcijas. Rīga: Galerija Haberland, 2011.",
+      "raw": "2) Pedan A. Vārdi atgriežas : 19.-20. gadsimtu krievu māksla no Anatola Pedana kolekcijas. Rīga: Galerija Haberland, 2011.",
+      "flags": [],
+      "wikidata_batch_eligible": false
     }
   ],
   "source_refs": [

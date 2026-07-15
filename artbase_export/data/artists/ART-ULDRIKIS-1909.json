@@ -130,6 +130,16 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": null,
+      "type": "web",
+      "citation": "http://www.delfi.lv/kultura/news/art/liepaja-apskatama-gleznotaja-teodora-uldrika-jubilejas-izstade.d?id=23592871",
+      "raw": "1) http://www.delfi.lv/kultura/news/art/liepaja-apskatama-gleznotaja-teodora-uldrika-jubilejas-izstade.d?id=23592871",
+      "flags": [],
+      "wikidata_batch_eligible": false,
+      "url": "http://www.delfi.lv/kultura/news/art/liepaja-apskatama-gleznotaja-teodora-uldrika-jubilejas-izstade.d?id=23592871",
+      "accessed": null
     }
   ],
   "source_refs": [

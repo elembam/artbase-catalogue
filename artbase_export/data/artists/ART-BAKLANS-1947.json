@@ -130,6 +130,37 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Bankovskis P. Juris Baklāns, Vija Maldupe. Rīga: Neputns, 2008.",
+      "raw": "1) 1. Bankovskis P. Juris Baklāns, Vija Maldupe. Rīga: Neputns, 2008.",
+      "flags": [],
+      "wikidata_batch_eligible": false
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Buša E, Vija Maldupe. Juris Baklāns dzīves mīlestība māksla, [katalogs]. Rīga: SIA Apgāds Jāņa sēta, 2000.",
+      "raw": "2) 2. Buša E, Vija Maldupe. Juris Baklāns dzīves mīlestība māksla, [katalogs]. Rīga: SIA Apgāds Jāņa sēta, 2000.",
+      "flags": [],
+      "wikidata_batch_eligible": false
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Vilsons A.Māksla un arhitektūra biogrāfijās, 1. sējums. Rīga: “Latvijas enciklopēdija”, 1995, 40.lpp.",
+      "raw": "3) 3. Vilsons A.Māksla un arhitektūra biogrāfijās, 1. sējums. Rīga: “Latvijas enciklopēdija”, 1995, 40.lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": "40",
+        "entry_author": null,
+        "entry_title": null
+      }
     }
   ],
   "source_refs": [

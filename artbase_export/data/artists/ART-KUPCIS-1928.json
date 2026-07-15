@@ -119,7 +119,23 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-MAB-II",
+      "type": "book",
+      "citation": "Māksla un arhitektūra biogrāfijās. Rīga, 1996, 2.daļa, 59.lpp",
+      "raw": "1) Māksla un arhitektūra biogrāfijās. Rīga, 1996, 2.daļa, 59.lpp",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "II",
+        "pages": "59",
+        "entry_author": null,
+        "entry_title": null
+      }
+    }
+  ],
   "source_refs": [],
   "conflicts": [],
   "cataloguing": {

@@ -130,6 +130,41 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Māksla un arhitektūra biogrāfijās, Latvijas enciklopēdija, Rīga, 1995.gads",
+      "raw": "1) 1. Māksla un arhitektūra biogrāfijās, Latvijas enciklopēdija, Rīga, 1995.gads",
+      "flags": [
+        "no-pages"
+      ],
+      "wikidata_batch_eligible": false,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": null,
+        "entry_author": null,
+        "entry_title": null
+      }
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Lapiņš A., Eglītis A. \"Kārlis Hūns\", Rīga: Latvijas valsts izdevnecība, 1953.gads",
+      "raw": "2) 2. Lapiņš A., Eglītis A. \"Kārlis Hūns\", Rīga: Latvijas valsts izdevnecība, 1953.gads",
+      "flags": [],
+      "wikidata_batch_eligible": false
+    },
+    {
+      "source_id": null,
+      "type": "web",
+      "citation": "Kļaviņš, Eduards \"Kārlis Hūns\", pieejams: http://www.makslasvesture.lv/index.php/Ka %C2%81rlis_H%C5%ABns",
+      "raw": "3) 3. Kļaviņš, Eduards \"Kārlis Hūns\", pieejams: http://www.makslasvesture.lv/index.php/Ka %C2%81rlis_H%C5%ABns",
+      "flags": [],
+      "wikidata_batch_eligible": false,
+      "url": "http://www.makslasvesture.lv/index.php/Ka",
+      "accessed": null
     }
   ],
   "source_refs": [

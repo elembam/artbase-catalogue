@@ -130,6 +130,39 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Māksla un arhitektūra biogrāfijās, Latvijas enciklopēdija, Rīga, 1995.gads",
+      "raw": "1) Māksla un arhitektūra biogrāfijās, Latvijas enciklopēdija, Rīga, 1995.gads",
+      "flags": [
+        "no-pages"
+      ],
+      "wikidata_batch_eligible": false,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": null,
+        "entry_author": null,
+        "entry_title": null
+      }
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Kalnačs Jānis, \".. sapņu zīmētājs Kārlis Padegs\", Rīga: Liesma, 1993.gads",
+      "raw": "2) Kalnačs Jānis, \".. sapņu zīmētājs Kārlis Padegs\", Rīga: Liesma, 1993.gads",
+      "flags": [],
+      "wikidata_batch_eligible": false
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Kalnačs Jānis, \"Variācijas par Kārļa Padega tēmu\", Rīga: Jāņa sēta, 1996.gads",
+      "raw": "3) Kalnačs Jānis, \"Variācijas par Kārļa Padega tēmu\", Rīga: Jāņa sēta, 1996.gads",
+      "flags": [],
+      "wikidata_batch_eligible": false
     }
   ],
   "source_refs": [

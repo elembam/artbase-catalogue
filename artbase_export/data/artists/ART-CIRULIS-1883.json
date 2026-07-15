@@ -130,6 +130,29 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Rinka R. Ansis Cīrulis: Saules pagalmos. Rīga: Neputns, 2008.",
+      "raw": "1) 1. Rinka R. Ansis Cīrulis: Saules pagalmos. Rīga: Neputns, 2008.",
+      "flags": [],
+      "wikidata_batch_eligible": false
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Vilsons A.Māksla un arhitektūra biogrāfijās, 1. sējums. Rīga: “Latvijas enciklopēdija”, 1995, 104.-105.lpp.",
+      "raw": "2) 2. Vilsons A.Māksla un arhitektūra biogrāfijās, 1. sējums. Rīga: “Latvijas enciklopēdija”, 1995, 104.-105.lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": "105",
+        "entry_author": null,
+        "entry_title": null
+      }
     }
   ],
   "source_refs": [

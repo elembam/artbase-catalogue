@@ -130,6 +130,29 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-III",
+      "type": "book",
+      "citation": "Ņefedova I. Skulme, Džemma // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 61­­–63. lpp.",
+      "raw": "1) Ņefedova I. Skulme, Džemma // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 61­­–63. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "III",
+        "pages": "63",
+        "entry_author": "Ņefedova I.",
+        "entry_title": "Skulme, Džemma"
+      }
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Slava L. Es domāju krāsās // Džemma Skulme / Sast. L. Slava. – Rīga: Neputns, 2015",
+      "raw": "2) Slava L. Es domāju krāsās // Džemma Skulme / Sast. L. Slava. – Rīga: Neputns, 2015",
+      "flags": [],
+      "wikidata_batch_eligible": false
     }
   ],
   "source_refs": [

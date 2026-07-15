@@ -130,6 +130,21 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-II",
+      "type": "book",
+      "citation": "Konstante I. Melnārs, Ādolfs // Māksla un arhitektūra biogrāfijās, II / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1996, 116. lpp.",
+      "raw": "1) Konstante I. Melnārs, Ādolfs // Māksla un arhitektūra biogrāfijās, II / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1996, 116. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "II",
+        "pages": "116",
+        "entry_author": "Konstante I.",
+        "entry_title": "Melnārs, Ādolfs"
+      }
     }
   ],
   "source_refs": [

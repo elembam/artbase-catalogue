@@ -40,5 +40,24 @@
       "uri": null,
       "status": null
     }
-  }
+  },
+  "sources": [
+    {
+      "source_id": "SRC-MAB-II",
+      "type": "book",
+      "citation": "Māksla un Arhitektūra biografijās. 2 daļa. Rīga: Latvijas enciklopēdija, 1996",
+      "raw": "1) Māksla un Arhitektūra biografijās. 2 daļa. Rīga: Latvijas enciklopēdija, 1996",
+      "flags": [
+        "no-pages"
+      ],
+      "wikidata_batch_eligible": false,
+      "mab": {
+        "series": "MAB",
+        "volume": "II",
+        "pages": null,
+        "entry_author": null,
+        "entry_title": null
+      }
+    }
+  ]
 }

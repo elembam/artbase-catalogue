@@ -130,6 +130,21 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Reihmane L. Junkers, Aleksandrs // Māksla un arhitektūra biogrāfijās, I / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1995, 224. lpp.",
+      "raw": "1) Reihmane L. Junkers, Aleksandrs // Māksla un arhitektūra biogrāfijās, I / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1995, 224. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": "224",
+        "entry_author": "Reihmane L.",
+        "entry_title": "Junkers, Aleksandrs"
+      }
     }
   ],
   "source_refs": [

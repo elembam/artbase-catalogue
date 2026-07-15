@@ -130,6 +130,31 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Vilsons, Andri, Māksla un arhitektūra biogrāfijās, Rīga: Latvijas enciklopēdija, 1995.gads",
+      "raw": "1) 1.Vilsons, Andri, Māksla un arhitektūra biogrāfijās, Rīga: Latvijas enciklopēdija, 1995.gads",
+      "flags": [
+        "no-pages"
+      ],
+      "wikidata_batch_eligible": false,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": null,
+        "entry_author": null,
+        "entry_title": null
+      }
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Cēbere, Gundega, Tukuma muzejs nacionālo vērtību ainavā, No: Runkovska, Ināra, Tukuma muzeja gleznu kolekcija, Izlase.Katalogs, Rīga: Neputns, 2005.gads",
+      "raw": "2) 2. Cēbere, Gundega, Tukuma muzejs nacionālo vērtību ainavā, No: Runkovska, Ināra, Tukuma muzeja gleznu kolekcija, Izlase.Katalogs, Rīga: Neputns, 2005.gads",
+      "flags": [],
+      "wikidata_batch_eligible": false
     }
   ],
   "source_refs": [

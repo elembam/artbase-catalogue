@@ -130,6 +130,21 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-IV",
+      "type": "book",
+      "citation": "Šmite E. Zemzaris, Uldis // Māksla un arhitektūra biogrāfijās, IV / Atb. red. A. Vanaga. R.: A/S Preses nams, 2003, 128.–129. lpp.",
+      "raw": "1) Šmite E. Zemzaris, Uldis // Māksla un arhitektūra biogrāfijās, IV / Atb. red. A. Vanaga. R.: A/S Preses nams, 2003, 128.–129. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "IV",
+        "pages": "129",
+        "entry_author": "Šmite E.",
+        "entry_title": "Zemzaris, Uldis"
+      }
     }
   ],
   "source_refs": [

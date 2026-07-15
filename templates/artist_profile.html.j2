@@ -355,6 +355,38 @@
     text-align: right;
   }
 
+  /* ── Sources / Literature ─── */
+  .sources-list { display: flex; flex-direction: column; gap: 8px; }
+
+  .source-row {
+    padding: 10px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    font-size: 0.85rem;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .source-row a { color: var(--seal); text-decoration: none; }
+  .source-row a:hover { text-decoration: underline; }
+
+  .source-extlink {
+    margin-left: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--ink-faded) !important;
+  }
+  .source-extlink:hover { color: var(--seal) !important; }
+
+  .source-type-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-right: 8px;
+  }
+
   /* ── Footer ─── */
   .footer {
     padding: 20px 48px;
@@ -545,6 +577,31 @@
     <p class="no-artworks">No artworks catalogued yet.</p>
     {% endif %}
   </section>
+
+  <!-- Sources -->
+  {% set sources = artist.get('sources') or [] %}
+  {% set citable_sources = sources | selectattr('citation', 'defined') | list %}
+  {% if citable_sources %}
+  <section class="section">
+    <div class="section-label">Sources</div>
+    <div class="sources-list">
+      {% for src in citable_sources %}
+      {% set reg = sources_registry.get(src.source_id) if src.source_id else None %}
+      <div class="source-row">
+        <span class="source-type-tag">{{ src.type }}</span>
+        {% if src.type == 'web' and src.url %}
+        <a href="{{ src.url }}" target="_blank" rel="noopener">{{ src.citation }}</a>
+        {% else %}
+        {{ src.citation }}
+        {% endif %}
+        {% if reg and reg.openlibrary_url %}
+        <a class="source-extlink" href="{{ reg.openlibrary_url }}" target="_blank" rel="noopener">OpenLibrary ↗</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
 
   <!-- Footer -->
   <footer class="footer">

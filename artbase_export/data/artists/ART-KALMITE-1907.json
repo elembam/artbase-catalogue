@@ -130,6 +130,31 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Ņefedova I. Kalmīte, Jānis // Māksla un arhitektūra biogrāfijās, I / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1995, 231.–232. lpp.",
+      "raw": "1) Ņefedova I. Kalmīte, Jānis // Māksla un arhitektūra biogrāfijās, I / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1995, 231.–232. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": "232",
+        "entry_author": "Ņefedova I.",
+        "entry_title": "Kalmīte, Jānis"
+      }
+    },
+    {
+      "source_id": null,
+      "type": "web",
+      "citation": "Šmite E. Gleznotājam Jānim Kalmītem – 100, pieejams: http://www.reitingi.lv/lv/news/kultura/15378.htm",
+      "raw": "2) Šmite E. Gleznotājam Jānim Kalmītem – 100, pieejams: http://www.reitingi.lv/lv/news/kultura/15378.htm",
+      "flags": [],
+      "wikidata_batch_eligible": false,
+      "url": "http://www.reitingi.lv/lv/news/kultura/15378.htm",
+      "accessed": null
     }
   ],
   "source_refs": [

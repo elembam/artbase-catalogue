@@ -123,7 +123,31 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-MAB-III",
+      "type": "book",
+      "citation": "Vanaga A. Sietiņš, Guntars // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 40­­–41. lpp.",
+      "raw": "1) 1. Vanaga A. Sietiņš, Guntars // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 40­­–41. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "III",
+        "pages": "41",
+        "entry_author": "Vanaga A.",
+        "entry_title": "Sietiņš, Guntars"
+      }
+    },
+    {
+      "source_id": null,
+      "type": "thesis",
+      "citation": "Šmiukše L. Guntara Sietiņa mecotintas. – LMA Bakalaura darbs, 2015. Darba vad. Mag. art.Aiga Dzalbe.",
+      "raw": "2) 2. Šmiukše L. Guntara Sietiņa mecotintas. – LMA Bakalaura darbs, 2015. Darba vad. Mag. art.Aiga Dzalbe.",
+      "flags": [],
+      "wikidata_batch_eligible": false
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",

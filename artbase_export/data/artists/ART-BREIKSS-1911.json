@@ -130,6 +130,29 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Tidomane G. Breikšs, Nikolajs // Māksla un arhitektūra biogrāfijās, I / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1995, 81.­–82. lpp.",
+      "raw": "1) Tidomane G. Breikšs, Nikolajs // Māksla un arhitektūra biogrāfijās, I / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1995, 81.­–82. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": "82",
+        "entry_author": "Tidomane G.",
+        "entry_title": "Breikšs, Nikolajs"
+      }
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Siliņš J. Latvijas māksla 1915–1940, II. Stokholma: Daugva, 1990.",
+      "raw": "2) Siliņš J. Latvijas māksla 1915–1940, II. Stokholma: Daugva, 1990.",
+      "flags": [],
+      "wikidata_batch_eligible": false
     }
   ],
   "source_refs": [

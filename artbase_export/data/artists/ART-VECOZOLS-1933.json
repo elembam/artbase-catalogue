@@ -130,6 +130,29 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-IV",
+      "type": "book",
+      "citation": "Konstante I. Vecozols, Imants // Māksla un arhitektūra biogrāfijās, IV / Atb. red. A. Vanaga. R.: A/S Preses nams, 2003, 34. lpp.",
+      "raw": "1) Konstante I. Vecozols, Imants // Māksla un arhitektūra biogrāfijās, IV / Atb. red. A. Vanaga. R.: A/S Preses nams, 2003, 34. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "IV",
+        "pages": "34",
+        "entry_author": "Konstante I.",
+        "entry_title": "Vecozols, Imants"
+      }
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Pelše S. Formas un satura līdzsvarotājs // Imants Vecozols / Sast. A.Treija, V.Birzaka. – Rīga: Galerija “Daugava”, 2008.",
+      "raw": "2) Pelše S. Formas un satura līdzsvarotājs // Imants Vecozols / Sast. A.Treija, V.Birzaka. – Rīga: Galerija “Daugava”, 2008.",
+      "flags": [],
+      "wikidata_batch_eligible": false
     }
   ],
   "source_refs": [

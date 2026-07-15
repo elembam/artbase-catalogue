@@ -119,7 +119,23 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-MAB-III",
+      "type": "book",
+      "citation": "Tidomane G. Sūniņš, Žanis // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 127.­­-128. lpp.",
+      "raw": "1) Tidomane G. Sūniņš, Žanis // Māksla un arhitektūra biogrāfijās, III / Atb. red. A. Vanaga. R.: A/S Preses nams, 2000, 127.­­-128. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "III",
+        "pages": "128",
+        "entry_author": "Tidomane G.",
+        "entry_title": "Sūniņš, Žanis"
+      }
+    }
+  ],
   "source_refs": [],
   "conflicts": [],
   "cataloguing": {

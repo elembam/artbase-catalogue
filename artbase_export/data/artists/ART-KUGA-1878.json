@@ -119,7 +119,23 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-MAB-II",
+      "type": "book",
+      "citation": "Jānis Kuga Ogres Vēstures un mākslas muzejā. Māksla un arhitektūra biogrāfijās. Rīga, 1996, 2.daļa, 55.lpp",
+      "raw": "1) Jānis Kuga Ogres Vēstures un mākslas muzejā. Māksla un arhitektūra biogrāfijās. Rīga, 1996, 2.daļa, 55.lpp",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "II",
+        "pages": "55",
+        "entry_author": null,
+        "entry_title": null
+      }
+    }
+  ],
   "source_refs": [],
   "conflicts": [],
   "cataloguing": {

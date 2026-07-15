@@ -119,7 +119,25 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-MAB-III",
+      "type": "book",
+      "citation": "Māksla un Arhitektūra biografijās. Rīga: Preses nams, 2000",
+      "raw": "1) Māksla un Arhitektūra biografijās. Rīga: Preses nams, 2000",
+      "flags": [
+        "no-pages"
+      ],
+      "wikidata_batch_eligible": false,
+      "mab": {
+        "series": "MAB",
+        "volume": "III",
+        "pages": null,
+        "entry_author": null,
+        "entry_title": null
+      }
+    }
+  ],
   "source_refs": [],
   "conflicts": [],
   "cataloguing": {

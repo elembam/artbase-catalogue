@@ -130,6 +130,31 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-II",
+      "type": "book",
+      "citation": "Burāne I. Ozols, Vilis // Māksla un arhitektūra biogrāfijās, II / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1996, 160. – 161. lpp.",
+      "raw": "1) Burāne I. Ozols, Vilis // Māksla un arhitektūra biogrāfijās, II / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1996, 160. – 161. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "II",
+        "pages": "161",
+        "entry_author": "Burāne I.",
+        "entry_title": "Ozols, Vilis"
+      }
+    },
+    {
+      "source_id": null,
+      "type": "web",
+      "citation": "Slava L. Vilis Ozols. http://www.studija.lv/?parent=1399",
+      "raw": "2) Slava L. Vilis Ozols. http://www.studija.lv/?parent=1399",
+      "flags": [],
+      "wikidata_batch_eligible": false,
+      "url": "http://www.studija.lv/?parent=1399",
+      "accessed": null
     }
   ],
   "source_refs": [

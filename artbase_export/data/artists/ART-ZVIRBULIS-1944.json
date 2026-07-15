@@ -130,6 +130,23 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-MAB-IV",
+      "type": "book",
+      "citation": "Māksla un arhitektūra biogrāfijās, Atb. red. A. Vanaga – Rīga, 2003 – 4. sēj.; A/S “Preses nams”, 2003.",
+      "raw": "1) Māksla un arhitektūra biogrāfijās, Atb. red. A. Vanaga – Rīga, 2003 – 4. sēj.; A/S “Preses nams”, 2003.",
+      "flags": [
+        "no-pages"
+      ],
+      "wikidata_batch_eligible": false,
+      "mab": {
+        "series": "MAB",
+        "volume": "IV",
+        "pages": null,
+        "entry_author": null,
+        "entry_title": null
+      }
     }
   ],
   "source_refs": [

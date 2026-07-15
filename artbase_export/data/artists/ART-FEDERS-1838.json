@@ -130,6 +130,29 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Ogle K. \"Starp tradīciju, dabu un jūtām\" // Kalniņš E., Ogle K., Pujāte I., Sakne I., Šmite E., Temerova D., Veiherte I. Jūlijs Feders. Rīga: 2013.",
+      "raw": "1) Ogle K. \"Starp tradīciju, dabu un jūtām\" // Kalniņš E., Ogle K., Pujāte I., Sakne I., Šmite E., Temerova D., Veiherte I. Jūlijs Feders. Rīga: 2013.",
+      "flags": [],
+      "wikidata_batch_eligible": false
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Tidomane G. Feders, Jūlijs // Māksla un arhitektūra biogrāfijās, I / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1995, 151. lpp.",
+      "raw": "2) Tidomane G. Feders, Jūlijs // Māksla un arhitektūra biogrāfijās, I / Atb. red. A. Vilsons. R.: Latvijas enciklopēdija, 1995, 151. lpp.",
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": "151",
+        "entry_author": "Tidomane G.",
+        "entry_title": "Feders, Jūlijs"
+      }
     }
   ],
   "source_refs": [

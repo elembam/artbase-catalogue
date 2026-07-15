@@ -130,6 +130,16 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": null,
+      "type": "web",
+      "citation": "www.makslinieki.lv",
+      "raw": "1) www.makslinieki.lv",
+      "flags": [],
+      "wikidata_batch_eligible": false,
+      "url": "www.makslinieki.lv",
+      "accessed": null
     }
   ],
   "source_refs": [

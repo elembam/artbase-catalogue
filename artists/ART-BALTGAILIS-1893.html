@@ -346,6 +346,38 @@
     text-align: right;
   }
 
+  /* ── Sources / Literature ─── */
+  .sources-list { display: flex; flex-direction: column; gap: 8px; }
+
+  .source-row {
+    padding: 10px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    font-size: 0.85rem;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .source-row a { color: var(--seal); text-decoration: none; }
+  .source-row a:hover { text-decoration: underline; }
+
+  .source-extlink {
+    margin-left: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--ink-faded) !important;
+  }
+  .source-extlink:hover { color: var(--seal) !important; }
+
+  .source-type-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-right: 8px;
+  }
+
   /* ── Footer ─── */
   .footer {
     padding: 20px 48px;
@@ -589,11 +621,41 @@
     
   </section>
 
+  <!-- Sources -->
+  
+  
+  
+  <section class="section">
+    <div class="section-label">Sources</div>
+    <div class="sources-list">
+      
+      
+      <div class="source-row">
+        <span class="source-type-tag">book</span>
+        
+        Pelše S. Figuratīvisma pastiprināšanās modernistu mākslā un tradicionālisma ekspansija. 1925–1934 // Latvijas mākslas vēsture V. Klasiskā modernisma un tradicionālisma periods 1915–1940 / Sast. E.Kļaviņš. – Jelgava: Latvijas Mākslas akadēmijas Mākslas vēstures institūts, Mākslas vēstures pētījumu atbalsta fonds, 2016. – 240.-242. lpp
+        
+        
+      </div>
+      
+      
+      <div class="source-row">
+        <span class="source-type-tag">periodical</span>
+        
+        Pūtele A. Ceļā uz monogrāfiju par Kārli Baltgaili // Mākslas Vēsture un Teorija. – 2019. – Nr.22. – 40.–58.lpp
+        
+        
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Footer -->
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-BALTGAILIS-1893</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-02</span>
+    <span>Exported 2026-07-15</span>
   </footer>
 
 </div>

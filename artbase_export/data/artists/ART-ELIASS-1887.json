@@ -130,6 +130,39 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": null,
+      "type": "periodical",
+      "citation": "Kairukštīte-Jaciniene H. Ģedertam Eliasam par piemiņu. Māksla, 1978, Nr.3., 10.lpp",
+      "raw": "1) 1. Kairukštīte-Jaciniene H. Ģedertam Eliasam par piemiņu. Māksla, 1978, Nr.3., 10.lpp",
+      "flags": [],
+      "wikidata_batch_eligible": false
+    },
+    {
+      "source_id": null,
+      "type": "book",
+      "citation": "Kaupere, M. Ģederts Eliass. Katalogs, Jelgava: Jelgavas tipogrāfija, 2002.",
+      "raw": "2) 2. Kaupere, M. Ģederts Eliass. Katalogs, Jelgava: Jelgavas tipogrāfija, 2002.",
+      "flags": [],
+      "wikidata_batch_eligible": false
+    },
+    {
+      "source_id": "SRC-MAB-I",
+      "type": "book",
+      "citation": "Māksla un arhitektūra biogrāfijās, Latvijas enciklopēdija, Rīga, 1995.gads",
+      "raw": "3) 3. Māksla un arhitektūra biogrāfijās, Latvijas enciklopēdija, Rīga, 1995.gads",
+      "flags": [
+        "no-pages"
+      ],
+      "wikidata_batch_eligible": false,
+      "mab": {
+        "series": "MAB",
+        "volume": "I",
+        "pages": null,
+        "entry_author": null,
+        "entry_title": null
+      }
     }
   ],
   "source_refs": [
