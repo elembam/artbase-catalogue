@@ -1,0 +1,146 @@
+{
+  "_schema": "artbase:artwork:v1",
+  "artbase_id": "AP-2026-000360",
+  "version": 1,
+  "exported": "2026-07-18T00:00:00Z",
+  "visibility": "public",
+  "object_id": {
+    "title": "Horse",
+    "title_en": "Horse",
+    "title_lv": "Zirgs",
+    "title_it": "Cavallo",
+    "object_type": "painting",
+    "materials": "Acrylic on canvas",
+    "materials_raw": "Audekls, akrils",
+    "dimensions_display": "10 × 12 cm",
+    "height_cm": 10.0,
+    "width_cm": 12.0,
+    "date_display": "2014",
+    "date_earliest": 2014,
+    "date_latest": 2014,
+    "maker_id": "ART-NEILANDE-1959",
+    "maker_display_name": "Ilze Neilande",
+    "has_photograph": false
+  },
+  "iconography": {
+    "iconclass_codes": [],
+    "iconclass_labels": [],
+    "depicts": []
+  },
+  "location": {
+    "collection": "Imago Mundi (Fondazione Benetton / FABRICA)",
+    "collection_qid": null,
+    "inventory_number": null,
+    "location_notes": "Private collection, not a public institutional anchor. One of ~200 works made specifically for the Imago Mundi collection by contributing artists (a small number of artists contributed two); see SRC-IMAGOMUNDI-LV-2014."
+  },
+  "provenance": [],
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "not_checked",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "rights": {
+    "public_domain": false,
+    "copyright_status": "in_copyright",
+    "license": null,
+    "attribution": "© Ilze Neilande / Imago Mundi (Fondazione Benetton)",
+    "source": "Living artist; work made for the Imago Mundi collection, 2014. Rights-restricted per the catalogue colophon (SRC-IMAGOMUNDI-LV-2014) -- describe/cite, do not redistribute. No image ingested."
+  },
+  "media": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "role": "work source",
+      "pages": [
+        282,
+        283
+      ]
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
+      "accessed": null
+    }
+  ],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "stub",
+    "catalogued_by": "instruction20_imago_mundi",
+    "notes": "Source: Latvia, WOW! Contemporary Artists from Latvia (Imago Mundi/FABRICA, 2014), p.282-283. No image ingested (rights-restricted).",
+    "tasks": [],
+    "engagement_ids": []
+  },
+  "score": {
+    "passport_score": 35,
+    "status": "grey",
+    "completeness": {
+      "value": 0.35,
+      "sections": [
+        {
+          "section": "identity",
+          "weight": 0.35,
+          "fill": 1.0,
+          "present": "6 of 6 fields",
+          "contribution": 0.35,
+          "in_scope": true
+        },
+        {
+          "section": "authority",
+          "weight": 0.25,
+          "fill": 0.0,
+          "present": "—",
+          "contribution": 0.0,
+          "in_scope": true
+        },
+        {
+          "section": "provenance",
+          "weight": 0.25,
+          "fill": 0.0,
+          "present": "no chain",
+          "contribution": 0.0,
+          "in_scope": true
+        },
+        {
+          "section": "structured",
+          "weight": 0.15,
+          "fill": 0.0,
+          "present": "—",
+          "contribution": 0.0,
+          "in_scope": true
+        },
+        {
+          "section": "condition",
+          "weight": 0.0,
+          "fill": null,
+          "present": "not commissioned",
+          "contribution": 0.0,
+          "in_scope": false
+        },
+        {
+          "section": "image",
+          "weight": 0.0,
+          "fill": null,
+          "present": "not commissioned",
+          "contribution": 0.0,
+          "in_scope": false
+        }
+      ]
+    },
+    "excluded": [
+      "source_quality_judgement",
+      "authenticity",
+      "monetary_value"
+    ],
+    "config_version": "weights-v3"
+  },
+  "score_generated_at": "2026-07-18T16:34:24+00:00"
+}

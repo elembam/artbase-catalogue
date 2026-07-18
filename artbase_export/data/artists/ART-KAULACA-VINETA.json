@@ -8,7 +8,12 @@
   },
   "life": {
     "birth_date": {
-      "value": null
+      "value": "1971",
+      "precision": "year",
+      "status": "working",
+      "source_ids": [
+        "SRC-IMAGOMUNDI-LV-2014"
+      ]
     },
     "death_date": {
       "value": null
@@ -39,5 +44,39 @@
       "uri": null,
       "status": null
     }
+  },
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          188,
+          189
+        ],
+        "pdf_page": 94
+      }
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
+      "accessed": null
+    }
+  ],
+  "biography": {
+    "en": "She studied at the Art Academy of Latvia (BA, 1997; MA, 2002), Humboldt State University, California (1996), and the Berlin University of the Arts (2000). Selected awards and scholarships: Nomination for the Purvītis Award, 2013; Irish Museum of Modern Art residency, Dublin; Triangle Artists Workshop, New York; Cité Internationale des Arts, Paris; Raid Projects, Los Angeles; Braziers International Artists Workshop, Oxfordshire. Solo exhibition: Absorption, Māksla XO Gallery, Riga, 2012. Selected group exhibitions: NordArt 2013, Kunstwerk Carlshutte, Budelsdorf, 2013; New in Latvian painting, Art House of Tartu, Tartu, 2012; Center–Periphery, Palazzo delle Esposizioni, Rome, 2012; Source of light, Riga Museum of Decorative Arts and Design, Riga, 2012; 2nd Semiannual, Dave Bown Projects, New York, 2011.",
+    "lv": "Studējusi Latvijas Mākslas akadēmijā (BA, 1997; MA, 2002), Valsts Humbolta Universitātē, Foto un Glezniecības nodaļās, Arkeita, Kalifornija (1996), Berlīnes Mākslas univesitātē (2000). Nozīmīgākie apbalvojumi un stipendijas: Nominācija Purvīša balvai, 2013; Īru Modernās Mākslas muzeja mākslas residence, Dublina; Triangle Mākslinieku darbnīcas, Ņujorka; Cite Starpatutiskās darbnīcas, Parīze; Reid Projekts, Losandželosa; Breiziers Starpatutiskās Mākslas darbnīcas, Oksfordšīra. Personālizstāde: Absorbcija, galerija Māksla XO, Rīga, 2012. Jaunākās grupu izstādes: NordArt 2013, Kunstwerk Carlshutte, Bīdelsdorfa, 2013; Jaunais Latvijas glezniecībā, Tartu Mākslas māja, Tartu, 2012; Centrs–Perifērija, Palazzo delle Esposizioni, Roma, 2012; Gaismas avots, Dekoratīvās mākslas un dizaina muzejs, Rīga, 2012; 2nd Semiannual, Dave Bown Projects, Ņujorka, 2011.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      188,
+      189
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
   }
 }

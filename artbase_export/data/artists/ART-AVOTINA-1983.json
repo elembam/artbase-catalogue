@@ -131,12 +131,32 @@
       "raw": "1) Ževaite I. Hansabankas mūsdienu mākslas kolekcija. Rīga: Hansabanka, 2007, 24.lpp.",
       "flags": [],
       "wikidata_batch_eligible": false
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          52,
+          53
+        ],
+        "pdf_page": 27
+      }
     }
   ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -154,5 +174,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Art Academy of Latvia (MA, 2011), and the Escola Massana in Barcelona (2010). Selected solo exhibitions: Instinct, Antonijas Street 26 Art Room, Riga, 2013; Northern star, Vīna Studija Gallery, Riga, 2012; Eden, Kadieff Gallery, Helsinki, 2012; Bali. Garden of Eden, Latvian National Museum of Art, creative workshop, Riga, 2011; From Barcelona with Love, Montcada Gallery, Barcelona, 2010; 1000 and 1 nights, DFab Exhibition Hall, Riga, 2010; Garden of Thoughts, Ivonna Veiherte Gallery, Riga, 2009. Selected group exhibition: Candy Bomber, Arsenāls Exhibition Hall, Riga, 2008.",
+    "lv": "Studējusi glezniecību Latvijas Mākslas akadēmijā (MA, 2011), Escola Massana, Barselona (2010). Nozīmīgākās personālizstādes: Instinkts, mākslas telpa Antonijas ielā 26, Rīga, 2013; Ziemeļu Zvaigzne, galerija Vīna studijā, Rīga, 2012; Ēdene, galerija Kadieff, Helsinki, 2012; Bali. Ēdenes dārzs, Latvijas Nacionālais mākslas muzejs, radošā darbnīca, Rīga, 2011; From Barcelona with Love, galerija Montcada, Barselona, 2010; 1000 un 1 nakts, izstāžu zāle DFab, Rīga, 2010; Domu Dārzs, Ivonnas Veihertes mākslas galerijā, Rīga, 2009. Nozīmīgākā grupu izstādes: Našķu bumba, izstāžu zāle Arsenāls, Rīga, 2008.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      52,
+      53
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          252,
+          253
+        ],
+        "pdf_page": 126
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -145,5 +166,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Art Academy of Latvia (1972). She is an associate professor at the Art Academy of Latvia, Department of Painting. The painter is sincere in revealing the subject, interpreting her main theme–inner emotional experiences and world perception. Group exhibitions: Biennial of Illustrations, Bratislava, 2013; Private Process, Exhibition of professors of the Painting Department of the Art Academy of Latvia, Riga, 2013; Triennial of Illustrations of Children’s Books, Tallinn, 2013; ASPAS 2nd Pastel Biennale, Oviedo, 2013; Baltic Bridges, International Watercolor Biennale, Kaunas, 2012; Three artists, three worlds, Akvarellcenter Gallery, Sollentuna, 2011.",
+    "lv": "Absolvējusi Latvijas Mākslas akadēmiju (1972). Latvijas Mākslas akadēmijas Gleznieības katedras asociētā profesore. Māksliniece ir patiesa, interpretējot savu iemīļoto tēmu–emocionālo spriedzi un pasaules uztveri. Grupu izstādes: Biennial of Illustrations, Bratislava, 2013; Privātais process, Latvijas Mākslas akadēmijas aula, Rīga, 2013; Bērnu grāmatu ilustrāciju triennāle, Tallina, 2013; ASPAS otrā pasteļu biennāle, Ovjedo, 2013; Starptautiskā akvareļu biennāle Baltic Bridges, Kauņa, 2012; Three artists, three worlds, galerija Akvarellcenter, Sollentūna, 2011.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      252,
+      253
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

@@ -40,5 +40,39 @@
       "uri": null,
       "status": null
     }
+  },
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          244,
+          245
+        ],
+        "pdf_page": 122
+      }
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
+      "accessed": null
+    }
+  ],
+  "biography": {
+    "en": "She studied at the Janis Rozentāls Secondary School of Art in Riga (1975), the Art Academy of Latvia, Department of Painting (1981), as well as attended a traineeship at the USSR Academy of Art (1987). She is a member of the Artists’ Union of Latvia (1983). Selected solo exhibitions: Outside, Daugava Gallery, Riga, 2013; Paintings, Daugava Gallery, Riga, 2007, 2009; Paintings, Latvian National Museum of Art, Riga, 2005. Selected group exhibitions: Contemporary Painting of Latvia, MOYA, Vienna, 2008; Visions and Reality, Exhibition of Contemporary Latvian Painting, Pulchri Studio, The Hague, 2006; Testimonio de la fe, Madrid City Museum, Madrid, 2002. Works in public collections: Latvian National Museum of Art; Artists’ Union of Latvia Museum; Bank of Latvia; Swedbank (Riga); The State Tretyakov Gallery (Moscow); Jane Voorhes Zimmerli Museum; Rutgers University (NJ, USA).",
+    "lv": "Absolvējusi Jaņa Rozentāla Rīgas Mākslas vidusskolu (1975), Latvijas Mākslas akadēmijas Glezniecības nodaļu (1981), stažējusies PSRS Mākslas akadēmijā (1987). Latvijas Mākslinieku savienības biedre (1983). Jaunākās personālizstādes: Ārpusē, galerija Daugava, Rīga, 2013; Gleznas, galerija Daugava, Rīga, 2007, 2009; Gleznas, Latvijas Nacionālais mākslas muzejs, Rīga, 2005. Nozīmīgākās grupu izstādes: Latvijas mūsdienu glezniecība, MOYA, Vīne, 2008; Vīzijas un realitāte, mūsdienu latviešu mākslas glezniecības izstāde, Puchri Studio, Hāga, 2006; Testimonio de la fe, Madrides pilsētas muzejs, Madride, 2002. Darbi kolekcijās: Latvijas Nacionālais mākslas muzejs; Latvijas Mākslinieku savienības muzejs; Latvijas Banka, Swedbank (Rīga); Valsts Tretjakova galerija (Maskava); Jane Voorhes Zimmerli muzejs, Ratgeras (Rutgers) universitāte (Ņūdžersija, ASV).",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      244,
+      245
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
   }
 }

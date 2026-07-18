@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          424,
+          425
+        ],
+        "pdf_page": 211
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -145,5 +166,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "He studied painting at the Janis Rozentāls Secondary School of Art in Riga (1980), and the Art Academy of Latvia (1986). He is a member of the Artists’ Union of Latvia (1987). He is a professor at the Art Academy of Latvia (2008). Award: Lielais Kristaps, Latvian National Film Award, Best Animation Artist, 2009. Selected solo exhibitions: Island of dreams, Māksla XO Gallery, Riga, 2013; Presence, Mūkusala Art Gallery, Riga, 2012; Inner Voice, White Hall of the Latvian National Museum of Art, Riga, 2010; Kaspars Zariņš. Paintings, Latvian Embassy in Austria, Wien, 2007. He has works in following collections: The Wurth Collection, Schwabisch Hall, Germany; Ministry of Culture of the Republic of Latvia; Collection of the Ministry of Culture of Russia; Tartu Art Museum, Tartu; Private collection of Mikhail Baryshnikov, New York; Private collection of Andrey Gertsev, Moscow.",
+    "lv": "Studējis glezniecību Jaņa Rozentāla Rīgas Mākslas vidusskolā (1980), Latvijas Mākslas akadēmijā (1986). Latvijas Mākslinieku savienības biedrs (1987). Latvijas Mākslas akadēmijas profesors (2008). Apbalvojums: Lielais Kristaps, Latvijas nacionālā kino balva kategorijā Labākais animācijas filmas mākslinieks, 2009. Nozīmīgākās jaunākās personalizstādes: Sapņu sala, galerija Māksla XO, Rīga, 2013; Klātbūtne, Mūkusalas mākslas salons, Rīga, 2012; Iekšējā balss, Latvijas Nacionālais mākslas muzejs, Rīga, 2010; Kaspars Zariņš. Glezniecība, Latvijas vēstniecība Austrijā, Vīne, 2007. Darbi kolekcijās: The Wurth museum Collection, Švābu Halle, Vācija; Latvijas Republikas Kultūras ministrija; Krievijas Federācijas Kultūras ministrijas kolekcija; Tartu Mākslas muzejs, Tartu; Mihaila Barišņikova privātkolekcija, Nujorka; Andreja Gerceva privātkolekcija, Maskava.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      424,
+      425
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

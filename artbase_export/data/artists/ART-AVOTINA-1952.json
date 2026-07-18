@@ -146,12 +146,32 @@
         "entry_author": null,
         "entry_title": null
       }
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          50,
+          51
+        ],
+        "pdf_page": 26
+      }
     }
   ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -169,5 +189,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Janis Rozentāls Secondary School of Art in Riga (1970), and the Art Academy of Latvia (1979). She is a member of the Artists’ Union of Latvia (1980). Selected solo exhibitions: Bear of Happiness, Alma Gallery, Riga, 2010; Dream of Happiness, Ivonna Veiherte Gallery, Riga, 2009; Garden of Memories, Riga Gallery, Riga, 2007; Gallery of Artists’ Union of Latvia, Riga, 2004; Vartai Gallery, Vilnius, 1997. Selected group exhibitions: Women painting women, Gdansk, 2003; Latvian Art in 20th Century, Zwolle City Museum, Zwolle, 2002; Vilnius Painting Triennial, Centre of Contemporary Art, Vilnius, 1996. Works in collections in the Latvian National Museum of Art, the Artists’ Union of Latvia, Tretyakov State Gallery, Moscow.",
+    "lv": "Studējusi glezniecību Jaņa Rozentāla mākslas vidusskolā (1970), Latvijas Mākslas akadēmijā (1979). Latvijas Mākslinieku savienības biedre (1980). Nozīmīgākās personālizstādes: Laimes lācis, galerija Alma, Rīga, 2010; Sapnis par laimi, Ivonnas Veihertes galerija, Rīga, 2009; Atmiņu dārzs, Rīgas galerija, Rīga, 2007; Latvijas Mākslinieku savienības galerija, Rīga, 2004; Galerija Vartai, Viļņa, 1997. Nozīmīgākās grupu izstādes: Sieviete glezno sievieti, Gdaņska, 2003; Latvijas māksla. 20. gadsimts, Zvolles pilsētas mākslas muzejs, Zvolle, 2002; Viļņas glezniecības triennāle, Laikmetīgās mākslas centrs, Viļņa, 1996. Darbi Latvijas Nacionālā mākslas muzeja, Latvijas Mākslinieku savienības un Tretjakova galerijas (Maskava) kolekcijās.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      50,
+      51
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

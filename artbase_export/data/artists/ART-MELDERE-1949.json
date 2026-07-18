@@ -130,12 +130,32 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          272,
+          273
+        ],
+        "pdf_page": 136
+      }
     }
   ],
   "source_refs": [
     {
       "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
       "role": null,
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -150,5 +170,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Art Academy of Latvia (1973). She is a member of the Artists’ Union of Latvia (1973). Selected solo exhibitions: Expressions. Abstract painting, Daugavpils Mark Rothko Art Center, Daugavpils, 2014; Talk to me, Jūrmala City Museum, Jūrmala, 2009; The coming. My abstraction, the Latvian National Museum of Art, Riga, 2002; To leave, to return, the Latvian National Museum of Art, Riga, 1995. Selected group exhibition: Baltic Bridges, International Watercolor Biennial, Kaunas, 2012.",
+    "lv": "Studējusi glezniecību Latvijas Mākslas akadēmijā (1973). Latvijas Mākslinieku savienības biedre (1973). Nozīmīgākās personālizstādes: Ekspresijas. Abstraktā glezniecība, Marka Rotko mākslas centrs, Daugavpils, 2014; Runā ar mani, Jūrmalas pilsētas muzejs, Jūrmala, 2009; Atnākošais, Mana abstrakcija, Latvijas Nacionālais mākslas muzejs, Rīga, 2002; Aizejošais, Latvijas Nacionālais mākslas muzejs, Rīga, 1995. Nozīmīgākā jaunākā grupas izstāde: Baltic Bridges, starptautiskā akvareļglezniecības biennāle, Kauņa, 2012.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      272,
+      273
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

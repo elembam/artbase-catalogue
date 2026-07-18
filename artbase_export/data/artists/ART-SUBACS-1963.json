@@ -40,5 +40,39 @@
       "uri": null,
       "status": null
     }
+  },
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          370,
+          371
+        ],
+        "pdf_page": 184
+      }
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
+      "accessed": null
+    }
+  ],
+  "biography": {
+    "en": "He studied at the Riga Secondary School of Applied Arts (1982), and the Art Academy of Latvia, Department of Graphics (1988). He is a member of the Artists’ Union of Latvia (1989). He has created book illustrations together with pastor Juris Rubenis. Solo exhibition: New work and retrospect, Riga Art Space, Riga, 2010. He has participated in numerous exhibitions with the “LPSR–Z” group of artists, 1988–1994.",
+    "lv": "Absolvējis Rīgas Lietišķās mākslas vidusskolu (1982), Latvijas Mākslas akadēmijas Grafikas nodaļu (1988). Latvijas Mākslinieku savienības biedrs (1989). Veidojis ilustrācijas grāmatām kopā ar mācītāju Juri Rubeni. Personālizstāde: Jaunie darbi un retrospekcija, Rīgas Mākslas telpa, Rīga, 2010. Piedalījies vairākās izstādes kopā ar mākslinieku grupu LPSR–Z, 1988–1994.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      370,
+      371
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
   }
 }

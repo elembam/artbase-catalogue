@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          204,
+          205
+        ],
+        "pdf_page": 102
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -145,5 +166,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Art Academy of Latvia, Department of Monumental Painting (1982). Selected solo exhibitions: Monday. Tuesday. Wednesday. Thursday. And night..., Riga Gallery, Riga, 2012; Painting and painting, Latvian National Museum of Art, Riga, 2000. Selected group exhibitions: Is It That He Does Not Seek The Truth, But Does Want To Influence?, Riga Art Space, Riga, 2011; 6 Views, Museum of Contemporary Art, Minsk, Museum of Mark Chagall, Vitebsk, 2008; Abduction of Europe, Art Museum of Eskilstuna, Eskilstuna, 2004; New reality. Identification, APT MOCКBA (Art Moscow) Project, Moscow, 2001. Her works are in collections of the Latvian National Museum of Art, the Museum of the Artists’ Union of Latvia, the Ludwig Museum, Cologne, and the Tretyakov State Gallery, Moscow.",
+    "lv": "Studējusi Latvijas Mākslas akadēmijas Monumentālās glezniecības nodaļā (1982). Nozīmīgākās personālizstādes: Pirmdiena. Otrdiena. Trešdiena. Ceturtdiena. Un nakts..., Rīgas Galerija, Rīga, 2012; Glezna un Glezna, Latvijas Nacionālais mākslas muzejs, Rīga, 2000. Nozīmīgākās jaunākās grupu izstādes: Viņš nemeklē patiesību, viņš grib iespaidot?, Rīgas Mākslas telpa, Rīga, 2011; 6 Views, Laikmetīgās mākslas muzejs, Minska, Marka Šagāla muzejs, Vitebska, 2008; Eiropas nolaupīšana, Eskilstunas Mākslas muzejs, Eskilstuna, 2004; Jauna realitāte. Identifikācija, projekts APT MOCКBA, Maskava, 2001. Darbi kolekcijās: Latvijas Nacionālais mākslas muzejs; Latvijas Mākslinieku savienības muzejs; Ludviga muzejs, Ķelne; Tretjakova galerija, Maskava.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      204,
+      205
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

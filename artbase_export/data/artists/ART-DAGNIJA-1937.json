@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          96,
+          97
+        ],
+        "pdf_page": 48
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -145,5 +166,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Arts Students League, New York (1956), the Art School of the Society of Arts and Crafts, Detroit (1959), and the Chouinard Institute, Los Angeles (1960). She worked at OCCC Art School, Demarest City, New Jersey (1985–2001). She participated in the “Art in Embassies” Program of the USA State Department (1991–2001). She was a Nominee of the Baltic Assembly Culture Award, the Artists’ Union of Latvia, 2005. She has held several solo exhibitions at the museums and galleries in the USA and Latvia. She has participated in numerous group exhibitions in the USA and Latvia, including: P.S.1 Institute of Contemporary Art, New York; New Jersey State Museum, Trenton, New Jersey; City Without Walls Gallery, Newark, New Jersey; Frank J. Miele Gallery, New York; Stables Gallery, Taos, New Mexico.",
+    "lv": "Absolvējusi Mākslinieku studentu līgu Ņujorkā (1956), Mākslas un dekoratīvi lietišķo skolu Detroitā, ASV (1959), Chouinard Institūtu Losandželosā, ASV (1960). Strādājusi OCCC Mākslas skolā, Demaresta, Ņūdžersija (1985–2001). Ņēmusi dalību ASV Valsts departamenta programmā Art in Embassies (1991–2001). Latvijas Mākslinieku savienības Baltijas Asamblejas kultūras balvas nominante, 2005. Sarīkojusi vairākus desmitus personālizstāžu ASV un Latvijas muzejos un galerijās. Piedalījusies daudzās grupu izstādēs ASV un Latvijā, tai skaitā, P.S.1 Modernās mākslas institūts, Ņujorka; Ņūdžersijas Nacionālais muzejs, Trentona, Ņūdžersija; galerijā City Without Walls, Ņuarka; Frank J. Miele galerija, Ņujorka; Stables galerijā, Taosā, ASV.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      96,
+      97
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

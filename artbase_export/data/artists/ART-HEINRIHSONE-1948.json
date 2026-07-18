@@ -145,12 +145,32 @@
         "entry_author": "Burāne I.",
         "entry_title": "Heinrihsone, Helēna"
       }
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          142,
+          143
+        ],
+        "pdf_page": 71
+      }
     }
   ],
   "source_refs": [
     {
       "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
       "role": null,
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -165,5 +185,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Janis Rozentāls Secondary School of Art in Riga (1967), and the Art Academy of Latvia, Department of Painting (MA, 1973). She works in oil painting, lithography, book illustration, porcelain painting, animation, and watercolor. She has participated in exhibitions since 1972. Awards: Nominee for the Purvītis Award, 2009; Annual Culture Award, Diena Newspaper, 2008; Lielais Kristaps, Best Animation Artists, Award of the Latvian Filmmakers Union, 2008; Order of the Three Stars for Merits in Service for Latvia, 2008; Annual Award of the Latvian National Museum of Art, 2007. Selected solo exhibitions: Magic Realism, Bastejs Gallery, Riga, 2014; Hot, Māksla XO Gallery, Riga, 2013; Fetishes, Bastejs Gallery, Riga, 2013; Flat, Māksla XO Gallery, Riga, 2012; Observers, Bastejs Gallery, Riga, 2012; Red Dot Art Fair, Skyline Studios, New York, 2010.",
+    "lv": "Studējusi glezniecību Jaņa Rozentāla Rīgas mākslas vidusskolā (1967), Latvijas Mākslas akadēmijā (MA, 1973). Glezno, darbojas arī grafikā, akvarelī, grāmatu grafikā, porcelāna apgleznošanā, animācijā. Izstādēs piedalās kopš 1972. g. Apbalvojumi: Nominācija Purvīša balvai, 2009; Gada balva kultūrā, laikraksts Diena, 2008; Labākā animācijas māksliniece, augstākais Latvijas kino apbalvojums Lielais Kristaps, 2008; Triju Zvaigžņu ordenis, 2008; Gada balva, Latvijas Nacionālais mākslas muzejs, 2007. Nozīmīgākās jaunākās personālizstādes: Maģiskais reālisms, galerija Bastejs, Rīga, 2014; Hot, galerija Māksla XO, Rīga, 2013; Fetiši, galerija Bastejs, Rīga, 2013; Dzīvoklis, galerija Māksla XO, Rīga, 2012; Vērotāji, galerija Bastejs, Rīga, 2012; Red Dot Art Fair, Skyline Studios, Ņujorka, 2010.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      142,
+      143
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

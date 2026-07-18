@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          282,
+          283
+        ],
+        "pdf_page": 141
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -145,5 +166,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Janis Rozentāls Secondary School of Art in Riga (1997), and the Art Academy of Latvia, in Monumental Painting (BA, 1984; MA, 1993). She is a member of the Artists’ Union of Latvia (1991). She is a teacher of Painting at the Art Academy of Latvia (2000). She was a teacher of Painting and Composition at the Bolderāja Music and Art School (2000–2006). She was a teacher of Painting at the Adult Education Center of the University of Latvia (1995–2001), as well as a teacher of Painting at the University of Latvia, Department of Pedagogy, and Department of Visual Art (1989–1995). Awards: Indriķis Zeberiņš children’s book illustration contest award, 2002; Grand prix, Painting of the year, Exhibition by Hansabanka and Agija Sūna, 2001. She has participated in exhibitions since 1982.",
+    "lv": "Absolvējusi Jāņa Rozentāla Rīgas Mākslas vidusskolu (1977), Latvijas Mākslas akadēmijā glezniecības studijas (BA, 1984; MA, 1993). Latvijas Mākslinieku savienības biedre (1991). Latvijas Mākslas akadēmijas gleznošanas pasniedzēja (2000), Bolderājas Mūzikas un mākslas skolas gleznošanas un kompozīcijas skolotāja (2000–2006), Latvijas Universitātes Pieaugušo pedagoģiskās izglītības centra gleznošanas pasniedzēja (1995–2001), Latvijas Universitātes Pedagoģijas fakultātes Vizuālās mākslas katedras gleznošanas pasniedzēja (1989–1995). Apbalvojumi: Indriķa Zeberiņa prēmija bērnu grāmatu ilustrāciju konkursā, 2002; Hansabankas un Agijas Sūnas organizētās izstādes Gada glezna balva, 2001. Izstādēs piedalās kopš 1982. g.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      282,
+      283
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          150,
+          151
+        ],
+        "pdf_page": 75
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -145,5 +166,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Riga Secondary School of Applied Arts (1976), and the Art Academy of Latvia, Department of Painting (MA, 1982). She is docent of the Department of Painting at the Art Academy of Latvia (2003). She has participated in exhibitions since 1977. Works exhibited: The Latvian National Museum of Art, Riga; Latvian Contemporary Art Museum, Riga; Jane Voorhees Zimmerli Art Museum, Rutgers University, New Brunswick, New Jersey; Ludwig Museum, Aachen; ECB’s Art Collection, Frankfurt; State Tretyakov Gallery, Moscow. Ieva Iltnere's painting is associated with a very fine and laconic depiction, pronounced aestheticism and coloring, sensitivity, delicate attitude towards each nuance of painting. In her paintings, super–temporal aestheticism, ornamentality and beauty are mixed with documentation of the era, irony and even social commentary.",
+    "lv": "Absolvējusi Rīgas Lietišķās mākslas vidusskolu (1976), Latvijas Mākslas akadēmijas Glezniecības nodaļu (MA, 1982). LMA glezniecības katedras docente (2003). Izstādēs piedalās kopš 1977. g. Darbi eksponēti: Latvijas Nacionālajā mākslas muzejā; Latvijas Laikmetīgās mākslas muzeja kolekcijā; Jane Voorhees Zimmerli mākslas muzejā, Ņūbransvika, ASV; Ludviga muzejā, Āhene, Vācija; Eiropas Centrālās bankas mākslas kolekcijā, Frankfurte; Valsts Tretjakova galerijā, Maskava. Ievas Iltneres glezniecība asociējas ar īpaši izsmalcinātu un minimālu tēlojumu, izteiktu estētismu un krāsu kolorītu, jutīgumu, delikātu attieksmi pret jebkuru glezniecisku niansi. Viņas gleznās pārlaiciskais estētisms, ornamentalitāte un skaistums neparastā kārtā apvienojas ar laikmeta dokumentējumu, ironiju un sociālu komentāru.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      150,
+      151
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          292,
+          293
+        ],
+        "pdf_page": 146
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -145,5 +166,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied Fashion Design (BA, 1998) and Painting (MA, 2000) at the Art Academy of Latvia. She has designed costumes for: Kamēr Choir, Moon opera show, 2012; TV shows and concerts, 2008–2011; Snow White And The Seven Dwarves Ballet, Latvian National Opera, Riga, 2005; Die Fledermaus Operetta, Latvian National Opera, Riga, 2002; Advertisements in shop windows, 2000–2002; Singer Renārs Kaupers and Entertainer Baiba Sipeniece, since 1992. Award: Award for non–traditional solutions at Miniatures Exhibition, Riga Gallery, 2005. Solo exhibitions: Gold Fund, UPB office, Liepāja, 2010; Works of Elita, Vīna Studija, Riga, 2009; Latgola Hotel, Daugavpils, 2006. Group exhibitions: Drawings exhibitions, Riga Gallery, Māksla XO Gallery, M6 Gallery, Riga, 2006; Carnival of Goya, Māksla XO Gallery, Riga, 2006.",
+    "lv": "Izglītība: Latvijas Mākslas akadēmija, modes dizains (BA, 1998), glezniecība (MA, 2000). Tērpu autore: korim Kamēr, opera Mēness, 2012; TV šovi un lielkoncerti, 2008–2011; balets Sniegbaltīte un septiņi rūķīši, Latvijas Nacionālā opera, Rīga, 2005; operete Sikspārnis, Latvijas Nacionālā opera, Rīga, 2002; televīzijas šovi un raidījumi, reklāmas, skatlogi, 2000–2002; skatuves mākslinieki Renārs. Kaupers, Baiba Sipeniece, kopš 1992. Apbalvojuns: Godalga par netradicionālu darba risinājumu izstādē Miniatūras, Galerija Rīga, 2005. Personālizstādes: Zelta fonds, UPB birojs, Liepāja, 2010; Elitas darbi, Vīna studija, Rīga, 2009; Personālizstāde, viesnīca Latgola, Daugavpils, 2006. Grupu izstādes: Zīmējumu izstādes, galerijas Rīga, Māksla XO un M6, Rīga, 2006; Goijas karnevāls, galerija Māksla XO, Rīga, 2006.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      292,
+      293
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

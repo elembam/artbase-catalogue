@@ -8,7 +8,12 @@
   },
   "life": {
     "birth_date": {
-      "value": null
+      "value": "1964",
+      "precision": "year",
+      "status": "working",
+      "source_ids": [
+        "SRC-IMAGOMUNDI-LV-2014"
+      ]
     },
     "death_date": {
       "value": null
@@ -39,5 +44,39 @@
       "uri": null,
       "status": null
     }
+  },
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          206,
+          207
+        ],
+        "pdf_page": 103
+      }
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
+      "accessed": null
+    }
+  ],
+  "biography": {
+    "en": "She studied Painting and Graphic Arts at the Art Academy of Latvia, and attended a workshop of Monumental Painting (MA, 2012). Awards: Nomination for the Purvītis Prize for solo exhibition: The Light diverges from the Darkness, Māksla XO Gallery, 2011. Selected solo exhibitions: Zephyr and kefir, Māksla XO Gallery, Riga, 2013; Applied painting, Riga Porcelain Museum, Riga, 2013; Pollution of light, Māksla XO Gallery, Riga, 2012. Selected group exhibitions: Grafika–S, Riga Art Space, Riga, 2014; Graphics from Latvia, Museum of Graphics, Bad Steben, 2012.",
+    "lv": "Studējusi glezniecību un grafiku Latvijas Mākslas akadēmijā, Monumentālas glezniecības meistardarbnīcā (MA, 2012). Apbalvojumi: Nominācija Purvīša balvai par personālizstādi Gaismas atdalīšana no tumsas, galerija Māksla XO, 2011. Jaunākās personālizstādes: Zefīrs & kefīrs, galerija Māksla XO, Rīga, 2013; Lietišķā glezniecība, Rīgas Porcelāna muzejs, Rīga, 2013; Gaismas piesārņojums, galerija Māksla XO, Rīga, 2012. Nozīmīgākās grupu izstādes: Grafika–S, Rīgas Mākslas telpa, Rīga, 2014; Grafika no Latvijas, Grafikas Muzejs, Badštēbene, 2012.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      206,
+      207
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
   }
 }

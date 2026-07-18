@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          124,
+          125
+        ],
+        "pdf_page": 62
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -154,5 +175,15 @@
       "work_count": 6,
       "display_name": "Kristaps Ģelzis"
     }
-  ]
+  ],
+  "biography": {
+    "en": "He studied graphics at the Art Academy of Latvia (1986). He is associate professor at the Department of Visual Communication and the Department of Environmental Art at the Art Academy of Latvia (2011). Awards: Purvītis Awards, 2011; Diena Newspaper Award in Culture, 2010. Representative of Latvia at the 54th Venice Biennial Artificial Peace, Palazzo Albrizzi, 2011. Selected solo exhibitions: Māksla XO Gallery, Riga, 2013; Pulpit (cooperating with composer Ģirts Bišs), Gallery of the Riga Dome, 2013; Food for thought, Māksla XO Gallery, Riga, 2012. Works in public collections: Kiasma Museum of Contemporary Art, Helsinki; Jane Voorhees Zimmerli Art Museum, New Brunswick, New Jersey; The Latvian National Museum of Art, Riga; Museum of Contemporary Art, Riga; Museum of the Artists' Union of Latvia, Riga: Art Museum of Tukums, Tukums.",
+    "lv": "Studējusi grafiku Latvijas Mākslas akadēmijā (1986). Asociētais profesors Valsts Mākslas akadēmijas Vizualās komunikācijas, Grafikas un Vides mākslas katedrās (2011). Apbalvojumi: Purvīša balva, 2011; Laikraksta Diena Gada balva kultūrā, 2010. Latvijas pārstāvis 54. Venēcijas mākslas biennālē, Mākslīgais miers, Palazzo Albrizzi, 2011. Jaunākās personālizstādes: galerija Māksla XO, Rīga, 2013; Kancele (sadarbībā ar komponistu Ģirtu Bišu), Rīgas Doma Dārza galerija, 2013; Viela Pārdomām, galerija Māksla XO, Rīga, 2012. Darbi nozīmīgākajās publiskajās kolekcijās: Mūsdienu laikmetīgās mākslas muzejs Kiasma, Helsinki; Jane Voorhees Zimmerli mākslas muzejs, Ņūbransvika, Ņūdžersija; Latvijas Nacionālais mākslas muzejs, Rīga; Laikmetīgās mākslas muzeja krājums, Rīga; Latvijas Mākslinieku savienības muzejs, Rīga; Tukuma Mākslas muzejs, Tukums.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      124,
+      125
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

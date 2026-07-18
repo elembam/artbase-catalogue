@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          70,
+          71
+        ],
+        "pdf_page": 36
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -145,5 +166,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Janis Rozentāls Secondary School of Art in Riga (1988), and the Art Academy of Latvia, Department of Painting (1997). She has held 20 solo exhibitions since 1998 in Latvia, Norway, Germany, Portugal, Austria, Spain, and England. Selected solo exhibitions: Romanticist’s Garden, Daugava Gallery, Riga, 2014; Exhibition at the Jūrmala City Museum, Jūrmala, 2011; Exhibition at the Rietumu Bank, Riga, 2010. Her works are in collections at the Bank of Latvia and Swedbank.",
+    "lv": "Absolvējusi Jaņa Rozentāla Rīgas Mākslas vidusskolu (1988), Latvijas Mākslas akadēmijas Glezniecības nodaļu (1997). Kopš 1998. gada sarīkojusi 20 personālizstādes Latvijā, Norvēģijā, Vācijā, Portugālē, Austrijā, Spānijā, Anglijā. Nozīmīgākās personālizstādes: Romantiķes dārzs, galerija Daugava, Rīga, 2014; Izstāde Jūrmalas pilsētas muzejā, Jūrmala, 2011; Izstāde Rietumu bankā, Rīga, 2010. Darbi Latvijas Bankas un Swedbank kolekcijās.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      70,
+      71
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

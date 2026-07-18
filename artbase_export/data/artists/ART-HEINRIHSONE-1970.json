@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          140,
+          141
+        ],
+        "pdf_page": 70
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -145,5 +166,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Janis Rozentāls Secondary School of Art in Riga (1989), and the Art Academy of Latvia, Department of Stage Design (BA, 1996). She has created stage designs and costumes for over 50 shows in theaters in Latvia, Moscow and Novosibirsk. Awards: Best Theater Costume Designer, Spēlmaņu nakts National Theater Competition, 2000, 2012; Best TV Audiovisual Design, 1999. Selected solo exhibitions: Eduards Roess, Māksla XO Gallery, Riga, 2012; Agedness, Māksla XO Gallery (Purvītis Award nomination), Riga, 2010; Lacrima, Māksla XO Gallery, Rīga, 2007. Selected group exhibitions: Sievietes T–Elpa, Palazzo Italia, Riga, 2011; Survival Kit Festival, Contemporary Art Center, Riga, 2009, 2011; Arte Lettone Contemporanea, Urbino, 2006; International Stage Design Quadrennial, Prague, since 1992.",
+    "lv": "Studējusi glezniecību Jaņa Rozentāla mākslas vidusskolā (1989), scenogrāfiju Latvijas Mākslas akadēmijā (BA, 1996). Veidojusi scenogrāfiju un kostīmus vairāk nekā 50 izrādēm Latvijas teātros, Maskavas Dailes teātrī un Novosibirskas operā. Apbalvojumi: Gada labākā kostīmu māksliniece Teātra Gada balvā Spēlmaņu nakts, 2000, 2012; Gada labākais TV audiovizuālais noformējums, 1999. Nozīmīgākās personālizstādes: Edvards Roess, galerija Māksla XO, Rīga, 2012; Vecums, galerija Māksla XO (nominācija Purvīša balvai), Rīga, 2010; Lacrima, galerija Māksla XO, Rīga, 2007. Nozīmīgākās grupas izstādes: Sievietes T–Elpa, Palazzo Italia, Rīga, 2011; Festivāls Survival Kit, Laikmetīgās mākslas centrs, Rīga, 2009, 2011; Arte Lettone Contemporanea, Urbino, 2006; Starptautiskā scenogrāfijas kvadriennāle, Prāga, kopš 1992.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      140,
+      141
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

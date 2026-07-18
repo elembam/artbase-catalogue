@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          194,
+          195
+        ],
+        "pdf_page": 97
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -145,5 +166,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Janis Rozentāls Secondary School of Art in Riga (1972), and the Art Academy of Latvia, Department of Mural Painting (1978), as well as the Master Class of Prof. Eduards Kalniņš (1987). Selected solo exhibitions: La Fiesta, Māksla XO Gallery, Riga, 2014; Digging the Past, Bastejs Gallery, Riga, 2013; Face Control, Bastejs Gallery, Riga, 2011; Vanishing, Riga Gallery, 2003; Latvian National Art Museum, Riga, and Mimi Ferzt Gallery, New York, 2002; Appropriated Images, Mimi Ferzt Gallery, New York, 2000; Impossible Meetings, Mimi Ferzt Gallery, New York, 1998. “Painting is a field of surreptitious fortuity. It is a choice. Supposition. A game in which I set the rules and violate them. The image of a hero, multiplied, reproduced several times becomes a travesty; a ridiculously small man may turn inside out.” — Franceska Kirke",
+    "lv": "Studējusi Jaņa Rozentāla Rīgas Mākslas vidusskolā (1972), Latvijas Mākslas akadēmijas Monumentālās glezniecības nodaļā (1978). Papildinājusies Eduarda Kalniņa meistardarbnīcā (1987). Nozīmīgākās personālizstādes: La Fiesta, galerija, MākslaXO, Rīga, 2014; Digging the Past, galerija Bastejs, Rīga, 2013; Face Control, galerija Bastejs, Rīga, 2011; Latvijas Nacionalais mākslas muzejs, Rīga, galerija Mimi Ferzt, Ņujorka, 2002; Piesavinātie tēli, galerija Mimi Ferzt, Ņujorka, 2000; Neiespējamās tikšanās, Mimi Ferzt galerija, Ņujorka, 1998. “Glezniecība ir slēptu nejaušību lauks. Tā ir izvēle, pieņēmums, spēle, kurā es nosaku likumus un pārkāpju tos! Varoņa tēls, pavairots un reproducēts vairākkārt, kļūst par parodiju. Turpretī smieklīgs mazs cilvēks var pārvērsties traģiskā tēlā.” — Frančeska Kirke",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      194,
+      195
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

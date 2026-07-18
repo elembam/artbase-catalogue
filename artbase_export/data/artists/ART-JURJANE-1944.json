@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          176,
+          177
+        ],
+        "pdf_page": 88
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -145,5 +166,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Janis Rozentals Secondary School of Art in Riga (1963), and the Art Academy of Latvia, Department of Painting (BA, 1968; MA, 1993). She has been a teacher at the Janis Rozentāls Secondary School of Art in Riga for more than 40 years. Publication: Classical art education basics at JRSSA. Selected solo exhibitions: Open Day, Room Gallery, Riga, 2014; Agija Sūna Art Gallery, Riga, 2010; Riga Gallery, Riga, 1999; The Museum of the Daugava River, Dole, 1997; Le care d’Or Gallery, Paris, 1993; The Science House, Riga, 1984. “My art is biographical in content and by nature. I portray people, things and objects that are important to me. I like to contemplate about the functional and symbolic nature of the physical world in my imagination. Often, with a certain irony.” — Aija Jurjane",
+    "lv": "Absolvējusi Jaņa Rozentāla Rīgas Mākslas vidusskolu (JRRMV) (1963), Latvijas Mākslas akadēmijas Glezniecības nodaļu (BA, 1968; MA, 1993). Jaņa Rozentāla Rīgas Mākslas vidusskolas pedagoģe vairāk nekā 40 gadus. Publikācija: Klasiskās mākslas izglītības pamati JRRMV. Nozīmīgākās personālizstādes: Atvērto durvju diena, galerija Istaba, Rīga, 2014; Agijas Sūnas Mākslas Galerija, Rīga, 2010; Rīgas galerija, Rīga, 1999; Daugavas muzejs Doles sala, 1997; galerija Le care d’Or, Parīze, 1993; Zinību nams, Rīga, 1984. “Mana māksla pēc satura un rakstura ir biogrāfiska. Es portretēju sev nozīmīgus cilvēkus, lietas un priekšmetus. Man patīk iztēlē apcerēt lietu pasaules funkcionālo un simbolisko dabu. Nereti ar zināmu ironijas piedevu.” — Aija Jurjāne",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      176,
+      177
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

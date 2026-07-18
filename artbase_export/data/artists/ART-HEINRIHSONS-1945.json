@@ -130,12 +130,32 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          144,
+          145
+        ],
+        "pdf_page": 72
+      }
     }
   ],
   "source_refs": [
     {
       "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
       "role": null,
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -159,5 +179,15 @@
       "work_count": 9,
       "display_name": "Ivars Heinrihsons"
     }
-  ]
+  ],
+  "biography": {
+    "en": "He studied at the Janis Rozentāls Secondary School of Art in Riga (1964), and the Art Academy of Latvia, Department of Pedagogy (1971), Department of Painting (MA, 1973). He was awarded Order of the Three Stars, 2006. He teaches Conceptual Painting at the Art Academy of Latvia. Selected exhibitions: Ivars Heinrihsons. Way of Sign, Bastejs Gallery, Riga, 2014; Justmand5, Art Fair, Madrid, 2014; Koelnmesse, Art Fair, Cologne, 2013; Ivars Heinrihsons. Le Chevalet de Chevaux, Māksla XO Gallery, Riga, 2012; Ivars Heinrihsons, Way, Māksla XO Gallery, Riga, 2011; Painter. City, International Art Salon Moscow, 2011, Central House of Artists, Moscow, 2011; Red Dot Art Fair, Contemporary Art Fair, Skyline Studios, New York, 2010.",
+    "lv": "Studējis Jaņa Rozentāla māksla vidusskolā (1964), Latvijas Mākslas akadēmijas pedagoģijas nodaļā (1971), Glezniecības nodaļā (MA, 1973). Specializējies glezniecībā, zīmējumā, litogrāfijā, trīsdimensiālos lineāros objektos. Triju Zvaigžņu ordeņa kavalieris, 2006. Latvijas Mākslas akadēmijas profesors konceptuālās glezniecības nozarē. Nozīmīgākās izstādes: Ivars Heinrihsons. Zīmes ceļš, galerija Bastejs, Rīga, 2014; Justmand5, Art Fair, Madride, 2014; Koelnmesse, Ķelne, 2013; Ivars Heinrihsons. Le Chevalet de Chevaux, galerija Māksla XO, Rīga, 2012; Ivars Heinrihsons. Ceļš, galerija Māksla XO, Rīga, 2011; Mākslinieks. Pilsēta, Starptautiskais mākslas salons Maskava, 2011, Centrālais mākslinieku nams, Maskava, 2011; Red Dot Art Fair, laikmetīgās mākslas mese, Skyline Studios, Ņujorka, 2010.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      144,
+      145
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

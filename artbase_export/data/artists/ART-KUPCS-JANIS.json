@@ -8,7 +8,12 @@
   },
   "life": {
     "birth_date": {
-      "value": null
+      "value": "1969",
+      "precision": "year",
+      "status": "working",
+      "source_ids": [
+        "SRC-IMAGOMUNDI-LV-2014"
+      ]
     },
     "death_date": {
       "value": null
@@ -39,5 +44,39 @@
       "uri": null,
       "status": null
     }
+  },
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          220,
+          221
+        ],
+        "pdf_page": 110
+      }
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
+      "accessed": null
+    }
+  ],
+  "biography": {
+    "en": "He studied at the Riga Secondary School of Applied Arts, Department of Ceramics (1990), the Tallinn University of Art, Department of Ceramics (BA, 1995), and the Art Academy of Latvia (MA, 2008). He is a member of the Artists’ Union of Latvia (1994). He is a teacher at the Art school of Ventspils (2002). Solo exhibitions: Distance is a broken line, Māksla XO Gallery, Riga, 2012; Man of soap, House of Writers and Translators in Ventspils, Ventspils, 2010; 35,4 kilometers, Pedvāle, 2009; Landscape with a tree, Greek Culture Center, Stockholm, 2003. Group exhibitions: Know–how, Applied Arts Triennial in Tallinn, Tallinn, 2009; Project Fruits of earth, Pedvāle, 2004; Exhibition of paintings, Art Garden Gallery, Riga, 2004; Re action, Mainz, 2002.",
+    "lv": "Absolvējis Rīgas Lietišķās mākslas vidusskolas Keramikas nodaļu (1990), Tallinas Mākslas universitātes Keramikas nodaļu (BA, 1995), Latvijas Mākslas akadēmiju (MA, 2008). Latvijas Mākslinieku savienības biedrs (1994). Ventspils Mākslas skolas pasniedzējs (2002). Personālizstādes: Attālums ir lauzta līnija, galerija Māksla XO, Rīga, 2012; Ziepjcilvēks, Ventspils rakstnieku un tulkotāju māja, Ventspils, 2010; 35,4km, Pedvāle, 2009; Ainava ar koku, Grieķu kultūras centrs, Stokholma, 2003. Grupu izstādes: Know–how, Lietišķās mākslas triennāle, Tallina, 2009; Projekts Zemes augļi, Pedvāle, 2004; Gleznu izstāde, galerija Mākslas dārzs, Rīga, 2004; Re Akcija, Mainca, 2002.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      220,
+      221
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
   }
 }

@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          264,
+          265
+        ],
+        "pdf_page": 132
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -145,5 +166,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Art Academy of Latvia, Department of Graphic Art (MA, 2001). Residencies: Cité Internationale des Arts, Paris (2005/2006); SIM, Reykjavik, Kunstschule Liechtenstein (2010); BBK Bremen (2012). She is a member of the Artists’ Union of Latvia (1998). Painting of the Year award, Agija Sūna Art Gallery, Riga, 2007. New Creation Foundation Scholarship, 1998/1999. She has participated in exhibitions in Latvia and internationally since 1991. She has held several solo exhibitions. Her works are in UPB, Swedbank, Mati Millius, The Artists’ Union of Latvia and Pedvale Open Air Museum Collections.",
+    "lv": "Studējusi Latvijas Mākslas akadēmijas Grafikas nodaļā (MA, 2001). Papildinājusies rezidentūrās: Cité Internationale des Arts, Parīze (2005/2006); SIM rezidencē Reikjavīkā, un Kunstschule Liechtenstein, Lihtenšteina (2010); BBK mākslinieku rezidencē, Brēmenē (2012). Latvijas Mākslinieku savienības biedre (1998). Konkursa Gada glezna uzvarētāja, Agijas Sūnas Mākslas Galerija, Rīga, 2007; Jaunrades fonda stipendiāte, 1998/1999. Izstādēs Latvijā un ārzemēs piedalās kopš 1991.g. Sarīkojusi vairākas personālizstādes. Darbi Ulda Pīlēna biroja, Swedbank, Mati Milliusa, Latvijas Mākslinieku savienības un Pedvāles Brīvdabas mākslas muzeja kolekcijās.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      264,
+      265
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

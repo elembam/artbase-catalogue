@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          420,
+          421
+        ],
+        "pdf_page": 209
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -145,5 +166,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "She studied at the Janis Rozentāls Secondary School of Art in Riga (1980), and the Art Academy of Latvia (MA, 1986). She is a member of the Artists’ Union of Latvia (1987). She is an associate professor at the Art Academy of Latvia, Department of Painting (2008). Gold Medal of the Ministry of Culture of the USSR, 1986. Solo exhibitions: Snow and Money, Māksla XO Gallery, Riga, 2014; Landscape, Exhibition Hall of the Cēsis Art Museum, Cēsis, 2012; Meine Landschaften, TVDART Gallery, Berlin, 2012; My nature, Māksla XO Gallery, Riga, 2011; Vija Zariņa, Vīna Studija, Riga, 2011; Wings, Putti Gallery, Riga, 2009; A walk in the clouds, Māksla XO Gallery, Riga, 2008; Silent Beauty, Daugava Gallery, Riga, 2006; Paintings and Drawings, Latgola Park Hotel, Daugavpils, 2005.",
+    "lv": "Studējusi Jaņa Rozentāla mākslas vidusskolā (1980), Latvijas Mākslas akadēmijā (MA, 1986). Latvijas Mākslinieku savienības biedre (1987). Latvijas Mākslas Akadēmijas Glezniecības katedra asociētā profesore (2008). PSRS Kultūras Ministrijas zelta medaļa, 1986. Personālizstādes: Sniegs un nauda, galerija Māksla XO, Rīga, 2014; Ainava, Cēsu mākslas muzejs, Cēsis, 2012; Meine Landschaften, TVDART Galerija, Berlīne, 2012; Mana daba, galerija Māksla XO, Rīga, 2011; Vija Zariņa, Vīna studija, Rīga, 2011; Spārni, galerija Putti, Rīga, 2009; Pastaiga mākoņos, galerija Māksla XO, Rīga, 2008; Kluss skaistums, galerija Daugava, Rīga, 2006; Gleznas un zīmējumi, Latgola Park hotel, Daugavpils, 2005.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      420,
+      421
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

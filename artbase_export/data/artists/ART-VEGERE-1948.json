@@ -130,12 +130,32 @@
       "access_date": null,
       "use_notes": "Data origin for the initial Latvian artist set; future provenance source for works sold/auctioned through the gallery.",
       "license": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          394,
+          395
+        ],
+        "pdf_page": 196
+      }
     }
   ],
   "source_refs": [
     {
       "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
       "role": null,
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -149,5 +169,15 @@
     ],
     "engagement_ids": []
   },
-  "_schema": "artbase:artist:v1"
+  "_schema": "artbase:artist:v1",
+  "biography": {
+    "en": "She studied Painting and Pedagogy at the Janis Rozentāls Secondary School of Art (1966), and at the Art Academy of Latvia (MA, 1971). She is a member of the Artists’ Union of Latvia (1978). She is a teacher of drawing, painting and composition at the Janis Rozentāls Secondary School of Art (1967). Solo exhibition: Science house, Riga, 1985. Selected group exhibitions: Free space, Works from Guntis Belēvičs’ collection, Arsenāls Exhibition Hall, Riga, 2012; Europastel, History Museum of St. Petersburg, St. Petersburg, 2003; Europastel, Cuneo, 2002; Latvian Pastel Painting of the XX Century, Arsenāls Exhibition Hall, Riga, 2002; Biennale de Desssin, Le Puget Gallery, Alzonne, 1999. Her works are in collections at the Latvian National Museum of Art, the Artists’ Union of Latvia, Art Museum of Novosibirsk.",
+    "lv": "Studējusi glezniecību un pedagoģiju Jaņa Rozentāla Rīgas Mākslas vidusskolā (1966); Latvijas Mākslas akadēmijā (MA, 1971). Latvijas Mākslinieku savienības biedre (1978). Zīmēšanas, gleznošanas un kompozīcijas pedagoģe Jaņa Rozentāla Rīgas Mākslas vidusskolā (1967). Personālizstāde: Zinību nams, Rīga, 1985. Nozīmīgākās grupu izstādes: Blīvā telpa. Darbi no Dr. biol. Gunta Belēviča kolekcijas, izstāžu zāle Arsenāls, Rīga, 2012; Eiropastelis, Pēterburgas Vēstures muzejs, Sanktpēterburga, 2003; Eiropastelis, Kuneo, 2002; Latvijas pasteļglezniecība XX gadsimts, izstāžu zāle Arsenāls, Rīga, 2002; Biennale de Desssin Art Gallery Le Puget, Alzona, 1999. Darbi kolekcijās: Latvijas Nacionālais Mākslas muzejs, Latvijas Mākslinieku savienība, Novosibirskas Mākslas muzejs.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      394,
+      395
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }

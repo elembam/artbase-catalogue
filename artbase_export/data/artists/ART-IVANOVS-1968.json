@@ -123,11 +123,32 @@
     },
     "artbase_id": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "type": "book",
+      "citation": "Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014.",
+      "raw": null,
+      "flags": [],
+      "wikidata_batch_eligible": true,
+      "imago_mundi": {
+        "pages": [
+          158,
+          159
+        ],
+        "pdf_page": 79
+      }
+    }
+  ],
   "source_refs": [
     {
       "source_id": "SRC-HANSABANKA-2007",
       "role": "collection catalogue",
+      "accessed": null
+    },
+    {
+      "source_id": "SRC-IMAGOMUNDI-LV-2014",
+      "role": "exhibition catalogue",
       "accessed": null
     }
   ],
@@ -145,5 +166,15 @@
     "engagement_ids": []
   },
   "_schema": "artbase:artist:v1",
-  "collections": []
+  "collections": [],
+  "biography": {
+    "en": "He studied at the Art Academy of Latvia (1994), and at Humboldt State University, USA (1995). He is a member of the Artists’ Union of Latvia (1999). He received the Painting of the Year Award, Agija Sūna Art Gallery and Swedbank Private Banking, Riga, 2013. He is the first Latvian artist whose work, Frame05, was sold at Sotheby’s auction, 2009. Selected exhibitions: Symbol of Illusion, Bastejs Gallery, Riga, 2013; From Head to Toe, Würth Collection, Schwäbisch Hall, 2013; Public and Private. State Commission of the President’s Portrait, Riga Gallery, Riga, 2012; Light On, ExxonMobil Open, Doha, 2011; Dreamers, Riga Gallery, Riga, 2008; Optical Diffusion, Eva Poll Gallery, Berlin, 2004.",
+    "lv": "Absolvējis Latvijas Mākslas akadēmiju (1994), Humbolta Valsts Universitāti, ASV (1995). Latvijas Mākslinieku savienības biedrs (1999). Gada Gleznas balva Agijas Sūnas Mākslas Galerija un Swedbank Private Banking organizētā konkursā, Rīga, 2013. Pirmais Latviešu mākslinieks, kura darbs “Frame05” pārdots Sotheby’s izsolē, 2009. Jaunākās izstādes: Ilūzijas simbols, galerija Bastejs, Rīga, 2013; No galvas līdz kājām, Würth kolekcija, Švābu Halle, Vācija, 2013; Publiskās un privātās. Prezidenta portreta Valsts komisija, Rīgas Galerija, Rīga, 2012; Gaismas staros. ExxonMobil turnaments, Doha, 2011; Sapņotāji, Rīgas galerija, Rīga, 2008; Optiska difūzija, galerija Eva Poll, Berlīne, 2004.",
+    "source_id": "SRC-IMAGOMUNDI-LV-2014",
+    "pages": [
+      158,
+      159
+    ],
+    "language_note": "Also printed in Italian in the source catalogue; Italian text not stored (Instruction 20 Part A scope)."
+  }
 }
