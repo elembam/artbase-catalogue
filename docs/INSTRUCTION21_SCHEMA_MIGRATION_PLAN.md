@@ -152,10 +152,137 @@ while Copilot's review-queue branch is also mutating artist JSON files
 
 ## 6. Recommendation
 
-1. Land this Instruction 21 branch (41 reconstructed records + 1 retired
-   duplicate + Biography template section) first — it's a content-parity
-   fix with a small, well-understood diff.
-2. Merge Copilot's review-queue branch (per the stated merge order).
-3. Run `migrate_artist_schema_v2.py --dry-run` from a rebased main to get
-   a fresh, accurate diff count before deciding whether/when to apply it
-   as its own change.
+1. ~~Land this Instruction 21 branch (41 reconstructed records + 1 retired
+   duplicate + Biography template section) first~~ — **done**: merged to
+   `main` as PR #1 (`8cca5c7`), after Copilot's `copilot/review-queue-batch1`
+   (`f9550ca`).
+2. Run the sizing query in §7.1 (below) before scheduling the migration —
+   the cohort has moved since this plan was first drafted (see current
+   count).
+3. Execute per the checklist in §7.
+
+---
+
+## 7. Execution-ready checklist (status: **NOT EXECUTED** — plan only)
+
+Everything below this line is a specification for a future, separately
+reviewed pass. No migration script has been written or run as part of
+this document. `migrate_artist_schema_v2.py` does not exist in the repo
+yet.
+
+### 7.1 Current sizing (measured 2026-07-19, from `main` post PR #1)
+
+Re-run before executing, since both agents are still actively adding/
+touching artist JSON:
+
+```
+python3 -c "
+import json
+from pathlib import Path
+full, minimal, other = [], [], []
+for f in sorted(Path('artbase_export/data/artists').glob('*.json')):
+    d = json.loads(f.read_text())
+    has_sources, has_cat = 'sources' in d, 'cataloguing' in d
+    occ = d.get('descriptors', {}).get('occupations')
+    occ_singular = 'occupation' in d.get('descriptors', {})
+    n_auth = len([k for k in d.get('authority_links', {}) if k != 'artbase_id'])
+    if has_sources and has_cat and isinstance(occ, list) and n_auth >= 9:
+        full.append(f.stem)
+    elif not has_sources and not has_cat and occ_singular:
+        minimal.append(f.stem)
+    else:
+        other.append(f.stem)
+print('full:', len(full), '| minimal:', len(minimal), '| partially-migrated hybrid:', len(other))
+"
+```
+
+Result at time of writing: **354 total** — 328 full-shape (92.7%),
+17 pure-minimal-shape (4.8%), 9 partially-migrated hybrids (2.5%,
+e.g. `ART-GULBIS-MADARA`, `ART-KAULACA-VINETA`, `ART-KEIRE-KRISTINE` —
+these gained a `sources[]` array via Instruction 19/20 enrichment or the
+review-queue resolver, but never a `cataloguing` block or the 9-system
+`authority_links`, so they sit between the two shapes today). The 41
+records reconstructed by Instruction 21 were written directly in full
+shape and are not part of either gap.
+
+### 7.2 Field mapping (minimal/hybrid → target full shape)
+
+| Field | Minimal-shape source | Target | Rule |
+|---|---|---|---|
+| `sources` | absent, or partial array (hybrid) | `[]` if absent, else unchanged | never overwrite existing entries |
+| `source_refs` | absent | `[]` | additive only |
+| `conflicts` | absent | `[]` | additive only |
+| `cataloguing` | absent | `{"review_status": "draft", "catalogued_by": null, "notes": null, "tasks": [], "engagement_ids": []}` | additive only; never overwrite if any sub-key already present |
+| `authority_links.{viaf,isni,rkd,lc_naco,gnd,bnf,libris}` | absent (only wikidata/ulan/viaf present in pure-minimal) | `{"id": null, "uri": null, "status": "search_needed", "verified_date": null, "notes": null}` per missing system | never touch `wikidata`/`ulan`/`viaf` if already populated |
+| `authority_links.{wikidata,ulan,viaf}` shape | `{id, uri, status}` (3 keys) | `{id, uri, status, verified_date, notes}` (5 keys) | add the 2 missing keys as `null`; preserve existing `id`/`uri`/`status` values verbatim |
+| `descriptors.occupation` (string) | e.g. `"painter"` | `descriptors.occupations: ["painter"]` | convert, then remove the singular key; skip entirely if `occupations` (plural) already exists |
+| `_schema` | `"artbase:artist:v1"` (position varies) | unchanged value, normalize key position (cosmetic, low priority) | — |
+| `biography` | n/a (independent of shape) | unchanged | out of scope for this migration — already consistent per §4 |
+
+### 7.3 Script contract
+
+`scripts/migrate_artist_schema_v2.py` (to be built):
+- `--dry-run` (default): print one line per file that *would* change,
+  plus a final `N files would change / M unchanged` summary. Writes
+  nothing.
+- `--apply`: performs the writes described in §7.2. Refuses to run
+  without `--dry-run` having been invoked first in the same session
+  unless `--force` is also passed (mirrors the two-step discipline
+  already used for `resolve_instruction20_review_queue.py`).
+- Idempotent: running it twice produces zero further changes the second
+  time (every rule in §7.2 is a presence-check, not an unconditional
+  write).
+- Exits non-zero if any file fails to parse as JSON, before writing
+  anything (fail closed, not partial).
+
+### 7.4 Sampling + validation protocol
+
+1. Before `--apply`: run `--dry-run`, sample **10** of the files it
+   flags (spread across full/minimal/hybrid boundary cases, not just the
+   first 10 alphabetically), and manually diff each against this
+   document's field mapping table to confirm the tool's output matches
+   the spec exactly.
+2. After `--apply`: run `scripts/instruction21_validate_reconstruction.py`
+   (extend its `--commit` handling, or add a `--all` mode, to check
+   *every* artist record rather than just the 41 from this instruction)
+   to confirm no `sources`/`life`/`descriptors` values changed — the
+   migration must be purely additive/structural, never content-changing.
+3. Re-run `scripts/quality_gates.py` and `scripts/sitemap_generator.py
+   --dry-run` (see §7.6) after `--apply` — schema shape changes should
+   not change page output at all (the template already reads
+   defensively via `.get()`), so a diff in generated HTML after the
+   migration is itself a bug signal, not an expected side effect.
+4. `git status --short | awk '{print $1}' | sort | uniq -c` before
+   committing — the change count should equal the "would change" count
+   from step 1's dry run exactly. A mismatch means the script touched
+   files outside its stated scope.
+
+### 7.5 Risk assessment
+
+| Risk | Likelihood | Impact | Mitigation |
+|---|---|---|---|
+| Script overwrites existing `cataloguing`/`sources` data on a hybrid record | Low (presence-checked, not blind write) | High (data loss) | §7.4 step 1 manual sample; §7.3 idempotency requirement |
+| Store-wide regeneration required after migration touches all 354 files | Certain if pages are regenerated | Low (large diff, no content change) | Do **not** regenerate pages as part of this migration — JSON shape changes are invisible to `.get()`-based template reads (verified: `artist_profile_generator.py` never raises on either shape today). Regenerate only if/when a template change actually depends on the new shape. |
+| Collision with Copilot's concurrent artist-JSON edits | Medium — review-queue resolution is still active | Medium (merge conflicts, not data loss, since both are additive) | Run only from a freshly-rebased `main`, after confirming `resolve_instruction20_review_queue.py`'s current batch is fully applied and committed |
+| `--apply` run without `--dry-run` review first | Low (gated by script contract) | High | §7.3 refuses-without-dry-run requirement |
+
+### 7.6 Rollback
+
+- The migration commit should be a single, isolated commit (no other
+  changes bundled in) specifically so `git revert <sha>` cleanly undoes
+  it if `scripts/instruction21_validate_reconstruction.py --all` (once
+  extended) or `quality_gates.py` fails post-migration.
+- Because every write is additive (new keys/defaults only, per §7.2),
+  a revert is safe even if other, unrelated commits have landed on top
+  of it in the meantime — nothing downstream can depend on a key that
+  didn't exist before the migration.
+
+### 7.7 Explicit boundary
+
+**This document specifies but does not execute the migration.** No
+`migrate_artist_schema_v2.py` exists yet; no `--dry-run` has been run;
+no artist JSON has been touched by this section. Building and running it
+is separately-scoped future work, gated on: (a) Copilot's review-queue
+work being fully landed and quiet, (b) a fresh sizing run per §7.1, and
+(c) this checklist being reviewed by a human before `--apply` is used for
+the first time.
