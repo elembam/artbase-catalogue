@@ -39,5 +39,24 @@
       "uri": null,
       "status": null
     }
-  }
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [
+    {
+      "field": "instruction20.review_queue",
+      "values": [
+        {
+          "value": "Kristīna Keire (1968)",
+          "source_id": "SRC-IMAGOMUNDI-LV-2014",
+          "record_id": "IMLV-080",
+          "pdf_page": 95
+        }
+      ],
+      "status": "resolved",
+      "created": "2026-07-19",
+      "resolved_by": "elemba",
+      "resolution": "Instruction 20 review queue: resolved as match_existing to ART-KEIRE-KRISTINE"
+    }
+  ]
 }

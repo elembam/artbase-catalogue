@@ -131,7 +131,23 @@
       "accessed": null
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "instruction20.review_queue",
+      "values": [
+        {
+          "value": "Ilze Lībiete (1951)",
+          "source_id": "SRC-IMAGOMUNDI-LV-2014",
+          "record_id": "IMLV-106",
+          "pdf_page": 121
+        }
+      ],
+      "status": "resolved",
+      "created": "2026-07-19",
+      "resolved_by": "elemba",
+      "resolution": "Instruction 20 review queue: resolved as match_existing to ART-LIBIETE-1952"
+    }
+  ],
   "cataloguing": {
     "review_status": "draft",
     "catalogued_by": null,

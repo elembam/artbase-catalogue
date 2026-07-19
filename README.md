@@ -66,6 +66,54 @@ See [`artbase_export/GETTING_STARTED.md`](artbase_export/GETTING_STARTED.md) for
 
 ---
 
+## Quality gates (site + canonical data)
+
+Run this before commit/deploy to catch sitemap drift, broken internal links, and changed JSON issues:
+
+```bash
+python3 scripts/quality_gates.py
+```
+
+To scan all passport/artist HTML (slower):
+
+```bash
+python3 scripts/quality_gates.py --all-html
+```
+
+QuickStatements preflight (changed `.qs` files only):
+
+```bash
+python3 scripts/wikidata_preflight.py
+```
+
+Instruction 20 review-queue workflow:
+
+```bash
+# 1) See queue status
+python3 scripts/resolve_instruction20_review_queue.py summary
+
+# 2) Record a human decision (dry-run)
+python3 scripts/resolve_instruction20_review_queue.py decide \
+  --record-id IMLV-074 \
+  --action match_existing \
+  --selected-artbase-id ART-JURJANE-1944 \
+  --reviewer your-id
+
+# 3) Persist decision
+python3 scripts/resolve_instruction20_review_queue.py decide \
+  --record-id IMLV-074 \
+  --action match_existing \
+  --selected-artbase-id ART-JURJANE-1944 \
+  --reviewer your-id \
+  --apply
+
+# 4) Apply approved_match decisions into canonical artist records
+#    (adds resolved conflict markers, then marks queue entries as applied)
+python3 scripts/resolve_instruction20_review_queue.py apply --apply
+```
+
+---
+
 ## Documentation
 
 | File | Contents |

@@ -1,0 +1,648 @@
+{
+  "generated_at": "2026-07-18T17:18:38.633802+00:00",
+  "source_dataset": "ArsAccordiaClaude/References/imago-mundi-latvia-2014-corrected.json",
+  "method": "instruction20_review_queue_from_surname_collision_v1",
+  "counts": {
+    "corrected_total": 203,
+    "matched_existing": 31,
+    "review_queue": 23,
+    "remaining_non_review": 149
+  },
+  "items": [
+    {
+      "name_lv": "Andris Vītols",
+      "name_en": "Andris Vitols",
+      "birth_year": "1951",
+      "pdf_page": 206,
+      "printed_pages": [
+        414,
+        415
+      ],
+      "record_id": "IMLV-190",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-18T18:29:52.970432+00:00"
+      },
+      "decision_notes": "Strong generational mismatch vs ART-VITOLS-1877; preserved as potential new artist.",
+      "candidates": [
+        {
+          "artbase_id": "ART-VITOLS-1877",
+          "preferred_name": "Eduards Vītols",
+          "birth_year": "1877"
+        }
+      ]
+    },
+    {
+      "name_lv": "Artūrs Bērziņš",
+      "name_en": "Arturs Berzins",
+      "birth_year": "1983",
+      "pdf_page": 34,
+      "printed_pages": [
+        66,
+        67
+      ],
+      "record_id": "IMLV-020",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-19T09:11:05.194218+00:00"
+      },
+      "decision_notes": "Surname-collision only; preserving as separate candidate pending deliberate new-artist creation decision under living-artist policy.",
+      "candidates": [
+        {
+          "artbase_id": "ART-BERZINS-1930",
+          "preferred_name": "Boriss Bērziņš",
+          "birth_year": "1930"
+        }
+      ]
+    },
+    {
+      "name_lv": "Dace Gaile",
+      "name_en": null,
+      "birth_year": "1984",
+      "pdf_page": 61,
+      "printed_pages": [
+        122,
+        123
+      ],
+      "record_id": "IMLV-046",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-19T09:11:05.754147+00:00"
+      },
+      "decision_notes": "Surname-collision only; preserving as separate candidate pending deliberate new-artist creation decision under living-artist policy.",
+      "candidates": [
+        {
+          "artbase_id": "ART-GAILE-1968",
+          "preferred_name": "Barbara Gaile",
+          "birth_year": "1968"
+        }
+      ]
+    },
+    {
+      "name_lv": "Daila Iltnere",
+      "name_en": null,
+      "birth_year": "1961",
+      "pdf_page": 74,
+      "printed_pages": [
+        148,
+        149
+      ],
+      "record_id": "IMLV-059",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-18T18:28:12.295179+00:00"
+      },
+      "decision_notes": "Surname overlap only; first-name mismatch and birth-year difference suggest separate entity.",
+      "candidates": [
+        {
+          "artbase_id": "ART-ILTNERE-1957",
+          "preferred_name": "Ieva Iltnerē",
+          "birth_year": "1957"
+        }
+      ]
+    },
+    {
+      "name_lv": "Dita Lūse",
+      "name_en": "Dita Luse",
+      "birth_year": "1972",
+      "pdf_page": 125,
+      "printed_pages": [
+        250,
+        251
+      ],
+      "record_id": "IMLV-110",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-19T09:11:06.241770+00:00"
+      },
+      "decision_notes": "Surname-collision only; preserving as separate candidate pending deliberate new-artist creation decision under living-artist policy.",
+      "candidates": [
+        {
+          "artbase_id": "ART-LUSE-1948",
+          "preferred_name": "Irēna Lūse",
+          "birth_year": "1948"
+        }
+      ]
+    },
+    {
+      "name_lv": "Egils Mednis",
+      "name_en": null,
+      "birth_year": "1968",
+      "pdf_page": 134,
+      "printed_pages": [
+        268,
+        269
+      ],
+      "record_id": "IMLV-119",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-18T18:28:43.702545+00:00"
+      },
+      "decision_notes": "Birth year and given-name mismatch vs ART-MEDNIS-1910; retained for deliberate new-artist decision.",
+      "candidates": [
+        {
+          "artbase_id": "ART-MEDNIS-1910",
+          "preferred_name": "Jānis Mednis",
+          "birth_year": "1910"
+        }
+      ]
+    },
+    {
+      "name_lv": "Ieva Jurjāne",
+      "name_en": "Ieva Jurjane",
+      "birth_year": "1972",
+      "pdf_page": 89,
+      "printed_pages": [
+        178,
+        179
+      ],
+      "record_id": "IMLV-074",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-18T17:47:03.809167+00:00"
+      },
+      "decision_notes": "Different first name and large birth-year gap vs existing Jurjāne record; keep unmatched for deliberate new-artist decision.",
+      "candidates": [
+        {
+          "artbase_id": "ART-JURJANE-1944",
+          "preferred_name": "Aija Jurjāne",
+          "birth_year": "1944"
+        }
+      ]
+    },
+    {
+      "name_lv": "Ilze Lībiete",
+      "name_en": "Ilze Libiete",
+      "birth_year": "1951",
+      "pdf_page": 121,
+      "printed_pages": [
+        242,
+        243
+      ],
+      "record_id": "IMLV-106",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "applied",
+      "decision": {
+        "action": "match_existing",
+        "selected_artbase_id": "ART-LIBIETE-1952",
+        "reviewer": "elemba",
+        "decided_at": "2026-07-18T17:44:41.675968+00:00"
+      },
+      "decision_notes": "Name variant + 1-year birth delta; treated as same artist pending later source harmonization.",
+      "candidates": [
+        {
+          "artbase_id": "ART-LIBIETE-1952",
+          "preferred_name": "Ilze Libiete",
+          "birth_year": "1952"
+        }
+      ],
+      "applied_at": "2026-07-19T09:11:14.462326+00:00",
+      "applied_to_artbase_id": "ART-LIBIETE-1952"
+    },
+    {
+      "name_lv": "Jānis Andris Osis",
+      "name_en": "Janis Andris Osis",
+      "birth_year": "1943",
+      "pdf_page": 143,
+      "printed_pages": [
+        286,
+        287
+      ],
+      "record_id": "IMLV-128",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-18T18:30:26.727229+00:00"
+      },
+      "decision_notes": "Likely distinct artist; retain for separate creation decision rather than forced merge.",
+      "candidates": [
+        {
+          "artbase_id": "ART-OSIS-1926",
+          "preferred_name": "Jānis Osis",
+          "birth_year": "1926"
+        }
+      ]
+    },
+    {
+      "name_lv": "Jānis Spalviņš",
+      "name_en": "Janis Spalvins",
+      "birth_year": "1948",
+      "pdf_page": 177,
+      "printed_pages": [
+        356,
+        357
+      ],
+      "record_id": "IMLV-161",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-19T09:02:44.239751+00:00"
+      },
+      "decision_notes": "Birth year and identity context indicate this is not ART-SPALVINS-1911.",
+      "candidates": [
+        {
+          "artbase_id": "ART-SPALVINS-1911",
+          "preferred_name": "Arnolds Spalviņš",
+          "birth_year": "1911"
+        }
+      ]
+    },
+    {
+      "name_lv": "Kristians Brekte",
+      "name_en": "Lolita",
+      "birth_year": "1981",
+      "pdf_page": 41,
+      "printed_pages": [
+        82,
+        83
+      ],
+      "record_id": "IMLV-026",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-19T09:11:06.746375+00:00"
+      },
+      "decision_notes": "Surname-collision only; preserving as separate candidate pending deliberate new-artist creation decision under living-artist policy.",
+      "candidates": [
+        {
+          "artbase_id": "ART-BREKTE-1920",
+          "preferred_name": "Jānis Brekte",
+          "birth_year": "1920"
+        }
+      ]
+    },
+    {
+      "name_lv": "Kristīna Keire",
+      "name_en": "Kristina Keire",
+      "birth_year": "1968",
+      "pdf_page": 95,
+      "printed_pages": [
+        190,
+        191
+      ],
+      "record_id": "IMLV-080",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "applied",
+      "decision": {
+        "action": "match_existing",
+        "selected_artbase_id": "ART-KEIRE-KRISTINE",
+        "reviewer": "elemba",
+        "decided_at": "2026-07-18T17:46:37.846498+00:00"
+      },
+      "decision_notes": "Orthographic variant (Kristīna/Kristīne Keire); no competing candidate in store.",
+      "candidates": [
+        {
+          "artbase_id": "ART-KEIRE-KRISTINE",
+          "preferred_name": "Kristīne Keire",
+          "birth_year": null
+        }
+      ],
+      "applied_at": "2026-07-19T09:11:14.466568+00:00",
+      "applied_to_artbase_id": "ART-KEIRE-KRISTINE"
+    },
+    {
+      "name_lv": "Madara Māra Irbe",
+      "name_en": "Madara Mara Irbe",
+      "birth_year": "1991",
+      "pdf_page": 78,
+      "printed_pages": [
+        156,
+        157
+      ],
+      "record_id": "IMLV-063",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-19T09:11:07.200201+00:00"
+      },
+      "decision_notes": "Surname-collision only; preserving as separate candidate pending deliberate new-artist creation decision under living-artist policy.",
+      "candidates": [
+        {
+          "artbase_id": "ART-IRBE-1893",
+          "preferred_name": "Voldemārs Irbe",
+          "birth_year": "1893"
+        }
+      ]
+    },
+    {
+      "name_lv": "Marta Jurjāne",
+      "name_en": "Marta Jurjane",
+      "birth_year": "1979",
+      "pdf_page": 90,
+      "printed_pages": [
+        180,
+        181
+      ],
+      "record_id": "IMLV-075",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-18T18:26:35.388446+00:00"
+      },
+      "decision_notes": "Surname-only collision with large birth-year gap; preserved as candidate for separate new artist creation decision.",
+      "candidates": [
+        {
+          "artbase_id": "ART-JURJANE-1944",
+          "preferred_name": "Aija Jurjāne",
+          "birth_year": "1944"
+        }
+      ]
+    },
+    {
+      "name_lv": "Matiass Jansons",
+      "name_en": null,
+      "birth_year": "1973",
+      "pdf_page": 84,
+      "printed_pages": [
+        168,
+        169
+      ],
+      "record_id": "IMLV-069",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-19T09:11:07.704877+00:00"
+      },
+      "decision_notes": "Surname-collision only; preserving as separate candidate pending deliberate new-artist creation decision under living-artist policy.",
+      "candidates": [
+        {
+          "artbase_id": "ART-JANSONS-1946",
+          "preferred_name": "Ralfs Jansons",
+          "birth_year": "1946"
+        }
+      ]
+    },
+    {
+      "name_lv": "Mārtiņš Cīrulis",
+      "name_en": "Martins Cirulis",
+      "birth_year": "1987",
+      "pdf_page": 47,
+      "printed_pages": [
+        94,
+        95
+      ],
+      "record_id": "IMLV-032",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-19T09:11:08.170030+00:00"
+      },
+      "decision_notes": "Surname-collision only; preserving as separate candidate pending deliberate new-artist creation decision under living-artist policy.",
+      "candidates": [
+        {
+          "artbase_id": "ART-CIRULIS-1883",
+          "preferred_name": "Ansis Cīrulis",
+          "birth_year": "1883"
+        },
+        {
+          "artbase_id": "ART-CIRULIS-1925",
+          "preferred_name": "Kārlis Cīrulis",
+          "birth_year": "1925"
+        }
+      ]
+    },
+    {
+      "name_lv": "Patrīcija Brekte",
+      "name_en": "Patricija Brekte",
+      "birth_year": "1981",
+      "pdf_page": 42,
+      "printed_pages": [
+        84,
+        85
+      ],
+      "record_id": "IMLV-027",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-19T09:11:08.677126+00:00"
+      },
+      "decision_notes": "Surname-collision only; preserving as separate candidate pending deliberate new-artist creation decision under living-artist policy.",
+      "candidates": [
+        {
+          "artbase_id": "ART-BREKTE-1920",
+          "preferred_name": "Jānis Brekte",
+          "birth_year": "1920"
+        }
+      ]
+    },
+    {
+      "name_lv": "Paula Zariņa",
+      "name_en": "Paula Zarina",
+      "birth_year": "1988",
+      "pdf_page": 208,
+      "printed_pages": [
+        418,
+        419
+      ],
+      "record_id": "IMLV-192",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-19T09:11:09.183277+00:00"
+      },
+      "decision_notes": "Surname-collision only; preserving as separate candidate pending deliberate new-artist creation decision under living-artist policy.",
+      "candidates": [
+        {
+          "artbase_id": "ART-ZARINA-1954",
+          "preferred_name": "Aija Zariņa",
+          "birth_year": "1954"
+        },
+        {
+          "artbase_id": "ART-ZARINA-1961",
+          "preferred_name": "Vija Zariņa",
+          "birth_year": "1961"
+        }
+      ]
+    },
+    {
+      "name_lv": "Reinis Pētersons",
+      "name_en": "Reinis Petersons",
+      "birth_year": "1981",
+      "pdf_page": 151,
+      "printed_pages": [
+        302,
+        303
+      ],
+      "record_id": "IMLV-136",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-18T18:28:32.767621+00:00"
+      },
+      "decision_notes": "Likely different generation; insufficient evidence to merge into existing Pētersons record.",
+      "candidates": [
+        {
+          "artbase_id": "ART-PETERSONS-OJARS",
+          "preferred_name": "Ojārs Pētersons",
+          "birth_year": null
+        }
+      ]
+    },
+    {
+      "name_lv": "Vilnis Heinrihsons",
+      "name_en": null,
+      "birth_year": "1958",
+      "pdf_page": 73,
+      "printed_pages": [
+        146,
+        147
+      ],
+      "record_id": "IMLV-058",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-18T18:27:59.798210+00:00"
+      },
+      "decision_notes": "Given-name mismatch and birth-year gap indicate distinct person; keep deferred for potential new artist.",
+      "candidates": [
+        {
+          "artbase_id": "ART-HEINRIHSONS-1945",
+          "preferred_name": "Ivars Heinrihsons",
+          "birth_year": "1945"
+        }
+      ]
+    },
+    {
+      "name_lv": "Zane Iltnere",
+      "name_en": null,
+      "birth_year": "1961",
+      "pdf_page": 76,
+      "printed_pages": [
+        152,
+        153
+      ],
+      "record_id": "IMLV-061",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-19T09:11:09.669022+00:00"
+      },
+      "decision_notes": "Surname-collision only; preserving as separate candidate pending deliberate new-artist creation decision under living-artist policy.",
+      "candidates": [
+        {
+          "artbase_id": "ART-ILTNERE-1957",
+          "preferred_name": "Ieva Iltnerē",
+          "birth_year": "1957"
+        }
+      ]
+    },
+    {
+      "name_lv": "Zane Lūse",
+      "name_en": "Zane Luse",
+      "birth_year": "1974",
+      "pdf_page": 127,
+      "printed_pages": [
+        254,
+        255
+      ],
+      "record_id": "IMLV-112",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-19T09:11:10.145077+00:00"
+      },
+      "decision_notes": "Surname-collision only; preserving as separate candidate pending deliberate new-artist creation decision under living-artist policy.",
+      "candidates": [
+        {
+          "artbase_id": "ART-LUSE-1948",
+          "preferred_name": "Irēna Lūse",
+          "birth_year": "1948"
+        }
+      ]
+    },
+    {
+      "name_lv": "Zane Veldre",
+      "name_en": null,
+      "birth_year": "1986",
+      "pdf_page": 198,
+      "printed_pages": [
+        398,
+        399
+      ],
+      "record_id": "IMLV-182",
+      "reason": "surname_collision_with_existing_artist_store",
+      "status": "deferred_new_artist",
+      "decision": {
+        "action": "defer_new_artist",
+        "selected_artbase_id": null,
+        "reviewer": "elemba",
+        "decided_at": "2026-07-19T09:11:10.622851+00:00"
+      },
+      "decision_notes": "Surname-collision only; preserving as separate candidate pending deliberate new-artist creation decision under living-artist policy.",
+      "candidates": [
+        {
+          "artbase_id": "ART-VELDRE-1927",
+          "preferred_name": "Harijs Veldre",
+          "birth_year": "1927"
+        }
+      ]
+    }
+  ]
+}
