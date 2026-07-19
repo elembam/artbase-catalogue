@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -618,6 +646,34 @@
   
   
 
+  <!-- Biography -->
+  
+  
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">He studied at the Art Academy of Latvia, Department of Painting (MA, 2002). Solo exhibitions: Architecture and Morality, Nivet–Carzon Gallery, Paris, 2013; Plastic vitamins, Alma Gallery, Riga, 2011; Urban Positive. In Memoriam, Riga Gallery, Riga, 2007; Y Gallery, the Art Gallery of the University of Tartu, Tartu, 2007; Poisonous Sounds, the Exhibition Hall Arsenāls Creative Laboratory, Riga, 2006; Paintings, Art.si, Ljubljana, 2006; Urban Landscape, Gallery of the Artists’ Union of Latvia, Riga, 2004; Strāva, Noass Contemporary Art Center, Riga, 2001. He was the designer of one Latvian Lat coin with a hedgehog, 2012. His works are in the following collections: Dietrich Mateschitz Collection Hangart–7, Baku Museum of Modern Art, Hypothekenbank in Essen, Swedbank contemporary art collection, The Latvian National Museum of Art.</div>
+      </div>
+      
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">Absolvējis Latvijas Mākslas akadēmijas Glezniecības nodaļu (MA, 2002). Personālizstādes: Arhitektūra un morāle, galerija Nivet–Carzon, Parīze, 2013; Plastmasas vitamīni, galerija Alma, Rīga, 2011; Urban Positive. In Memoriam, Rīgas galerija, Rīga, 2007; Y galerija, Tartu universitātes Mākslas galerija, Tartu, 2007; Lipīgās skaņas, izstāžu zāles Arsenāls Radošā darbnīca, Rīga, 2006; Gleznas, Art.si, Ļubļana, 2006; Urbānā ainava, Latvijas Mākslinieku savienības galerija, Rīga, 2004; Strāva, Laikmetīgās mākslas centrs Noass, Rīga, 2001. Veidojis dizainu Latvijas viena lata monētai ar ezi, 2012. Darbi Dītriha Matešica kolekcijā Hangar–7, Baku Modernās mākslas muzeja, Hypothekenbank (Esene), Swedbank, Latvijas Nacionālā mākslas muzeja kolekcijās.</div>
+      </div>
+      
+      
+      
+      <div class="biography-cite">
+        Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014., p. 412–413
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -671,7 +727,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-VITOLINS-1975</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-18</span>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

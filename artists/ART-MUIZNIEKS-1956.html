@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -618,6 +646,34 @@
   
   
 
+  <!-- Biography -->
+  
+  
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">He studied at the Art Academy of Latvia, Department of Pedagogy (MA, 1982). He is a member of Artists’ Union of Latvia (1983). Awards: Copyright Infinity Award, the Latvian authors’ society AKKA/LAA, 2008; Golden award, Artist of the Year, Artists’ Union of Latvia, 2007; Annual Award in Culture, Diena Newspaper, 2007; Grand Annual Prize, Artists’ Union of Latvia, 2003; Latvian Shipping prize, Sea Exhibition, Agija Sūna Art Gallery, 2000; AirBaltic prize, Artists’ Union of Latvia Gallery, 2000; Riga City Council prize, Riga Exhibition in Contemporary Art, 1997, 2000; Hansabank prize, Painting of the Year, Agija Sūna Art Gallery, 1999. Selected solo exhibitions: 5.7.32.34, Mūkusala art salon, Riga, 2013; Perfume, Māksla XO Gallery, Riga, 2012; Hair, Gallery 21, Riga, 2009; Salut!, Latvian National Museum of Art, Riga, 2006. He has taken part in exhibitions since 1980.</div>
+      </div>
+      
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">Absolvējis Latvijas Mākslas akadēmijas Pedagoģijas nodaļu (MA, 1982), Latvijas Mākslinieku savienības biedrs (1983). Apbalvojumi: AKKA/LAA Autortiesību bezgalības balva, 2008; LMS Zelta medaļa Gada mākslinieks, 2007; Laikraksta Diena Gada balva kultūrā, 2007; LMS Lielā gada balva, 2003; Latvijas Kuģniecības prēmija konkursizstādē Jūra, Agijas Sūnas Mākslas Galerija, 2000; AirBaltic prēmija LMS galerijas konkursizstādē, 2000; Rīgas domes prēmija konkursizstādē Rīga mūsdienu mākslā, 1997, 2000; Hansabankas prēmija konkursizstādē Gada glezna, Agijas Sūnas Mākslas Galerija, 1999. Jaunākās personālizstādes: 5.7.32.34., Mūkusalas mākslas salons, Rīga, 2013; Parfīms, galerija Māksla XO, Rīga, 2012; Mati, galerija 21, Rīga, 2009; Salut!, Latvijas Nacionālais mākslas muzejs, Rīga, 2006. Izstādēs piedalās kopš 1980.g.</div>
+      </div>
+      
+      
+      
+      <div class="biography-cite">
+        Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014., p. 276–277
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -665,7 +721,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-MUIZNIEKS-1956</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-18</span>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -618,6 +646,34 @@
   
   
 
+  <!-- Biography -->
+  
+  
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">She studied at the Janis Rozentāls Secondary School of Art in Riga (1988), and the Art Academy of Latvia, Department of Painting (1997). She has held 20 solo exhibitions since 1998 in Latvia, Norway, Germany, Portugal, Austria, Spain, and England. Selected solo exhibitions: Romanticist’s Garden, Daugava Gallery, Riga, 2014; Exhibition at the Jūrmala City Museum, Jūrmala, 2011; Exhibition at the Rietumu Bank, Riga, 2010. Her works are in collections at the Bank of Latvia and Swedbank.</div>
+      </div>
+      
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">Absolvējusi Jaņa Rozentāla Rīgas Mākslas vidusskolu (1988), Latvijas Mākslas akadēmijas Glezniecības nodaļu (1997). Kopš 1998. gada sarīkojusi 20 personālizstādes Latvijā, Norvēģijā, Vācijā, Portugālē, Austrijā, Spānijā, Anglijā. Nozīmīgākās personālizstādes: Romantiķes dārzs, galerija Daugava, Rīga, 2014; Izstāde Jūrmalas pilsētas muzejā, Jūrmala, 2011; Izstāde Rietumu bankā, Rīga, 2010. Darbi Latvijas Bankas un Swedbank kolekcijās.</div>
+      </div>
+      
+      
+      
+      <div class="biography-cite">
+        Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014., p. 70–71
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -671,7 +727,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-BIKSE-1970</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-18</span>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

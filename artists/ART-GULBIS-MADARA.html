@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -584,6 +612,34 @@
   
   
 
+  <!-- Biography -->
+  
+  
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">She studied at the Art Academy of Latvia (BA, 1994; MA, 1996). She is a member of the Artists’ Union of Latvia (1997). She is a teacher at the Janis Rozentāls Secondary School of Arts in Riga (2000). She has held 17 solo exhibitions in Latvia, Poland, Sweden and Germany. She has taken part in group exhibitions in Riga, Oslo, Helsinki, Stockholm, Hamburg, Bonn, Bremen, Brussels, Lisbon and Seoul as well as in the Mark Rothko International en plein air 2012 in Daugavpils, and Cabourg (2002) and Klaipeda (2001). She was resident in the Cité International des Arts in Paris (2005).</div>
+      </div>
+      
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">Studējusi glezniecību Latvijas Mākslas akadēmijā (BA, 1994; MA, 1996). Latvijas Mākslinieku savienības biedre (1997). Pasniedzēja Jaņa Rozentāla Makslas koledžā (2000). Sarīkojusi 17 personālizstādes Latvijā, Polijā, Zviedrijā un Vācijā. Piedalījusies grupu izstādēs Rīgā, Oslo, Helsinkos, Stokholmā, Hamburgā, Bonnā, Brēmenē, Briselē, Lisabonā, Seulā. Piedalījusies starptauiskos plenēros un festivālos Marka Rotko centrā Daugavpilī (2012), Kabūrā (2002) un Klaipēdā (2001). Bijusi rezidente Cité International des Arts, Parīze (2005).</div>
+      </div>
+      
+      
+      
+      <div class="biography-cite">
+        Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014., p. 136–137
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -631,7 +687,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-GULBIS-MADARA</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-18</span>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -633,6 +661,34 @@
   </section>
   
 
+  <!-- Biography -->
+  
+  
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">He studied at the Janis Rozentāls Secondary School of Art in Riga (1964), and the Art Academy of Latvia, Department of Pedagogy (1971), Department of Painting (MA, 1973). He was awarded Order of the Three Stars, 2006. He teaches Conceptual Painting at the Art Academy of Latvia. Selected exhibitions: Ivars Heinrihsons. Way of Sign, Bastejs Gallery, Riga, 2014; Justmand5, Art Fair, Madrid, 2014; Koelnmesse, Art Fair, Cologne, 2013; Ivars Heinrihsons. Le Chevalet de Chevaux, Māksla XO Gallery, Riga, 2012; Ivars Heinrihsons, Way, Māksla XO Gallery, Riga, 2011; Painter. City, International Art Salon Moscow, 2011, Central House of Artists, Moscow, 2011; Red Dot Art Fair, Contemporary Art Fair, Skyline Studios, New York, 2010.</div>
+      </div>
+      
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">Studējis Jaņa Rozentāla māksla vidusskolā (1964), Latvijas Mākslas akadēmijas pedagoģijas nodaļā (1971), Glezniecības nodaļā (MA, 1973). Specializējies glezniecībā, zīmējumā, litogrāfijā, trīsdimensiālos lineāros objektos. Triju Zvaigžņu ordeņa kavalieris, 2006. Latvijas Mākslas akadēmijas profesors konceptuālās glezniecības nozarē. Nozīmīgākās izstādes: Ivars Heinrihsons. Zīmes ceļš, galerija Bastejs, Rīga, 2014; Justmand5, Art Fair, Madride, 2014; Koelnmesse, Ķelne, 2013; Ivars Heinrihsons. Le Chevalet de Chevaux, galerija Māksla XO, Rīga, 2012; Ivars Heinrihsons. Ceļš, galerija Māksla XO, Rīga, 2011; Mākslinieks. Pilsēta, Starptautiskais mākslas salons Maskava, 2011, Centrālais mākslinieku nams, Maskava, 2011; Red Dot Art Fair, laikmetīgās mākslas mese, Skyline Studios, Ņujorka, 2010.</div>
+      </div>
+      
+      
+      
+      <div class="biography-cite">
+        Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014., p. 144–145
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -692,7 +748,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-HEINRIHSONS-1945</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-18</span>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

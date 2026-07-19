@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -584,6 +612,34 @@
   
   
 
+  <!-- Biography -->
+  
+  
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">He studied at the Riga Secondary School of Applied Arts (1982), and the Art Academy of Latvia, Department of Graphics (1988). He is a member of the Artists’ Union of Latvia (1989). He has created book illustrations together with pastor Juris Rubenis. Solo exhibition: New work and retrospect, Riga Art Space, Riga, 2010. He has participated in numerous exhibitions with the “LPSR–Z” group of artists, 1988–1994.</div>
+      </div>
+      
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">Absolvējis Rīgas Lietišķās mākslas vidusskolu (1982), Latvijas Mākslas akadēmijas Grafikas nodaļu (1988). Latvijas Mākslinieku savienības biedrs (1989). Veidojis ilustrācijas grāmatām kopā ar mācītāju Juri Rubeni. Personālizstāde: Jaunie darbi un retrospekcija, Rīgas Mākslas telpa, Rīga, 2010. Piedalījies vairākās izstādes kopā ar mākslinieku grupu LPSR–Z, 1988–1994.</div>
+      </div>
+      
+      
+      
+      <div class="biography-cite">
+        Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014., p. 370–371
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -637,7 +693,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-SUBACS-1963</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-18</span>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

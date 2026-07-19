@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -634,6 +662,34 @@
   </section>
   
 
+  <!-- Biography -->
+  
+  
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">He studied at the Art Academy of Latvia, Department of Graphics (1960). Professor Emeritus (2006). He was a correspondent of the Art Academy of Russia (1988). He was Professor of the Graphics Department at the Art Academy of Latvia (1987–2006). He has been a member of the Artists’ Union of Latvia since 1963. He was a member of the Jury at Intergraphic, the International Graphic Art Triennial in Krakow and Berlin (1976, 1980, 1984, 1986). He works with watercolors, graphite and ink drawings, linocut, etching, book design, and coin design. Awards: Golden Medal of the Artists’ Union of Latvia, 1997; 1st Prize and Medal at the International Graphic Biennial in Maastricht, 1994; Artist of the Nation, 1979. He has held over 30 solo exhibitions since 1956 and has participated in more than 400 international and group exhibitions in Latvia and abroad.</div>
+      </div>
+      
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">Studējis grafiku Latvijas Mākslas akadēmijā (1960). Profesors Emeritus (2006), Krievijas Mākslas akadēmijas korespondētājloceklis (1988), Latvijas Mākslas akadēmijas Grafikas nodaļas profesors (1987–2006), Latvijas Mākslinieku savienības biedrs (1963). Darbības jomas: akvarelis, grafīta un tušas zīmējuma tehnikas; linogriezums, oforts, grāmatu ilustrācijas un dizains, monētu dizains. Starptautisko Grafikas triennāļu un prēmijas Intergrafika žūrijas loceklis Krakovā un Berlīnē (1976, 1980, 1984, 1986). Darbības jomas: akvarelis, grafīta un tušas zīmējuma tehnikas; linogriezums, oforts, grāmatu ilustrācijas un dizains, monētu dizains. Apbalvojumi: Latvijas Mākslinieku savienības Zelta Medaļa, 1997; I Prēmija un Medaļa Starptautiskā Grafikas Bienālē Māstrihtā, 1994; Goda nosaukums Tautas mākslinieks, 1979. Sarīkojis vairāk nekā 30 personālizstāžu un piedalījies ap 400 grupu izstādēs Latvijā un ārzemēs kopš 1956.g.</div>
+      </div>
+      
+      
+      
+      <div class="biography-cite">
+        Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014., p. 212–213
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -699,7 +755,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-KROLLIS-1932</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-18</span>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

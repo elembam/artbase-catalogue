@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -624,6 +652,34 @@
   
   
 
+  <!-- Biography -->
+  
+  
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">She studied at the Janis Rozentāls Secondary School of Art in Riga (1970), and the Art Academy of Latvia (1979). She is a member of the Artists’ Union of Latvia (1980). Selected solo exhibitions: Bear of Happiness, Alma Gallery, Riga, 2010; Dream of Happiness, Ivonna Veiherte Gallery, Riga, 2009; Garden of Memories, Riga Gallery, Riga, 2007; Gallery of Artists’ Union of Latvia, Riga, 2004; Vartai Gallery, Vilnius, 1997. Selected group exhibitions: Women painting women, Gdansk, 2003; Latvian Art in 20th Century, Zwolle City Museum, Zwolle, 2002; Vilnius Painting Triennial, Centre of Contemporary Art, Vilnius, 1996. Works in collections in the Latvian National Museum of Art, the Artists’ Union of Latvia, Tretyakov State Gallery, Moscow.</div>
+      </div>
+      
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">Studējusi glezniecību Jaņa Rozentāla mākslas vidusskolā (1970), Latvijas Mākslas akadēmijā (1979). Latvijas Mākslinieku savienības biedre (1980). Nozīmīgākās personālizstādes: Laimes lācis, galerija Alma, Rīga, 2010; Sapnis par laimi, Ivonnas Veihertes galerija, Rīga, 2009; Atmiņu dārzs, Rīgas galerija, Rīga, 2007; Latvijas Mākslinieku savienības galerija, Rīga, 2004; Galerija Vartai, Viļņa, 1997. Nozīmīgākās grupu izstādes: Sieviete glezno sievieti, Gdaņska, 2003; Latvijas māksla. 20. gadsimts, Zvolles pilsētas mākslas muzejs, Zvolle, 2002; Viļņas glezniecības triennāle, Laikmetīgās mākslas centrs, Viļņa, 1996. Darbi Latvijas Nacionālā mākslas muzeja, Latvijas Mākslinieku savienības un Tretjakova galerijas (Maskava) kolekcijās.</div>
+      </div>
+      
+      
+      
+      <div class="biography-cite">
+        Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014., p. 50–51
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -697,7 +753,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-AVOTINA-1952</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-18</span>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

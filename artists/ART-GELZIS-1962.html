@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -632,6 +660,34 @@
   </section>
   
 
+  <!-- Biography -->
+  
+  
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">He studied graphics at the Art Academy of Latvia (1986). He is associate professor at the Department of Visual Communication and the Department of Environmental Art at the Art Academy of Latvia (2011). Awards: Purvītis Awards, 2011; Diena Newspaper Award in Culture, 2010. Representative of Latvia at the 54th Venice Biennial Artificial Peace, Palazzo Albrizzi, 2011. Selected solo exhibitions: Māksla XO Gallery, Riga, 2013; Pulpit (cooperating with composer Ģirts Bišs), Gallery of the Riga Dome, 2013; Food for thought, Māksla XO Gallery, Riga, 2012. Works in public collections: Kiasma Museum of Contemporary Art, Helsinki; Jane Voorhees Zimmerli Art Museum, New Brunswick, New Jersey; The Latvian National Museum of Art, Riga; Museum of Contemporary Art, Riga; Museum of the Artists&#39; Union of Latvia, Riga: Art Museum of Tukums, Tukums.</div>
+      </div>
+      
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">Studējusi grafiku Latvijas Mākslas akadēmijā (1986). Asociētais profesors Valsts Mākslas akadēmijas Vizualās komunikācijas, Grafikas un Vides mākslas katedrās (2011). Apbalvojumi: Purvīša balva, 2011; Laikraksta Diena Gada balva kultūrā, 2010. Latvijas pārstāvis 54. Venēcijas mākslas biennālē, Mākslīgais miers, Palazzo Albrizzi, 2011. Jaunākās personālizstādes: galerija Māksla XO, Rīga, 2013; Kancele (sadarbībā ar komponistu Ģirtu Bišu), Rīgas Doma Dārza galerija, 2013; Viela Pārdomām, galerija Māksla XO, Rīga, 2012. Darbi nozīmīgākajās publiskajās kolekcijās: Mūsdienu laikmetīgās mākslas muzejs Kiasma, Helsinki; Jane Voorhees Zimmerli mākslas muzejs, Ņūbransvika, Ņūdžersija; Latvijas Nacionālais mākslas muzejs, Rīga; Laikmetīgās mākslas muzeja krājums, Rīga; Latvijas Mākslinieku savienības muzejs, Rīga; Tukuma Mākslas muzejs, Tukums.</div>
+      </div>
+      
+      
+      
+      <div class="biography-cite">
+        Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014., p. 124–125
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -691,7 +747,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-GELZIS-1962</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-18</span>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

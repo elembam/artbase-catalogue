@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -618,6 +646,34 @@
   
   
 
+  <!-- Biography -->
+  
+  
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">He studied at the Janis Rozentāls Secondary School of Art in Riga (1977), and at the Art Academy of Latvia (BA, 1984; MA, 2003). He is a member of the Artists’ Union of Latvia (1985). Selected solo exhibitions: Museum of Talsi, Talsi, 2008; Riga Gallery, Riga, 2004; Agija Sūna Art Gallery, Riga, 2000; Bastejs Gallery, Riga, 1999; Carre d’Or Gallery, Paris, 1993. Selected group exhibitions: 7 International Contemporary Art Focus Europa, Germany, 2013; Cities of Europe, Agija Sūna Art Gallery, Riga, 2010; 24 artists from 3 continents, Sidney, 2002; Latvian Contemporary Art, Israel and Strasbourg, 1998; New Latvian Artists, Museum of Modern Art, Brisbane, 1993.</div>
+      </div>
+      
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">Studējis glezniecību Jaņa Rozentāla mākslas vidusskolā (1977), Latvijas Mākslas akadēmijā (BA, 1984; MA, 2003). Latvijas Mākslinieku savienības biedrs (1985). Nozīmīgākās personālizstādes: Talsu muzejs, 2008; Galerija Rīga, 2004; Agijas Sūnas Mākslas Galerija, Rīga, 2000; Galerija Bastejs, Rīga, 1999; Galerija Carre d’Or, Parīze, 1993. Nozīmīgākās grupu izstādes: 7 International Contemporary Art Focus Europa, Vācija, 2013; Eiropas pilsētas, Agijas Sūnas Mākslas Galerija, Rīga, 2010; 24 mākslinieki no 3 kontinentiem, Sidneja, 2002; Latvian Contemporary Art, Izraēla un Strasbūra, 1998; Jaunie latviešu mākslinieki, Modernās mākslas muzejs, Brisbeina, 1993.</div>
+      </div>
+      
+      
+      
+      <div class="biography-cite">
+        Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014., p. 346–347
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -659,7 +715,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-SILINS-1958</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-18</span>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

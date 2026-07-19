@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -618,6 +646,34 @@
   
   
 
+  <!-- Biography -->
+  
+  
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">She studied at the Janis Rozentāls Secondary School of Art in Riga (1980), and the Art Academy of Latvia (MA, 1986). She is a member of the Artists’ Union of Latvia (1987). She is an associate professor at the Art Academy of Latvia, Department of Painting (2008). Gold Medal of the Ministry of Culture of the USSR, 1986. Solo exhibitions: Snow and Money, Māksla XO Gallery, Riga, 2014; Landscape, Exhibition Hall of the Cēsis Art Museum, Cēsis, 2012; Meine Landschaften, TVDART Gallery, Berlin, 2012; My nature, Māksla XO Gallery, Riga, 2011; Vija Zariņa, Vīna Studija, Riga, 2011; Wings, Putti Gallery, Riga, 2009; A walk in the clouds, Māksla XO Gallery, Riga, 2008; Silent Beauty, Daugava Gallery, Riga, 2006; Paintings and Drawings, Latgola Park Hotel, Daugavpils, 2005.</div>
+      </div>
+      
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">Studējusi Jaņa Rozentāla mākslas vidusskolā (1980), Latvijas Mākslas akadēmijā (MA, 1986). Latvijas Mākslinieku savienības biedre (1987). Latvijas Mākslas Akadēmijas Glezniecības katedra asociētā profesore (2008). PSRS Kultūras Ministrijas zelta medaļa, 1986. Personālizstādes: Sniegs un nauda, galerija Māksla XO, Rīga, 2014; Ainava, Cēsu mākslas muzejs, Cēsis, 2012; Meine Landschaften, TVDART Galerija, Berlīne, 2012; Mana daba, galerija Māksla XO, Rīga, 2011; Vija Zariņa, Vīna studija, Rīga, 2011; Spārni, galerija Putti, Rīga, 2009; Pastaiga mākoņos, galerija Māksla XO, Rīga, 2008; Kluss skaistums, galerija Daugava, Rīga, 2006; Gleznas un zīmējumi, Latgola Park hotel, Daugavpils, 2005.</div>
+      </div>
+      
+      
+      
+      <div class="biography-cite">
+        Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014., p. 420–421
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -659,7 +715,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-ZARINA-1961</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-18</span>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

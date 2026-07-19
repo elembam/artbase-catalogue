@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Artist Profile — Vladimirs Avramenko. Ars Accordia scholarly catalogue record.">
+<meta name="description" content="Artist record — Vladimirs Avramenko. Ars Accordia scholarly catalogue with authority links to Wikidata, Getty ULAN, and VIAF.">
 <title>Vladimirs Avramenko — Ars Accordia</title>
+<link rel="canonical" href="https://arsaccordia.com/artists/ART-AVRAMENKO-1981.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -298,81 +299,112 @@
     font-style: italic;
   }
 
-  /* ── Data sources section ─── */
-  .section-sources { background: var(--paper-deep); }
+  /* ── Collection appearances ─── */
+  .collection-list { display: flex; flex-direction: column; gap: 10px; }
 
-  .sources-grid { display: flex; flex-direction: column; gap: 8px; }
-
-  .sources-row {
+  .collection-row {
     display: flex;
-    align-items: baseline;
-    gap: 16px;
-    font-size: 0.88rem;
-  }
-  .sources-key {
-    min-width: 90px;
-    color: var(--ink-faded);
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding-top: 2px;
-  }
-  .sources-val { display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }
-  .sources-none { color: var(--ink-faded); font-style: italic; }
-
-  .source-chip {
-    display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 2px 8px;
-    border-radius: 3px;
-    font-size: 0.82rem;
+    gap: 16px;
+    padding: 14px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.15s;
+  }
+  .collection-row:hover { border-color: var(--seal-light); }
+
+  .collection-badge {
     font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--seal);
+    flex-shrink: 0;
+    width: 56px;
   }
-  .source-chip a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; }
-  .source-chip a:hover { opacity: 0.8; }
-  .chip-tag {
-    font-size: 0.7rem;
-    opacity: 0.6;
-    font-family: 'Public Sans', sans-serif;
+
+  .collection-name {
+    font-weight: 500;
+    flex: 1;
+  }
+
+  .collection-display-name {
+    color: var(--ink-faded);
+    font-size: 0.8125rem;
+    font-style: italic;
+    flex-shrink: 0;
+  }
+
+  .collection-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8125rem;
+    color: var(--ink-faded);
+    flex-shrink: 0;
+    text-align: right;
+  }
+
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
     font-style: italic;
   }
-  .origin-chip    { background: #f5f0e8; color: #7a6040; border: 1px solid #e0d4b8; }
-  .authority-chip { background: #eef4ee; color: #2a6040; border: 1px solid #b8d4c0; }
 
-  /* Conformance badge (Instruction 10 — four-grade validation model) */
-  .conformance-badge {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-size: 0.82rem; font-family: 'Public Sans', sans-serif;
-    padding: 3px 10px; border-radius: 20px; font-weight: 600;
-    letter-spacing: 0.01em;
-  }
-  .conformance-badge .badge-dot {
-    width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
-  }
-  .conformance-badge.badge-green { background: #eef7f1; color: #1f6637; border: 1px solid #91c9a3; }
-  .conformance-badge.badge-green .badge-dot { background: #2a7d46; }
-  .conformance-badge.badge-amber { background: #fdf5e6; color: #7a5000; border: 1px solid #d4a84b; }
-  .conformance-badge.badge-amber .badge-dot { background: #c27c0b; }
-  .conformance-badge.badge-grey  { background: #f2f2f2; color: #666;   border: 1px solid #bbb; }
-  .conformance-badge.badge-grey  .badge-dot { background: #999; }
-  .conformance-badge.badge-none  { background: #f9f9f9; color: #999;   border: 1px solid #ddd; }
-  .conformance-badge.badge-none  .badge-dot { background: #ccc; }
+  /* ── Sources / Literature ─── */
+  .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
-  .vstatus { font-size: 0.85rem; font-family: 'Public Sans', sans-serif; }
-  /* legacy — kept for progressively-generated pages not yet regenerated */
-  .vstatus-confirmed  { color: #2a6040; }
-  .vstatus-candidate  { color: #7a5500; }
-  .vstatus-unverified { color: var(--ink-faded); }
-
-  .sources-row-warn { margin-top: 4px; }
-  .sources-warn {
-    font-size: 0.83rem;
-    color: #7a5500;
-    font-style: italic;
+  .source-row {
+    padding: 10px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    font-size: 0.85rem;
+    color: var(--ink);
     line-height: 1.5;
   }
-  .gallery-fields { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
+  .source-row a { color: var(--seal); text-decoration: none; }
+  .source-row a:hover { text-decoration: underline; }
+
+  .source-extlink {
+    margin-left: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--ink-faded) !important;
+  }
+  .source-extlink:hover { color: var(--seal) !important; }
+
+  .source-type-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-right: 8px;
+  }
 
   /* ── Footer ─── */
   .footer {
@@ -387,12 +419,39 @@
   }
 
   .footer-left { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.04em; }
+  .footer-contact { color: var(--ink-faded); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
+  .footer-contact:hover { border-bottom-color: var(--ink-faded); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@id": "https://arsaccordia.com/artists/ART-AVRAMENKO-1981",
+  "@type": "Person",
+  "birthDate": "1981",
+  "hasOccupation": [
+    {
+      "@type": "Role",
+      "roleName": "painter"
+    }
+  ],
+  "identifier": "ART-AVRAMENKO-1981",
+  "mainEntityOfPage": {
+    "@id": "https://arsaccordia.com/artists/ART-AVRAMENKO-1981.html",
+    "@type": "WebPage",
+    "isPartOf": {
+      "@id": "https://arsaccordia.com"
+    }
+  },
+  "name": "Vladimirs Avramenko",
+  "nationality": "Latvian",
+  "url": "https://arsaccordia.com/artists/ART-AVRAMENKO-1981.html"
+}
+</script>
 </head>
 <body>
 
 <nav class="topnav">
-  <a href="../index.html">← Ars Accordia Catalogue</a>
+  <a href="../index.html">← ArtBase Catalogue</a>
   <span class="sep">/</span>
   <span>Vladimirs Avramenko</span>
 </nav>
@@ -403,7 +462,7 @@
   <header class="header">
     
     <div class="header-left">
-      <div class="institution-tag">Ars Accordia · Artist Profile</div>
+      <div class="institution-tag">ArtBase · Artist Profile</div>
       <h1 class="artist-name">Vladimirs Avramenko</h1>
       
       
@@ -571,6 +630,14 @@
   <!-- ULAN Enrichment -->
   
 
+  <!-- Collection Appearances -->
+  
+  
+
+  <!-- Biography -->
+  
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -579,67 +646,16 @@
     
   </section>
 
-  <!-- Data sources & verification -->
-  <section class="section section-sources">
-    <div class="section-label">Data Sources &amp; Verification</div>
-    <div class="sources-grid">
-
-      
-      
-      <div class="sources-row">
-        <div class="sources-key">Origin</div>
-        <div class="sources-val">
-          
-          <span class="source-chip origin-chip">
-            <a href="https://paintings.lv/artists/view/245" target="_blank" rel="noopener">Galerija Jēkabs</a>
-            <span class="chip-tag">not citable</span>
-          </span>
-          
-        </div>
-      </div>
-      
-
-      
-      <div class="sources-row">
-        <div class="sources-key">Authority</div>
-        <div class="sources-val">
-          
-            <span class="sources-none">None confirmed yet</span>
-          
-        </div>
-      </div>
-
-      
-      <div class="sources-row">
-        <div class="sources-key">Status</div>
-        <div class="sources-val">
-          
-          
-          <span class="conformance-badge badge-grey">
-            <span class="badge-dot"></span> Entity-Supplied Only
-          </span>
-          
-        </div>
-      </div>
-
-      
-      
-      <div class="sources-row sources-row-warn">
-        <div class="sources-key">Note</div>
-        <div class="sources-val sources-warn">
-          The following facts are sourced from Galerija Jēkabs only and have not been confirmed by an independent authority:
-          <span class="gallery-fields">birth_year</span>.
-        </div>
-      </div>
-      
-
-    </div>
-  </section>
+  <!-- Sources -->
+  
+  
+  
 
   <!-- Footer -->
   <footer class="footer">
-    <span class="footer-left">ARS ACCORDIA · ART-AVRAMENKO-1981</span>
-    <span>Exported 2026-05-30</span>
+    <span class="footer-left">ARTBASE · ART-AVRAMENKO-1981</span>
+    <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>
