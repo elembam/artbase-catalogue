@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -619,6 +647,34 @@
   
   
 
+  <!-- Biography -->
+  
+  
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">She studied at the Janis Rozentals Secondary School of Art in Riga (1963), and the Art Academy of Latvia, Department of Painting (BA, 1968; MA, 1993). She has been a teacher at the Janis Rozentāls Secondary School of Art in Riga for more than 40 years. Publication: Classical art education basics at JRSSA. Selected solo exhibitions: Open Day, Room Gallery, Riga, 2014; Agija Sūna Art Gallery, Riga, 2010; Riga Gallery, Riga, 1999; The Museum of the Daugava River, Dole, 1997; Le care d’Or Gallery, Paris, 1993; The Science House, Riga, 1984. “My art is biographical in content and by nature. I portray people, things and objects that are important to me. I like to contemplate about the functional and symbolic nature of the physical world in my imagination. Often, with a certain irony.” — Aija Jurjane</div>
+      </div>
+      
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">Absolvējusi Jaņa Rozentāla Rīgas Mākslas vidusskolu (JRRMV) (1963), Latvijas Mākslas akadēmijas Glezniecības nodaļu (BA, 1968; MA, 1993). Jaņa Rozentāla Rīgas Mākslas vidusskolas pedagoģe vairāk nekā 40 gadus. Publikācija: Klasiskās mākslas izglītības pamati JRRMV. Nozīmīgākās personālizstādes: Atvērto durvju diena, galerija Istaba, Rīga, 2014; Agijas Sūnas Mākslas Galerija, Rīga, 2010; Rīgas galerija, Rīga, 1999; Daugavas muzejs Doles sala, 1997; galerija Le care d’Or, Parīze, 1993; Zinību nams, Rīga, 1984. “Mana māksla pēc satura un rakstura ir biogrāfiska. Es portretēju sev nozīmīgus cilvēkus, lietas un priekšmetus. Man patīk iztēlē apcerēt lietu pasaules funkcionālo un simbolisko dabu. Nereti ar zināmu ironijas piedevu.” — Aija Jurjāne</div>
+      </div>
+      
+      
+      
+      <div class="biography-cite">
+        Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014., p. 176–177
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -672,7 +728,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-JURJANE-1944</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-18</span>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

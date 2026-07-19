@@ -1,0 +1,158 @@
+{
+  "artbase_id": "ART-BAIDA-1958",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-07-19T09:31:59.253306+00:00",
+  "visibility": "public",
+  "identity": {
+    "preferred_name": "Valērijs Baida",
+    "preferred_name_language": "lv",
+    "full_name": "Valērijs Baida",
+    "name_variants": [],
+    "sort_name": "Valērijs Baida"
+  },
+  "life": {
+    "birth_date": {
+      "value": "1958",
+      "precision": "year",
+      "status": "working",
+      "source_ids": [
+        "SD-CON-GALERIJA-JEKABS-INDEX"
+      ],
+      "notes": "Gallery-sourced, not independently confirmed."
+    },
+    "death_date": {
+      "value": null,
+      "precision": null,
+      "status": "unknown",
+      "source_ids": [],
+      "notes": null
+    },
+    "birth_place": {
+      "display": null,
+      "tgn_uri": null,
+      "wikidata_qid": null,
+      "source_ids": []
+    },
+    "death_place": {
+      "display": null,
+      "tgn_uri": null,
+      "wikidata_qid": null,
+      "source_ids": []
+    }
+  },
+  "descriptors": {
+    "nationality": "Latvian",
+    "citizenship": [],
+    "occupations": [
+      "painter"
+    ],
+    "occupations_aat": [],
+    "media": [],
+    "subjects": [],
+    "movement_notes": null,
+    "biography_summary": null
+  },
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "viaf": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "ulan": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "isni": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "rkd": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "lc_naco": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "gnd": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "bnf": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "libris": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "source_type": "Gallery Artist Index",
+      "title": "Galerija Jēkabs — Artist Index. https://paintings.lv/artists/view/11. Retrieved 2026-05-30.",
+      "publisher": null,
+      "url": "https://paintings.lv/artists/view/11",
+      "publication_date": null,
+      "access_date": null,
+      "use_notes": "Data origin for the initial Latvian artist set; birth year not independently confirmed.",
+      "license": null
+    }
+  ],
+  "source_refs": [
+    {
+      "source_id": "SD-CON-GALERIJA-JEKABS-INDEX",
+      "role": null,
+      "accessed": null
+    }
+  ],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Reconstructed 2026-07-19 (Instruction 21, HTML-without-JSON gap remediation). The canonical JSON for this record was missing from the store while the artist's HTML page (exported 2026-05-30) remained live -- a pipeline synchronization gap, not a new record. Rebuilt from the fields already displayed on the live page (name, birth year, nationality, occupation, and origin source where the page's template captured one); nothing beyond what was already published is asserted.",
+    "tasks": [
+      "Verify birth year (currently gallery-sourced only)",
+      "Search VIAF",
+      "Search Getty ULAN"
+    ],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artist:v1",
+  "collections": []
+}

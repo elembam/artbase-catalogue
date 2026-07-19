@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Artist Profile — Atis Jākobsons. ArtBase scholarly catalogue record.">
-<title>Atis Jākobsons — ArtBase</title>
+<meta name="description" content="Artist record — Atis Jākobsons. Ars Accordia scholarly catalogue with authority links to Wikidata, Getty ULAN, and VIAF.">
+<title>Atis Jākobsons — Ars Accordia</title>
+<link rel="canonical" href="https://arsaccordia.com/artists/ART-JAKOBSONS-1985.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -298,6 +299,113 @@
     font-style: italic;
   }
 
+  /* ── Collection appearances ─── */
+  .collection-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .collection-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.15s;
+  }
+  .collection-row:hover { border-color: var(--seal-light); }
+
+  .collection-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--seal);
+    flex-shrink: 0;
+    width: 56px;
+  }
+
+  .collection-name {
+    font-weight: 500;
+    flex: 1;
+  }
+
+  .collection-display-name {
+    color: var(--ink-faded);
+    font-size: 0.8125rem;
+    font-style: italic;
+    flex-shrink: 0;
+  }
+
+  .collection-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8125rem;
+    color: var(--ink-faded);
+    flex-shrink: 0;
+    text-align: right;
+  }
+
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
+  /* ── Sources / Literature ─── */
+  .sources-list { display: flex; flex-direction: column; gap: 8px; }
+
+  .source-row {
+    padding: 10px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    font-size: 0.85rem;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .source-row a { color: var(--seal); text-decoration: none; }
+  .source-row a:hover { text-decoration: underline; }
+
+  .source-extlink {
+    margin-left: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--ink-faded) !important;
+  }
+  .source-extlink:hover { color: var(--seal) !important; }
+
+  .source-type-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-right: 8px;
+  }
+
   /* ── Footer ─── */
   .footer {
     padding: 20px 48px;
@@ -311,7 +419,34 @@
   }
 
   .footer-left { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.04em; }
+  .footer-contact { color: var(--ink-faded); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
+  .footer-contact:hover { border-bottom-color: var(--ink-faded); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@id": "https://arsaccordia.com/artists/ART-JAKOBSONS-1985",
+  "@type": "Person",
+  "birthDate": "1985",
+  "hasOccupation": [
+    {
+      "@type": "Role",
+      "roleName": "painter"
+    }
+  ],
+  "identifier": "ART-JAKOBSONS-1985",
+  "mainEntityOfPage": {
+    "@id": "https://arsaccordia.com/artists/ART-JAKOBSONS-1985.html",
+    "@type": "WebPage",
+    "isPartOf": {
+      "@id": "https://arsaccordia.com"
+    }
+  },
+  "name": "Atis J\u0101kobsons",
+  "nationality": "Latvian",
+  "url": "https://arsaccordia.com/artists/ART-JAKOBSONS-1985.html"
+}
+</script>
 </head>
 <body>
 
@@ -343,8 +478,6 @@
     <div class="header-right">
       <div class="artbase-id">ART-JAKOBSONS-1985</div>
       
-      <a class="wikidata-badge" href="https://www.wikidata.org/wiki/Q105475013" target="_blank" rel="noopener">Q105475013</a>
-      
     </div>
   </header>
 
@@ -360,14 +493,14 @@
       
       <div class="authority-cell">
         <div class="authority-label">Wikidata</div>
-        <div class="authority-value">
+        <div class="authority-value missing">
           
-            <a href="https://www.wikidata.org/wiki/Q105475013" target="_blank" rel="noopener">Q105475013</a>
+            not linked
           
         </div>
         
-        <div class="authority-status confirmed">
-          confirmed
+        <div class="authority-status ">
+          search needed
         </div>
         
       </div>
@@ -377,14 +510,14 @@
       
       <div class="authority-cell">
         <div class="authority-label">VIAF</div>
-        <div class="authority-value">
+        <div class="authority-value missing">
           
-            <a href="https://viaf.org/viaf/316803111" target="_blank" rel="noopener">316803111</a>
+            not linked
           
         </div>
         
-        <div class="authority-status confirmed">
-          confirmed
+        <div class="authority-status ">
+          search needed
         </div>
         
       </div>
@@ -497,6 +630,14 @@
   <!-- ULAN Enrichment -->
   
 
+  <!-- Collection Appearances -->
+  
+  
+
+  <!-- Biography -->
+  
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -505,10 +646,16 @@
     
   </section>
 
+  <!-- Sources -->
+  
+  
+  
+
   <!-- Footer -->
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-JAKOBSONS-1985</span>
-    <span>Exported 2026-05-30</span>
+    <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

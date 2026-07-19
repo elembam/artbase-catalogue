@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -618,6 +646,34 @@
   
   
 
+  <!-- Biography -->
+  
+  
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">He studied at the Art Academy of Latvia (1994), and at Humboldt State University, USA (1995). He is a member of the Artists’ Union of Latvia (1999). He received the Painting of the Year Award, Agija Sūna Art Gallery and Swedbank Private Banking, Riga, 2013. He is the first Latvian artist whose work, Frame05, was sold at Sotheby’s auction, 2009. Selected exhibitions: Symbol of Illusion, Bastejs Gallery, Riga, 2013; From Head to Toe, Würth Collection, Schwäbisch Hall, 2013; Public and Private. State Commission of the President’s Portrait, Riga Gallery, Riga, 2012; Light On, ExxonMobil Open, Doha, 2011; Dreamers, Riga Gallery, Riga, 2008; Optical Diffusion, Eva Poll Gallery, Berlin, 2004.</div>
+      </div>
+      
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">Absolvējis Latvijas Mākslas akadēmiju (1994), Humbolta Valsts Universitāti, ASV (1995). Latvijas Mākslinieku savienības biedrs (1999). Gada Gleznas balva Agijas Sūnas Mākslas Galerija un Swedbank Private Banking organizētā konkursā, Rīga, 2013. Pirmais Latviešu mākslinieks, kura darbs “Frame05” pārdots Sotheby’s izsolē, 2009. Jaunākās izstādes: Ilūzijas simbols, galerija Bastejs, Rīga, 2013; No galvas līdz kājām, Würth kolekcija, Švābu Halle, Vācija, 2013; Publiskās un privātās. Prezidenta portreta Valsts komisija, Rīgas Galerija, Rīga, 2012; Gaismas staros. ExxonMobil turnaments, Doha, 2011; Sapņotāji, Rīgas galerija, Rīga, 2008; Optiska difūzija, galerija Eva Poll, Berlīne, 2004.</div>
+      </div>
+      
+      
+      
+      <div class="biography-cite">
+        Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014., p. 158–159
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -671,7 +727,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-IVANOVS-1968</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-18</span>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

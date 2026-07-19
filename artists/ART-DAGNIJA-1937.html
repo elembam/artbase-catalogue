@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -619,6 +647,34 @@
   
   
 
+  <!-- Biography -->
+  
+  
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">She studied at the Arts Students League, New York (1956), the Art School of the Society of Arts and Crafts, Detroit (1959), and the Chouinard Institute, Los Angeles (1960). She worked at OCCC Art School, Demarest City, New Jersey (1985–2001). She participated in the “Art in Embassies” Program of the USA State Department (1991–2001). She was a Nominee of the Baltic Assembly Culture Award, the Artists’ Union of Latvia, 2005. She has held several solo exhibitions at the museums and galleries in the USA and Latvia. She has participated in numerous group exhibitions in the USA and Latvia, including: P.S.1 Institute of Contemporary Art, New York; New Jersey State Museum, Trenton, New Jersey; City Without Walls Gallery, Newark, New Jersey; Frank J. Miele Gallery, New York; Stables Gallery, Taos, New Mexico.</div>
+      </div>
+      
+      
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">Absolvējusi Mākslinieku studentu līgu Ņujorkā (1956), Mākslas un dekoratīvi lietišķo skolu Detroitā, ASV (1959), Chouinard Institūtu Losandželosā, ASV (1960). Strādājusi OCCC Mākslas skolā, Demaresta, Ņūdžersija (1985–2001). Ņēmusi dalību ASV Valsts departamenta programmā Art in Embassies (1991–2001). Latvijas Mākslinieku savienības Baltijas Asamblejas kultūras balvas nominante, 2005. Sarīkojusi vairākus desmitus personālizstāžu ASV un Latvijas muzejos un galerijās. Piedalījusies daudzās grupu izstādēs ASV un Latvijā, tai skaitā, P.S.1 Modernās mākslas institūts, Ņujorka; Ņūdžersijas Nacionālais muzejs, Trentona, Ņūdžersija; galerijā City Without Walls, Ņuarka; Frank J. Miele galerija, Ņujorka; Stables galerijā, Taosā, ASV.</div>
+      </div>
+      
+      
+      
+      <div class="biography-cite">
+        Benetton, Luciano (collector). Latvia, WOW! Contemporary Artists from Latvia. Treviso: FABRICA, 2014., p. 96–97
+      </div>
+      
+    </div>
+  </section>
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -672,7 +728,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-DAGNIJA-1937</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-18</span>
+    <span>Exported 2026-07-19</span>
   </footer>
 
 </div>

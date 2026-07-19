@@ -355,6 +355,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -556,6 +584,34 @@
         <span class="collection-count">{{ col.work_count }} work{% if col.work_count != 1 %}s{% endif %}</span>
       </a>
       {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Biography -->
+  {% set bio = artist.get('biography') %}
+  {% if bio and (bio.en or bio.lv) %}
+  <section class="section">
+    <div class="section-label">Biography</div>
+    <div class="biography-block">
+      {% if bio.en %}
+      <div class="biography-lang">
+        <div class="biography-lang-label">English</div>
+        <div class="biography-text">{{ bio.en }}</div>
+      </div>
+      {% endif %}
+      {% if bio.lv %}
+      <div class="biography-lang">
+        <div class="biography-lang-label">Latviešu</div>
+        <div class="biography-text">{{ bio.lv }}</div>
+      </div>
+      {% endif %}
+      {% set bio_src = sources_registry.get(bio.source_id) if bio.source_id else None %}
+      {% if bio_src %}
+      <div class="biography-cite">
+        {{ bio_src.citation }}{% if bio.pages %}, p. {{ bio.pages | join('–') }}{% endif %}
+      </div>
+      {% endif %}
     </div>
   </section>
   {% endif %}

@@ -1,0 +1,138 @@
+{
+  "artbase_id": "ART-BREKTE-1952",
+  "airtable_id": null,
+  "artbase_canonical_id": null,
+  "version": 1,
+  "created": null,
+  "exported": "2026-07-19T09:31:59.256678+00:00",
+  "visibility": "public",
+  "identity": {
+    "preferred_name": "Ilona Brekte",
+    "preferred_name_language": "lv",
+    "full_name": "Ilona Brekte",
+    "name_variants": [],
+    "sort_name": "Ilona Brekte"
+  },
+  "life": {
+    "birth_date": {
+      "value": "1952",
+      "precision": "year",
+      "status": "working",
+      "source_ids": [],
+      "notes": null
+    },
+    "death_date": {
+      "value": null,
+      "precision": null,
+      "status": "unknown",
+      "source_ids": [],
+      "notes": null
+    },
+    "birth_place": {
+      "display": null,
+      "tgn_uri": null,
+      "wikidata_qid": null,
+      "source_ids": []
+    },
+    "death_place": {
+      "display": null,
+      "tgn_uri": null,
+      "wikidata_qid": null,
+      "source_ids": []
+    }
+  },
+  "descriptors": {
+    "nationality": "Latvian",
+    "citizenship": [],
+    "occupations": [
+      "painter"
+    ],
+    "occupations_aat": [],
+    "media": [],
+    "subjects": [],
+    "movement_notes": null,
+    "biography_summary": null
+  },
+  "authority_links": {
+    "wikidata": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "viaf": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "ulan": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "isni": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "rkd": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "lc_naco": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "gnd": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "bnf": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "libris": {
+      "id": null,
+      "uri": null,
+      "status": "search_needed",
+      "verified_date": null,
+      "notes": null
+    },
+    "artbase_id": null
+  },
+  "sources": [],
+  "source_refs": [],
+  "conflicts": [],
+  "cataloguing": {
+    "review_status": "draft",
+    "catalogued_by": null,
+    "notes": "Reconstructed 2026-07-19 (Instruction 21, HTML-without-JSON gap remediation). The canonical JSON for this record was missing from the store while the artist's HTML page (exported 2026-05-30) remained live -- a pipeline synchronization gap, not a new record. Rebuilt from the fields already displayed on the live page (name, birth year, nationality, occupation, and origin source where the page's template captured one); nothing beyond what was already published is asserted.",
+    "tasks": [
+      "Locate a citable source for this record (origin metadata lost)",
+      "Search VIAF",
+      "Search Getty ULAN"
+    ],
+    "engagement_ids": []
+  },
+  "_schema": "artbase:artist:v1",
+  "collections": []
+}
