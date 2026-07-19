@@ -68,7 +68,7 @@ See [`artbase_export/GETTING_STARTED.md`](artbase_export/GETTING_STARTED.md) for
 
 ## Quality gates (site + canonical data)
 
-Run this before commit/deploy to catch sitemap drift, broken internal links, and changed JSON issues:
+Run this before commit/deploy to catch sitemap drift, broken internal links, changed JSON issues, the Instruction 21 redirect-stub invariant (`ART-KAULACA-1971`), and accidental application of deferred Instruction 20 queue records:
 
 ```bash
 python3 scripts/quality_gates.py

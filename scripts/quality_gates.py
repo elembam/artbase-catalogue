@@ -27,8 +27,18 @@ from urllib.parse import urlparse
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SITEMAP_PATH = REPO_ROOT / "sitemap.xml"
 BASE_URL = "https://arsaccordia.com"
+REVIEW_QUEUE_PATH = (
+    REPO_ROOT
+    / "artbase_export"
+    / "data"
+    / "contributions"
+    / "instruction20_review_queue_20260718.json"
+)
+ARTISTS_DATA_DIR = REPO_ROOT / "artbase_export" / "data" / "artists"
 HREF_RE = re.compile(r'href="([^"]+)"')
 LOC_RE = re.compile(r"<loc>([^<]+)</loc>")
+REDIRECT_STUB_ID = "ART-KAULACA-1971"
+REDIRECT_TARGET_ID = "ART-KAULACA-VINETA"
 
 
 def _git_changed_files() -> list[Path]:
@@ -197,6 +207,106 @@ def check_changed_json() -> list[str]:
     return errors
 
 
+def check_instruction21_redirect_stub() -> list[str]:
+    errors: list[str] = []
+    stub_html = REPO_ROOT / "artists" / f"{REDIRECT_STUB_ID}.html"
+    expected_href = f"/artists/{REDIRECT_TARGET_ID}.html"
+    expected_canonical = f'{BASE_URL}/artists/{REDIRECT_TARGET_ID}.html'
+
+    if not stub_html.exists():
+        errors.append(f"redirect stub missing: artists/{REDIRECT_STUB_ID}.html")
+        return errors
+
+    text = stub_html.read_text(encoding="utf-8", errors="replace")
+    if f'content="0; url={expected_href}"' not in text:
+        errors.append(
+            f"redirect stub missing expected meta refresh target: {expected_href}"
+        )
+    if f'<link rel="canonical" href="{expected_canonical}">' not in text:
+        errors.append(
+            "redirect stub missing expected canonical link to "
+            f"{expected_canonical}"
+        )
+    if f'href="{expected_href}"' not in text:
+        errors.append(f"redirect stub missing fallback link target: {expected_href}")
+
+    stub_json = ARTISTS_DATA_DIR / f"{REDIRECT_STUB_ID}.json"
+    if stub_json.exists():
+        errors.append(
+            f"redirected duplicate should not have canonical JSON: {stub_json.relative_to(REPO_ROOT)}"
+        )
+
+    target_json = ARTISTS_DATA_DIR / f"{REDIRECT_TARGET_ID}.json"
+    if not target_json.exists():
+        errors.append(
+            f"redirect target canonical JSON missing: {target_json.relative_to(REPO_ROOT)}"
+        )
+
+    sitemap_paths = _load_sitemap_paths()
+    stub_path = f"/artists/{REDIRECT_STUB_ID}.html"
+    if stub_path not in sitemap_paths:
+        errors.append(f"redirect stub missing from sitemap: {stub_path}")
+
+    return errors
+
+
+def _iter_artist_json_files() -> list[Path]:
+    return sorted(ARTISTS_DATA_DIR.glob("ART-*.json"))
+
+
+def check_instruction20_deferred_queue_invariant() -> list[str]:
+    errors: list[str] = []
+    if not REVIEW_QUEUE_PATH.exists():
+        errors.append(
+            f"review queue file missing: {REVIEW_QUEUE_PATH.relative_to(REPO_ROOT)}"
+        )
+        return errors
+
+    queue = json.loads(REVIEW_QUEUE_PATH.read_text(encoding="utf-8"))
+    deferred_ids: set[str] = set()
+
+    for item in queue.get("items") or []:
+        record_id = item.get("record_id")
+        if not record_id:
+            continue
+        decision = item.get("decision") or {}
+        action = decision.get("action")
+        status = item.get("status")
+
+        if action == "defer_new_artist":
+            deferred_ids.add(record_id)
+            if status != "deferred_new_artist":
+                errors.append(
+                    f"deferred queue item {record_id} has invalid status '{status}'"
+                )
+        if action == "match_existing" and status not in {"approved_match", "applied"}:
+            errors.append(
+                f"match_existing queue item {record_id} has invalid status '{status}'"
+            )
+
+    if not deferred_ids:
+        return errors
+
+    for artist_path in _iter_artist_json_files():
+        artist = json.loads(artist_path.read_text(encoding="utf-8"))
+        for conflict in artist.get("conflicts") or []:
+            if not isinstance(conflict, dict):
+                continue
+            if conflict.get("field") != "instruction20.review_queue":
+                continue
+            for value in conflict.get("values") or []:
+                if not isinstance(value, dict):
+                    continue
+                record_id = value.get("record_id")
+                if record_id in deferred_ids:
+                    errors.append(
+                        f"deferred queue record {record_id} unexpectedly applied in "
+                        f"{artist_path.relative_to(REPO_ROOT)}"
+                    )
+
+    return errors
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run static-site/data quality gates")
     parser.add_argument(
@@ -209,6 +319,8 @@ def main() -> int:
     checks = [
         ("sitemap coverage", check_sitemap_coverage),
         ("changed JSON sanity", check_changed_json),
+        ("instruction21 redirect stub invariant", check_instruction21_redirect_stub),
+        ("instruction20 deferred queue invariant", check_instruction20_deferred_queue_invariant),
         ("internal links", lambda: check_internal_links(args.all_html)),
     ]
 
