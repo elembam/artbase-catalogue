@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A list tells you what you own. A record lets someone else prove it. The difference decides whether a collection survives a handover.">
+  <title>Why an Inventory Is Not a Record — Documenting an Art Collection</title>
+  <link rel="canonical" href="https://arsaccordia.com/insights/inventory-is-not-a-record/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f6f1e6;
+      --paper-deep: #ebe3d1;
+      --ink: #1c1814;
+      --ink-soft: #4a4338;
+      --ink-faded: #80766a;
+      --seal: #6e1818;
+      --gold: #8a6f2e;
+      --rule: #c7bca5;
+      --grid: rgba(110, 24, 24, 0.04);
+      --disp: 'Fraunces', Georgia, serif;
+      --body: 'Public Sans', -apple-system, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 32px 32px;
+      color: var(--ink);
+      font-family: var(--body);
+      line-height: 1.7;
+      min-height: 100vh;
+      padding: 40px 20px 80px;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.5;
+      z-index: 1;
+      mix-blend-mode: multiply;
+    }
+    .site-nav {
+      max-width: 880px; margin: 0 auto 26px; padding: 0 0 16px; border-bottom: 1px solid var(--rule);
+      display: flex; align-items: center; gap: 32px; position: relative; z-index: 2;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .nav-logo-mark { width: 28px; height: 28px; background: var(--seal); border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+    .nav-name { font-family: var(--disp); font-size: 1.1rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+    .nav-links { display: flex; gap: 24px; margin-left: auto; flex-wrap: wrap; }
+    .nav-link { font-size: 0.875rem; color: var(--ink-soft); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; }
+    .nav-link:hover { color: var(--seal); }
+    .nav-link.active { color: var(--seal); border-bottom-color: var(--seal); }
+
+    .page { max-width: 860px; margin: 0 auto; position: relative; z-index: 2; }
+    .article-header {
+      border-bottom: 2px solid var(--seal); padding-bottom: 20px; margin-bottom: 24px;
+    }
+    .eyebrow {
+      font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--seal); margin-bottom: 14px;
+    }
+    h1 {
+      font-family: var(--disp); font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: -0.03em; line-height: 0.96; color: var(--ink);
+      font-weight: 700; margin-bottom: 12px;
+    }
+    .subtitle {
+      font-family: var(--disp); font-style: italic; font-size: 1.08rem; color: var(--ink-faded); line-height: 1.5; max-width: 42ch;
+    }
+    .article-meta {
+      font-family: var(--mono); font-size: 0.72rem; color: var(--ink-faded); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 28px;
+      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    }
+
+    .article-body {
+      font-size: 1.03rem; color: var(--ink-soft);
+    }
+    .article-body p { margin-bottom: 1.2em; }
+    .article-body p.lead { font-size: 1.12rem; color: var(--ink); }
+    .article-body strong { color: var(--ink); }
+    .article-body em { color: var(--ink); }
+    .article-body h2 {
+      font-family: var(--disp); font-size: 1.7rem; line-height: 1.2; color: var(--ink); margin: 1.9em 0 0.7em; padding-top: 0.2em; border-top: 1px solid var(--rule);
+    }
+    .article-body a { color: var(--seal); text-decoration: underline; text-decoration-color: rgba(110,24,24,0.4); text-underline-offset: 3px; }
+    .article-body a:hover { text-decoration-color: var(--seal); }
+
+    .related {
+      margin-top: 36px; border-top: 1px solid var(--rule); padding-top: 22px;
+    }
+    .related h3 { font-family: var(--disp); font-size: 1.4rem; margin-bottom: 12px; color: var(--ink); }
+    .related ul { list-style: none; display: grid; gap: 10px; }
+    .related a { color: var(--seal); text-decoration: none; }
+    .related a:hover { text-decoration: underline; }
+
+    .site-footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .site-footer .footer-text { font-size: 0.75rem; color: var(--ink-faded); }
+    .site-footer .footer-link { color: var(--seal); text-decoration: none; }
+    .site-footer .footer-link:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      body { padding: 20px 14px 60px; }
+      .site-nav { flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+      .nav-links { gap: 12px; }
+      .article-meta { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../../" class="nav-logo">
+      <div class="nav-logo-mark">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <rect x="3" y="3" width="6" height="6" fill="white" opacity="0.9"/>
+          <rect x="11" y="3" width="6" height="6" fill="white" opacity="0.5"/>
+          <rect x="3" y="11" width="6" height="6" fill="white" opacity="0.5"/>
+          <rect x="11" y="11" width="6" height="6" fill="white" opacity="0.75"/>
+        </svg>
+      </div>
+      <span class="nav-name">Ars Accordia</span>
+    </a>
+    <div class="nav-links">
+      <a href="../../artworks/" class="nav-link">Artworks</a>
+      <a href="../../collections/" class="nav-link">Collections</a>
+      <a href="../../artists/" class="nav-link">Artists</a>
+      <a href="../../about/" class="nav-link">About</a>
+      <a href="../../insights/" class="nav-link active">Insights</a>
+      <a href="../../contributions/" class="nav-link">Contributions</a>
+      <a href="../../sitemap/" class="nav-link">Index</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <header class="article-header">
+      <p class="eyebrow">Insights / Documentation</p>
+      <h1>Why an Inventory Is Not a Record</h1>
+      <p class="subtitle">A list tells you what you own. A record lets someone else prove it.</p>
+    </header>
+
+    <div class="article-meta">
+      <time datetime="2026-08-12">12 August 2026</time>
+      <span>Essay</span>
+    </div>
+
+    <article class="article-body" aria-label="Article: Why an Inventory Is Not a Record">
+      <p class="lead">Many serious collectors believe they are covered because they have a list. A list is not a record — and the difference is the whole difference between a collection that survives a handover and one that doesn't.</p>
+
+      <h2>The comfortable illusion</h2>
+      <p>Ask a careful collector whether their collection is documented, and the honest ones will point to something real: a spreadsheet, an insurance schedule, a folder of photographs, a binder of receipts. It represents genuine effort, and it feels like safety.</p>
+
+      <p>It is an inventory. It is not a record. And the gap between the two is invisible right up until the moment it matters most — when the collection passes to someone who did not build it.</p>
+
+      <h2>What an inventory is</h2>
+      <p>An inventory is a list of what you have. For each work: a title, an artist's name, a medium, some dimensions, perhaps a photograph and a figure for insurance. It answers a single question — <em>what do I own?</em> — and it answers it for one specific person: you, who already knows.</p>
+
+      <p>That is its strength and its fatal limit. An inventory is legible only to someone who already holds the knowledge it leaves out. You read “oil, portrait of a woman, 70 × 50” and see a specific painting, because you remember buying it, remember the gallery, remember what the dealer told you about the sitter and the hand. The line on the page is a prompt for a memory. It is not the memory itself.</p>
+
+      <h2>Why that isn't enough</h2>
+      <p>An inventory <strong>asserts</strong>; it does not <strong>prove</strong>.</p>
+
+      <p>“Painting by [artist], oil on canvas, 70 × 50 cm” is a claim with nothing standing behind it. No source for the attribution. No chain of ownership. No link to any authority that independently confirms the artist exists, let alone that this is their work. A stranger handed that line cannot verify a single part of it. They cannot tell your original from a copy, your attribution from a hopeful guess, your figure from a fond exaggeration. The inventory tells them what you <em>believe</em> you own. It gives them no way to <em>establish</em> it.</p>
+
+      <h2>What a record is</h2>
+      <p>A record is built for the stranger — because sooner or later, everyone who handles a collection is one.</p>
+
+      <p>A record anchors each work's <strong>identity</strong> to shared standards, so its description is structured and comparable, not free text. It carries <strong>provenance</strong> with its <strong>sources</strong> attached, so the ownership history can be checked rather than trusted. It <strong>cross-references</strong> the work and its maker to public authorities — the independent registers that name the artist and, where possible, the object itself — so the record does not rest on the owner's say-so. It is <strong>machine-readable and exportable</strong>, so it can move between an insurer, a lawyer, a museum, and an auction house in the formats each already uses. And it carries a <strong>permanent identifier</strong>, so the work can be pointed to and found again, unchanged, for as long as it exists.</p>
+
+      <p>An inventory answers <em>what do I own?</em> A record answers a harder and more valuable question: <em>can someone else prove what this is?</em></p>
+
+      <h2>The stranger test</h2>
+      <p>There is a simple way to tell which one you have. Imagine handing your documentation — and nothing else, no conversation, no memory, no you — to someone who has never seen the collection. Could they prove what any single work is?</p>
+
+      <p>With an inventory, almost never. With a record, yes. That is the entire distinction, and it is the distinction that decides what happens to a collection when its owner is no longer there to explain it.</p>
+
+      <h2>Why it matters at the handover</h2>
+      <p>Everything an inventory leaves unwritten, the collector carries in their head. That works perfectly — for exactly as long as the collector is present.</p>
+
+      <p>At the moment a collection changes hands, every party to it is a stranger: the heir who never learned it, the insurer pricing the risk, the valuer engaged to assess it, the buyer deciding whether to trust it. The inventory that served the collector faultlessly for forty years fails all of them at once, because the person it depended on is the one person no longer in the room. The record is what carries across that gap. It is the collection's knowledge, made to outlast the collector.</p>
+
+      <h2>From a list to a record</h2>
+      <p>This is the work Ars Accordia does: turning inventories — or scattered notes, or nothing — into records. Each work anchored, sourced, cross-referenced to the public authorities that name it, exported in standard formats, and permanently identified. Not a prettier list. A different kind of object: one a stranger can rely on.</p>
+
+      <p>Our <a href="../../method/">Collection Assessment</a> measures exactly how far a given collection sits from that standard — what is documented, what is merely listed, and what it would take to close the distance. It begins by answering the stranger test honestly, work by work.</p>
+
+      <p>Most collections have a list. A list keeps the collector company. A record lets the collection go on without them.</p>
+
+      <p><strong>Secure the record.</strong></p>
+    </article>
+
+    <aside class="related">
+      <h3>Related reading</h3>
+      <ul>
+        <li><a href="../prove-what-you-own/">Prove What You Own</a></li>
+        <li><a href="../what-provenance-is/">What Provenance Actually Is (and What It Isn't)</a></li>
+      </ul>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="footer-text">Ars Accordia</div>
+      <a href="../../method/" class="footer-link">Method page</a>
+    </footer>
+  </main>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Why an Inventory Is Not a Record — Documenting an Art Collection",
+      "description": "A list tells you what you own. A record lets someone else prove it. The difference decides whether a collection survives a handover.",
+      "datePublished": "2026-08-12",
+      "author": {
+        "@type": "Organization",
+        "name": "Ars Accordia"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ars Accordia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://arsaccordia.com/logo.svg"
+        }
+      },
+      "mainEntityOfPage": "https://arsaccordia.com/insights/inventory-is-not-a-record/"
+    }
+  </script>
+</body>
+</html>

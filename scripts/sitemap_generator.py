@@ -44,6 +44,10 @@ def generate() -> str:
         ("/collections/hansabanka/","0.7","monthly"),
         ("/contributions/",  "0.6", "monthly"),
         ("/about/",          "0.5", "monthly"),
+        ("/insights/",       "0.6", "weekly"),
+        ("/insights/prove-what-you-own/", "0.6", "weekly"),
+        ("/insights/what-provenance-is/", "0.6", "weekly"),
+        ("/insights/inventory-is-not-a-record/", "0.6", "weekly"),
         ("/sitemap/",        "0.3", "monthly"),
     ]
     for loc, pri, freq in static:

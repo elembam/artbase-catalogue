@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nearly $1 trillion in art is passing to heirs who can't prove what they hold. Why documentation, not taste, decides what a collection is worth.">
+  <title>Prove What You Own — Inherited Art &amp; the Great Wealth Transfer</title>
+  <link rel="canonical" href="https://arsaccordia.com/insights/prove-what-you-own/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f6f1e6;
+      --paper-deep: #ebe3d1;
+      --ink: #1c1814;
+      --ink-soft: #4a4338;
+      --ink-faded: #80766a;
+      --seal: #6e1818;
+      --gold: #8a6f2e;
+      --rule: #c7bca5;
+      --grid: rgba(110, 24, 24, 0.04);
+      --disp: 'Fraunces', Georgia, serif;
+      --body: 'Public Sans', -apple-system, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 32px 32px;
+      color: var(--ink);
+      font-family: var(--body);
+      line-height: 1.7;
+      min-height: 100vh;
+      padding: 40px 20px 80px;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.5;
+      z-index: 1;
+      mix-blend-mode: multiply;
+    }
+    .site-nav {
+      max-width: 880px; margin: 0 auto 26px; padding: 0 0 16px; border-bottom: 1px solid var(--rule);
+      display: flex; align-items: center; gap: 32px; position: relative; z-index: 2;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .nav-logo-mark { width: 28px; height: 28px; background: var(--seal); border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+    .nav-name { font-family: var(--disp); font-size: 1.1rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+    .nav-links { display: flex; gap: 24px; margin-left: auto; flex-wrap: wrap; }
+    .nav-link { font-size: 0.875rem; color: var(--ink-soft); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; }
+    .nav-link:hover { color: var(--seal); }
+    .nav-link.active { color: var(--seal); border-bottom-color: var(--seal); }
+
+    .page { max-width: 860px; margin: 0 auto; position: relative; z-index: 2; }
+    .article-header {
+      border-bottom: 2px solid var(--seal); padding-bottom: 20px; margin-bottom: 24px;
+    }
+    .eyebrow {
+      font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--seal); margin-bottom: 14px;
+    }
+    h1 {
+      font-family: var(--disp); font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: -0.03em; line-height: 0.96; color: var(--ink);
+      font-weight: 700; margin-bottom: 12px;
+    }
+    .subtitle {
+      font-family: var(--disp); font-style: italic; font-size: 1.08rem; color: var(--ink-faded); line-height: 1.5; max-width: 44ch;
+    }
+    .article-meta {
+      font-family: var(--mono); font-size: 0.72rem; color: var(--ink-faded); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 28px;
+      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    }
+
+    .article-body {
+      font-size: 1.03rem; color: var(--ink-soft);
+    }
+    .article-body p { margin-bottom: 1.2em; }
+    .article-body p.lead { font-size: 1.12rem; color: var(--ink); }
+    .article-body strong { color: var(--ink); }
+    .article-body em { color: var(--ink); }
+    .article-body h2 {
+      font-family: var(--disp); font-size: 1.7rem; line-height: 1.2; color: var(--ink); margin: 1.9em 0 0.7em; padding-top: 0.2em; border-top: 1px solid var(--rule);
+    }
+    .article-body a { color: var(--seal); text-decoration: underline; text-decoration-color: rgba(110,24,24,0.4); text-underline-offset: 3px; }
+    .article-body a:hover { text-decoration-color: var(--seal); }
+
+    .related {
+      margin-top: 36px; border-top: 1px solid var(--rule); padding-top: 22px;
+    }
+    .related h3 { font-family: var(--disp); font-size: 1.4rem; margin-bottom: 12px; color: var(--ink); }
+    .related ul { list-style: none; display: grid; gap: 10px; }
+    .related a { color: var(--seal); text-decoration: none; }
+    .related a:hover { text-decoration: underline; }
+
+    .site-footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .site-footer .footer-text { font-size: 0.75rem; color: var(--ink-faded); }
+    .site-footer .footer-link { color: var(--seal); text-decoration: none; }
+    .site-footer .footer-link:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      body { padding: 20px 14px 60px; }
+      .site-nav { flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+      .nav-links { gap: 12px; }
+      .article-meta { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../../" class="nav-logo">
+      <div class="nav-logo-mark">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <rect x="3" y="3" width="6" height="6" fill="white" opacity="0.9"/>
+          <rect x="11" y="3" width="6" height="6" fill="white" opacity="0.5"/>
+          <rect x="3" y="11" width="6" height="6" fill="white" opacity="0.5"/>
+          <rect x="11" y="11" width="6" height="6" fill="white" opacity="0.75"/>
+        </svg>
+      </div>
+      <span class="nav-name">Ars Accordia</span>
+    </a>
+    <div class="nav-links">
+      <a href="../../artworks/" class="nav-link">Artworks</a>
+      <a href="../../collections/" class="nav-link">Collections</a>
+      <a href="../../artists/" class="nav-link">Artists</a>
+      <a href="../../about/" class="nav-link">About</a>
+      <a href="../../insights/" class="nav-link active">Insights</a>
+      <a href="../../contributions/" class="nav-link">Contributions</a>
+      <a href="../../sitemap/" class="nav-link">Index</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <header class="article-header">
+      <p class="eyebrow">Insights / Art &amp; ownership</p>
+      <h1>Prove What You Own</h1>
+      <p class="subtitle">On the great wealth transfer, and why a collection is only worth what its record can show.</p>
+    </header>
+
+    <div class="article-meta">
+      <time datetime="2026-08-12">12 August 2026</time>
+      <span>Essay</span>
+    </div>
+
+    <article class="article-body" aria-label="Article: Prove What You Own">
+      <p class="lead">Bloomberg's Felix Salmon put a number on something the art world had been avoiding: nearly a trillion dollars of art is expected to change hands this decade as collectors age, and there are not enough buyers or museums to absorb it. Advisers who manage family collections report the same thing in blunter terms — the next generation, for the most part, doesn't want it.</p>
+
+      <p>That trillion is one slice of a far larger tide. The research firm Cerulli projects that some $84 trillion in wealth will pass from older generations to their heirs through 2045. Art, antiques, and cultural assets ride along inside it — and they are the part of an estate least ready to move.</p>
+
+      <h2>The story is older than the headline</h2>
+      <p>None of this began in 2026. For more than a decade, appraisers and auctioneers have described the same flood: downsizing households, dining sets and silver and mahogany no one wants, a market for traditional antiques that has quietly lost something like half its value in fifteen years. The trade even has a name for the casualties — “brown furniture.” The heirs said no to the china a decade ago. The wave has simply reached fine art.</p>
+
+      <p>One line from that older coverage turns out to be the whole diagnosis, written before anyone dressed it in strategy language: antiques, a dealer observed, do not translate to the digital realm. They are not part of the point-and-click universe. You cannot look them up.</p>
+
+      <h2>It looks like taste. It isn't.</h2>
+      <p>The easy explanation is that tastes changed, and in part they did. But look at which objects collapse and which hold their ground, and a sharper pattern appears.</p>
+
+      <p>The pieces that lose their value are the ones that cannot be told apart from any other — a good painting by an uncertain hand, a fine object with no history attached. The pieces that keep their value are the ones that can be identified, attributed, and traced. In the humblest corner of the market the rule is already visible: a standard-issue antique sword sells for half what it did, while the one with a general's name inscribed on the blade holds its price. The name is the difference. The record is the difference.</p>
+
+      <p>The generation inheriting all this did not reject culture. It rejected opaque, unmanaged risk. An object it cannot verify, cannot place, cannot look up is not an heirloom. It is a question mark that takes up space.</p>
+
+      <h2>What the market actually pays for</h2>
+      <p>The valuation profession is unsentimental about this. Provenance — the documented chain of a work's ownership, identity, and exhibition — is what underwrites authenticity, and authenticity is what underwrites price. The Royal Institution of Chartered Surveyors states it plainly: where a work cannot meet the market's documentation requirements, the valuer marks the value down accordingly. Auction specialists put it more bluntly still — without provenance and records, a work may not be accepted for resale at all.</p>
+
+      <p>So the same canvas, with and without its record, is two different assets. When Leonardo's <em>Salvator Mundi</em> resurfaced, it was a battered studio copy until its history was researched and traced; the record is what let it sell, in 2017, for $450 million. That is an extreme case, but the principle beneath it is ordinary and universal: the record is not paperwork around the asset. For a work of art, the record is half the asset.</p>
+
+      <p>Ars Accordia does not appraise and does not authenticate — that is the connoisseur's and the valuer's work. But the record those judgements rest on has to exist first, and for most privately held art it doesn't.</p>
+
+      <h2>The knowledge dies with the collector</h2>
+      <p>A serious collection is held together by one person's memory. What each work is, where it came from, why it matters, what the attribution rests on — that knowledge usually lives in the collector's head and a drawer of receipts, never in any structured, durable, transferable form. When the collector is gone, the knowledge goes too. The heirs do not inherit the collection the collector knew. They inherit the objects, stripped of the context that made them legible.</p>
+
+      <p>This is why family wealth erodes so reliably across generations — roughly seventy percent gone by the second, ninety by the third. Wealth advisers are clear that the cause is rarely bad investment. It is lost preparation, lost communication, lost record. What is true of a portfolio is doubly true of a wall of paintings whose meaning was never written down.</p>
+
+      <h2>The problem is architecture, not liquidity</h2>
+      <p>Call the trillion-dollar art glut a problem of taste, or of liquidity, and you have misread it. It is an information problem.</p>
+
+      <p>Physical cultural assets held without structured provenance, verifiable identity, and a durable record are not wealth in any form that survives a handover. They are an administrative burden wearing the shape of an inheritance. Give those same objects a clean, structured, independently verifiable record, and they stay what the collector believed them to be — things that can be insured, divided, kept, lent, donated, or sold, by people who can prove what they hold.</p>
+
+      <p>The difference between the two outcomes is not the art. It is the taxonomy around it.</p>
+
+      <h2>Securing the record</h2>
+      <p>This is the whole of what Ars Accordia does. We give each work a permanent, structured record — its identity, its sources, its provenance, and its cross-references to the public authorities that independently name it — and we anchor the individual object, so it can be pointed to, verified, and understood by someone who never met the collector and never will.</p>
+
+      <p>The standards the field already relies on describe a work, classify it, identify its people, and move its data between institutions. What they rarely do is anchor the individual object and hold its record somewhere the next generation can actually find it. That is the gap, and it is the one we close: not an opinion of value, but the record that every opinion, sale, division, and bequest afterward depends on.</p>
+
+      <h2>Could your heirs prove what you own?</h2>
+      <p>That is the only question that matters, and most collectors have never been asked it plainly. If the answer is uncertain, the uncertainty is the real liability — quieter than a bad market, and far more permanent.</p>
+
+      <p>It is also the one thing that can be settled without selling a single work. A collection that can be proven is a collection that can be passed on.</p>
+
+      <p><strong>Your proof of art. Secure the record.</strong></p>
+    </article>
+
+    <aside class="related">
+      <h3>Related reading</h3>
+      <ul>
+        <li><a href="../what-provenance-is/">What Provenance Actually Is (and What It Isn't)</a></li>
+        <li><a href="../inventory-is-not-a-record/">Why an Inventory Is Not a Record</a></li>
+      </ul>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="footer-text">Ars Accordia</div>
+      <a href="../../method/" class="footer-link">Method page</a>
+    </footer>
+  </main>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Prove What You Own — Inherited Art & the Great Wealth Transfer",
+      "description": "Nearly $1 trillion in art is passing to heirs who can't prove what they hold. Why documentation, not taste, decides what a collection is worth.",
+      "datePublished": "2026-08-12",
+      "author": {
+        "@type": "Organization",
+        "name": "Ars Accordia"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ars Accordia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://arsaccordia.com/logo.svg"
+        }
+      },
+      "mainEntityOfPage": "https://arsaccordia.com/insights/prove-what-you-own/"
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Insights from Ars Accordia — notes on provenance, ownership, and the record that survives a handover.">
+  <title>Insights — Ars Accordia</title>
+  <link rel="canonical" href="https://arsaccordia.com/insights/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f6f1e6;
+      --paper-deep: #ebe3d1;
+      --ink: #1c1814;
+      --ink-soft: #4a4338;
+      --ink-faded: #80766a;
+      --seal: #6e1818;
+      --seal-light: #8a2020;
+      --gold: #8a6f2e;
+      --rule: #c7bca5;
+      --grid: rgba(110, 24, 24, 0.04);
+      --disp: 'Fraunces', Georgia, serif;
+      --body: 'Public Sans', -apple-system, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 32px 32px;
+      color: var(--ink);
+      font-family: var(--body);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 40px 20px 80px;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.5;
+      z-index: 1;
+      mix-blend-mode: multiply;
+    }
+    .page { max-width: 960px; margin: 0 auto; position: relative; z-index: 2; }
+    .site-nav {
+      max-width: 960px; margin: 0 auto 40px; padding: 0 0 16px; border-bottom: 1px solid var(--rule);
+      display: flex; align-items: center; gap: 32px; position: relative; z-index: 2;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .nav-logo-mark { width: 28px; height: 28px; background: var(--seal); border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+    .nav-name { font-family: var(--disp); font-size: 1.1rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+    .nav-links { display: flex; gap: 24px; margin-left: auto; flex-wrap: wrap; }
+    .nav-link { font-size: 0.875rem; color: var(--ink-soft); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; }
+    .nav-link:hover { color: var(--seal); }
+    .nav-link.active { color: var(--seal); border-bottom-color: var(--seal); }
+
+    .page-header { border-bottom: 2px solid var(--seal); padding-bottom: 24px; margin-bottom: 40px; }
+    .page-title { font-family: var(--disp); font-size: clamp(2.2rem, 5vw, 3rem); font-weight: 700; letter-spacing: -0.02em; color: var(--ink); }
+    .page-subtitle { color: var(--ink-faded); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 8px; }
+
+    .story-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+    .story-card {
+      background: rgba(255,255,255,0.4); border: 1px solid var(--rule); border-radius: 3px; padding: 22px 22px 18px; box-shadow: 0 10px 24px rgba(28,24,20,0.05);
+    }
+    .story-kicker {
+      font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--seal); margin-bottom: 12px;
+    }
+    .story-title { font-family: var(--disp); font-size: clamp(1.6rem, 3vw, 2rem); color: var(--ink); text-decoration: none; display: inline-block; line-height: 1.15; }
+    .story-title:hover { color: var(--seal); }
+    .story-standfirst { color: var(--ink-soft); margin-top: 10px; font-size: 1.04rem; line-height: 1.7; }
+    .story-link { display: inline-block; margin-top: 16px; color: var(--seal); text-decoration: none; font-weight: 600; }
+    .story-link:hover { text-decoration: underline; }
+
+    .meta-panel {
+      margin-top: 28px; padding: 18px 20px; border: 1px solid var(--rule); background: var(--paper-deep); color: var(--ink-soft);
+    }
+    .meta-panel p + p { margin-top: 8px; }
+    .meta-panel a { color: var(--seal); text-decoration: none; }
+    .meta-panel a:hover { text-decoration: underline; }
+
+    .site-footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .site-footer .footer-text { font-size: 0.75rem; color: var(--ink-faded); }
+    .site-footer .footer-link { color: var(--seal); text-decoration: none; }
+    .site-footer .footer-link:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      body { padding: 20px 14px 60px; }
+      .site-nav { flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+      .nav-links { gap: 12px; }
+      .page-title { font-size: 2rem; }
+      .story-card { padding: 18px 16px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../" class="nav-logo">
+      <div class="nav-logo-mark">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <rect x="3" y="3" width="6" height="6" fill="white" opacity="0.9"/>
+          <rect x="11" y="3" width="6" height="6" fill="white" opacity="0.5"/>
+          <rect x="3" y="11" width="6" height="6" fill="white" opacity="0.5"/>
+          <rect x="11" y="11" width="6" height="6" fill="white" opacity="0.75"/>
+        </svg>
+      </div>
+      <span class="nav-name">Ars Accordia</span>
+    </a>
+    <div class="nav-links">
+      <a href="../artworks/" class="nav-link">Artworks</a>
+      <a href="../collections/" class="nav-link">Collections</a>
+      <a href="../artists/" class="nav-link">Artists</a>
+      <a href="../about/" class="nav-link">About</a>
+      <a href="./" class="nav-link active">Insights</a>
+      <a href="../contributions/" class="nav-link">Contributions</a>
+      <a href="../sitemap/" class="nav-link">Index</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <header class="page-header">
+      <h1 class="page-title">Insights</h1>
+      <p class="page-subtitle">Notes on ownership, provenance, and the record that survives a handover</p>
+    </header>
+
+    <section class="story-grid" aria-label="Insight articles">
+      <article class="story-card">
+        <div class="story-kicker">Essay</div>
+        <a class="story-title" href="prove-what-you-own/">Prove What You Own</a>
+        <p class="story-standfirst">Nearly $1 trillion in art is expected to pass to heirs who cannot prove what they hold. Why documentation — not taste — decides what a collection is worth.</p>
+        <a class="story-link" href="prove-what-you-own/">Read the article</a>
+      </article>
+
+      <article class="story-card">
+        <div class="story-kicker">Essay</div>
+        <a class="story-title" href="what-provenance-is/">What Provenance Actually Is (and What It Isn't)</a>
+        <p class="story-standfirst">Provenance underwrites authenticity and value in art — but it is not a certificate, a valuation, or a single receipt. A plain-language guide to how trust is built.</p>
+        <a class="story-link" href="what-provenance-is/">Read the article</a>
+      </article>
+
+      <article class="story-card">
+        <div class="story-kicker">Essay</div>
+        <a class="story-title" href="inventory-is-not-a-record/">Why an Inventory Is Not a Record</a>
+        <p class="story-standfirst">A list tells you what you own. A record lets someone else prove it. The difference decides whether a collection survives a handover.</p>
+        <a class="story-link" href="inventory-is-not-a-record/">Read the article</a>
+      </article>
+    </section>
+
+    <aside class="meta-panel">
+      <p>These are editorial notes, not passports: they explain the problem Ars Accordia solves and the standards the field already relies on.</p>
+      <p>For the practical method behind the record, see the <a href="../method/">method page</a> and the <a href="../about/">about page</a>.</p>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="footer-text">Ars Accordia</div>
+      <a href="../sitemap/" class="footer-link">Site index</a>
+    </footer>
+  </main>
+</body>
+</html>
