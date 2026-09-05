@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
-  <responseDate>2026-05-29T18:18:22Z</responseDate>
+  <responseDate>2026-09-05T22:11:17Z</responseDate>
   <request verb="Identify">https://arsaccordia.com/oai</request>
   <Identify>
     <repositoryName>Ars Accordia Catalogue</repositoryName>
