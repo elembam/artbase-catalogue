@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Works held at the Latvian National Museum of Art (LNMM), documented by Ars Accordia. Ars Accordia Score 402 · 6 works catalogued · avg standard 67.0 · Substantial Record.">
-<title>LNMM — Works documented by Ars Accordia</title>
+<meta name="description" content="354 works from the Latvian National Museum of Art documented by Ars Accordia, with titles, artists, years, medium, dimensions and public passport links for each record.">
+<title>Latvian National Museum of Art — 354 works documented | Ars Accordia</title>
 <link rel="canonical" href="https://arsaccordia.com/collections/lnmm/">
-<meta property="og:title"       content="LNMA Collection — Ars Accordia">
-<meta property="og:description" content="354 works by 55 Latvian artists from the Latvia National Museum of Art.">
+<meta property="og:title"       content="Latvian National Museum of Art — 354 works documented | Ars Accordia">
+<meta property="og:description" content="354 works from the Latvian National Museum of Art, documented to standard by Ars Accordia.">
 <meta property="og:url"         content="https://arsaccordia.com/collections/lnmm/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,7 +82,7 @@
   .artist-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
   .artist-card {
     background: white; border: 1px solid var(--rule); border-radius: 4px;
-    padding: 18px 20px; transition: border-color 0.15s; overflow: hidden;
+    padding: 18px 20px; transition: border-color 0.15s;
   }
   .artist-card:hover { border-color: var(--seal); }
   .artist-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
@@ -100,13 +100,6 @@
   .badge-needed    { border-color: var(--gold); color: var(--gold); }
   .badge-missing   { border-color: var(--ink-faded); color: var(--ink-faded); }
   .badge-qid { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--ink-faded); margin-left: 2px; }
-  .badge-pd { border-color: #5a8a3a; color: #5a8a3a; }
-  .badge-cr { border-color: var(--seal); color: var(--seal); }
-  .artist-card-img {
-    display: block; width: calc(100% + 40px); height: 90px;
-    object-fit: cover; object-position: center top;
-    border-radius: 3px 3px 0 0; margin: -18px -20px 12px;
-  }
 
   /* Works filter */
   .filter-bar { margin-bottom: 16px; }
@@ -149,39 +142,6 @@
   }
   @media print { .site-nav, .filter-bar { display: none; } }
 
-  /* Ars Accordia Score panel */
-  .aa-score-panel { margin: 28px 0 0; padding: 20px 24px; background: white; border: 1px solid var(--rule); border-left: 3px solid var(--seal); border-radius: 2px; }
-  .aa-score-headline { display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap; margin-bottom: 14px; }
-  .aa-score-number { font-family: 'Fraunces', Georgia, serif; font-size: 3rem; font-weight: 500; color: var(--seal); line-height: 1; letter-spacing: -0.02em; }
-  .aa-score-meta { display: flex; flex-direction: column; gap: 3px; }
-  .aa-score-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-faded); font-weight: 600; }
-  .aa-score-standard { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--ink); }
-  .aa-score-gaps { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 14px; border-top: 1px solid var(--rule); padding-top: 12px; }
-  .aa-score-gap { display: flex; flex-direction: column; gap: 2px; }
-  .aa-score-gap-val { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 500; color: var(--ink); }
-  .aa-score-gap-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faded); }
-  .aa-score-note { font-size: 0.72rem; color: var(--ink-faded); font-style: italic; margin-top: 12px; line-height: 1.6; }
-  .aa-method-link { color: var(--seal); text-decoration: none; }
-  .aa-method-link:hover { text-decoration: underline; }
-
-  /* Cross-reference status badges on passports */
-  .badge-amber { border-color: #b87c15; color: #b87c15; background: #fff9ed; }
-
-  /* Documented passports section */
-  .passport-list { display: grid; gap: 8px; }
-  .passport-row {
-    background: white; border: 1px solid var(--rule); border-radius: 3px;
-    padding: 14px 16px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
-    transition: border-color 0.15s, box-shadow 0.15s;
-    text-decoration: none; color: inherit; cursor: pointer;
-  }
-  .passport-row:hover { border-color: var(--seal); box-shadow: 0 2px 8px -2px rgba(110,24,24,0.12); }
-  .passport-title { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 0.95rem; color: var(--ink); flex: 1; min-width: 200px; }
-  .passport-artist { font-size: 0.8rem; color: var(--ink-soft); min-width: 160px; }
-  .passport-date { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--ink-faded); min-width: 56px; }
-  .passport-score { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 500; color: var(--seal); min-width: 40px; text-align: right; }
-  .passport-inv { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--ink-faded); }
-
 </style>
 </head>
 <body>
@@ -200,11 +160,11 @@
     <span class="nav-name">Ars Accordia</span>
   </a>
   <div class="nav-links">
+    <a href="../../catalogue/" class="nav-link">Catalogue</a>
     <a href="../../artworks/" class="nav-link">Artworks</a>
     <a href="../../collections/" class="nav-link active">Collections</a>
     <a href="../../artists/" class="nav-link">Artists</a>
     <a href="../../about/" class="nav-link">About</a>
-    <a href="../../contributions/" class="nav-link">Contributions</a>
     <a href="../../sitemap/" class="nav-link">Index</a>
   </div>
   </div>
@@ -213,120 +173,18 @@
 <div class="wrap">
 
   <header class="page-header">
-    <p class="page-eyebrow">Latvijas Nacionālais mākslas muzejs · Works documented by Ars Accordia</p>
-    <h1 class="page-title">LNMM — Latvian National Museum of Art</h1>
+    <p class="page-eyebrow">Collection · Latvia National Museum of Art</p>
+    <h1 class="page-title">Latvian National Museum of Art</h1>
     <p class="page-subtitle">
-      Ars Accordia's public-registry catalogue of works held at LNMM. This is not a commissioned
-      assessment of the museum — it is Ars Accordia's own catalogue, built from public sources
-      and authority cross-references. Scores reflect what has been documented; no coverage
-      percentage is claimed. <a href="../../method/" class="aa-method-link">How the score is built →</a>
+      354 works documented by Ars Accordia from the Latvijas Nacionālais mākslas muzejs, spanning paintings, drawings, watercolours and sculpture from the eighteenth to the early twentieth century.
     </p>
-
-    <div class="aa-score-panel">
-      <div class="aa-score-headline">
-        <div class="aa-score-number">402</div>
-        <div class="aa-score-meta">
-          <span class="aa-score-label">Ars Accordia Score</span>
-          <span class="aa-score-standard">6 works documented · avg standard 67.0 · <strong>Substantial Record</strong></span>
-        </div>
-      </div>
-      <div class="aa-score-gaps">
-        <div class="aa-score-gap">
-          <span class="aa-score-gap-val">100%</span>
-          <span class="aa-score-gap-label">Identity</span>
-        </div>
-        <div class="aa-score-gap">
-          <span class="aa-score-gap-val">100%</span>
-          <span class="aa-score-gap-label">Authority</span>
-        </div>
-        <div class="aa-score-gap">
-          <span class="aa-score-gap-val">0%</span>
-          <span class="aa-score-gap-label">Provenance</span>
-        </div>
-        <div class="aa-score-gap">
-          <span class="aa-score-gap-val">100%</span>
-          <span class="aa-score-gap-label">Structured</span>
-        </div>
-      </div>
-      <p class="aa-score-note">Score = sum of passport scores for all 6 documented works. Condition and image are not in scope for these passports (museum-held works, not commissioned for physical assessment). The provenance citation to the 2009 Lamberga portrait catalogue was removed from all six works — that book documents an exhibition, not the LNMM permanent collection, and could not be verified as a provenance source for these specific holdings; current location remains confirmed via LNMM open data. Weights-v3 · config: <a href="../../method/" class="aa-method-link">arsaccordia.com/method</a></p>
-    </div>
-
     <div class="stats-row">
-      <div class="stat"><span class="stat-value">6</span><span class="stat-label">Passports</span></div>
-      <div class="stat"><span class="stat-value">354</span><span class="stat-label">Catalogue entries</span></div>
+      <div class="stat"><span class="stat-value">354</span><span class="stat-label">Works</span></div>
       <div class="stat"><span class="stat-value">55</span><span class="stat-label">Artists</span></div>
+      <div class="stat"><span class="stat-value">27</span><span class="stat-label">Wikidata confirmed</span></div>
       <div class="stat"><span class="stat-value">c. 1800–1945</span><span class="stat-label">Period</span></div>
     </div>
   </header>
-
-  <!-- Documented Passports -->
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Documented passports</h2>
-      <span class="section-count">6 works · cross-reference status shown</span>
-    </div>
-    <div class="passport-list">
-
-      <a class="passport-row" href="../../passports/AA/LV/LNMA/001/">
-        <span class="passport-title">Princess with a Monkey</span>
-        <span class="passport-artist">Janis Rozentāls</span>
-        <span class="passport-date">1913</span>
-        <span class="passport-inv">AA/LV/LNMA/001</span>
-        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
-        <span class="passport-score">75</span>
-      </a>
-
-      <a class="passport-row" href="../../passports/AA/LV/LNMA/006/">
-        <span class="passport-title">From Church (After the Service)</span>
-        <span class="passport-artist">Janis Rozentāls</span>
-        <span class="passport-date">1894</span>
-        <span class="passport-inv">AA/LV/LNMA/006</span>
-        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
-        <span class="passport-score">75</span>
-      </a>
-
-      <a class="passport-row" href="../../passports/AA/LV/LNMA/004/">
-        <span class="passport-title">Carousel</span>
-        <span class="passport-artist">Jānis Tīdemanis</span>
-        <span class="passport-date">1932</span>
-        <span class="passport-inv">AA/LV/LNMA/004</span>
-        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
-        <span class="passport-score">63</span>
-      </a>
-
-      <a class="passport-row" href="../../passports/AA/LV/LNMA/012/">
-        <span class="passport-title">Folk Festival at Kokmuiža</span>
-        <span class="passport-artist">Kārlis Hūns</span>
-        <span class="passport-date">1855</span>
-        <span class="passport-inv">AA/LV/LNMA/012</span>
-        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
-        <span class="passport-score">63</span>
-      </a>
-
-      <a class="passport-row" href="../../passports/AA/LV/LNMA/017/">
-        <span class="passport-title">Young Gipsy Woman</span>
-        <span class="passport-artist">Kārlis Hūns</span>
-        <span class="passport-date">1870</span>
-        <span class="passport-inv">AA/LV/LNMA/017</span>
-        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
-        <span class="passport-score">63</span>
-      </a>
-
-      <a class="passport-row" href="../../passports/AA/LV/LNMA/019/">
-        <span class="passport-title">Country Landscape</span>
-        <span class="passport-artist">Jūlijs Feders</span>
-        <span class="passport-date">1880</span>
-        <span class="passport-inv">AA/LV/LNMA/019</span>
-        <span class="badge badge-amber" style="font-size:0.68rem;padding:2px 7px;">● Cross-referenced</span>
-        <span class="passport-score">63</span>
-      </a>
-
-    </div>
-    <p style="font-size:0.72rem;color:var(--ink-faded);margin-top:12px;font-style:italic;">
-      Remaining 348 catalogue entries below are skeleton records — they appear in the artist grid
-      but are not yet assessed for the Ars Accordia score. Passports are published as assessment is completed.
-    </p>
-  </section>
 
   <!-- Artists -->
   <section class="section">
@@ -351,12 +209,12 @@
         <div class="artist-card-top">
           <div>
             <div class="artist-name">Johann Walter</div>
-            <div class="artist-lifespan">1869–1932</div>
+            <div class="artist-lifespan">1869–1832</div>
           </div>
           <div class="artist-count">28</div>
         </div>
         <div class="artist-types">25 paintings · 2 watercolours</div>
-        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q4102980</span></div>
+        <div class="artist-badges"><span class="badge badge-missing">Wikidata: not linked</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -378,7 +236,7 @@
           <div class="artist-count">20</div>
         </div>
         <div class="artist-types">11 paintings · 6 watercolours · 2 drawings · 1 linocut</div>
-        <div class="artist-badges"><span class="badge badge-missing">Wikidata: not linked</span></div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q5763621</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -422,7 +280,7 @@
           <div class="artist-count">16</div>
         </div>
         <div class="artist-types">7 drawings · 6 paintings · 3 watercolours</div>
-        <div class="artist-badges"><span class="badge badge-missing">Wikidata: not linked</span></div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q14110160</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -433,7 +291,7 @@
           <div class="artist-count">12</div>
         </div>
         <div class="artist-types">5 gouaches · 3 pastels · 2 paintings · 1 drawing · 1 tempera</div>
-        <div class="artist-badges"><span class="badge badge-missing">Wikidata: not linked</span></div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q58456712</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -444,7 +302,7 @@
           <div class="artist-count">11</div>
         </div>
         <div class="artist-types">6 drawings · 4 watercolours · 1 painting</div>
-        <div class="artist-badges"><span class="badge badge-missing">Wikidata: not linked</span></div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q4062525</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -455,7 +313,7 @@
           <div class="artist-count">10</div>
         </div>
         <div class="artist-types">6 watercolours · 4 paintings</div>
-        <div class="artist-badges"><span class="badge badge-needed">Wikidata: search needed</span></div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q4152126</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -466,7 +324,7 @@
           <div class="artist-count">9</div>
         </div>
         <div class="artist-types">9 paintings</div>
-        <div class="artist-badges"><span class="badge badge-needed">Wikidata: search needed</span></div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q1977258</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -477,7 +335,7 @@
           <div class="artist-count">9</div>
         </div>
         <div class="artist-types">8 etchings · 1 drawing</div>
-        <div class="artist-badges"><span class="badge badge-missing">Wikidata: not linked</span></div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q2371375</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -488,7 +346,7 @@
           <div class="artist-count">7</div>
         </div>
         <div class="artist-types">3 paintings · 2 drawings · 1 etching · 1 watercolour</div>
-        <div class="artist-badges"><span class="badge badge-needed">Wikidata: search needed</span></div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q4457149</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -499,7 +357,7 @@
           <div class="artist-count">7</div>
         </div>
         <div class="artist-types">6 drawings · 1 watercolour</div>
-        <div class="artist-badges"><span class="badge badge-missing">Wikidata: not linked</span></div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q20565577</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -521,7 +379,7 @@
           <div class="artist-count">5</div>
         </div>
         <div class="artist-types">2 collages · 1 litograph · 1 drawing · 1 design project</div>
-        <div class="artist-badges"><span class="badge badge-missing">Wikidata: not linked</span></div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q1341721</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -565,7 +423,7 @@
           <div class="artist-count">4</div>
         </div>
         <div class="artist-types">4 paintings</div>
-        <div class="artist-badges"><span class="badge badge-missing">Wikidata: not linked</span></div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q2632125</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -587,7 +445,7 @@
           <div class="artist-count">4</div>
         </div>
         <div class="artist-types">4 paintings</div>
-        <div class="artist-badges"><span class="badge badge-missing">Wikidata: not linked</span></div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q16356282</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -785,7 +643,7 @@
           <div class="artist-count">1</div>
         </div>
         <div class="artist-types">1 painting</div>
-        <div class="artist-badges"><span class="badge badge-missing">Wikidata: not linked</span></div>
+        <div class="artist-badges"><span class="badge badge-confirmed">Wikidata ✓</span><span class="badge-qid">Q109894439</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -862,7 +720,7 @@
           <div class="artist-count">1</div>
         </div>
         <div class="artist-types"></div>
-        <div class="artist-badges"><span class="badge badge-missing">Wikidata: not linked</span></div>
+        <div class="artist-badges"><span class="badge badge-needed">Wikidata: search needed</span></div>
       </div>
       <div class="artist-card">
         <div class="artist-card-top">
@@ -982,24 +840,24 @@
         <td><a href="https://artsandculture.google.com/asset/princess-with-a-monkey/5AGVkIl2OPVUSw" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Winter</td>
+        <td class="title"><a href="/AP-2026-000018.html">Winter</a></td>
         <td class="artist">Vilhelms Purvītis</td>
         <td class="mono">1910</td>
         <td>Painting</td>
         <td>Oil on cardboard</td>
         <td class="mono">71.3 (h) x 101.8 (w) cm</td>
         <td class="mono">VMM GL-1568</td>
-        <td><a href="https://artsandculture.google.com/asset/winter/fAF_qZJTFzsvJw" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000018.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/winter/fAF_qZJTFzsvJw" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Winter</td>
+        <td class="title"><a href="/AP-2026-000018.html">Winter</a></td>
         <td class="artist">Vilhelms Purvītis</td>
         <td class="mono">1910</td>
         <td>Painting</td>
         <td>Oil on cardboard</td>
         <td class="mono">72 (h) x 101,3 (w) cm</td>
         <td class="mono">VMM GL-1735</td>
-        <td><a href="https://artsandculture.google.com/asset/winter/hgEET5g2kOHexg" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000018.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/winter/hgEET5g2kOHexg" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Carousel</td>
@@ -1072,14 +930,14 @@
         <td><a href="https://artsandculture.google.com/asset/under-the-rowan-tree/rAHkqLn1YPRpPQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Three Old Women</td>
+        <td class="title"><a href="/AP-2026-000031.html">Three Old Women</a></td>
         <td class="artist">Jēkabs Kazaks</td>
         <td class="mono">1916</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">90 (h) x 100 (w) cm</td>
         <td class="mono">VMM GL-3114</td>
-        <td><a href="https://artsandculture.google.com/asset/three-old-women/lQFiF6ncmU47OA" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000031.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/three-old-women/lQFiF6ncmU47OA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Folk Festival at Kokmuiža. (Kocēni Parish near Valmiera. Vidzeme)</td>
@@ -1112,14 +970,14 @@
         <td><a href="https://artsandculture.google.com/asset/in-the-artist’s-studio/dQFhE-4BMQ03bw" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Spring Waters (Maestoso)</td>
+        <td class="title"><a href="/AP-2026-000033.html">Spring Waters (Maestoso)</a></td>
         <td class="artist">Vilhelms Purvītis</td>
         <td class="mono">1910</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">102.5 (h) x 144 (w) cm</td>
         <td class="mono">VMM GL-1570</td>
-        <td><a href="https://artsandculture.google.com/asset/spring-waters-maestoso/2gEvpdKlNCyhDA" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000033.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/spring-waters-maestoso/2gEvpdKlNCyhDA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Beauty (Ave Sol). Fresco Sketch for the Riga Latvian Society House</td>
@@ -1232,24 +1090,24 @@
         <td><a href="https://artsandculture.google.com/asset/three-men-in-a-fiery-furnace/kAFrgw9wQ6pFdQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Ladies at the Seaside</td>
+        <td class="title"><a href="/AP-2026-000032.html">Ladies at the Seaside</a></td>
         <td class="artist">Jēkabs Kazaks</td>
         <td class="mono">1920</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">110 (h) x 100 (w) cm</td>
         <td class="mono">VMM GL-5392</td>
-        <td><a href="https://artsandculture.google.com/asset/ladies-at-the-seaside/CgHZl3om_1ZANg" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000032.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/ladies-at-the-seaside/CgHZl3om_1ZANg" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">By the Well</td>
+        <td class="title"><a href="/AP-2026-000125.html">By the Well</a></td>
         <td class="artist">Ģederts Eliass</td>
         <td class="mono">1935</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">79 (h) x 99 (w) cm</td>
         <td class="mono">VMM GL-180</td>
-        <td><a href="https://artsandculture.google.com/asset/by-the-well/_gHpNVJbrf39oQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000125.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/by-the-well/_gHpNVJbrf39oQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">In Front of the Mirror</td>
@@ -1272,14 +1130,14 @@
         <td><a href="https://artsandculture.google.com/asset/portrait-of-kārlis-zāle/MAFlfpNufnmuUA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Woman with a Fan in a Bar</td>
+        <td class="title"><a href="/AP-2026-000197.html">Woman with a Fan in a Bar</a></td>
         <td class="artist">Ģederts Eliass</td>
         <td class="mono">1918/1920</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">85 (h) x 66.5 (w) cm</td>
         <td class="mono">VMM GL-4734</td>
-        <td><a href="https://artsandculture.google.com/asset/woman-with-a-fan-in-a-bar/XQF6NUmuVKDFbQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000197.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/woman-with-a-fan-in-a-bar/XQF6NUmuVKDFbQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Fishermen Harbour Vendzele</td>
@@ -1332,14 +1190,14 @@
         <td><a href="https://artsandculture.google.com/asset/gauja-valley/rwEWXESxCOmIwA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Woman with Leaflets</td>
+        <td class="title"><a href="/AP-2026-000025.html">Woman with Leaflets</a></td>
         <td class="artist">Aleksandrs Drēviņš</td>
         <td class="mono">1933</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">74 (h) x 90 (w) cm</td>
         <td class="mono">VMM GL-5252</td>
-        <td><a href="https://artsandculture.google.com/asset/woman-with-leaflets/iQEDyKrR1DphXw" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000025.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/woman-with-leaflets/iQEDyKrR1DphXw" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Lenin and Socialist Reconstruction. Design for Poster</td>
@@ -1352,14 +1210,14 @@
         <td><a href="https://artsandculture.google.com/asset/lenin-and-socialist-reconstruction-design-for-poster/agFqp4qQa943Mw" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">In the Outskirts of Paris</td>
+        <td class="title"><a href="/AP-2026-000026.html">In the Outskirts of Paris</a></td>
         <td class="artist">Jāzeps Grosvalds</td>
         <td class="mono">1914</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">56.5 (h) x 60 (w) cm</td>
         <td class="mono">VMM GL-2861</td>
-        <td><a href="https://artsandculture.google.com/asset/in-the-outskirts-of-paris/fQHXFK6M_UQQtg" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000026.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/in-the-outskirts-of-paris/fQHXFK6M_UQQtg" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Bathing Boys</td>
@@ -1372,14 +1230,14 @@
         <td><a href="https://artsandculture.google.com/asset/bathing-boys/cgHBKBDys3HUZg" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Man Who Enters the Room</td>
+        <td class="title"><a href="/AP-2026-000187.html">Man Who Enters the Room</a></td>
         <td class="artist">Niklāvs Strunke</td>
         <td class="mono">1927</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">92 (h) x 86 (w) cm</td>
         <td class="mono">VMM GL-3569</td>
-        <td><a href="https://artsandculture.google.com/asset/man-who-enters-the-room/SQFHqyXMCf_rbw" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000187.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/man-who-enters-the-room/SQFHqyXMCf_rbw" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Woman with a Fan</td>
@@ -1392,14 +1250,14 @@
         <td><a href="https://artsandculture.google.com/asset/woman-with-a-fan/YQGZzle8G7A_iQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Refugees</td>
+        <td class="title"><a href="/AP-2026-000132.html">Refugees</a></td>
         <td class="artist">Jēkabs Kazaks</td>
         <td class="mono">1917</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">210.5 (h) x 107 (w) cm</td>
         <td class="mono">VMM GL-826</td>
-        <td><a href="https://artsandculture.google.com/asset/refugees/uwFznWB3-8_pqw" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000132.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/refugees/uwFznWB3-8_pqw" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">USSR – Shock Brigade of the World Proletariat. Poster</td>
@@ -1472,14 +1330,14 @@
         <td><a href="https://artsandculture.google.com/asset/red-laughter/gwEbag_ts3RFnQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Portrait of Three Artists</td>
+        <td class="title"><a href="/AP-2026-000057.html">Portrait of Three Artists</a></td>
         <td class="artist">Jāzeps Grosvalds</td>
         <td class="mono">1915</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">80 (h) x 100 (w) cm</td>
         <td class="mono">VMM GL-2855</td>
-        <td><a href="https://artsandculture.google.com/asset/portrait-of-three-artists/pQH-krZhAPaKyA" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000057.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/portrait-of-three-artists/pQH-krZhAPaKyA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Late Guests</td>
@@ -1552,14 +1410,14 @@
         <td><a href="https://artsandculture.google.com/asset/kurbads-and-the-hellhound-from-the-series-“what-the-forests-of-latvia-are-whispering”/GwGmR2KKWHgezQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Refugees (The Old Refugee)</td>
+        <td class="title"><a href="/AP-2026-000059.html">Refugees (The Old Refugee)</a></td>
         <td class="artist">Jāzeps Grosvalds</td>
         <td class="mono">1917</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">132,5 (h) x 88,5 (w) cm</td>
         <td class="mono">VMM GL-833</td>
-        <td><a href="https://artsandculture.google.com/asset/refugees-the-old-refugee/YwHqhZKL-yO-LA" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000059.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/refugees-the-old-refugee/YwHqhZKL-yO-LA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Portrait of Malvīne Vīgnere-Grīnberga</td>
@@ -1572,14 +1430,14 @@
         <td><a href="https://artsandculture.google.com/asset/portrait-of-malvīne-vīgnere-grīnberga/xwGRfSdLH2ut5A" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">At the Circus</td>
+        <td class="title"><a href="/AP-2026-000130.html">At the Circus</a></td>
         <td class="artist">Jēkabs Kazaks</td>
         <td class="mono">1918</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">106 (h) x 107 (w) cm</td>
         <td class="mono">VMM GL-652</td>
-        <td><a href="https://artsandculture.google.com/asset/at-the-circus/8AHYlkpJYQheOw" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000130.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/at-the-circus/8AHYlkpJYQheOw" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Madonna of Marijas Street</td>
@@ -1592,14 +1450,14 @@
         <td><a href="https://artsandculture.google.com/asset/madonna-of-marijas-street/GwHZxNZsaJ8IHw" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Kurds on the Roof</td>
+        <td class="title"><a href="/AP-2026-000029.html">Kurds on the Roof</a></td>
         <td class="artist">Jāzeps Grosvalds</td>
         <td class="mono">1918</td>
         <td>Tempera</td>
         <td>Tempera on paper</td>
         <td class="mono">23.3 (h) x 16 (w) cm</td>
         <td class="mono">VMM Z-8654</td>
-        <td><a href="https://artsandculture.google.com/asset/kurds-on-the-roof/kAEkf_O-QyPZqA" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000029.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/kurds-on-the-roof/kAEkf_O-QyPZqA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Human Girl and Nature’s Spirits</td>
@@ -1662,14 +1520,14 @@
         <td><a href="https://artsandculture.google.com/asset/first-snow/bgE_2QLw3P_2Jg" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Still Life with a Chess</td>
+        <td class="title"><a href="/AP-2026-000123.html">Still Life with a Chess</a></td>
         <td class="artist">Romans Suta</td>
         <td class="mono">1927</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">90.5 (h) x 70 (w) cm</td>
         <td class="mono">VMM GL-2793</td>
-        <td><a href="https://artsandculture.google.com/asset/still-life-with-a-chess/lAGAWYElwU98yQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000123.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/still-life-with-a-chess/lAGAWYElwU98yQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Arcadia</td>
@@ -1732,14 +1590,14 @@
         <td><a href="https://artsandculture.google.com/asset/from-the-cemetery/kQEv_FJAa6eoJA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Avenue of Horrors</td>
+        <td class="title"><a href="/AP-2026-000029.html">Avenue of Horrors</a></td>
         <td class="artist">Jāzeps Grosvalds</td>
         <td class="mono">1916</td>
         <td>Watercolour</td>
         <td>Watercolour and gouache on paper</td>
         <td class="mono">23.2 (h) x 26.2 (w) cm</td>
         <td class="mono">VMM Z-8792</td>
-        <td><a href="https://artsandculture.google.com/asset/avenue-of-horrors/4gEl9ZFozQM2jg" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000029.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/avenue-of-horrors/4gEl9ZFozQM2jg" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Christ on the Cross</td>
@@ -1772,14 +1630,14 @@
         <td><a href="https://artsandculture.google.com/asset/song-of-the-shepherdess/yQHUOJZIh5Chzw" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">At the Table (Genre)</td>
+        <td class="title"><a href="/AP-2026-000133.html">At the Table (Genre)</a></td>
         <td class="artist">Jēkabs Kazaks</td>
         <td class="mono">1917</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">106 (h) x 106 (w) cm</td>
         <td class="mono">VMM GL-1240</td>
-        <td><a href="https://artsandculture.google.com/asset/at-the-table-genre/7gEZQIyj6LBc0Q" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000133.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/at-the-table-genre/7gEZQIyj6LBc0Q" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Soldiers in the Countryside</td>
@@ -1792,14 +1650,14 @@
         <td><a href="https://artsandculture.google.com/asset/soldiers-in-the-countryside/2wH7z0o05_4w0Q" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Three Women on the Streets of Baghdad</td>
+        <td class="title"><a href="/AP-2026-000069.html">Three Women on the Streets of Baghdad</a></td>
         <td class="artist">Jāzeps Grosvalds</td>
         <td class="mono">1919</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">100 (h) x 82 (w) cm</td>
         <td class="mono">VMM GL-350</td>
-        <td><a href="https://artsandculture.google.com/asset/three-women-on-the-streets-of-baghdad/NwGit1UP6Egm2g" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000069.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/three-women-on-the-streets-of-baghdad/NwGit1UP6Egm2g" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Refugee Women. At the Table</td>
@@ -1822,14 +1680,14 @@
         <td><a href="https://artsandculture.google.com/asset/ships/tAG5qY9awdiIAQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Portrait of Jūlijs Sproģis</td>
+        <td class="title"><a href="/AP-2026-000140.html">Portrait of Jūlijs Sproģis</a></td>
         <td class="artist">Jēkabs Kazaks</td>
         <td class="mono">1920</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">61,3 (h) x 52 (w) cm</td>
         <td class="mono">VMM GL-2126</td>
-        <td><a href="https://artsandculture.google.com/asset/portrait-of-jūlijs-sproģis/fAGwDbbPzLub9Q" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000140.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/portrait-of-jūlijs-sproģis/fAGwDbbPzLub9Q" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">In a Cornfield (Ploughman with a White Horse)</td>
@@ -1842,14 +1700,14 @@
         <td><a href="https://artsandculture.google.com/asset/in-a-cornfield-ploughman-with-a-white-horse/OAF84zgRjgvyrQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Construction</td>
+        <td class="title"><a href="/AP-2026-000099.html">Construction</a></td>
         <td class="artist">Gustavs Klucis</td>
         <td class="mono">1919/1920</td>
         <td>Drawing</td>
         <td>Pencil, coloured ink, gouache and egg varnish on paper</td>
         <td class="mono">49.3 (h) x 62.7 (w) cm</td>
         <td class="mono">VMM Z-6702</td>
-        <td><a href="https://artsandculture.google.com/asset/construction/bgESfeCS8LFMEA" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000099.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/construction/bgESfeCS8LFMEA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Genre</td>
@@ -1892,14 +1750,14 @@
         <td><a href="https://artsandculture.google.com/asset/in-Ķeizardārzs-in-viesturdārzs/WAGf7yasFGDeNw" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Landscape</td>
+        <td class="title"><a href="/AP-2026-000086.html">Landscape</a></td>
         <td class="artist">Jānis Liepiņš</td>
         <td class="mono">1927</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">62 (h) x 64 (w) cm</td>
         <td class="mono">VMM GL-712</td>
-        <td><a href="https://artsandculture.google.com/asset/landscape/iwHex2Oxn11f8w" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000086.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/landscape/iwHex2Oxn11f8w" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Arcadia. I</td>
@@ -1922,14 +1780,14 @@
         <td><a href="https://artsandculture.google.com/asset/self-portrait/xAH-M9nU3UyH0Q" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Three Crosses (White Crosses)</td>
+        <td class="title"><a href="/AP-2026-000028.html">Three Crosses (White Crosses)</a></td>
         <td class="artist">Jāzeps Grosvalds</td>
         <td class="mono">1917</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">57 (h) x 69 (w) cm</td>
         <td class="mono">VMM GL-783</td>
-        <td><a href="https://artsandculture.google.com/asset/three-crosses-white-crosses/7AHlDF418QCovg" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000028.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/three-crosses-white-crosses/7AHlDF418QCovg" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Sketch</td>
@@ -2012,14 +1870,14 @@
         <td><a href="https://artsandculture.google.com/asset/forest-morning-sun/bwFmqp_swlrvIw" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">At the Window</td>
+        <td class="title"><a href="/AP-2026-000004.html">At the Window</a></td>
         <td class="artist">Valdemārs Tone</td>
         <td class="mono">1932</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">101 (h) x 73 (w) cm</td>
         <td class="mono">VMM GL-2266</td>
-        <td><a href="https://artsandculture.google.com/asset/at-the-window/NgG9D_vaesG5cA" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000004.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/at-the-window/NgG9D_vaesG5cA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Peasant Girl</td>
@@ -2032,34 +1890,34 @@
         <td><a href="https://artsandculture.google.com/asset/peasant-girl/OAGtW_ko764sCA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Still Life with a Set Square</td>
+        <td class="title"><a href="/AP-2026-000122.html">Still Life with a Set Square</a></td>
         <td class="artist">Romans Suta</td>
         <td class="mono">1924</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">68 (h) x 62.5 (w) cm</td>
         <td class="mono">VMM GL-363</td>
-        <td><a href="https://artsandculture.google.com/asset/still-life-with-a-set-square/ywHl4Sc7xUL1dg" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000122.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/still-life-with-a-set-square/ywHl4Sc7xUL1dg" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Still Life with a Pipe</td>
+        <td class="title"><a href="/AP-2026-000089.html">Still Life with a Pipe</a></td>
         <td class="artist">Jānis Liepiņš</td>
         <td class="mono">1927</td>
         <td>–</td>
         <td>Oil on canvas</td>
         <td class="mono">91 (h) x 71 (w) cm</td>
         <td class="mono">VMM GL-3551</td>
-        <td><a href="https://artsandculture.google.com/asset/still-life-with-a-pipe/0gHpEHubEtl9Iw" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000089.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/still-life-with-a-pipe/0gHpEHubEtl9Iw" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">In the Evening</td>
+        <td class="title"><a href="/AP-2026-000003.html">In the Evening</a></td>
         <td class="artist">Valdemārs Tone</td>
         <td class="mono">1920</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">62 (h) x 48.5 (w) cm</td>
         <td class="mono">VMM GL-388</td>
-        <td><a href="https://artsandculture.google.com/asset/in-the-evening/4QH8nvX-kL8kxA" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000003.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/in-the-evening/4QH8nvX-kL8kxA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Portrait of Helena Cimze</td>
@@ -2152,14 +2010,14 @@
         <td><a href="https://artsandculture.google.com/asset/pērse-waterfall/7AGtDn7pp_TJuA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Self-Portrait with a Red Neckerchief</td>
+        <td class="title"><a href="/AP-2026-000127.html">Self-Portrait with a Red Neckerchief</a></td>
         <td class="artist">Jēkabs Kazaks</td>
         <td class="mono">1918</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">80 (h) x 58 (w) cm</td>
         <td class="mono">VMM GL-468</td>
-        <td><a href="https://artsandculture.google.com/asset/self-portrait-with-a-red-neckerchief/IgFjaYbx_SrINQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000127.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/self-portrait-with-a-red-neckerchief/IgFjaYbx_SrINQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Father and Son</td>
@@ -2662,14 +2520,14 @@
         <td><a href="https://artsandculture.google.com/asset/family-portrait/DwHgtcickG58Ww" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Street</td>
+        <td class="title"><a href="/AP-2026-000145.html">Street</a></td>
         <td class="artist">Romans Suta</td>
         <td class="mono">1918/1920</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">70,5 (h) x 90,5 (w) cm</td>
         <td class="mono">VMM GL-373</td>
-        <td><a href="https://artsandculture.google.com/asset/street/pAH8CbdI-vlbrw" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000145.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/street/pAH8CbdI-vlbrw" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Cemetery</td>
@@ -3322,14 +3180,14 @@
         <td><a href="https://artsandculture.google.com/asset/exhibition-halls-on-4th-floor-2/VwEIOL0bS5yVEA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Refugees</td>
+        <td class="title"><a href="/AP-2026-000132.html">Refugees</a></td>
         <td class="artist">Jēkabs Kazaks</td>
         <td class="mono">1917</td>
         <td>Watercolour</td>
         <td>Watercolour on paper</td>
         <td class="mono">21 (h) x 26 (w) cm</td>
         <td class="mono">VMM Z-8283</td>
-        <td><a href="https://artsandculture.google.com/asset/refugees/pwHIT7TYtkwaJg" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000132.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/refugees/pwHIT7TYtkwaJg" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Spring (Orphan Girl)</td>
@@ -3382,14 +3240,14 @@
         <td><a href="https://artsandculture.google.com/asset/when-i-was-little…/AwF-IV4DfVwxZQ" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Refugees</td>
+        <td class="title"><a href="/AP-2026-000132.html">Refugees</a></td>
         <td class="artist">Jēkabs Kazaks</td>
         <td class="mono">1917</td>
         <td>Watercolour</td>
         <td>Watercolour on paper</td>
         <td class="mono">22 (h) x 27 (w) cm</td>
         <td class="mono">VMM Z-4297</td>
-        <td><a href="https://artsandculture.google.com/asset/refugees/mAGbSR6DzVeDfA" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000132.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/refugees/mAGbSR6DzVeDfA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Servant</td>
@@ -3742,14 +3600,14 @@
         <td><a href="https://artsandculture.google.com/asset/political-satire/-gEUv_xGDC9GaA" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Summer (Summer in the Soldier&#x27;s Carriage)</td>
+        <td class="title"><a href="/AP-2026-000121.html">Summer (Summer in the Soldier&#x27;s Carriage)</a></td>
         <td class="artist">Jēkabs Kazaks</td>
         <td class="mono">1917</td>
         <td>Watercolour</td>
         <td>Watercolour on paper</td>
         <td class="mono">24 (h) x 27.5 (w) cm</td>
         <td class="mono">VMM Z-4299</td>
-        <td><a href="https://artsandculture.google.com/asset/summer-summer-in-the-soldier-s-carriage/PgEx2s9qaI1U6w" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000121.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/summer-summer-in-the-soldier-s-carriage/PgEx2s9qaI1U6w" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Cargo Lift 2</td>
@@ -4072,14 +3930,14 @@
         <td><a href="https://artsandculture.google.com/asset/at-the-easel/aAFTQ8A8SFIutg" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
-        <td class="title">Constructive Still Life</td>
+        <td class="title"><a href="/AP-2026-000149.html">Constructive Still Life</a></td>
         <td class="artist">Romans Suta</td>
         <td class="mono">1918/1919</td>
         <td>Painting</td>
         <td>Oil on canvas</td>
         <td class="mono">56 (h) x 48,5 (w) cm</td>
         <td class="mono">VMM GL-5486</td>
-        <td><a href="https://artsandculture.google.com/asset/constructive-still-life/awG4GSLnaWXz9Q" target="_blank" rel="noopener">Google Arts ↗</a></td>
+        <td><a href="/AP-2026-000149.html" target="_self">Passport</a> · <a href="https://artsandculture.google.com/asset/constructive-still-life/awG4GSLnaWXz9Q" target="_blank" rel="noopener">Google Arts ↗</a></td>
       </tr>
       <tr>
         <td class="title">Sun</td>
@@ -4516,42 +4374,9 @@
     </div>
   </section>
 
-  <section style="margin-top:48px;padding-top:32px;border-top:1px solid var(--rule);">
-    <h2 style="font-size:1rem;font-weight:600;margin-bottom:12px;">Documentation Dossier</h2>
-    <p style="font-size:0.85rem;color:var(--ink-soft);line-height:1.6;max-width:680px;margin-bottom:16px;">
-      The complete collection documentation dossier — cover, gap map, per-work records, and export
-      note — is available as a single self-contained HTML file, print-ready to PDF.
-    </p>
-    <a href="../../artbase_export/data/dossiers/COL-LNMM-dossier-2026-06-20.html"
-       style="display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border:1px solid var(--seal);border-radius:3px;color:var(--seal);font-size:0.8rem;font-weight:600;text-decoration:none;letter-spacing:0.03em;"
-       target="_blank">
-      ↓ Download documentation dossier
-    </a>
-    <span style="display:inline-block;margin-left:12px;font-size:0.75rem;color:var(--ink-faded);">HTML · print to PDF · 2026-06-20</span>
-  </section>
-
-  <section style="margin-top:40px;padding-top:32px;border-top:1px solid var(--rule);">
-    <h2 style="font-size:1rem;font-weight:600;margin-bottom:16px;">Data &amp; Image Credits</h2>
-    <p style="font-size:0.8rem;color:var(--ink-faded);line-height:1.6;max-width:720px;">
-      <strong>Collection data</strong> — Artwork records sourced from
-      <a href="https://lnmm.lv/" class="footer-link">Latvijas Nacionālais mākslas muzejs (LNMM)</a>
-      via <a href="https://artsandculture.google.com/" class="footer-link">Google Arts &amp; Culture</a>
-      open data. Used for non-commercial research and cataloguing purposes.
-    </p>
-    <p style="font-size:0.8rem;color:var(--ink-faded);line-height:1.6;max-width:720px;margin-top:8px;">
-      <strong>Representative images</strong> — Thumbnail images sourced from
-      <a href="https://commons.wikimedia.org/" class="footer-link">Wikimedia Commons</a>
-      and reproduced here as public domain works (EU copyright: life + 70 years).
-      Credits: Janis Rozentāls, <em>Princess with a Monkey</em> (c. 1910) · Vilhelms Purvītis,
-      <em>Blooming Lilacs</em> (c. 1900s) · Kārlis Padegs, <em>Self-Portrait</em> (c. 1930s) ·
-      Jāzeps Grosvalds, <em>White Crosses</em> (c. 1916) · Jēkabs Kazaks, <em>Circus</em> (c. 1912).
-      All artists died before 1956; works are in the public domain in the EU.
-    </p>
-  </section>
-
   <footer class="site-footer">
     <span class="footer-text">
-      © 2026 Ars Accordia · <a href="../../" class="footer-link">Home</a> ·
+      Ars Accordia · <a href="../../" class="footer-link">Home</a> ·
       <a href="../" class="footer-link">Collections</a> ·
       <a href="../../about/" class="footer-link">About</a>
     </span>
@@ -4570,115 +4395,6 @@ function filterTable() {
     row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
   });
 }
-
-var ARTIST_PAGES = {
-  "Janis Rozentāls":  "../../artists/ART-ROZENTALS-1866.html",
-  "Kārlis Padegs":    "../../artists/ART-PADEGS-1911.html",
-  "Jāzeps Grosvalds": "../../artists/ART-GROSVALDS-1891.html",
-  "Vilhelms Purvītis":"../../artists/ART-PURVITIS-1872.html",
-  "Romans Suta":      "../../artists/ART-SUTA-1896.html",
-  "Kārlis Hūns":      "../../artists/ART-HUNS-1831.html",
-  "Jūlijs Feders":    "../../artists/ART-FEDERS-1838.html",
-  "Jānis Tīdemanis":  "../../artists/ART-TIDEMANIS-1897.html",
-  "Ģederts Eliass":   "../../artists/ART-ELIASS-1887.html",
-  "Ludolfs Liberts":  "../../artists/ART-LIBERTS-1895.html",
-  "Niklāvs Strunke":  "../../artists/ART-STRUNKE-1894.html",
-  "Ansis Cīrulis":    "../../artists/ART-CIRULIS-1883.html",
-  "Leo Svemps":       "../../artists/ART-SVEMPS-1897.html",
-  "Valdemārs Tone":   "../../artists/ART-TONE-1892.html",
-  "Alberts Filka":    "../../artists/ART-FILKA-1891.html",
-  "Pēteris Kalve":    "../../artists/ART-KALVE-1882.html",
-  "Johann Walter":    "../../artists/ART-VALTERS-1869.html",
-  "Gustavs Klucis":   "../../artists/ART-KLUCIS-1895.html",
-  "Jēkabs Kazaks":    "../../artists/ART-KAZAKS-1895.html",
-  "Rūdolfs Pērle":    "../../artists/ART-PERLE-1875.html",
-  "Pēteris Krastiņš": "../../artists/ART-KRASTINS-1882.html",
-  "Ādams Alksnis":    "../../artists/ART-ALKSNIS-1864.html",
-  "Rihards Zariņš":   "../../artists/ART-ZARINS-1869.html",
-  "Teodors Ūders":    "../../artists/ART-UDERS-1868.html",
-};
-
-// Artist cards — make the whole card clickable via a stretched anchor
-document.querySelectorAll('.artist-card').forEach(function(card) {
-  var nameEl = card.querySelector('.artist-name');
-  if (!nameEl) return;
-  var name = nameEl.textContent.trim();
-  var href = ARTIST_PAGES[name];
-  if (!href) return;
-  card.style.position = 'relative';
-  var a = document.createElement('a');
-  a.href = href;
-  a.style.cssText = 'position:absolute;inset:0;z-index:1;border-radius:4px;';
-  a.setAttribute('aria-label', name + ' — artist record');
-  a.setAttribute('title', 'View artist record');
-  card.insertBefore(a, card.firstChild);
-});
-
-// Works table — link artist name in each row
-document.querySelectorAll('td.artist').forEach(function(td) {
-  var name = td.textContent.trim();
-  var href = ARTIST_PAGES[name];
-  if (!href) return;
-  td.innerHTML = '<a href="' + href + '">' + name + '</a>';
-});
-
-// Thumbnail images in artist cards
-var ARTIST_IMAGES = {
-  "Janis Rozentāls":  "images/rozentals-princess-monkey.jpg",
-  "Vilhelms Purvītis":"images/purvitis-blooming-lilacs.jpg",
-  "Kārlis Padegs":    "images/padegs-self-portrait.jpg",
-  "Jāzeps Grosvalds": "images/grosvalds-white-crosses.jpg",
-  "Jēkabs Kazaks":    "images/kazaks-circus.jpg",
-};
-document.querySelectorAll('.artist-card').forEach(function(card) {
-  var nameEl = card.querySelector('.artist-name');
-  if (!nameEl) return;
-  var src = ARTIST_IMAGES[nameEl.textContent.trim()];
-  if (!src) return;
-  var img = document.createElement('img');
-  img.src = src;
-  img.alt = nameEl.textContent.trim() + ' — representative work';
-  img.className = 'artist-card-img';
-  card.insertBefore(img, card.firstChild);
-});
-
-// Per-artist copyright status badges (EU: life + 70 years; PD threshold 2026 = died ≤ 1955)
-var ARTIST_RIGHTS = {
-  "Janis Rozentāls":1916,"Johann Walter":1932,"Kārlis Padegs":1940,"Jēkabs Kazaks":1920,
-  "Jāzeps Grosvalds":1920,"Vilhelms Purvītis":1945,"Romans Suta":1944,"Rūdolfs Pērle":1917,
-  "Pēteris Krastiņš":1942,"Ādams Alksnis":1897,"Kārlis Hūns":1877,"Jūlijs Feders":1909,
-  "Rihards Zariņš":1939,"Jānis Tīdemanis":1964,"Teodors Ūders":1915,"Jānis Liepiņš":1954,
-  "Gustavs Klucis":1938,"Alfrēds Plīte-Pleita":1921,"Alexander Heubel":1847,"Ģederts Eliass":1975,
-  "Aleksandrs Drēviņš":1938,"Janis Stanislavs Roze":1897,"Voldemārs Matvejs":1914,"Arturs Baumanis":1904,
-  "Gustavs Šķilters":1954,"Valdemārs Tone":1958,"Teodors Zaļkalns":1972,"Aleksandrs Romans":1911,
-  "Konstantīns Rončevskis":1935,"Voldemārs Zeltiņš":1909,"Johann Heinrich Baumann":1930,"Leo Svemps":1975,
-  "Ludolfs Liberts":1959,"Niklāvs Strunke":1966,"Ansis Cīrulis":1942,"Michael Alexander Michelson":1899,
-  "Emīls Melderis":1979,"Jānis Plase":1929,"Johann Samuel Benediktus Grune":1848,"Robert Konstantin Schwede":1871,
-  "Alberts Filka":1938,"Johann Nepomuk Hueber":1885,"Alice Dannenberg":1948,"Arturs Bērnieks":1964,
-  "Jēkabs Belzēns":1938,"Ottilie von Bolschwing":1889,"Karl Gothard Grass":1814,
-  "Ernst Gotthilf Bosse":1862,"Pēteris Kalve":1913,"Emīlija Gruzīte":1927,
-};
-document.querySelectorAll('.artist-card').forEach(function(card) {
-  var nameEl = card.querySelector('.artist-name');
-  if (!nameEl) return;
-  var name = nameEl.textContent.trim();
-  var badgesEl = card.querySelector('.artist-badges');
-  if (!badgesEl) return;
-  var died = ARTIST_RIGHTS[name];
-  var badge = document.createElement('span');
-  badge.className = 'badge';
-  if (died == null) {
-    badge.className += ' badge-cr';
-    badge.textContent = '© unclear';
-  } else if (died <= 1955) {
-    badge.className += ' badge-pd';
-    badge.textContent = 'Public domain · EU';
-  } else {
-    badge.className += ' badge-cr';
-    badge.textContent = '© until ' + (died + 70);
-  }
-  badgesEl.appendChild(badge);
-});
 </script>
 </body>
 </html>

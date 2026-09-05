@@ -48,6 +48,18 @@ def simplify(s: str) -> str:
     return s.lower().translate(str.maketrans("āēīūņģķļšžč", "aeiungklszc"))
 
 
+def normalize_dimensions(s: str) -> str:
+    text = simplify(s or "")
+    nums = []
+    for raw in re.findall(r"\d+(?:\.\d+)?", text):
+        value = float(raw)
+        if value.is_integer():
+            nums.append(str(int(value)))
+        else:
+            nums.append(str(value).rstrip("0").rstrip("."))
+    return "x".join(nums)
+
+
 def load_artbase_wikidata(artists_dir: Path) -> dict[str, dict]:
     """Return {simplified_name: {qid, status}} for all ArtBase artist records."""
     result = {}
@@ -95,6 +107,43 @@ def build_artists(works: list[dict], artbase_wd: dict) -> list[dict]:
             "works":    wlist,
         })
     return artists
+
+
+def load_passport_lookup(artworks_dir: Path) -> tuple[dict[tuple[str, str], str], dict[tuple[str, str, str], str]]:
+    """Return:
+    - {(normalized_title, normalized_creator): artbase_id}
+    - {(normalized_creator, year, normalized_dimensions): artbase_id}
+    for LNMM works.
+    """
+    title_lookup: dict[tuple[str, str], str] = {}
+    facts_lookup: dict[tuple[str, str, str], str] = {}
+    for jf in sorted(artworks_dir.glob("*.json")):
+        try:
+            data = json.loads(jf.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        location = data.get("location") or {}
+        collection = (location.get("collection") or "").strip()
+        if "Latvian National Museum of Art" not in collection and "Latvijas Nacionālais" not in collection:
+            continue
+        oid = data.get("object_id") or {}
+        title = (oid.get("title") or "").strip()
+        title_lv = (oid.get("title_lv") or "").strip()
+        title_en = (oid.get("title_en") or "").strip()
+        creator = (oid.get("maker_display_name") or oid.get("maker_id") or "").strip()
+        artbase_id = data.get("artbase_id", "")
+        if title and creator and artbase_id:
+            title_lookup[(simplify(title), simplify(creator))] = artbase_id
+        if title_lv and creator and artbase_id:
+            title_lookup[(simplify(title_lv), simplify(creator))] = artbase_id
+        if title_en and creator and artbase_id:
+            title_lookup[(simplify(title_en), simplify(creator))] = artbase_id
+
+        year = str(oid.get("date_display") or oid.get("date_earliest") or "").strip()
+        dims = normalize_dimensions(oid.get("dimensions_display") or "")
+        if creator and year and dims and artbase_id:
+            facts_lookup[(simplify(creator), year, dims)] = artbase_id
+    return title_lookup, facts_lookup
 
 
 # ── HTML generation ────────────────────────────────────────────────────────────
@@ -271,7 +320,12 @@ def type_summary(types: dict) -> str:
     return " · ".join(parts)
 
 
-def render_page(artists: list[dict], works: list[dict]) -> str:
+def render_page(
+    artists: list[dict],
+    works: list[dict],
+    passport_title_lookup: dict[tuple[str, str], str],
+    passport_facts_lookup: dict[tuple[str, str, str], str],
+) -> str:
     total_works = len(works)
     total_artists = len(artists)
     confirmed = sum(1 for a in artists if a["status"] == "confirmed")
@@ -296,18 +350,30 @@ def render_page(artists: list[dict], works: list[dict]) -> str:
     # Works rows HTML
     work_rows = ""
     for w in works:
-        url_cell = (f'<a href="{w["url"]}" target="_blank" rel="noopener">Google Arts ↗</a>'
-                    if w["url"] else "")
+        title_key = simplify(w["title"] or "")
+        creator_key = simplify(w["creator"] or "")
+        passport_id = passport_title_lookup.get((title_key, creator_key), "")
+        if not passport_id:
+            facts_key = (
+                creator_key,
+                str(w["date"] or "").strip(),
+                normalize_dimensions(w["dimensions"] or ""),
+            )
+            passport_id = passport_facts_lookup.get(facts_key, "")
+        passport_link = f'<a href="/{passport_id}.html" target="_self">Passport</a>' if passport_id else ""
+        source_link = f'<a href="{w["url"]}" target="_blank" rel="noopener">Google Arts ↗</a>' if w["url"] else ""
+        source_html = " · ".join(part for part in [passport_link, source_link] if part)
+        title_html = f'<a href="/{passport_id}.html">{w["title"] or "–"}</a>' if passport_id else (w["title"] or "–")
         work_rows += f"""
       <tr>
-        <td class="title">{w["title"] or "–"}</td>
+        <td class="title">{title_html}</td>
         <td class="artist">{w["creator"] or "–"}</td>
         <td class="mono">{w["date"] or "–"}</td>
         <td>{w["type"] or "–"}</td>
         <td>{w["medium"] or "–"}</td>
         <td class="mono">{w["dimensions"] or "–"}</td>
         <td class="mono">{w["cat_no"] or "–"}</td>
-        <td>{url_cell}</td>
+        <td>{source_html or '–'}</td>
       </tr>"""
 
     return f"""<!DOCTYPE html>
@@ -315,11 +381,11 @@ def render_page(artists: list[dict], works: list[dict]) -> str:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Latvia National Museum of Art (LNMA) collection — {total_works} works by {total_artists} artists in the Ars Accordia catalogue. Latvian art 18th–20th century.">
-<title>LNMA Collection — Ars Accordia</title>
+<meta name="description" content="{total_works} works from the Latvian National Museum of Art documented by Ars Accordia, with titles, artists, years, medium, dimensions and public passport links for each record.">
+<title>Latvian National Museum of Art — {total_works} works documented | Ars Accordia</title>
 <link rel="canonical" href="https://arsaccordia.com/collections/lnmm/">
-<meta property="og:title"       content="LNMA Collection — Ars Accordia">
-<meta property="og:description" content="{total_works} works by {total_artists} Latvian artists from the Latvia National Museum of Art.">
+<meta property="og:title"       content="Latvian National Museum of Art — {total_works} works documented | Ars Accordia">
+<meta property="og:description" content="{total_works} works from the Latvian National Museum of Art, documented to standard by Ars Accordia.">
 <meta property="og:url"         content="https://arsaccordia.com/collections/lnmm/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -336,11 +402,9 @@ def render_page(artists: list[dict], works: list[dict]) -> str:
 
   <header class="page-header">
     <p class="page-eyebrow">Collection · Latvia National Museum of Art</p>
-    <h1 class="page-title">LNMA Latvian Art Collection</h1>
+    <h1 class="page-title">Latvian National Museum of Art</h1>
     <p class="page-subtitle">
-      Works from the Latvia National Museum of Art (Latvijas Nacionālais mākslas muzejs) —
-      paintings, drawings, watercolours, and sculpture spanning the 18th through the first
-      half of the 20th century. Source: LNMA open data via Google Arts &amp; Culture.
+      {total_works} works documented by Ars Accordia from the Latvijas Nacionālais mākslas muzejs, spanning paintings, drawings, watercolours and sculpture from the eighteenth to the early twentieth century.
     </p>
     <div class="stats-row">
       <div class="stat"><span class="stat-value">{total_works}</span><span class="stat-label">Works</span></div>
@@ -434,9 +498,12 @@ def main():
     artists = build_artists(works, artbase_wd)
     print(f"  {len(artists)} unique artists")
 
+    passport_title_lookup, passport_facts_lookup = load_passport_lookup(
+        Path(__file__).resolve().parent.parent / "artbase_export" / "data" / "artworks"
+    )
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     out_path = OUT_DIR / "index.html"
-    html = render_page(artists, works)
+    html = render_page(artists, works, passport_title_lookup, passport_facts_lookup)
     out_path.write_text(html, encoding="utf-8")
     size_kb = len(html.encode()) // 1024
     print(f"\n✓ Written: {out_path}  ({size_kb} KB)")

@@ -80,6 +80,14 @@ def _confirmed_id(authority_links: dict, key: str):
     return None
 
 
+def _any_id(authority_links: dict, key: str):
+    entry = authority_links.get(key) or {}
+    value = entry.get("id")
+    if isinstance(value, str) and value.strip():
+        return value.strip()
+    return None
+
+
 _CITATION_TYPE_MAP = {
     "book": "Book",
     "web": "WebPage",
@@ -125,18 +133,15 @@ def build_person_jsonld(artist: dict, sources_registry: dict[str, dict]) -> dict
     desc = artist.get("descriptors") or {}
 
     same_as = []
-    wikidata_qid = _confirmed_id(al, "wikidata")
+    wikidata_qid = _any_id(al, "wikidata")
     if wikidata_qid:
         same_as.append(f"https://www.wikidata.org/wiki/{wikidata_qid}")
-    viaf_id = _confirmed_id(al, "viaf")
+    viaf_id = _any_id(al, "viaf")
     if viaf_id:
         same_as.append(f"https://viaf.org/viaf/{viaf_id}")
-    ulan_id = _confirmed_id(al, "ulan")
+    ulan_id = _any_id(al, "ulan")
     if ulan_id:
         same_as.append(f"https://vocab.getty.edu/page/ulan/{ulan_id}")
-    isni_id = _confirmed_id(al, "isni")
-    if isni_id:
-        same_as.append(f"https://isni.org/isni/{isni_id}")
 
     main_entity: dict = {
         "@type":   "WebPage",
@@ -153,11 +158,15 @@ def build_person_jsonld(artist: dict, sources_registry: dict[str, dict]) -> dict
         "@context": "https://schema.org",
         "@type":    "Person",
         "@id":      entity_url,
-        "name":     artist.get("identity", {}).get("preferred_name", ""),
-        "identifier": artbase_id,
-        "url":      page_url,
         "mainEntityOfPage": main_entity,
     }
+    name = artist.get("identity", {}).get("preferred_name", "")
+    if name:
+        ld["name"] = name
+    if artbase_id:
+        ld["identifier"] = artbase_id
+    if page_url:
+        ld["url"] = page_url
 
     birth = (life.get("birth_date") or {}).get("value")
     death = (life.get("death_date") or {}).get("value")
@@ -182,6 +191,67 @@ def build_person_jsonld(artist: dict, sources_registry: dict[str, dict]) -> dict
         ld["sameAs"] = same_as
 
     return ld
+
+
+def artist_meta_title(artist: dict) -> str:
+    identity = artist.get("identity") or {}
+    preferred = (identity.get("preferred_name") or "Artist").strip()
+    life = artist.get("life") or {}
+    birth = ((life.get("birth_date") or {}).get("value") or "").strip()
+    death = ((life.get("death_date") or {}).get("value") or "").strip()
+    role = ((artist.get("descriptors") or {}).get("occupations") or [None])[0]
+    nationality = ((artist.get("descriptors") or {}).get("nationality") or "").strip()
+    if isinstance(role, str):
+        role = role.strip()
+    if birth and death:
+        heading = f"{preferred} ({birth}–{death})"
+    elif birth:
+        heading = f"{preferred} (b. {birth})"
+    elif death:
+        heading = f"{preferred} (d. {death})"
+    else:
+        heading = preferred
+    if role and nationality:
+        return f"{heading} — {nationality} {role} | Ars Accordia"
+    if role:
+        return f"{heading} — {role} | Ars Accordia"
+    if nationality:
+        return f"{heading} — {nationality} artist | Ars Accordia"
+    return f"{heading} | Ars Accordia"
+
+
+def artist_meta_description(artist: dict, work_count: int) -> str:
+    identity = artist.get("identity") or {}
+    preferred = (identity.get("preferred_name") or "Artist").strip()
+    life = artist.get("life") or {}
+    birth = ((life.get("birth_date") or {}).get("value") or "").strip()
+    death = ((life.get("death_date") or {}).get("value") or "").strip()
+    role = ((artist.get("descriptors") or {}).get("occupations") or [None])[0]
+    nationality = ((artist.get("descriptors") or {}).get("nationality") or "").strip()
+    if isinstance(role, str):
+        role = role.strip()
+
+    name_segment = preferred
+    if birth and death:
+        name_segment = f"{preferred} ({birth}–{death})"
+    elif birth:
+        name_segment = f"{preferred} (b. {birth})"
+    elif death:
+        name_segment = f"{preferred} (d. {death})"
+
+    sentence = f"{name_segment}"
+    if role and nationality:
+        sentence += f", {nationality} {role}."
+    elif role:
+        sentence += f", {role}."
+    elif nationality:
+        sentence += f", {nationality} artist."
+    else:
+        sentence += "."
+    if work_count > 0:
+        sentence += f" {work_count} works documented by Ars Accordia,"
+    sentence += " cross-referenced to Wikidata, Getty ULAN and public authority records."
+    return sentence
 
 
 def render_artist(artist: dict, artworks: list[dict], env: Environment,
@@ -221,6 +291,8 @@ def render_artist(artist: dict, artworks: list[dict], env: Environment,
     tmpl = env.get_template("artist_profile.html.j2")
     return tmpl.render(
         artist=artist,
+        artist_meta_title=artist_meta_title(artist),
+        artist_meta_description=artist_meta_description(artist, len(aw_list)),
         wikidata_qid=wikidata_qid,
         wikidata_status=wikidata_status,
         artworks=aw_list,

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Artist record — Valdis Krēsliņš. Ars Accordia scholarly catalogue with authority links to Wikidata, Getty ULAN, and VIAF.">
-<title>Valdis Krēsliņš — Ars Accordia</title>
+<meta name="description" content="Valdis Krēsliņš (1962–2025), Latvian painter. cross-referenced to Wikidata, Getty ULAN and public authority records.">
+<title>Valdis Krēsliņš (1962–2025) — Latvian painter | Ars Accordia</title>
 <link rel="canonical" href="https://arsaccordia.com/artists/ART-KRESLINS-1962.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -346,6 +346,34 @@
     text-align: right;
   }
 
+  /* ── Biography ─── */
+  .biography-block { display: flex; flex-direction: column; gap: 14px; }
+  .biography-lang {
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .biography-lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faded);
+    margin-bottom: 6px;
+  }
+  .biography-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .biography-cite {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--ink-faded);
+    font-style: italic;
+  }
+
   /* ── Sources / Literature ─── */
   .sources-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -425,6 +453,8 @@
 
 <nav class="topnav">
   <a href="../index.html">← ArtBase Catalogue</a>
+  <span class="sep">/</span>
+  <a href="/artists/latvia/">Latvian artists</a>
   <span class="sep">/</span>
   <span>Valdis Krēsliņš</span>
 </nav>
@@ -607,6 +637,10 @@
   
   
 
+  <!-- Biography -->
+  
+  
+
   <!-- Artworks -->
   <section class="section">
     <div class="section-label">Artworks in Catalogue</div>
@@ -624,7 +658,7 @@
   <footer class="footer">
     <span class="footer-left">ARTBASE · ART-KRESLINS-1962</span>
     <a href="mailto:catalogue@arsaccordia.com" class="footer-contact">catalogue@arsaccordia.com</a>
-    <span>Exported 2026-07-15</span>
+    <span>Exported 2026-09-05</span>
   </footer>
 
 </div>

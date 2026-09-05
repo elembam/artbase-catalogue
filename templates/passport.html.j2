@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Artwork Passport — {{ artwork.object_id.title }} by {{ artist.identity.preferred_name if artist else artwork.object_id.maker_display_name }}. Standards-compliant international cultural object record.">
-<title>Artwork Passport — {{ artwork.object_id.title }}</title>
+<meta name="description" content="{{ page_description }}">
+<title>{{ page_title }}</title>
 <link rel="canonical" href="https://arsaccordia.com/{{ artwork.artbase_id }}.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -749,6 +749,10 @@
   </a>
   <span class="topnav-sep">/</span>
   <a href="artworks/">Artworks</a>
+  {% if collection_page_url %}
+  <span class="topnav-sep">/</span>
+  <a href="{{ collection_page_url }}">Collection</a>
+  {% endif %}
   <span class="topnav-sep">/</span>
   <span>{{ artwork.artbase_id }}</span>
 </nav>
@@ -821,7 +825,7 @@
         <dt>Dimensions</dt><dd>{{ artwork.object_id.dimensions_display }}</dd>
         {% endif %}
         {% if artwork.location.collection %}
-        <dt>Repository</dt><dd>{{ artwork.location.collection }}{% if artwork.location.location_notes %}, {{ artwork.location.location_notes }}{% endif %}</dd>
+        <dt>Repository</dt><dd>{% if collection_page_url %}<a href="{{ collection_page_url }}" style="color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(28,24,20,0.3);">{{ artwork.location.collection }}</a>{% else %}{{ artwork.location.collection }}{% endif %}{% if artwork.location.location_notes %}, {{ artwork.location.location_notes }}{% endif %}</dd>
         {% endif %}
         {% if artwork.location.inventory_number %}
         <dt>Inventory</dt><dd>{{ artwork.location.inventory_number }}</dd>

@@ -204,8 +204,8 @@ def generate(artists: list[dict], artworks_by_maker: dict[str, list[dict]], now:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ars Accordia — Latvian Artists A–Z. Authority records, Wikidata, ULAN, VIAF.">
-<title>Latvian Artists — Ars Accordia</title>
+<meta name="description" content="Latvian painters and artists documented by Ars Accordia, with works, life dates, authority links and public passport records for research, cataloguing and collection use.">
+<title>Latvian Painters &amp; Artists — Documented Catalogue | Ars Accordia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Public+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -378,8 +378,14 @@ def generate(artists: list[dict], artworks_by_maker: dict[str, list[dict]], now:
 <div class="catalogue">
 
   <header class="page-header">
-    <h1 class="page-title">Latvian Artists</h1>
-    <div class="page-tagline">Artist Records A–Z · Authority Links</div>
+    <h1 class="page-title">Latvian Painters &amp; Artists</h1>
+    <div class="page-tagline">Documented Catalogue · Authority Links</div>
+    <p style="max-width: 680px; margin-top: 10px; color: var(--ink-soft); line-height: 1.7;">
+      Latvia has a rich and varied painting tradition, from nineteenth-century academic practice to modernist and contemporary artists whose work is now documented to public catalogue standards. This page brings together Latvian artists and the works catalogued by Ars Accordia, with linked authority records and passports where available.
+    </p>
+    <p style="max-width: 680px; margin-top: 8px; color: var(--ink-soft); line-height: 1.7;">
+      Browse the artist profiles for names, life dates, and linked records, or move through the catalogue and public collection pages to trace the broader national context behind each work.
+    </p>
     <div class="page-stats">
       <div class="stat">
         <span class="stat-value">{total_artists}</span>

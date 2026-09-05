@@ -150,119 +150,252 @@ def filter_title(value: str) -> str:
     return value.replace("_", " ").title()
 
 
-# ── JSON-LD builder ────────────────────────────────────────────────────────────
+def safe_text(value: Any) -> str:
+    if value is None:
+        return ""
+    return str(value).strip()
 
-def _confirmed_id(authority_links: dict, key: str) -> Optional[str]:
-    """Return an authority ID only if its status is 'confirmed'."""
+
+def prose_person_name(value: str) -> str:
+    text = safe_text(value)
+    if "," not in text:
+        return text
+    parts = [p.strip() for p in text.split(",", 1)]
+    if len(parts) == 2 and parts[0] and parts[1]:
+        return f"{parts[1]} {parts[0]}"
+    return text
+
+
+def authority_id(authority_links: dict, key: str) -> Optional[str]:
     entry = authority_links.get(key) or {}
-    if entry.get("status") == "confirmed" and entry.get("id"):
-        return entry["id"]
-    return None
+    value = safe_text(entry.get("id"))
+    return value or None
 
+
+def collection_page_url(artwork: dict) -> Optional[str]:
+    collection = safe_text((artwork.get("location") or {}).get("collection"))
+    if not collection:
+        return "/collections/"
+    if "Latvian National Museum of Art" in collection or "Latvijas Nacionālais mākslas muzejs" in collection:
+        return "/collections/lnmm/"
+    if "Hansabanka Contemporary Art Collection" in collection or "Swedbank Latvia" in collection:
+        return "/collections/hansabanka/"
+    return "/collections/"
+
+
+def artist_role_label(artist: Optional[dict]) -> str:
+    if not artist:
+        return ""
+    desc = artist.get("descriptors") or {}
+    occupations = desc.get("occupations") or []
+    if occupations:
+        return str(occupations[0])
+    occupation = desc.get("occupation")
+    if occupation:
+        return str(occupation)
+    return ""
+
+
+def artist_page_title(artist: Optional[dict]) -> str:
+    if not artist:
+        return "Artwork Passport | Ars Accordia"
+    identity = artist.get("identity") or {}
+    preferred = safe_text(identity.get("preferred_name"))
+    if not preferred:
+        return "Artist profile | Ars Accordia"
+    life = artist.get("life") or {}
+    birth = safe_text((life.get("birth_date") or {}).get("value"))
+    death = safe_text((life.get("death_date") or {}).get("value"))
+    role = artist_role_label(artist)
+    if birth and death:
+        name_segment = f"{preferred} ({birth}–{death})"
+    elif birth:
+        name_segment = f"{preferred} ({birth})"
+    elif death:
+        name_segment = f"{preferred} (–{death})"
+    else:
+        name_segment = preferred
+    if role:
+        return f"{name_segment} — Latvian {role} | Ars Accordia"
+    return f"{name_segment} | Ars Accordia"
+
+
+def artist_page_description(artist: Optional[dict], artwork_count: int) -> str:
+    if not artist:
+        return "ArtBase catalogue record and authority links for this artist."
+    identity = artist.get("identity") or {}
+    preferred = safe_text(identity.get("preferred_name"))
+    life = artist.get("life") or {}
+    birth = safe_text((life.get("birth_date") or {}).get("value"))
+    death = safe_text((life.get("death_date") or {}).get("value"))
+    role = artist_role_label(artist)
+
+    name_segment = preferred
+    if birth and death:
+        name_segment = f"{preferred} ({birth}–{death})"
+    elif birth:
+        name_segment = f"{preferred} ({birth})"
+    elif death:
+        name_segment = f"{preferred} (–{death})"
+
+    sentence = f"{name_segment}"
+    if role:
+        sentence += f", Latvian {role}."
+    else:
+        sentence += "."
+    if artwork_count > 0:
+        sentence += f" {artwork_count} works documented by Ars Accordia,"
+    sentence += " cross-referenced to Wikidata, Getty ULAN and public authority records."
+    return sentence
+
+
+def normalize_dimension(value: str) -> str:
+    text = safe_text(value)
+    if not text:
+        return ""
+    text = text.replace("×", "x")
+    text = re.sub(r"(\d+)\.0(?=\s*(?:x|cm|mm|m|in|cm\b))", r"\1", text)
+    text = text.replace(" x ", " × ")
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+def short_title_text(title: str, year: str, artist_name: str) -> str:
+    suffix = " | Ars Accordia"
+
+    def escaped_len(value: str) -> int:
+        return len(
+            value.replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+            .replace('"', "&quot;")
+            .replace("'", "&#39;")
+        )
+
+    title_text = title.strip()
+    if not title_text:
+        title_text = "Untitled"
+    base = title_text
+    if year:
+        base = f"{title_text} ({year})"
+    if artist_name:
+        base = f"{base}, {artist_name}"
+    if escaped_len(base + suffix) <= 60:
+        return base
+
+    if year:
+        no_artist = f"{title_text} ({year})"
+        if escaped_len(no_artist + suffix) <= 60:
+            return no_artist
+
+    if escaped_len(title_text + suffix) <= 60:
+        return title_text
+
+    clipped = title_text
+    while escaped_len(clipped + "..." + suffix) > 60 and len(clipped) > 1:
+        clipped = clipped[:-1]
+    return clipped.rstrip() + "..."
+
+
+def passport_page_title(artwork: dict, artist: Optional[dict]) -> str:
+    oid = artwork.get("object_id") or {}
+    title = safe_text(oid.get("title"))
+    if not title:
+        title = "Untitled"
+    year = safe_text(oid.get("date_display") or oid.get("date_earliest"))
+    artist_name = safe_text((artist.get("identity") or {}).get("preferred_name")) if artist else prose_person_name(oid.get("maker_display_name") or oid.get("maker_id"))
+    main = short_title_text(title, year, artist_name)
+    return f"{main} | Ars Accordia"
+
+
+def passport_page_description(artwork: dict, artist: Optional[dict]) -> str:
+    oid = artwork.get("object_id") or {}
+    title = safe_text(oid.get("title"))
+    if not title:
+        title = "Untitled"
+    year = safe_text(oid.get("date_display") or oid.get("date_earliest"))
+    artist_name = safe_text((artist.get("identity") or {}).get("preferred_name")) if artist else prose_person_name(oid.get("maker_display_name") or oid.get("maker_id"))
+    medium = safe_text(oid.get("materials"))
+    dimensions = normalize_dimension(oid.get("dimensions_display"))
+    collection = safe_text((artwork.get("location") or {}).get("collection"))
+    ap_id = safe_text(artwork.get("artbase_id"))
+
+    base_bits = [title]
+    if year:
+        base_bits.append(year)
+    if artist_name:
+        base_bits.append(f"by {artist_name}")
+    lead = ", ".join(bit for bit in base_bits if bit)
+
+    details = []
+    if medium:
+        details.append(medium)
+    if dimensions:
+        details.append(dimensions)
+    if collection:
+        details.append(collection)
+    detail_text = ". ".join(part for part in details if part)
+    if detail_text:
+        detail_text = f" {detail_text}."
+    if ap_id:
+        return f"{lead}.{detail_text} Permanent Artwork Passport {ap_id} with sourced provenance and authority cross-references."
+    return f"{lead}.{detail_text} Permanent artwork record with sourced provenance and authority cross-references."
+
+
+# ── JSON-LD builder ────────────────────────────────────────────────────────────
 
 def build_jsonld(artwork: dict, artist: Optional[dict],
                  image_src: Optional[str]) -> dict:
-    artbase_id = artwork.get("artbase_id", "")
-    base_url   = "https://arsaccordia.com"
-    page_url   = f"{base_url}/{artbase_id}.html"
-    entity_url = f"{base_url}/{artbase_id}"
-
-    oid  = artwork.get("object_id") or {}
-    loc  = artwork.get("location") or {}
+    artbase_id = safe_text(artwork.get("artbase_id"))
+    base_url = "https://arsaccordia.com"
+    page_url = f"{base_url}/{artbase_id}.html" if artbase_id else ""
+    oid = artwork.get("object_id") or {}
     aw_links = artwork.get("authority_links") or {}
 
-    # Artwork-level sameAs — only confirmed IDs
-    artwork_same_as = []
-    aw_wikidata = _confirmed_id(aw_links, "wikidata")
-    if aw_wikidata:
-        artwork_same_as.append(f"https://www.wikidata.org/wiki/{aw_wikidata}")
-
-    # Creator block
-    creator: dict = {"@type": "Person"}
-    if artist:
-        al = artist.get("authority_links") or {}
-        creator["name"] = artist.get("identity", {}).get("preferred_name", "")
-        artist_id = artist.get("artbase_id", "")
-        if artist_id:
-            creator["@id"] = f"{base_url}/artists/{artist_id}"
-        creator_same_as = []
-        wikidata_qid = _confirmed_id(al, "wikidata")
-        if wikidata_qid:
-            creator_same_as.append(f"https://www.wikidata.org/wiki/{wikidata_qid}")
-        viaf_id = _confirmed_id(al, "viaf")
-        if viaf_id:
-            creator_same_as.append(f"https://viaf.org/viaf/{viaf_id}")
-        ulan_id = _confirmed_id(al, "ulan")
-        if ulan_id:
-            creator_same_as.append(f"https://vocab.getty.edu/page/ulan/{ulan_id}")
-        if artist_id:
-            creator_same_as.append(f"{base_url}/artists/{artist_id}.html")
-        if creator_same_as:
-            creator["sameAs"] = creator_same_as
-        life = artist.get("life") or {}
-        birth = (life.get("birth_date") or {}).get("value")
-        death = (life.get("death_date") or {}).get("value")
-        if birth:
-            creator["birthDate"] = birth
-        if death:
-            creator["deathDate"] = death
-        nationality = (artist.get("descriptors") or {}).get("nationality")
-        if nationality:
-            creator["nationality"] = nationality
-    else:
-        display_name = oid.get("maker_display_name") or oid.get("maker_id")
-        if display_name:
-            creator["name"] = display_name
-
-    # Structured dimensions
-    width_cm  = oid.get("width_cm")
-    height_cm = oid.get("height_cm")
-
-    # Owner / location
-    collection = loc.get("collection") or "Private collection"
-    owner = {"@type": "Organization", "name": collection}
-    collection_qid = loc.get("collection_qid")
-    if collection_qid:
-        owner["sameAs"] = f"https://www.wikidata.org/wiki/{collection_qid}"
-
-    # Base LD object
     ld: dict = {
-        "@context":  "https://schema.org",
-        "@type":     "VisualArtwork",
-        "@id":       entity_url,
-        "name":      oid.get("title", ""),
-        "url":       page_url,
-        "identifier": artbase_id,
-        "creator":   creator,
-        "artform":   oid.get("object_type", "painting").title(),
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id":   page_url,
-            "isPartOf": {"@id": base_url},
-        },
+        "@context": "https://schema.org",
+        "@type": "VisualArtwork",
     }
+    title = safe_text(oid.get("title"))
+    if title:
+        ld["name"] = title
 
-    if oid.get("materials"):
-        ld["artMedium"] = oid["materials"]
-    if oid.get("date_display"):
-        ld["dateCreated"] = oid["date_display"]
-    if oid.get("subject"):
-        ld["description"] = oid["subject"]
+    creator_name = ""
+    if artist:
+        creator_name = safe_text((artist.get("identity") or {}).get("preferred_name"))
+    if not creator_name:
+        creator_name = prose_person_name(oid.get("maker_display_name") or oid.get("maker_id"))
+    if creator_name:
+        creator: dict = {"@type": "Person", "name": creator_name}
+        if artist:
+            artist_wikidata = authority_id(artist.get("authority_links") or {}, "wikidata")
+            if artist_wikidata:
+                creator["sameAs"] = [f"https://www.wikidata.org/wiki/{artist_wikidata}"]
+        ld["creator"] = creator
+
+    date_created = safe_text(oid.get("date_display") or oid.get("date_earliest"))
+    if date_created:
+        ld["dateCreated"] = date_created
+
+    art_medium = safe_text(oid.get("materials"))
+    if art_medium:
+        ld["artMedium"] = art_medium
+
+    width_cm = oid.get("width_cm")
     if width_cm is not None:
-        ld["width"]  = {"@type": "QuantitativeValue", "value": width_cm,  "unitCode": "CMT"}
+        ld["width"] = {"@type": "QuantitativeValue", "value": width_cm, "unitCode": "CMT"}
+    height_cm = oid.get("height_cm")
     if height_cm is not None:
         ld["height"] = {"@type": "QuantitativeValue", "value": height_cm, "unitCode": "CMT"}
-    if oid.get("dimensions_display"):
-        ld["size"] = oid["dimensions_display"]
 
-    # Image: only include if it's a real URL (not base64), as base64 is not useful for the graph
-    if image_src and not image_src.startswith("data:"):
-        ld["image"] = image_src
+    if artbase_id:
+        ld["identifier"] = artbase_id
+    if page_url:
+        ld["url"] = page_url
 
-    ld["owner"] = owner
-
-    if artwork_same_as:
-        ld["sameAs"] = artwork_same_as
+    work_wikidata = authority_id(aw_links, "wikidata")
+    if work_wikidata:
+        ld["sameAs"] = [f"https://www.wikidata.org/wiki/{work_wikidata}"]
 
     return ld
 
@@ -282,13 +415,17 @@ def build_context(artwork: dict, artist: Optional[dict],
         issued_year_roman = to_roman(date.today().year)
 
     artist_id = (artist or {}).get("artbase_id") if artist else None
+    collection_url = collection_page_url(artwork)
     return {
         "artwork":            artwork,
         "artist":             artist,
         "artist_profile_url": f"/artists/{artist_id}.html" if artist_id else None,
+        "collection_page_url": collection_url,
         "image_src":          image_src,
         "issued_date":        issued_date,
         "issued_year_roman":  issued_year_roman,
+        "page_title":         passport_page_title(artwork, artist),
+        "page_description":   passport_page_description(artwork, artist),
         "jsonld":             build_jsonld(artwork, artist, image_src),
     }
 

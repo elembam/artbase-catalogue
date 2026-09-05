@@ -7,6 +7,9 @@
   "object_id": {
     "title": "Trīs sievietes",
     "title_en": "Three Old Ladies",
+    "title_en_alternates": [
+      "Three Old Women"
+    ],
     "title_lv": "Trīs sievietes",
     "object_type": "painting",
     "materials": null,
@@ -54,7 +57,12 @@
   },
   "media": [],
   "sources": [],
-  "source_refs": [],
+  "source_refs": [
+    {
+      "label": "Google Arts & Culture (LNMM): Three Old Women",
+      "uri": "https://artsandculture.google.com/asset/three-old-women/lQFiF6ncmU47OA"
+    }
+  ],
   "conflicts": [],
   "cataloguing": {
     "review_status": "draft",
