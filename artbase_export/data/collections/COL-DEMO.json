@@ -4,13 +4,12 @@
   "owner": null,
   "owner_display": "Ars Accordia (demonstration)",
   "scope": {
-    "definition": "Two demo passports used for testing and development — not a real collection.",
-    "total_extent": 2,
+    "definition": "One demo passport used for testing and development — not a real collection.",
+    "total_extent": 1,
     "status": "inventory_confirmed",
     "source": "Internal demo records"
   },
   "member_passports": [
-    "AP-2026-000001",
     "AP-2026-000002"
   ],
   "segment": null,
@@ -31,9 +30,9 @@
     "image": false
   },
   "score": {
-    "ars_accordia_score": 120.0,
+    "ars_accordia_score": 60.0,
     "average_standard": 60.0,
-    "works_documented": 2,
+    "works_documented": 1,
     "band": "Partial Record",
     "completeness": 0.6,
     "relative_completeness": 0.6,

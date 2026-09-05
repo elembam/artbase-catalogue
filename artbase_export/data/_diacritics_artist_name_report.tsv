@@ -1,5 +1,4 @@
 status	file	before	after_or_reason	maker_id_or_preferred
-skipped	AP-2026-000001.json	Leonardo da Vinci	missing_artist_record	ART-LEONARDO-1452
 skipped	AP-2026-000002.json	Herberts Silins	artist_name_ascii_only	Herberts Silins
 skipped	AP-2026-000035.json	Gustavs Klucis	artist_name_ascii_only	Gustavs Klucis
 skipped	AP-2026-000036.json	Gustavs Klucis	artist_name_ascii_only	Gustavs Klucis
